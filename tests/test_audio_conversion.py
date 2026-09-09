@@ -31,7 +31,7 @@ def test_wav_to_mp3_conversion_with_ffmpeg(tmp_path):
     converted_mp3 = AudioConverter.convert_wav_to_mp3(
         wav_path=str(wav_dest),
         mp3_path=str(mp3_dest),
-        ffmpeg_path="/opt/homebrew/bin/ffmpeg",
+        ffmpeg_path=AudioConverter.resolve_ffmpeg(),
         bitrate="320k"
     )
 
@@ -70,7 +70,7 @@ def test_combine_audio_files(tmp_path):
         output_wav_path=str(out_wav),
         output_mp3_path=str(out_mp3),
         silence_gap_seconds=0.4,
-        ffmpeg_path="/opt/homebrew/bin/ffmpeg",
+        ffmpeg_path=AudioConverter.resolve_ffmpeg(),
         bitrate="320k"
     )
 

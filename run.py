@@ -52,8 +52,9 @@ def build_frontend_if_needed():
     if not dist_dir.exists() or not (dist_dir / "index.html").exists():
         print("[Launcher] Frontend build not found. Building now with npm...")
         frontend_dir = PROJECT_ROOT / "frontend"
+        npm_bin = "npm.cmd" if sys.platform == "win32" else "npm"
         try:
-            subprocess.run(["npm", "run", "build"], cwd=str(frontend_dir), check=True)
+            subprocess.run([npm_bin, "run", "build"], cwd=str(frontend_dir), check=True)
             print("[Launcher] Frontend build complete.")
         except Exception as e:
             print(f"[Launcher] Warning: Frontend build failed ({e}). Proceeding to launch server.")

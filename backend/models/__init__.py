@@ -36,6 +36,9 @@ class Batch(Base):
     tight_mp3_path = Column(String(500), nullable=True)
     tight_mp4_path = Column(String(500), nullable=True)
     tight_duration = Column(Float, nullable=True)
+    media_folder = Column(String(500), nullable=True)
+    master_video_path = Column(String(500), nullable=True)
+    master_video_duration = Column(Float, nullable=True)
     created_at = Column(DateTime(timezone=True), default=utc_now)
     updated_at = Column(DateTime(timezone=True), default=utc_now, onupdate=utc_now)
 
@@ -62,6 +65,22 @@ class Paragraph(Base):
     voice = Column(String(100), nullable=True, default="Algenib")
     director_notes = Column(Text, nullable=True)
     additional_notes = Column(Text, nullable=True)
+
+    # Video Shot production metadata
+    on_screen_text = Column(Text, nullable=True)
+    video_prompt = Column(Text, nullable=True)
+    scene_progression = Column(Text, nullable=True)
+    overall_mood = Column(Text, nullable=True)
+    sound_effects = Column(Text, nullable=True)
+    background_music = Column(Text, nullable=True)
+
+    # Matched media asset & synchronized video
+    media_path = Column(String(500), nullable=True)
+    media_type = Column(String(20), nullable=True)  # "video", "image"
+    original_media_duration = Column(Float, nullable=True)
+    speed_factor = Column(Float, nullable=True)
+    synced_video_path = Column(String(500), nullable=True)
+    thumbnail_path = Column(String(500), nullable=True)
     
     # Spoken transcript
     transcript = Column(Text, nullable=False, default="")

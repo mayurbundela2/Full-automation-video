@@ -64,8 +64,9 @@ class SubtitleService:
         if not wav_path or not Path(wav_path).exists():
             return []
 
+        ffmpeg_bin = AudioConverter.resolve_ffmpeg()
         cmd = [
-            "ffmpeg", "-i", str(wav_path),
+            ffmpeg_bin, "-i", str(wav_path),
             "-af", f"silencedetect=noise={noise_threshold}:d={min_silence}",
             "-f", "null", "-"
         ]
@@ -74,15 +75,14 @@ class SubtitleService:
             res = subprocess.run(cmd, stderr=subprocess.PIPE, stdout=subprocess.PIPE, text=True, check=True)
             output = res.stderr
         except Exception:
-            for fb in ["/opt/homebrew/bin/ffmpeg", "/usr/local/bin/ffmpeg", "/usr/bin/ffmpeg"]:
-                if Path(fb).exists():
-                    cmd[0] = fb
-                    try:
-                        res = subprocess.run(cmd, stderr=subprocess.PIPE, stdout=subprocess.PIPE, text=True, check=True)
-                        output = res.stderr
-                        break
-                    except Exception:
-                        continue
+            fb = AudioConverter.resolve_ffmpeg("ffmpeg")
+            if fb and fb != ffmpeg_bin:
+                cmd[0] = fb
+                try:
+                    res = subprocess.run(cmd, stderr=subprocess.PIPE, stdout=subprocess.PIPE, text=True, check=True)
+                    output = res.stderr
+                except Exception:
+                    return []
             else:
                 return []
 

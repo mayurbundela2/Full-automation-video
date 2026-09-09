@@ -3,6 +3,8 @@ import wave
 import struct
 import math
 import subprocess
+import shutil
+import glob
 import json
 from pathlib import Path
 from typing import Dict, Any, Tuple, Optional
@@ -12,6 +14,39 @@ class AudioConverter:
     """
     Handles WAV audio creation, PCM formatting, FFmpeg MP3 encoding, and audio metadata extraction.
     """
+
+    @classmethod
+    def resolve_ffmpeg(cls, ffmpeg_path: str = "ffmpeg") -> str:
+        """Resolves ffmpeg executable across Windows, Mac, and Linux."""
+        if ffmpeg_path:
+            if shutil.which(ffmpeg_path) or os.path.exists(ffmpeg_path):
+                return ffmpeg_path
+
+        candidates = [
+            "ffmpeg",
+            "ffmpeg.exe",
+            "/opt/homebrew/bin/ffmpeg",
+            "/usr/local/bin/ffmpeg",
+            "/usr/bin/ffmpeg",
+            r"C:\ffmpeg\bin\ffmpeg.exe",
+            r"C:\ProgramData\chocolatey\bin\ffmpeg.exe",
+            r"C:\Program Files\ffmpeg\bin\ffmpeg.exe",
+        ]
+
+        # Check WinGet packages on Windows
+        local_appdata = os.environ.get("LOCALAPPDATA", "")
+        if local_appdata:
+            winget_pattern = os.path.join(local_appdata, "Microsoft", "WinGet", "Packages", "**", "ffmpeg.exe")
+            candidates.extend(glob.glob(winget_pattern, recursive=True))
+
+        for candidate in candidates:
+            resolved = shutil.which(candidate)
+            if resolved:
+                return resolved
+            if os.path.exists(candidate):
+                return candidate
+
+        return ffmpeg_path or "ffmpeg"
 
     @classmethod
     def save_wav_master(cls, pcm_or_wav_data: bytes, output_wav_path: str, sample_rate: int = 24000, channels: int = 1) -> str:
@@ -53,8 +88,9 @@ class AudioConverter:
         if not w_path.exists():
             raise FileNotFoundError(f"Source WAV file not found: {wav_path}")
 
+        resolved_bin = cls.resolve_ffmpeg(ffmpeg_path)
         cmd = [
-            ffmpeg_path,
+            resolved_bin,
             "-y",  # overwrite output
             "-i", str(w_path),
             "-codec:a", "libmp3lame",
@@ -74,12 +110,15 @@ class AudioConverter:
             err_msg = e.stderr.decode("utf-8", errors="replace")
             raise RuntimeError(f"FFmpeg conversion failed: {err_msg}")
         except FileNotFoundError:
-            # Fallback if ffmpeg is in standard location
-            for fallback_bin in ["/opt/homebrew/bin/ffmpeg", "/usr/local/bin/ffmpeg", "/usr/bin/ffmpeg"]:
-                if os.path.exists(fallback_bin):
-                    cmd[0] = fallback_bin
+            # Fallback if ffmpeg is in another standard location
+            fallback_resolved = cls.resolve_ffmpeg("ffmpeg")
+            if fallback_resolved and fallback_resolved != resolved_bin:
+                cmd[0] = fallback_resolved
+                try:
                     subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
                     return str(m_path)
+                except Exception:
+                    pass
             raise RuntimeError(f"FFmpeg executable not found at '{ffmpeg_path}'. Please install FFmpeg or configure its path in Settings.")
 
     @classmethod
@@ -187,13 +226,15 @@ class AudioConverter:
         out_wav_path = Path(output_wav)
         out_wav_path.parent.mkdir(parents=True, exist_ok=True)
 
+        ffmpeg_bin = cls.resolve_ffmpeg(ffmpeg_path)
+
         # 1. Trim pauses in WAV with lead-in and inter-sentence silence removal
         filter_str = (
             f"silenceremove=start_periods=1:start_duration=0.04:start_threshold=-45dB:"
             f"stop_periods=-1:stop_duration={silence_duration_threshold}:stop_threshold={silence_db_threshold}"
         )
         cmd_trim = [
-            ffmpeg_path, "-y",
+            ffmpeg_bin, "-y",
             "-i", str(in_path),
             "-af", filter_str,
             str(out_wav_path)
@@ -201,13 +242,13 @@ class AudioConverter:
 
         try:
             subprocess.run(cmd_trim, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+            ffmpeg_path = ffmpeg_bin
         except Exception:
-            for fallback_bin in ["/opt/homebrew/bin/ffmpeg", "/usr/local/bin/ffmpeg", "/usr/bin/ffmpeg"]:
-                if os.path.exists(fallback_bin):
-                    cmd_trim[0] = fallback_bin
-                    ffmpeg_path = fallback_bin
-                    subprocess.run(cmd_trim, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
-                    break
+            fb = cls.resolve_ffmpeg("ffmpeg")
+            if fb and fb != ffmpeg_bin:
+                cmd_trim[0] = fb
+                ffmpeg_path = fb
+                subprocess.run(cmd_trim, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
 
         # 2. Convert to MP3
         saved_mp3 = None
@@ -242,8 +283,10 @@ class AudioConverter:
         out_mp4 = Path(output_mp4_path)
         out_mp4.parent.mkdir(parents=True, exist_ok=True)
 
+        ffmpeg_bin = cls.resolve_ffmpeg(ffmpeg_path)
+
         cmd_mp4 = [
-            ffmpeg_path, "-y",
+            ffmpeg_bin, "-y",
             "-f", "lavfi", "-i", "color=c=0x0c121e:s=1920x1080:r=30",
             "-i", str(in_audio),
             "-c:v", "libx264", "-tune", "stillimage", "-pix_fmt", "yuv420p",
@@ -255,14 +298,14 @@ class AudioConverter:
             subprocess.run(cmd_mp4, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
             return str(out_mp4)
         except Exception:
-            for fallback_bin in ["/opt/homebrew/bin/ffmpeg", "/usr/local/bin/ffmpeg", "/usr/bin/ffmpeg"]:
-                if os.path.exists(fallback_bin):
-                    cmd_mp4[0] = fallback_bin
-                    try:
-                        subprocess.run(cmd_mp4, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
-                        return str(out_mp4)
-                    except Exception:
-                        pass
+            fb = cls.resolve_ffmpeg("ffmpeg")
+            if fb and fb != ffmpeg_bin:
+                cmd_mp4[0] = fb
+                try:
+                    subprocess.run(cmd_mp4, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+                    return str(out_mp4)
+                except Exception:
+                    pass
             return None
 
         info = cls.get_audio_info(str(out_wav_path))

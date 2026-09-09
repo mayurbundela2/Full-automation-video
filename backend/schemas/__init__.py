@@ -79,6 +79,20 @@ class ParagraphBase(BaseModel):
     transcript: str = ""
     custom_prompt: Optional[str] = None
 
+    # Video Shot & Media fields
+    on_screen_text: Optional[str] = None
+    video_prompt: Optional[str] = None
+    scene_progression: Optional[str] = None
+    overall_mood: Optional[str] = None
+    sound_effects: Optional[str] = None
+    background_music: Optional[str] = None
+    media_path: Optional[str] = None
+    media_type: Optional[str] = None
+    original_media_duration: Optional[float] = None
+    speed_factor: Optional[float] = None
+    synced_video_path: Optional[str] = None
+    thumbnail_path: Optional[str] = None
+
 
 class ParagraphCreate(ParagraphBase):
     pass
@@ -134,6 +148,7 @@ class BatchCreate(BaseModel):
 class ParseReferenceRequest(BaseModel):
     raw_text: str
     default_voice: Optional[str] = "Algenib"
+    media_folder: Optional[str] = None
 
 
 class ParseReferenceResponse(BaseModel):
@@ -160,6 +175,36 @@ class BatchResponse(BaseModel):
     completed_count: int = 0
     combined_audio: Optional[Dict[str, Any]] = None
     tight_audio: Optional[Dict[str, Any]] = None
+    media_folder: Optional[str] = None
+    master_video_path: Optional[str] = None
+    master_video_duration: Optional[float] = None
+
+
+# --- Video Media Schemas ---
+class ScanMediaRequest(BaseModel):
+    folder_path: Optional[str] = None
+    media_folder: Optional[str] = None
+
+
+class MediaMatchItem(BaseModel):
+    paragraph_number: int
+    paragraph_id: Optional[int] = None
+    matched_file: str
+    media_type: str  # "video" | "image"
+    original_duration: Optional[float] = None
+    audio_duration: Optional[float] = None
+    speed_factor: Optional[float] = None
+
+
+class ScanMediaResponse(BaseModel):
+    media_folder: str
+    total_files_found: int
+    matches: List[MediaMatchItem]
+
+
+class AssignMediaRequest(BaseModel):
+    paragraph_id: int
+    file_path: str
 
 
 # --- Generation Schemas ---

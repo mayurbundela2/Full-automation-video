@@ -62,6 +62,28 @@ def open_system_folder(path: str):
         subprocess.Popen(["explorer", path])
     
     return {"status": "ok", "path": path}
+ 
+ 
+@system_router.api_route("/select-folder", methods=["GET", "POST"])
+def select_system_folder(title: str = "Select Video / Media Folder"):
+    """
+    Opens the native OS directory chooser dialog and returns the selected folder path.
+    Works on Windows, macOS, and Linux when backend is running locally.
+    """
+    try:
+        import tkinter as tk
+        from tkinter import filedialog
+        root = tk.Tk()
+        root.withdraw()
+        root.attributes("-topmost", True)
+        folder_selected = filedialog.askdirectory(title=title)
+        root.destroy()
+        if folder_selected:
+            normalized = folder_selected.replace("\\", "/")
+            return {"status": "ok", "folder_path": normalized}
+        return {"status": "cancelled", "folder_path": None}
+    except Exception as e:
+        return {"status": "error", "message": str(e), "folder_path": None}
 
 
 @system_router.get("/health")

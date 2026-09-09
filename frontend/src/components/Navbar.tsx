@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Sparkles, ExternalLink, Settings, History, FolderKanban, AlertCircle, Cpu, BookOpen, Lightbulb } from 'lucide-react';
+import { Sparkles, ExternalLink, Settings, History, FolderKanban, AlertCircle, Cpu, BookOpen, Lightbulb, FileSpreadsheet } from 'lucide-react';
 import { api } from '../api';
 import { PromptHelpModal } from './PromptHelpModal';
+import { DataExporterModal } from './DataExporterModal';
 
 interface NavbarProps {
   currentTab: 'projects' | 'batches' | 'history' | 'settings';
@@ -18,6 +19,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const [openingStudio, setOpeningStudio] = useState(false);
   const [showPromptHelp, setShowPromptHelp] = useState(false);
+  const [showDataExporter, setShowDataExporter] = useState(false);
 
   const handleOpenAiStudio = async () => {
     setOpeningStudio(true);
@@ -97,6 +99,16 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         <div className="flex items-center space-x-2">
+          {/* Data Exporter / Script Sorter Button */}
+          <button
+            onClick={() => setShowDataExporter(true)}
+            className="bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/40 hover:border-emerald-400 px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center space-x-1.5 transition-all shadow-sm active:scale-95"
+            title="Open Script Sorter & Data Exporter"
+          >
+            <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-400" />
+            <span className="hidden sm:inline">DATA EXPORTER</span>
+          </button>
+
           {/* Prompt Guide Button */}
           <button
             onClick={() => setShowPromptHelp(true)}
@@ -182,6 +194,12 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Director Prompt Modal */}
       <PromptHelpModal isOpen={showPromptHelp} onClose={() => setShowPromptHelp(false)} />
+
+      {/* Script Sorter & Data Exporter Modal */}
+      <DataExporterModal
+        isOpen={showDataExporter}
+        onClose={() => setShowDataExporter(false)}
+      />
     </>
   );
 };

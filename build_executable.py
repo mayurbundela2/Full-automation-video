@@ -22,8 +22,9 @@ def main():
     # 1. Build frontend
     frontend_dir = ROOT_DIR / "frontend"
     print("\n[1/3] Building frontend assets...")
+    npm_bin = "npm.cmd" if sys.platform == "win32" else "npm"
     try:
-        run_cmd(["npm", "run", "build"], cwd=frontend_dir)
+        run_cmd([npm_bin, "run", "build"], cwd=frontend_dir)
     except Exception as e:
         print(f"[Build] npm build error ({e}). Ensure Node.js & npm are installed.")
         sys.exit(1)

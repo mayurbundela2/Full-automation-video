@@ -1,4 +1,4 @@
-import { Project, Batch, Paragraph, Generation, AppSettings, VoiceItem } from './types';
+import { Project, Batch, Paragraph, Generation, AppSettings, VoiceItem, ScanMediaResponse, MediaMatchItem } from './types';
 import { MobileStorage } from './services/mobileStorage';
 import { ClientReferenceParser } from './services/clientReferenceParser';
 import { ClientGeminiService } from './services/clientGeminiService';
@@ -89,7 +89,29 @@ export const api = {
   },
 
   async openFolder(path: string): Promise<{ status: string }> {
+    if (await checkBackend()) {
+      try {
+        const res = await fetch(`${API_BASE}/open-folder?path=${encodeURIComponent(path)}`, { method: 'POST' });
+        if (res.ok) return res.json();
+      } catch {}
+    }
     return { status: 'NOT_SUPPORTED_ON_MOBILE' };
+  },
+
+  async selectFolder(title?: string): Promise<{ status: string; folder_path: string | null }> {
+    if (await checkBackend()) {
+      try {
+        const res = await fetch(`${API_BASE}/select-folder?title=${encodeURIComponent(title || 'Select Video / Media Folder')}`, {
+          method: 'POST',
+        });
+        if (res.ok) {
+          return res.json();
+        }
+      } catch (e) {
+        console.warn('Native select-folder failed:', e);
+      }
+    }
+    return { status: 'NOT_SUPPORTED', folder_path: null };
   },
 
   // Projects
@@ -200,13 +222,13 @@ export const api = {
     return MobileStorage.deleteBatch(id);
   },
 
-  async parseReference(batchId: number, rawText: string, defaultVoice?: string): Promise<{ detected_count: number; paragraphs: any[] }> {
+  async parseReference(batchId: number, rawText: string, defaultVoice?: string, mediaFolder?: string): Promise<{ detected_count: number; paragraphs: any[] }> {
     if (await checkBackend()) {
       try {
         const res = await fetch(`${API_BASE}/batches/${batchId}/parse-reference`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ raw_text: rawText, default_voice: defaultVoice }),
+          body: JSON.stringify({ raw_text: rawText, default_voice: defaultVoice, media_folder: mediaFolder }),
         });
         if (res.ok) return res.json();
       } catch {}
@@ -226,6 +248,12 @@ export const api = {
       voice: p.voice || defaultVoice || 'Algenib',
       transcript: p.transcript,
       raw_reference: p.raw_reference,
+      on_screen_text: p.on_screen_text,
+      video_prompt: p.video_prompt,
+      scene_progression: p.scene_progression,
+      overall_mood: p.overall_mood,
+      sound_effects: p.sound_effects,
+      background_music: p.background_music,
       word_count: p.transcript ? p.transcript.split(/\s+/).filter(Boolean).length : 0,
       character_count: p.transcript ? p.transcript.length : 0,
       limit_status: 'SAFE',
@@ -234,13 +262,13 @@ export const api = {
     return { detected_count: previewParagraphs.length, paragraphs: previewParagraphs };
   },
 
-  async importReference(batchId: number, rawText: string, defaultVoice?: string): Promise<Batch> {
+  async importReference(batchId: number, rawText: string, defaultVoice?: string, mediaFolder?: string): Promise<Batch> {
     if (await checkBackend()) {
       try {
         const res = await fetch(`${API_BASE}/batches/${batchId}/import-reference`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ raw_text: rawText, default_voice: defaultVoice }),
+          body: JSON.stringify({ raw_text: rawText, default_voice: defaultVoice, media_folder: mediaFolder }),
         });
         if (res.ok) return res.json();
       } catch {}
@@ -662,5 +690,94 @@ export const api = {
       console.warn('Dynamic subtitle generation fallback note:', e);
     }
     return '';
+  },
+
+  // Video & Media Studio
+  async scanMedia(batchId: number, mediaFolder: string): Promise<ScanMediaResponse> {
+    if (await checkBackend()) {
+      const res = await fetch(`${API_BASE}/batches/${batchId}/scan-media`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ folder_path: mediaFolder, media_folder: mediaFolder }),
+      });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({ detail: 'Failed to scan media folder' }));
+        throw new Error(err.detail || 'Failed to scan media folder');
+      }
+      return res.json();
+    }
+    return { media_folder: mediaFolder, total_files_found: 0, matches: [] };
+  },
+
+  async uploadMediaFiles(batchId: number, files: File[]): Promise<ScanMediaResponse> {
+    if (await checkBackend()) {
+      const formData = new FormData();
+      for (const file of files) {
+        formData.append('files', file);
+      }
+      const res = await fetch(`${API_BASE}/batches/${batchId}/upload-media`, {
+        method: 'POST',
+        body: formData,
+      });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({ detail: 'Failed to upload media files' }));
+        throw new Error(err.detail || 'Failed to upload media files');
+      }
+      return res.json();
+    }
+    throw new Error('Uploading media files requires backend server');
+  },
+
+  async assignMedia(batchId: number, paragraphId: number, mediaPath: string): Promise<Paragraph> {
+    if (await checkBackend()) {
+      const res = await fetch(`${API_BASE}/batches/${batchId}/assign-media`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ paragraph_id: paragraphId, media_path: mediaPath }),
+      });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({ detail: 'Failed to assign media' }));
+        throw new Error(err.detail || 'Failed to assign media');
+      }
+      return res.json();
+    }
+    const para = await MobileStorage.getParagraph(paragraphId);
+    if (!para) throw new Error('Paragraph not found');
+    const updated = { ...para, media_path: mediaPath };
+    await MobileStorage.updateParagraph(paragraphId, updated);
+    return updated;
+  },
+
+  async renderBatchVideo(
+    batchId: number,
+    options?: { videoVolume?: number; narrationVolume?: number }
+  ): Promise<{ status: string; master_video_path: string; duration: number }> {
+    if (await checkBackend()) {
+      const params = new URLSearchParams();
+      if (options?.videoVolume !== undefined) params.append('video_volume', options.videoVolume.toString());
+      if (options?.narrationVolume !== undefined) params.append('narration_volume', options.narrationVolume.toString());
+      const query = params.toString() ? `?${params.toString()}` : '';
+      const res = await fetch(`${API_BASE}/batches/${batchId}/render-video${query}`, {
+        method: 'POST',
+      });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({ detail: 'Failed to render batch video' }));
+        throw new Error(err.detail || 'Failed to render batch video');
+      }
+      return res.json();
+    }
+    throw new Error('Video rendering requires backend FFmpeg service');
+  },
+
+  getMasterVideoUrl(batchId: number): string {
+    return `${API_BASE}/batches/${batchId}/master-video`;
+  },
+
+  getParagraphVideoUrl(paragraphId: number): string {
+    return `${API_BASE}/paragraphs/${paragraphId}/video`;
+  },
+
+  getParagraphThumbnailUrl(paragraphId: number): string {
+    return `${API_BASE}/paragraphs/${paragraphId}/thumbnail`;
   },
 };

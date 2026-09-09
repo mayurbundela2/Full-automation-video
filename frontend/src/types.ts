@@ -62,6 +62,19 @@ export interface Paragraph {
   voice?: string;
   director_notes?: string;
   additional_notes?: string;
+  on_screen_text?: string;
+  video_prompt?: string;
+  scene_progression?: string;
+  overall_mood?: string;
+  sound_effects?: string;
+  background_music?: string;
+  voice_over_alignment?: string;
+  media_path?: string;
+  media_type?: 'video' | 'image';
+  original_media_duration?: number;
+  speed_factor?: number;
+  synced_video_path?: string;
+  thumbnail_path?: string;
   transcript: string;
   custom_prompt?: string;
   word_count: number;
@@ -104,6 +117,25 @@ export interface Batch {
     duration: number;
     waveform?: WaveformData;
   };
+  media_folder?: string;
+  master_video_path?: string;
+  master_video_duration?: number;
+}
+
+export interface MediaMatchItem {
+  paragraph_number: number;
+  paragraph_id?: number;
+  matched_file: string;
+  media_type: 'video' | 'image';
+  original_duration?: number;
+  audio_duration?: number;
+  speed_factor?: number;
+}
+
+export interface ScanMediaResponse {
+  media_folder: string;
+  total_files_found: number;
+  matches: MediaMatchItem[];
 }
 
 export interface VoiceItem {

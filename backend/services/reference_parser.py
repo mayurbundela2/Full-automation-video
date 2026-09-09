@@ -44,35 +44,61 @@ class ReferenceParser:
         re.IGNORECASE
     )
 
+    VIDEO_SECTION_HEADER_REGEX = re.compile(
+        r'^(?:[*-]\s*)?(?:\*{1,2})?(?:Video\s+SHOT|Visual\s+Shot|Shot\s+Visuals?)(?:\s*\d+)?.*$',
+        re.IGNORECASE
+    )
+
     # Metadata field extractors
     FIELD_PATTERNS = {
+        "scene_progression": [
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Scene[\s\-]*Progression|Visual[\s\-]*Progression|Progression)(?:\*\*)?\s*[:=]\s*(.*)$',
+        ],
         "scene": [
-            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Scene|Visual Scene|Visual|Setting)(?:\*\*)?[:\s]+["\']?(.*?)["\']?$',
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Scene|Visual Scene|Visual|Setting)(?!\s+Progression)(?:\*\*)?\s*[:=]\s*(.*)$',
         ],
         "sample_context": [
-            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Sample Context|Context|Delivery Context|Emotional Context)(?:\*\*)?[:\s]+["\']?(.*?)["\']?$',
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Sample Context|Context|Delivery Context|Emotional Context)(?:\*\*)?\s*[:=]\s*(.*)$',
         ],
         "audio_profile": [
-            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Audio Profile|Profile|Speaker Profile|Persona|Character Profile)(?:\*\*)?[:\s]+["\']?(.*?)["\']?$',
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Audio Profile|Profile|Speaker Profile|Persona|Character Profile)(?:\*\*)?\s*[:=]\s*(.*)$',
         ],
         "speaker": [
-            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Speaker|Narrator|Voice Actor)(?:\*\*)?[:\s]+["\']?(.*?)["\']?$',
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Speaker|Narrator|Voice Actor)(?:\*\*)?\s*[:=]\s*(.*)$',
         ],
         "style": [
-            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Style|Delivery Style|Tone|Speaking Style)(?:\*\*)?[:\s]+["\']?(.*?)["\']?$',
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Style|Delivery Style|Tone|Speaking Style)(?:\*\*)?\s*[:=]\s*(.*)$',
         ],
         "pace": [
-            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Pace|Speed|Cadence)(?:\*\*)?[:\s]+["\']?(.*?)["\']?$',
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Pace|Speed|Cadence)(?:\*\*)?\s*[:=]\s*(.*)$',
         ],
         "accent": [
-            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Accent|Language Accent|Dialect)(?:\*\*)?[:\s]+["\']?(.*?)["\']?$',
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Accent|Language Accent|Dialect)(?:\*\*)?\s*[:=]\s*(.*)$',
         ],
         "voice": [
-            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Voice|Voice Name|TTS Voice|Recommended Voice)(?:\*\*)?[:\s]+["\']?(.*?)["\']?$',
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Voice|Voice Name|TTS Voice|Recommended Voice)(?:\*\*)?\s*[:=]\s*(.*)$',
         ],
         "director_notes": [
-            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Director Notes|Director\'s Notes|Director Note|Direction)(?:\*\*)?[:\s]+["\']?(.*?)["\']?$',
-        ]
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Director Notes|Director\'s Notes|Director Note|Direction)(?:\*\*)?\s*[:=]\s*(.*)$',
+        ],
+        "on_screen_text": [
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:On[\s\-]*Screen[\s\-]*Text|Text[\s\-]*on[\s\-]*Screen|Screen[\s\-]*Text)(?:\s*\([^)]*\))?\s*[:=]\s*(.*)$',
+        ],
+        "video_prompt": [
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Video[\s\-]*prompt|Visual[\s\-]*prompt|Google[\s\-]*flow[\s\-]*prompt)(?:\s*\([^)]*\))?\s*[:=]\s*(.*)$',
+        ],
+        "overall_mood": [
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Overall[\s\-]*Mood|Overall[\s\-]*Modd|Mood|Tone[\s\-]*&[\s\-]*Mood)(?:\s*\([^)]*\))?\s*[:=]\s*(.*)$',
+        ],
+        "sound_effects": [
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Sound[\s\-]*Effects?|SFX)(?:[a-zA-Z\s\-–—]*\([^)]*\))?\s*[:=]\s*(.*)$',
+        ],
+        "background_music": [
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Background[\s\-]*Music|BGM|Music)(?:[a-zA-Z\s\-–—]*\([^)]*\))?\s*[:=]\s*(.*)$',
+        ],
+        "voice_over_alignment": [
+            r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Voice[\s\-]*over\s*&\s*subtitle\s*al[ie]gnment|Subtitle\s*al[ie]gnment|Voice[\s\-]*over\s*al[ie]gnment|Alignment)(?:\s*\([^)]*\))?\s*[:=]\s*(.*)$',
+        ],
     }
 
     @classmethod
@@ -121,8 +147,8 @@ class ReferenceParser:
         return l
 
     @classmethod
-    def _match_metadata_field(cls, clean_line: str, metadata: dict) -> bool:
-        """Helper to match metadata fields including pipe-separated key-values."""
+    def _find_field_match(cls, clean_line: str, metadata: dict) -> Optional[tuple]:
+        """Finds if a line matches any metadata field pattern, handling piped lines."""
         if "|" in clean_line and ":" in clean_line:
             pipe_segments = [seg.strip() for seg in clean_line.split("|") if seg.strip()]
             matched_any = False
@@ -136,31 +162,64 @@ class ReferenceParser:
                             matched_any = True
                             break
             if matched_any:
-                return True
+                return ("_piped_", "")
 
         for field, patterns in cls.FIELD_PATTERNS.items():
             for pat in patterns:
                 m = re.match(pat, clean_line, re.IGNORECASE)
                 if m:
-                    metadata[field] = m.group(1).strip().strip('"\'')
-                    return True
+                    val = m.group(1).strip().strip('"\'')
+                    return (field, val)
+        return None
+
+    @classmethod
+    def _match_metadata_field(cls, clean_line: str, metadata: dict) -> bool:
+        """Helper to match metadata fields for single-line matching."""
+        res = cls._find_field_match(clean_line, metadata)
+        if res:
+            field_name, field_val = res
+            if field_name != "_piped_":
+                metadata[field_name] = field_val
+            return True
         return False
 
     @classmethod
     def _extract_metadata(cls, lines: list, metadata: dict, additional_notes: list):
-        """Extracts metadata from non-transcript lines."""
+        """Extracts metadata from non-transcript lines with multi-line section accumulation."""
+        current_field = None
         for line in lines:
             raw_s = line.strip()
             clean_s = cls._clean_markdown_line(raw_s)
             if not clean_s or clean_s == "---":
                 continue
             if re.match(r'^(?:#{1,6}\s*)?(?:\*{1,2})?(?:Playground Setup|Setup|Voice Setup|Parameters)[:\s]*(?:\*{1,2})?$', clean_s, re.I):
+                current_field = None
                 continue
             if cls.PART_HEADER_REGEX.match(raw_s) or cls.PART_HEADER_REGEX.match(clean_s):
+                current_field = None
+                continue
+            if cls.VIDEO_SECTION_HEADER_REGEX.match(raw_s) or cls.VIDEO_SECTION_HEADER_REGEX.match(clean_s):
+                current_field = None
                 continue
 
-            matched = cls._match_metadata_field(clean_s, metadata)
-            if not matched and not clean_s.startswith("#"):
+            match_result = cls._find_field_match(clean_s, metadata)
+            if match_result:
+                field_name, field_val = match_result
+                if field_name == "_piped_":
+                    current_field = None
+                else:
+                    current_field = field_name
+                    if field_val:
+                        metadata[field_name] = field_val
+                    else:
+                        metadata[field_name] = ""
+            elif current_field:
+                val = clean_s.strip('"')
+                if metadata.get(current_field):
+                    metadata[current_field] += "\n" + val
+                else:
+                    metadata[current_field] = val
+            elif not clean_s.startswith("#"):
                 additional_notes.append(clean_s)
 
     @classmethod
@@ -205,6 +264,13 @@ class ReferenceParser:
             "voice": default_voice,
             "director_notes": "",
             "additional_notes": "",
+            "on_screen_text": "",
+            "video_prompt": "",
+            "scene_progression": "",
+            "overall_mood": "",
+            "sound_effects": "",
+            "background_music": "",
+            "voice_over_alignment": "",
         }
 
         additional_notes_lines: List[str] = []
@@ -212,10 +278,29 @@ class ReferenceParser:
 
         if script_start_idx != -1:
             metadata_lines = lines[:script_start_idx]
-            raw_transcript_lines = lines[script_start_idx + 1:]
+            remaining_lines = lines[script_start_idx + 1:]
 
-            # Process metadata
+            # Check if there is a video section after the script
+            video_start_idx = -1
+            for idx, line in enumerate(remaining_lines):
+                cleaned_line = cls._clean_markdown_line(line)
+                if cls.VIDEO_SECTION_HEADER_REGEX.match(cleaned_line) or cls.FOOTER_LINE_REGEX.match(cleaned_line):
+                    video_start_idx = idx
+                    break
+
+            if video_start_idx != -1:
+                raw_transcript_lines = remaining_lines[:video_start_idx]
+                video_lines = remaining_lines[video_start_idx:]
+            else:
+                raw_transcript_lines = remaining_lines
+                video_lines = []
+
+            # Process audio metadata from top
             cls._extract_metadata(metadata_lines, metadata, additional_notes_lines)
+
+            # Process video metadata from bottom
+            if video_lines:
+                cls._extract_metadata(video_lines, metadata, additional_notes_lines)
 
             # Process transcript lines
             for l in raw_transcript_lines:
@@ -225,18 +310,7 @@ class ReferenceParser:
                         cleaned_transcript_lines.append("")
                     continue
 
-                is_blockquote = raw_l.startswith(">")
                 cl = cls._clean_transcript_line(raw_l)
-
-                # Spoken blockquote: ALWAYS keep, NEVER break on footer checks
-                if is_blockquote:
-                    cleaned_transcript_lines.append(cl)
-                    continue
-
-                # Non-blockquote line: check if footer / editing tip / separator
-                if cls.FOOTER_LINE_REGEX.match(raw_l) or cls.FOOTER_LINE_REGEX.match(cl):
-                    break
-
                 cleaned_transcript_lines.append(cl)
 
         else:
@@ -310,6 +384,12 @@ class ReferenceParser:
             "voice": metadata["voice"] or default_voice,
             "director_notes": metadata["director_notes"] or None,
             "additional_notes": metadata["additional_notes"] or None,
+            "on_screen_text": metadata.get("on_screen_text") or None,
+            "video_prompt": metadata.get("video_prompt") or None,
+            "scene_progression": metadata.get("scene_progression") or None,
+            "overall_mood": metadata.get("overall_mood") or None,
+            "sound_effects": metadata.get("sound_effects") or None,
+            "background_music": metadata.get("background_music") or None,
             "transcript": raw_transcript,
             "word_count": words,
             "character_count": characters,

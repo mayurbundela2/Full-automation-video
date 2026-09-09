@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { 
   ArrowLeft, Plus, Play, Sparkles, FileDown, FolderOpen, Search, 
   CheckCircle, AlertTriangle, Layers, RefreshCw, Trash2,
-  Zap, Scissors, Film, Video, Download, FileText, Clock, Eye, X, Copy, Check
+  Zap, Scissors, Film, Video, Download, FileText, Clock, Eye, X, Copy, Check, FileSpreadsheet
 } from 'lucide-react';
 import { Project, Batch, VoiceItem } from '../types';
 import { ParagraphCard } from '../components/ParagraphCard';
 import { ReferenceImporter } from '../components/ReferenceImporter';
 import { ScriptWordCheckerModal } from '../components/ScriptWordCheckerModal';
 import { GenerationProgress } from '../components/GenerationProgress';
+import { VideoTimelineEditor } from '../components/VideoTimelineEditor';
+import { DataExporterModal } from '../components/DataExporterModal';
 import { NativeExporter } from '../services/nativeExporter';
 import { api } from '../api';
 
@@ -27,6 +29,7 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
   const [loading, setLoading] = useState(true);
   const [showImporter, setShowImporter] = useState(false);
   const [showScriptChecker, setShowScriptChecker] = useState(false);
+  const [showDataExporter, setShowDataExporter] = useState(false);
   const [showNewBatchModal, setShowNewBatchModal] = useState(false);
   const [newBatchName, setNewBatchName] = useState('');
   
@@ -55,6 +58,7 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
   const [wordTimestamps, setWordTimestamps] = useState<any>(null);
   const [loadingTimestamps, setLoadingTimestamps] = useState(false);
   const [copiedWords, setCopiedWords] = useState(false);
+  const [activeTab, setActiveTab] = useState<'paragraphs' | 'video'>('paragraphs');
 
   const fetchBatches = async () => {
     try {
@@ -493,6 +497,15 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
               </button>
 
               <button
+                onClick={() => setShowDataExporter(true)}
+                className="flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-95 text-slate-200 text-xs font-bold border border-slate-700 transition-all shadow"
+                title="Inspect, sort, filter, and export audio & video script cues"
+              >
+                <FileSpreadsheet className="w-4 h-4 text-purple-400" />
+                <span>DATA EXPORTER</span>
+              </button>
+
+              <button
                 onClick={handleGenerateAll}
                 disabled={generatingAll || currentBatch.ready_count === 0}
                 className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed text-white text-xs font-bold shadow-lg shadow-blue-600/25 active:scale-95 transition-all"
@@ -533,242 +546,265 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
             message={progressState.message}
           />
 
-          {/* Unified Full Batch Audio Suite */}
-          {currentBatch.completed_count > 0 && (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-              {/* Deck 1: Master Sequential Narration */}
-              <div className="bg-gradient-to-br from-[#0F1B30] to-[#142340] border border-indigo-500/40 rounded-2xl p-5 shadow-2xl flex flex-col justify-between space-y-4">
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2.5">
-                      <div className="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center border border-indigo-500/30">
-                        <Sparkles className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <h3 className="font-extrabold text-sm text-white tracking-wide">
-                          MASTER NARRATION
-                        </h3>
-                        <p className="text-[11px] text-slate-300 font-mono">
-                          {currentBatch.combined_audio
-                            ? `All ${currentBatch.completed_count} parts joined • ${currentBatch.combined_audio.duration}s`
-                            : `${currentBatch.completed_count} parts ready to assemble`}
-                        </p>
-                      </div>
-                    </div>
+          {/* Tab Navigation: Script & Audio vs Video Studio */}
+          <div className="flex items-center space-x-2 border-b border-slate-800 pb-2">
+            <button
+              onClick={() => setActiveTab('paragraphs')}
+              className={`flex items-center space-x-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+                activeTab === 'paragraphs'
+                  ? 'bg-blue-600 text-white shadow-md shadow-blue-600/30'
+                  : 'bg-slate-900/60 text-slate-400 hover:text-white hover:bg-slate-800'
+              }`}
+            >
+              <Layers className="w-4 h-4" />
+              <span>SCRIPT & AUDIO ({currentBatch.paragraphs?.length || 0})</span>
+            </button>
 
-                    <button
-                      onClick={handleRebuildAll}
-                      disabled={rebuilding}
-                      className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-300 border border-indigo-500/40 text-xs font-semibold transition-all active:scale-95"
-                      title="Rebuild master audio track"
-                    >
-                      <RefreshCw className={`w-3.5 h-3.5 ${rebuilding ? 'animate-spin' : ''}`} />
-                      <span>{rebuilding ? 'Rebuilding...' : 'Rebuild'}</span>
-                    </button>
-                  </div>
+            <button
+              onClick={() => setActiveTab('video')}
+              className={`flex items-center space-x-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+                activeTab === 'video'
+                  ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md shadow-purple-600/30'
+                  : 'bg-slate-900/60 text-slate-400 hover:text-white hover:bg-slate-800'
+              }`}
+            >
+              <Film className="w-4 h-4 text-purple-300" />
+              <span>VIDEO STUDIO & TIMELINE</span>
+              {currentBatch.master_video_path && (
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              )}
+            </button>
+          </div>
 
-                  {/* Master Audio Element / CTA */}
-                  {currentBatch.combined_audio ? (
-                    <audio
-                      key={`combined-${audioCacheKey}`}
-                      controls
-                      className="w-full h-10 rounded-xl accent-indigo-500 bg-slate-900/60"
-                      src={masterAudioUrl || `${api.getBatchAudioUrl(currentBatch.id, 'wav')}&t=${audioCacheKey}`}
-                    />
-                  ) : (
-                    <button
-                      onClick={handleCombineBatchAudio}
-                      className="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:scale-[0.99] text-white text-xs font-bold transition-all shadow flex items-center justify-center space-x-2"
-                    >
-                      <Sparkles className="w-4 h-4" />
-                      <span>Assemble Master Narration ({currentBatch.completed_count} Parts)</span>
-                    </button>
-                  )}
-                </div>
+          {activeTab === 'video' ? (
+            <VideoTimelineEditor batch={currentBatch} onUpdated={fetchCurrentBatch} />
+          ) : (
+            <>
+              {/* Unified Full Batch Audio Suite */}
+              {currentBatch.completed_count > 0 && (
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                  {/* Deck 1: Master Sequential Narration */}
+                  <div className="bg-gradient-to-br from-[#0F1B30] to-[#142340] border border-indigo-500/40 rounded-2xl p-5 shadow-2xl flex flex-col justify-between space-y-4">
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2.5">
+                          <div className="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center border border-indigo-500/30">
+                            <Sparkles className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <h3 className="font-extrabold text-sm text-white tracking-wide">
+                              MASTER NARRATION
+                            </h3>
+                            <p className="text-[11px] text-slate-300 font-mono">
+                              {currentBatch.combined_audio
+                                ? `All ${currentBatch.completed_count} parts joined • ${currentBatch.combined_audio.duration}s`
+                                : `${currentBatch.completed_count} parts ready to assemble`}
+                            </p>
+                          </div>
+                        </div>
 
-                {/* Master Actions Bar */}
-                {currentBatch.combined_audio && (
-                  <div className="pt-3 border-t border-indigo-500/20 flex flex-wrap items-center justify-between gap-2">
-                    <button
-                      onClick={() => handleViewTimestamps('master')}
-                      className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 border border-indigo-500/40 text-xs font-semibold transition-all active:scale-95"
-                    >
-                      <FileText className="w-3.5 h-3.5 text-indigo-400" />
-                      <span>Subtitles & Timestamps</span>
-                    </button>
-
-                    <div className="flex items-center space-x-1.5">
-                      <button
-                        onClick={() => handleExportAudio('master', 'wav')}
-                        className="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold shadow transition-all active:scale-95 flex items-center space-x-1"
-                        title="Export Lossless Master WAV"
-                      >
-                        <Download className="w-3.5 h-3.5" />
-                        <span>WAV</span>
-                      </button>
-
-                      {currentBatch.combined_audio.mp3_path && (
                         <button
-                          onClick={() => handleExportAudio('master', 'mp3')}
-                          className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold border border-slate-700 transition-all active:scale-95 flex items-center space-x-1"
-                          title="Export 320k Master MP3"
+                          onClick={handleRebuildAll}
+                          disabled={rebuilding}
+                          className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-300 border border-indigo-500/40 text-xs font-semibold transition-all active:scale-95"
+                          title="Rebuild master audio track"
                         >
-                          <Download className="w-3.5 h-3.5" />
-                          <span>MP3</span>
+                          <RefreshCw className={`w-3.5 h-3.5 ${rebuilding ? 'animate-spin' : ''}`} />
+                          <span>{rebuilding ? 'Rebuilding...' : 'Rebuild'}</span>
+                        </button>
+                      </div>
+
+                      {/* Master Audio Element / CTA */}
+                      {currentBatch.combined_audio ? (
+                        <audio
+                          key={`combined-${audioCacheKey}`}
+                          controls
+                          className="w-full h-10 rounded-xl accent-indigo-500 bg-slate-900/60"
+                          src={masterAudioUrl || `${api.getBatchAudioUrl(currentBatch.id, 'wav')}&t=${audioCacheKey}`}
+                        />
+                      ) : (
+                        <button
+                          onClick={handleCombineBatchAudio}
+                          className="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:scale-[0.99] text-white text-xs font-bold transition-all shadow flex items-center justify-center space-x-2"
+                        >
+                          <Sparkles className="w-4 h-4" />
+                          <span>Assemble Master Narration ({currentBatch.completed_count} Parts)</span>
                         </button>
                       )}
                     </div>
-                  </div>
-                )}
-              </div>
 
-              {/* Deck 2: No-Pause AI Edit & Timeline Track */}
-              <div className="bg-gradient-to-br from-[#0B1E22] to-[#102B28] border border-emerald-500/40 rounded-2xl p-5 shadow-2xl flex flex-col justify-between space-y-4">
-                <div className="space-y-3">
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                    <div className="flex items-center space-x-2.5">
-                      <div className="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/30 flex-shrink-0">
-                        <Zap className="w-4 h-4 fill-current" />
-                      </div>
-                      <div>
-                        <div className="flex items-center space-x-2">
-                          <h3 className="font-extrabold text-sm text-white tracking-wide">
-                            NO-PAUSE EDIT
-                          </h3>
-                          {currentBatch.tight_audio && currentBatch.combined_audio && (
-                            <span className="text-[10px] uppercase font-mono px-2 py-0.5 bg-emerald-500/20 text-emerald-300 rounded-full border border-emerald-500/30 font-bold whitespace-nowrap">
-                              🔥 Saved {roundTwo((currentBatch.combined_audio.duration || 0) - currentBatch.tight_audio.duration)}s
-                            </span>
+                    {/* Master Actions Bar */}
+                    {currentBatch.combined_audio && (
+                      <div className="pt-3 border-t border-indigo-500/20 flex flex-wrap items-center justify-between gap-2">
+                        <button
+                          onClick={() => handleViewTimestamps('master')}
+                          className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 border border-indigo-500/40 text-xs font-semibold transition-all active:scale-95"
+                        >
+                          <FileText className="w-3.5 h-3.5 text-indigo-400" />
+                          <span>Subtitles & Timestamps</span>
+                        </button>
+
+                        <div className="flex items-center space-x-1.5">
+                          <button
+                            onClick={() => handleExportAudio('master', 'wav')}
+                            className="px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold shadow transition-all active:scale-95 flex items-center space-x-1"
+                            title="Export Master WAV"
+                          >
+                            <Download className="w-3.5 h-3.5" />
+                            <span>WAV</span>
+                          </button>
+
+                          {currentBatch.combined_audio.mp3_path && (
+                            <button
+                              onClick={() => handleExportAudio('master', 'mp3')}
+                              className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold border border-slate-700 transition-all active:scale-95 flex items-center space-x-1"
+                              title="Export Master 320k MP3"
+                            >
+                              <Download className="w-3.5 h-3.5" />
+                              <span>MP3</span>
+                            </button>
                           )}
                         </div>
-                        <p className="text-[11px] text-emerald-300/80 font-mono">
-                          {currentBatch.tight_audio
-                            ? `Timeline duration: ${currentBatch.tight_audio.duration}s`
-                            : 'Trim dead air & export synced timeline'}
-                        </p>
                       </div>
-                    </div>
-
-                    <div className="flex items-center space-x-1.5 self-end sm:self-auto">
-                      <select
-                        value={silenceThreshold}
-                        onChange={(e) => setSilenceThreshold(parseFloat(e.target.value))}
-                        className="bg-slate-900/90 border border-emerald-500/40 rounded-lg px-2 py-1 text-xs text-emerald-300 font-mono focus:outline-none font-bold"
-                        title="Select pause trimming aggressiveness"
-                      >
-                        <option value={0.12}>🔥 Ultra (0.12s)</option>
-                        <option value={0.18}>⚡ Punchy (0.18s)</option>
-                        <option value={0.28}>🌿 Natural (0.28s)</option>
-                      </select>
-
-                      <button
-                        onClick={handleTightenBatchAudio}
-                        disabled={tightening}
-                        className="flex items-center space-x-1 px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white text-xs font-extrabold shadow transition-all active:scale-95 whitespace-nowrap"
-                        title="Trim silences & generate tight timeline"
-                      >
-                        <Zap className="w-3 h-3 fill-current" />
-                        <span>{tightening ? 'Trimming...' : 'Trim'}</span>
-                      </button>
-                    </div>
+                    )}
                   </div>
 
-                  {/* Tight Audio Element */}
-                  {currentBatch.tight_audio ? (
-                    <audio
-                      key={`tight-${audioCacheKey}`}
-                      controls
-                      className="w-full h-10 rounded-xl accent-emerald-500 bg-slate-900/60"
-                      src={tightAudioUrl || `${api.getBatchTightAudioUrl(currentBatch.id, 'wav')}&t=${audioCacheKey}`}
-                    />
-                  ) : (
-                    <button
-                      onClick={handleTightenBatchAudio}
-                      disabled={tightening}
-                      className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-[0.99] text-white text-xs font-bold transition-all shadow flex items-center justify-center space-x-2"
-                    >
-                      <Zap className="w-4 h-4" />
-                      <span>{tightening ? 'Trimming Silences...' : 'Trim Pauses & Generate Timeline'}</span>
-                    </button>
-                  )}
-                </div>
+                  {/* Deck 2: Tight Video Narration (Trimmed Pauses) */}
+                  <div className="bg-gradient-to-br from-[#0B2520] to-[#0D332B] border border-emerald-500/40 rounded-2xl p-5 shadow-2xl flex flex-col justify-between space-y-4">
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-2.5">
+                          <div className="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/30">
+                            <Scissors className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="flex items-center space-x-2">
+                              <h3 className="font-extrabold text-sm text-white tracking-wide">
+                                TIGHT TIMELINE
+                              </h3>
+                              <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-mono text-[10px] border border-emerald-500/30">
+                                0.18s CUT
+                              </span>
+                            </div>
+                            <p className="text-[11px] text-slate-300 font-mono">
+                              {currentBatch.tight_audio
+                                ? `${currentBatch.tight_audio.duration}s (${roundTwo(currentBatch.tight_audio.saved_seconds || 0)}s silence eliminated)`
+                                : 'Fast-paced, zero dead-air timeline'}
+                            </p>
+                          </div>
+                        </div>
 
-                {/* Tight Actions Bar */}
-                {currentBatch.tight_audio && (
-                  <div className="pt-3 border-t border-emerald-500/20 flex flex-wrap items-center justify-between gap-2">
-                    <button
-                      onClick={() => handleViewTimestamps('tight')}
-                      className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-200 border border-emerald-500/40 text-xs font-semibold transition-all active:scale-95"
-                    >
-                      <FileText className="w-3.5 h-3.5 text-emerald-400" />
-                      <span>No-Pause Subtitles</span>
-                    </button>
+                        {currentBatch.tight_audio && (
+                          <button
+                            onClick={handleTightenBatchAudio}
+                            disabled={tightening}
+                            className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-600/30 hover:bg-emerald-600/50 text-emerald-300 border border-emerald-500/40 text-xs font-semibold transition-all active:scale-95"
+                            title="Re-run pause trimming"
+                          >
+                            <RefreshCw className={`w-3.5 h-3.5 ${tightening ? 'animate-spin' : ''}`} />
+                            <span>{tightening ? 'Trimming...' : 'Re-trim'}</span>
+                          </button>
+                        )}
+                      </div>
 
-                    <div className="flex items-center space-x-1.5">
-                      <button
-                        onClick={() => handleExportAudio('tight', 'wav')}
-                        className="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow transition-all active:scale-95 flex items-center space-x-1"
-                        title="Export No-Pause WAV"
-                      >
-                        <Download className="w-3.5 h-3.5" />
-                        <span>WAV</span>
-                      </button>
-
-                      {currentBatch.tight_audio.mp3_path && (
+                      {/* Tight Audio Element / CTA */}
+                      {currentBatch.tight_audio ? (
+                        <audio
+                          key={`tight-${audioCacheKey}`}
+                          controls
+                          className="w-full h-10 rounded-xl accent-emerald-500 bg-slate-900/60"
+                          src={tightAudioUrl || `${api.getBatchTightAudioUrl(currentBatch.id, 'wav')}&t=${audioCacheKey}`}
+                        />
+                      ) : (
                         <button
-                          onClick={() => handleExportAudio('tight', 'mp3')}
-                          className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold border border-slate-700 transition-all active:scale-95 flex items-center space-x-1"
-                          title="Export No-Pause 320k MP3"
+                          onClick={handleTightenBatchAudio}
+                          disabled={tightening}
+                          className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-[0.99] text-white text-xs font-bold transition-all shadow flex items-center justify-center space-x-2"
                         >
-                          <Download className="w-3.5 h-3.5" />
-                          <span>MP3</span>
+                          <Zap className="w-4 h-4" />
+                          <span>{tightening ? 'Trimming Silences...' : 'Trim Pauses & Generate Timeline'}</span>
                         </button>
                       )}
-
-                      {currentBatch.tight_audio.mp4_path && (
-                        <a
-                          href={api.getBatchTightAudioUrl(currentBatch.id, 'mp4', true)}
-                          download
-                          className="px-3 py-1.5 rounded-xl bg-purple-600/80 hover:bg-purple-500 text-white text-xs font-bold shadow transition-all active:scale-95 flex items-center space-x-1"
-                          title="Download Timeline Video (MP4)"
-                        >
-                          <Download className="w-3.5 h-3.5" />
-                          <span>MP4</span>
-                        </a>
-                      )}
                     </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
 
-          {/* Paragraphs List */}
-          {(!currentBatch.paragraphs || currentBatch.paragraphs.length === 0) ? (
-            <div className="text-center py-12 bg-studio-card/20 border border-dashed border-studio-cardBorder rounded-2xl space-y-3">
-              <p className="text-xs text-studio-textMuted">
-                This batch has no paragraphs yet. Paste your AI Studio script breakdown to populate.
-              </p>
-              <button
-                onClick={() => setShowImporter(true)}
-                className="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold shadow"
-              >
-                <FileDown className="w-4 h-4" />
-                <span>Import Script Reference</span>
-              </button>
-            </div>
-          ) : (
-            <div className="space-y-4">
-              {currentBatch.paragraphs.map((p) => (
-                <ParagraphCard
-                  key={p.id}
-                  paragraph={p}
-                  voices={voices}
-                  onUpdated={fetchCurrentBatch}
-                  onDeleted={() => fetchCurrentBatch()}
-                />
-              ))}
-            </div>
+                    {/* Tight Actions Bar */}
+                    {currentBatch.tight_audio && (
+                      <div className="pt-3 border-t border-emerald-500/20 flex flex-wrap items-center justify-between gap-2">
+                        <button
+                          onClick={() => handleViewTimestamps('tight')}
+                          className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-200 border border-emerald-500/40 text-xs font-semibold transition-all active:scale-95"
+                        >
+                          <FileText className="w-3.5 h-3.5 text-emerald-400" />
+                          <span>No-Pause Subtitles</span>
+                        </button>
+
+                        <div className="flex items-center space-x-1.5">
+                          <button
+                            onClick={() => handleExportAudio('tight', 'wav')}
+                            className="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow transition-all active:scale-95 flex items-center space-x-1"
+                            title="Export No-Pause WAV"
+                          >
+                            <Download className="w-3.5 h-3.5" />
+                            <span>WAV</span>
+                          </button>
+
+                          {currentBatch.tight_audio.mp3_path && (
+                            <button
+                              onClick={() => handleExportAudio('tight', 'mp3')}
+                              className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold border border-slate-700 transition-all active:scale-95 flex items-center space-x-1"
+                              title="Export No-Pause 320k MP3"
+                            >
+                              <Download className="w-3.5 h-3.5" />
+                              <span>MP3</span>
+                            </button>
+                          )}
+
+                          {currentBatch.tight_audio.mp4_path && (
+                            <a
+                              href={api.getBatchTightAudioUrl(currentBatch.id, 'mp4', true)}
+                              download
+                              className="px-3 py-1.5 rounded-xl bg-purple-600/80 hover:bg-purple-500 text-white text-xs font-bold shadow transition-all active:scale-95 flex items-center space-x-1"
+                              title="Download Timeline Video (MP4)"
+                            >
+                              <Download className="w-3.5 h-3.5" />
+                              <span>MP4</span>
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Paragraphs List */}
+              {(!currentBatch.paragraphs || currentBatch.paragraphs.length === 0) ? (
+                <div className="text-center py-12 bg-studio-card/20 border border-dashed border-studio-cardBorder rounded-2xl space-y-3">
+                  <p className="text-xs text-studio-textMuted">
+                    This batch has no paragraphs yet. Paste your AI Studio script breakdown to populate.
+                  </p>
+                  <button
+                    onClick={() => setShowImporter(true)}
+                    className="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold shadow"
+                  >
+                    <FileDown className="w-4 h-4" />
+                    <span>Import Script Reference</span>
+                  </button>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {currentBatch.paragraphs.map((p) => (
+                    <ParagraphCard
+                      key={p.id}
+                      paragraph={p}
+                      voices={voices}
+                      onUpdated={fetchCurrentBatch}
+                      onDeleted={() => fetchCurrentBatch()}
+                    />
+                  ))}
+                </div>
+              )}
+            </>
           )}
         </div>
       ) : (
@@ -957,6 +993,13 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
           </div>
         </div>
       )}
+
+      {/* Script Sorter & Data Exporter Modal */}
+      <DataExporterModal
+        isOpen={showDataExporter}
+        onClose={() => setShowDataExporter(false)}
+        initialScript={currentBatch?.raw_reference || ''}
+      />
     </div>
   );
 };
