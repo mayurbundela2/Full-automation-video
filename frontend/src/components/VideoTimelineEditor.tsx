@@ -25,6 +25,21 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const [videoTimestamp, setVideoTimestamp] = useState<number>(Date.now());
   const [videoVolume, setVideoVolume] = useState<number>(1.0);
   const [narrationVolume, setNarrationVolume] = useState<number>(1.0);
+  const [renderProgress, setRenderProgress] = useState<{
+    status: string;
+    percentage: number;
+    current_shot: number;
+    total_shots: number;
+    current_step: string;
+    elapsed_seconds: number;
+  }>({
+    status: 'IDLE',
+    percentage: 0,
+    current_shot: 0,
+    total_shots: 0,
+    current_step: '',
+    elapsed_seconds: 0
+  });
 
   const videoPlayerRef = useRef<HTMLVideoElement | null>(null);
   const folderInputRef = useRef<HTMLInputElement | null>(null);
@@ -121,13 +136,40 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const handleRenderMasterVideo = async () => {
     setRendering(true);
     setRenderError(null);
+    setRenderProgress({
+      status: 'RENDERING',
+      percentage: 5,
+      current_shot: 0,
+      total_shots: paragraphs.length,
+      current_step: 'Preparing video assets and timeline...',
+      elapsed_seconds: 0
+    });
+
+    const interval = setInterval(async () => {
+      try {
+        const prog = await api.getBatchRenderStatus(batch.id);
+        if (prog && prog.status !== 'IDLE') {
+          setRenderProgress(prog);
+        }
+      } catch {}
+    }, 350);
+
     try {
       await api.renderBatchVideo(batch.id, { videoVolume, narrationVolume });
+      setRenderProgress({
+        status: 'COMPLETED',
+        percentage: 100,
+        current_shot: paragraphs.length,
+        total_shots: paragraphs.length,
+        current_step: 'Master timeline video rendered and ready!',
+        elapsed_seconds: 0
+      });
       setVideoTimestamp(Date.now());
       onUpdated();
     } catch (e: any) {
       setRenderError(e.message || 'Failed to render master video timeline');
     } finally {
+      clearInterval(interval);
       setRendering(false);
     }
   };
@@ -294,8 +336,8 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
 
           <div className="flex flex-wrap items-center gap-2.5">
             {/* Audio Mix Controls */}
-            <div className="flex items-center space-x-2 bg-slate-900/90 border border-slate-700/80 px-2.5 py-1.5 rounded-xl text-[11px] shadow-sm">
-              <div className="flex items-center space-x-1" title="Volume of source video clip's original soundtrack/effects">
+            <div className="flex flex-wrap items-center gap-2 bg-slate-900/90 border border-slate-700/80 px-2.5 py-1.5 rounded-xl text-[11px] shadow-sm">
+              <div className="flex items-center space-x-1.5" title="Volume of source video clip's original soundtrack/effects">
                 <Volume2 className="w-3.5 h-3.5 text-cyan-400" />
                 <span className="text-slate-300 font-medium">Video Sound:</span>
                 <select
@@ -304,11 +346,38 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                   className="bg-slate-800 text-cyan-300 font-bold px-1.5 py-0.5 rounded border border-slate-600 outline-none text-[11px]"
                 >
                   <option value="1.0">100% (Default)</option>
+                  <option value="0.9">90%</option>
                   <option value="0.8">80%</option>
+                  <option value="0.7">70%</option>
+                  <option value="0.6">60%</option>
                   <option value="0.5">50%</option>
+                  <option value="0.4">40%</option>
+                  <option value="0.3">30%</option>
+                  <option value="0.2">20%</option>
+                  <option value="0.1">10%</option>
+                  <option value="0.0">0% (Mute)</option>
                   <option value="1.2">120% (Boost)</option>
-                  <option value="0.0">Mute (0%)</option>
+                  <option value="1.5">150% (Max)</option>
                 </select>
+
+                {/* Quick 10% - 100% Percentage Selector Pills */}
+                <div className="hidden lg:flex items-center space-x-0.5 pl-1 border-l border-slate-700/80">
+                  {[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0].map((vol) => (
+                    <button
+                      key={vol}
+                      type="button"
+                      onClick={() => setVideoVolume(vol)}
+                      className={`px-1 py-0.5 rounded text-[9px] font-mono transition-all ${
+                        Math.abs(videoVolume - vol) < 0.02
+                          ? 'bg-cyan-500 text-slate-950 font-black shadow-sm scale-105'
+                          : 'bg-slate-800/80 text-slate-400 hover:text-cyan-300 hover:bg-slate-700'
+                      }`}
+                      title={`Set video sound volume to ${Math.round(vol * 100)}%`}
+                    >
+                      {Math.round(vol * 100)}%
+                    </button>
+                  ))}
+                </div>
               </div>
 
               <span className="text-slate-600">|</span>
@@ -333,8 +402,12 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
               disabled={rendering || matchedMediaCount === 0}
               className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 disabled:opacity-50 text-white text-xs font-bold shadow-lg shadow-indigo-600/20 transition-all active:scale-95"
             >
-              <Sparkles className={`w-3.5 h-3.5 ${rendering ? 'animate-spin' : ''}`} />
-              <span>{rendering ? 'RENDERING & STITCHING VIDEO...' : 'RENDER & STITCH FULL VIDEO'}</span>
+              <Sparkles className={`w-3.5 h-3.5 ${rendering ? 'animate-spin text-amber-300' : ''}`} />
+              <span>
+                {rendering
+                  ? `RENDERING... ${renderProgress.percentage}%`
+                  : 'RENDER & STITCH FULL VIDEO'}
+              </span>
             </button>
 
             {batch.master_video_path && (
@@ -350,6 +423,50 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
             )}
           </div>
         </div>
+
+        {/* Real-time Render Progress Loading Bar */}
+        {rendering && (
+          <div className="p-4 bg-gradient-to-r from-indigo-950/80 via-slate-900 to-purple-950/80 border-b border-indigo-500/30 space-y-2.5 animate-fadeIn">
+            <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
+              <div className="flex items-center space-x-2.5">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
+                </span>
+                <span className="font-bold text-white tracking-wide">
+                  RENDERING TIMELINE:
+                </span>
+                <span className="text-cyan-300 font-mono text-[11px] bg-slate-900/90 px-2.5 py-0.5 rounded border border-slate-700">
+                  {renderProgress.current_step || 'Synchronizing video clips to narration...'}
+                </span>
+              </div>
+
+              <div className="flex items-center space-x-3 font-mono text-xs">
+                {renderProgress.total_shots > 0 && (
+                  <span className="text-slate-400">
+                    Shot <strong className="text-purple-300">{renderProgress.current_shot}</strong> / {renderProgress.total_shots}
+                  </span>
+                )}
+                {renderProgress.elapsed_seconds > 0 && (
+                  <span className="text-slate-400">
+                    Time: <strong className="text-slate-200">{renderProgress.elapsed_seconds.toFixed(1)}s</strong>
+                  </span>
+                )}
+                <span className="text-base font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-300 to-purple-400">
+                  {renderProgress.percentage}%
+                </span>
+              </div>
+            </div>
+
+            {/* Glowing Animated Progress Bar */}
+            <div className="w-full bg-slate-950/90 rounded-full h-3 overflow-hidden p-0.5 border border-indigo-500/40 shadow-inner">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 transition-all duration-300 shadow-[0_0_12px_rgba(99,102,241,0.6)]"
+                style={{ width: `${Math.max(4, Math.min(100, renderProgress.percentage))}%` }}
+              />
+            </div>
+          </div>
+        )}
 
         {/* Video Canvas or Empty State */}
         <div className="p-4 flex flex-col items-center justify-center bg-black/40 min-h-[320px]">

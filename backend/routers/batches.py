@@ -1,4 +1,5 @@
 import subprocess
+import time
 from pathlib import Path
 import os
 from typing import List, Dict, Any, Optional
@@ -1012,6 +1013,46 @@ def assign_paragraph_media(batch_id: int, req: AssignMediaRequest, db: Session =
     }
 
 
+# Global in-memory progress tracker for video rendering
+RENDER_PROGRESS: Dict[int, Dict[str, Any]] = {}
+
+
+@router.get("/api/batches/{batch_id}/render-status")
+def get_batch_render_status(batch_id: int):
+    """
+    Returns real-time percentage and status of the video render & stitch pipeline.
+    """
+    prog = RENDER_PROGRESS.get(batch_id)
+    if not prog:
+        return {
+            "status": "IDLE",
+            "percentage": 0,
+            "current_shot": 0,
+            "total_shots": 0,
+            "current_step": "",
+            "elapsed_seconds": 0.0,
+            "error": None
+        }
+
+    elapsed = 0.0
+    start_t = prog.get("start_time")
+    if start_t:
+        if prog.get("status") in ("COMPLETED", "FAILED") and prog.get("end_time"):
+            elapsed = round(prog["end_time"] - start_t, 1)
+        else:
+            elapsed = round(time.time() - start_t, 1)
+
+    return {
+        "status": prog.get("status", "IDLE"),
+        "percentage": prog.get("percentage", 0),
+        "current_shot": prog.get("current_shot", 0),
+        "total_shots": prog.get("total_shots", 0),
+        "current_step": prog.get("current_step", ""),
+        "elapsed_seconds": elapsed,
+        "error": prog.get("error")
+    }
+
+
 @router.post("/api/batches/{batch_id}/render-video")
 def render_batch_video(
     batch_id: int,
@@ -1023,6 +1064,7 @@ def render_batch_video(
     Renders synchronized video for each paragraph by adjusting speed to match audio,
     then stitches all clips into a full master 1080p MP4.
     Preserves original video sound mixed with narration voice-over.
+    Updates RENDER_PROGRESS with real-time percentage and step details.
     """
     batch = db.query(Batch).filter(Batch.id == batch_id).first()
     if not batch:
@@ -1032,6 +1074,18 @@ def render_batch_video(
     paragraphs = db.query(Paragraph).filter(Paragraph.batch_id == batch_id).order_by(Paragraph.paragraph_number.asc()).all()
     if not paragraphs:
         raise HTTPException(status_code=400, detail="No paragraphs found in this batch.")
+
+    total_shots = len(paragraphs)
+    start_time = time.time()
+    RENDER_PROGRESS[batch_id] = {
+        "status": "RENDERING",
+        "percentage": 5,
+        "current_shot": 0,
+        "total_shots": total_shots,
+        "current_step": "Initializing video render pipeline...",
+        "start_time": start_time,
+        "error": None
+    }
 
     output_dir_setting = db.query(AppSetting).filter(AppSetting.key == "OUTPUT_FOLDER").first()
     output_base = output_dir_setting.value if output_dir_setting else settings.OUTPUT_FOLDER
@@ -1046,71 +1100,111 @@ def render_batch_video(
     shot_video_paths = []
     shot_results = []
 
-    for p in paragraphs:
-        # Find latest completed audio
-        latest_gen = db.query(Generation).filter(Generation.paragraph_id == p.id, Generation.status == "COMPLETED").order_by(Generation.created_at.desc()).first()
-        if not latest_gen or not latest_gen.wav_path or not os.path.exists(latest_gen.wav_path):
-            raise HTTPException(
-                status_code=400,
-                detail=f"Paragraph {p.paragraph_number} has not generated audio yet. Please generate all audio first."
-            )
-
-        target_audio_path = latest_gen.wav_path
-        target_duration = latest_gen.duration or AudioConverter.get_audio_info(target_audio_path)["duration"]
-        shot_out_mp4 = video_dir / f"shot_{p.paragraph_number:02d}_synced.mp4"
-
-        # If user provided a media file for this paragraph
-        if p.media_path and os.path.exists(p.media_path):
-            sync_res = VideoService.sync_media_to_audio(
-                media_path=p.media_path,
-                audio_path=target_audio_path,
-                output_video_path=str(shot_out_mp4),
-                target_duration=target_duration,
-                video_volume=video_volume,
-                narration_volume=narration_volume,
-                ffmpeg_path=ffmpeg_path
-            )
-            p.synced_video_path = sync_res["video_path"]
-            p.thumbnail_path = sync_res["thumbnail_path"]
-            p.speed_factor = sync_res["speed_factor"]
-            p.original_media_duration = sync_res["original_duration"]
-            shot_video_paths.append(sync_res["video_path"])
-            shot_results.append(sync_res)
-        else:
-            # Fallback: create standard placeholder clip
-            AudioConverter.create_timeline_mp4_from_audio(
-                input_audio_path=target_audio_path,
-                output_mp4_path=str(shot_out_mp4),
-                ffmpeg_path=ffmpeg_path
-            )
-            p.synced_video_path = str(shot_out_mp4)
-            shot_video_paths.append(str(shot_out_mp4))
-            shot_results.append({
-                "video_path": str(shot_out_mp4),
-                "media_type": "generated_placeholder",
-                "target_duration": target_duration,
-                "speed_factor": 1.0
+    try:
+        for idx, p in enumerate(paragraphs, start=1):
+            media_name = Path(p.media_path).name if p.media_path else f"Shot_{idx}"
+            start_pct = int(5 + ((idx - 1) / (total_shots + 1)) * 82)
+            RENDER_PROGRESS[batch_id].update({
+                "percentage": start_pct,
+                "current_shot": idx,
+                "current_step": f"Processing shot {idx}/{total_shots}: syncing {media_name} to audio..."
             })
 
-    # Stitch all shot videos into master video
-    master_video_path = batch_dir / "full_timeline_master.mp4"
-    stitch_res = VideoService.stitch_batch_videos(
-        shot_video_paths=shot_video_paths,
-        output_master_path=str(master_video_path),
-        ffmpeg_path=ffmpeg_path
-    )
+            # Find latest completed audio
+            latest_gen = db.query(Generation).filter(Generation.paragraph_id == p.id, Generation.status == "COMPLETED").order_by(Generation.created_at.desc()).first()
+            if not latest_gen or not latest_gen.wav_path or not os.path.exists(latest_gen.wav_path):
+                raise HTTPException(
+                    status_code=400,
+                    detail=f"Paragraph {p.paragraph_number} has not generated audio yet. Please generate all audio first."
+                )
 
-    batch.master_video_path = stitch_res["master_video_path"]
-    batch.master_video_duration = stitch_res["duration"]
-    db.commit()
+            target_audio_path = latest_gen.wav_path
+            target_duration = latest_gen.duration or AudioConverter.get_audio_info(target_audio_path)["duration"]
+            shot_out_mp4 = video_dir / f"shot_{p.paragraph_number:02d}_synced.mp4"
 
-    return {
-        "status": "COMPLETED",
-        "master_video_path": batch.master_video_path,
-        "master_video_duration": batch.master_video_duration,
-        "total_shots": len(shot_results),
-        "shots": shot_results
-    }
+            # If user provided a media file for this paragraph
+            if p.media_path and os.path.exists(p.media_path):
+                sync_res = VideoService.sync_media_to_audio(
+                    media_path=p.media_path,
+                    audio_path=target_audio_path,
+                    output_video_path=str(shot_out_mp4),
+                    target_duration=target_duration,
+                    video_volume=video_volume,
+                    narration_volume=narration_volume,
+                    ffmpeg_path=ffmpeg_path
+                )
+                p.synced_video_path = sync_res["video_path"]
+                p.thumbnail_path = sync_res["thumbnail_path"]
+                p.speed_factor = sync_res["speed_factor"]
+                p.original_media_duration = sync_res["original_duration"]
+                shot_video_paths.append(sync_res["video_path"])
+                shot_results.append(sync_res)
+            else:
+                # Fallback: create standard placeholder clip
+                AudioConverter.create_timeline_mp4_from_audio(
+                    input_audio_path=target_audio_path,
+                    output_mp4_path=str(shot_out_mp4),
+                    ffmpeg_path=ffmpeg_path
+                )
+                p.synced_video_path = str(shot_out_mp4)
+                shot_video_paths.append(str(shot_out_mp4))
+                shot_results.append({
+                    "video_path": str(shot_out_mp4),
+                    "media_type": "generated_placeholder",
+                    "target_duration": target_duration,
+                    "speed_factor": 1.0
+                })
+
+            done_pct = int(5 + (idx / (total_shots + 1)) * 82)
+            RENDER_PROGRESS[batch_id].update({
+                "percentage": done_pct,
+                "current_shot": idx,
+                "current_step": f"Shot {idx}/{total_shots} synchronized ({target_duration:.1f}s)."
+            })
+
+        # Stitch all shot videos into master video
+        RENDER_PROGRESS[batch_id].update({
+            "percentage": 90,
+            "current_shot": total_shots,
+            "current_step": f"Stitching all {total_shots} synchronized clips into 1080p master video..."
+        })
+
+        master_video_path = batch_dir / "full_timeline_master.mp4"
+        stitch_res = VideoService.stitch_batch_videos(
+            shot_video_paths=shot_video_paths,
+            output_master_path=str(master_video_path),
+            ffmpeg_path=ffmpeg_path
+        )
+
+        batch.master_video_path = stitch_res["master_video_path"]
+        batch.master_video_duration = stitch_res["duration"]
+        db.commit()
+
+        end_time = time.time()
+        RENDER_PROGRESS[batch_id].update({
+            "status": "COMPLETED",
+            "percentage": 100,
+            "current_shot": total_shots,
+            "current_step": f"Master video completed ({stitch_res.get('duration', 0):.1f}s). Ready to export!",
+            "end_time": end_time
+        })
+
+        return {
+            "status": "COMPLETED",
+            "master_video_path": batch.master_video_path,
+            "master_video_duration": batch.master_video_duration,
+            "total_shots": len(shot_results),
+            "shots": shot_results
+        }
+    except Exception as e:
+        RENDER_PROGRESS[batch_id].update({
+            "status": "FAILED",
+            "percentage": 0,
+            "current_step": "Video rendering failed.",
+            "error": str(e),
+            "end_time": time.time()
+        })
+        raise
 
 
 @router.get("/api/batches/{batch_id}/master-video")

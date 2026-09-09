@@ -769,6 +769,31 @@ export const api = {
     throw new Error('Video rendering requires backend FFmpeg service');
   },
 
+  async getBatchRenderStatus(batchId: number): Promise<{
+    status: string;
+    percentage: number;
+    current_shot: number;
+    total_shots: number;
+    current_step: string;
+    elapsed_seconds: number;
+    error?: string;
+  }> {
+    if (await checkBackend()) {
+      try {
+        const res = await fetch(`${API_BASE}/batches/${batchId}/render-status`);
+        if (res.ok) return await res.json();
+      } catch {}
+    }
+    return {
+      status: 'IDLE',
+      percentage: 0,
+      current_shot: 0,
+      total_shots: 0,
+      current_step: '',
+      elapsed_seconds: 0
+    };
+  },
+
   getMasterVideoUrl(batchId: number): string {
     return `${API_BASE}/batches/${batchId}/master-video`;
   },
