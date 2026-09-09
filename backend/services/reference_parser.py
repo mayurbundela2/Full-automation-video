@@ -9,13 +9,39 @@ class ReferenceParser:
     """
 
     PARAGRAPH_SPLIT_REGEX = re.compile(
-        r'(?:^|\n)\s*(?:---\s*\n\s*)?(?:#{1,6}\s*)?(?:\*{1,2})?(?:Part|Paragraph|Scene|Section|Shot)\s*(\d+)[:\s—\-&]*(.*?)(?:\*{1,2})?(?:\n|$)',
+        r'(?:^|\n)\s*(?:---\s*\n\s*)?'
+        r'(?:'
+        r'(?:#{1,6}\s+)(?:\*{1,2})?(?:Part|Paragraph|Scene|Section)\s*(\d+)(?:[A-Za-z])?[:\s—\-&]*(.*?)(?:\*{1,2})?'
+        r'|'
+        r'(?:\*{1,2})?(?:Part|Paragraph)\s*(\d+)(?:[A-Za-z])?[:\s—\-&]*(.*?)(?:\*{1,2})?'
+        r')(?:\n|$)',
         re.IGNORECASE
     )
 
     PART_HEADER_REGEX = re.compile(
-        r'^\s*(?:---\s*\n\s*)?(?:#{1,6}\s*)?(?:\*{1,2})?(?:Part|Paragraph|Scene|Section|Shot)\s*(\d+)(?:[A-Za-z])?[:\s—\-]*(.*?)(?:\*{1,2})?$',
+        r'^\s*(?:---\s*\n\s*)?(?:#{1,6}\s*)?(?:\*{1,2})?(?:Part|Paragraph|Scene|Section)\s*(\d+)(?:[A-Za-z])?[:\s—\-]*(.*?)(?:\*{1,2})?$',
         re.MULTILINE | re.IGNORECASE
+    )
+
+    SCRIPT_HEADER_REGEX = re.compile(
+        r'^[ \t]*(?:#{1,6}\s*)?(?:[*-]\s*)?(?:\*{1,2})?'
+        r'(?:Formatted Script to Copy-Paste|Formatted Script|Script to Copy-Paste|Script to Copy|Script \(Copy-Paste\)|'
+        r'Script|Transcript|Spoken Text|Spoken Dialogue|Spoken Narration|Narration Script|Narration|Dialogue|'
+        r'Voiceover Script|Voiceover|Voice-over Script|Voice-over|Audio Script|TTS Script|'
+        r'Hindi Script|Hindi Voiceover|English Script|Final Script)'
+        r'[:\s]*(?:\*{1,2})?$',
+        re.MULTILINE | re.IGNORECASE
+    )
+
+    FOOTER_LINE_REGEX = re.compile(
+        r'^(?:'
+        r'---+'
+        r'|(?:🎬|🎥|💡|📌|📝)'
+        r'|(?:Let me know|Generate these|Hope this helps|Feel free to)'
+        r'|(?:[*-]\s*)?(?:\*{1,2})?(?:CapCut(?:\s+Editing)?|Production|Video\s+Editing|Audio\s+Editing|Editing|Director\x27?s?)\s+(?:Tips?|Notes?|Setup|Workflow|Instructions?)(?:\*{1,2})?[:\s\-–—]'
+        r'|(?:[*-]\s*)?(?:\*{1,2})?(?:Editing\s+Tips?|Production\s+Notes?|Director\x27?s?\s+Notes?|Hook\s+Impact|Setup\s+to\s+Twist)(?:\*{1,2})?[:\-–—]'
+        r')',
+        re.IGNORECASE
     )
 
     # Metadata field extractors
@@ -48,11 +74,6 @@ class ReferenceParser:
             r'^[ \t]*[-*]?[ \t]*(?:\*\*)?(?:Director Notes|Director\'s Notes|Director Note|Direction)(?:\*\*)?[:\s]+["\']?(.*?)["\']?$',
         ]
     }
-
-    SCRIPT_HEADER_REGEX = re.compile(
-        r'^[ \t]*(?:#{1,6}\s*)?(?:\*{1,2})?(?:Formatted Script to Copy-Paste|Formatted Script|Script to Copy-Paste|Script|Transcript|Spoken Text|Narration Script|Dialogue)[:\s]*(?:\*{1,2})?$',
-        re.MULTILINE | re.IGNORECASE
-    )
 
     @classmethod
     def parse_batch_text(cls, raw_text: str, default_voice: str = "Algenib") -> List[Dict[str, Any]]:
@@ -100,15 +121,58 @@ class ReferenceParser:
         return l
 
     @classmethod
+    def _match_metadata_field(cls, clean_line: str, metadata: dict) -> bool:
+        """Helper to match metadata fields including pipe-separated key-values."""
+        if "|" in clean_line and ":" in clean_line:
+            pipe_segments = [seg.strip() for seg in clean_line.split("|") if seg.strip()]
+            matched_any = False
+            for seg in pipe_segments:
+                s_clean = cls._clean_markdown_line(seg)
+                for field, patterns in cls.FIELD_PATTERNS.items():
+                    for pat in patterns:
+                        m = re.match(pat, s_clean, re.IGNORECASE)
+                        if m:
+                            metadata[field] = m.group(1).strip().strip('"\'')
+                            matched_any = True
+                            break
+            if matched_any:
+                return True
+
+        for field, patterns in cls.FIELD_PATTERNS.items():
+            for pat in patterns:
+                m = re.match(pat, clean_line, re.IGNORECASE)
+                if m:
+                    metadata[field] = m.group(1).strip().strip('"\'')
+                    return True
+        return False
+
+    @classmethod
+    def _extract_metadata(cls, lines: list, metadata: dict, additional_notes: list):
+        """Extracts metadata from non-transcript lines."""
+        for line in lines:
+            raw_s = line.strip()
+            clean_s = cls._clean_markdown_line(raw_s)
+            if not clean_s or clean_s == "---":
+                continue
+            if re.match(r'^(?:#{1,6}\s*)?(?:\*{1,2})?(?:Playground Setup|Setup|Voice Setup|Parameters)[:\s]*(?:\*{1,2})?$', clean_s, re.I):
+                continue
+            if cls.PART_HEADER_REGEX.match(raw_s) or cls.PART_HEADER_REGEX.match(clean_s):
+                continue
+
+            matched = cls._match_metadata_field(clean_s, metadata)
+            if not matched and not clean_s.startswith("#"):
+                additional_notes.append(clean_s)
+
+    @classmethod
     def _parse_single_block(cls, block_text: str, index: int, default_voice: str) -> Dict[str, Any]:
         """
         Parses a single paragraph/part block text into metadata and transcript.
         """
         lines = block_text.split("\n")
-        
+
         paragraph_number = index
         part_name = f"Part {index}"
-        
+
         # 1. Check for Part header in the first few lines
         for line in lines[:4]:
             header_match = cls.PART_HEADER_REGEX.match(line.strip())
@@ -122,16 +186,13 @@ class ReferenceParser:
                 part_name = f"Part {paragraph_number}" + (f": {subtitle_clean}" if subtitle_clean else "")
                 break
 
-        # 2. Separate metadata section from transcript section
+        # 2. Check for explicit script header
         script_start_idx = -1
         for idx, line in enumerate(lines):
             cleaned_header_line = re.sub(r'^\s*[-*+]\s+', '', line).strip()
             if cls.SCRIPT_HEADER_REGEX.match(cleaned_header_line):
                 script_start_idx = idx
                 break
-
-        metadata_lines = lines[:script_start_idx] if script_start_idx != -1 else lines
-        raw_transcript_lines = lines[script_start_idx + 1:] if script_start_idx != -1 else []
 
         metadata: Dict[str, Any] = {
             "scene": "",
@@ -146,86 +207,86 @@ class ReferenceParser:
             "additional_notes": "",
         }
 
-        additional_notes_lines = []
-        inferred_transcript_lines = []
-        is_in_transcript_mode = False
+        additional_notes_lines: List[str] = []
+        cleaned_transcript_lines: List[str] = []
 
-        for line in metadata_lines:
-            raw_stripped = line.strip()
-            stripped = cls._clean_markdown_line(raw_stripped)
-            if not stripped or stripped == "---":
-                if is_in_transcript_mode:
-                    inferred_transcript_lines.append("")
-                continue
+        if script_start_idx != -1:
+            metadata_lines = lines[:script_start_idx]
+            raw_transcript_lines = lines[script_start_idx + 1:]
 
-            # Ignore section labels like "Playground Setup:"
-            if re.match(r'^(?:#{1,6}\s*)?(?:\*{1,2})?(?:Playground Setup|Setup|Voice Setup|Parameters)[:\s]*(?:\*{1,2})?$', stripped, re.I):
-                continue
+            # Process metadata
+            cls._extract_metadata(metadata_lines, metadata, additional_notes_lines)
 
-            # Check if this line is part header we already handled
-            if cls.PART_HEADER_REGEX.match(raw_stripped) or cls.PART_HEADER_REGEX.match(stripped):
-                continue
-
-            # Check if line contains pipe-separated key-values (e.g. Style: Newscaster | Pace: Natural | Accent: Neutral | Voice: Algenib)
-            if "|" in stripped and ":" in stripped:
-                pipe_segments = [seg.strip() for seg in stripped.split("|") if seg.strip()]
-                matched_any_pipe = False
-                for seg in pipe_segments:
-                    clean_seg = cls._clean_markdown_line(seg)
-                    matched_this_seg = False
-                    for field, patterns in cls.FIELD_PATTERNS.items():
-                        for pat in patterns:
-                            m = re.match(pat, clean_seg, re.IGNORECASE)
-                            if m:
-                                val = m.group(1).strip().strip('"\'')
-                                metadata[field] = val
-                                matched_this_seg = True
-                                matched_any_pipe = True
-                                break
-                        if matched_this_seg:
-                            break
-                if matched_any_pipe:
+            # Process transcript lines
+            for l in raw_transcript_lines:
+                raw_l = l.strip()
+                if not raw_l:
+                    if cleaned_transcript_lines and cleaned_transcript_lines[-1] != "":
+                        cleaned_transcript_lines.append("")
                     continue
 
-            matched_field = False
-            for field, patterns in cls.FIELD_PATTERNS.items():
-                for pat in patterns:
-                    m = re.match(pat, stripped, re.IGNORECASE)
-                    if m:
-                        val = m.group(1).strip().strip('"\'')
-                        metadata[field] = val
-                        matched_field = True
-                        break
-                if matched_field:
+                is_blockquote = raw_l.startswith(">")
+                cl = cls._clean_transcript_line(raw_l)
+
+                # Spoken blockquote: ALWAYS keep, NEVER break on footer checks
+                if is_blockquote:
+                    cleaned_transcript_lines.append(cl)
+                    continue
+
+                # Non-blockquote line: check if footer / editing tip / separator
+                if cls.FOOTER_LINE_REGEX.match(raw_l) or cls.FOOTER_LINE_REGEX.match(cl):
                     break
 
-            if not matched_field:
-                # If script header was missing, check if this line looks like script (e.g. has emotion tags or narration)
-                if script_start_idx == -1:
-                    clean_t_line = cls._clean_transcript_line(line)
-                    if clean_t_line.startswith("[") or is_in_transcript_mode or (len(clean_t_line) > 40 and not clean_t_line.startswith("-")):
-                        is_in_transcript_mode = True
-                        inferred_transcript_lines.append(clean_t_line)
-                    else:
-                        additional_notes_lines.append(stripped)
-                else:
-                    if not stripped.startswith("###") and not stripped.startswith("#"):
-                        additional_notes_lines.append(stripped)
-
-        # Assemble and clean transcript lines
-        cleaned_transcript_lines = []
-        if script_start_idx != -1:
-            for l in raw_transcript_lines:
-                cl = cls._clean_transcript_line(l)
-                # If trailing separator or instructions in footer
-                if cl.startswith("---") or cl.startswith("Generate these") or cl.startswith("Let me know") or re.match(r'^(?:🎬|🎥|💡|📌|📝)?\s*(?:CapCut|Production|Video|Audio|Editing|Tips|Notes|Hook Impact|Setup to Twist)', cl, re.I):
-                    break
                 cleaned_transcript_lines.append(cl)
+
         else:
-            for l in inferred_transcript_lines:
-                cleaned_transcript_lines.append(l)
+            # Check if block has markdown blockquotes (>)
+            has_blockquotes = any(l.strip().startswith(">") for l in lines)
+
+            if has_blockquotes:
+                metadata_lines = []
+                for l in lines:
+                    raw_l = l.strip()
+                    if raw_l.startswith(">"):
+                        cleaned_transcript_lines.append(cls._clean_transcript_line(raw_l))
+                    else:
+                        metadata_lines.append(l)
+
+                cls._extract_metadata(metadata_lines, metadata, additional_notes_lines)
+            else:
+                # Fallback: scan lines for metadata vs transcript
+                in_transcript = False
+                for l in lines:
+                    raw_l = l.strip()
+                    clean_l = cls._clean_markdown_line(raw_l)
+
+                    if not raw_l or clean_l == "---":
+                        continue
+
+                    # Part header
+                    if cls.PART_HEADER_REGEX.match(raw_l) or cls.PART_HEADER_REGEX.match(clean_l):
+                        continue
+
+                    # Footer check
+                    if cls.FOOTER_LINE_REGEX.match(raw_l) or cls.FOOTER_LINE_REGEX.match(clean_l):
+                        break
+
+                    # Check metadata
+                    matched = cls._match_metadata_field(clean_l, metadata)
+                    if matched:
+                        continue
+
+                    # Check if transcript line
+                    cl = cls._clean_transcript_line(raw_l)
+                    if cl.startswith("[") or in_transcript:
+                        in_transcript = True
+                        cleaned_transcript_lines.append(cl)
+                    else:
+                        additional_notes_lines.append(clean_l)
 
         raw_transcript = "\n".join(cleaned_transcript_lines).strip()
+        # Collapse 3+ consecutive newlines to 2
+        raw_transcript = re.sub(r'\n{3,}', '\n\n', raw_transcript)
 
         # Clean additional notes
         if additional_notes_lines:

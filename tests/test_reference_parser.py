@@ -123,3 +123,61 @@ def test_parse_single_unstructured_paragraph():
     assert paragraphs[0]["voice"] == "Puck"
     assert paragraphs[0]["scene"] == "Room"
     assert paragraphs[0]["transcript"] == "Hello world this is a test."
+
+
+def test_dialogue_starting_with_video_or_audio_not_truncated():
+    raw = """
+#### Part 56: CLOSING — The Incredible Brain (Paragraph 56)
+* **Scene:** "A final, majestic shot of the human brain pulsing with light."
+* **Style:** Newscaster | **Pace:** Natural | **Voice:** Algenib
+**Formatted Script to Copy-Paste:**
+> `[awe-struck]` `[intimate]`
+> Video ke end mein ye sochna zaroori hai ki humara dimaag kitna anokha hai.
+> Yeh har pal naye vichar paida karta hai.
+
+---
+
+#### Part 58: CLOSING — The Call to Action (Paragraph 58)
+* **Scene:** "The video end screen appears."
+* **Voice:** Algenib
+**Formatted Script to Copy-Paste:**
+> `[inviting]` `[helpful]`
+> Video pasand aayi toh screen par click karke aag ki kahani dekhein.
+
+🎬 CapCut Editing Tip: Cut to wide shot.
+"""
+    paragraphs = ReferenceParser.parse_batch_text(raw)
+    assert len(paragraphs) == 2
+
+    p56 = paragraphs[0]
+    assert p56["paragraph_number"] == 56
+    assert "Video ke end mein" in p56["transcript"]
+    assert "Yeh har pal naye vichar" in p56["transcript"]
+    assert "[awe-struck]" in p56["transcript"]
+
+    p58 = paragraphs[1]
+    assert p58["paragraph_number"] == 58
+    assert "Video pasand aayi toh screen par" in p58["transcript"]
+    assert "CapCut Editing Tip" not in p58["transcript"]
+
+
+def test_voiceover_and_narration_headers_and_shots():
+    raw = """
+#### Part 1: HOOK (Paragraph 1)
+* **Scene:** Dark room. Shot 1: Zoom. Shot 2: Pan.
+**Voiceover:**
+> [serious] [curious]
+> Audio suno dhyaan se, kya ye aag ki aawaaz hai?
+
+#### Part 2: BODY (Paragraph 2)
+**Narration:**
+> [reflective] [calm]
+> Notes lene ki zaroorat nahi hai.
+"""
+    paragraphs = ReferenceParser.parse_batch_text(raw)
+    assert len(paragraphs) == 2
+    assert paragraphs[0]["paragraph_number"] == 1
+    assert "Audio suno dhyaan se" in paragraphs[0]["transcript"]
+    assert paragraphs[1]["paragraph_number"] == 2
+    assert "Notes lene ki zaroorat nahi hai" in paragraphs[1]["transcript"]
+

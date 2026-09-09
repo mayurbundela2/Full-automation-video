@@ -1,9 +1,20 @@
 import os
+import sys
 from pathlib import Path
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-DATABASE_DIR = Path(__file__).resolve().parent.parent / "data"
+if getattr(sys, "frozen", False):
+    exe_dir = Path(sys.executable).resolve().parent
+    cwd = Path.cwd()
+    if (cwd / ".env").exists() or (cwd / "data").exists():
+        BASE_DIR = cwd
+    else:
+        BASE_DIR = exe_dir
+else:
+    BASE_DIR = Path(__file__).resolve().parent.parent
+
+DATABASE_DIR = BASE_DIR / "data"
 DATABASE_DIR.mkdir(parents=True, exist_ok=True)
 DATABASE_URL = f"sqlite:///{DATABASE_DIR / 'automate_ai_video.db'}"
 

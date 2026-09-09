@@ -14,7 +14,16 @@ import urllib.request
 from pathlib import Path
 
 # Add project root to Python module search path
-PROJECT_ROOT = Path(__file__).resolve().parent
+if getattr(sys, "frozen", False):
+    exe_dir = Path(sys.executable).resolve().parent
+    cwd = Path.cwd()
+    if (cwd / ".env").exists() or (cwd / "data").exists():
+        PROJECT_ROOT = cwd
+    else:
+        PROJECT_ROOT = exe_dir
+else:
+    PROJECT_ROOT = Path(__file__).resolve().parent
+
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from backend.config.settings import settings
@@ -36,7 +45,9 @@ def check_server_ready(url: str, timeout: float = 15.0) -> bool:
 
 
 def build_frontend_if_needed():
-    """Checks if frontend/dist exists. If not, builds it automatically."""
+    """Checks if frontend/dist exists. If not, builds it automatically (dev mode only)."""
+    if getattr(sys, "frozen", False):
+        return
     dist_dir = PROJECT_ROOT / "frontend" / "dist"
     if not dist_dir.exists() or not (dist_dir / "index.html").exists():
         print("[Launcher] Frontend build not found. Building now with npm...")
@@ -90,8 +101,10 @@ def main():
 
     # Import uvicorn and run FastAPI application
     import uvicorn
+    from backend.app import app
+
     uvicorn.run(
-        "backend.app:app",
+        app,
         host=host,
         port=port,
         log_level="info",

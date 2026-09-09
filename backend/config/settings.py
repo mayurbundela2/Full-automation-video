@@ -1,10 +1,21 @@
 import os
+import sys
 from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from dotenv import load_dotenv
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+if getattr(sys, "frozen", False):
+    exe_dir = Path(sys.executable).resolve().parent
+    cwd = Path.cwd()
+    if (cwd / ".env").exists() or (cwd / "data").exists():
+        BASE_DIR = cwd
+    else:
+        BASE_DIR = exe_dir
+else:
+    BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
 load_dotenv(BASE_DIR / ".env")
+
 
 
 class AppConfig(BaseSettings):

@@ -12,8 +12,35 @@ datas = [
     (str(ROOT_DIR / "backend"), "backend"),
 ]
 
-hidden_imports = [
+# Collect package data files
+datas += collect_data_files("fastapi")
+datas += collect_data_files("starlette")
+datas += collect_data_files("uvicorn")
+datas += collect_data_files("google.genai")
+
+packages_to_collect = [
     "uvicorn",
+    "fastapi",
+    "starlette",
+    "sqlalchemy",
+    "pydantic",
+    "pydantic_settings",
+    "backend",
+    "google.genai",
+    "dotenv",
+    "aiofiles",
+    "httpx",
+    "numpy",
+]
+
+hidden_imports = []
+for pkg in packages_to_collect:
+    hidden_imports.extend(collect_submodules(pkg))
+
+# Explicit dynamic imports
+hidden_imports.extend([
+    "fastapi.middleware.cors",
+    "starlette.middleware.cors",
     "uvicorn.logging",
     "uvicorn.loops",
     "uvicorn.loops.auto",
@@ -29,22 +56,11 @@ hidden_imports = [
     "uvicorn.lifespan",
     "uvicorn.lifespan.on",
     "uvicorn.lifespan.off",
-    "fastapi",
-    "starlette",
-    "starlette.staticfiles",
-    "starlette.responses",
-    "starlette.routing",
-    "starlette.middleware",
-    "starlette.middleware.cors",
-    "sqlalchemy",
     "sqlalchemy.dialects.sqlite",
-    "google.genai",
-    "google.genai.types",
-    "pydantic",
-    "pydantic_settings",
     "dotenv",
     "aiofiles",
-]
+])
+hidden_imports = sorted(list(set(hidden_imports)))
 
 a = Analysis(
     ["run.py"],
