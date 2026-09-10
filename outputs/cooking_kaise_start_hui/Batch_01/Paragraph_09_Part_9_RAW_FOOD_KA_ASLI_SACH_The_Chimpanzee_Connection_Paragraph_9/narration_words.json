@@ -1,223 +1,223 @@
 {
   "total_words": 31,
-  "total_duration": 11.4,
+  "total_duration": 13.49,
   "words": [
     {
       "index": 1,
       "word": "Lekin",
-      "start": 0.322,
-      "end": 0.52,
-      "duration": 0.198
+      "start": 0.276,
+      "end": 0.551,
+      "duration": 0.275
     },
     {
       "index": 2,
       "word": "sochke",
-      "start": 0.541,
-      "end": 0.778,
-      "duration": 0.237
+      "start": 0.582,
+      "end": 0.912,
+      "duration": 0.33
     },
     {
       "index": 3,
       "word": "dekho.",
-      "start": 0.805,
-      "end": 1.042,
-      "duration": 0.237
+      "start": 0.949,
+      "end": 1.279,
+      "duration": 0.33
     },
     {
       "index": 4,
       "word": "Chimpanzee",
-      "start": 1.068,
-      "end": 1.463,
-      "duration": 0.395
+      "start": 1.848,
+      "end": 2.371,
+      "duration": 0.523
     },
     {
       "index": 5,
       "word": "...",
-      "start": 2.109,
-      "end": 2.245,
-      "duration": 0.136
+      "start": 2.671,
+      "end": 2.832,
+      "duration": 0.161
     },
     {
       "index": 6,
       "word": "humara",
-      "start": 2.26,
-      "end": 2.533,
-      "duration": 0.273
+      "start": 2.85,
+      "end": 3.172,
+      "duration": 0.322
     },
     {
       "index": 7,
       "word": "sabse",
-      "start": 2.563,
-      "end": 2.791,
-      "duration": 0.227
+      "start": 3.208,
+      "end": 3.477,
+      "duration": 0.269
     },
     {
       "index": 8,
       "word": "kareebi",
-      "start": 3.172,
-      "end": 3.429,
-      "duration": 0.257
+      "start": 3.507,
+      "end": 3.883,
+      "duration": 0.376
     },
     {
       "index": 9,
       "word": "rishtedaar.",
-      "start": 3.458,
-      "end": 3.861,
-      "duration": 0.404
+      "start": 3.924,
+      "end": 4.515,
+      "duration": 0.591
     },
     {
       "index": 10,
       "word": "Uska",
-      "start": 3.906,
-      "end": 4.053,
-      "duration": 0.147
+      "start": 5.207,
+      "end": 5.431,
+      "duration": 0.224
     },
     {
       "index": 11,
       "word": "DNA",
-      "start": 4.07,
-      "end": 4.18,
-      "duration": 0.11
+      "start": 5.456,
+      "end": 5.625,
+      "duration": 0.168
     },
     {
       "index": 12,
       "word": "humse",
-      "start": 4.192,
-      "end": 4.375,
-      "duration": 0.184
+      "start": 5.643,
+      "end": 5.924,
+      "duration": 0.28
     },
     {
       "index": 13,
       "word": "lagbhag",
-      "start": 4.396,
-      "end": 4.653,
-      "duration": 0.257
+      "start": 5.955,
+      "end": 6.348,
+      "duration": 0.393
     },
     {
       "index": 14,
       "word": "ninety-eight",
-      "start": 4.681,
-      "end": 5.122,
-      "duration": 0.441
+      "start": 6.391,
+      "end": 7.064,
+      "duration": 0.673
     },
     {
       "index": 15,
       "word": "percent",
-      "start": 5.572,
-      "end": 5.867,
-      "duration": 0.295
+      "start": 7.139,
+      "end": 7.532,
+      "duration": 0.393
     },
     {
       "index": 16,
       "word": "match",
-      "start": 5.9,
-      "end": 6.111,
-      "duration": 0.211
+      "start": 7.575,
+      "end": 7.856,
+      "duration": 0.28
     },
     {
       "index": 17,
       "word": "karta",
-      "start": 6.134,
-      "end": 6.345,
-      "duration": 0.211
+      "start": 7.887,
+      "end": 8.168,
+      "duration": 0.28
     },
     {
       "index": 18,
       "word": "hai.",
-      "start": 6.368,
-      "end": 6.537,
-      "duration": 0.169
+      "start": 8.199,
+      "end": 8.423,
+      "duration": 0.224
     },
     {
       "index": 19,
       "word": "Wo",
-      "start": 6.555,
-      "end": 6.64,
-      "duration": 0.084
+      "start": 8.886,
+      "end": 8.994,
+      "duration": 0.108
     },
     {
       "index": 20,
       "word": "apne",
-      "start": 6.649,
-      "end": 6.818,
-      "duration": 0.169
+      "start": 9.17,
+      "end": 9.382,
+      "duration": 0.212
     },
     {
       "index": 21,
       "word": "din",
-      "start": 6.836,
-      "end": 6.963,
-      "duration": 0.126
+      "start": 9.405,
+      "end": 9.564,
+      "duration": 0.159
     },
     {
       "index": 22,
       "word": "ka",
-      "start": 6.977,
-      "end": 7.061,
-      "duration": 0.084
+      "start": 9.582,
+      "end": 9.688,
+      "duration": 0.106
     },
     {
       "index": 23,
       "word": "kitna",
-      "start": 7.071,
-      "end": 7.281,
-      "duration": 0.211
+      "start": 9.7,
+      "end": 9.964,
+      "duration": 0.265
     },
     {
       "index": 24,
       "word": "time",
-      "start": 7.305,
-      "end": 7.473,
-      "duration": 0.169
+      "start": 9.994,
+      "end": 10.206,
+      "duration": 0.212
     },
     {
       "index": 25,
       "word": "sirf",
-      "start": 7.492,
-      "end": 7.661,
-      "duration": 0.169
+      "start": 10.229,
+      "end": 10.441,
+      "duration": 0.212
     },
     {
       "index": 26,
       "word": "chabane",
-      "start": 7.679,
-      "end": 7.974,
-      "duration": 0.295
+      "start": 10.465,
+      "end": 10.835,
+      "duration": 0.371
     },
     {
       "index": 27,
       "word": "mein",
-      "start": 8.007,
-      "end": 8.176,
-      "duration": 0.169
+      "start": 10.877,
+      "end": 11.089,
+      "duration": 0.212
     },
     {
       "index": 28,
       "word": "bitata",
-      "start": 8.195,
-      "end": 8.447,
-      "duration": 0.253
+      "start": 11.112,
+      "end": 11.43,
+      "duration": 0.318
     },
     {
       "index": 29,
       "word": "hai?",
-      "start": 8.476,
-      "end": 8.644,
-      "duration": 0.169
+      "start": 11.465,
+      "end": 11.677,
+      "duration": 0.212
     },
     {
       "index": 30,
       "word": "Chhe",
-      "start": 8.663,
-      "end": 8.831,
-      "duration": 0.169
+      "start": 11.701,
+      "end": 11.912,
+      "duration": 0.212
     },
     {
       "index": 31,
       "word": "ghante.",
-      "start": 8.85,
-      "end": 9.145,
-      "duration": 0.295
+      "start": 12.633,
+      "end": 13.404,
+      "duration": 0.771
     }
   ]
 }

@@ -1,0 +1,300 @@
+{
+  "total_words": 42,
+  "total_duration": 12.33,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ab",
+      "start": 0.309,
+      "end": 0.391,
+      "duration": 0.082
+    },
+    {
+      "index": 2,
+      "word": "wapas",
+      "start": 0.4,
+      "end": 0.604,
+      "duration": 0.204
+    },
+    {
+      "index": 3,
+      "word": "do",
+      "start": 0.627,
+      "end": 0.708,
+      "duration": 0.082
+    },
+    {
+      "index": 4,
+      "word": "hazaar",
+      "start": 0.717,
+      "end": 0.962,
+      "duration": 0.245
+    },
+    {
+      "index": 5,
+      "word": "chhabbees",
+      "start": 0.99,
+      "end": 1.357,
+      "duration": 0.368
+    },
+    {
+      "index": 6,
+      "word": "mein",
+      "start": 1.398,
+      "end": 1.561,
+      "duration": 0.163
+    },
+    {
+      "index": 7,
+      "word": "aate",
+      "start": 1.58,
+      "end": 1.743,
+      "duration": 0.163
+    },
+    {
+      "index": 8,
+      "word": "hain.",
+      "start": 1.761,
+      "end": 1.965,
+      "duration": 0.204
+    },
+    {
+      "index": 9,
+      "word": "Tumhare",
+      "start": 2.481,
+      "end": 2.776,
+      "duration": 0.295
+    },
+    {
+      "index": 10,
+      "word": "purwajon",
+      "start": 2.809,
+      "end": 3.146,
+      "duration": 0.337
+    },
+    {
+      "index": 11,
+      "word": "ne",
+      "start": 3.183,
+      "end": 3.267,
+      "duration": 0.084
+    },
+    {
+      "index": 12,
+      "word": "lakhon",
+      "start": 3.277,
+      "end": 3.529,
+      "duration": 0.253
+    },
+    {
+      "index": 13,
+      "word": "saal",
+      "start": 3.557,
+      "end": 3.726,
+      "duration": 0.168
+    },
+    {
+      "index": 14,
+      "word": "lagaye",
+      "start": 3.745,
+      "end": 3.997,
+      "duration": 0.253
+    },
+    {
+      "index": 15,
+      "word": "...",
+      "start": 4.026,
+      "end": 4.152,
+      "duration": 0.126
+    },
+    {
+      "index": 16,
+      "word": "kachhe",
+      "start": 4.166,
+      "end": 4.419,
+      "duration": 0.253
+    },
+    {
+      "index": 17,
+      "word": "khaane",
+      "start": 4.447,
+      "end": 4.7,
+      "duration": 0.253
+    },
+    {
+      "index": 18,
+      "word": "se",
+      "start": 4.728,
+      "end": 4.812,
+      "duration": 0.084
+    },
+    {
+      "index": 19,
+      "word": "pakaye",
+      "start": 4.821,
+      "end": 5.074,
+      "duration": 0.253
+    },
+    {
+      "index": 20,
+      "word": "hue",
+      "start": 5.102,
+      "end": 5.228,
+      "duration": 0.126
+    },
+    {
+      "index": 21,
+      "word": "khaane",
+      "start": 5.242,
+      "end": 5.495,
+      "duration": 0.253
+    },
+    {
+      "index": 22,
+      "word": "tak",
+      "start": 5.523,
+      "end": 5.65,
+      "duration": 0.126
+    },
+    {
+      "index": 23,
+      "word": "pohonchne",
+      "start": 5.664,
+      "end": 6.043,
+      "duration": 0.379
+    },
+    {
+      "index": 24,
+      "word": "mein.",
+      "start": 6.085,
+      "end": 6.296,
+      "duration": 0.211
+    },
+    {
+      "index": 25,
+      "word": "Aur",
+      "start": 6.319,
+      "end": 6.445,
+      "duration": 0.126
+    },
+    {
+      "index": 26,
+      "word": "tumhari",
+      "start": 6.459,
+      "end": 6.754,
+      "duration": 0.295
+    },
+    {
+      "index": 27,
+      "word": "generation",
+      "start": 7.141,
+      "end": 7.575,
+      "duration": 0.434
+    },
+    {
+      "index": 28,
+      "word": "ne",
+      "start": 7.624,
+      "end": 7.711,
+      "duration": 0.087
+    },
+    {
+      "index": 29,
+      "word": "pichle",
+      "start": 7.72,
+      "end": 7.981,
+      "duration": 0.261
+    },
+    {
+      "index": 30,
+      "word": "tees",
+      "start": 8.01,
+      "end": 8.184,
+      "duration": 0.174
+    },
+    {
+      "index": 31,
+      "word": "saal",
+      "start": 8.203,
+      "end": 8.377,
+      "duration": 0.174
+    },
+    {
+      "index": 32,
+      "word": "mein",
+      "start": 8.396,
+      "end": 8.57,
+      "duration": 0.174
+    },
+    {
+      "index": 33,
+      "word": "kya",
+      "start": 8.589,
+      "end": 8.72,
+      "duration": 0.13
+    },
+    {
+      "index": 34,
+      "word": "kiya?",
+      "start": 8.734,
+      "end": 8.951,
+      "duration": 0.217
+    },
+    {
+      "index": 35,
+      "word": "Pakaye",
+      "start": 8.976,
+      "end": 9.236,
+      "duration": 0.261
+    },
+    {
+      "index": 36,
+      "word": "hue",
+      "start": 9.265,
+      "end": 9.396,
+      "duration": 0.13
+    },
+    {
+      "index": 37,
+      "word": "khaane",
+      "start": 9.605,
+      "end": 9.843,
+      "duration": 0.238
+    },
+    {
+      "index": 38,
+      "word": "se",
+      "start": 9.869,
+      "end": 9.948,
+      "duration": 0.079
+    },
+    {
+      "index": 39,
+      "word": "...",
+      "start": 9.957,
+      "end": 10.076,
+      "duration": 0.119
+    },
+    {
+      "index": 40,
+      "word": "ultra-processed",
+      "start": 10.089,
+      "end": 10.683,
+      "duration": 0.594
+    },
+    {
+      "index": 41,
+      "word": "khaane",
+      "start": 10.941,
+      "end": 11.54,
+      "duration": 0.599
+    },
+    {
+      "index": 42,
+      "word": "tak.",
+      "start": 11.607,
+      "end": 12.007,
+      "duration": 0.4
+    }
+  ]
+}

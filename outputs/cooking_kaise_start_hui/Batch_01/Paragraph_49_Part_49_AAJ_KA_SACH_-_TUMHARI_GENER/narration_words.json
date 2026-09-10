@@ -1,0 +1,209 @@
+{
+  "total_words": 29,
+  "total_duration": 8.41,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.265,
+      "end": 0.365,
+      "duration": 0.1
+    },
+    {
+      "index": 2,
+      "word": "tumhari",
+      "start": 0.376,
+      "end": 0.727,
+      "duration": 0.351
+    },
+    {
+      "index": 3,
+      "word": "galti",
+      "start": 0.766,
+      "end": 1.017,
+      "duration": 0.251
+    },
+    {
+      "index": 4,
+      "word": "nahi",
+      "start": 1.045,
+      "end": 1.245,
+      "duration": 0.2
+    },
+    {
+      "index": 5,
+      "word": "hai.",
+      "start": 1.267,
+      "end": 1.468,
+      "duration": 0.2
+    },
+    {
+      "index": 6,
+      "word": "Ye",
+      "start": 1.826,
+      "end": 1.924,
+      "duration": 0.098
+    },
+    {
+      "index": 7,
+      "word": "sirf",
+      "start": 1.935,
+      "end": 2.131,
+      "duration": 0.196
+    },
+    {
+      "index": 8,
+      "word": "willpower",
+      "start": 2.153,
+      "end": 2.594,
+      "duration": 0.441
+    },
+    {
+      "index": 9,
+      "word": "ka",
+      "start": 2.643,
+      "end": 2.741,
+      "duration": 0.098
+    },
+    {
+      "index": 10,
+      "word": "issue",
+      "start": 2.752,
+      "end": 2.997,
+      "duration": 0.245
+    },
+    {
+      "index": 11,
+      "word": "nahi",
+      "start": 3.024,
+      "end": 3.22,
+      "duration": 0.196
+    },
+    {
+      "index": 12,
+      "word": "hai.",
+      "start": 3.242,
+      "end": 3.438,
+      "duration": 0.196
+    },
+    {
+      "index": 13,
+      "word": "Ye",
+      "start": 3.731,
+      "end": 3.791,
+      "duration": 0.06
+    },
+    {
+      "index": 14,
+      "word": "ek",
+      "start": 3.795,
+      "end": 3.855,
+      "duration": 0.06
+    },
+    {
+      "index": 15,
+      "word": "bahut",
+      "start": 4.08,
+      "end": 4.366,
+      "duration": 0.286
+    },
+    {
+      "index": 16,
+      "word": "purana",
+      "start": 4.397,
+      "end": 4.74,
+      "duration": 0.343
+    },
+    {
+      "index": 17,
+      "word": "system",
+      "start": 4.778,
+      "end": 5.121,
+      "duration": 0.343
+    },
+    {
+      "index": 18,
+      "word": "hai",
+      "start": 5.159,
+      "end": 5.331,
+      "duration": 0.171
+    },
+    {
+      "index": 19,
+      "word": "jo",
+      "start": 5.35,
+      "end": 5.464,
+      "duration": 0.114
+    },
+    {
+      "index": 20,
+      "word": "ek",
+      "start": 5.477,
+      "end": 5.591,
+      "duration": 0.114
+    },
+    {
+      "index": 21,
+      "word": "bilkul",
+      "start": 5.604,
+      "end": 5.947,
+      "duration": 0.343
+    },
+    {
+      "index": 22,
+      "word": "naye",
+      "start": 5.985,
+      "end": 6.213,
+      "duration": 0.229
+    },
+    {
+      "index": 23,
+      "word": "khaane",
+      "start": 6.239,
+      "end": 6.582,
+      "duration": 0.343
+    },
+    {
+      "index": 24,
+      "word": "ke",
+      "start": 6.62,
+      "end": 6.734,
+      "duration": 0.114
+    },
+    {
+      "index": 25,
+      "word": "saamne",
+      "start": 6.747,
+      "end": 7.09,
+      "duration": 0.343
+    },
+    {
+      "index": 26,
+      "word": "confuse",
+      "start": 7.128,
+      "end": 7.528,
+      "duration": 0.4
+    },
+    {
+      "index": 27,
+      "word": "ho",
+      "start": 7.572,
+      "end": 7.686,
+      "duration": 0.114
+    },
+    {
+      "index": 28,
+      "word": "raha",
+      "start": 7.699,
+      "end": 7.928,
+      "duration": 0.229
+    },
+    {
+      "index": 29,
+      "word": "hai.",
+      "start": 7.953,
+      "end": 8.182,
+      "duration": 0.229
+    }
+  ]
+}

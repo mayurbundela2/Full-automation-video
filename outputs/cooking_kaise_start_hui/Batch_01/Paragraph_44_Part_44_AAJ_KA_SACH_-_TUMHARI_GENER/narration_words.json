@@ -1,0 +1,293 @@
+{
+  "total_words": 41,
+  "total_duration": 17.4,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.283,
+      "end": 0.403,
+      "duration": 0.12
+    },
+    {
+      "index": 2,
+      "word": "alag",
+      "start": 0.417,
+      "end": 0.657,
+      "duration": 0.241
+    },
+    {
+      "index": 3,
+      "word": "cheez",
+      "start": 0.684,
+      "end": 0.985,
+      "duration": 0.301
+    },
+    {
+      "index": 4,
+      "word": "hai.",
+      "start": 1.018,
+      "end": 1.259,
+      "duration": 0.241
+    },
+    {
+      "index": 5,
+      "word": "Bilkul",
+      "start": 1.286,
+      "end": 1.647,
+      "duration": 0.361
+    },
+    {
+      "index": 6,
+      "word": "alag.",
+      "start": 2.003,
+      "end": 2.253,
+      "duration": 0.25
+    },
+    {
+      "index": 7,
+      "word": "Cooking",
+      "start": 2.28,
+      "end": 2.63,
+      "duration": 0.35
+    },
+    {
+      "index": 8,
+      "word": "matlab",
+      "start": 2.669,
+      "end": 2.969,
+      "duration": 0.3
+    },
+    {
+      "index": 9,
+      "word": "...",
+      "start": 3.5,
+      "end": 3.657,
+      "duration": 0.157
+    },
+    {
+      "index": 10,
+      "word": "sabzi",
+      "start": 3.675,
+      "end": 3.937,
+      "duration": 0.262
+    },
+    {
+      "index": 11,
+      "word": "ko",
+      "start": 3.966,
+      "end": 4.071,
+      "duration": 0.105
+    },
+    {
+      "index": 12,
+      "word": "aag",
+      "start": 4.082,
+      "end": 4.24,
+      "duration": 0.157
+    },
+    {
+      "index": 13,
+      "word": "pe",
+      "start": 4.454,
+      "end": 4.565,
+      "duration": 0.111
+    },
+    {
+      "index": 14,
+      "word": "pakana.",
+      "start": 4.578,
+      "end": 4.967,
+      "duration": 0.39
+    },
+    {
+      "index": 15,
+      "word": "Dal",
+      "start": 5.011,
+      "end": 5.178,
+      "duration": 0.167
+    },
+    {
+      "index": 16,
+      "word": "ko",
+      "start": 5.196,
+      "end": 5.307,
+      "duration": 0.111
+    },
+    {
+      "index": 17,
+      "word": "ubaalna.",
+      "start": 5.32,
+      "end": 5.765,
+      "duration": 0.445
+    },
+    {
+      "index": 18,
+      "word": "Roti",
+      "start": 5.815,
+      "end": 6.037,
+      "duration": 0.223
+    },
+    {
+      "index": 19,
+      "word": "banana.",
+      "start": 6.42,
+      "end": 6.734,
+      "duration": 0.314
+    },
+    {
+      "index": 20,
+      "word": "Ultra-processing",
+      "start": 6.768,
+      "end": 7.485,
+      "duration": 0.717
+    },
+    {
+      "index": 21,
+      "word": "matlab",
+      "start": 7.893,
+      "end": 8.164,
+      "duration": 0.271
+    },
+    {
+      "index": 22,
+      "word": "...",
+      "start": 8.194,
+      "end": 8.329,
+      "duration": 0.135
+    },
+    {
+      "index": 23,
+      "word": "factory",
+      "start": 8.344,
+      "end": 8.66,
+      "duration": 0.316
+    },
+    {
+      "index": 24,
+      "word": "mein",
+      "start": 9.528,
+      "end": 9.755,
+      "duration": 0.227
+    },
+    {
+      "index": 25,
+      "word": "khaane",
+      "start": 9.78,
+      "end": 10.12,
+      "duration": 0.34
+    },
+    {
+      "index": 26,
+      "word": "ko",
+      "start": 10.158,
+      "end": 10.271,
+      "duration": 0.113
+    },
+    {
+      "index": 27,
+      "word": "itna",
+      "start": 10.284,
+      "end": 10.511,
+      "duration": 0.227
+    },
+    {
+      "index": 28,
+      "word": "tod",
+      "start": 10.536,
+      "end": 10.706,
+      "duration": 0.17
+    },
+    {
+      "index": 29,
+      "word": "diya",
+      "start": 10.725,
+      "end": 10.952,
+      "duration": 0.227
+    },
+    {
+      "index": 30,
+      "word": "jaata",
+      "start": 11.318,
+      "end": 11.626,
+      "duration": 0.308
+    },
+    {
+      "index": 31,
+      "word": "hai",
+      "start": 11.66,
+      "end": 11.844,
+      "duration": 0.185
+    },
+    {
+      "index": 32,
+      "word": "ki",
+      "start": 11.865,
+      "end": 11.988,
+      "duration": 0.123
+    },
+    {
+      "index": 33,
+      "word": "wo",
+      "start": 12.002,
+      "end": 12.125,
+      "duration": 0.123
+    },
+    {
+      "index": 34,
+      "word": "apni",
+      "start": 12.138,
+      "end": 12.385,
+      "duration": 0.246
+    },
+    {
+      "index": 35,
+      "word": "original",
+      "start": 12.412,
+      "end": 12.904,
+      "duration": 0.492
+    },
+    {
+      "index": 36,
+      "word": "form",
+      "start": 12.959,
+      "end": 13.205,
+      "duration": 0.246
+    },
+    {
+      "index": 37,
+      "word": "mein",
+      "start": 13.232,
+      "end": 13.479,
+      "duration": 0.246
+    },
+    {
+      "index": 38,
+      "word": "pehchana",
+      "start": 13.506,
+      "end": 13.998,
+      "duration": 0.492
+    },
+    {
+      "index": 39,
+      "word": "bhi",
+      "start": 14.368,
+      "end": 15.09,
+      "duration": 0.722
+    },
+    {
+      "index": 40,
+      "word": "na",
+      "start": 15.17,
+      "end": 15.652,
+      "duration": 0.481
+    },
+    {
+      "index": 41,
+      "word": "jaye.",
+      "start": 15.705,
+      "end": 16.908,
+      "duration": 1.203
+    }
+  ]
+}

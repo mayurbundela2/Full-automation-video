@@ -1,0 +1,335 @@
+{
+  "total_words": 47,
+  "total_duration": 20.6,
+  "words": [
+    {
+      "index": 1,
+      "word": "Nineteen",
+      "start": 0.299,
+      "end": 0.758,
+      "duration": 0.459
+    },
+    {
+      "index": 2,
+      "word": "ninety-five",
+      "start": 0.809,
+      "end": 1.441,
+      "duration": 0.631
+    },
+    {
+      "index": 3,
+      "word": "mein",
+      "start": 1.511,
+      "end": 1.74,
+      "duration": 0.23
+    },
+    {
+      "index": 4,
+      "word": "do",
+      "start": 1.945,
+      "end": 2.065,
+      "duration": 0.12
+    },
+    {
+      "index": 5,
+      "word": "scientists",
+      "start": 2.079,
+      "end": 2.68,
+      "duration": 0.601
+    },
+    {
+      "index": 6,
+      "word": "...",
+      "start": 2.747,
+      "end": 2.927,
+      "duration": 0.18
+    },
+    {
+      "index": 7,
+      "word": "Leslie",
+      "start": 3.35,
+      "end": 3.631,
+      "duration": 0.281
+    },
+    {
+      "index": 8,
+      "word": "Aiello",
+      "start": 3.663,
+      "end": 3.944,
+      "duration": 0.281
+    },
+    {
+      "index": 9,
+      "word": "aur",
+      "start": 3.975,
+      "end": 4.116,
+      "duration": 0.141
+    },
+    {
+      "index": 10,
+      "word": "Peter",
+      "start": 4.131,
+      "end": 4.366,
+      "duration": 0.234
+    },
+    {
+      "index": 11,
+      "word": "Wheeler",
+      "start": 4.752,
+      "end": 4.887,
+      "duration": 0.135
+    },
+    {
+      "index": 12,
+      "word": "...",
+      "start": 5.058,
+      "end": 5.209,
+      "duration": 0.151
+    },
+    {
+      "index": 13,
+      "word": "ne",
+      "start": 5.226,
+      "end": 5.326,
+      "duration": 0.101
+    },
+    {
+      "index": 14,
+      "word": "ek",
+      "start": 5.338,
+      "end": 5.438,
+      "duration": 0.101
+    },
+    {
+      "index": 15,
+      "word": "theory",
+      "start": 5.449,
+      "end": 5.751,
+      "duration": 0.302
+    },
+    {
+      "index": 16,
+      "word": "di.",
+      "start": 6.021,
+      "end": 6.197,
+      "duration": 0.176
+    },
+    {
+      "index": 17,
+      "word": "Iska",
+      "start": 6.217,
+      "end": 6.451,
+      "duration": 0.235
+    },
+    {
+      "index": 18,
+      "word": "naam",
+      "start": 6.478,
+      "end": 6.712,
+      "duration": 0.235
+    },
+    {
+      "index": 19,
+      "word": "hai",
+      "start": 6.738,
+      "end": 6.914,
+      "duration": 0.176
+    },
+    {
+      "index": 20,
+      "word": "\"expensive",
+      "start": 7.285,
+      "end": 7.812,
+      "duration": 0.527
+    },
+    {
+      "index": 21,
+      "word": "tissue",
+      "start": 7.871,
+      "end": 8.187,
+      "duration": 0.316
+    },
+    {
+      "index": 22,
+      "word": "hypothesis.\"",
+      "start": 8.505,
+      "end": 9.218,
+      "duration": 0.713
+    },
+    {
+      "index": 23,
+      "word": "Unka",
+      "start": 9.297,
+      "end": 9.535,
+      "duration": 0.238
+    },
+    {
+      "index": 24,
+      "word": "point",
+      "start": 9.562,
+      "end": 9.859,
+      "duration": 0.297
+    },
+    {
+      "index": 25,
+      "word": "simple",
+      "start": 9.892,
+      "end": 10.248,
+      "duration": 0.357
+    },
+    {
+      "index": 26,
+      "word": "tha",
+      "start": 10.288,
+      "end": 10.466,
+      "duration": 0.178
+    },
+    {
+      "index": 27,
+      "word": "...",
+      "start": 11.02,
+      "end": 11.176,
+      "duration": 0.156
+    },
+    {
+      "index": 28,
+      "word": "Shareer",
+      "start": 11.193,
+      "end": 11.557,
+      "duration": 0.364
+    },
+    {
+      "index": 29,
+      "word": "ke",
+      "start": 11.597,
+      "end": 11.701,
+      "duration": 0.104
+    },
+    {
+      "index": 30,
+      "word": "paas",
+      "start": 11.713,
+      "end": 11.921,
+      "duration": 0.208
+    },
+    {
+      "index": 31,
+      "word": "limited",
+      "start": 11.944,
+      "end": 12.308,
+      "duration": 0.364
+    },
+    {
+      "index": 32,
+      "word": "energy",
+      "start": 12.876,
+      "end": 13.213,
+      "duration": 0.338
+    },
+    {
+      "index": 33,
+      "word": "hoti",
+      "start": 13.251,
+      "end": 13.476,
+      "duration": 0.225
+    },
+    {
+      "index": 34,
+      "word": "hai.",
+      "start": 13.501,
+      "end": 13.726,
+      "duration": 0.225
+    },
+    {
+      "index": 35,
+      "word": "Agar",
+      "start": 13.922,
+      "end": 14.107,
+      "duration": 0.185
+    },
+    {
+      "index": 36,
+      "word": "ek",
+      "start": 14.127,
+      "end": 14.219,
+      "duration": 0.092
+    },
+    {
+      "index": 37,
+      "word": "mehnga",
+      "start": 14.23,
+      "end": 14.507,
+      "duration": 0.277
+    },
+    {
+      "index": 38,
+      "word": "organ",
+      "start": 14.538,
+      "end": 14.768,
+      "duration": 0.231
+    },
+    {
+      "index": 39,
+      "word": "badhana",
+      "start": 14.794,
+      "end": 15.117,
+      "duration": 0.323
+    },
+    {
+      "index": 40,
+      "word": "hai,",
+      "start": 15.441,
+      "end": 15.663,
+      "duration": 0.222
+    },
+    {
+      "index": 41,
+      "word": "toh",
+      "start": 15.687,
+      "end": 15.854,
+      "duration": 0.166
+    },
+    {
+      "index": 42,
+      "word": "doosra",
+      "start": 15.872,
+      "end": 16.205,
+      "duration": 0.333
+    },
+    {
+      "index": 43,
+      "word": "mehnga",
+      "start": 16.242,
+      "end": 16.574,
+      "duration": 0.333
+    },
+    {
+      "index": 44,
+      "word": "organ",
+      "start": 16.611,
+      "end": 16.889,
+      "duration": 0.277
+    },
+    {
+      "index": 45,
+      "word": "chhota",
+      "start": 16.919,
+      "end": 17.252,
+      "duration": 0.333
+    },
+    {
+      "index": 46,
+      "word": "karna",
+      "start": 17.289,
+      "end": 17.566,
+      "duration": 0.277
+    },
+    {
+      "index": 47,
+      "word": "padega.",
+      "start": 17.799,
+      "end": 20.057,
+      "duration": 2.258
+    }
+  ]
+}

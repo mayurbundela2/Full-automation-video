@@ -1,0 +1,349 @@
+{
+  "total_words": 49,
+  "total_duration": 18.08,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aaj",
+      "start": 0.384,
+      "end": 0.491,
+      "duration": 0.107
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.503,
+      "end": 0.575,
+      "duration": 0.072
+    },
+    {
+      "index": 3,
+      "word": "poori",
+      "start": 0.583,
+      "end": 0.762,
+      "duration": 0.179
+    },
+    {
+      "index": 4,
+      "word": "generation",
+      "start": 0.946,
+      "end": 1.573,
+      "duration": 0.627
+    },
+    {
+      "index": 5,
+      "word": "aisi",
+      "start": 1.642,
+      "end": 1.893,
+      "duration": 0.251
+    },
+    {
+      "index": 6,
+      "word": "hai",
+      "start": 1.921,
+      "end": 2.109,
+      "duration": 0.188
+    },
+    {
+      "index": 7,
+      "word": "jo",
+      "start": 2.13,
+      "end": 2.255,
+      "duration": 0.125
+    },
+    {
+      "index": 8,
+      "word": "dal",
+      "start": 2.269,
+      "end": 2.457,
+      "duration": 0.188
+    },
+    {
+      "index": 9,
+      "word": "chawal",
+      "start": 2.478,
+      "end": 2.854,
+      "duration": 0.376
+    },
+    {
+      "index": 10,
+      "word": "nahi",
+      "start": 2.896,
+      "end": 3.146,
+      "duration": 0.251
+    },
+    {
+      "index": 11,
+      "word": "bana",
+      "start": 3.174,
+      "end": 3.425,
+      "duration": 0.251
+    },
+    {
+      "index": 12,
+      "word": "sakti.",
+      "start": 3.453,
+      "end": 3.829,
+      "duration": 0.376
+    },
+    {
+      "index": 13,
+      "word": "Jo",
+      "start": 3.871,
+      "end": 3.996,
+      "duration": 0.125
+    },
+    {
+      "index": 14,
+      "word": "Zomato",
+      "start": 4.01,
+      "end": 4.386,
+      "duration": 0.376
+    },
+    {
+      "index": 15,
+      "word": "ke",
+      "start": 4.428,
+      "end": 4.553,
+      "duration": 0.125
+    },
+    {
+      "index": 16,
+      "word": "bina",
+      "start": 4.853,
+      "end": 5.088,
+      "duration": 0.235
+    },
+    {
+      "index": 17,
+      "word": "survive",
+      "start": 5.114,
+      "end": 5.525,
+      "duration": 0.411
+    },
+    {
+      "index": 18,
+      "word": "nahi",
+      "start": 5.57,
+      "end": 5.805,
+      "duration": 0.235
+    },
+    {
+      "index": 19,
+      "word": "kar",
+      "start": 5.831,
+      "end": 6.007,
+      "duration": 0.176
+    },
+    {
+      "index": 20,
+      "word": "sakti.",
+      "start": 6.027,
+      "end": 6.379,
+      "duration": 0.352
+    },
+    {
+      "index": 21,
+      "word": "Aur",
+      "start": 6.418,
+      "end": 6.595,
+      "duration": 0.176
+    },
+    {
+      "index": 22,
+      "word": "main",
+      "start": 6.614,
+      "end": 6.849,
+      "duration": 0.235
+    },
+    {
+      "index": 23,
+      "word": "judge",
+      "start": 6.875,
+      "end": 7.168,
+      "duration": 0.294
+    },
+    {
+      "index": 24,
+      "word": "nahi",
+      "start": 7.201,
+      "end": 7.436,
+      "duration": 0.235
+    },
+    {
+      "index": 25,
+      "word": "kar",
+      "start": 8.236,
+      "end": 8.394,
+      "duration": 0.158
+    },
+    {
+      "index": 26,
+      "word": "raha",
+      "start": 8.411,
+      "end": 8.622,
+      "duration": 0.21
+    },
+    {
+      "index": 27,
+      "word": "...",
+      "start": 8.645,
+      "end": 8.803,
+      "duration": 0.158
+    },
+    {
+      "index": 28,
+      "word": "main",
+      "start": 8.82,
+      "end": 9.031,
+      "duration": 0.21
+    },
+    {
+      "index": 29,
+      "word": "bhi",
+      "start": 9.054,
+      "end": 9.212,
+      "duration": 0.158
+    },
+    {
+      "index": 30,
+      "word": "wahi",
+      "start": 9.229,
+      "end": 9.44,
+      "duration": 0.21
+    },
+    {
+      "index": 31,
+      "word": "karta",
+      "start": 9.463,
+      "end": 9.726,
+      "duration": 0.263
+    },
+    {
+      "index": 32,
+      "word": "hoon.",
+      "start": 10.137,
+      "end": 10.449,
+      "duration": 0.312
+    },
+    {
+      "index": 33,
+      "word": "Lekin",
+      "start": 10.484,
+      "end": 10.797,
+      "duration": 0.312
+    },
+    {
+      "index": 34,
+      "word": "sochne",
+      "start": 10.831,
+      "end": 11.206,
+      "duration": 0.375
+    },
+    {
+      "index": 35,
+      "word": "wali",
+      "start": 11.631,
+      "end": 11.829,
+      "duration": 0.198
+    },
+    {
+      "index": 36,
+      "word": "baat",
+      "start": 11.851,
+      "end": 12.05,
+      "duration": 0.198
+    },
+    {
+      "index": 37,
+      "word": "hai.",
+      "start": 12.072,
+      "end": 12.27,
+      "duration": 0.198
+    },
+    {
+      "index": 38,
+      "word": "Jis",
+      "start": 12.54,
+      "end": 12.727,
+      "duration": 0.187
+    },
+    {
+      "index": 39,
+      "word": "skill",
+      "start": 12.748,
+      "end": 13.059,
+      "duration": 0.311
+    },
+    {
+      "index": 40,
+      "word": "ne",
+      "start": 13.093,
+      "end": 13.218,
+      "duration": 0.125
+    },
+    {
+      "index": 41,
+      "word": "humein",
+      "start": 13.232,
+      "end": 13.605,
+      "duration": 0.374
+    },
+    {
+      "index": 42,
+      "word": "shape",
+      "start": 13.977,
+      "end": 14.267,
+      "duration": 0.29
+    },
+    {
+      "index": 43,
+      "word": "kiya",
+      "start": 14.299,
+      "end": 14.531,
+      "duration": 0.232
+    },
+    {
+      "index": 44,
+      "word": "...",
+      "start": 14.557,
+      "end": 14.731,
+      "duration": 0.174
+    },
+    {
+      "index": 45,
+      "word": "hum",
+      "start": 14.75,
+      "end": 14.924,
+      "duration": 0.174
+    },
+    {
+      "index": 46,
+      "word": "use",
+      "start": 14.944,
+      "end": 15.118,
+      "duration": 0.174
+    },
+    {
+      "index": 47,
+      "word": "bhool",
+      "start": 15.137,
+      "end": 15.427,
+      "duration": 0.29
+    },
+    {
+      "index": 48,
+      "word": "rahe",
+      "start": 15.459,
+      "end": 15.691,
+      "duration": 0.232
+    },
+    {
+      "index": 49,
+      "word": "hain.",
+      "start": 15.717,
+      "end": 16.007,
+      "duration": 0.29
+    }
+  ]
+}

@@ -1,0 +1,342 @@
+{
+  "total_words": 48,
+  "total_duration": 21.76,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.265,
+      "end": 0.439,
+      "duration": 0.174
+    },
+    {
+      "index": 2,
+      "word": "jo",
+      "start": 0.459,
+      "end": 0.575,
+      "duration": 0.116
+    },
+    {
+      "index": 3,
+      "word": "energy",
+      "start": 0.588,
+      "end": 0.937,
+      "duration": 0.349
+    },
+    {
+      "index": 4,
+      "word": "bachti",
+      "start": 0.976,
+      "end": 1.324,
+      "duration": 0.349
+    },
+    {
+      "index": 5,
+      "word": "hai",
+      "start": 1.363,
+      "end": 1.538,
+      "duration": 0.174
+    },
+    {
+      "index": 6,
+      "word": "...",
+      "start": 1.557,
+      "end": 1.731,
+      "duration": 0.174
+    },
+    {
+      "index": 7,
+      "word": "wo",
+      "start": 1.751,
+      "end": 1.867,
+      "duration": 0.116
+    },
+    {
+      "index": 8,
+      "word": "kahan",
+      "start": 1.88,
+      "end": 2.171,
+      "duration": 0.291
+    },
+    {
+      "index": 9,
+      "word": "jaa",
+      "start": 2.986,
+      "end": 3.141,
+      "duration": 0.155
+    },
+    {
+      "index": 10,
+      "word": "sakti",
+      "start": 3.159,
+      "end": 3.417,
+      "duration": 0.259
+    },
+    {
+      "index": 11,
+      "word": "hai?",
+      "start": 3.446,
+      "end": 3.653,
+      "duration": 0.207
+    },
+    {
+      "index": 12,
+      "word": "Dimaag",
+      "start": 3.676,
+      "end": 3.987,
+      "duration": 0.311
+    },
+    {
+      "index": 13,
+      "word": "mein.",
+      "start": 4.021,
+      "end": 4.28,
+      "duration": 0.259
+    },
+    {
+      "index": 14,
+      "word": "Wrangham",
+      "start": 5.305,
+      "end": 5.699,
+      "duration": 0.394
+    },
+    {
+      "index": 15,
+      "word": "ka",
+      "start": 5.743,
+      "end": 5.842,
+      "duration": 0.099
+    },
+    {
+      "index": 16,
+      "word": "argument",
+      "start": 5.853,
+      "end": 6.247,
+      "duration": 0.394
+    },
+    {
+      "index": 17,
+      "word": "yahi",
+      "start": 6.925,
+      "end": 7.139,
+      "duration": 0.214
+    },
+    {
+      "index": 18,
+      "word": "hai",
+      "start": 7.163,
+      "end": 7.324,
+      "duration": 0.161
+    },
+    {
+      "index": 19,
+      "word": "...",
+      "start": 7.341,
+      "end": 7.502,
+      "duration": 0.161
+    },
+    {
+      "index": 20,
+      "word": "cooking",
+      "start": 7.52,
+      "end": 7.895,
+      "duration": 0.375
+    },
+    {
+      "index": 21,
+      "word": "ne",
+      "start": 7.936,
+      "end": 8.044,
+      "duration": 0.107
+    },
+    {
+      "index": 22,
+      "word": "wo",
+      "start": 8.056,
+      "end": 8.163,
+      "duration": 0.107
+    },
+    {
+      "index": 23,
+      "word": "extra",
+      "start": 8.175,
+      "end": 8.442,
+      "duration": 0.268
+    },
+    {
+      "index": 24,
+      "word": "energy",
+      "start": 8.472,
+      "end": 8.793,
+      "duration": 0.321
+    },
+    {
+      "index": 25,
+      "word": "di",
+      "start": 9.085,
+      "end": 9.197,
+      "duration": 0.112
+    },
+    {
+      "index": 26,
+      "word": "jisse",
+      "start": 9.39,
+      "end": 9.683,
+      "duration": 0.293
+    },
+    {
+      "index": 27,
+      "word": "dimaag",
+      "start": 9.716,
+      "end": 10.068,
+      "duration": 0.352
+    },
+    {
+      "index": 28,
+      "word": "badh",
+      "start": 10.107,
+      "end": 10.341,
+      "duration": 0.235
+    },
+    {
+      "index": 29,
+      "word": "saka.",
+      "start": 10.367,
+      "end": 10.661,
+      "duration": 0.293
+    },
+    {
+      "index": 30,
+      "word": "Aur",
+      "start": 10.693,
+      "end": 10.869,
+      "duration": 0.176
+    },
+    {
+      "index": 31,
+      "word": "ye",
+      "start": 10.889,
+      "end": 11.006,
+      "duration": 0.117
+    },
+    {
+      "index": 32,
+      "word": "ek",
+      "start": 11.019,
+      "end": 11.136,
+      "duration": 0.117
+    },
+    {
+      "index": 33,
+      "word": "loop",
+      "start": 11.149,
+      "end": 11.384,
+      "duration": 0.235
+    },
+    {
+      "index": 34,
+      "word": "ban",
+      "start": 11.41,
+      "end": 11.586,
+      "duration": 0.176
+    },
+    {
+      "index": 35,
+      "word": "gaya.",
+      "start": 11.606,
+      "end": 11.899,
+      "duration": 0.293
+    },
+    {
+      "index": 36,
+      "word": "Bada",
+      "start": 11.931,
+      "end": 12.166,
+      "duration": 0.235
+    },
+    {
+      "index": 37,
+      "word": "dimaag",
+      "start": 12.192,
+      "end": 12.544,
+      "duration": 0.352
+    },
+    {
+      "index": 38,
+      "word": "...",
+      "start": 13.081,
+      "end": 13.23,
+      "duration": 0.149
+    },
+    {
+      "index": 39,
+      "word": "behtar",
+      "start": 13.247,
+      "end": 13.545,
+      "duration": 0.298
+    },
+    {
+      "index": 40,
+      "word": "shikaar,",
+      "start": 13.578,
+      "end": 13.975,
+      "duration": 0.397
+    },
+    {
+      "index": 41,
+      "word": "behtar",
+      "start": 14.019,
+      "end": 14.317,
+      "duration": 0.298
+    },
+    {
+      "index": 42,
+      "word": "planning.",
+      "start": 14.35,
+      "end": 14.797,
+      "duration": 0.447
+    },
+    {
+      "index": 43,
+      "word": "Behtar",
+      "start": 15.366,
+      "end": 15.711,
+      "duration": 0.345
+    },
+    {
+      "index": 44,
+      "word": "khaana",
+      "start": 15.749,
+      "end": 16.095,
+      "duration": 0.345
+    },
+    {
+      "index": 45,
+      "word": "...",
+      "start": 16.562,
+      "end": 16.685,
+      "duration": 0.123
+    },
+    {
+      "index": 46,
+      "word": "aur",
+      "start": 16.699,
+      "end": 16.823,
+      "duration": 0.123
+    },
+    {
+      "index": 47,
+      "word": "bada",
+      "start": 16.836,
+      "end": 17.001,
+      "duration": 0.165
+    },
+    {
+      "index": 48,
+      "word": "dimaag.",
+      "start": 17.019,
+      "end": 17.307,
+      "duration": 0.288
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "total_words": 47,
+  "total_duration": 18.4,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.388,
+      "end": 0.572,
+      "duration": 0.184
+    },
+    {
+      "index": 2,
+      "word": "scientists",
+      "start": 0.593,
+      "end": 1.208,
+      "duration": 0.615
+    },
+    {
+      "index": 3,
+      "word": "aaj",
+      "start": 1.276,
+      "end": 1.46,
+      "duration": 0.184
+    },
+    {
+      "index": 4,
+      "word": "bhi",
+      "start": 1.481,
+      "end": 1.665,
+      "duration": 0.184
+    },
+    {
+      "index": 5,
+      "word": "debate",
+      "start": 1.686,
+      "end": 2.054,
+      "duration": 0.369
+    },
+    {
+      "index": 6,
+      "word": "karte",
+      "start": 2.095,
+      "end": 2.403,
+      "duration": 0.307
+    },
+    {
+      "index": 7,
+      "word": "hain",
+      "start": 2.437,
+      "end": 2.683,
+      "duration": 0.246
+    },
+    {
+      "index": 8,
+      "word": "ki",
+      "start": 2.71,
+      "end": 2.833,
+      "duration": 0.123
+    },
+    {
+      "index": 9,
+      "word": "in",
+      "start": 2.847,
+      "end": 2.97,
+      "duration": 0.123
+    },
+    {
+      "index": 10,
+      "word": "changes",
+      "start": 2.983,
+      "end": 3.414,
+      "duration": 0.43
+    },
+    {
+      "index": 11,
+      "word": "mein",
+      "start": 3.461,
+      "end": 3.707,
+      "duration": 0.246
+    },
+    {
+      "index": 12,
+      "word": "cooking",
+      "start": 3.734,
+      "end": 4.165,
+      "duration": 0.43
+    },
+    {
+      "index": 13,
+      "word": "ka",
+      "start": 4.213,
+      "end": 4.335,
+      "duration": 0.123
+    },
+    {
+      "index": 14,
+      "word": "kitna",
+      "start": 4.349,
+      "end": 4.656,
+      "duration": 0.307
+    },
+    {
+      "index": 15,
+      "word": "role",
+      "start": 4.691,
+      "end": 4.936,
+      "duration": 0.246
+    },
+    {
+      "index": 16,
+      "word": "tha,",
+      "start": 4.964,
+      "end": 5.21,
+      "duration": 0.246
+    },
+    {
+      "index": 17,
+      "word": "aur",
+      "start": 5.446,
+      "end": 5.631,
+      "duration": 0.185
+    },
+    {
+      "index": 18,
+      "word": "kitna",
+      "start": 5.651,
+      "end": 5.959,
+      "duration": 0.308
+    },
+    {
+      "index": 19,
+      "word": "baaki",
+      "start": 5.993,
+      "end": 6.301,
+      "duration": 0.308
+    },
+    {
+      "index": 20,
+      "word": "cheezon",
+      "start": 6.335,
+      "end": 6.766,
+      "duration": 0.431
+    },
+    {
+      "index": 21,
+      "word": "ka.",
+      "start": 7.17,
+      "end": 7.337,
+      "duration": 0.167
+    },
+    {
+      "index": 22,
+      "word": "Lekin",
+      "start": 7.355,
+      "end": 7.633,
+      "duration": 0.278
+    },
+    {
+      "index": 23,
+      "word": "ek",
+      "start": 7.838,
+      "end": 7.923,
+      "duration": 0.085
+    },
+    {
+      "index": 24,
+      "word": "baat",
+      "start": 7.933,
+      "end": 8.103,
+      "duration": 0.171
+    },
+    {
+      "index": 25,
+      "word": "clear",
+      "start": 8.122,
+      "end": 8.335,
+      "duration": 0.213
+    },
+    {
+      "index": 26,
+      "word": "hai.",
+      "start": 8.359,
+      "end": 8.53,
+      "duration": 0.171
+    },
+    {
+      "index": 27,
+      "word": "Cooking",
+      "start": 8.548,
+      "end": 8.847,
+      "duration": 0.298
+    },
+    {
+      "index": 28,
+      "word": "ne",
+      "start": 9.834,
+      "end": 9.95,
+      "duration": 0.116
+    },
+    {
+      "index": 29,
+      "word": "akele",
+      "start": 9.962,
+      "end": 10.251,
+      "duration": 0.289
+    },
+    {
+      "index": 30,
+      "word": "humein",
+      "start": 10.283,
+      "end": 10.63,
+      "duration": 0.347
+    },
+    {
+      "index": 31,
+      "word": "insaan",
+      "start": 10.669,
+      "end": 11.015,
+      "duration": 0.347
+    },
+    {
+      "index": 32,
+      "word": "nahi",
+      "start": 11.054,
+      "end": 11.285,
+      "duration": 0.231
+    },
+    {
+      "index": 33,
+      "word": "banaya.",
+      "start": 11.311,
+      "end": 11.715,
+      "duration": 0.404
+    },
+    {
+      "index": 34,
+      "word": "Lekin",
+      "start": 11.76,
+      "end": 12.049,
+      "duration": 0.289
+    },
+    {
+      "index": 35,
+      "word": "wo",
+      "start": 12.463,
+      "end": 12.604,
+      "duration": 0.141
+    },
+    {
+      "index": 36,
+      "word": "humari",
+      "start": 12.62,
+      "end": 13.045,
+      "duration": 0.424
+    },
+    {
+      "index": 37,
+      "word": "evolutionary",
+      "start": 13.092,
+      "end": 13.941,
+      "duration": 0.849
+    },
+    {
+      "index": 38,
+      "word": "kahani",
+      "start": 14.035,
+      "end": 14.459,
+      "duration": 0.424
+    },
+    {
+      "index": 39,
+      "word": "ki",
+      "start": 14.507,
+      "end": 14.648,
+      "duration": 0.141
+    },
+    {
+      "index": 40,
+      "word": "sabse",
+      "start": 14.664,
+      "end": 15.017,
+      "duration": 0.354
+    },
+    {
+      "index": 41,
+      "word": "important",
+      "start": 15.057,
+      "end": 15.693,
+      "duration": 0.637
+    },
+    {
+      "index": 42,
+      "word": "technologies",
+      "start": 15.764,
+      "end": 16.613,
+      "duration": 0.849
+    },
+    {
+      "index": 43,
+      "word": "mein",
+      "start": 16.707,
+      "end": 16.99,
+      "duration": 0.283
+    },
+    {
+      "index": 44,
+      "word": "se",
+      "start": 17.022,
+      "end": 17.163,
+      "duration": 0.141
+    },
+    {
+      "index": 45,
+      "word": "ek",
+      "start": 17.179,
+      "end": 17.32,
+      "duration": 0.141
+    },
+    {
+      "index": 46,
+      "word": "ban",
+      "start": 17.336,
+      "end": 17.548,
+      "duration": 0.212
+    },
+    {
+      "index": 47,
+      "word": "gayi.",
+      "start": 17.572,
+      "end": 17.926,
+      "duration": 0.354
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "total_words": 36,
+  "total_duration": 13.52,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ab",
+      "start": 0.228,
+      "end": 0.291,
+      "duration": 0.063
+    },
+    {
+      "index": 2,
+      "word": "honest",
+      "start": 0.298,
+      "end": 0.486,
+      "duration": 0.188
+    },
+    {
+      "index": 3,
+      "word": "baat.",
+      "start": 0.7,
+      "end": 0.929,
+      "duration": 0.23
+    },
+    {
+      "index": 4,
+      "word": "Ye",
+      "start": 0.955,
+      "end": 1.047,
+      "duration": 0.092
+    },
+    {
+      "index": 5,
+      "word": "exactly",
+      "start": 1.057,
+      "end": 1.378,
+      "duration": 0.321
+    },
+    {
+      "index": 6,
+      "word": "kab",
+      "start": 1.788,
+      "end": 1.969,
+      "duration": 0.181
+    },
+    {
+      "index": 7,
+      "word": "hua",
+      "start": 1.989,
+      "end": 2.17,
+      "duration": 0.181
+    },
+    {
+      "index": 8,
+      "word": "...",
+      "start": 2.19,
+      "end": 2.371,
+      "duration": 0.181
+    },
+    {
+      "index": 9,
+      "word": "iska",
+      "start": 2.391,
+      "end": 2.633,
+      "duration": 0.241
+    },
+    {
+      "index": 10,
+      "word": "pakka",
+      "start": 2.66,
+      "end": 2.961,
+      "duration": 0.302
+    },
+    {
+      "index": 11,
+      "word": "jawab",
+      "start": 3.148,
+      "end": 3.355,
+      "duration": 0.207
+    },
+    {
+      "index": 12,
+      "word": "kisi",
+      "start": 3.378,
+      "end": 3.544,
+      "duration": 0.166
+    },
+    {
+      "index": 13,
+      "word": "ke",
+      "start": 4.017,
+      "end": 4.139,
+      "duration": 0.122
+    },
+    {
+      "index": 14,
+      "word": "paas",
+      "start": 4.153,
+      "end": 4.397,
+      "duration": 0.244
+    },
+    {
+      "index": 15,
+      "word": "nahi",
+      "start": 4.424,
+      "end": 4.669,
+      "duration": 0.244
+    },
+    {
+      "index": 16,
+      "word": "hai.",
+      "start": 4.696,
+      "end": 4.94,
+      "duration": 0.244
+    },
+    {
+      "index": 17,
+      "word": "Richard",
+      "start": 4.968,
+      "end": 5.395,
+      "duration": 0.428
+    },
+    {
+      "index": 18,
+      "word": "Wrangham",
+      "start": 5.443,
+      "end": 5.932,
+      "duration": 0.489
+    },
+    {
+      "index": 19,
+      "word": "ka",
+      "start": 5.986,
+      "end": 6.108,
+      "duration": 0.122
+    },
+    {
+      "index": 20,
+      "word": "maanna",
+      "start": 6.493,
+      "end": 6.869,
+      "duration": 0.376
+    },
+    {
+      "index": 21,
+      "word": "hai",
+      "start": 6.911,
+      "end": 7.1,
+      "duration": 0.188
+    },
+    {
+      "index": 22,
+      "word": "ki",
+      "start": 7.12,
+      "end": 7.246,
+      "duration": 0.125
+    },
+    {
+      "index": 23,
+      "word": "ye",
+      "start": 7.26,
+      "end": 7.385,
+      "duration": 0.125
+    },
+    {
+      "index": 24,
+      "word": "lagbhag",
+      "start": 7.399,
+      "end": 7.838,
+      "duration": 0.439
+    },
+    {
+      "index": 25,
+      "word": "atthaarah",
+      "start": 7.887,
+      "end": 8.452,
+      "duration": 0.565
+    },
+    {
+      "index": 26,
+      "word": "se",
+      "start": 8.515,
+      "end": 8.64,
+      "duration": 0.125
+    },
+    {
+      "index": 27,
+      "word": "unnees",
+      "start": 8.654,
+      "end": 9.031,
+      "duration": 0.376
+    },
+    {
+      "index": 28,
+      "word": "lakh",
+      "start": 9.072,
+      "end": 9.323,
+      "duration": 0.251
+    },
+    {
+      "index": 29,
+      "word": "saal",
+      "start": 9.351,
+      "end": 9.602,
+      "duration": 0.251
+    },
+    {
+      "index": 30,
+      "word": "pehle",
+      "start": 9.63,
+      "end": 9.944,
+      "duration": 0.314
+    },
+    {
+      "index": 31,
+      "word": "hua",
+      "start": 9.979,
+      "end": 10.167,
+      "duration": 0.188
+    },
+    {
+      "index": 32,
+      "word": "...",
+      "start": 10.188,
+      "end": 10.376,
+      "duration": 0.188
+    },
+    {
+      "index": 33,
+      "word": "jab",
+      "start": 10.397,
+      "end": 10.585,
+      "duration": 0.188
+    },
+    {
+      "index": 34,
+      "word": "Homo",
+      "start": 10.606,
+      "end": 10.857,
+      "duration": 0.251
+    },
+    {
+      "index": 35,
+      "word": "erectus",
+      "start": 10.885,
+      "end": 11.324,
+      "duration": 0.439
+    },
+    {
+      "index": 36,
+      "word": "aaya.",
+      "start": 11.626,
+      "end": 12.999,
+      "duration": 1.373
+    }
+  ]
+}

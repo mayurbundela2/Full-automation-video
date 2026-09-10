@@ -1,0 +1,174 @@
+{
+  "total_words": 24,
+  "total_duration": 11.52,
+  "words": [
+    {
+      "index": 1,
+      "word": "Phir",
+      "start": 0.261,
+      "end": 0.473,
+      "duration": 0.212
+    },
+    {
+      "index": 2,
+      "word": "usme",
+      "start": 0.496,
+      "end": 0.708,
+      "duration": 0.212
+    },
+    {
+      "index": 3,
+      "word": "sugar,",
+      "start": 0.731,
+      "end": 1.049,
+      "duration": 0.317
+    },
+    {
+      "index": 4,
+      "word": "salt,",
+      "start": 1.084,
+      "end": 1.349,
+      "duration": 0.265
+    },
+    {
+      "index": 5,
+      "word": "preservatives,",
+      "start": 1.378,
+      "end": 2.119,
+      "duration": 0.741
+    },
+    {
+      "index": 6,
+      "word": "emulsifiers,",
+      "start": 2.201,
+      "end": 2.836,
+      "duration": 0.635
+    },
+    {
+      "index": 7,
+      "word": "artificial",
+      "start": 2.907,
+      "end": 3.436,
+      "duration": 0.529
+    },
+    {
+      "index": 8,
+      "word": "flavours",
+      "start": 3.495,
+      "end": 3.918,
+      "duration": 0.423
+    },
+    {
+      "index": 9,
+      "word": "daale",
+      "start": 3.965,
+      "end": 4.23,
+      "duration": 0.265
+    },
+    {
+      "index": 10,
+      "word": "jaate",
+      "start": 4.259,
+      "end": 4.524,
+      "duration": 0.265
+    },
+    {
+      "index": 11,
+      "word": "hain.",
+      "start": 4.553,
+      "end": 4.818,
+      "duration": 0.265
+    },
+    {
+      "index": 12,
+      "word": "Chips.",
+      "start": 5.457,
+      "end": 5.617,
+      "duration": 0.16
+    },
+    {
+      "index": 13,
+      "word": "Instant",
+      "start": 5.635,
+      "end": 5.822,
+      "duration": 0.187
+    },
+    {
+      "index": 14,
+      "word": "noodles.",
+      "start": 6.063,
+      "end": 6.555,
+      "duration": 0.492
+    },
+    {
+      "index": 15,
+      "word": "Packaged",
+      "start": 6.609,
+      "end": 7.101,
+      "duration": 0.492
+    },
+    {
+      "index": 16,
+      "word": "juice.",
+      "start": 7.155,
+      "end": 7.524,
+      "duration": 0.369
+    },
+    {
+      "index": 17,
+      "word": "Cold",
+      "start": 7.565,
+      "end": 7.811,
+      "duration": 0.246
+    },
+    {
+      "index": 18,
+      "word": "drinks.",
+      "start": 7.838,
+      "end": 8.268,
+      "duration": 0.43
+    },
+    {
+      "index": 19,
+      "word": "Biscuits.",
+      "start": 8.316,
+      "end": 8.869,
+      "duration": 0.553
+    },
+    {
+      "index": 20,
+      "word": "Energy",
+      "start": 8.931,
+      "end": 9.299,
+      "duration": 0.369
+    },
+    {
+      "index": 21,
+      "word": "drinks.",
+      "start": 9.34,
+      "end": 9.771,
+      "duration": 0.43
+    },
+    {
+      "index": 22,
+      "word": "Ready-to-eat",
+      "start": 9.818,
+      "end": 10.556,
+      "duration": 0.737
+    },
+    {
+      "index": 23,
+      "word": "sab",
+      "start": 10.638,
+      "end": 10.822,
+      "duration": 0.184
+    },
+    {
+      "index": 24,
+      "word": "kuch.",
+      "start": 10.843,
+      "end": 11.15,
+      "duration": 0.307
+    }
+  ]
+}

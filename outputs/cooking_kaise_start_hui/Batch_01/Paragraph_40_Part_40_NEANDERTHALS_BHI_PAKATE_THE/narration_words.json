@@ -1,0 +1,328 @@
+{
+  "total_words": 46,
+  "total_duration": 19.76,
+  "words": [
+    {
+      "index": 1,
+      "word": "Scientists",
+      "start": 0.285,
+      "end": 0.877,
+      "duration": 0.592
+    },
+    {
+      "index": 2,
+      "word": "ne",
+      "start": 0.943,
+      "end": 1.061,
+      "duration": 0.118
+    },
+    {
+      "index": 3,
+      "word": "Neanderthal",
+      "start": 1.074,
+      "end": 1.725,
+      "duration": 0.651
+    },
+    {
+      "index": 4,
+      "word": "skeletons",
+      "start": 1.798,
+      "end": 2.331,
+      "duration": 0.533
+    },
+    {
+      "index": 5,
+      "word": "ke",
+      "start": 2.39,
+      "end": 2.508,
+      "duration": 0.118
+    },
+    {
+      "index": 6,
+      "word": "daanton",
+      "start": 2.521,
+      "end": 2.936,
+      "duration": 0.414
+    },
+    {
+      "index": 7,
+      "word": "pe",
+      "start": 2.982,
+      "end": 3.1,
+      "duration": 0.118
+    },
+    {
+      "index": 8,
+      "word": "jama",
+      "start": 3.113,
+      "end": 3.35,
+      "duration": 0.237
+    },
+    {
+      "index": 9,
+      "word": "purana",
+      "start": 3.376,
+      "end": 3.731,
+      "duration": 0.355
+    },
+    {
+      "index": 10,
+      "word": "plaque",
+      "start": 3.771,
+      "end": 4.126,
+      "duration": 0.355
+    },
+    {
+      "index": 11,
+      "word": "...",
+      "start": 4.166,
+      "end": 4.343,
+      "duration": 0.178
+    },
+    {
+      "index": 12,
+      "word": "jise",
+      "start": 4.363,
+      "end": 4.6,
+      "duration": 0.237
+    },
+    {
+      "index": 13,
+      "word": "dental",
+      "start": 4.963,
+      "end": 5.295,
+      "duration": 0.332
+    },
+    {
+      "index": 14,
+      "word": "calculus",
+      "start": 5.332,
+      "end": 5.775,
+      "duration": 0.443
+    },
+    {
+      "index": 15,
+      "word": "kehte",
+      "start": 5.825,
+      "end": 6.102,
+      "duration": 0.277
+    },
+    {
+      "index": 16,
+      "word": "hain",
+      "start": 6.132,
+      "end": 6.354,
+      "duration": 0.222
+    },
+    {
+      "index": 17,
+      "word": "...",
+      "start": 6.379,
+      "end": 6.545,
+      "duration": 0.166
+    },
+    {
+      "index": 18,
+      "word": "study",
+      "start": 6.563,
+      "end": 6.84,
+      "duration": 0.277
+    },
+    {
+      "index": 19,
+      "word": "kiya.",
+      "start": 7.15,
+      "end": 7.373,
+      "duration": 0.223
+    },
+    {
+      "index": 20,
+      "word": "Aur",
+      "start": 7.397,
+      "end": 7.531,
+      "duration": 0.134
+    },
+    {
+      "index": 21,
+      "word": "usme",
+      "start": 7.546,
+      "end": 7.724,
+      "duration": 0.178
+    },
+    {
+      "index": 22,
+      "word": "unhe",
+      "start": 8.384,
+      "end": 8.608,
+      "duration": 0.224
+    },
+    {
+      "index": 23,
+      "word": "mile",
+      "start": 8.632,
+      "end": 8.856,
+      "duration": 0.224
+    },
+    {
+      "index": 24,
+      "word": "...",
+      "start": 8.881,
+      "end": 9.048,
+      "duration": 0.168
+    },
+    {
+      "index": 25,
+      "word": "pakaye",
+      "start": 9.067,
+      "end": 9.402,
+      "duration": 0.335
+    },
+    {
+      "index": 26,
+      "word": "hue",
+      "start": 9.44,
+      "end": 9.607,
+      "duration": 0.168
+    },
+    {
+      "index": 27,
+      "word": "khaane",
+      "start": 9.8,
+      "end": 9.906,
+      "duration": 0.106
+    },
+    {
+      "index": 28,
+      "word": "ke",
+      "start": 10.164,
+      "end": 10.275,
+      "duration": 0.111
+    },
+    {
+      "index": 29,
+      "word": "microscopic",
+      "start": 10.288,
+      "end": 10.901,
+      "duration": 0.613
+    },
+    {
+      "index": 30,
+      "word": "remains.",
+      "start": 10.969,
+      "end": 11.414,
+      "duration": 0.446
+    },
+    {
+      "index": 31,
+      "word": "Starch",
+      "start": 11.464,
+      "end": 11.798,
+      "duration": 0.334
+    },
+    {
+      "index": 32,
+      "word": "granules",
+      "start": 11.835,
+      "end": 12.281,
+      "duration": 0.446
+    },
+    {
+      "index": 33,
+      "word": "jo",
+      "start": 12.331,
+      "end": 12.442,
+      "duration": 0.111
+    },
+    {
+      "index": 34,
+      "word": "garmi",
+      "start": 12.454,
+      "end": 12.733,
+      "duration": 0.279
+    },
+    {
+      "index": 35,
+      "word": "se",
+      "start": 13.203,
+      "end": 13.328,
+      "duration": 0.125
+    },
+    {
+      "index": 36,
+      "word": "badle",
+      "start": 13.342,
+      "end": 13.654,
+      "duration": 0.312
+    },
+    {
+      "index": 37,
+      "word": "hue",
+      "start": 13.688,
+      "end": 13.876,
+      "duration": 0.187
+    },
+    {
+      "index": 38,
+      "word": "lagte",
+      "start": 13.896,
+      "end": 14.208,
+      "duration": 0.312
+    },
+    {
+      "index": 39,
+      "word": "the.",
+      "start": 14.243,
+      "end": 14.493,
+      "duration": 0.25
+    },
+    {
+      "index": 40,
+      "word": "Yaani",
+      "start": 14.52,
+      "end": 14.832,
+      "duration": 0.312
+    },
+    {
+      "index": 41,
+      "word": "...",
+      "start": 14.867,
+      "end": 15.054,
+      "duration": 0.187
+    },
+    {
+      "index": 42,
+      "word": "Neanderthals",
+      "start": 15.075,
+      "end": 15.824,
+      "duration": 0.749
+    },
+    {
+      "index": 43,
+      "word": "bhi",
+      "start": 16.425,
+      "end": 16.84,
+      "duration": 0.415
+    },
+    {
+      "index": 44,
+      "word": "khaana",
+      "start": 16.886,
+      "end": 17.716,
+      "duration": 0.83
+    },
+    {
+      "index": 45,
+      "word": "pakate",
+      "start": 17.808,
+      "end": 18.637,
+      "duration": 0.83
+    },
+    {
+      "index": 46,
+      "word": "the.",
+      "start": 18.729,
+      "end": 19.283,
+      "duration": 0.553
+    }
+  ]
+}

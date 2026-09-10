@@ -1,0 +1,216 @@
+{
+  "total_words": 30,
+  "total_duration": 12.41,
+  "words": [
+    {
+      "index": 1,
+      "word": "Tumhara",
+      "start": 0.248,
+      "end": 0.77,
+      "duration": 0.522
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.828,
+      "end": 0.977,
+      "duration": 0.149
+    },
+    {
+      "index": 3,
+      "word": "bada,",
+      "start": 0.993,
+      "end": 1.366,
+      "duration": 0.373
+    },
+    {
+      "index": 4,
+      "word": "mehnga,",
+      "start": 1.563,
+      "end": 2.075,
+      "duration": 0.512
+    },
+    {
+      "index": 5,
+      "word": "incredible",
+      "start": 2.132,
+      "end": 2.864,
+      "duration": 0.732
+    },
+    {
+      "index": 6,
+      "word": "dimaag",
+      "start": 2.945,
+      "end": 3.384,
+      "duration": 0.439
+    },
+    {
+      "index": 7,
+      "word": "jo",
+      "start": 3.433,
+      "end": 3.579,
+      "duration": 0.146
+    },
+    {
+      "index": 8,
+      "word": "abhi",
+      "start": 3.596,
+      "end": 3.888,
+      "duration": 0.293
+    },
+    {
+      "index": 9,
+      "word": "ye",
+      "start": 3.921,
+      "end": 4.067,
+      "duration": 0.146
+    },
+    {
+      "index": 10,
+      "word": "video",
+      "start": 4.083,
+      "end": 4.449,
+      "duration": 0.366
+    },
+    {
+      "index": 11,
+      "word": "samajh",
+      "start": 4.49,
+      "end": 4.929,
+      "duration": 0.439
+    },
+    {
+      "index": 12,
+      "word": "raha",
+      "start": 4.978,
+      "end": 5.27,
+      "duration": 0.293
+    },
+    {
+      "index": 13,
+      "word": "hai.",
+      "start": 5.303,
+      "end": 5.595,
+      "duration": 0.293
+    },
+    {
+      "index": 14,
+      "word": "Ye",
+      "start": 5.9,
+      "end": 6.07,
+      "duration": 0.17
+    },
+    {
+      "index": 15,
+      "word": "sab",
+      "start": 6.089,
+      "end": 6.344,
+      "duration": 0.255
+    },
+    {
+      "index": 16,
+      "word": "us",
+      "start": 6.373,
+      "end": 6.543,
+      "duration": 0.17
+    },
+    {
+      "index": 17,
+      "word": "lambi",
+      "start": 6.562,
+      "end": 6.987,
+      "duration": 0.425
+    },
+    {
+      "index": 18,
+      "word": "kahani",
+      "start": 7.034,
+      "end": 7.544,
+      "duration": 0.51
+    },
+    {
+      "index": 19,
+      "word": "ke",
+      "start": 7.601,
+      "end": 7.771,
+      "duration": 0.17
+    },
+    {
+      "index": 20,
+      "word": "nishaan",
+      "start": 7.79,
+      "end": 8.386,
+      "duration": 0.595
+    },
+    {
+      "index": 21,
+      "word": "hain.",
+      "start": 8.452,
+      "end": 8.877,
+      "duration": 0.425
+    },
+    {
+      "index": 22,
+      "word": "Aur",
+      "start": 8.924,
+      "end": 9.179,
+      "duration": 0.255
+    },
+    {
+      "index": 23,
+      "word": "tum",
+      "start": 9.208,
+      "end": 9.463,
+      "duration": 0.255
+    },
+    {
+      "index": 24,
+      "word": "us",
+      "start": 9.491,
+      "end": 9.661,
+      "duration": 0.17
+    },
+    {
+      "index": 25,
+      "word": "kahani",
+      "start": 9.68,
+      "end": 10.191,
+      "duration": 0.51
+    },
+    {
+      "index": 26,
+      "word": "ka",
+      "start": 10.247,
+      "end": 10.417,
+      "duration": 0.17
+    },
+    {
+      "index": 27,
+      "word": "sabse",
+      "start": 10.436,
+      "end": 10.862,
+      "duration": 0.425
+    },
+    {
+      "index": 28,
+      "word": "naya",
+      "start": 10.909,
+      "end": 11.249,
+      "duration": 0.34
+    },
+    {
+      "index": 29,
+      "word": "chapter",
+      "start": 11.287,
+      "end": 11.882,
+      "duration": 0.595
+    },
+    {
+      "index": 30,
+      "word": "ho.",
+      "start": 11.948,
+      "end": 12.204,
+      "duration": 0.255
+    }
+  ]
+}

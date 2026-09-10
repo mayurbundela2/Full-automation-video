@@ -1,0 +1,370 @@
+{
+  "total_words": 52,
+  "total_duration": 15.89,
+  "words": [
+    {
+      "index": 1,
+      "word": "Kyunki",
+      "start": 0.256,
+      "end": 0.485,
+      "duration": 0.229
+    },
+    {
+      "index": 2,
+      "word": "humara",
+      "start": 0.511,
+      "end": 0.74,
+      "duration": 0.229
+    },
+    {
+      "index": 3,
+      "word": "jabda",
+      "start": 0.765,
+      "end": 0.956,
+      "duration": 0.191
+    },
+    {
+      "index": 4,
+      "word": "evolution",
+      "start": 0.977,
+      "end": 1.321,
+      "duration": 0.344
+    },
+    {
+      "index": 5,
+      "word": "ke",
+      "start": 1.558,
+      "end": 1.642,
+      "duration": 0.084
+    },
+    {
+      "index": 6,
+      "word": "saath",
+      "start": 1.651,
+      "end": 1.861,
+      "duration": 0.21
+    },
+    {
+      "index": 7,
+      "word": "chhota",
+      "start": 1.884,
+      "end": 2.136,
+      "duration": 0.252
+    },
+    {
+      "index": 8,
+      "word": "hota",
+      "start": 2.164,
+      "end": 2.332,
+      "duration": 0.168
+    },
+    {
+      "index": 9,
+      "word": "gaya",
+      "start": 2.35,
+      "end": 2.518,
+      "duration": 0.168
+    },
+    {
+      "index": 10,
+      "word": "...",
+      "start": 2.537,
+      "end": 2.663,
+      "duration": 0.126
+    },
+    {
+      "index": 11,
+      "word": "lekin",
+      "start": 2.677,
+      "end": 2.886,
+      "duration": 0.21
+    },
+    {
+      "index": 12,
+      "word": "daanton",
+      "start": 2.91,
+      "end": 3.203,
+      "duration": 0.294
+    },
+    {
+      "index": 13,
+      "word": "ka",
+      "start": 3.572,
+      "end": 3.664,
+      "duration": 0.092
+    },
+    {
+      "index": 14,
+      "word": "number",
+      "start": 3.675,
+      "end": 3.951,
+      "duration": 0.277
+    },
+    {
+      "index": 15,
+      "word": "utna",
+      "start": 3.982,
+      "end": 4.167,
+      "duration": 0.185
+    },
+    {
+      "index": 16,
+      "word": "hi",
+      "start": 4.187,
+      "end": 4.279,
+      "duration": 0.092
+    },
+    {
+      "index": 17,
+      "word": "raha.",
+      "start": 4.29,
+      "end": 4.52,
+      "duration": 0.231
+    },
+    {
+      "index": 18,
+      "word": "Ab",
+      "start": 4.546,
+      "end": 4.638,
+      "duration": 0.092
+    },
+    {
+      "index": 19,
+      "word": "unke",
+      "start": 4.649,
+      "end": 4.833,
+      "duration": 0.185
+    },
+    {
+      "index": 20,
+      "word": "liye",
+      "start": 4.854,
+      "end": 5.038,
+      "duration": 0.185
+    },
+    {
+      "index": 21,
+      "word": "jagah",
+      "start": 5.059,
+      "end": 5.289,
+      "duration": 0.231
+    },
+    {
+      "index": 22,
+      "word": "hi",
+      "start": 5.715,
+      "end": 5.797,
+      "duration": 0.082
+    },
+    {
+      "index": 23,
+      "word": "nahi",
+      "start": 5.806,
+      "end": 5.969,
+      "duration": 0.164
+    },
+    {
+      "index": 24,
+      "word": "bachi.",
+      "start": 5.988,
+      "end": 6.233,
+      "duration": 0.245
+    },
+    {
+      "index": 25,
+      "word": "Aur",
+      "start": 6.26,
+      "end": 6.383,
+      "duration": 0.123
+    },
+    {
+      "index": 26,
+      "word": "kai",
+      "start": 6.396,
+      "end": 6.519,
+      "duration": 0.123
+    },
+    {
+      "index": 27,
+      "word": "logon",
+      "start": 6.533,
+      "end": 6.737,
+      "duration": 0.204
+    },
+    {
+      "index": 28,
+      "word": "ke",
+      "start": 6.76,
+      "end": 6.841,
+      "duration": 0.082
+    },
+    {
+      "index": 29,
+      "word": "wisdom",
+      "start": 6.85,
+      "end": 7.096,
+      "duration": 0.245
+    },
+    {
+      "index": 30,
+      "word": "teeth",
+      "start": 7.706,
+      "end": 7.926,
+      "duration": 0.22
+    },
+    {
+      "index": 31,
+      "word": "kabhi",
+      "start": 7.95,
+      "end": 8.17,
+      "duration": 0.22
+    },
+    {
+      "index": 32,
+      "word": "aate",
+      "start": 8.194,
+      "end": 8.37,
+      "duration": 0.176
+    },
+    {
+      "index": 33,
+      "word": "hi",
+      "start": 8.39,
+      "end": 8.477,
+      "duration": 0.088
+    },
+    {
+      "index": 34,
+      "word": "nahi.",
+      "start": 8.487,
+      "end": 8.707,
+      "duration": 0.22
+    },
+    {
+      "index": 35,
+      "word": "Ye",
+      "start": 8.731,
+      "end": 8.819,
+      "duration": 0.088
+    },
+    {
+      "index": 36,
+      "word": "percentage",
+      "start": 8.829,
+      "end": 9.268,
+      "duration": 0.439
+    },
+    {
+      "index": 37,
+      "word": "alag",
+      "start": 9.317,
+      "end": 9.493,
+      "duration": 0.176
+    },
+    {
+      "index": 38,
+      "word": "alag",
+      "start": 9.513,
+      "end": 9.688,
+      "duration": 0.176
+    },
+    {
+      "index": 39,
+      "word": "populations",
+      "start": 9.708,
+      "end": 10.191,
+      "duration": 0.483
+    },
+    {
+      "index": 40,
+      "word": "mein",
+      "start": 10.614,
+      "end": 10.809,
+      "duration": 0.195
+    },
+    {
+      "index": 41,
+      "word": "alag",
+      "start": 10.831,
+      "end": 11.025,
+      "duration": 0.195
+    },
+    {
+      "index": 42,
+      "word": "hoti",
+      "start": 11.047,
+      "end": 11.242,
+      "duration": 0.195
+    },
+    {
+      "index": 43,
+      "word": "hai",
+      "start": 11.264,
+      "end": 11.41,
+      "duration": 0.146
+    },
+    {
+      "index": 44,
+      "word": "...",
+      "start": 11.426,
+      "end": 11.572,
+      "duration": 0.146
+    },
+    {
+      "index": 45,
+      "word": "kuch",
+      "start": 11.588,
+      "end": 11.783,
+      "duration": 0.195
+    },
+    {
+      "index": 46,
+      "word": "groups",
+      "start": 11.805,
+      "end": 12.097,
+      "duration": 0.292
+    },
+    {
+      "index": 47,
+      "word": "mein",
+      "start": 12.13,
+      "end": 12.325,
+      "duration": 0.195
+    },
+    {
+      "index": 48,
+      "word": "bahut",
+      "start": 12.346,
+      "end": 12.59,
+      "duration": 0.244
+    },
+    {
+      "index": 49,
+      "word": "zyada,",
+      "start": 12.617,
+      "end": 12.909,
+      "duration": 0.292
+    },
+    {
+      "index": 50,
+      "word": "kuch",
+      "start": 12.942,
+      "end": 13.137,
+      "duration": 0.195
+    },
+    {
+      "index": 51,
+      "word": "mein",
+      "start": 13.158,
+      "end": 13.353,
+      "duration": 0.195
+    },
+    {
+      "index": 52,
+      "word": "kam.",
+      "start": 13.697,
+      "end": 14.82,
+      "duration": 1.123
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "total_words": 46,
+  "total_duration": 17.52,
+  "words": [
+    {
+      "index": 1,
+      "word": "Toh",
+      "start": 0.313,
+      "end": 0.453,
+      "duration": 0.14
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.468,
+      "end": 0.561,
+      "duration": 0.093
+    },
+    {
+      "index": 3,
+      "word": "ek",
+      "start": 0.572,
+      "end": 0.665,
+      "duration": 0.093
+    },
+    {
+      "index": 4,
+      "word": "open",
+      "start": 0.675,
+      "end": 0.861,
+      "duration": 0.186
+    },
+    {
+      "index": 5,
+      "word": "debate",
+      "start": 0.882,
+      "end": 1.161,
+      "duration": 0.279
+    },
+    {
+      "index": 6,
+      "word": "hai.",
+      "start": 1.192,
+      "end": 1.379,
+      "duration": 0.186
+    },
+    {
+      "index": 7,
+      "word": "Wrangham",
+      "start": 1.399,
+      "end": 1.772,
+      "duration": 0.372
+    },
+    {
+      "index": 8,
+      "word": "kehta",
+      "start": 2.141,
+      "end": 2.42,
+      "duration": 0.279
+    },
+    {
+      "index": 9,
+      "word": "hai",
+      "start": 2.451,
+      "end": 2.618,
+      "duration": 0.167
+    },
+    {
+      "index": 10,
+      "word": "biology",
+      "start": 2.637,
+      "end": 3.028,
+      "duration": 0.391
+    },
+    {
+      "index": 11,
+      "word": "proof",
+      "start": 3.071,
+      "end": 3.35,
+      "duration": 0.279
+    },
+    {
+      "index": 12,
+      "word": "hai.",
+      "start": 3.663,
+      "end": 3.902,
+      "duration": 0.239
+    },
+    {
+      "index": 13,
+      "word": "Critics",
+      "start": 3.929,
+      "end": 4.348,
+      "duration": 0.419
+    },
+    {
+      "index": 14,
+      "word": "kehte",
+      "start": 4.394,
+      "end": 4.694,
+      "duration": 0.299
+    },
+    {
+      "index": 15,
+      "word": "hain",
+      "start": 5.298,
+      "end": 5.496,
+      "duration": 0.198
+    },
+    {
+      "index": 16,
+      "word": "archaeology",
+      "start": 5.518,
+      "end": 6.062,
+      "duration": 0.544
+    },
+    {
+      "index": 17,
+      "word": "proof",
+      "start": 6.528,
+      "end": 6.813,
+      "duration": 0.285
+    },
+    {
+      "index": 18,
+      "word": "chahiye.",
+      "start": 6.845,
+      "end": 7.302,
+      "duration": 0.457
+    },
+    {
+      "index": 19,
+      "word": "Lekin",
+      "start": 7.352,
+      "end": 7.638,
+      "duration": 0.285
+    },
+    {
+      "index": 20,
+      "word": "dono",
+      "start": 7.669,
+      "end": 7.898,
+      "duration": 0.228
+    },
+    {
+      "index": 21,
+      "word": "side",
+      "start": 8.378,
+      "end": 8.595,
+      "duration": 0.217
+    },
+    {
+      "index": 22,
+      "word": "ek",
+      "start": 8.619,
+      "end": 8.728,
+      "duration": 0.109
+    },
+    {
+      "index": 23,
+      "word": "baat",
+      "start": 8.74,
+      "end": 8.957,
+      "duration": 0.217
+    },
+    {
+      "index": 24,
+      "word": "pe",
+      "start": 8.982,
+      "end": 9.09,
+      "duration": 0.109
+    },
+    {
+      "index": 25,
+      "word": "kaafi",
+      "start": 9.102,
+      "end": 9.374,
+      "duration": 0.272
+    },
+    {
+      "index": 26,
+      "word": "had",
+      "start": 9.404,
+      "end": 9.567,
+      "duration": 0.163
+    },
+    {
+      "index": 27,
+      "word": "tak",
+      "start": 9.585,
+      "end": 9.748,
+      "duration": 0.163
+    },
+    {
+      "index": 28,
+      "word": "agree",
+      "start": 9.766,
+      "end": 10.038,
+      "duration": 0.272
+    },
+    {
+      "index": 29,
+      "word": "karte",
+      "start": 10.068,
+      "end": 10.34,
+      "duration": 0.272
+    },
+    {
+      "index": 30,
+      "word": "hain",
+      "start": 10.534,
+      "end": 10.765,
+      "duration": 0.231
+    },
+    {
+      "index": 31,
+      "word": "...",
+      "start": 10.791,
+      "end": 10.965,
+      "duration": 0.174
+    },
+    {
+      "index": 32,
+      "word": "jab",
+      "start": 10.984,
+      "end": 11.158,
+      "duration": 0.174
+    },
+    {
+      "index": 33,
+      "word": "bhi",
+      "start": 11.177,
+      "end": 11.351,
+      "duration": 0.174
+    },
+    {
+      "index": 34,
+      "word": "cooking",
+      "start": 11.37,
+      "end": 11.775,
+      "duration": 0.405
+    },
+    {
+      "index": 35,
+      "word": "shuru",
+      "start": 12.097,
+      "end": 12.541,
+      "duration": 0.444
+    },
+    {
+      "index": 36,
+      "word": "hui,",
+      "start": 12.59,
+      "end": 12.945,
+      "duration": 0.355
+    },
+    {
+      "index": 37,
+      "word": "wo",
+      "start": 12.985,
+      "end": 13.162,
+      "duration": 0.178
+    },
+    {
+      "index": 38,
+      "word": "humari",
+      "start": 13.182,
+      "end": 13.715,
+      "duration": 0.533
+    },
+    {
+      "index": 39,
+      "word": "species",
+      "start": 13.774,
+      "end": 14.396,
+      "duration": 0.622
+    },
+    {
+      "index": 40,
+      "word": "ke",
+      "start": 14.465,
+      "end": 14.642,
+      "duration": 0.178
+    },
+    {
+      "index": 41,
+      "word": "liye",
+      "start": 14.662,
+      "end": 15.017,
+      "duration": 0.355
+    },
+    {
+      "index": 42,
+      "word": "ek",
+      "start": 15.057,
+      "end": 15.234,
+      "duration": 0.178
+    },
+    {
+      "index": 43,
+      "word": "bahut",
+      "start": 15.254,
+      "end": 15.698,
+      "duration": 0.444
+    },
+    {
+      "index": 44,
+      "word": "bada",
+      "start": 15.747,
+      "end": 16.102,
+      "duration": 0.355
+    },
+    {
+      "index": 45,
+      "word": "badlaav",
+      "start": 16.142,
+      "end": 16.763,
+      "duration": 0.622
+    },
+    {
+      "index": 46,
+      "word": "tha.",
+      "start": 16.832,
+      "end": 17.188,
+      "duration": 0.355
+    }
+  ]
+}

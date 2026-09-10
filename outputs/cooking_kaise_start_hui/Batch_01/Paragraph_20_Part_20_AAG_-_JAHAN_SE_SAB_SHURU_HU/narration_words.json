@@ -1,0 +1,342 @@
+{
+  "total_words": 48,
+  "total_duration": 18.28,
+  "words": [
+    {
+      "index": 1,
+      "word": "Uska",
+      "start": 0.285,
+      "end": 0.534,
+      "duration": 0.249
+    },
+    {
+      "index": 2,
+      "word": "logic",
+      "start": 0.562,
+      "end": 0.873,
+      "duration": 0.312
+    },
+    {
+      "index": 3,
+      "word": "ye",
+      "start": 0.908,
+      "end": 1.033,
+      "duration": 0.125
+    },
+    {
+      "index": 4,
+      "word": "hai",
+      "start": 1.046,
+      "end": 1.233,
+      "duration": 0.187
+    },
+    {
+      "index": 5,
+      "word": "ki",
+      "start": 1.254,
+      "end": 1.379,
+      "duration": 0.125
+    },
+    {
+      "index": 6,
+      "word": "us",
+      "start": 1.393,
+      "end": 1.517,
+      "duration": 0.125
+    },
+    {
+      "index": 7,
+      "word": "waqt",
+      "start": 1.531,
+      "end": 1.78,
+      "duration": 0.249
+    },
+    {
+      "index": 8,
+      "word": "insaan",
+      "start": 1.808,
+      "end": 2.182,
+      "duration": 0.374
+    },
+    {
+      "index": 9,
+      "word": "ke",
+      "start": 2.223,
+      "end": 2.348,
+      "duration": 0.125
+    },
+    {
+      "index": 10,
+      "word": "shareer",
+      "start": 2.362,
+      "end": 2.798,
+      "duration": 0.436
+    },
+    {
+      "index": 11,
+      "word": "mein",
+      "start": 2.846,
+      "end": 3.095,
+      "duration": 0.249
+    },
+    {
+      "index": 12,
+      "word": "achanak",
+      "start": 3.123,
+      "end": 3.559,
+      "duration": 0.436
+    },
+    {
+      "index": 13,
+      "word": "bade",
+      "start": 3.608,
+      "end": 3.857,
+      "duration": 0.249
+    },
+    {
+      "index": 14,
+      "word": "badlaav",
+      "start": 3.885,
+      "end": 4.321,
+      "duration": 0.436
+    },
+    {
+      "index": 15,
+      "word": "aaye",
+      "start": 4.369,
+      "end": 4.618,
+      "duration": 0.249
+    },
+    {
+      "index": 16,
+      "word": "...",
+      "start": 4.646,
+      "end": 4.833,
+      "duration": 0.187
+    },
+    {
+      "index": 17,
+      "word": "dimaag",
+      "start": 4.854,
+      "end": 5.227,
+      "duration": 0.374
+    },
+    {
+      "index": 18,
+      "word": "bada",
+      "start": 5.571,
+      "end": 5.81,
+      "duration": 0.239
+    },
+    {
+      "index": 19,
+      "word": "hua...",
+      "start": 5.836,
+      "end": 6.194,
+      "duration": 0.358
+    },
+    {
+      "index": 20,
+      "word": "jabda",
+      "start": 6.234,
+      "end": 6.532,
+      "duration": 0.298
+    },
+    {
+      "index": 21,
+      "word": "chhota",
+      "start": 6.566,
+      "end": 6.924,
+      "duration": 0.358
+    },
+    {
+      "index": 22,
+      "word": "hua...",
+      "start": 6.963,
+      "end": 7.321,
+      "duration": 0.358
+    },
+    {
+      "index": 23,
+      "word": "pet",
+      "start": 7.361,
+      "end": 7.54,
+      "duration": 0.179
+    },
+    {
+      "index": 24,
+      "word": "chhota",
+      "start": 7.56,
+      "end": 7.918,
+      "duration": 0.358
+    },
+    {
+      "index": 25,
+      "word": "hua.",
+      "start": 7.958,
+      "end": 8.196,
+      "duration": 0.239
+    },
+    {
+      "index": 26,
+      "word": "Wrangham",
+      "start": 8.399,
+      "end": 8.789,
+      "duration": 0.39
+    },
+    {
+      "index": 27,
+      "word": "ka",
+      "start": 8.832,
+      "end": 8.929,
+      "duration": 0.097
+    },
+    {
+      "index": 28,
+      "word": "argument",
+      "start": 8.94,
+      "end": 9.33,
+      "duration": 0.39
+    },
+    {
+      "index": 29,
+      "word": "hai",
+      "start": 9.8,
+      "end": 9.905,
+      "duration": 0.105
+    },
+    {
+      "index": 30,
+      "word": "ki",
+      "start": 10.073,
+      "end": 10.179,
+      "duration": 0.106
+    },
+    {
+      "index": 31,
+      "word": "in",
+      "start": 10.191,
+      "end": 10.297,
+      "duration": 0.106
+    },
+    {
+      "index": 32,
+      "word": "badlaavon",
+      "start": 10.309,
+      "end": 10.786,
+      "duration": 0.478
+    },
+    {
+      "index": 33,
+      "word": "ko",
+      "start": 10.839,
+      "end": 10.946,
+      "duration": 0.106
+    },
+    {
+      "index": 34,
+      "word": "cooking",
+      "start": 10.957,
+      "end": 11.329,
+      "duration": 0.371
+    },
+    {
+      "index": 35,
+      "word": "sabse",
+      "start": 11.37,
+      "end": 11.635,
+      "duration": 0.265
+    },
+    {
+      "index": 36,
+      "word": "achhi",
+      "start": 11.665,
+      "end": 11.93,
+      "duration": 0.265
+    },
+    {
+      "index": 37,
+      "word": "tarah",
+      "start": 11.96,
+      "end": 12.225,
+      "duration": 0.265
+    },
+    {
+      "index": 38,
+      "word": "explain",
+      "start": 12.254,
+      "end": 12.626,
+      "duration": 0.371
+    },
+    {
+      "index": 39,
+      "word": "karti",
+      "start": 12.825,
+      "end": 13.136,
+      "duration": 0.311
+    },
+    {
+      "index": 40,
+      "word": "hai.",
+      "start": 13.17,
+      "end": 13.419,
+      "duration": 0.249
+    },
+    {
+      "index": 41,
+      "word": "Lekin",
+      "start": 13.446,
+      "end": 13.757,
+      "duration": 0.311
+    },
+    {
+      "index": 42,
+      "word": "critics",
+      "start": 13.791,
+      "end": 14.226,
+      "duration": 0.435
+    },
+    {
+      "index": 43,
+      "word": "kehte",
+      "start": 14.275,
+      "end": 14.585,
+      "duration": 0.311
+    },
+    {
+      "index": 44,
+      "word": "hain",
+      "start": 14.62,
+      "end": 14.868,
+      "duration": 0.249
+    },
+    {
+      "index": 45,
+      "word": "...",
+      "start": 15.236,
+      "end": 15.43,
+      "duration": 0.194
+    },
+    {
+      "index": 46,
+      "word": "evidence",
+      "start": 15.452,
+      "end": 15.97,
+      "duration": 0.518
+    },
+    {
+      "index": 47,
+      "word": "kahan",
+      "start": 16.028,
+      "end": 16.352,
+      "duration": 0.324
+    },
+    {
+      "index": 48,
+      "word": "hai?",
+      "start": 16.388,
+      "end": 16.647,
+      "duration": 0.259
+    }
+  ]
+}

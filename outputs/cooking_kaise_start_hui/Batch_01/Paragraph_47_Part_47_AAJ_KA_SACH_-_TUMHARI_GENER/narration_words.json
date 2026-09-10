@@ -1,0 +1,307 @@
+{
+  "total_words": 43,
+  "total_duration": 16.97,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ek",
+      "start": 0.165,
+      "end": 0.283,
+      "duration": 0.118
+    },
+    {
+      "index": 2,
+      "word": "scientific",
+      "start": 0.297,
+      "end": 0.888,
+      "duration": 0.592
+    },
+    {
+      "index": 3,
+      "word": "study",
+      "start": 0.954,
+      "end": 1.25,
+      "duration": 0.296
+    },
+    {
+      "index": 4,
+      "word": "...",
+      "start": 1.448,
+      "end": 1.626,
+      "duration": 0.178
+    },
+    {
+      "index": 5,
+      "word": "America",
+      "start": 1.646,
+      "end": 2.063,
+      "duration": 0.416
+    },
+    {
+      "index": 6,
+      "word": "ke",
+      "start": 2.109,
+      "end": 2.228,
+      "duration": 0.119
+    },
+    {
+      "index": 7,
+      "word": "National",
+      "start": 2.241,
+      "end": 2.717,
+      "duration": 0.476
+    },
+    {
+      "index": 8,
+      "word": "Institutes",
+      "start": 2.77,
+      "end": 3.365,
+      "duration": 0.595
+    },
+    {
+      "index": 9,
+      "word": "of",
+      "start": 3.431,
+      "end": 3.55,
+      "duration": 0.119
+    },
+    {
+      "index": 10,
+      "word": "Health",
+      "start": 3.563,
+      "end": 3.92,
+      "duration": 0.357
+    },
+    {
+      "index": 11,
+      "word": "mein,",
+      "start": 3.959,
+      "end": 4.257,
+      "duration": 0.297
+    },
+    {
+      "index": 12,
+      "word": "do",
+      "start": 4.29,
+      "end": 4.409,
+      "duration": 0.119
+    },
+    {
+      "index": 13,
+      "word": "hazaar",
+      "start": 4.422,
+      "end": 4.779,
+      "duration": 0.357
+    },
+    {
+      "index": 14,
+      "word": "unnees",
+      "start": 4.819,
+      "end": 5.176,
+      "duration": 0.357
+    },
+    {
+      "index": 15,
+      "word": "mein",
+      "start": 5.215,
+      "end": 5.453,
+      "duration": 0.238
+    },
+    {
+      "index": 16,
+      "word": "...",
+      "start": 5.48,
+      "end": 5.658,
+      "duration": 0.178
+    },
+    {
+      "index": 17,
+      "word": "logon",
+      "start": 5.678,
+      "end": 5.975,
+      "duration": 0.297
+    },
+    {
+      "index": 18,
+      "word": "ko",
+      "start": 6.008,
+      "end": 6.127,
+      "duration": 0.119
+    },
+    {
+      "index": 19,
+      "word": "do",
+      "start": 6.141,
+      "end": 6.259,
+      "duration": 0.119
+    },
+    {
+      "index": 20,
+      "word": "diets",
+      "start": 6.273,
+      "end": 6.57,
+      "duration": 0.297
+    },
+    {
+      "index": 21,
+      "word": "di",
+      "start": 6.603,
+      "end": 6.722,
+      "duration": 0.119
+    },
+    {
+      "index": 22,
+      "word": "gayi.",
+      "start": 6.735,
+      "end": 7.033,
+      "duration": 0.297
+    },
+    {
+      "index": 23,
+      "word": "Ek",
+      "start": 7.066,
+      "end": 7.185,
+      "duration": 0.119
+    },
+    {
+      "index": 24,
+      "word": "ultra-processed,",
+      "start": 7.636,
+      "end": 8.29,
+      "duration": 0.654
+    },
+    {
+      "index": 25,
+      "word": "ek",
+      "start": 8.363,
+      "end": 8.445,
+      "duration": 0.082
+    },
+    {
+      "index": 26,
+      "word": "minimally",
+      "start": 8.454,
+      "end": 8.822,
+      "duration": 0.368
+    },
+    {
+      "index": 27,
+      "word": "processed.",
+      "start": 9.121,
+      "end": 9.563,
+      "duration": 0.442
+    },
+    {
+      "index": 28,
+      "word": "Dono",
+      "start": 9.613,
+      "end": 9.79,
+      "duration": 0.177
+    },
+    {
+      "index": 29,
+      "word": "mein",
+      "start": 9.809,
+      "end": 9.986,
+      "duration": 0.177
+    },
+    {
+      "index": 30,
+      "word": "barabar",
+      "start": 10.006,
+      "end": 10.316,
+      "duration": 0.31
+    },
+    {
+      "index": 31,
+      "word": "calories,",
+      "start": 10.537,
+      "end": 11.049,
+      "duration": 0.512
+    },
+    {
+      "index": 32,
+      "word": "barabar",
+      "start": 11.106,
+      "end": 11.504,
+      "duration": 0.398
+    },
+    {
+      "index": 33,
+      "word": "sugar,",
+      "start": 11.548,
+      "end": 11.889,
+      "duration": 0.341
+    },
+    {
+      "index": 34,
+      "word": "barabar",
+      "start": 11.927,
+      "end": 12.325,
+      "duration": 0.398
+    },
+    {
+      "index": 35,
+      "word": "fat",
+      "start": 12.369,
+      "end": 12.54,
+      "duration": 0.171
+    },
+    {
+      "index": 36,
+      "word": "available",
+      "start": 12.559,
+      "end": 13.071,
+      "duration": 0.512
+    },
+    {
+      "index": 37,
+      "word": "tha.",
+      "start": 13.127,
+      "end": 13.355,
+      "duration": 0.227
+    },
+    {
+      "index": 38,
+      "word": "Log",
+      "start": 13.38,
+      "end": 13.551,
+      "duration": 0.171
+    },
+    {
+      "index": 39,
+      "word": "jitna",
+      "start": 13.57,
+      "end": 13.854,
+      "duration": 0.284
+    },
+    {
+      "index": 40,
+      "word": "chahe",
+      "start": 13.886,
+      "end": 14.17,
+      "duration": 0.284
+    },
+    {
+      "index": 41,
+      "word": "kha",
+      "start": 14.202,
+      "end": 14.372,
+      "duration": 0.171
+    },
+    {
+      "index": 42,
+      "word": "sakte",
+      "start": 14.391,
+      "end": 14.675,
+      "duration": 0.284
+    },
+    {
+      "index": 43,
+      "word": "the.",
+      "start": 15.019,
+      "end": 16.544,
+      "duration": 1.526
+    }
+  ]
+}

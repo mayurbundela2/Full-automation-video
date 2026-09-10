@@ -1,0 +1,314 @@
+{
+  "total_words": 44,
+  "total_duration": 13.97,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ek",
+      "start": 0.257,
+      "end": 0.355,
+      "duration": 0.098
+    },
+    {
+      "index": 2,
+      "word": "baar",
+      "start": 0.366,
+      "end": 0.562,
+      "duration": 0.196
+    },
+    {
+      "index": 3,
+      "word": "phir",
+      "start": 0.583,
+      "end": 0.779,
+      "duration": 0.196
+    },
+    {
+      "index": 4,
+      "word": "...",
+      "start": 0.801,
+      "end": 0.948,
+      "duration": 0.147
+    },
+    {
+      "index": 5,
+      "word": "ye",
+      "start": 1.262,
+      "end": 1.366,
+      "duration": 0.104
+    },
+    {
+      "index": 6,
+      "word": "theory",
+      "start": 1.378,
+      "end": 1.691,
+      "duration": 0.313
+    },
+    {
+      "index": 7,
+      "word": "contested",
+      "start": 1.726,
+      "end": 2.195,
+      "duration": 0.469
+    },
+    {
+      "index": 8,
+      "word": "hai.",
+      "start": 2.247,
+      "end": 2.456,
+      "duration": 0.209
+    },
+    {
+      "index": 9,
+      "word": "Kuch",
+      "start": 2.479,
+      "end": 2.688,
+      "duration": 0.209
+    },
+    {
+      "index": 10,
+      "word": "scientists",
+      "start": 2.961,
+      "end": 3.021,
+      "duration": 0.06
+    },
+    {
+      "index": 11,
+      "word": "maante",
+      "start": 3.257,
+      "end": 3.573,
+      "duration": 0.316
+    },
+    {
+      "index": 12,
+      "word": "hain",
+      "start": 3.608,
+      "end": 3.818,
+      "duration": 0.211
+    },
+    {
+      "index": 13,
+      "word": "ki",
+      "start": 3.842,
+      "end": 3.947,
+      "duration": 0.105
+    },
+    {
+      "index": 14,
+      "word": "maas",
+      "start": 3.959,
+      "end": 4.169,
+      "duration": 0.211
+    },
+    {
+      "index": 15,
+      "word": "khaane",
+      "start": 4.193,
+      "end": 4.508,
+      "duration": 0.316
+    },
+    {
+      "index": 16,
+      "word": "se",
+      "start": 4.543,
+      "end": 4.649,
+      "duration": 0.105
+    },
+    {
+      "index": 17,
+      "word": "ye",
+      "start": 4.66,
+      "end": 4.766,
+      "duration": 0.105
+    },
+    {
+      "index": 18,
+      "word": "hua,",
+      "start": 4.777,
+      "end": 4.988,
+      "duration": 0.211
+    },
+    {
+      "index": 19,
+      "word": "cooking",
+      "start": 5.011,
+      "end": 5.38,
+      "duration": 0.368
+    },
+    {
+      "index": 20,
+      "word": "se",
+      "start": 5.421,
+      "end": 5.526,
+      "duration": 0.105
+    },
+    {
+      "index": 21,
+      "word": "nahi.",
+      "start": 5.538,
+      "end": 5.801,
+      "duration": 0.263
+    },
+    {
+      "index": 22,
+      "word": "Kuch",
+      "start": 6.158,
+      "end": 6.336,
+      "duration": 0.178
+    },
+    {
+      "index": 23,
+      "word": "kehte",
+      "start": 6.356,
+      "end": 6.578,
+      "duration": 0.222
+    },
+    {
+      "index": 24,
+      "word": "hain",
+      "start": 6.602,
+      "end": 6.78,
+      "duration": 0.178
+    },
+    {
+      "index": 25,
+      "word": "dono",
+      "start": 7.619,
+      "end": 7.819,
+      "duration": 0.2
+    },
+    {
+      "index": 26,
+      "word": "ne",
+      "start": 7.842,
+      "end": 7.942,
+      "duration": 0.1
+    },
+    {
+      "index": 27,
+      "word": "milkar",
+      "start": 7.953,
+      "end": 8.253,
+      "duration": 0.301
+    },
+    {
+      "index": 28,
+      "word": "kiya.",
+      "start": 8.287,
+      "end": 8.537,
+      "duration": 0.25
+    },
+    {
+      "index": 29,
+      "word": "Aur",
+      "start": 8.565,
+      "end": 8.715,
+      "duration": 0.15
+    },
+    {
+      "index": 30,
+      "word": "kuch",
+      "start": 8.732,
+      "end": 8.932,
+      "duration": 0.2
+    },
+    {
+      "index": 31,
+      "word": "kehte",
+      "start": 8.955,
+      "end": 9.205,
+      "duration": 0.25
+    },
+    {
+      "index": 32,
+      "word": "hain",
+      "start": 9.675,
+      "end": 9.88,
+      "duration": 0.205
+    },
+    {
+      "index": 33,
+      "word": "ki",
+      "start": 9.903,
+      "end": 10.006,
+      "duration": 0.103
+    },
+    {
+      "index": 34,
+      "word": "timeline",
+      "start": 10.017,
+      "end": 10.428,
+      "duration": 0.411
+    },
+    {
+      "index": 35,
+      "word": "hi",
+      "start": 10.474,
+      "end": 10.576,
+      "duration": 0.103
+    },
+    {
+      "index": 36,
+      "word": "galat",
+      "start": 10.588,
+      "end": 10.845,
+      "duration": 0.257
+    },
+    {
+      "index": 37,
+      "word": "hai.",
+      "start": 10.873,
+      "end": 11.079,
+      "duration": 0.205
+    },
+    {
+      "index": 38,
+      "word": "Ye",
+      "start": 11.101,
+      "end": 11.204,
+      "duration": 0.103
+    },
+    {
+      "index": 39,
+      "word": "debate",
+      "start": 11.215,
+      "end": 11.524,
+      "duration": 0.308
+    },
+    {
+      "index": 40,
+      "word": "abhi",
+      "start": 11.558,
+      "end": 11.763,
+      "duration": 0.205
+    },
+    {
+      "index": 41,
+      "word": "bhi",
+      "start": 12.042,
+      "end": 12.389,
+      "duration": 0.347
+    },
+    {
+      "index": 42,
+      "word": "chal",
+      "start": 12.428,
+      "end": 12.89,
+      "duration": 0.463
+    },
+    {
+      "index": 43,
+      "word": "raha",
+      "start": 12.942,
+      "end": 13.404,
+      "duration": 0.463
+    },
+    {
+      "index": 44,
+      "word": "hai.",
+      "start": 13.456,
+      "end": 13.919,
+      "duration": 0.463
+    }
+  ]
+}

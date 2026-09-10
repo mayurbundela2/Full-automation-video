@@ -1,0 +1,202 @@
+{
+  "total_words": 28,
+  "total_duration": 11.72,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 0.324,
+      "end": 0.627,
+      "duration": 0.303
+    },
+    {
+      "index": 2,
+      "word": "tumhare",
+      "start": 0.661,
+      "end": 1.085,
+      "duration": 0.424
+    },
+    {
+      "index": 3,
+      "word": "shareer",
+      "start": 1.132,
+      "end": 1.556,
+      "duration": 0.424
+    },
+    {
+      "index": 4,
+      "word": "ki",
+      "start": 1.603,
+      "end": 1.724,
+      "duration": 0.121
+    },
+    {
+      "index": 5,
+      "word": "resting",
+      "start": 1.738,
+      "end": 2.162,
+      "duration": 0.424
+    },
+    {
+      "index": 6,
+      "word": "energy",
+      "start": 2.209,
+      "end": 2.573,
+      "duration": 0.364
+    },
+    {
+      "index": 7,
+      "word": "ka",
+      "start": 2.613,
+      "end": 2.734,
+      "duration": 0.121
+    },
+    {
+      "index": 8,
+      "word": "lagbhag",
+      "start": 2.748,
+      "end": 3.172,
+      "duration": 0.424
+    },
+    {
+      "index": 9,
+      "word": "bees",
+      "start": 3.219,
+      "end": 3.461,
+      "duration": 0.242
+    },
+    {
+      "index": 10,
+      "word": "percent",
+      "start": 3.488,
+      "end": 3.913,
+      "duration": 0.424
+    },
+    {
+      "index": 11,
+      "word": "...",
+      "start": 3.96,
+      "end": 4.141,
+      "duration": 0.182
+    },
+    {
+      "index": 12,
+      "word": "sirf",
+      "start": 4.162,
+      "end": 4.404,
+      "duration": 0.242
+    },
+    {
+      "index": 13,
+      "word": "dimaag",
+      "start": 4.431,
+      "end": 4.794,
+      "duration": 0.364
+    },
+    {
+      "index": 14,
+      "word": "maintain",
+      "start": 4.835,
+      "end": 5.32,
+      "duration": 0.485
+    },
+    {
+      "index": 15,
+      "word": "karne",
+      "start": 5.373,
+      "end": 5.676,
+      "duration": 0.303
+    },
+    {
+      "index": 16,
+      "word": "mein",
+      "start": 5.71,
+      "end": 5.952,
+      "duration": 0.242
+    },
+    {
+      "index": 17,
+      "word": "chala",
+      "start": 5.979,
+      "end": 6.282,
+      "duration": 0.303
+    },
+    {
+      "index": 18,
+      "word": "jaata",
+      "start": 6.316,
+      "end": 6.619,
+      "duration": 0.303
+    },
+    {
+      "index": 19,
+      "word": "hai.",
+      "start": 6.653,
+      "end": 6.895,
+      "duration": 0.242
+    },
+    {
+      "index": 20,
+      "word": "Ek",
+      "start": 7.449,
+      "end": 7.559,
+      "duration": 0.11
+    },
+    {
+      "index": 21,
+      "word": "paanchva",
+      "start": 7.571,
+      "end": 8.009,
+      "duration": 0.438
+    },
+    {
+      "index": 22,
+      "word": "hissa.",
+      "start": 8.057,
+      "end": 8.386,
+      "duration": 0.329
+    },
+    {
+      "index": 23,
+      "word": "...",
+      "start": 8.422,
+      "end": 8.587,
+      "duration": 0.164
+    },
+    {
+      "index": 24,
+      "word": "Sirf",
+      "start": 9.454,
+      "end": 9.617,
+      "duration": 0.163
+    },
+    {
+      "index": 25,
+      "word": "ek",
+      "start": 9.635,
+      "end": 9.717,
+      "duration": 0.082
+    },
+    {
+      "index": 26,
+      "word": "organ",
+      "start": 9.726,
+      "end": 9.93,
+      "duration": 0.204
+    },
+    {
+      "index": 27,
+      "word": "ke",
+      "start": 10.148,
+      "end": 10.46,
+      "duration": 0.312
+    },
+    {
+      "index": 28,
+      "word": "liye.",
+      "start": 10.495,
+      "end": 11.276,
+      "duration": 0.781
+    }
+  ]
+}

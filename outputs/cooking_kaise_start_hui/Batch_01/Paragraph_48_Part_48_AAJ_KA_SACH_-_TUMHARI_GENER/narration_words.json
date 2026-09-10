@@ -1,0 +1,307 @@
+{
+  "total_words": 43,
+  "total_duration": 17.96,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ultra-processed",
+      "start": 0.285,
+      "end": 1.131,
+      "duration": 0.846
+    },
+    {
+      "index": 2,
+      "word": "wale",
+      "start": 1.225,
+      "end": 1.451,
+      "duration": 0.226
+    },
+    {
+      "index": 3,
+      "word": "group",
+      "start": 1.476,
+      "end": 1.758,
+      "duration": 0.282
+    },
+    {
+      "index": 4,
+      "word": "ne",
+      "start": 1.79,
+      "end": 1.902,
+      "duration": 0.113
+    },
+    {
+      "index": 5,
+      "word": "har",
+      "start": 2.255,
+      "end": 2.391,
+      "duration": 0.136
+    },
+    {
+      "index": 6,
+      "word": "din",
+      "start": 2.406,
+      "end": 2.541,
+      "duration": 0.136
+    },
+    {
+      "index": 7,
+      "word": "lagbhag",
+      "start": 2.556,
+      "end": 2.873,
+      "duration": 0.316
+    },
+    {
+      "index": 8,
+      "word": "paanch",
+      "start": 2.908,
+      "end": 3.179,
+      "duration": 0.271
+    },
+    {
+      "index": 9,
+      "word": "sau",
+      "start": 3.437,
+      "end": 3.61,
+      "duration": 0.173
+    },
+    {
+      "index": 10,
+      "word": "zyada",
+      "start": 3.63,
+      "end": 3.918,
+      "duration": 0.289
+    },
+    {
+      "index": 11,
+      "word": "calories",
+      "start": 3.951,
+      "end": 4.413,
+      "duration": 0.462
+    },
+    {
+      "index": 12,
+      "word": "khayi.",
+      "start": 4.464,
+      "end": 4.811,
+      "duration": 0.347
+    },
+    {
+      "index": 13,
+      "word": "Bina",
+      "start": 4.849,
+      "end": 5.08,
+      "duration": 0.231
+    },
+    {
+      "index": 14,
+      "word": "jaane.",
+      "start": 5.534,
+      "end": 5.869,
+      "duration": 0.335
+    },
+    {
+      "index": 15,
+      "word": "Bina",
+      "start": 5.906,
+      "end": 6.129,
+      "duration": 0.223
+    },
+    {
+      "index": 16,
+      "word": "extra",
+      "start": 6.64,
+      "end": 6.898,
+      "duration": 0.258
+    },
+    {
+      "index": 17,
+      "word": "bhookh",
+      "start": 6.926,
+      "end": 7.235,
+      "duration": 0.309
+    },
+    {
+      "index": 18,
+      "word": "feel",
+      "start": 7.27,
+      "end": 7.476,
+      "duration": 0.206
+    },
+    {
+      "index": 19,
+      "word": "kiye.",
+      "start": 7.498,
+      "end": 7.756,
+      "duration": 0.258
+    },
+    {
+      "index": 20,
+      "word": "Aur",
+      "start": 7.785,
+      "end": 7.939,
+      "duration": 0.155
+    },
+    {
+      "index": 21,
+      "word": "do",
+      "start": 7.956,
+      "end": 8.059,
+      "duration": 0.103
+    },
+    {
+      "index": 22,
+      "word": "hafte",
+      "start": 8.071,
+      "end": 8.328,
+      "duration": 0.258
+    },
+    {
+      "index": 23,
+      "word": "mein",
+      "start": 9.064,
+      "end": 9.281,
+      "duration": 0.217
+    },
+    {
+      "index": 24,
+      "word": "unka",
+      "start": 9.305,
+      "end": 9.521,
+      "duration": 0.217
+    },
+    {
+      "index": 25,
+      "word": "weight",
+      "start": 9.546,
+      "end": 9.871,
+      "duration": 0.325
+    },
+    {
+      "index": 26,
+      "word": "badh",
+      "start": 9.907,
+      "end": 10.123,
+      "duration": 0.217
+    },
+    {
+      "index": 27,
+      "word": "gaya.",
+      "start": 10.148,
+      "end": 10.418,
+      "duration": 0.271
+    },
+    {
+      "index": 28,
+      "word": "Ye",
+      "start": 10.448,
+      "end": 10.557,
+      "duration": 0.108
+    },
+    {
+      "index": 29,
+      "word": "ek",
+      "start": 10.569,
+      "end": 10.677,
+      "duration": 0.108
+    },
+    {
+      "index": 30,
+      "word": "chhoti",
+      "start": 10.689,
+      "end": 11.014,
+      "duration": 0.325
+    },
+    {
+      "index": 31,
+      "word": "study",
+      "start": 11.05,
+      "end": 11.321,
+      "duration": 0.271
+    },
+    {
+      "index": 32,
+      "word": "thi",
+      "start": 11.351,
+      "end": 11.514,
+      "duration": 0.163
+    },
+    {
+      "index": 33,
+      "word": "...",
+      "start": 12.291,
+      "end": 12.463,
+      "duration": 0.172
+    },
+    {
+      "index": 34,
+      "word": "sirf",
+      "start": 12.482,
+      "end": 12.711,
+      "duration": 0.229
+    },
+    {
+      "index": 35,
+      "word": "bees",
+      "start": 12.737,
+      "end": 12.966,
+      "duration": 0.229
+    },
+    {
+      "index": 36,
+      "word": "log",
+      "start": 12.991,
+      "end": 13.163,
+      "duration": 0.172
+    },
+    {
+      "index": 37,
+      "word": "the.",
+      "start": 13.182,
+      "end": 13.412,
+      "duration": 0.229
+    },
+    {
+      "index": 38,
+      "word": "Lekin",
+      "start": 13.869,
+      "end": 14.098,
+      "duration": 0.23
+    },
+    {
+      "index": 39,
+      "word": "uska",
+      "start": 14.124,
+      "end": 14.308,
+      "duration": 0.184
+    },
+    {
+      "index": 40,
+      "word": "result",
+      "start": 14.328,
+      "end": 14.603,
+      "duration": 0.275
+    },
+    {
+      "index": 41,
+      "word": "kaafi",
+      "start": 14.634,
+      "end": 14.864,
+      "duration": 0.23
+    },
+    {
+      "index": 42,
+      "word": "striking",
+      "start": 15.469,
+      "end": 16.056,
+      "duration": 0.587
+    },
+    {
+      "index": 43,
+      "word": "tha.",
+      "start": 16.122,
+      "end": 16.415,
+      "duration": 0.294
+    }
+  ]
+}

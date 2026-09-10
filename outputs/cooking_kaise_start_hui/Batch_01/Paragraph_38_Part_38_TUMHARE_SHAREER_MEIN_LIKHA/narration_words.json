@@ -1,0 +1,419 @@
+{
+  "total_words": 59,
+  "total_duration": 23.92,
+  "words": [
+    {
+      "index": 1,
+      "word": "Sochke",
+      "start": 0.306,
+      "end": 0.636,
+      "duration": 0.33
+    },
+    {
+      "index": 2,
+      "word": "dekho",
+      "start": 0.673,
+      "end": 0.948,
+      "duration": 0.275
+    },
+    {
+      "index": 3,
+      "word": "...",
+      "start": 0.979,
+      "end": 1.144,
+      "duration": 0.165
+    },
+    {
+      "index": 4,
+      "word": "jab",
+      "start": 1.456,
+      "end": 1.646,
+      "duration": 0.19
+    },
+    {
+      "index": 5,
+      "word": "tumhara",
+      "start": 1.667,
+      "end": 2.109,
+      "duration": 0.442
+    },
+    {
+      "index": 6,
+      "word": "dentist",
+      "start": 2.158,
+      "end": 2.601,
+      "duration": 0.442
+    },
+    {
+      "index": 7,
+      "word": "bolta",
+      "start": 2.65,
+      "end": 2.966,
+      "duration": 0.316
+    },
+    {
+      "index": 8,
+      "word": "hai",
+      "start": 3.001,
+      "end": 3.191,
+      "duration": 0.19
+    },
+    {
+      "index": 9,
+      "word": "\"ye",
+      "start": 3.212,
+      "end": 3.401,
+      "duration": 0.19
+    },
+    {
+      "index": 10,
+      "word": "teeth",
+      "start": 3.422,
+      "end": 3.738,
+      "duration": 0.316
+    },
+    {
+      "index": 11,
+      "word": "nikalwane",
+      "start": 3.773,
+      "end": 4.342,
+      "duration": 0.569
+    },
+    {
+      "index": 12,
+      "word": "padenge\"",
+      "start": 4.406,
+      "end": 4.911,
+      "duration": 0.506
+    },
+    {
+      "index": 13,
+      "word": "...",
+      "start": 4.967,
+      "end": 5.157,
+      "duration": 0.19
+    },
+    {
+      "index": 14,
+      "word": "wo",
+      "start": 5.484,
+      "end": 5.602,
+      "duration": 0.118
+    },
+    {
+      "index": 15,
+      "word": "actually",
+      "start": 5.615,
+      "end": 6.087,
+      "duration": 0.472
+    },
+    {
+      "index": 16,
+      "word": "ek",
+      "start": 6.14,
+      "end": 6.258,
+      "duration": 0.118
+    },
+    {
+      "index": 17,
+      "word": "evolutionary",
+      "start": 6.271,
+      "end": 6.98,
+      "duration": 0.708
+    },
+    {
+      "index": 18,
+      "word": "mismatch",
+      "start": 7.058,
+      "end": 7.531,
+      "duration": 0.472
+    },
+    {
+      "index": 19,
+      "word": "fix",
+      "start": 7.583,
+      "end": 7.76,
+      "duration": 0.177
+    },
+    {
+      "index": 20,
+      "word": "kar",
+      "start": 7.78,
+      "end": 7.957,
+      "duration": 0.177
+    },
+    {
+      "index": 21,
+      "word": "raha",
+      "start": 7.977,
+      "end": 8.213,
+      "duration": 0.236
+    },
+    {
+      "index": 22,
+      "word": "hota",
+      "start": 8.239,
+      "end": 8.475,
+      "duration": 0.236
+    },
+    {
+      "index": 23,
+      "word": "hai.",
+      "start": 8.501,
+      "end": 8.738,
+      "duration": 0.236
+    },
+    {
+      "index": 24,
+      "word": "Tumhare",
+      "start": 8.764,
+      "end": 9.177,
+      "duration": 0.413
+    },
+    {
+      "index": 25,
+      "word": "chhote",
+      "start": 9.587,
+      "end": 9.964,
+      "duration": 0.377
+    },
+    {
+      "index": 26,
+      "word": "daant.",
+      "start": 10.006,
+      "end": 10.383,
+      "duration": 0.377
+    },
+    {
+      "index": 27,
+      "word": "Tumhara",
+      "start": 10.425,
+      "end": 10.865,
+      "duration": 0.44
+    },
+    {
+      "index": 28,
+      "word": "kamzor",
+      "start": 10.914,
+      "end": 11.291,
+      "duration": 0.377
+    },
+    {
+      "index": 29,
+      "word": "jabda.",
+      "start": 11.333,
+      "end": 11.71,
+      "duration": 0.377
+    },
+    {
+      "index": 30,
+      "word": "Tumhara",
+      "start": 11.752,
+      "end": 12.192,
+      "duration": 0.44
+    },
+    {
+      "index": 31,
+      "word": "chhota",
+      "start": 12.241,
+      "end": 12.618,
+      "duration": 0.377
+    },
+    {
+      "index": 32,
+      "word": "pet.",
+      "start": 12.897,
+      "end": 13.111,
+      "duration": 0.214
+    },
+    {
+      "index": 33,
+      "word": "Tumhare",
+      "start": 13.135,
+      "end": 13.51,
+      "duration": 0.375
+    },
+    {
+      "index": 34,
+      "word": "tedhe",
+      "start": 13.551,
+      "end": 13.819,
+      "duration": 0.268
+    },
+    {
+      "index": 35,
+      "word": "wisdom",
+      "start": 13.849,
+      "end": 14.17,
+      "duration": 0.321
+    },
+    {
+      "index": 36,
+      "word": "teeth.",
+      "start": 14.503,
+      "end": 14.854,
+      "duration": 0.351
+    },
+    {
+      "index": 37,
+      "word": "Ye",
+      "start": 14.893,
+      "end": 15.01,
+      "duration": 0.117
+    },
+    {
+      "index": 38,
+      "word": "sab",
+      "start": 15.184,
+      "end": 15.371,
+      "duration": 0.187
+    },
+    {
+      "index": 39,
+      "word": "ek",
+      "start": 15.392,
+      "end": 15.516,
+      "duration": 0.125
+    },
+    {
+      "index": 40,
+      "word": "hi",
+      "start": 15.53,
+      "end": 15.655,
+      "duration": 0.125
+    },
+    {
+      "index": 41,
+      "word": "direction",
+      "start": 15.669,
+      "end": 16.23,
+      "duration": 0.561
+    },
+    {
+      "index": 42,
+      "word": "ki",
+      "start": 16.584,
+      "end": 16.666,
+      "duration": 0.082
+    },
+    {
+      "index": 43,
+      "word": "taraf",
+      "start": 16.675,
+      "end": 16.878,
+      "duration": 0.204
+    },
+    {
+      "index": 44,
+      "word": "ishaara",
+      "start": 16.901,
+      "end": 17.186,
+      "duration": 0.285
+    },
+    {
+      "index": 45,
+      "word": "karte",
+      "start": 17.384,
+      "end": 17.692,
+      "duration": 0.308
+    },
+    {
+      "index": 46,
+      "word": "hain.",
+      "start": 17.726,
+      "end": 18.034,
+      "duration": 0.308
+    },
+    {
+      "index": 47,
+      "word": "Ki",
+      "start": 18.068,
+      "end": 18.191,
+      "duration": 0.123
+    },
+    {
+      "index": 48,
+      "word": "tumhare",
+      "start": 18.204,
+      "end": 18.635,
+      "duration": 0.431
+    },
+    {
+      "index": 49,
+      "word": "purwajon",
+      "start": 18.683,
+      "end": 19.175,
+      "duration": 0.492
+    },
+    {
+      "index": 50,
+      "word": "ka",
+      "start": 19.544,
+      "end": 19.656,
+      "duration": 0.112
+    },
+    {
+      "index": 51,
+      "word": "khaana",
+      "start": 19.668,
+      "end": 20.003,
+      "duration": 0.335
+    },
+    {
+      "index": 52,
+      "word": "...",
+      "start": 20.041,
+      "end": 20.208,
+      "duration": 0.168
+    },
+    {
+      "index": 53,
+      "word": "waqt",
+      "start": 20.227,
+      "end": 20.45,
+      "duration": 0.223
+    },
+    {
+      "index": 54,
+      "word": "ke",
+      "start": 20.475,
+      "end": 20.587,
+      "duration": 0.112
+    },
+    {
+      "index": 55,
+      "word": "saath",
+      "start": 20.599,
+      "end": 20.878,
+      "duration": 0.279
+    },
+    {
+      "index": 56,
+      "word": "...",
+      "start": 20.91,
+      "end": 21.077,
+      "duration": 0.168
+    },
+    {
+      "index": 57,
+      "word": "narm",
+      "start": 21.096,
+      "end": 21.319,
+      "duration": 0.223
+    },
+    {
+      "index": 58,
+      "word": "hota",
+      "start": 21.524,
+      "end": 22.367,
+      "duration": 0.843
+    },
+    {
+      "index": 59,
+      "word": "gaya.",
+      "start": 22.46,
+      "end": 23.514,
+      "duration": 1.054
+    }
+  ]
+}

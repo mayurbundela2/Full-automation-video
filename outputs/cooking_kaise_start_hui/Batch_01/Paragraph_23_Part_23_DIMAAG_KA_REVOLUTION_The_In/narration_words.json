@@ -1,0 +1,223 @@
+{
+  "total_words": 31,
+  "total_duration": 14.24,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.242,
+      "end": 0.448,
+      "duration": 0.206
+    },
+    {
+      "index": 2,
+      "word": "us",
+      "start": 0.471,
+      "end": 0.609,
+      "duration": 0.137
+    },
+    {
+      "index": 3,
+      "word": "badlaav",
+      "start": 0.624,
+      "end": 1.105,
+      "duration": 0.481
+    },
+    {
+      "index": 4,
+      "word": "ka",
+      "start": 1.158,
+      "end": 1.296,
+      "duration": 0.137
+    },
+    {
+      "index": 5,
+      "word": "sabse",
+      "start": 1.311,
+      "end": 1.655,
+      "duration": 0.344
+    },
+    {
+      "index": 6,
+      "word": "interesting",
+      "start": 1.693,
+      "end": 2.449,
+      "duration": 0.756
+    },
+    {
+      "index": 7,
+      "word": "hissa?",
+      "start": 2.533,
+      "end": 2.945,
+      "duration": 0.412
+    },
+    {
+      "index": 8,
+      "word": "Wo",
+      "start": 3.473,
+      "end": 3.609,
+      "duration": 0.136
+    },
+    {
+      "index": 9,
+      "word": "tumhare",
+      "start": 3.624,
+      "end": 4.1,
+      "duration": 0.476
+    },
+    {
+      "index": 10,
+      "word": "sar",
+      "start": 4.153,
+      "end": 4.357,
+      "duration": 0.204
+    },
+    {
+      "index": 11,
+      "word": "ke",
+      "start": 4.38,
+      "end": 4.516,
+      "duration": 0.136
+    },
+    {
+      "index": 12,
+      "word": "andar",
+      "start": 4.531,
+      "end": 4.871,
+      "duration": 0.34
+    },
+    {
+      "index": 13,
+      "word": "hai.",
+      "start": 4.908,
+      "end": 5.18,
+      "duration": 0.272
+    },
+    {
+      "index": 14,
+      "word": "Ab",
+      "start": 5.211,
+      "end": 5.347,
+      "duration": 0.136
+    },
+    {
+      "index": 15,
+      "word": "ek",
+      "start": 5.362,
+      "end": 5.498,
+      "duration": 0.136
+    },
+    {
+      "index": 16,
+      "word": "fact",
+      "start": 5.513,
+      "end": 5.785,
+      "duration": 0.272
+    },
+    {
+      "index": 17,
+      "word": "jo",
+      "start": 6.557,
+      "end": 6.682,
+      "duration": 0.125
+    },
+    {
+      "index": 18,
+      "word": "tumhe",
+      "start": 6.696,
+      "end": 7.009,
+      "duration": 0.313
+    },
+    {
+      "index": 19,
+      "word": "genuinely",
+      "start": 7.044,
+      "end": 7.607,
+      "duration": 0.563
+    },
+    {
+      "index": 20,
+      "word": "hairaan",
+      "start": 7.67,
+      "end": 8.108,
+      "duration": 0.438
+    },
+    {
+      "index": 21,
+      "word": "karega.",
+      "start": 8.156,
+      "end": 8.594,
+      "duration": 0.438
+    },
+    {
+      "index": 22,
+      "word": "Tumhara",
+      "start": 8.643,
+      "end": 9.081,
+      "duration": 0.438
+    },
+    {
+      "index": 23,
+      "word": "dimaag",
+      "start": 9.13,
+      "end": 9.505,
+      "duration": 0.375
+    },
+    {
+      "index": 24,
+      "word": "tumhare",
+      "start": 10.015,
+      "end": 10.634,
+      "duration": 0.619
+    },
+    {
+      "index": 25,
+      "word": "shareer",
+      "start": 10.702,
+      "end": 11.321,
+      "duration": 0.619
+    },
+    {
+      "index": 26,
+      "word": "ka",
+      "start": 11.39,
+      "end": 11.567,
+      "duration": 0.177
+    },
+    {
+      "index": 27,
+      "word": "sirf",
+      "start": 11.586,
+      "end": 11.94,
+      "duration": 0.354
+    },
+    {
+      "index": 28,
+      "word": "do",
+      "start": 11.979,
+      "end": 12.156,
+      "duration": 0.177
+    },
+    {
+      "index": 29,
+      "word": "percent",
+      "start": 12.176,
+      "end": 12.794,
+      "duration": 0.619
+    },
+    {
+      "index": 30,
+      "word": "weight",
+      "start": 12.863,
+      "end": 13.393,
+      "duration": 0.53
+    },
+    {
+      "index": 31,
+      "word": "hai.",
+      "start": 13.452,
+      "end": 13.806,
+      "duration": 0.354
+    }
+  ]
+}

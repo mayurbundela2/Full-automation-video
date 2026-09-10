@@ -1,0 +1,223 @@
+{
+  "total_words": 31,
+  "total_duration": 14.92,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.393,
+      "end": 0.585,
+      "duration": 0.192
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.606,
+      "end": 0.734,
+      "duration": 0.128
+    },
+    {
+      "index": 3,
+      "word": "cheez",
+      "start": 1.028,
+      "end": 1.248,
+      "duration": 0.221
+    },
+    {
+      "index": 4,
+      "word": "aur.",
+      "start": 1.273,
+      "end": 1.449,
+      "duration": 0.176
+    },
+    {
+      "index": 5,
+      "word": "Tumhare",
+      "start": 1.469,
+      "end": 1.778,
+      "duration": 0.309
+    },
+    {
+      "index": 6,
+      "word": "purwaj",
+      "start": 2.567,
+      "end": 3.014,
+      "duration": 0.447
+    },
+    {
+      "index": 7,
+      "word": "apna",
+      "start": 3.064,
+      "end": 3.362,
+      "duration": 0.298
+    },
+    {
+      "index": 8,
+      "word": "khaana",
+      "start": 3.395,
+      "end": 3.842,
+      "duration": 0.447
+    },
+    {
+      "index": 9,
+      "word": "khud",
+      "start": 3.892,
+      "end": 4.19,
+      "duration": 0.298
+    },
+    {
+      "index": 10,
+      "word": "pakate",
+      "start": 4.223,
+      "end": 4.67,
+      "duration": 0.447
+    },
+    {
+      "index": 11,
+      "word": "the.",
+      "start": 4.719,
+      "end": 5.018,
+      "duration": 0.298
+    },
+    {
+      "index": 12,
+      "word": "Har",
+      "start": 5.051,
+      "end": 5.274,
+      "duration": 0.224
+    },
+    {
+      "index": 13,
+      "word": "roz.",
+      "start": 5.829,
+      "end": 6.041,
+      "duration": 0.212
+    },
+    {
+      "index": 14,
+      "word": "Ye",
+      "start": 6.064,
+      "end": 6.17,
+      "duration": 0.106
+    },
+    {
+      "index": 15,
+      "word": "ek",
+      "start": 6.182,
+      "end": 6.288,
+      "duration": 0.106
+    },
+    {
+      "index": 16,
+      "word": "skill",
+      "start": 6.3,
+      "end": 6.565,
+      "duration": 0.265
+    },
+    {
+      "index": 17,
+      "word": "thi",
+      "start": 7.472,
+      "end": 7.683,
+      "duration": 0.211
+    },
+    {
+      "index": 18,
+      "word": "...",
+      "start": 7.707,
+      "end": 7.918,
+      "duration": 0.211
+    },
+    {
+      "index": 19,
+      "word": "jo",
+      "start": 7.941,
+      "end": 8.082,
+      "duration": 0.141
+    },
+    {
+      "index": 20,
+      "word": "maa",
+      "start": 8.098,
+      "end": 8.309,
+      "duration": 0.211
+    },
+    {
+      "index": 21,
+      "word": "se",
+      "start": 8.333,
+      "end": 8.473,
+      "duration": 0.141
+    },
+    {
+      "index": 22,
+      "word": "bete",
+      "start": 8.489,
+      "end": 8.771,
+      "duration": 0.282
+    },
+    {
+      "index": 23,
+      "word": "tak,",
+      "start": 9.367,
+      "end": 9.741,
+      "duration": 0.374
+    },
+    {
+      "index": 24,
+      "word": "dadi",
+      "start": 9.783,
+      "end": 10.157,
+      "duration": 0.374
+    },
+    {
+      "index": 25,
+      "word": "se",
+      "start": 10.198,
+      "end": 10.385,
+      "duration": 0.187
+    },
+    {
+      "index": 26,
+      "word": "poti",
+      "start": 10.406,
+      "end": 10.78,
+      "duration": 0.374
+    },
+    {
+      "index": 27,
+      "word": "tak",
+      "start": 10.821,
+      "end": 11.102,
+      "duration": 0.281
+    },
+    {
+      "index": 28,
+      "word": "transfer",
+      "start": 11.133,
+      "end": 11.881,
+      "duration": 0.748
+    },
+    {
+      "index": 29,
+      "word": "hoti",
+      "start": 11.964,
+      "end": 12.338,
+      "duration": 0.374
+    },
+    {
+      "index": 30,
+      "word": "thi.",
+      "start": 12.38,
+      "end": 12.754,
+      "duration": 0.374
+    },
+    {
+      "index": 31,
+      "word": "Aaj?",
+      "start": 12.795,
+      "end": 13.169,
+      "duration": 0.374
+    }
+  ]
+}

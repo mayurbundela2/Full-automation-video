@@ -1,0 +1,279 @@
+{
+  "total_words": 39,
+  "total_duration": 16.32,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.281,
+      "end": 0.438,
+      "duration": 0.157
+    },
+    {
+      "index": 2,
+      "word": "sabse",
+      "start": 0.455,
+      "end": 0.716,
+      "duration": 0.261
+    },
+    {
+      "index": 3,
+      "word": "interesting",
+      "start": 0.745,
+      "end": 1.32,
+      "duration": 0.575
+    },
+    {
+      "index": 4,
+      "word": "cheez",
+      "start": 1.384,
+      "end": 1.645,
+      "duration": 0.261
+    },
+    {
+      "index": 5,
+      "word": "...",
+      "start": 1.674,
+      "end": 1.83,
+      "duration": 0.157
+    },
+    {
+      "index": 6,
+      "word": "Wisdom",
+      "start": 1.848,
+      "end": 2.161,
+      "duration": 0.313
+    },
+    {
+      "index": 7,
+      "word": "teeth.",
+      "start": 2.697,
+      "end": 3.053,
+      "duration": 0.356
+    },
+    {
+      "index": 8,
+      "word": "Tumhare",
+      "start": 3.093,
+      "end": 3.508,
+      "duration": 0.415
+    },
+    {
+      "index": 9,
+      "word": "muh",
+      "start": 3.839,
+      "end": 4.005,
+      "duration": 0.166
+    },
+    {
+      "index": 10,
+      "word": "ke",
+      "start": 4.023,
+      "end": 4.134,
+      "duration": 0.111
+    },
+    {
+      "index": 11,
+      "word": "sabse",
+      "start": 4.146,
+      "end": 4.422,
+      "duration": 0.276
+    },
+    {
+      "index": 12,
+      "word": "peeche",
+      "start": 4.453,
+      "end": 4.785,
+      "duration": 0.332
+    },
+    {
+      "index": 13,
+      "word": "wale",
+      "start": 4.821,
+      "end": 5.042,
+      "duration": 0.221
+    },
+    {
+      "index": 14,
+      "word": "chaar",
+      "start": 5.067,
+      "end": 5.343,
+      "duration": 0.276
+    },
+    {
+      "index": 15,
+      "word": "daant.",
+      "start": 5.53,
+      "end": 5.867,
+      "duration": 0.337
+    },
+    {
+      "index": 16,
+      "word": "Jo",
+      "start": 5.905,
+      "end": 6.017,
+      "duration": 0.112
+    },
+    {
+      "index": 17,
+      "word": "aksar",
+      "start": 6.03,
+      "end": 6.311,
+      "duration": 0.281
+    },
+    {
+      "index": 18,
+      "word": "satrah",
+      "start": 6.342,
+      "end": 6.68,
+      "duration": 0.337
+    },
+    {
+      "index": 19,
+      "word": "se",
+      "start": 6.717,
+      "end": 6.83,
+      "duration": 0.112
+    },
+    {
+      "index": 20,
+      "word": "pachees",
+      "start": 7.589,
+      "end": 7.983,
+      "duration": 0.394
+    },
+    {
+      "index": 21,
+      "word": "saal",
+      "start": 8.027,
+      "end": 8.253,
+      "duration": 0.225
+    },
+    {
+      "index": 22,
+      "word": "ki",
+      "start": 8.278,
+      "end": 8.39,
+      "duration": 0.113
+    },
+    {
+      "index": 23,
+      "word": "umar",
+      "start": 8.403,
+      "end": 8.628,
+      "duration": 0.225
+    },
+    {
+      "index": 24,
+      "word": "mein",
+      "start": 8.653,
+      "end": 8.878,
+      "duration": 0.225
+    },
+    {
+      "index": 25,
+      "word": "aate",
+      "start": 8.904,
+      "end": 9.129,
+      "duration": 0.225
+    },
+    {
+      "index": 26,
+      "word": "hain.",
+      "start": 9.154,
+      "end": 9.436,
+      "duration": 0.282
+    },
+    {
+      "index": 27,
+      "word": "Aur",
+      "start": 9.467,
+      "end": 9.636,
+      "duration": 0.169
+    },
+    {
+      "index": 28,
+      "word": "aksar",
+      "start": 9.655,
+      "end": 9.936,
+      "duration": 0.282
+    },
+    {
+      "index": 29,
+      "word": "dard",
+      "start": 9.968,
+      "end": 10.193,
+      "duration": 0.225
+    },
+    {
+      "index": 30,
+      "word": "karte",
+      "start": 10.218,
+      "end": 10.5,
+      "duration": 0.282
+    },
+    {
+      "index": 31,
+      "word": "hain,",
+      "start": 10.91,
+      "end": 11.21,
+      "duration": 0.3
+    },
+    {
+      "index": 32,
+      "word": "tedhe",
+      "start": 11.243,
+      "end": 11.542,
+      "duration": 0.3
+    },
+    {
+      "index": 33,
+      "word": "aate",
+      "start": 11.576,
+      "end": 11.815,
+      "duration": 0.24
+    },
+    {
+      "index": 34,
+      "word": "hain,",
+      "start": 11.842,
+      "end": 12.142,
+      "duration": 0.3
+    },
+    {
+      "index": 35,
+      "word": "ya",
+      "start": 12.175,
+      "end": 12.295,
+      "duration": 0.12
+    },
+    {
+      "index": 36,
+      "word": "nikalwane",
+      "start": 12.747,
+      "end": 13.547,
+      "duration": 0.8
+    },
+    {
+      "index": 37,
+      "word": "padte",
+      "start": 13.635,
+      "end": 14.08,
+      "duration": 0.444
+    },
+    {
+      "index": 38,
+      "word": "hain.",
+      "start": 14.129,
+      "end": 14.573,
+      "duration": 0.444
+    },
+    {
+      "index": 39,
+      "word": "Kyun?",
+      "start": 14.622,
+      "end": 15.067,
+      "duration": 0.444
+    }
+  ]
+}

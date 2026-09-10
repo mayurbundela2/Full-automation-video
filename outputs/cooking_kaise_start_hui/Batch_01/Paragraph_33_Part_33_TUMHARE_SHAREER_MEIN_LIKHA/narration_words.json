@@ -1,0 +1,104 @@
+{
+  "total_words": 14,
+  "total_duration": 7.56,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aaina",
+      "start": 0.282,
+      "end": 0.549,
+      "duration": 0.267
+    },
+    {
+      "index": 2,
+      "word": "ke",
+      "start": 0.579,
+      "end": 0.685,
+      "duration": 0.107
+    },
+    {
+      "index": 3,
+      "word": "saamne",
+      "start": 0.697,
+      "end": 1.018,
+      "duration": 0.32
+    },
+    {
+      "index": 4,
+      "word": "jaao.",
+      "start": 1.053,
+      "end": 1.32,
+      "duration": 0.267
+    },
+    {
+      "index": 5,
+      "word": "Muh",
+      "start": 1.911,
+      "end": 2.055,
+      "duration": 0.144
+    },
+    {
+      "index": 6,
+      "word": "kholo.",
+      "start": 2.071,
+      "end": 2.36,
+      "duration": 0.289
+    },
+    {
+      "index": 7,
+      "word": "Tumhare",
+      "start": 3.364,
+      "end": 3.691,
+      "duration": 0.327
+    },
+    {
+      "index": 8,
+      "word": "daant",
+      "start": 3.728,
+      "end": 3.962,
+      "duration": 0.234
+    },
+    {
+      "index": 9,
+      "word": "chhote",
+      "start": 3.988,
+      "end": 4.268,
+      "duration": 0.281
+    },
+    {
+      "index": 10,
+      "word": "hain.",
+      "start": 4.299,
+      "end": 4.533,
+      "duration": 0.234
+    },
+    {
+      "index": 11,
+      "word": "Kamzor",
+      "start": 4.559,
+      "end": 4.84,
+      "duration": 0.281
+    },
+    {
+      "index": 12,
+      "word": "hain.",
+      "start": 5.478,
+      "end": 5.676,
+      "duration": 0.198
+    },
+    {
+      "index": 13,
+      "word": "Flat",
+      "start": 5.698,
+      "end": 5.856,
+      "duration": 0.158
+    },
+    {
+      "index": 14,
+      "word": "hain.",
+      "start": 5.873,
+      "end": 6.071,
+      "duration": 0.198
+    }
+  ]
+}

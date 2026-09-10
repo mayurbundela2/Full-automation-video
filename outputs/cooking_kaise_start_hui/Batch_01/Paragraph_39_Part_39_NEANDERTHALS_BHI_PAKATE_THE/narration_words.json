@@ -1,0 +1,363 @@
+{
+  "total_words": 51,
+  "total_duration": 19.8,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.299,
+      "end": 0.483,
+      "duration": 0.184
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.503,
+      "end": 0.626,
+      "duration": 0.123
+    },
+    {
+      "index": 3,
+      "word": "sirf",
+      "start": 0.64,
+      "end": 0.885,
+      "duration": 0.245
+    },
+    {
+      "index": 4,
+      "word": "humari",
+      "start": 0.912,
+      "end": 1.28,
+      "duration": 0.368
+    },
+    {
+      "index": 5,
+      "word": "species",
+      "start": 1.321,
+      "end": 1.75,
+      "duration": 0.429
+    },
+    {
+      "index": 6,
+      "word": "tak",
+      "start": 1.797,
+      "end": 1.981,
+      "duration": 0.184
+    },
+    {
+      "index": 7,
+      "word": "seemit",
+      "start": 2.002,
+      "end": 2.369,
+      "duration": 0.368
+    },
+    {
+      "index": 8,
+      "word": "nahi",
+      "start": 2.41,
+      "end": 2.655,
+      "duration": 0.245
+    },
+    {
+      "index": 9,
+      "word": "tha.",
+      "start": 2.683,
+      "end": 2.928,
+      "duration": 0.245
+    },
+    {
+      "index": 10,
+      "word": "Yaad",
+      "start": 3.529,
+      "end": 3.686,
+      "duration": 0.157
+    },
+    {
+      "index": 11,
+      "word": "hai",
+      "start": 3.703,
+      "end": 3.82,
+      "duration": 0.117
+    },
+    {
+      "index": 12,
+      "word": "humne",
+      "start": 3.833,
+      "end": 4.029,
+      "duration": 0.196
+    },
+    {
+      "index": 13,
+      "word": "language",
+      "start": 4.324,
+      "end": 4.817,
+      "duration": 0.493
+    },
+    {
+      "index": 14,
+      "word": "wali",
+      "start": 4.872,
+      "end": 5.118,
+      "duration": 0.246
+    },
+    {
+      "index": 15,
+      "word": "video",
+      "start": 5.145,
+      "end": 5.453,
+      "duration": 0.308
+    },
+    {
+      "index": 16,
+      "word": "mein",
+      "start": 5.488,
+      "end": 5.734,
+      "duration": 0.246
+    },
+    {
+      "index": 17,
+      "word": "Neanderthals",
+      "start": 5.761,
+      "end": 6.501,
+      "duration": 0.739
+    },
+    {
+      "index": 18,
+      "word": "ki",
+      "start": 6.583,
+      "end": 6.706,
+      "duration": 0.123
+    },
+    {
+      "index": 19,
+      "word": "baat",
+      "start": 6.72,
+      "end": 6.966,
+      "duration": 0.246
+    },
+    {
+      "index": 20,
+      "word": "ki",
+      "start": 6.993,
+      "end": 7.117,
+      "duration": 0.123
+    },
+    {
+      "index": 21,
+      "word": "thi?",
+      "start": 7.13,
+      "end": 7.377,
+      "duration": 0.246
+    },
+    {
+      "index": 22,
+      "word": "Wo",
+      "start": 7.404,
+      "end": 7.527,
+      "duration": 0.123
+    },
+    {
+      "index": 23,
+      "word": "humse",
+      "start": 8.198,
+      "end": 8.484,
+      "duration": 0.286
+    },
+    {
+      "index": 24,
+      "word": "alag",
+      "start": 8.515,
+      "end": 8.744,
+      "duration": 0.229
+    },
+    {
+      "index": 25,
+      "word": "species",
+      "start": 8.769,
+      "end": 9.169,
+      "duration": 0.4
+    },
+    {
+      "index": 26,
+      "word": "the.",
+      "start": 9.214,
+      "end": 9.442,
+      "duration": 0.229
+    },
+    {
+      "index": 27,
+      "word": "Humse",
+      "start": 9.468,
+      "end": 9.753,
+      "duration": 0.286
+    },
+    {
+      "index": 28,
+      "word": "pehle",
+      "start": 10.264,
+      "end": 10.574,
+      "duration": 0.31
+    },
+    {
+      "index": 29,
+      "word": "Europe",
+      "start": 10.608,
+      "end": 10.98,
+      "duration": 0.372
+    },
+    {
+      "index": 30,
+      "word": "mein",
+      "start": 11.022,
+      "end": 11.27,
+      "duration": 0.248
+    },
+    {
+      "index": 31,
+      "word": "rehte",
+      "start": 11.297,
+      "end": 11.607,
+      "duration": 0.31
+    },
+    {
+      "index": 32,
+      "word": "the.",
+      "start": 11.641,
+      "end": 11.889,
+      "duration": 0.248
+    },
+    {
+      "index": 33,
+      "word": "Aur",
+      "start": 12.205,
+      "end": 12.346,
+      "duration": 0.141
+    },
+    {
+      "index": 34,
+      "word": "unke",
+      "start": 12.361,
+      "end": 12.549,
+      "duration": 0.188
+    },
+    {
+      "index": 35,
+      "word": "DNA",
+      "start": 12.726,
+      "end": 12.819,
+      "duration": 0.093
+    },
+    {
+      "index": 36,
+      "word": "mein",
+      "start": 12.83,
+      "end": 12.954,
+      "duration": 0.125
+    },
+    {
+      "index": 37,
+      "word": "wahi",
+      "start": 12.968,
+      "end": 13.093,
+      "duration": 0.125
+    },
+    {
+      "index": 38,
+      "word": "language-related",
+      "start": 13.107,
+      "end": 13.605,
+      "duration": 0.498
+    },
+    {
+      "index": 39,
+      "word": "fox",
+      "start": 13.94,
+      "end": 14.184,
+      "duration": 0.244
+    },
+    {
+      "index": 40,
+      "word": "p",
+      "start": 14.211,
+      "end": 14.292,
+      "duration": 0.081
+    },
+    {
+      "index": 41,
+      "word": "two",
+      "start": 14.301,
+      "end": 14.545,
+      "duration": 0.244
+    },
+    {
+      "index": 42,
+      "word": "gene",
+      "start": 14.572,
+      "end": 14.897,
+      "duration": 0.325
+    },
+    {
+      "index": 43,
+      "word": "mila",
+      "start": 14.933,
+      "end": 15.258,
+      "duration": 0.325
+    },
+    {
+      "index": 44,
+      "word": "jo",
+      "start": 15.294,
+      "end": 15.457,
+      "duration": 0.163
+    },
+    {
+      "index": 45,
+      "word": "humare",
+      "start": 15.475,
+      "end": 15.962,
+      "duration": 0.488
+    },
+    {
+      "index": 46,
+      "word": "paas",
+      "start": 16.016,
+      "end": 16.341,
+      "duration": 0.325
+    },
+    {
+      "index": 47,
+      "word": "hai.",
+      "start": 16.378,
+      "end": 16.703,
+      "duration": 0.325
+    },
+    {
+      "index": 48,
+      "word": "Ab",
+      "start": 16.739,
+      "end": 16.901,
+      "duration": 0.163
+    },
+    {
+      "index": 49,
+      "word": "ek",
+      "start": 16.919,
+      "end": 17.082,
+      "duration": 0.163
+    },
+    {
+      "index": 50,
+      "word": "aur",
+      "start": 17.1,
+      "end": 17.344,
+      "duration": 0.244
+    },
+    {
+      "index": 51,
+      "word": "baat.",
+      "start": 17.371,
+      "end": 17.777,
+      "duration": 0.406
+    }
+  ]
+}

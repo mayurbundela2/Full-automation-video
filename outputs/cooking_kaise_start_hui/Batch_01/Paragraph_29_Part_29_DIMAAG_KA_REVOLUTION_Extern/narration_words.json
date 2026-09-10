@@ -1,0 +1,300 @@
+{
+  "total_words": 42,
+  "total_duration": 15.24,
+  "words": [
+    {
+      "index": 1,
+      "word": "Garmi",
+      "start": 0.322,
+      "end": 0.516,
+      "duration": 0.194
+    },
+    {
+      "index": 2,
+      "word": "protein",
+      "start": 0.537,
+      "end": 0.808,
+      "duration": 0.271
+    },
+    {
+      "index": 3,
+      "word": "ko",
+      "start": 0.989,
+      "end": 1.075,
+      "duration": 0.086
+    },
+    {
+      "index": 4,
+      "word": "tod",
+      "start": 1.085,
+      "end": 1.214,
+      "duration": 0.129
+    },
+    {
+      "index": 5,
+      "word": "deti",
+      "start": 1.229,
+      "end": 1.401,
+      "duration": 0.173
+    },
+    {
+      "index": 6,
+      "word": "hai.",
+      "start": 1.42,
+      "end": 1.593,
+      "duration": 0.173
+    },
+    {
+      "index": 7,
+      "word": "Starch",
+      "start": 1.795,
+      "end": 2.066,
+      "duration": 0.271
+    },
+    {
+      "index": 8,
+      "word": "ko",
+      "start": 2.096,
+      "end": 2.186,
+      "duration": 0.09
+    },
+    {
+      "index": 9,
+      "word": "aasan",
+      "start": 2.196,
+      "end": 2.422,
+      "duration": 0.226
+    },
+    {
+      "index": 10,
+      "word": "bana",
+      "start": 2.791,
+      "end": 3.013,
+      "duration": 0.222
+    },
+    {
+      "index": 11,
+      "word": "deti",
+      "start": 3.037,
+      "end": 3.259,
+      "duration": 0.222
+    },
+    {
+      "index": 12,
+      "word": "hai.",
+      "start": 3.283,
+      "end": 3.505,
+      "duration": 0.222
+    },
+    {
+      "index": 13,
+      "word": "Kai",
+      "start": 3.53,
+      "end": 3.696,
+      "duration": 0.166
+    },
+    {
+      "index": 14,
+      "word": "bacteria",
+      "start": 3.714,
+      "end": 4.158,
+      "duration": 0.443
+    },
+    {
+      "index": 15,
+      "word": "maar",
+      "start": 4.207,
+      "end": 4.428,
+      "duration": 0.222
+    },
+    {
+      "index": 16,
+      "word": "deti",
+      "start": 4.863,
+      "end": 5.054,
+      "duration": 0.191
+    },
+    {
+      "index": 17,
+      "word": "hai.",
+      "start": 5.075,
+      "end": 5.265,
+      "duration": 0.191
+    },
+    {
+      "index": 18,
+      "word": "Ek",
+      "start": 5.286,
+      "end": 5.382,
+      "duration": 0.095
+    },
+    {
+      "index": 19,
+      "word": "sense",
+      "start": 5.392,
+      "end": 5.63,
+      "duration": 0.238
+    },
+    {
+      "index": 20,
+      "word": "mein",
+      "start": 5.657,
+      "end": 5.847,
+      "duration": 0.191
+    },
+    {
+      "index": 21,
+      "word": "...",
+      "start": 5.869,
+      "end": 6.012,
+      "duration": 0.143
+    },
+    {
+      "index": 22,
+      "word": "khaana",
+      "start": 6.027,
+      "end": 6.313,
+      "duration": 0.286
+    },
+    {
+      "index": 23,
+      "word": "pet",
+      "start": 6.685,
+      "end": 6.815,
+      "duration": 0.13
+    },
+    {
+      "index": 24,
+      "word": "ke",
+      "start": 6.83,
+      "end": 6.916,
+      "duration": 0.087
+    },
+    {
+      "index": 25,
+      "word": "liye",
+      "start": 7.152,
+      "end": 7.381,
+      "duration": 0.229
+    },
+    {
+      "index": 26,
+      "word": "pehle",
+      "start": 7.407,
+      "end": 7.693,
+      "duration": 0.287
+    },
+    {
+      "index": 27,
+      "word": "hi",
+      "start": 7.725,
+      "end": 7.84,
+      "duration": 0.115
+    },
+    {
+      "index": 28,
+      "word": "thoda",
+      "start": 7.853,
+      "end": 8.139,
+      "duration": 0.287
+    },
+    {
+      "index": 29,
+      "word": "\"prepared\"",
+      "start": 8.512,
+      "end": 8.885,
+      "duration": 0.373
+    },
+    {
+      "index": 30,
+      "word": "ho",
+      "start": 9.114,
+      "end": 9.209,
+      "duration": 0.095
+    },
+    {
+      "index": 31,
+      "word": "chuka",
+      "start": 9.219,
+      "end": 9.456,
+      "duration": 0.236
+    },
+    {
+      "index": 32,
+      "word": "hota",
+      "start": 9.482,
+      "end": 9.671,
+      "duration": 0.189
+    },
+    {
+      "index": 33,
+      "word": "hai.",
+      "start": 9.892,
+      "end": 10.106,
+      "duration": 0.214
+    },
+    {
+      "index": 34,
+      "word": "Toh",
+      "start": 10.13,
+      "end": 10.29,
+      "duration": 0.16
+    },
+    {
+      "index": 35,
+      "word": "humare",
+      "start": 10.308,
+      "end": 10.628,
+      "duration": 0.321
+    },
+    {
+      "index": 36,
+      "word": "pet",
+      "start": 10.884,
+      "end": 10.958,
+      "duration": 0.074
+    },
+    {
+      "index": 37,
+      "word": "ko",
+      "start": 11.141,
+      "end": 11.247,
+      "duration": 0.106
+    },
+    {
+      "index": 38,
+      "word": "utni",
+      "start": 11.259,
+      "end": 11.471,
+      "duration": 0.212
+    },
+    {
+      "index": 39,
+      "word": "mehnat",
+      "start": 11.495,
+      "end": 11.814,
+      "duration": 0.319
+    },
+    {
+      "index": 40,
+      "word": "nahi",
+      "start": 11.849,
+      "end": 12.061,
+      "duration": 0.212
+    },
+    {
+      "index": 41,
+      "word": "karni",
+      "start": 12.361,
+      "end": 12.575,
+      "duration": 0.214
+    },
+    {
+      "index": 42,
+      "word": "padti.",
+      "start": 12.598,
+      "end": 12.855,
+      "duration": 0.256
+    }
+  ]
+}

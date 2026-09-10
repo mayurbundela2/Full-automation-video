@@ -1,0 +1,286 @@
+{
+  "total_words": 40,
+  "total_duration": 16.53,
+  "words": [
+    {
+      "index": 1,
+      "word": "Kisi",
+      "start": 0.269,
+      "end": 0.541,
+      "duration": 0.272
+    },
+    {
+      "index": 2,
+      "word": "ne",
+      "start": 0.571,
+      "end": 0.707,
+      "duration": 0.136
+    },
+    {
+      "index": 3,
+      "word": "pehli",
+      "start": 0.722,
+      "end": 1.062,
+      "duration": 0.34
+    },
+    {
+      "index": 4,
+      "word": "baar",
+      "start": 1.1,
+      "end": 1.372,
+      "duration": 0.272
+    },
+    {
+      "index": 5,
+      "word": "aag",
+      "start": 1.402,
+      "end": 1.606,
+      "duration": 0.204
+    },
+    {
+      "index": 6,
+      "word": "ke",
+      "start": 1.629,
+      "end": 1.765,
+      "duration": 0.136
+    },
+    {
+      "index": 7,
+      "word": "paas",
+      "start": 1.78,
+      "end": 2.052,
+      "duration": 0.272
+    },
+    {
+      "index": 8,
+      "word": "maas",
+      "start": 2.082,
+      "end": 2.354,
+      "duration": 0.272
+    },
+    {
+      "index": 9,
+      "word": "rakha",
+      "start": 2.385,
+      "end": 2.725,
+      "duration": 0.34
+    },
+    {
+      "index": 10,
+      "word": "tha.",
+      "start": 2.763,
+      "end": 3.035,
+      "duration": 0.272
+    },
+    {
+      "index": 11,
+      "word": "Bina",
+      "start": 3.065,
+      "end": 3.337,
+      "duration": 0.272
+    },
+    {
+      "index": 12,
+      "word": "jaane",
+      "start": 4.015,
+      "end": 4.322,
+      "duration": 0.307
+    },
+    {
+      "index": 13,
+      "word": "ki",
+      "start": 4.356,
+      "end": 4.479,
+      "duration": 0.123
+    },
+    {
+      "index": 14,
+      "word": "wo",
+      "start": 4.493,
+      "end": 4.616,
+      "duration": 0.123
+    },
+    {
+      "index": 15,
+      "word": "kya",
+      "start": 4.629,
+      "end": 4.814,
+      "duration": 0.184
+    },
+    {
+      "index": 16,
+      "word": "kar",
+      "start": 4.834,
+      "end": 5.019,
+      "duration": 0.184
+    },
+    {
+      "index": 17,
+      "word": "raha",
+      "start": 5.039,
+      "end": 5.285,
+      "duration": 0.246
+    },
+    {
+      "index": 18,
+      "word": "hai.",
+      "start": 5.312,
+      "end": 5.558,
+      "duration": 0.246
+    },
+    {
+      "index": 19,
+      "word": "Cooking",
+      "start": 5.585,
+      "end": 6.015,
+      "duration": 0.43
+    },
+    {
+      "index": 20,
+      "word": "ke",
+      "start": 7.392,
+      "end": 7.512,
+      "duration": 0.12
+    },
+    {
+      "index": 21,
+      "word": "saath",
+      "start": 7.526,
+      "end": 7.827,
+      "duration": 0.301
+    },
+    {
+      "index": 22,
+      "word": "...",
+      "start": 7.861,
+      "end": 8.041,
+      "duration": 0.181
+    },
+    {
+      "index": 23,
+      "word": "waqt",
+      "start": 8.061,
+      "end": 8.302,
+      "duration": 0.241
+    },
+    {
+      "index": 24,
+      "word": "ke",
+      "start": 8.845,
+      "end": 8.945,
+      "duration": 0.1
+    },
+    {
+      "index": 25,
+      "word": "saath",
+      "start": 8.956,
+      "end": 9.207,
+      "duration": 0.251
+    },
+    {
+      "index": 26,
+      "word": "...",
+      "start": 9.235,
+      "end": 9.385,
+      "duration": 0.15
+    },
+    {
+      "index": 27,
+      "word": "humare",
+      "start": 9.402,
+      "end": 9.703,
+      "duration": 0.301
+    },
+    {
+      "index": 28,
+      "word": "ancestors",
+      "start": 9.964,
+      "end": 10.676,
+      "duration": 0.712
+    },
+    {
+      "index": 29,
+      "word": "ke",
+      "start": 10.755,
+      "end": 10.913,
+      "duration": 0.158
+    },
+    {
+      "index": 30,
+      "word": "dimaag",
+      "start": 10.93,
+      "end": 11.405,
+      "duration": 0.474
+    },
+    {
+      "index": 31,
+      "word": "ke",
+      "start": 11.458,
+      "end": 11.616,
+      "duration": 0.158
+    },
+    {
+      "index": 32,
+      "word": "size",
+      "start": 11.633,
+      "end": 11.95,
+      "duration": 0.316
+    },
+    {
+      "index": 33,
+      "word": "aur",
+      "start": 11.985,
+      "end": 12.222,
+      "duration": 0.237
+    },
+    {
+      "index": 34,
+      "word": "digestive",
+      "start": 12.248,
+      "end": 12.96,
+      "duration": 0.712
+    },
+    {
+      "index": 35,
+      "word": "system",
+      "start": 13.039,
+      "end": 13.514,
+      "duration": 0.474
+    },
+    {
+      "index": 36,
+      "word": "mein",
+      "start": 13.566,
+      "end": 13.883,
+      "duration": 0.316
+    },
+    {
+      "index": 37,
+      "word": "bade",
+      "start": 13.918,
+      "end": 14.234,
+      "duration": 0.316
+    },
+    {
+      "index": 38,
+      "word": "evolutionary",
+      "start": 14.269,
+      "end": 15.218,
+      "duration": 0.949
+    },
+    {
+      "index": 39,
+      "word": "changes",
+      "start": 15.324,
+      "end": 15.877,
+      "duration": 0.554
+    },
+    {
+      "index": 40,
+      "word": "aaye.",
+      "start": 15.939,
+      "end": 16.334,
+      "duration": 0.395
+    }
+  ]
+}

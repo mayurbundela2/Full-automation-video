@@ -1,0 +1,160 @@
+{
+  "total_words": 22,
+  "total_duration": 10.56,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.273,
+      "end": 0.388,
+      "duration": 0.115
+    },
+    {
+      "index": 2,
+      "word": "evolutionary",
+      "start": 0.401,
+      "end": 1.093,
+      "duration": 0.692
+    },
+    {
+      "index": 3,
+      "word": "hisaab",
+      "start": 1.17,
+      "end": 1.516,
+      "duration": 0.346
+    },
+    {
+      "index": 4,
+      "word": "se",
+      "start": 1.554,
+      "end": 1.67,
+      "duration": 0.115
+    },
+    {
+      "index": 5,
+      "word": "bahut",
+      "start": 1.682,
+      "end": 1.971,
+      "duration": 0.288
+    },
+    {
+      "index": 6,
+      "word": "mehnga",
+      "start": 2.003,
+      "end": 2.349,
+      "duration": 0.346
+    },
+    {
+      "index": 7,
+      "word": "sauda",
+      "start": 2.57,
+      "end": 2.883,
+      "duration": 0.313
+    },
+    {
+      "index": 8,
+      "word": "hai.",
+      "start": 2.918,
+      "end": 3.168,
+      "duration": 0.25
+    },
+    {
+      "index": 9,
+      "word": "Koi",
+      "start": 3.196,
+      "end": 3.384,
+      "duration": 0.188
+    },
+    {
+      "index": 10,
+      "word": "bhi",
+      "start": 3.405,
+      "end": 3.593,
+      "duration": 0.188
+    },
+    {
+      "index": 11,
+      "word": "doosra",
+      "start": 3.614,
+      "end": 3.989,
+      "duration": 0.376
+    },
+    {
+      "index": 12,
+      "word": "primate",
+      "start": 4.459,
+      "end": 4.94,
+      "duration": 0.481
+    },
+    {
+      "index": 13,
+      "word": "itna",
+      "start": 4.993,
+      "end": 5.268,
+      "duration": 0.275
+    },
+    {
+      "index": 14,
+      "word": "mehnga",
+      "start": 5.298,
+      "end": 5.71,
+      "duration": 0.412
+    },
+    {
+      "index": 15,
+      "word": "organ",
+      "start": 5.756,
+      "end": 6.1,
+      "duration": 0.343
+    },
+    {
+      "index": 16,
+      "word": "afford",
+      "start": 6.138,
+      "end": 6.55,
+      "duration": 0.412
+    },
+    {
+      "index": 17,
+      "word": "nahi",
+      "start": 6.596,
+      "end": 6.87,
+      "duration": 0.275
+    },
+    {
+      "index": 18,
+      "word": "karta.",
+      "start": 6.901,
+      "end": 7.313,
+      "duration": 0.412
+    },
+    {
+      "index": 19,
+      "word": "Toh",
+      "start": 7.359,
+      "end": 7.565,
+      "duration": 0.206
+    },
+    {
+      "index": 20,
+      "word": "humne",
+      "start": 7.587,
+      "end": 7.931,
+      "duration": 0.343
+    },
+    {
+      "index": 21,
+      "word": "kaise",
+      "start": 8.715,
+      "end": 8.88,
+      "duration": 0.165
+    },
+    {
+      "index": 22,
+      "word": "kiya?",
+      "start": 9.079,
+      "end": 10.12,
+      "duration": 1.041
+    }
+  ]
+}

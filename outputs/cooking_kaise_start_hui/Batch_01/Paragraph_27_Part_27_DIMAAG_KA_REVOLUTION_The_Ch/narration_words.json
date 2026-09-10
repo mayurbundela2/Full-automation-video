@@ -1,0 +1,321 @@
+{
+  "total_words": 45,
+  "total_duration": 17.2,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.37,
+      "end": 0.536,
+      "duration": 0.166
+    },
+    {
+      "index": 2,
+      "word": "humare",
+      "start": 0.554,
+      "end": 0.886,
+      "duration": 0.332
+    },
+    {
+      "index": 3,
+      "word": "paas",
+      "start": 0.923,
+      "end": 1.144,
+      "duration": 0.221
+    },
+    {
+      "index": 4,
+      "word": "do",
+      "start": 1.169,
+      "end": 1.279,
+      "duration": 0.111
+    },
+    {
+      "index": 5,
+      "word": "sabse",
+      "start": 1.291,
+      "end": 1.568,
+      "duration": 0.276
+    },
+    {
+      "index": 6,
+      "word": "mehnge",
+      "start": 1.599,
+      "end": 1.93,
+      "duration": 0.332
+    },
+    {
+      "index": 7,
+      "word": "organs",
+      "start": 1.967,
+      "end": 2.299,
+      "duration": 0.332
+    },
+    {
+      "index": 8,
+      "word": "the",
+      "start": 2.336,
+      "end": 2.501,
+      "duration": 0.166
+    },
+    {
+      "index": 9,
+      "word": "...",
+      "start": 2.52,
+      "end": 2.686,
+      "duration": 0.166
+    },
+    {
+      "index": 10,
+      "word": "dimaag",
+      "start": 2.704,
+      "end": 3.036,
+      "duration": 0.332
+    },
+    {
+      "index": 11,
+      "word": "aur",
+      "start": 3.073,
+      "end": 3.239,
+      "duration": 0.166
+    },
+    {
+      "index": 12,
+      "word": "pachan",
+      "start": 3.581,
+      "end": 3.795,
+      "duration": 0.214
+    },
+    {
+      "index": 13,
+      "word": "tantra.",
+      "start": 3.818,
+      "end": 4.067,
+      "duration": 0.249
+    },
+    {
+      "index": 14,
+      "word": "Digestive",
+      "start": 4.348,
+      "end": 4.803,
+      "duration": 0.455
+    },
+    {
+      "index": 15,
+      "word": "system.",
+      "start": 4.854,
+      "end": 5.208,
+      "duration": 0.354
+    },
+    {
+      "index": 16,
+      "word": "Ab",
+      "start": 5.587,
+      "end": 5.694,
+      "duration": 0.107
+    },
+    {
+      "index": 17,
+      "word": "dekho",
+      "start": 5.706,
+      "end": 5.972,
+      "duration": 0.267
+    },
+    {
+      "index": 18,
+      "word": "kya",
+      "start": 6.002,
+      "end": 6.162,
+      "duration": 0.16
+    },
+    {
+      "index": 19,
+      "word": "hua.",
+      "start": 6.18,
+      "end": 6.393,
+      "duration": 0.213
+    },
+    {
+      "index": 20,
+      "word": "Chimpanzee",
+      "start": 7.084,
+      "end": 7.634,
+      "duration": 0.55
+    },
+    {
+      "index": 21,
+      "word": "ka",
+      "start": 7.696,
+      "end": 7.806,
+      "duration": 0.11
+    },
+    {
+      "index": 22,
+      "word": "digestive",
+      "start": 8.208,
+      "end": 8.689,
+      "duration": 0.481
+    },
+    {
+      "index": 23,
+      "word": "system,",
+      "start": 8.742,
+      "end": 9.116,
+      "duration": 0.374
+    },
+    {
+      "index": 24,
+      "word": "uske",
+      "start": 9.158,
+      "end": 9.372,
+      "duration": 0.214
+    },
+    {
+      "index": 25,
+      "word": "body",
+      "start": 9.395,
+      "end": 9.609,
+      "duration": 0.214
+    },
+    {
+      "index": 26,
+      "word": "size",
+      "start": 9.633,
+      "end": 9.847,
+      "duration": 0.214
+    },
+    {
+      "index": 27,
+      "word": "ke",
+      "start": 9.87,
+      "end": 9.977,
+      "duration": 0.107
+    },
+    {
+      "index": 28,
+      "word": "hisaab",
+      "start": 9.989,
+      "end": 10.31,
+      "duration": 0.321
+    },
+    {
+      "index": 29,
+      "word": "se,",
+      "start": 10.345,
+      "end": 10.506,
+      "duration": 0.16
+    },
+    {
+      "index": 30,
+      "word": "humse",
+      "start": 10.524,
+      "end": 10.791,
+      "duration": 0.267
+    },
+    {
+      "index": 31,
+      "word": "kaafi",
+      "start": 10.82,
+      "end": 11.088,
+      "duration": 0.267
+    },
+    {
+      "index": 32,
+      "word": "bada",
+      "start": 11.117,
+      "end": 11.331,
+      "duration": 0.214
+    },
+    {
+      "index": 33,
+      "word": "hai.",
+      "start": 11.355,
+      "end": 11.568,
+      "duration": 0.214
+    },
+    {
+      "index": 34,
+      "word": "Kyunki",
+      "start": 11.592,
+      "end": 11.913,
+      "duration": 0.321
+    },
+    {
+      "index": 35,
+      "word": "usse",
+      "start": 11.948,
+      "end": 12.162,
+      "duration": 0.214
+    },
+    {
+      "index": 36,
+      "word": "kachha",
+      "start": 12.186,
+      "end": 12.507,
+      "duration": 0.321
+    },
+    {
+      "index": 37,
+      "word": "khaana",
+      "start": 12.542,
+      "end": 12.863,
+      "duration": 0.321
+    },
+    {
+      "index": 38,
+      "word": "pachana",
+      "start": 12.898,
+      "end": 13.272,
+      "duration": 0.374
+    },
+    {
+      "index": 39,
+      "word": "padta",
+      "start": 13.607,
+      "end": 13.943,
+      "duration": 0.336
+    },
+    {
+      "index": 40,
+      "word": "hai",
+      "start": 13.98,
+      "end": 14.181,
+      "duration": 0.201
+    },
+    {
+      "index": 41,
+      "word": "...",
+      "start": 14.204,
+      "end": 14.405,
+      "duration": 0.201
+    },
+    {
+      "index": 42,
+      "word": "jo",
+      "start": 14.427,
+      "end": 14.562,
+      "duration": 0.134
+    },
+    {
+      "index": 43,
+      "word": "mushkil",
+      "start": 14.576,
+      "end": 15.046,
+      "duration": 0.47
+    },
+    {
+      "index": 44,
+      "word": "kaam",
+      "start": 15.098,
+      "end": 15.367,
+      "duration": 0.268
+    },
+    {
+      "index": 45,
+      "word": "hai.",
+      "start": 15.397,
+      "end": 15.665,
+      "duration": 0.268
+    }
+  ]
+}

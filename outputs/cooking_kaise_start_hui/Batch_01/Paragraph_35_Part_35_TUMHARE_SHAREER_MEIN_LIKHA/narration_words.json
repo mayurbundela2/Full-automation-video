@@ -1,0 +1,244 @@
+{
+  "total_words": 34,
+  "total_duration": 12.8,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ab",
+      "start": 0.272,
+      "end": 0.36,
+      "duration": 0.088
+    },
+    {
+      "index": 2,
+      "word": "tumhara",
+      "start": 0.37,
+      "end": 0.678,
+      "duration": 0.308
+    },
+    {
+      "index": 3,
+      "word": "jabda",
+      "start": 0.713,
+      "end": 0.933,
+      "duration": 0.22
+    },
+    {
+      "index": 4,
+      "word": "dekho.",
+      "start": 0.958,
+      "end": 1.222,
+      "duration": 0.264
+    },
+    {
+      "index": 5,
+      "word": "Chimpanzee",
+      "start": 1.251,
+      "end": 1.692,
+      "duration": 0.441
+    },
+    {
+      "index": 6,
+      "word": "ki",
+      "start": 2.072,
+      "end": 2.184,
+      "duration": 0.112
+    },
+    {
+      "index": 7,
+      "word": "jaw",
+      "start": 2.196,
+      "end": 2.364,
+      "duration": 0.168
+    },
+    {
+      "index": 8,
+      "word": "muscles",
+      "start": 2.382,
+      "end": 2.774,
+      "duration": 0.391
+    },
+    {
+      "index": 9,
+      "word": "humse",
+      "start": 2.817,
+      "end": 3.096,
+      "duration": 0.279
+    },
+    {
+      "index": 10,
+      "word": "kai",
+      "start": 3.127,
+      "end": 3.295,
+      "duration": 0.168
+    },
+    {
+      "index": 11,
+      "word": "guna",
+      "start": 3.314,
+      "end": 3.537,
+      "duration": 0.223
+    },
+    {
+      "index": 12,
+      "word": "zyada",
+      "start": 3.562,
+      "end": 3.841,
+      "duration": 0.279
+    },
+    {
+      "index": 13,
+      "word": "powerful",
+      "start": 3.872,
+      "end": 4.319,
+      "duration": 0.447
+    },
+    {
+      "index": 14,
+      "word": "hoti",
+      "start": 4.548,
+      "end": 4.742,
+      "duration": 0.194
+    },
+    {
+      "index": 15,
+      "word": "hain.",
+      "start": 4.764,
+      "end": 5.006,
+      "duration": 0.243
+    },
+    {
+      "index": 16,
+      "word": "Humari",
+      "start": 5.033,
+      "end": 5.324,
+      "duration": 0.291
+    },
+    {
+      "index": 17,
+      "word": "jaw?",
+      "start": 5.357,
+      "end": 5.551,
+      "duration": 0.194
+    },
+    {
+      "index": 18,
+      "word": "Popcorn",
+      "start": 5.572,
+      "end": 5.912,
+      "duration": 0.34
+    },
+    {
+      "index": 19,
+      "word": "ka",
+      "start": 5.95,
+      "end": 6.047,
+      "duration": 0.097
+    },
+    {
+      "index": 20,
+      "word": "kernel",
+      "start": 6.058,
+      "end": 6.349,
+      "duration": 0.291
+    },
+    {
+      "index": 21,
+      "word": "bhi",
+      "start": 7.016,
+      "end": 7.186,
+      "duration": 0.17
+    },
+    {
+      "index": 22,
+      "word": "mushkil",
+      "start": 7.204,
+      "end": 7.6,
+      "duration": 0.396
+    },
+    {
+      "index": 23,
+      "word": "se",
+      "start": 8.216,
+      "end": 8.329,
+      "duration": 0.113
+    },
+    {
+      "index": 24,
+      "word": "todti",
+      "start": 8.342,
+      "end": 8.624,
+      "duration": 0.283
+    },
+    {
+      "index": 25,
+      "word": "hai",
+      "start": 8.656,
+      "end": 8.825,
+      "duration": 0.17
+    },
+    {
+      "index": 26,
+      "word": "...",
+      "start": 8.844,
+      "end": 9.014,
+      "duration": 0.17
+    },
+    {
+      "index": 27,
+      "word": "kabhi",
+      "start": 9.033,
+      "end": 9.315,
+      "duration": 0.283
+    },
+    {
+      "index": 28,
+      "word": "kabhi",
+      "start": 9.347,
+      "end": 9.629,
+      "duration": 0.283
+    },
+    {
+      "index": 29,
+      "word": "toh",
+      "start": 9.661,
+      "end": 9.83,
+      "duration": 0.17
+    },
+    {
+      "index": 30,
+      "word": "daant",
+      "start": 9.849,
+      "end": 10.132,
+      "duration": 0.283
+    },
+    {
+      "index": 31,
+      "word": "hi",
+      "start": 10.163,
+      "end": 10.276,
+      "duration": 0.113
+    },
+    {
+      "index": 32,
+      "word": "toot",
+      "start": 10.479,
+      "end": 10.635,
+      "duration": 0.156
+    },
+    {
+      "index": 33,
+      "word": "jaata",
+      "start": 10.806,
+      "end": 11.645,
+      "duration": 0.839
+    },
+    {
+      "index": 34,
+      "word": "hai.",
+      "start": 11.738,
+      "end": 12.409,
+      "duration": 0.671
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "total_words": 43,
+  "total_duration": 19.44,
+  "words": [
+    {
+      "index": 1,
+      "word": "Cooking",
+      "start": 0.457,
+      "end": 0.912,
+      "duration": 0.455
+    },
+    {
+      "index": 2,
+      "word": "sirf",
+      "start": 0.963,
+      "end": 1.223,
+      "duration": 0.26
+    },
+    {
+      "index": 3,
+      "word": "Homo",
+      "start": 1.252,
+      "end": 1.512,
+      "duration": 0.26
+    },
+    {
+      "index": 4,
+      "word": "sapiens",
+      "start": 1.541,
+      "end": 1.996,
+      "duration": 0.455
+    },
+    {
+      "index": 5,
+      "word": "ka",
+      "start": 2.047,
+      "end": 2.177,
+      "duration": 0.13
+    },
+    {
+      "index": 6,
+      "word": "invention",
+      "start": 2.191,
+      "end": 2.777,
+      "duration": 0.585
+    },
+    {
+      "index": 7,
+      "word": "nahi",
+      "start": 2.842,
+      "end": 3.102,
+      "duration": 0.26
+    },
+    {
+      "index": 8,
+      "word": "tha.",
+      "start": 3.131,
+      "end": 3.391,
+      "duration": 0.26
+    },
+    {
+      "index": 9,
+      "word": "Do",
+      "start": 4.105,
+      "end": 4.239,
+      "duration": 0.134
+    },
+    {
+      "index": 10,
+      "word": "alag",
+      "start": 4.253,
+      "end": 4.521,
+      "duration": 0.267
+    },
+    {
+      "index": 11,
+      "word": "insaani",
+      "start": 4.55,
+      "end": 5.018,
+      "duration": 0.467
+    },
+    {
+      "index": 12,
+      "word": "species.",
+      "start": 5.07,
+      "end": 5.604,
+      "duration": 0.534
+    },
+    {
+      "index": 13,
+      "word": "Alag",
+      "start": 5.663,
+      "end": 5.93,
+      "duration": 0.267
+    },
+    {
+      "index": 14,
+      "word": "jagah.",
+      "start": 6.437,
+      "end": 6.735,
+      "duration": 0.298
+    },
+    {
+      "index": 15,
+      "word": "Aur",
+      "start": 6.768,
+      "end": 6.916,
+      "duration": 0.149
+    },
+    {
+      "index": 16,
+      "word": "dono",
+      "start": 7.236,
+      "end": 7.5,
+      "duration": 0.264
+    },
+    {
+      "index": 17,
+      "word": "aag",
+      "start": 7.529,
+      "end": 7.727,
+      "duration": 0.198
+    },
+    {
+      "index": 18,
+      "word": "ke",
+      "start": 7.749,
+      "end": 7.881,
+      "duration": 0.132
+    },
+    {
+      "index": 19,
+      "word": "paas",
+      "start": 7.896,
+      "end": 8.16,
+      "duration": 0.264
+    },
+    {
+      "index": 20,
+      "word": "baithkar",
+      "start": 8.189,
+      "end": 8.717,
+      "duration": 0.528
+    },
+    {
+      "index": 21,
+      "word": "khaana",
+      "start": 8.776,
+      "end": 9.171,
+      "duration": 0.396
+    },
+    {
+      "index": 22,
+      "word": "pakate",
+      "start": 9.215,
+      "end": 9.611,
+      "duration": 0.396
+    },
+    {
+      "index": 23,
+      "word": "the.",
+      "start": 9.655,
+      "end": 9.919,
+      "duration": 0.264
+    },
+    {
+      "index": 24,
+      "word": "Phir",
+      "start": 9.949,
+      "end": 10.212,
+      "duration": 0.264
+    },
+    {
+      "index": 25,
+      "word": "ek",
+      "start": 10.242,
+      "end": 10.374,
+      "duration": 0.132
+    },
+    {
+      "index": 26,
+      "word": "gayab",
+      "start": 10.388,
+      "end": 10.718,
+      "duration": 0.33
+    },
+    {
+      "index": 27,
+      "word": "ho",
+      "start": 11.73,
+      "end": 11.849,
+      "duration": 0.119
+    },
+    {
+      "index": 28,
+      "word": "gayi.",
+      "start": 11.862,
+      "end": 12.161,
+      "duration": 0.298
+    },
+    {
+      "index": 29,
+      "word": "Aur",
+      "start": 12.194,
+      "end": 12.373,
+      "duration": 0.179
+    },
+    {
+      "index": 30,
+      "word": "ek",
+      "start": 12.392,
+      "end": 12.512,
+      "duration": 0.119
+    },
+    {
+      "index": 31,
+      "word": "bachi.",
+      "start": 12.525,
+      "end": 12.883,
+      "duration": 0.358
+    },
+    {
+      "index": 32,
+      "word": "Aur",
+      "start": 12.922,
+      "end": 13.101,
+      "duration": 0.179
+    },
+    {
+      "index": 33,
+      "word": "wo",
+      "start": 13.787,
+      "end": 13.894,
+      "duration": 0.107
+    },
+    {
+      "index": 34,
+      "word": "bachi",
+      "start": 13.906,
+      "end": 14.175,
+      "duration": 0.269
+    },
+    {
+      "index": 35,
+      "word": "hui",
+      "start": 14.205,
+      "end": 14.366,
+      "duration": 0.161
+    },
+    {
+      "index": 36,
+      "word": "species",
+      "start": 14.841,
+      "end": 15.313,
+      "duration": 0.472
+    },
+    {
+      "index": 37,
+      "word": "...",
+      "start": 15.365,
+      "end": 15.568,
+      "duration": 0.202
+    },
+    {
+      "index": 38,
+      "word": "aaj",
+      "start": 15.59,
+      "end": 15.793,
+      "duration": 0.202
+    },
+    {
+      "index": 39,
+      "word": "Swiggy",
+      "start": 15.815,
+      "end": 16.22,
+      "duration": 0.405
+    },
+    {
+      "index": 40,
+      "word": "pe",
+      "start": 16.265,
+      "end": 16.399,
+      "duration": 0.135
+    },
+    {
+      "index": 41,
+      "word": "order",
+      "start": 16.414,
+      "end": 16.752,
+      "duration": 0.337
+    },
+    {
+      "index": 42,
+      "word": "karti",
+      "start": 17.418,
+      "end": 18.226,
+      "duration": 0.808
+    },
+    {
+      "index": 43,
+      "word": "hai.",
+      "start": 18.316,
+      "end": 18.963,
+      "duration": 0.647
+    }
+  ]
+}

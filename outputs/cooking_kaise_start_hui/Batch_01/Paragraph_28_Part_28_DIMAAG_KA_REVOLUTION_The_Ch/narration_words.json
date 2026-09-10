@@ -1,0 +1,237 @@
+{
+  "total_words": 33,
+  "total_duration": 14.16,
+  "words": [
+    {
+      "index": 1,
+      "word": "Humara",
+      "start": 0.323,
+      "end": 0.679,
+      "duration": 0.356
+    },
+    {
+      "index": 2,
+      "word": "digestive",
+      "start": 0.718,
+      "end": 1.252,
+      "duration": 0.534
+    },
+    {
+      "index": 3,
+      "word": "system",
+      "start": 1.311,
+      "end": 1.667,
+      "duration": 0.356
+    },
+    {
+      "index": 4,
+      "word": "...",
+      "start": 1.706,
+      "end": 1.884,
+      "duration": 0.178
+    },
+    {
+      "index": 5,
+      "word": "expectation",
+      "start": 2.229,
+      "end": 2.721,
+      "duration": 0.492
+    },
+    {
+      "index": 6,
+      "word": "se",
+      "start": 2.776,
+      "end": 2.865,
+      "duration": 0.09
+    },
+    {
+      "index": 7,
+      "word": "kaafi",
+      "start": 2.875,
+      "end": 3.099,
+      "duration": 0.224
+    },
+    {
+      "index": 8,
+      "word": "chhota",
+      "start": 3.274,
+      "end": 3.601,
+      "duration": 0.327
+    },
+    {
+      "index": 9,
+      "word": "hai.",
+      "start": 3.637,
+      "end": 3.854,
+      "duration": 0.218
+    },
+    {
+      "index": 10,
+      "word": "Kyun?",
+      "start": 3.879,
+      "end": 4.151,
+      "duration": 0.272
+    },
+    {
+      "index": 11,
+      "word": "Kyunki",
+      "start": 4.836,
+      "end": 5.022,
+      "duration": 0.186
+    },
+    {
+      "index": 12,
+      "word": "cooking",
+      "start": 5.466,
+      "end": 5.725,
+      "duration": 0.259
+    },
+    {
+      "index": 13,
+      "word": "khaane",
+      "start": 5.754,
+      "end": 5.975,
+      "duration": 0.222
+    },
+    {
+      "index": 14,
+      "word": "ko",
+      "start": 6.157,
+      "end": 6.217,
+      "duration": 0.06
+    },
+    {
+      "index": 15,
+      "word": "chemically",
+      "start": 6.219,
+      "end": 6.496,
+      "duration": 0.278
+    },
+    {
+      "index": 16,
+      "word": "aur",
+      "start": 6.731,
+      "end": 6.902,
+      "duration": 0.171
+    },
+    {
+      "index": 17,
+      "word": "physically",
+      "start": 6.921,
+      "end": 7.49,
+      "duration": 0.569
+    },
+    {
+      "index": 18,
+      "word": "aisa",
+      "start": 7.553,
+      "end": 7.781,
+      "duration": 0.228
+    },
+    {
+      "index": 19,
+      "word": "badal",
+      "start": 7.806,
+      "end": 8.091,
+      "duration": 0.285
+    },
+    {
+      "index": 20,
+      "word": "deti",
+      "start": 8.123,
+      "end": 8.35,
+      "duration": 0.228
+    },
+    {
+      "index": 21,
+      "word": "hai",
+      "start": 8.376,
+      "end": 8.546,
+      "duration": 0.171
+    },
+    {
+      "index": 22,
+      "word": "ki",
+      "start": 8.565,
+      "end": 8.679,
+      "duration": 0.114
+    },
+    {
+      "index": 23,
+      "word": "use",
+      "start": 8.692,
+      "end": 8.863,
+      "duration": 0.171
+    },
+    {
+      "index": 24,
+      "word": "digest",
+      "start": 8.882,
+      "end": 9.223,
+      "duration": 0.342
+    },
+    {
+      "index": 25,
+      "word": "karna",
+      "start": 9.261,
+      "end": 9.546,
+      "duration": 0.285
+    },
+    {
+      "index": 26,
+      "word": "aur",
+      "start": 9.577,
+      "end": 9.748,
+      "duration": 0.171
+    },
+    {
+      "index": 27,
+      "word": "usse",
+      "start": 9.767,
+      "end": 9.995,
+      "duration": 0.228
+    },
+    {
+      "index": 28,
+      "word": "energy",
+      "start": 10.02,
+      "end": 10.362,
+      "duration": 0.342
+    },
+    {
+      "index": 29,
+      "word": "nikalna",
+      "start": 10.4,
+      "end": 10.798,
+      "duration": 0.398
+    },
+    {
+      "index": 30,
+      "word": "aasaan",
+      "start": 10.842,
+      "end": 11.184,
+      "duration": 0.342
+    },
+    {
+      "index": 31,
+      "word": "ho",
+      "start": 11.5,
+      "end": 11.71,
+      "duration": 0.21
+    },
+    {
+      "index": 32,
+      "word": "jaata",
+      "start": 11.733,
+      "end": 12.258,
+      "duration": 0.524
+    },
+    {
+      "index": 33,
+      "word": "hai.",
+      "start": 12.316,
+      "end": 12.735,
+      "duration": 0.42
+    }
+  ]
+}

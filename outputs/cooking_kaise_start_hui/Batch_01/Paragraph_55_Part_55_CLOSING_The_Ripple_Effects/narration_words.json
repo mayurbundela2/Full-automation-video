@@ -1,0 +1,230 @@
+{
+  "total_words": 32,
+  "total_duration": 14.85,
+  "words": [
+    {
+      "index": 1,
+      "word": "Usne",
+      "start": 0.232,
+      "end": 0.428,
+      "duration": 0.196
+    },
+    {
+      "index": 2,
+      "word": "humara",
+      "start": 0.45,
+      "end": 0.745,
+      "duration": 0.295
+    },
+    {
+      "index": 3,
+      "word": "khaana",
+      "start": 0.778,
+      "end": 1.072,
+      "duration": 0.295
+    },
+    {
+      "index": 4,
+      "word": "badla.",
+      "start": 1.105,
+      "end": 1.4,
+      "duration": 0.295
+    },
+    {
+      "index": 5,
+      "word": "Humara",
+      "start": 1.433,
+      "end": 1.727,
+      "duration": 0.295
+    },
+    {
+      "index": 6,
+      "word": "time",
+      "start": 2.187,
+      "end": 2.363,
+      "duration": 0.176
+    },
+    {
+      "index": 7,
+      "word": "badla.",
+      "start": 2.382,
+      "end": 2.646,
+      "duration": 0.264
+    },
+    {
+      "index": 8,
+      "word": "Humara",
+      "start": 2.675,
+      "end": 2.939,
+      "duration": 0.264
+    },
+    {
+      "index": 9,
+      "word": "sath",
+      "start": 2.969,
+      "end": 3.144,
+      "duration": 0.176
+    },
+    {
+      "index": 10,
+      "word": "baithne",
+      "start": 3.614,
+      "end": 3.989,
+      "duration": 0.375
+    },
+    {
+      "index": 11,
+      "word": "ka",
+      "start": 4.031,
+      "end": 4.138,
+      "duration": 0.107
+    },
+    {
+      "index": 12,
+      "word": "tareeka",
+      "start": 4.15,
+      "end": 4.525,
+      "duration": 0.375
+    },
+    {
+      "index": 13,
+      "word": "badla.",
+      "start": 4.567,
+      "end": 4.889,
+      "duration": 0.322
+    },
+    {
+      "index": 14,
+      "word": "Aur",
+      "start": 4.924,
+      "end": 5.085,
+      "duration": 0.161
+    },
+    {
+      "index": 15,
+      "word": "shayad",
+      "start": 5.103,
+      "end": 5.425,
+      "duration": 0.322
+    },
+    {
+      "index": 16,
+      "word": "...",
+      "start": 5.46,
+      "end": 5.621,
+      "duration": 0.161
+    },
+    {
+      "index": 17,
+      "word": "thoda",
+      "start": 6.303,
+      "end": 6.565,
+      "duration": 0.262
+    },
+    {
+      "index": 18,
+      "word": "thoda",
+      "start": 6.595,
+      "end": 6.857,
+      "duration": 0.262
+    },
+    {
+      "index": 19,
+      "word": "...",
+      "start": 7.237,
+      "end": 7.363,
+      "duration": 0.126
+    },
+    {
+      "index": 20,
+      "word": "humein",
+      "start": 7.377,
+      "end": 7.628,
+      "duration": 0.252
+    },
+    {
+      "index": 21,
+      "word": "bhi",
+      "start": 7.656,
+      "end": 7.782,
+      "duration": 0.126
+    },
+    {
+      "index": 22,
+      "word": "badla.",
+      "start": 8.208,
+      "end": 8.489,
+      "duration": 0.281
+    },
+    {
+      "index": 23,
+      "word": "Tumhare",
+      "start": 8.52,
+      "end": 8.849,
+      "duration": 0.328
+    },
+    {
+      "index": 24,
+      "word": "chhote",
+      "start": 9.664,
+      "end": 9.918,
+      "duration": 0.254
+    },
+    {
+      "index": 25,
+      "word": "daant.",
+      "start": 9.946,
+      "end": 10.2,
+      "duration": 0.254
+    },
+    {
+      "index": 26,
+      "word": "Tumhara",
+      "start": 10.228,
+      "end": 10.525,
+      "duration": 0.296
+    },
+    {
+      "index": 27,
+      "word": "kamzor",
+      "start": 10.558,
+      "end": 10.812,
+      "duration": 0.254
+    },
+    {
+      "index": 28,
+      "word": "jabda.",
+      "start": 11.327,
+      "end": 11.608,
+      "duration": 0.281
+    },
+    {
+      "index": 29,
+      "word": "Tumhare",
+      "start": 11.64,
+      "end": 11.968,
+      "duration": 0.328
+    },
+    {
+      "index": 30,
+      "word": "tedhe",
+      "start": 12.005,
+      "end": 12.239,
+      "duration": 0.235
+    },
+    {
+      "index": 31,
+      "word": "wisdom",
+      "start": 12.265,
+      "end": 12.547,
+      "duration": 0.281
+    },
+    {
+      "index": 32,
+      "word": "teeth.",
+      "start": 13.147,
+      "end": 14.488,
+      "duration": 1.341
+    }
+  ]
+}

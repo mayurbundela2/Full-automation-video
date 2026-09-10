@@ -1,0 +1,328 @@
+{
+  "total_words": 46,
+  "total_duration": 13.61,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 0.189,
+      "end": 0.423,
+      "duration": 0.234
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.449,
+      "end": 0.542,
+      "duration": 0.094
+    },
+    {
+      "index": 3,
+      "word": "cheez",
+      "start": 0.553,
+      "end": 0.786,
+      "duration": 0.234
+    },
+    {
+      "index": 4,
+      "word": "pe",
+      "start": 0.812,
+      "end": 0.906,
+      "duration": 0.094
+    },
+    {
+      "index": 5,
+      "word": "kaafi",
+      "start": 0.916,
+      "end": 1.15,
+      "duration": 0.234
+    },
+    {
+      "index": 6,
+      "word": "consensus",
+      "start": 1.176,
+      "end": 1.597,
+      "duration": 0.421
+    },
+    {
+      "index": 7,
+      "word": "hai",
+      "start": 1.644,
+      "end": 1.784,
+      "duration": 0.14
+    },
+    {
+      "index": 8,
+      "word": "...",
+      "start": 1.799,
+      "end": 1.94,
+      "duration": 0.14
+    },
+    {
+      "index": 9,
+      "word": "cooked",
+      "start": 1.955,
+      "end": 2.236,
+      "duration": 0.281
+    },
+    {
+      "index": 10,
+      "word": "food",
+      "start": 2.659,
+      "end": 2.868,
+      "duration": 0.209
+    },
+    {
+      "index": 11,
+      "word": "se",
+      "start": 2.891,
+      "end": 2.996,
+      "duration": 0.104
+    },
+    {
+      "index": 12,
+      "word": "humein",
+      "start": 3.007,
+      "end": 3.32,
+      "duration": 0.313
+    },
+    {
+      "index": 13,
+      "word": "zyada",
+      "start": 3.355,
+      "end": 3.616,
+      "duration": 0.261
+    },
+    {
+      "index": 14,
+      "word": "calories",
+      "start": 3.645,
+      "end": 4.063,
+      "duration": 0.418
+    },
+    {
+      "index": 15,
+      "word": "milti",
+      "start": 4.11,
+      "end": 4.371,
+      "duration": 0.261
+    },
+    {
+      "index": 16,
+      "word": "hain,",
+      "start": 4.4,
+      "end": 4.661,
+      "duration": 0.261
+    },
+    {
+      "index": 17,
+      "word": "kam",
+      "start": 4.69,
+      "end": 4.847,
+      "duration": 0.157
+    },
+    {
+      "index": 18,
+      "word": "mehnat",
+      "start": 5.14,
+      "end": 5.461,
+      "duration": 0.321
+    },
+    {
+      "index": 19,
+      "word": "mein.",
+      "start": 5.496,
+      "end": 5.763,
+      "duration": 0.267
+    },
+    {
+      "index": 20,
+      "word": "Ye",
+      "start": 5.793,
+      "end": 5.9,
+      "duration": 0.107
+    },
+    {
+      "index": 21,
+      "word": "lab",
+      "start": 5.912,
+      "end": 6.072,
+      "duration": 0.16
+    },
+    {
+      "index": 22,
+      "word": "experiments",
+      "start": 6.09,
+      "end": 6.678,
+      "duration": 0.588
+    },
+    {
+      "index": 23,
+      "word": "mein",
+      "start": 6.743,
+      "end": 6.957,
+      "duration": 0.214
+    },
+    {
+      "index": 24,
+      "word": "measure",
+      "start": 6.98,
+      "end": 7.354,
+      "duration": 0.374
+    },
+    {
+      "index": 25,
+      "word": "ho",
+      "start": 7.396,
+      "end": 7.503,
+      "duration": 0.107
+    },
+    {
+      "index": 26,
+      "word": "chuka",
+      "start": 7.515,
+      "end": 7.782,
+      "duration": 0.267
+    },
+    {
+      "index": 27,
+      "word": "hai.",
+      "start": 7.811,
+      "end": 8.025,
+      "duration": 0.214
+    },
+    {
+      "index": 28,
+      "word": "Aur",
+      "start": 8.049,
+      "end": 8.209,
+      "duration": 0.16
+    },
+    {
+      "index": 29,
+      "word": "agar",
+      "start": 8.541,
+      "end": 8.749,
+      "duration": 0.208
+    },
+    {
+      "index": 30,
+      "word": "tumhe",
+      "start": 8.772,
+      "end": 9.032,
+      "duration": 0.26
+    },
+    {
+      "index": 31,
+      "word": "abhi",
+      "start": 9.061,
+      "end": 9.268,
+      "duration": 0.208
+    },
+    {
+      "index": 32,
+      "word": "bhi",
+      "start": 9.291,
+      "end": 9.447,
+      "duration": 0.156
+    },
+    {
+      "index": 33,
+      "word": "shaq",
+      "start": 9.465,
+      "end": 9.672,
+      "duration": 0.208
+    },
+    {
+      "index": 34,
+      "word": "hai",
+      "start": 9.696,
+      "end": 9.851,
+      "duration": 0.156
+    },
+    {
+      "index": 35,
+      "word": "ki",
+      "start": 9.869,
+      "end": 9.973,
+      "duration": 0.104
+    },
+    {
+      "index": 36,
+      "word": "cooking",
+      "start": 9.984,
+      "end": 10.348,
+      "duration": 0.364
+    },
+    {
+      "index": 37,
+      "word": "ne",
+      "start": 10.388,
+      "end": 10.492,
+      "duration": 0.104
+    },
+    {
+      "index": 38,
+      "word": "humein",
+      "start": 10.504,
+      "end": 10.815,
+      "duration": 0.312
+    },
+    {
+      "index": 39,
+      "word": "badla",
+      "start": 10.85,
+      "end": 11.11,
+      "duration": 0.26
+    },
+    {
+      "index": 40,
+      "word": "...",
+      "start": 11.139,
+      "end": 11.295,
+      "duration": 0.156
+    },
+    {
+      "index": 41,
+      "word": "toh",
+      "start": 11.312,
+      "end": 11.468,
+      "duration": 0.156
+    },
+    {
+      "index": 42,
+      "word": "apne",
+      "start": 11.485,
+      "end": 11.693,
+      "duration": 0.208
+    },
+    {
+      "index": 43,
+      "word": "muh",
+      "start": 11.941,
+      "end": 12.183,
+      "duration": 0.242
+    },
+    {
+      "index": 44,
+      "word": "ke",
+      "start": 12.21,
+      "end": 12.372,
+      "duration": 0.161
+    },
+    {
+      "index": 45,
+      "word": "andar",
+      "start": 12.389,
+      "end": 12.793,
+      "duration": 0.404
+    },
+    {
+      "index": 46,
+      "word": "dekho.",
+      "start": 12.838,
+      "end": 13.322,
+      "duration": 0.484
+    }
+  ]
+}

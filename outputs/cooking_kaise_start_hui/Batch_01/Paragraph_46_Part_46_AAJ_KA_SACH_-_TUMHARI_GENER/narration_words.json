@@ -1,0 +1,202 @@
+{
+  "total_words": 28,
+  "total_duration": 10.73,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.309,
+      "end": 0.436,
+      "duration": 0.127
+    },
+    {
+      "index": 2,
+      "word": "ab",
+      "start": 0.45,
+      "end": 0.535,
+      "duration": 0.085
+    },
+    {
+      "index": 3,
+      "word": "honest",
+      "start": 0.544,
+      "end": 0.798,
+      "duration": 0.254
+    },
+    {
+      "index": 4,
+      "word": "baat.",
+      "start": 0.826,
+      "end": 1.037,
+      "duration": 0.211
+    },
+    {
+      "index": 5,
+      "word": "Tumhara",
+      "start": 1.061,
+      "end": 1.357,
+      "duration": 0.296
+    },
+    {
+      "index": 6,
+      "word": "shareer",
+      "start": 1.969,
+      "end": 2.331,
+      "duration": 0.362
+    },
+    {
+      "index": 7,
+      "word": "lakhon",
+      "start": 2.372,
+      "end": 2.682,
+      "duration": 0.311
+    },
+    {
+      "index": 8,
+      "word": "saal",
+      "start": 2.717,
+      "end": 2.924,
+      "duration": 0.207
+    },
+    {
+      "index": 9,
+      "word": "mein",
+      "start": 2.947,
+      "end": 3.154,
+      "duration": 0.207
+    },
+    {
+      "index": 10,
+      "word": "pakaye",
+      "start": 3.177,
+      "end": 3.487,
+      "duration": 0.311
+    },
+    {
+      "index": 11,
+      "word": "hue",
+      "start": 3.522,
+      "end": 3.677,
+      "duration": 0.155
+    },
+    {
+      "index": 12,
+      "word": "khaane",
+      "start": 3.694,
+      "end": 4.005,
+      "duration": 0.311
+    },
+    {
+      "index": 13,
+      "word": "ke",
+      "start": 4.04,
+      "end": 4.143,
+      "duration": 0.104
+    },
+    {
+      "index": 14,
+      "word": "saath",
+      "start": 4.155,
+      "end": 4.413,
+      "duration": 0.259
+    },
+    {
+      "index": 15,
+      "word": "evolve",
+      "start": 4.442,
+      "end": 4.753,
+      "duration": 0.311
+    },
+    {
+      "index": 16,
+      "word": "hua.",
+      "start": 4.787,
+      "end": 4.994,
+      "duration": 0.207
+    },
+    {
+      "index": 17,
+      "word": "Ultra-processed",
+      "start": 5.017,
+      "end": 5.794,
+      "duration": 0.776
+    },
+    {
+      "index": 18,
+      "word": "khaane",
+      "start": 6.47,
+      "end": 6.812,
+      "duration": 0.342
+    },
+    {
+      "index": 19,
+      "word": "ke",
+      "start": 6.85,
+      "end": 6.965,
+      "duration": 0.114
+    },
+    {
+      "index": 20,
+      "word": "liye",
+      "start": 6.977,
+      "end": 7.205,
+      "duration": 0.228
+    },
+    {
+      "index": 21,
+      "word": "usse",
+      "start": 7.231,
+      "end": 7.459,
+      "duration": 0.228
+    },
+    {
+      "index": 22,
+      "word": "sirf",
+      "start": 7.484,
+      "end": 7.713,
+      "duration": 0.228
+    },
+    {
+      "index": 23,
+      "word": "tees",
+      "start": 7.738,
+      "end": 7.966,
+      "duration": 0.228
+    },
+    {
+      "index": 24,
+      "word": "chalees",
+      "start": 7.992,
+      "end": 8.391,
+      "duration": 0.399
+    },
+    {
+      "index": 25,
+      "word": "saal",
+      "start": 8.436,
+      "end": 8.664,
+      "duration": 0.228
+    },
+    {
+      "index": 26,
+      "word": "mile",
+      "start": 8.689,
+      "end": 8.917,
+      "duration": 0.228
+    },
+    {
+      "index": 27,
+      "word": "hain.",
+      "start": 8.943,
+      "end": 9.228,
+      "duration": 0.285
+    },
+    {
+      "index": 28,
+      "word": "Nateeja?",
+      "start": 9.26,
+      "end": 9.716,
+      "duration": 0.457
+    }
+  ]
+}
