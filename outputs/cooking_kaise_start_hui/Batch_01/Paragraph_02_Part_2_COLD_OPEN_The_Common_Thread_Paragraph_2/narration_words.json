@@ -1,0 +1,202 @@
+{
+  "total_words": 28,
+  "total_duration": 10.24,
+  "words": [
+    {
+      "index": 1,
+      "word": "Chahe",
+      "start": 0.275,
+      "end": 0.472,
+      "duration": 0.197
+    },
+    {
+      "index": 2,
+      "word": "kuch",
+      "start": 0.494,
+      "end": 0.651,
+      "duration": 0.158
+    },
+    {
+      "index": 3,
+      "word": "bhi",
+      "start": 0.837,
+      "end": 0.991,
+      "duration": 0.154
+    },
+    {
+      "index": 4,
+      "word": "khaya",
+      "start": 1.008,
+      "end": 1.265,
+      "duration": 0.257
+    },
+    {
+      "index": 5,
+      "word": "ho",
+      "start": 1.294,
+      "end": 1.397,
+      "duration": 0.103
+    },
+    {
+      "index": 6,
+      "word": "...",
+      "start": 1.408,
+      "end": 1.563,
+      "duration": 0.154
+    },
+    {
+      "index": 7,
+      "word": "ek",
+      "start": 1.58,
+      "end": 1.683,
+      "duration": 0.103
+    },
+    {
+      "index": 8,
+      "word": "cheez",
+      "start": 2.319,
+      "end": 2.553,
+      "duration": 0.234
+    },
+    {
+      "index": 9,
+      "word": "common",
+      "start": 2.579,
+      "end": 2.859,
+      "duration": 0.28
+    },
+    {
+      "index": 10,
+      "word": "thi.",
+      "start": 2.89,
+      "end": 3.077,
+      "duration": 0.187
+    },
+    {
+      "index": 11,
+      "word": "Wo",
+      "start": 3.098,
+      "end": 3.191,
+      "duration": 0.093
+    },
+    {
+      "index": 12,
+      "word": "pakaya",
+      "start": 3.202,
+      "end": 3.482,
+      "duration": 0.28
+    },
+    {
+      "index": 13,
+      "word": "hua",
+      "start": 4.216,
+      "end": 4.316,
+      "duration": 0.1
+    },
+    {
+      "index": 14,
+      "word": "tha.",
+      "start": 4.327,
+      "end": 4.459,
+      "duration": 0.133
+    },
+    {
+      "index": 15,
+      "word": "Aur",
+      "start": 4.726,
+      "end": 4.858,
+      "duration": 0.132
+    },
+    {
+      "index": 16,
+      "word": "ye",
+      "start": 4.873,
+      "end": 4.961,
+      "duration": 0.088
+    },
+    {
+      "index": 17,
+      "word": "baat",
+      "start": 4.971,
+      "end": 5.147,
+      "duration": 0.176
+    },
+    {
+      "index": 18,
+      "word": "itni",
+      "start": 5.167,
+      "end": 5.343,
+      "duration": 0.176
+    },
+    {
+      "index": 19,
+      "word": "normal",
+      "start": 5.363,
+      "end": 5.628,
+      "duration": 0.265
+    },
+    {
+      "index": 20,
+      "word": "lagti",
+      "start": 6.038,
+      "end": 6.297,
+      "duration": 0.259
+    },
+    {
+      "index": 21,
+      "word": "hai",
+      "start": 6.325,
+      "end": 6.481,
+      "duration": 0.155
+    },
+    {
+      "index": 22,
+      "word": "ki",
+      "start": 6.498,
+      "end": 6.601,
+      "duration": 0.103
+    },
+    {
+      "index": 23,
+      "word": "tumne",
+      "start": 6.613,
+      "end": 6.871,
+      "duration": 0.259
+    },
+    {
+      "index": 24,
+      "word": "kabhi",
+      "start": 6.9,
+      "end": 7.159,
+      "duration": 0.259
+    },
+    {
+      "index": 25,
+      "word": "socha",
+      "start": 7.187,
+      "end": 7.446,
+      "duration": 0.259
+    },
+    {
+      "index": 26,
+      "word": "bhi",
+      "start": 7.475,
+      "end": 7.63,
+      "duration": 0.155
+    },
+    {
+      "index": 27,
+      "word": "nahi",
+      "start": 7.647,
+      "end": 7.854,
+      "duration": 0.207
+    },
+    {
+      "index": 28,
+      "word": "hoga.",
+      "start": 8.331,
+      "end": 9.738,
+      "duration": 1.407
+    }
+  ]
+}

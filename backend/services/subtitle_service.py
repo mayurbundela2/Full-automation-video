@@ -1,3 +1,4 @@
+import os
 import re
 import json
 import math
@@ -5,6 +6,17 @@ import subprocess
 from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
 from backend.services.audio_converter import AudioConverter
+
+
+def make_long_path_safe(p: Path) -> Path:
+    """Prepend \\\\?\\ on Windows if needed to bypass the 260-char MAX_PATH limit."""
+    resolved = p.resolve()
+    if os.name == "nt":
+        resolved_str = str(resolved)
+        if not resolved_str.startswith("\\\\?\\") and not resolved_str.startswith("\\\\"):
+            return Path(f"\\\\?\\{resolved_str}")
+    return resolved
+
 
 
 class SubtitleService:
@@ -306,21 +318,30 @@ class SubtitleService:
             start_offset=0.0
         )
 
-        srt_content = cls.build_srt_content(words, words_per_caption=words_per_caption)
         srt_file = output_dir / f"{prefix}.srt"
-        srt_file.write_text(srt_content, encoding="utf-8")
+        try:
+            srt_content = cls.build_srt_content(words, words_per_caption=words_per_caption)
+            make_long_path_safe(srt_file).write_text(srt_content, encoding="utf-8")
+        except Exception as e:
+            print(f"[SubtitleService] SRT write warning: {e}")
 
-        vtt_content = cls.build_vtt_content(words, words_per_caption=words_per_caption)
         vtt_file = output_dir / f"{prefix}.vtt"
-        vtt_file.write_text(vtt_content, encoding="utf-8")
+        try:
+            vtt_content = cls.build_vtt_content(words, words_per_caption=words_per_caption)
+            make_long_path_safe(vtt_file).write_text(vtt_content, encoding="utf-8")
+        except Exception as e:
+            print(f"[SubtitleService] VTT write warning: {e}")
 
         json_file = output_dir / f"{prefix}_words.json"
-        json_data = {
-            "total_words": len(words),
-            "total_duration": round(duration, 3),
-            "words": words
-        }
-        json_file.write_text(json.dumps(json_data, indent=2, ensure_ascii=False), encoding="utf-8")
+        try:
+            json_data = {
+                "total_words": len(words),
+                "total_duration": round(duration, 3),
+                "words": words
+            }
+            make_long_path_safe(json_file).write_text(json.dumps(json_data, indent=2, ensure_ascii=False), encoding="utf-8")
+        except Exception as e:
+            print(f"[SubtitleService] JSON words write warning: {e}")
 
         return {
             "srt_path": str(srt_file),

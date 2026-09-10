@@ -1,0 +1,223 @@
+{
+  "total_words": 31,
+  "total_duration": 15.12,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 0.304,
+      "end": 0.605,
+      "duration": 0.301
+    },
+    {
+      "index": 2,
+      "word": "sochke",
+      "start": 0.639,
+      "end": 1.0,
+      "duration": 0.361
+    },
+    {
+      "index": 3,
+      "word": "dekho.",
+      "start": 1.04,
+      "end": 1.402,
+      "duration": 0.361
+    },
+    {
+      "index": 4,
+      "word": "Chimpanzee",
+      "start": 2.029,
+      "end": 2.604,
+      "duration": 0.575
+    },
+    {
+      "index": 5,
+      "word": "...",
+      "start": 2.914,
+      "end": 3.09,
+      "duration": 0.176
+    },
+    {
+      "index": 6,
+      "word": "humara",
+      "start": 3.11,
+      "end": 3.462,
+      "duration": 0.352
+    },
+    {
+      "index": 7,
+      "word": "sabse",
+      "start": 3.501,
+      "end": 3.795,
+      "duration": 0.294
+    },
+    {
+      "index": 8,
+      "word": "kareebi",
+      "start": 3.828,
+      "end": 4.239,
+      "duration": 0.411
+    },
+    {
+      "index": 9,
+      "word": "rishtedaar.",
+      "start": 4.284,
+      "end": 4.93,
+      "duration": 0.646
+    },
+    {
+      "index": 10,
+      "word": "Uska",
+      "start": 5.293,
+      "end": 5.509,
+      "duration": 0.216
+    },
+    {
+      "index": 11,
+      "word": "DNA",
+      "start": 5.533,
+      "end": 5.695,
+      "duration": 0.162
+    },
+    {
+      "index": 12,
+      "word": "humse",
+      "start": 5.713,
+      "end": 5.982,
+      "duration": 0.27
+    },
+    {
+      "index": 13,
+      "word": "lagbhag",
+      "start": 6.012,
+      "end": 6.39,
+      "duration": 0.378
+    },
+    {
+      "index": 14,
+      "word": "ninety-eight",
+      "start": 6.432,
+      "end": 7.079,
+      "duration": 0.647
+    },
+    {
+      "index": 15,
+      "word": "percent",
+      "start": 7.151,
+      "end": 7.529,
+      "duration": 0.378
+    },
+    {
+      "index": 16,
+      "word": "match",
+      "start": 7.75,
+      "end": 8.043,
+      "duration": 0.293
+    },
+    {
+      "index": 17,
+      "word": "karta",
+      "start": 8.075,
+      "end": 8.367,
+      "duration": 0.293
+    },
+    {
+      "index": 18,
+      "word": "hai.",
+      "start": 8.4,
+      "end": 8.634,
+      "duration": 0.234
+    },
+    {
+      "index": 19,
+      "word": "Wo",
+      "start": 8.66,
+      "end": 8.777,
+      "duration": 0.117
+    },
+    {
+      "index": 20,
+      "word": "apne",
+      "start": 8.79,
+      "end": 9.024,
+      "duration": 0.234
+    },
+    {
+      "index": 21,
+      "word": "din",
+      "start": 9.405,
+      "end": 9.597,
+      "duration": 0.192
+    },
+    {
+      "index": 22,
+      "word": "ka",
+      "start": 9.619,
+      "end": 9.747,
+      "duration": 0.128
+    },
+    {
+      "index": 23,
+      "word": "kitna",
+      "start": 9.761,
+      "end": 10.082,
+      "duration": 0.321
+    },
+    {
+      "index": 24,
+      "word": "time",
+      "start": 10.118,
+      "end": 10.374,
+      "duration": 0.257
+    },
+    {
+      "index": 25,
+      "word": "sirf",
+      "start": 10.403,
+      "end": 10.659,
+      "duration": 0.257
+    },
+    {
+      "index": 26,
+      "word": "chabane",
+      "start": 10.875,
+      "end": 11.307,
+      "duration": 0.432
+    },
+    {
+      "index": 27,
+      "word": "mein",
+      "start": 11.354,
+      "end": 11.601,
+      "duration": 0.247
+    },
+    {
+      "index": 28,
+      "word": "bitata",
+      "start": 11.628,
+      "end": 11.998,
+      "duration": 0.37
+    },
+    {
+      "index": 29,
+      "word": "hai?",
+      "start": 12.039,
+      "end": 12.286,
+      "duration": 0.247
+    },
+    {
+      "index": 30,
+      "word": "Chhe",
+      "start": 12.313,
+      "end": 12.56,
+      "duration": 0.247
+    },
+    {
+      "index": 31,
+      "word": "ghante.",
+      "start": 12.587,
+      "end": 13.019,
+      "duration": 0.432
+    }
+  ]
+}

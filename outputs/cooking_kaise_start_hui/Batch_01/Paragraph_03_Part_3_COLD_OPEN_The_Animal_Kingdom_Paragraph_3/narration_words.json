@@ -1,0 +1,174 @@
+{
+  "total_words": 24,
+  "total_duration": 10.2,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 0.281,
+      "end": 0.485,
+      "duration": 0.204
+    },
+    {
+      "index": 2,
+      "word": "ruk.",
+      "start": 0.507,
+      "end": 0.67,
+      "duration": 0.163
+    },
+    {
+      "index": 3,
+      "word": "Duniya",
+      "start": 0.688,
+      "end": 0.933,
+      "duration": 0.244
+    },
+    {
+      "index": 4,
+      "word": "mein",
+      "start": 1.298,
+      "end": 1.543,
+      "duration": 0.245
+    },
+    {
+      "index": 5,
+      "word": "millions",
+      "start": 1.57,
+      "end": 2.059,
+      "duration": 0.489
+    },
+    {
+      "index": 6,
+      "word": "of",
+      "start": 2.114,
+      "end": 2.236,
+      "duration": 0.122
+    },
+    {
+      "index": 7,
+      "word": "animal",
+      "start": 2.25,
+      "end": 2.617,
+      "duration": 0.367
+    },
+    {
+      "index": 8,
+      "word": "species",
+      "start": 2.657,
+      "end": 3.086,
+      "duration": 0.428
+    },
+    {
+      "index": 9,
+      "word": "hain.",
+      "start": 3.133,
+      "end": 3.439,
+      "duration": 0.306
+    },
+    {
+      "index": 10,
+      "word": "Har",
+      "start": 3.473,
+      "end": 3.657,
+      "duration": 0.184
+    },
+    {
+      "index": 11,
+      "word": "ek",
+      "start": 3.677,
+      "end": 3.799,
+      "duration": 0.122
+    },
+    {
+      "index": 12,
+      "word": "janwar...",
+      "start": 4.244,
+      "end": 4.742,
+      "duration": 0.498
+    },
+    {
+      "index": 13,
+      "word": "har",
+      "start": 4.797,
+      "end": 4.964,
+      "duration": 0.166
+    },
+    {
+      "index": 14,
+      "word": "ek",
+      "start": 4.982,
+      "end": 5.093,
+      "duration": 0.111
+    },
+    {
+      "index": 15,
+      "word": "pakshi...",
+      "start": 5.313,
+      "end": 5.762,
+      "duration": 0.449
+    },
+    {
+      "index": 16,
+      "word": "har",
+      "start": 5.812,
+      "end": 5.962,
+      "duration": 0.15
+    },
+    {
+      "index": 17,
+      "word": "ek",
+      "start": 5.978,
+      "end": 6.078,
+      "duration": 0.1
+    },
+    {
+      "index": 18,
+      "word": "machhli",
+      "start": 6.089,
+      "end": 6.438,
+      "duration": 0.349
+    },
+    {
+      "index": 19,
+      "word": "...",
+      "start": 6.768,
+      "end": 6.924,
+      "duration": 0.156
+    },
+    {
+      "index": 20,
+      "word": "sab",
+      "start": 6.942,
+      "end": 7.098,
+      "duration": 0.156
+    },
+    {
+      "index": 21,
+      "word": "kachha",
+      "start": 7.115,
+      "end": 7.428,
+      "duration": 0.313
+    },
+    {
+      "index": 22,
+      "word": "khaana",
+      "start": 7.463,
+      "end": 7.775,
+      "duration": 0.313
+    },
+    {
+      "index": 23,
+      "word": "khaate",
+      "start": 8.05,
+      "end": 8.947,
+      "duration": 0.897
+    },
+    {
+      "index": 24,
+      "word": "hain.",
+      "start": 9.047,
+      "end": 9.795,
+      "duration": 0.748
+    }
+  ]
+}

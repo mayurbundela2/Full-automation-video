@@ -1,0 +1,125 @@
+{
+  "total_words": 17,
+  "total_duration": 9.52,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aaj",
+      "start": 0.394,
+      "end": 0.562,
+      "duration": 0.168
+    },
+    {
+      "index": 2,
+      "word": "tumne",
+      "start": 0.581,
+      "end": 0.861,
+      "duration": 0.28
+    },
+    {
+      "index": 3,
+      "word": "kya",
+      "start": 0.892,
+      "end": 1.061,
+      "duration": 0.168
+    },
+    {
+      "index": 4,
+      "word": "khaya?",
+      "start": 1.079,
+      "end": 1.416,
+      "duration": 0.336
+    },
+    {
+      "index": 5,
+      "word": "Maggie?",
+      "start": 1.453,
+      "end": 1.845,
+      "duration": 0.392
+    },
+    {
+      "index": 6,
+      "word": "Pizza?",
+      "start": 2.749,
+      "end": 3.086,
+      "duration": 0.337
+    },
+    {
+      "index": 7,
+      "word": "Ghar",
+      "start": 4.169,
+      "end": 4.365,
+      "duration": 0.196
+    },
+    {
+      "index": 8,
+      "word": "ka",
+      "start": 4.386,
+      "end": 4.484,
+      "duration": 0.098
+    },
+    {
+      "index": 9,
+      "word": "dal",
+      "start": 5.394,
+      "end": 5.552,
+      "duration": 0.158
+    },
+    {
+      "index": 10,
+      "word": "chawal?",
+      "start": 5.569,
+      "end": 5.937,
+      "duration": 0.368
+    },
+    {
+      "index": 11,
+      "word": "Ya",
+      "start": 5.978,
+      "end": 6.084,
+      "duration": 0.105
+    },
+    {
+      "index": 12,
+      "word": "raat",
+      "start": 6.095,
+      "end": 6.306,
+      "duration": 0.21
+    },
+    {
+      "index": 13,
+      "word": "ke",
+      "start": 7.189,
+      "end": 7.367,
+      "duration": 0.178
+    },
+    {
+      "index": 14,
+      "word": "do",
+      "start": 7.386,
+      "end": 7.564,
+      "duration": 0.178
+    },
+    {
+      "index": 15,
+      "word": "baje",
+      "start": 7.584,
+      "end": 7.939,
+      "duration": 0.356
+    },
+    {
+      "index": 16,
+      "word": "wala",
+      "start": 7.979,
+      "end": 8.334,
+      "duration": 0.356
+    },
+    {
+      "index": 17,
+      "word": "Kurkure?",
+      "start": 8.374,
+      "end": 9.085,
+      "duration": 0.711
+    }
+  ]
+}

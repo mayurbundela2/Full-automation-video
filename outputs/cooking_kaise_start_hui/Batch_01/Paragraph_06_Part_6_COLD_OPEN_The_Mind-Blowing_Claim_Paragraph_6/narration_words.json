@@ -1,0 +1,230 @@
+{
+  "total_words": 32,
+  "total_duration": 12.12,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ek",
+      "start": 0.287,
+      "end": 0.42,
+      "duration": 0.133
+    },
+    {
+      "index": 2,
+      "word": "scientist",
+      "start": 0.434,
+      "end": 1.031,
+      "duration": 0.597
+    },
+    {
+      "index": 3,
+      "word": "ka",
+      "start": 1.098,
+      "end": 1.231,
+      "duration": 0.133
+    },
+    {
+      "index": 4,
+      "word": "maanna",
+      "start": 1.245,
+      "end": 1.643,
+      "duration": 0.398
+    },
+    {
+      "index": 5,
+      "word": "hai",
+      "start": 1.688,
+      "end": 1.887,
+      "duration": 0.199
+    },
+    {
+      "index": 6,
+      "word": "...",
+      "start": 1.909,
+      "end": 2.108,
+      "duration": 0.199
+    },
+    {
+      "index": 7,
+      "word": "agar",
+      "start": 2.13,
+      "end": 2.395,
+      "duration": 0.265
+    },
+    {
+      "index": 8,
+      "word": "insaan",
+      "start": 2.425,
+      "end": 2.823,
+      "duration": 0.398
+    },
+    {
+      "index": 9,
+      "word": "ne",
+      "start": 2.867,
+      "end": 3.0,
+      "duration": 0.133
+    },
+    {
+      "index": 10,
+      "word": "khaana",
+      "start": 3.014,
+      "end": 3.412,
+      "duration": 0.398
+    },
+    {
+      "index": 11,
+      "word": "pakana",
+      "start": 3.457,
+      "end": 3.855,
+      "duration": 0.398
+    },
+    {
+      "index": 12,
+      "word": "nahi",
+      "start": 3.899,
+      "end": 4.164,
+      "duration": 0.265
+    },
+    {
+      "index": 13,
+      "word": "seekha",
+      "start": 4.194,
+      "end": 4.592,
+      "duration": 0.398
+    },
+    {
+      "index": 14,
+      "word": "hota...",
+      "start": 4.636,
+      "end": 5.1,
+      "duration": 0.464
+    },
+    {
+      "index": 15,
+      "word": "toh",
+      "start": 5.499,
+      "end": 5.694,
+      "duration": 0.195
+    },
+    {
+      "index": 16,
+      "word": "aaj",
+      "start": 5.716,
+      "end": 5.912,
+      "duration": 0.195
+    },
+    {
+      "index": 17,
+      "word": "tum",
+      "start": 5.933,
+      "end": 6.129,
+      "duration": 0.195
+    },
+    {
+      "index": 18,
+      "word": "ye",
+      "start": 6.151,
+      "end": 6.281,
+      "duration": 0.13
+    },
+    {
+      "index": 19,
+      "word": "video",
+      "start": 6.295,
+      "end": 6.621,
+      "duration": 0.326
+    },
+    {
+      "index": 20,
+      "word": "dekh",
+      "start": 6.657,
+      "end": 6.918,
+      "duration": 0.261
+    },
+    {
+      "index": 21,
+      "word": "hi",
+      "start": 6.947,
+      "end": 7.077,
+      "duration": 0.13
+    },
+    {
+      "index": 22,
+      "word": "nahi",
+      "start": 7.092,
+      "end": 7.352,
+      "duration": 0.261
+    },
+    {
+      "index": 23,
+      "word": "rahe",
+      "start": 7.381,
+      "end": 7.642,
+      "duration": 0.261
+    },
+    {
+      "index": 24,
+      "word": "hote.",
+      "start": 7.671,
+      "end": 7.997,
+      "duration": 0.326
+    },
+    {
+      "index": 25,
+      "word": "Kyunki",
+      "start": 8.721,
+      "end": 9.154,
+      "duration": 0.433
+    },
+    {
+      "index": 26,
+      "word": "tumhara",
+      "start": 9.202,
+      "end": 9.706,
+      "duration": 0.505
+    },
+    {
+      "index": 27,
+      "word": "dimaag",
+      "start": 9.762,
+      "end": 10.195,
+      "duration": 0.433
+    },
+    {
+      "index": 28,
+      "word": "itna",
+      "start": 10.243,
+      "end": 10.531,
+      "duration": 0.288
+    },
+    {
+      "index": 29,
+      "word": "bada",
+      "start": 10.563,
+      "end": 10.852,
+      "duration": 0.288
+    },
+    {
+      "index": 30,
+      "word": "hi",
+      "start": 10.884,
+      "end": 11.028,
+      "duration": 0.144
+    },
+    {
+      "index": 31,
+      "word": "nahi",
+      "start": 11.044,
+      "end": 11.332,
+      "duration": 0.288
+    },
+    {
+      "index": 32,
+      "word": "hota.",
+      "start": 11.364,
+      "end": 11.725,
+      "duration": 0.36
+    }
+  ]
+}

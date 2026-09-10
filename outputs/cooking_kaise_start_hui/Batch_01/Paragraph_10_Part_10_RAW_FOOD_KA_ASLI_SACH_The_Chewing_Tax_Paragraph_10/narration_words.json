@@ -1,0 +1,188 @@
+{
+  "total_words": 26,
+  "total_duration": 11.96,
+  "words": [
+    {
+      "index": 1,
+      "word": "Har",
+      "start": 0.269,
+      "end": 0.43,
+      "duration": 0.161
+    },
+    {
+      "index": 2,
+      "word": "din.",
+      "start": 0.447,
+      "end": 0.661,
+      "duration": 0.214
+    },
+    {
+      "index": 3,
+      "word": "Sirf",
+      "start": 0.685,
+      "end": 0.899,
+      "duration": 0.214
+    },
+    {
+      "index": 4,
+      "word": "chabane",
+      "start": 1.36,
+      "end": 1.684,
+      "duration": 0.324
+    },
+    {
+      "index": 5,
+      "word": "mein.",
+      "start": 1.721,
+      "end": 1.952,
+      "duration": 0.232
+    },
+    {
+      "index": 6,
+      "word": "Kyunki",
+      "start": 1.978,
+      "end": 2.256,
+      "duration": 0.278
+    },
+    {
+      "index": 7,
+      "word": "kachha",
+      "start": 2.287,
+      "end": 2.565,
+      "duration": 0.278
+    },
+    {
+      "index": 8,
+      "word": "khaana",
+      "start": 3.509,
+      "end": 3.794,
+      "duration": 0.285
+    },
+    {
+      "index": 9,
+      "word": "...",
+      "start": 3.826,
+      "end": 3.969,
+      "duration": 0.143
+    },
+    {
+      "index": 10,
+      "word": "khaas",
+      "start": 3.985,
+      "end": 4.223,
+      "duration": 0.238
+    },
+    {
+      "index": 11,
+      "word": "kar",
+      "start": 4.249,
+      "end": 4.392,
+      "duration": 0.143
+    },
+    {
+      "index": 12,
+      "word": "kachha",
+      "start": 4.408,
+      "end": 4.693,
+      "duration": 0.285
+    },
+    {
+      "index": 13,
+      "word": "maas",
+      "start": 5.042,
+      "end": 5.278,
+      "duration": 0.236
+    },
+    {
+      "index": 14,
+      "word": "aur",
+      "start": 5.304,
+      "end": 5.481,
+      "duration": 0.177
+    },
+    {
+      "index": 15,
+      "word": "reshedaar",
+      "start": 5.501,
+      "end": 6.031,
+      "duration": 0.531
+    },
+    {
+      "index": 16,
+      "word": "phal",
+      "start": 6.09,
+      "end": 6.326,
+      "duration": 0.236
+    },
+    {
+      "index": 17,
+      "word": "...",
+      "start": 6.352,
+      "end": 6.529,
+      "duration": 0.177
+    },
+    {
+      "index": 18,
+      "word": "chabana",
+      "start": 6.549,
+      "end": 6.962,
+      "duration": 0.413
+    },
+    {
+      "index": 19,
+      "word": "mushkil",
+      "start": 7.007,
+      "end": 7.42,
+      "duration": 0.413
+    },
+    {
+      "index": 20,
+      "word": "hota",
+      "start": 7.836,
+      "end": 8.066,
+      "duration": 0.23
+    },
+    {
+      "index": 21,
+      "word": "hai.",
+      "start": 8.092,
+      "end": 8.322,
+      "duration": 0.23
+    },
+    {
+      "index": 22,
+      "word": "Aur",
+      "start": 8.348,
+      "end": 8.521,
+      "duration": 0.173
+    },
+    {
+      "index": 23,
+      "word": "pachana",
+      "start": 8.54,
+      "end": 8.943,
+      "duration": 0.403
+    },
+    {
+      "index": 24,
+      "word": "usse",
+      "start": 8.988,
+      "end": 9.218,
+      "duration": 0.23
+    },
+    {
+      "index": 25,
+      "word": "bhi",
+      "start": 9.664,
+      "end": 9.846,
+      "duration": 0.182
+    },
+    {
+      "index": 26,
+      "word": "mushkil.",
+      "start": 9.866,
+      "end": 10.35,
+      "duration": 0.484
+    }
+  ]
+}

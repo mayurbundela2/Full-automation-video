@@ -52,7 +52,7 @@ class GeminiTTSService:
 
         if elapsed < cls.MIN_INTERVAL_PER_KEY:
             wait_needed = round(cls.MIN_INTERVAL_PER_KEY - elapsed, 1)
-            print(f"[GeminiTTSService] ⏱️ Free tier rate limiter: waiting {wait_needed}s to stay within 3 RPM limit...")
+            print(f"[GeminiTTSService] [RATE-LIMIT] Free tier: waiting {wait_needed}s to stay within 3 RPM limit...")
             time.sleep(wait_needed)
 
         cls._last_key_use_time[key] = time.time()
@@ -156,7 +156,7 @@ class GeminiTTSService:
 
                         # Mark this key as the active working key for subsequent calls
                         cls._current_active_key_index = (key_index + 1) % total_keys
-                        print(f"[GeminiTTSService] ✅ Generated audio successfully using API key #{key_index + 1} [{masked_key}] with model [{cur_model}].")
+                        print(f"[GeminiTTSService] [OK] Generated audio successfully using API key #{key_index + 1} [{masked_key}] with model [{cur_model}].")
 
                         return audio_bytes, {
                             "model": cur_model,
@@ -171,7 +171,7 @@ class GeminiTTSService:
                         err_str = str(e)
                         last_error = e
 
-                        print(f"[GeminiTTSService] ⚠️ Key #{key_index + 1} [{masked_key}] model [{cur_model}] error: {err_str[:120]}")
+                        print(f"[GeminiTTSService] [WARN] Key #{key_index + 1} [{masked_key}] model [{cur_model}] error: {err_str[:120]}")
 
                         # If 429 daily quota on this model, break model loop to try fallback model or next key
                         if "RESOURCE_EXHAUSTED" in err_str or "429" in err_str or "quota" in err_str.lower():
@@ -184,7 +184,7 @@ class GeminiTTSService:
             if total_keys > 1 and step < total_keys - 1:
                 next_idx = (key_index + 1) % total_keys
                 next_masked = f"...{key_pool[next_idx][-6:]}"
-                print(f"[GeminiTTSService] 🔄 Auto-switching to next API key #{next_idx + 1} [{next_masked}]...")
+                print(f"[GeminiTTSService] [SWITCH] Auto-switching to next API key #{next_idx + 1} [{next_masked}]...")
 
         raise RuntimeError(
             f"TTS generation failed across all {total_keys} configured API keys.\n"

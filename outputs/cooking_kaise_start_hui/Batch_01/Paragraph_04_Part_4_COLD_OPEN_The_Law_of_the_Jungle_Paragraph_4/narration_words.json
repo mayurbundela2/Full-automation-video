@@ -1,0 +1,181 @@
+{
+  "total_words": 25,
+  "total_duration": 9.84,
+  "words": [
+    {
+      "index": 1,
+      "word": "Sher",
+      "start": 0.318,
+      "end": 0.513,
+      "duration": 0.195
+    },
+    {
+      "index": 2,
+      "word": "shikaar",
+      "start": 0.535,
+      "end": 0.877,
+      "duration": 0.342
+    },
+    {
+      "index": 3,
+      "word": "karke",
+      "start": 0.915,
+      "end": 1.159,
+      "duration": 0.244
+    },
+    {
+      "index": 4,
+      "word": "turant",
+      "start": 1.186,
+      "end": 1.479,
+      "duration": 0.293
+    },
+    {
+      "index": 5,
+      "word": "khaata",
+      "start": 1.673,
+      "end": 1.921,
+      "duration": 0.248
+    },
+    {
+      "index": 6,
+      "word": "hai.",
+      "start": 1.948,
+      "end": 2.113,
+      "duration": 0.165
+    },
+    {
+      "index": 7,
+      "word": "Bandar",
+      "start": 2.132,
+      "end": 2.379,
+      "duration": 0.248
+    },
+    {
+      "index": 8,
+      "word": "phal",
+      "start": 2.788,
+      "end": 3.005,
+      "duration": 0.217
+    },
+    {
+      "index": 9,
+      "word": "todkar",
+      "start": 3.029,
+      "end": 3.354,
+      "duration": 0.325
+    },
+    {
+      "index": 10,
+      "word": "seedha",
+      "start": 3.39,
+      "end": 3.715,
+      "duration": 0.325
+    },
+    {
+      "index": 11,
+      "word": "muh",
+      "start": 3.751,
+      "end": 3.913,
+      "duration": 0.162
+    },
+    {
+      "index": 12,
+      "word": "mein",
+      "start": 3.931,
+      "end": 4.148,
+      "duration": 0.217
+    },
+    {
+      "index": 13,
+      "word": "daalta",
+      "start": 4.172,
+      "end": 4.497,
+      "duration": 0.325
+    },
+    {
+      "index": 14,
+      "word": "hai.",
+      "start": 4.533,
+      "end": 4.75,
+      "duration": 0.217
+    },
+    {
+      "index": 15,
+      "word": "Hum",
+      "start": 4.774,
+      "end": 4.936,
+      "duration": 0.162
+    },
+    {
+      "index": 16,
+      "word": "hi",
+      "start": 4.954,
+      "end": 5.062,
+      "duration": 0.108
+    },
+    {
+      "index": 17,
+      "word": "woh",
+      "start": 5.074,
+      "end": 5.237,
+      "duration": 0.162
+    },
+    {
+      "index": 18,
+      "word": "species",
+      "start": 5.831,
+      "end": 6.316,
+      "duration": 0.485
+    },
+    {
+      "index": 19,
+      "word": "hain",
+      "start": 6.37,
+      "end": 6.647,
+      "duration": 0.277
+    },
+    {
+      "index": 20,
+      "word": "jo",
+      "start": 6.677,
+      "end": 6.816,
+      "duration": 0.138
+    },
+    {
+      "index": 21,
+      "word": "apna",
+      "start": 6.831,
+      "end": 7.108,
+      "duration": 0.277
+    },
+    {
+      "index": 22,
+      "word": "khaana",
+      "start": 7.139,
+      "end": 7.554,
+      "duration": 0.415
+    },
+    {
+      "index": 23,
+      "word": "systematically",
+      "start": 7.601,
+      "end": 8.57,
+      "duration": 0.969
+    },
+    {
+      "index": 24,
+      "word": "pakati",
+      "start": 8.678,
+      "end": 9.093,
+      "duration": 0.415
+    },
+    {
+      "index": 25,
+      "word": "hai.",
+      "start": 9.139,
+      "end": 9.416,
+      "duration": 0.277
+    }
+  ]
+}

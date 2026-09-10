@@ -366,10 +366,18 @@ export const api = {
 
   async generateParagraph(paragraphId: number, force: boolean = false): Promise<Generation> {
     if (await checkBackend()) {
+      const res = await fetch(`${API_BASE}/paragraphs/${paragraphId}/generate?force=${force}`, { method: 'POST' });
+      if (res.ok) {
+        return res.json();
+      }
+      let errDetail = `Generation failed (${res.status})`;
       try {
-        const res = await fetch(`${API_BASE}/paragraphs/${paragraphId}/generate?force=${force}`, { method: 'POST' });
-        if (res.ok) return res.json();
+        const errJson = await res.json();
+        if (errJson && errJson.detail) {
+          errDetail = errJson.detail;
+        }
       } catch {}
+      throw new Error(errDetail);
     }
 
     const [settings, paragraph] = await Promise.all([

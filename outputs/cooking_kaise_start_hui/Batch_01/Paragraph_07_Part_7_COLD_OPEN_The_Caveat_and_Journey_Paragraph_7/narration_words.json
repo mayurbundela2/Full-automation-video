@@ -1,0 +1,307 @@
+{
+  "total_words": 43,
+  "total_duration": 18.32,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.257,
+      "end": 0.373,
+      "duration": 0.116
+    },
+    {
+      "index": 2,
+      "word": "theory",
+      "start": 0.386,
+      "end": 0.736,
+      "duration": 0.349
+    },
+    {
+      "index": 3,
+      "word": "contested",
+      "start": 0.775,
+      "end": 1.299,
+      "duration": 0.524
+    },
+    {
+      "index": 4,
+      "word": "hai",
+      "start": 1.357,
+      "end": 1.532,
+      "duration": 0.175
+    },
+    {
+      "index": 5,
+      "word": "...",
+      "start": 1.551,
+      "end": 1.726,
+      "duration": 0.175
+    },
+    {
+      "index": 6,
+      "word": "sab",
+      "start": 2.11,
+      "end": 2.28,
+      "duration": 0.17
+    },
+    {
+      "index": 7,
+      "word": "scientists",
+      "start": 2.299,
+      "end": 2.864,
+      "duration": 0.566
+    },
+    {
+      "index": 8,
+      "word": "isse",
+      "start": 2.927,
+      "end": 3.153,
+      "duration": 0.226
+    },
+    {
+      "index": 9,
+      "word": "nahi",
+      "start": 3.179,
+      "end": 3.405,
+      "duration": 0.226
+    },
+    {
+      "index": 10,
+      "word": "maante.",
+      "start": 3.43,
+      "end": 3.826,
+      "duration": 0.396
+    },
+    {
+      "index": 11,
+      "word": "Lekin",
+      "start": 4.169,
+      "end": 4.46,
+      "duration": 0.291
+    },
+    {
+      "index": 12,
+      "word": "jo",
+      "start": 4.492,
+      "end": 4.609,
+      "duration": 0.116
+    },
+    {
+      "index": 13,
+      "word": "evidence",
+      "start": 4.622,
+      "end": 5.087,
+      "duration": 0.466
+    },
+    {
+      "index": 14,
+      "word": "hai...",
+      "start": 5.139,
+      "end": 5.488,
+      "duration": 0.349
+    },
+    {
+      "index": 15,
+      "word": "wo",
+      "start": 5.903,
+      "end": 6.032,
+      "duration": 0.129
+    },
+    {
+      "index": 16,
+      "word": "genuinely",
+      "start": 6.047,
+      "end": 6.628,
+      "duration": 0.582
+    },
+    {
+      "index": 17,
+      "word": "mind-blowing",
+      "start": 6.693,
+      "end": 7.468,
+      "duration": 0.775
+    },
+    {
+      "index": 18,
+      "word": "hai.",
+      "start": 7.554,
+      "end": 7.813,
+      "duration": 0.258
+    },
+    {
+      "index": 19,
+      "word": "Toh",
+      "start": 7.842,
+      "end": 8.035,
+      "duration": 0.194
+    },
+    {
+      "index": 20,
+      "word": "chalo",
+      "start": 8.561,
+      "end": 8.877,
+      "duration": 0.316
+    },
+    {
+      "index": 21,
+      "word": "...",
+      "start": 8.912,
+      "end": 9.102,
+      "duration": 0.19
+    },
+    {
+      "index": 22,
+      "word": "samajhte",
+      "start": 9.385,
+      "end": 9.865,
+      "duration": 0.48
+    },
+    {
+      "index": 23,
+      "word": "hain",
+      "start": 9.918,
+      "end": 10.158,
+      "duration": 0.24
+    },
+    {
+      "index": 24,
+      "word": "ki",
+      "start": 10.184,
+      "end": 10.304,
+      "duration": 0.12
+    },
+    {
+      "index": 25,
+      "word": "tumhari",
+      "start": 10.318,
+      "end": 10.737,
+      "duration": 0.42
+    },
+    {
+      "index": 26,
+      "word": "aaj",
+      "start": 10.784,
+      "end": 10.964,
+      "duration": 0.18
+    },
+    {
+      "index": 27,
+      "word": "ki",
+      "start": 10.984,
+      "end": 11.104,
+      "duration": 0.12
+    },
+    {
+      "index": 28,
+      "word": "thali",
+      "start": 11.117,
+      "end": 11.417,
+      "duration": 0.3
+    },
+    {
+      "index": 29,
+      "word": "ek",
+      "start": 11.45,
+      "end": 11.57,
+      "duration": 0.12
+    },
+    {
+      "index": 30,
+      "word": "aisi",
+      "start": 11.583,
+      "end": 11.823,
+      "duration": 0.24
+    },
+    {
+      "index": 31,
+      "word": "evolutionary",
+      "start": 11.85,
+      "end": 12.569,
+      "duration": 0.719
+    },
+    {
+      "index": 32,
+      "word": "kahani",
+      "start": 12.649,
+      "end": 13.009,
+      "duration": 0.36
+    },
+    {
+      "index": 33,
+      "word": "se",
+      "start": 13.049,
+      "end": 13.169,
+      "duration": 0.12
+    },
+    {
+      "index": 34,
+      "word": "kaise",
+      "start": 13.182,
+      "end": 13.482,
+      "duration": 0.3
+    },
+    {
+      "index": 35,
+      "word": "judi",
+      "start": 13.515,
+      "end": 13.755,
+      "duration": 0.24
+    },
+    {
+      "index": 36,
+      "word": "hai",
+      "start": 13.782,
+      "end": 13.962,
+      "duration": 0.18
+    },
+    {
+      "index": 37,
+      "word": "jo",
+      "start": 13.982,
+      "end": 14.101,
+      "duration": 0.12
+    },
+    {
+      "index": 38,
+      "word": "shayad",
+      "start": 14.115,
+      "end": 14.474,
+      "duration": 0.36
+    },
+    {
+      "index": 39,
+      "word": "atthaarah",
+      "start": 14.514,
+      "end": 15.054,
+      "duration": 0.54
+    },
+    {
+      "index": 40,
+      "word": "lakh",
+      "start": 15.312,
+      "end": 15.559,
+      "duration": 0.247
+    },
+    {
+      "index": 41,
+      "word": "saal",
+      "start": 15.586,
+      "end": 15.833,
+      "duration": 0.247
+    },
+    {
+      "index": 42,
+      "word": "purani",
+      "start": 15.861,
+      "end": 16.231,
+      "duration": 0.37
+    },
+    {
+      "index": 43,
+      "word": "hai.",
+      "start": 16.436,
+      "end": 17.877,
+      "duration": 1.441
+    }
+  ]
+}

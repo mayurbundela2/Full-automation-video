@@ -1,0 +1,174 @@
+{
+  "total_words": 24,
+  "total_duration": 9.36,
+  "words": [
+    {
+      "index": 1,
+      "word": "Pehle",
+      "start": 0.289,
+      "end": 0.48,
+      "duration": 0.191
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.502,
+      "end": 0.578,
+      "duration": 0.077
+    },
+    {
+      "index": 3,
+      "word": "sawaal.",
+      "start": 0.587,
+      "end": 0.855,
+      "duration": 0.268
+    },
+    {
+      "index": 4,
+      "word": "Kachha",
+      "start": 0.885,
+      "end": 1.114,
+      "duration": 0.23
+    },
+    {
+      "index": 5,
+      "word": "khaana",
+      "start": 2.173,
+      "end": 2.452,
+      "duration": 0.279
+    },
+    {
+      "index": 6,
+      "word": "kha",
+      "start": 2.483,
+      "end": 2.623,
+      "duration": 0.14
+    },
+    {
+      "index": 7,
+      "word": "ke",
+      "start": 2.638,
+      "end": 2.731,
+      "duration": 0.093
+    },
+    {
+      "index": 8,
+      "word": "kya",
+      "start": 2.741,
+      "end": 2.881,
+      "duration": 0.14
+    },
+    {
+      "index": 9,
+      "word": "problem",
+      "start": 2.897,
+      "end": 3.222,
+      "duration": 0.326
+    },
+    {
+      "index": 10,
+      "word": "hai?",
+      "start": 3.258,
+      "end": 3.444,
+      "duration": 0.186
+    },
+    {
+      "index": 11,
+      "word": "Tumhe",
+      "start": 3.656,
+      "end": 3.875,
+      "duration": 0.219
+    },
+    {
+      "index": 12,
+      "word": "lagta",
+      "start": 3.9,
+      "end": 4.119,
+      "duration": 0.219
+    },
+    {
+      "index": 13,
+      "word": "hoga",
+      "start": 4.143,
+      "end": 4.319,
+      "duration": 0.175
+    },
+    {
+      "index": 14,
+      "word": "...",
+      "start": 5.188,
+      "end": 5.329,
+      "duration": 0.141
+    },
+    {
+      "index": 15,
+      "word": "kuch",
+      "start": 5.344,
+      "end": 5.532,
+      "duration": 0.188
+    },
+    {
+      "index": 16,
+      "word": "nahi.",
+      "start": 5.553,
+      "end": 5.787,
+      "duration": 0.234
+    },
+    {
+      "index": 17,
+      "word": "Salad",
+      "start": 5.813,
+      "end": 6.048,
+      "duration": 0.234
+    },
+    {
+      "index": 18,
+      "word": "khaate",
+      "start": 6.074,
+      "end": 6.355,
+      "duration": 0.281
+    },
+    {
+      "index": 19,
+      "word": "hain",
+      "start": 6.386,
+      "end": 6.574,
+      "duration": 0.188
+    },
+    {
+      "index": 20,
+      "word": "na",
+      "start": 6.594,
+      "end": 6.688,
+      "duration": 0.094
+    },
+    {
+      "index": 21,
+      "word": "hum?",
+      "start": 6.699,
+      "end": 6.886,
+      "duration": 0.188
+    },
+    {
+      "index": 22,
+      "word": "Fruits",
+      "start": 7.153,
+      "end": 7.453,
+      "duration": 0.3
+    },
+    {
+      "index": 23,
+      "word": "khaate",
+      "start": 7.486,
+      "end": 7.785,
+      "duration": 0.3
+    },
+    {
+      "index": 24,
+      "word": "hain?",
+      "start": 7.819,
+      "end": 8.068,
+      "duration": 0.25
+    }
+  ]
+}

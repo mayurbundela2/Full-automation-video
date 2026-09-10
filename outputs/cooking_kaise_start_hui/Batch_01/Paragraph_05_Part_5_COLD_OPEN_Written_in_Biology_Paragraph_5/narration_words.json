@@ -1,0 +1,188 @@
+{
+  "total_words": 26,
+  "total_duration": 10.84,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.323,
+      "end": 0.506,
+      "duration": 0.183
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.526,
+      "end": 0.648,
+      "duration": 0.122
+    },
+    {
+      "index": 3,
+      "word": "sirf",
+      "start": 0.662,
+      "end": 0.906,
+      "duration": 0.244
+    },
+    {
+      "index": 4,
+      "word": "ek",
+      "start": 0.933,
+      "end": 1.055,
+      "duration": 0.122
+    },
+    {
+      "index": 5,
+      "word": "\"habit\"",
+      "start": 1.069,
+      "end": 1.496,
+      "duration": 0.427
+    },
+    {
+      "index": 6,
+      "word": "nahi",
+      "start": 1.543,
+      "end": 1.787,
+      "duration": 0.244
+    },
+    {
+      "index": 7,
+      "word": "hai.",
+      "start": 1.815,
+      "end": 2.059,
+      "duration": 0.244
+    },
+    {
+      "index": 8,
+      "word": "Ye",
+      "start": 2.086,
+      "end": 2.208,
+      "duration": 0.122
+    },
+    {
+      "index": 9,
+      "word": "tumhare",
+      "start": 2.221,
+      "end": 2.649,
+      "duration": 0.427
+    },
+    {
+      "index": 10,
+      "word": "shareer",
+      "start": 2.696,
+      "end": 3.123,
+      "duration": 0.427
+    },
+    {
+      "index": 11,
+      "word": "mein",
+      "start": 3.171,
+      "end": 3.415,
+      "duration": 0.244
+    },
+    {
+      "index": 12,
+      "word": "likha",
+      "start": 3.442,
+      "end": 3.747,
+      "duration": 0.305
+    },
+    {
+      "index": 13,
+      "word": "hua",
+      "start": 3.781,
+      "end": 3.964,
+      "duration": 0.183
+    },
+    {
+      "index": 14,
+      "word": "hai.",
+      "start": 3.984,
+      "end": 4.228,
+      "duration": 0.244
+    },
+    {
+      "index": 15,
+      "word": "Tumhare",
+      "start": 4.255,
+      "end": 4.683,
+      "duration": 0.427
+    },
+    {
+      "index": 16,
+      "word": "jabde",
+      "start": 5.15,
+      "end": 5.449,
+      "duration": 0.299
+    },
+    {
+      "index": 17,
+      "word": "mein...",
+      "start": 5.482,
+      "end": 5.9,
+      "duration": 0.418
+    },
+    {
+      "index": 18,
+      "word": "Tumhare",
+      "start": 5.947,
+      "end": 6.365,
+      "duration": 0.418
+    },
+    {
+      "index": 19,
+      "word": "daanton",
+      "start": 6.412,
+      "end": 6.83,
+      "duration": 0.418
+    },
+    {
+      "index": 20,
+      "word": "mein...",
+      "start": 6.876,
+      "end": 7.295,
+      "duration": 0.418
+    },
+    {
+      "index": 21,
+      "word": "Tumhare",
+      "start": 7.341,
+      "end": 7.76,
+      "duration": 0.418
+    },
+    {
+      "index": 22,
+      "word": "pet",
+      "start": 7.806,
+      "end": 7.985,
+      "duration": 0.179
+    },
+    {
+      "index": 23,
+      "word": "mein...",
+      "start": 8.005,
+      "end": 8.424,
+      "duration": 0.418
+    },
+    {
+      "index": 24,
+      "word": "Tumhare",
+      "start": 8.632,
+      "end": 9.287,
+      "duration": 0.655
+    },
+    {
+      "index": 25,
+      "word": "dimaag",
+      "start": 9.359,
+      "end": 9.92,
+      "duration": 0.561
+    },
+    {
+      "index": 26,
+      "word": "mein.",
+      "start": 9.983,
+      "end": 10.45,
+      "duration": 0.468
+    }
+  ]
+}

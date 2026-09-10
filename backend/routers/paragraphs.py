@@ -179,12 +179,16 @@ def execute_paragraph_generation(paragraph_id: int, db: Session) -> Dict[str, An
         )
 
         # Generate paragraph subtitles (SRT, VTT, JSON)
-        SubtitleService.generate_paragraph_subtitles(
-            transcript=para.transcript,
-            duration=duration,
-            output_dir=target_dir,
-            prefix="narration"
-        )
+        try:
+            SubtitleService.generate_paragraph_subtitles(
+                transcript=para.transcript,
+                duration=duration,
+                output_dir=target_dir,
+                prefix="narration"
+            )
+        except Exception as sub_err:
+            print(f"[ParagraphGeneration] Subtitle generation notice: {sub_err}")
+
 
         # Create Generation record
         gen_record = Generation(

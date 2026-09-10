@@ -61,15 +61,28 @@ class LocalDeliveryProvider(OutputDeliveryProvider):
     ) -> Path:
         proj_clean = sanitize_filename(project_name)
         batch_folder = f"Batch_{batch_number:02d}"
-        
-        # Paragraph or Part folder
+        batch_dir = self.base_dir / proj_clean / batch_folder
+        batch_dir.mkdir(parents=True, exist_ok=True)
+
+        # Re-use existing directory if one already exists for this paragraph number & part
+        prefix = f"Paragraph_{paragraph_number:02d}"
+        if batch_dir.exists():
+            for candidate in batch_dir.iterdir():
+                if candidate.is_dir():
+                    c_name = candidate.name.lower()
+                    if part_identifier and sanitize_filename(part_identifier).lower()[:20] in c_name:
+                        return candidate
+                    elif not part_identifier and c_name == prefix.lower():
+                        return candidate
+
+        # Paragraph or Part folder with safe length limit for Windows MAX_PATH
         if part_identifier and part_identifier.strip():
-            part_clean = sanitize_filename(part_identifier)
+            part_clean = sanitize_filename(part_identifier)[:35].rstrip('_')
             para_folder = f"Paragraph_{paragraph_number:02d}_{part_clean}"
         else:
             para_folder = f"Paragraph_{paragraph_number:02d}"
 
-        target_dir = self.base_dir / proj_clean / batch_folder / para_folder
+        target_dir = batch_dir / para_folder
         target_dir.mkdir(parents=True, exist_ok=True)
         return target_dir
 
