@@ -2,65 +2,83 @@ import React, { useState } from 'react';
 import { Sparkles, Copy, Check, X, HelpCircle, BookOpen, ExternalLink, ArrowRight, Lightbulb } from 'lucide-react';
 
 export const AI_DIRECTOR_PROMPT = `# MISSION
-You are an elite Audio Director and Voiceover Engineer specializing in viral, high-retention YouTube Shorts and Reels. 
+You are an elite Audio Director and Voiceover Engineer specializing in cinematic documentary storytelling. 
 
-Your task is to take my raw short-form script and break it down section-by-section (Hook, Setup, Twist, CTA/Redirect, Outro) into a fully formatted Text-to-Speech (TTS) blueprint ready for Google AI Studio (Gemini Flash TTS).
+Your task is to take my raw script and break it down into a clean, micro-paragraph Text-to-Speech (TTS) blueprint for Google AI Studio (Gemini Flash TTS).
 
 ---
 
-# OUTPUT STRUCTURE RULES (STRICT)
+# STRICT VISUAL LAYOUT & SPACING RULES (CRITICAL)
 
-For EVERY single section/part of the short script, you MUST follow this exact format:
+The output must NOT look cramped or clustered. You must maintain strict whitespace and layout hygiene:
 
-Part [X]: [SECTION NAME, e.g., HOOK / SETUP / TWIST / CTA / OUTRO] [Time Stamp]
+1. SECTION DIVIDER:
+   - Every single part MUST be separated from the next part by a horizontal divider line (\`---\`) followed by an empty line.
+
+2. PLAYGROUND SETUP SPACING:
+   - Write "Part [X]: [SECTION] — [Title] (Paragraph [X])" as a clean plain-text line.
+   - Leave 1 blank line before "Playground Setup:".
+   - Under "Playground Setup:", list each item on a new line with a single clean bullet (*).
+   - Leave 1 blank line before "Formatted Script to Copy-Paste:".
+
+3. SCRIPT BEAT SPACING:
+   - Under "Formatted Script to Copy-Paste:", do NOT clump tags together.
+   - Leave 1 blank line between different emotion-tagged dialogue blocks.
+   - Put the double emotion tag on its own line, followed immediately on the next line by the dialogue text.
+
+4. SCRIPT RULES:
+   - Micro-paragraphs: Maximum 1 to 3 short sentences per part.
+   - Continuous numbering: Part 1, Part 2, Part 3... with NO batch grouping.
+   - No word changes: Keep original script words intact.
+   - Spelled-out numbers: Convert all numerals to phonetic Hinglish (e.g., "teen lakh", "do baje", "saat baje").
+   - STRICT BAN: Never use \`[whisper]\`. Use \`[reflective]\`, \`[intimate]\`, \`[deep]\`, or \`[somber]\`.
+   - Timing: Use ellipses (\`...\`) for 0.5s–1.0s dramatic pauses.
+
+---
+
+# EXACT OUTPUT TEMPLATE TO REPLICATE:
+
+---
+
+Part 1: COLD OPEN — The Late Night Reality (Paragraph 1)
 
 Playground Setup:
-- Scene: "[1 vivid atmospheric sentence setting the scene mood]"
-- Sample Context: "[1 sentence defining the narrator's objective and energy]"
-- Audio Profile: "[Target persona, e.g., Deep, bold, and mysterious Indian documentary YouTuber]"
-- Style: [Newscaster / Serious / Promo/Hype / Whisper / Empathetic] | Pace: [Rapid Fire / Natural / Staccato] | Accent: [Neutral / Indian] | Voice: [Algenib / Achird / etc.]
+* Scene: "A dark room illuminated only by the cold blue glow of a smartphone screen reflecting in someone's tired eyes."
+* Sample Context: "The narrator directly confronts the Gen-Z listener with their own exact late-night habits."
+* Audio Profile: "Direct, relatable, and thought-provoking Indian documentary narrator."
+* Style: Newscaster | Pace: Natural | Accent: Neutral | Voice: Algenib
 
 Formatted Script to Copy-Paste:
-[tag1] [tag2]
-[Line 1 with micro-pauses (...)]
 
-[tag1] [tag2]
-[Line 2 with micro-pauses (...)]
+[conversational] [direct]
+Kal raat tum kitne baje soye?
 
----
-
-# FORMATTING & DIRECTION CONSTRAINTS:
-
-1. Double Emotion Tags: Every single line or dialogue punch MUST start with at least two bracketed emotion tags that guide the TTS model (e.g., [serious] [probing], [authoritative] [mysterious], [epic] [dramatic], [amazed] [punchy], [fast] [excited], [promo/hype] [direct], [slow] [deep]).
-2. Punctuation Engineering for Speed & Retention:
-   - Use ellipses (...) for intentional 0.3s–0.5s dramatic pauses between thoughts.
-   - Use exclamation marks (!) and strip unnecessary commas where delivery needs to be fast, punchy, and breathless.
-   - Separate distinct visual/auditory beats onto new lines.
-3. Phonetic Numerals: Convert ALL numbers, years, and metrics into spoken words (e.g., "teen hazaar" instead of 3,000; "baarah hazaar" instead of 12,000; "nabbe" instead of 90; "pandrah" instead of 15).
-4. Production & CapCut Tips: At the end of the entire output, provide 2–3 actionable audio and video editing tips (SFX placement, text sync, and background music drops).
+[probing] [serious]
+Baarah baje? Ek baje? Do baje? Yeah, main jaanta hoon.
 
 ---
 
-# FEW-SHOT REFERENCE EXAMPLE:
+Part 2: COLD OPEN — The Normalization of Sleep Loss (Paragraph 2)
 
-Part 1: HOOK [0:00–0:11]
 Playground Setup:
-- Scene: "A dramatic silhouette of Lord Shiva in meditation with rising smoke, shattering common myths."
-- Sample Context: "The narrator asks a bold, provocative question to instantly stop the viewer from scrolling."
-- Audio Profile: "Deep, bold, and mysterious Indian documentary YouTuber."
-- Style: Newscaster | Pace: Rapid Fire | Accent: Neutral | Voice: Algenib
+* Scene: "A montage of exhausted young people drinking coffee and staring blankly in daylight."
+* Sample Context: "The narrator highlights how an entire generation has normalized sleep deprivation."
+* Audio Profile: "Serious, observational, and blunt Indian documentary host."
+* Style: Newscaster | Pace: Natural | Accent: Neutral | Voice: Algenib
 
 Formatted Script to Copy-Paste:
-[serious] [probing]
-Kya Shiva ne... sach mein bhang piya tha?
 
-[authoritative] [mysterious]
-Sirf ek myth nahi hai... iske peechhe ek teen hazaar saal purani... real kahani hai!
+[serious] [blunt]
+Tumhari generation late sote hain. Aur tumne ise normal maan liya hai.
+
+[reflective] [cautious]
+Ek bas ek aur reel wala moment... phir raat ke do baj gaye. Uthne ka time subah saat baje.
 
 ---
 
-# SCRIPT TO CONVERT:
-[PASTE YOUR RAW SHORTS SCRIPT HERE]`;
+# SCRIPT TO FORMAT:
+
+[Script to paste]`;
 
 interface PromptHelpModalProps {
   isOpen: boolean;
@@ -92,11 +110,11 @@ export const PromptHelpModal: React.FC<PromptHelpModalProps> = ({ isOpen, onClos
               <h2 className="font-extrabold text-base text-white tracking-wide flex items-center space-x-2">
                 <span>AI STUDIO DIRECTOR PROMPT GUIDE</span>
                 <span className="text-[10px] uppercase font-mono px-2 py-0.5 bg-blue-500/20 text-blue-300 rounded-full border border-blue-500/30">
-                  Viral Shorts TTS
+                  Cinematic Documentary TTS
                 </span>
               </h2>
               <p className="text-xs text-slate-400">
-                Use this master prompt in Gemini, ChatGPT, or Claude to format any script into multi-part voiceovers.
+                Use this master prompt in Gemini, ChatGPT, or Claude to format any script into micro-paragraph voiceovers.
               </p>
             </div>
           </div>
@@ -146,7 +164,7 @@ export const PromptHelpModal: React.FC<PromptHelpModalProps> = ({ isOpen, onClos
               <div>
                 <h4 className="text-xs font-bold text-white">Paste Raw Script</h4>
                 <p className="text-[11px] text-slate-400 mt-0.5">
-                  Add your raw script at the bottom. The AI will output Hook, Setup, Twist parts.
+                  Add your raw script at the bottom. The AI will output structured micro-paragraphs.
                 </p>
               </div>
             </div>

@@ -39,51 +39,41 @@ export const ReferenceImporter: React.FC<ReferenceImporterProps> = ({
     }
   };
 
-  const sampleReference = `Part 1: HOOK [0:00–0:11]
-Playground Setup:
-- Scene: "A dramatic silhouette of Lord Shiva in meditation with rising smoke, shattering common myths."
-- Sample Context: "The narrator asks a bold, provocative question to instantly stop the viewer from scrolling."
-- Audio Profile: "Deep, bold, and mysterious Indian documentary YouTuber."
-- Style: Newscaster | Pace: Rapid Fire | Accent: Neutral | Voice: Algenib
+  const sampleReference = `---
 
-Video SHOT 1
-voice-over & subtitle alingment:
-on screen text : Kya Shiva ne sach mein bhang piya tha?
-Video-prompt(google flow - 10 second silent videos, visula only ): Cinematic slow motion camera pan around Lord Shiva in meditative stance with Himalayan mist and subtle embers
-scene progression: Intro hook shattering misconception
-overall modd: Mysterious, majestic, intriguing
-sound effects s(SFX-add in the editor): Deep bass drop, wind whisper
-background music(add in editor): Ambient mystical Indian drone
+Part 1: COLD OPEN — The Late Night Reality (Paragraph 1)
+
+Playground Setup:
+* Scene: "A dark room illuminated only by the cold blue glow of a smartphone screen reflecting in someone's tired eyes."
+* Sample Context: "The narrator directly confronts the Gen-Z listener with their own exact late-night habits."
+* Audio Profile: "Direct, relatable, and thought-provoking Indian documentary narrator."
+* Style: Newscaster | Pace: Natural | Accent: Neutral | Voice: Algenib
 
 Formatted Script to Copy-Paste:
-[serious] [probing]
-Kya Shiva ne... sach mein bhang piya tha?
 
-[authoritative] [mysterious]
-Sirf ek myth nahi hai... iske peechhe ek teen hazaar saal purani... real kahani hai!
+[conversational] [direct]
+Kal raat tum kitne baje soye?
 
-Part 2: SETUP & CONTEXT [0:11–0:26]
+[probing] [serious]
+Baarah baje? Ek baje? Do baje? Yeah, main jaanta hoon.
+
+---
+
+Part 2: COLD OPEN — The Normalization of Sleep Loss (Paragraph 2)
+
 Playground Setup:
-- Scene: "Ancient Ayurvedic texts and mountain herbs glowing with mystical light."
-- Sample Context: "Explaining the mythological context with authoritative depth."
-- Audio Profile: "Deep, bold, and mysterious Indian documentary YouTuber."
-- Style: Serious | Pace: Natural | Accent: Neutral | Voice: Algenib
-
-Video SHOT 2
-voice-over & subtitle alingment:
-on screen text : Samudra Manthan & Halahala Vish
-Video-prompt(google flow - 10 second silent videos, visula only ): Ancient parchment scrolls unrolling in ethereal golden light showing cosmic churning
-scene progression: Establishing ancient mythological context
-overall modd: Epic, intense, sacred
-sound effects s(SFX-add in the editor): Thunder rumble, parchment roll
-background music(add in editor): Rising Sanskrit battle chant
+* Scene: "A montage of exhausted young people drinking coffee and staring blankly in daylight."
+* Sample Context: "The narrator highlights how an entire generation has normalized sleep deprivation."
+* Audio Profile: "Serious, observational, and blunt Indian documentary host."
+* Style: Newscaster | Pace: Natural | Accent: Neutral | Voice: Algenib
 
 Formatted Script to Copy-Paste:
-[authoritative] [epic]
-Puranon ke anusaar... jab Samudra Manthan ke dauraan Halahala vish nikla...
 
-[intense] [dramatic]
-Toh sansaar ko bachane ke liye... Lord Shiva ne use apne gale mein dharan kar liya!`;
+[serious] [blunt]
+Tumhari generation late sote hain. Aur tumne ise normal maan liya hai.
+
+[reflective] [cautious]
+Ek bas ek aur reel wala moment... phir raat ke do baj gaye. Uthne ka time subah saat baje.`;
 
   const handleParse = async () => {
     if (!rawText.trim()) {
