@@ -1,314 +1,314 @@
 {
   "total_words": 44,
-  "total_duration": 17.32,
+  "total_duration": 15.84,
   "words": [
     {
       "index": 1,
       "word": "Harvard",
-      "start": 0.258,
-      "end": 0.62,
-      "duration": 0.362
+      "start": 0.291,
+      "end": 0.669,
+      "duration": 0.378
     },
     {
       "index": 2,
       "word": "ke",
-      "start": 0.661,
-      "end": 0.764,
-      "duration": 0.104
+      "start": 0.711,
+      "end": 0.819,
+      "duration": 0.108
     },
     {
       "index": 3,
       "word": "professor",
-      "start": 0.776,
-      "end": 1.242,
-      "duration": 0.466
+      "start": 0.831,
+      "end": 1.317,
+      "duration": 0.486
     },
     {
       "index": 4,
       "word": "Richard",
-      "start": 1.294,
-      "end": 1.656,
-      "duration": 0.362
+      "start": 1.372,
+      "end": 1.75,
+      "duration": 0.378
     },
     {
       "index": 5,
       "word": "Wrangham",
-      "start": 1.696,
-      "end": 2.111,
-      "duration": 0.414
+      "start": 1.792,
+      "end": 2.224,
+      "duration": 0.432
     },
     {
       "index": 6,
       "word": "ne",
-      "start": 2.157,
-      "end": 2.26,
-      "duration": 0.104
+      "start": 2.272,
+      "end": 2.38,
+      "duration": 0.108
     },
     {
       "index": 7,
       "word": "khud",
-      "start": 2.272,
-      "end": 2.479,
-      "duration": 0.207
+      "start": 2.616,
+      "end": 2.825,
+      "duration": 0.209
     },
     {
       "index": 8,
       "word": "chimpanzee",
-      "start": 2.779,
-      "end": 3.086,
-      "duration": 0.307
+      "start": 2.848,
+      "end": 3.371,
+      "duration": 0.523
     },
     {
       "index": 9,
       "word": "ka",
-      "start": 3.354,
-      "end": 3.448,
-      "duration": 0.094
+      "start": 3.429,
+      "end": 3.533,
+      "duration": 0.105
     },
     {
       "index": 10,
       "word": "khaana",
-      "start": 3.459,
-      "end": 3.742,
-      "duration": 0.283
+      "start": 3.545,
+      "end": 3.858,
+      "duration": 0.314
     },
     {
       "index": 11,
       "word": "chakh",
-      "start": 3.773,
-      "end": 4.009,
-      "duration": 0.236
+      "start": 3.893,
+      "end": 4.155,
+      "duration": 0.261
     },
     {
       "index": 12,
       "word": "ke",
-      "start": 4.035,
-      "end": 4.13,
-      "duration": 0.094
+      "start": 4.184,
+      "end": 4.288,
+      "duration": 0.105
     },
     {
       "index": 13,
       "word": "dekha.",
-      "start": 4.14,
-      "end": 4.423,
-      "duration": 0.283
+      "start": 4.3,
+      "end": 4.613,
+      "duration": 0.314
     },
     {
       "index": 14,
       "word": "Uganda",
-      "start": 4.455,
-      "end": 4.738,
-      "duration": 0.283
+      "start": 5.183,
+      "end": 5.423,
+      "duration": 0.24
     },
     {
       "index": 15,
       "word": "mein...",
-      "start": 4.769,
-      "end": 5.099,
-      "duration": 0.33
+      "start": 5.449,
+      "end": 5.729,
+      "duration": 0.28
     },
     {
       "index": 16,
       "word": "jahan",
-      "start": 5.803,
-      "end": 6.047,
-      "duration": 0.244
+      "start": 5.912,
+      "end": 6.169,
+      "duration": 0.257
     },
     {
       "index": 17,
       "word": "wo",
-      "start": 6.074,
-      "end": 6.172,
-      "duration": 0.098
+      "start": 6.198,
+      "end": 6.3,
+      "duration": 0.103
     },
     {
       "index": 18,
       "word": "bees",
-      "start": 6.183,
-      "end": 6.378,
-      "duration": 0.195
+      "start": 6.312,
+      "end": 6.518,
+      "duration": 0.206
     },
     {
       "index": 19,
       "word": "saal",
-      "start": 6.698,
-      "end": 6.899,
-      "duration": 0.201
+      "start": 6.54,
+      "end": 6.746,
+      "duration": 0.206
     },
     {
       "index": 20,
       "word": "se",
-      "start": 6.921,
-      "end": 7.021,
-      "duration": 0.1
+      "start": 6.769,
+      "end": 6.872,
+      "duration": 0.103
     },
     {
       "index": 21,
       "word": "chimps",
-      "start": 7.032,
-      "end": 7.333,
-      "duration": 0.301
+      "start": 6.883,
+      "end": 7.192,
+      "duration": 0.308
     },
     {
       "index": 22,
       "word": "pe",
-      "start": 7.367,
-      "end": 7.467,
-      "duration": 0.1
+      "start": 7.226,
+      "end": 7.329,
+      "duration": 0.103
     },
     {
       "index": 23,
       "word": "research",
-      "start": 7.478,
-      "end": 7.88,
-      "duration": 0.401
+      "start": 7.34,
+      "end": 7.751,
+      "duration": 0.411
     },
     {
       "index": 24,
       "word": "kar",
-      "start": 7.924,
-      "end": 8.075,
-      "duration": 0.15
+      "start": 7.797,
+      "end": 7.951,
+      "duration": 0.154
     },
     {
       "index": 25,
       "word": "rahe",
-      "start": 8.091,
-      "end": 8.292,
-      "duration": 0.201
+      "start": 7.969,
+      "end": 8.174,
+      "duration": 0.206
     },
     {
       "index": 26,
       "word": "the.",
-      "start": 8.314,
-      "end": 8.515,
-      "duration": 0.201
+      "start": 8.197,
+      "end": 8.403,
+      "duration": 0.206
     },
     {
       "index": 27,
       "word": "Uska",
-      "start": 8.537,
-      "end": 8.738,
-      "duration": 0.201
+      "start": 8.426,
+      "end": 8.631,
+      "duration": 0.206
     },
     {
       "index": 28,
       "word": "verdict?",
-      "start": 8.76,
-      "end": 9.161,
-      "duration": 0.401
+      "start": 9.547,
+      "end": 9.921,
+      "duration": 0.374
     },
     {
       "index": 29,
       "word": "Wo",
-      "start": 10.413,
-      "end": 10.485,
-      "duration": 0.072
+      "start": 9.962,
+      "end": 10.056,
+      "duration": 0.093
     },
     {
       "index": 30,
       "word": "phal",
-      "start": 10.493,
-      "end": 10.637,
-      "duration": 0.144
+      "start": 10.066,
+      "end": 10.253,
+      "duration": 0.187
     },
     {
       "index": 31,
       "word": "kadwe",
-      "start": 10.653,
-      "end": 10.833,
-      "duration": 0.18
+      "start": 10.738,
+      "end": 10.996,
+      "duration": 0.258
     },
     {
       "index": 32,
       "word": "the...",
-      "start": 10.853,
-      "end": 11.069,
-      "duration": 0.216
+      "start": 11.025,
+      "end": 11.334,
+      "duration": 0.31
     },
     {
       "index": 33,
       "word": "reshedaar",
-      "start": 11.782,
-      "end": 12.192,
-      "duration": 0.41
+      "start": 11.369,
+      "end": 11.833,
+      "duration": 0.465
     },
     {
       "index": 34,
       "word": "the...",
-      "start": 12.441,
-      "end": 12.74,
-      "duration": 0.299
+      "start": 11.885,
+      "end": 12.195,
+      "duration": 0.31
     },
     {
       "index": 35,
       "word": "aur",
-      "start": 12.774,
-      "end": 12.923,
-      "duration": 0.15
+      "start": 12.229,
+      "end": 12.384,
+      "duration": 0.155
     },
     {
       "index": 36,
       "word": "kuch",
-      "start": 13.308,
-      "end": 13.511,
-      "duration": 0.203
+      "start": 12.401,
+      "end": 12.608,
+      "duration": 0.206
     },
     {
       "index": 37,
       "word": "toh",
-      "start": 13.534,
-      "end": 13.687,
-      "duration": 0.153
+      "start": 12.631,
+      "end": 12.786,
+      "duration": 0.155
     },
     {
       "index": 38,
       "word": "aise",
-      "start": 13.704,
-      "end": 13.907,
-      "duration": 0.203
+      "start": 12.803,
+      "end": 13.009,
+      "duration": 0.206
     },
     {
       "index": 39,
       "word": "the",
-      "start": 13.93,
-      "end": 14.082,
-      "duration": 0.153
+      "start": 13.032,
+      "end": 13.187,
+      "duration": 0.155
     },
     {
       "index": 40,
       "word": "ki",
-      "start": 14.566,
-      "end": 14.702,
-      "duration": 0.136
+      "start": 13.204,
+      "end": 13.307,
+      "duration": 0.103
     },
     {
       "index": 41,
       "word": "pet",
-      "start": 14.718,
-      "end": 14.922,
-      "duration": 0.205
+      "start": 13.319,
+      "end": 13.474,
+      "duration": 0.155
     },
     {
       "index": 42,
       "word": "kharab",
-      "start": 14.945,
-      "end": 15.354,
-      "duration": 0.409
+      "start": 13.656,
+      "end": 14.037,
+      "duration": 0.381
     },
     {
       "index": 43,
       "word": "ho",
-      "start": 15.4,
-      "end": 15.536,
-      "duration": 0.136
+      "start": 14.08,
+      "end": 14.207,
+      "duration": 0.127
     },
     {
       "index": 44,
       "word": "jaye.",
-      "start": 15.551,
-      "end": 15.892,
-      "duration": 0.341
+      "start": 14.221,
+      "end": 14.539,
+      "duration": 0.318
     }
   ]
 }

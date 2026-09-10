@@ -1,0 +1,230 @@
+{
+  "total_words": 32,
+  "total_duration": 16.44,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.303,
+      "end": 0.512,
+      "duration": 0.209
+    },
+    {
+      "index": 2,
+      "word": "jab",
+      "start": 0.535,
+      "end": 0.745,
+      "duration": 0.209
+    },
+    {
+      "index": 3,
+      "word": "usne",
+      "start": 0.768,
+      "end": 1.047,
+      "duration": 0.279
+    },
+    {
+      "index": 4,
+      "word": "chakha",
+      "start": 1.078,
+      "end": 1.496,
+      "duration": 0.418
+    },
+    {
+      "index": 5,
+      "word": "...",
+      "start": 1.543,
+      "end": 1.752,
+      "duration": 0.209
+    },
+    {
+      "index": 6,
+      "word": "wo",
+      "start": 2.484,
+      "end": 2.561,
+      "duration": 0.077
+    },
+    {
+      "index": 7,
+      "word": "asaan",
+      "start": 2.569,
+      "end": 2.761,
+      "duration": 0.192
+    },
+    {
+      "index": 8,
+      "word": "tha.",
+      "start": 3.116,
+      "end": 3.38,
+      "duration": 0.264
+    },
+    {
+      "index": 9,
+      "word": "Meetha",
+      "start": 3.409,
+      "end": 3.804,
+      "duration": 0.395
+    },
+    {
+      "index": 10,
+      "word": "tha.",
+      "start": 4.568,
+      "end": 4.849,
+      "duration": 0.281
+    },
+    {
+      "index": 11,
+      "word": "Chabane",
+      "start": 4.88,
+      "end": 5.371,
+      "duration": 0.491
+    },
+    {
+      "index": 12,
+      "word": "mein",
+      "start": 5.703,
+      "end": 5.947,
+      "duration": 0.244
+    },
+    {
+      "index": 13,
+      "word": "mehnat",
+      "start": 5.974,
+      "end": 6.34,
+      "duration": 0.366
+    },
+    {
+      "index": 14,
+      "word": "kam",
+      "start": 6.38,
+      "end": 6.563,
+      "duration": 0.183
+    },
+    {
+      "index": 15,
+      "word": "lagi.",
+      "start": 6.583,
+      "end": 6.888,
+      "duration": 0.305
+    },
+    {
+      "index": 16,
+      "word": "Ye",
+      "start": 6.922,
+      "end": 7.044,
+      "duration": 0.122
+    },
+    {
+      "index": 17,
+      "word": "chhota",
+      "start": 7.058,
+      "end": 7.423,
+      "duration": 0.366
+    },
+    {
+      "index": 18,
+      "word": "sa",
+      "start": 8.262,
+      "end": 8.375,
+      "duration": 0.113
+    },
+    {
+      "index": 19,
+      "word": "moment",
+      "start": 8.388,
+      "end": 8.727,
+      "duration": 0.339
+    },
+    {
+      "index": 20,
+      "word": "...",
+      "start": 8.765,
+      "end": 8.935,
+      "duration": 0.17
+    },
+    {
+      "index": 21,
+      "word": "shayad",
+      "start": 8.953,
+      "end": 9.293,
+      "duration": 0.339
+    },
+    {
+      "index": 22,
+      "word": "accidental",
+      "start": 9.33,
+      "end": 9.896,
+      "duration": 0.566
+    },
+    {
+      "index": 23,
+      "word": "...",
+      "start": 10.297,
+      "end": 10.435,
+      "duration": 0.138
+    },
+    {
+      "index": 24,
+      "word": "humari",
+      "start": 10.45,
+      "end": 10.725,
+      "duration": 0.275
+    },
+    {
+      "index": 25,
+      "word": "species",
+      "start": 11.004,
+      "end": 11.497,
+      "duration": 0.493
+    },
+    {
+      "index": 26,
+      "word": "ka",
+      "start": 11.552,
+      "end": 11.693,
+      "duration": 0.141
+    },
+    {
+      "index": 27,
+      "word": "sabse",
+      "start": 12.172,
+      "end": 12.53,
+      "duration": 0.358
+    },
+    {
+      "index": 28,
+      "word": "bada",
+      "start": 12.57,
+      "end": 12.856,
+      "duration": 0.286
+    },
+    {
+      "index": 29,
+      "word": "turning",
+      "start": 12.888,
+      "end": 13.389,
+      "duration": 0.501
+    },
+    {
+      "index": 30,
+      "word": "point",
+      "start": 13.445,
+      "end": 13.803,
+      "duration": 0.358
+    },
+    {
+      "index": 31,
+      "word": "ban",
+      "start": 13.843,
+      "end": 14.057,
+      "duration": 0.215
+    },
+    {
+      "index": 32,
+      "word": "gaya.",
+      "start": 14.081,
+      "end": 14.439,
+      "duration": 0.358
+    }
+  ]
+}

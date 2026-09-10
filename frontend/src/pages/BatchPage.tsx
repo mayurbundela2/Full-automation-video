@@ -207,12 +207,17 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
   const handleGenerateAll = async () => {
     if (!currentBatch || !selectedBatchId) return;
 
+    // Only include paragraphs that are NOT already completed, NOT over limit, and have text
     const readyParas = (currentBatch.paragraphs || []).filter(
-      (p) => p.status === 'READY' || p.limit_status === 'SAFE' || p.limit_status === 'WARNING'
+      (p) =>
+        p.status !== 'COMPLETED' &&
+        !(p.latest_generation && p.latest_generation.status === 'COMPLETED') &&
+        p.limit_status !== 'OVER_LIMIT' &&
+        Boolean(p.transcript?.trim())
     );
 
     if (readyParas.length === 0) {
-      alert('No paragraphs are currently marked READY for generation.');
+      alert('All paragraphs in this batch are already generated! To re-generate any specific paragraph, click the Generate button on its individual card.');
       return;
     }
 
@@ -221,7 +226,7 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
       status: 'running',
       current: 0,
       total: readyParas.length,
-      message: `Starting sequential generation of ${readyParas.length} paragraphs...`,
+      message: `Starting sequential generation of ${readyParas.length} ungenerated paragraph(s)...`,
     });
 
     try {
@@ -231,7 +236,7 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
           status: 'running',
           current: i + 1,
           total: readyParas.length,
-          message: `Generating Paragraph ${i + 1}/${readyParas.length} (Part ${para.paragraph_number})...`,
+          message: `Generating Paragraph ${para.paragraph_number} (${i + 1}/${readyParas.length})...`,
         });
 
         await api.generateParagraph(para.id);
@@ -257,21 +262,20 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
         status: 'completed',
         current: readyParas.length,
         total: readyParas.length,
-        message: `Successfully generated all ${readyParas.length} ready paragraphs & assembled full narration!`,
+        message: `Successfully generated ${readyParas.length} paragraph(s) & assembled full narration!`,
       });
     } catch (e: any) {
       setProgressState({
         status: 'error',
         current: progressState.current,
         total: readyParas.length,
-        message: e.message || 'Generation error occurred',
+        message: `Generation stopped: ${e.message || 'Unknown error'}`,
       });
     } finally {
       setGeneratingAll(false);
+      await fetchCurrentBatch();
     }
   };
-
-
 
   const handleCombineBatchAudio = async () => {
     if (!selectedBatchId) return;

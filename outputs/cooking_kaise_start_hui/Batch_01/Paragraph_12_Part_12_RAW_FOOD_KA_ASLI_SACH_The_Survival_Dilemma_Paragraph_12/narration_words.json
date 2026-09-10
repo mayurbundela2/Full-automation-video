@@ -1,0 +1,216 @@
+{
+  "total_words": 30,
+  "total_duration": 12.92,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.312,
+      "end": 0.509,
+      "duration": 0.197
+    },
+    {
+      "index": 2,
+      "word": "usne",
+      "start": 0.53,
+      "end": 0.793,
+      "duration": 0.262
+    },
+    {
+      "index": 3,
+      "word": "ek",
+      "start": 0.822,
+      "end": 0.953,
+      "duration": 0.131
+    },
+    {
+      "index": 4,
+      "word": "observation",
+      "start": 0.968,
+      "end": 1.689,
+      "duration": 0.721
+    },
+    {
+      "index": 5,
+      "word": "ki",
+      "start": 1.769,
+      "end": 1.9,
+      "duration": 0.131
+    },
+    {
+      "index": 6,
+      "word": "jo",
+      "start": 1.914,
+      "end": 2.045,
+      "duration": 0.131
+    },
+    {
+      "index": 7,
+      "word": "sab",
+      "start": 2.391,
+      "end": 2.592,
+      "duration": 0.201
+    },
+    {
+      "index": 8,
+      "word": "kuch",
+      "start": 2.614,
+      "end": 2.881,
+      "duration": 0.267
+    },
+    {
+      "index": 9,
+      "word": "badal",
+      "start": 2.911,
+      "end": 3.245,
+      "duration": 0.334
+    },
+    {
+      "index": 10,
+      "word": "degi",
+      "start": 3.282,
+      "end": 3.55,
+      "duration": 0.267
+    },
+    {
+      "index": 11,
+      "word": "...",
+      "start": 3.579,
+      "end": 3.78,
+      "duration": 0.201
+    },
+    {
+      "index": 12,
+      "word": "Ek",
+      "start": 4.644,
+      "end": 4.771,
+      "duration": 0.127
+    },
+    {
+      "index": 13,
+      "word": "modern",
+      "start": 4.785,
+      "end": 5.166,
+      "duration": 0.381
+    },
+    {
+      "index": 14,
+      "word": "human",
+      "start": 5.208,
+      "end": 5.525,
+      "duration": 0.317
+    },
+    {
+      "index": 15,
+      "word": "ke",
+      "start": 5.561,
+      "end": 5.687,
+      "duration": 0.127
+    },
+    {
+      "index": 16,
+      "word": "liye...",
+      "start": 5.702,
+      "end": 6.146,
+      "duration": 0.444
+    },
+    {
+      "index": 17,
+      "word": "bina",
+      "start": 6.521,
+      "end": 6.791,
+      "duration": 0.27
+    },
+    {
+      "index": 18,
+      "word": "technology",
+      "start": 6.821,
+      "end": 7.497,
+      "duration": 0.676
+    },
+    {
+      "index": 19,
+      "word": "ke...",
+      "start": 7.572,
+      "end": 7.91,
+      "duration": 0.338
+    },
+    {
+      "index": 20,
+      "word": "sirf",
+      "start": 7.947,
+      "end": 8.218,
+      "duration": 0.27
+    },
+    {
+      "index": 21,
+      "word": "raw",
+      "start": 8.248,
+      "end": 8.45,
+      "duration": 0.203
+    },
+    {
+      "index": 22,
+      "word": "food",
+      "start": 8.473,
+      "end": 8.743,
+      "duration": 0.27
+    },
+    {
+      "index": 23,
+      "word": "par",
+      "start": 8.773,
+      "end": 8.976,
+      "duration": 0.203
+    },
+    {
+      "index": 24,
+      "word": "jungle",
+      "start": 8.998,
+      "end": 9.404,
+      "duration": 0.405
+    },
+    {
+      "index": 25,
+      "word": "mein",
+      "start": 9.449,
+      "end": 9.719,
+      "duration": 0.27
+    },
+    {
+      "index": 26,
+      "word": "survive",
+      "start": 9.749,
+      "end": 10.222,
+      "duration": 0.473
+    },
+    {
+      "index": 27,
+      "word": "karna",
+      "start": 10.274,
+      "end": 10.612,
+      "duration": 0.338
+    },
+    {
+      "index": 28,
+      "word": "bahut",
+      "start": 10.65,
+      "end": 10.987,
+      "duration": 0.338
+    },
+    {
+      "index": 29,
+      "word": "mushkil",
+      "start": 11.367,
+      "end": 11.957,
+      "duration": 0.59
+    },
+    {
+      "index": 30,
+      "word": "hoga.",
+      "start": 12.022,
+      "end": 12.443,
+      "duration": 0.421
+    }
+  ]
+}

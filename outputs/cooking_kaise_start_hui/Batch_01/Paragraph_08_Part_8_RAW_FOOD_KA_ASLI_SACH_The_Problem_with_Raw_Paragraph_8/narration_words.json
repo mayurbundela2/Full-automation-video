@@ -1,174 +1,174 @@
 {
   "total_words": 24,
-  "total_duration": 9.36,
+  "total_duration": 8.92,
   "words": [
     {
       "index": 1,
       "word": "Pehle",
-      "start": 0.289,
-      "end": 0.48,
-      "duration": 0.191
+      "start": 0.259,
+      "end": 0.429,
+      "duration": 0.17
     },
     {
       "index": 2,
       "word": "ek",
-      "start": 0.502,
-      "end": 0.578,
-      "duration": 0.077
+      "start": 0.448,
+      "end": 0.515,
+      "duration": 0.068
     },
     {
       "index": 3,
       "word": "sawaal.",
-      "start": 0.587,
-      "end": 0.855,
-      "duration": 0.268
+      "start": 0.523,
+      "end": 0.76,
+      "duration": 0.238
     },
     {
       "index": 4,
       "word": "Kachha",
-      "start": 0.885,
-      "end": 1.114,
-      "duration": 0.23
+      "start": 0.787,
+      "end": 0.99,
+      "duration": 0.204
     },
     {
       "index": 5,
       "word": "khaana",
-      "start": 2.173,
-      "end": 2.452,
-      "duration": 0.279
+      "start": 1.862,
+      "end": 2.116,
+      "duration": 0.254
     },
     {
       "index": 6,
       "word": "kha",
-      "start": 2.483,
-      "end": 2.623,
-      "duration": 0.14
+      "start": 2.144,
+      "end": 2.271,
+      "duration": 0.127
     },
     {
       "index": 7,
       "word": "ke",
-      "start": 2.638,
-      "end": 2.731,
-      "duration": 0.093
+      "start": 2.285,
+      "end": 2.37,
+      "duration": 0.085
     },
     {
       "index": 8,
       "word": "kya",
-      "start": 2.741,
-      "end": 2.881,
-      "duration": 0.14
+      "start": 2.379,
+      "end": 2.506,
+      "duration": 0.127
     },
     {
       "index": 9,
       "word": "problem",
-      "start": 2.897,
-      "end": 3.222,
-      "duration": 0.326
+      "start": 2.52,
+      "end": 2.816,
+      "duration": 0.296
     },
     {
       "index": 10,
       "word": "hai?",
-      "start": 3.258,
-      "end": 3.444,
-      "duration": 0.186
+      "start": 2.849,
+      "end": 3.018,
+      "duration": 0.169
     },
     {
       "index": 11,
       "word": "Tumhe",
-      "start": 3.656,
-      "end": 3.875,
-      "duration": 0.219
+      "start": 3.191,
+      "end": 3.42,
+      "duration": 0.229
     },
     {
       "index": 12,
       "word": "lagta",
-      "start": 3.9,
-      "end": 4.119,
-      "duration": 0.219
+      "start": 3.446,
+      "end": 3.675,
+      "duration": 0.229
     },
     {
       "index": 13,
       "word": "hoga",
-      "start": 4.143,
-      "end": 4.319,
-      "duration": 0.175
+      "start": 3.7,
+      "end": 3.884,
+      "duration": 0.183
     },
     {
       "index": 14,
       "word": "...",
-      "start": 5.188,
-      "end": 5.329,
-      "duration": 0.141
+      "start": 4.703,
+      "end": 4.832,
+      "duration": 0.129
     },
     {
       "index": 15,
       "word": "kuch",
-      "start": 5.344,
-      "end": 5.532,
-      "duration": 0.188
+      "start": 4.846,
+      "end": 5.019,
+      "duration": 0.172
     },
     {
       "index": 16,
       "word": "nahi.",
-      "start": 5.553,
-      "end": 5.787,
-      "duration": 0.234
+      "start": 5.038,
+      "end": 5.253,
+      "duration": 0.215
     },
     {
       "index": 17,
       "word": "Salad",
-      "start": 5.813,
-      "end": 6.048,
-      "duration": 0.234
+      "start": 5.277,
+      "end": 5.492,
+      "duration": 0.215
     },
     {
       "index": 18,
       "word": "khaate",
-      "start": 6.074,
-      "end": 6.355,
-      "duration": 0.281
+      "start": 5.776,
+      "end": 6.052,
+      "duration": 0.276
     },
     {
       "index": 19,
       "word": "hain",
-      "start": 6.386,
-      "end": 6.574,
-      "duration": 0.188
+      "start": 6.083,
+      "end": 6.268,
+      "duration": 0.184
     },
     {
       "index": 20,
       "word": "na",
-      "start": 6.594,
-      "end": 6.688,
-      "duration": 0.094
+      "start": 6.634,
+      "end": 6.717,
+      "duration": 0.083
     },
     {
       "index": 21,
       "word": "hum?",
-      "start": 6.699,
-      "end": 6.886,
-      "duration": 0.188
+      "start": 6.726,
+      "end": 6.891,
+      "duration": 0.165
     },
     {
       "index": 22,
       "word": "Fruits",
-      "start": 7.153,
-      "end": 7.453,
-      "duration": 0.3
+      "start": 6.909,
+      "end": 7.157,
+      "duration": 0.248
     },
     {
       "index": 23,
       "word": "khaate",
-      "start": 7.486,
-      "end": 7.785,
-      "duration": 0.3
+      "start": 7.185,
+      "end": 7.433,
+      "duration": 0.248
     },
     {
       "index": 24,
       "word": "hain?",
-      "start": 7.819,
-      "end": 8.068,
-      "duration": 0.25
+      "start": 7.46,
+      "end": 7.667,
+      "duration": 0.207
     }
   ]
 }

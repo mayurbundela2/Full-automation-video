@@ -1,0 +1,223 @@
+{
+  "total_words": 31,
+  "total_duration": 12.2,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.316,
+      "end": 0.497,
+      "duration": 0.181
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.517,
+      "end": 0.638,
+      "duration": 0.121
+    },
+    {
+      "index": 3,
+      "word": "baat",
+      "start": 0.651,
+      "end": 0.893,
+      "duration": 0.241
+    },
+    {
+      "index": 4,
+      "word": "ajeeb",
+      "start": 0.919,
+      "end": 1.221,
+      "duration": 0.302
+    },
+    {
+      "index": 5,
+      "word": "hai.",
+      "start": 1.255,
+      "end": 1.496,
+      "duration": 0.241
+    },
+    {
+      "index": 6,
+      "word": "Har",
+      "start": 1.523,
+      "end": 1.704,
+      "duration": 0.181
+    },
+    {
+      "index": 7,
+      "word": "doosra",
+      "start": 1.724,
+      "end": 2.086,
+      "duration": 0.362
+    },
+    {
+      "index": 8,
+      "word": "janwar",
+      "start": 2.469,
+      "end": 2.831,
+      "duration": 0.362
+    },
+    {
+      "index": 9,
+      "word": "ye",
+      "start": 2.871,
+      "end": 2.992,
+      "duration": 0.121
+    },
+    {
+      "index": 10,
+      "word": "asaani",
+      "start": 3.005,
+      "end": 3.367,
+      "duration": 0.362
+    },
+    {
+      "index": 11,
+      "word": "se",
+      "start": 3.408,
+      "end": 3.528,
+      "duration": 0.121
+    },
+    {
+      "index": 12,
+      "word": "kar",
+      "start": 3.542,
+      "end": 3.723,
+      "duration": 0.181
+    },
+    {
+      "index": 13,
+      "word": "leta",
+      "start": 3.743,
+      "end": 3.984,
+      "duration": 0.241
+    },
+    {
+      "index": 14,
+      "word": "hai.",
+      "start": 4.011,
+      "end": 4.252,
+      "duration": 0.241
+    },
+    {
+      "index": 15,
+      "word": "Hum",
+      "start": 4.279,
+      "end": 4.46,
+      "duration": 0.181
+    },
+    {
+      "index": 16,
+      "word": "nahi",
+      "start": 4.48,
+      "end": 4.722,
+      "duration": 0.241
+    },
+    {
+      "index": 17,
+      "word": "kar",
+      "start": 4.749,
+      "end": 4.93,
+      "duration": 0.181
+    },
+    {
+      "index": 18,
+      "word": "paate.",
+      "start": 4.95,
+      "end": 5.312,
+      "duration": 0.362
+    },
+    {
+      "index": 19,
+      "word": "Kyun?",
+      "start": 5.804,
+      "end": 6.055,
+      "duration": 0.251
+    },
+    {
+      "index": 20,
+      "word": "Kyunki",
+      "start": 6.083,
+      "end": 6.383,
+      "duration": 0.301
+    },
+    {
+      "index": 21,
+      "word": "humara",
+      "start": 6.417,
+      "end": 6.718,
+      "duration": 0.301
+    },
+    {
+      "index": 22,
+      "word": "shareer",
+      "start": 7.268,
+      "end": 7.456,
+      "duration": 0.188
+    },
+    {
+      "index": 23,
+      "word": "ab",
+      "start": 7.791,
+      "end": 7.99,
+      "duration": 0.199
+    },
+    {
+      "index": 24,
+      "word": "kachhe",
+      "start": 8.012,
+      "end": 8.61,
+      "duration": 0.598
+    },
+    {
+      "index": 25,
+      "word": "khaane",
+      "start": 8.676,
+      "end": 9.274,
+      "duration": 0.598
+    },
+    {
+      "index": 26,
+      "word": "ke",
+      "start": 9.34,
+      "end": 9.54,
+      "duration": 0.199
+    },
+    {
+      "index": 27,
+      "word": "liye",
+      "start": 9.562,
+      "end": 9.96,
+      "duration": 0.398
+    },
+    {
+      "index": 28,
+      "word": "design",
+      "start": 10.004,
+      "end": 10.602,
+      "duration": 0.598
+    },
+    {
+      "index": 29,
+      "word": "hi",
+      "start": 10.668,
+      "end": 10.868,
+      "duration": 0.199
+    },
+    {
+      "index": 30,
+      "word": "nahi",
+      "start": 10.89,
+      "end": 11.288,
+      "duration": 0.398
+    },
+    {
+      "index": 31,
+      "word": "hai.",
+      "start": 11.332,
+      "end": 11.731,
+      "duration": 0.398
+    }
+  ]
+}

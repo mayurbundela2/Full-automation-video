@@ -1,125 +1,125 @@
 {
   "total_words": 17,
-  "total_duration": 9.52,
+  "total_duration": 9.76,
   "words": [
     {
       "index": 1,
       "word": "Aaj",
-      "start": 0.394,
-      "end": 0.562,
-      "duration": 0.168
+      "start": 0.278,
+      "end": 0.411,
+      "duration": 0.133
     },
     {
       "index": 2,
       "word": "tumne",
-      "start": 0.581,
-      "end": 0.861,
-      "duration": 0.28
+      "start": 0.425,
+      "end": 0.646,
+      "duration": 0.221
     },
     {
       "index": 3,
       "word": "kya",
-      "start": 0.892,
-      "end": 1.061,
-      "duration": 0.168
+      "start": 0.671,
+      "end": 0.804,
+      "duration": 0.133
     },
     {
       "index": 4,
       "word": "khaya?",
-      "start": 1.079,
-      "end": 1.416,
-      "duration": 0.336
+      "start": 0.818,
+      "end": 1.084,
+      "duration": 0.265
     },
     {
       "index": 5,
       "word": "Maggie?",
-      "start": 1.453,
-      "end": 1.845,
-      "duration": 0.392
+      "start": 1.265,
+      "end": 1.549,
+      "duration": 0.284
     },
     {
       "index": 6,
       "word": "Pizza?",
-      "start": 2.749,
-      "end": 3.086,
-      "duration": 0.337
+      "start": 1.581,
+      "end": 1.825,
+      "duration": 0.244
     },
     {
       "index": 7,
       "word": "Ghar",
-      "start": 4.169,
-      "end": 4.365,
-      "duration": 0.196
+      "start": 2.795,
+      "end": 2.997,
+      "duration": 0.202
     },
     {
       "index": 8,
       "word": "ka",
-      "start": 4.386,
-      "end": 4.484,
-      "duration": 0.098
+      "start": 3.019,
+      "end": 3.12,
+      "duration": 0.101
     },
     {
       "index": 9,
       "word": "dal",
-      "start": 5.394,
-      "end": 5.552,
-      "duration": 0.158
+      "start": 3.132,
+      "end": 3.283,
+      "duration": 0.151
     },
     {
       "index": 10,
       "word": "chawal?",
-      "start": 5.569,
-      "end": 5.937,
-      "duration": 0.368
+      "start": 4.07,
+      "end": 4.448,
+      "duration": 0.378
     },
     {
       "index": 11,
       "word": "Ya",
-      "start": 5.978,
-      "end": 6.084,
-      "duration": 0.105
+      "start": 5.387,
+      "end": 5.512,
+      "duration": 0.125
     },
     {
       "index": 12,
       "word": "raat",
-      "start": 6.095,
-      "end": 6.306,
-      "duration": 0.21
+      "start": 5.526,
+      "end": 5.775,
+      "duration": 0.249
     },
     {
       "index": 13,
       "word": "ke",
-      "start": 7.189,
-      "end": 7.367,
-      "duration": 0.178
+      "start": 5.803,
+      "end": 5.927,
+      "duration": 0.125
     },
     {
       "index": 14,
       "word": "do",
-      "start": 7.386,
-      "end": 7.564,
-      "duration": 0.178
+      "start": 5.941,
+      "end": 6.066,
+      "duration": 0.125
     },
     {
       "index": 15,
       "word": "baje",
-      "start": 7.584,
-      "end": 7.939,
-      "duration": 0.356
+      "start": 6.08,
+      "end": 6.329,
+      "duration": 0.249
     },
     {
       "index": 16,
       "word": "wala",
-      "start": 7.979,
-      "end": 8.334,
-      "duration": 0.356
+      "start": 7.173,
+      "end": 7.287,
+      "duration": 0.114
     },
     {
       "index": 17,
       "word": "Kurkure?",
-      "start": 8.374,
-      "end": 9.085,
-      "duration": 0.711
+      "start": 7.299,
+      "end": 7.527,
+      "duration": 0.227
     }
   ]
 }

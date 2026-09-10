@@ -1,0 +1,223 @@
+{
+  "total_words": 31,
+  "total_duration": 13.72,
+  "words": [
+    {
+      "index": 1,
+      "word": "Tum",
+      "start": 0.282,
+      "end": 0.436,
+      "duration": 0.154
+    },
+    {
+      "index": 2,
+      "word": "aaj",
+      "start": 0.453,
+      "end": 0.606,
+      "duration": 0.154
+    },
+    {
+      "index": 3,
+      "word": "raw",
+      "start": 0.623,
+      "end": 0.777,
+      "duration": 0.154
+    },
+    {
+      "index": 4,
+      "word": "food",
+      "start": 0.794,
+      "end": 0.999,
+      "duration": 0.205
+    },
+    {
+      "index": 5,
+      "word": "diet",
+      "start": 1.022,
+      "end": 1.226,
+      "duration": 0.205
+    },
+    {
+      "index": 6,
+      "word": "try",
+      "start": 1.249,
+      "end": 1.403,
+      "duration": 0.154
+    },
+    {
+      "index": 7,
+      "word": "kar",
+      "start": 1.42,
+      "end": 1.574,
+      "duration": 0.154
+    },
+    {
+      "index": 8,
+      "word": "sakte",
+      "start": 1.591,
+      "end": 1.847,
+      "duration": 0.256
+    },
+    {
+      "index": 9,
+      "word": "ho",
+      "start": 1.875,
+      "end": 1.978,
+      "duration": 0.102
+    },
+    {
+      "index": 10,
+      "word": "...",
+      "start": 1.989,
+      "end": 2.143,
+      "duration": 0.154
+    },
+    {
+      "index": 11,
+      "word": "kyunki",
+      "start": 2.16,
+      "end": 2.467,
+      "duration": 0.307
+    },
+    {
+      "index": 12,
+      "word": "tumhare",
+      "start": 2.879,
+      "end": 3.206,
+      "duration": 0.327
+    },
+    {
+      "index": 13,
+      "word": "paas",
+      "start": 3.242,
+      "end": 3.428,
+      "duration": 0.187
+    },
+    {
+      "index": 14,
+      "word": "blender",
+      "start": 3.449,
+      "end": 3.776,
+      "duration": 0.327
+    },
+    {
+      "index": 15,
+      "word": "hai...",
+      "start": 3.812,
+      "end": 4.092,
+      "duration": 0.28
+    },
+    {
+      "index": 16,
+      "word": "supermarket",
+      "start": 4.123,
+      "end": 4.636,
+      "duration": 0.513
+    },
+    {
+      "index": 17,
+      "word": "hai...",
+      "start": 4.693,
+      "end": 4.973,
+      "duration": 0.28
+    },
+    {
+      "index": 18,
+      "word": "supplements",
+      "start": 5.004,
+      "end": 5.517,
+      "duration": 0.513
+    },
+    {
+      "index": 19,
+      "word": "hain.",
+      "start": 5.777,
+      "end": 5.98,
+      "duration": 0.203
+    },
+    {
+      "index": 20,
+      "word": "Lekin",
+      "start": 6.002,
+      "end": 6.205,
+      "duration": 0.203
+    },
+    {
+      "index": 21,
+      "word": "jungle",
+      "start": 6.228,
+      "end": 6.471,
+      "duration": 0.243
+    },
+    {
+      "index": 22,
+      "word": "mein...",
+      "start": 7.096,
+      "end": 7.362,
+      "duration": 0.266
+    },
+    {
+      "index": 23,
+      "word": "bina",
+      "start": 7.392,
+      "end": 7.544,
+      "duration": 0.152
+    },
+    {
+      "index": 24,
+      "word": "kisi",
+      "start": 7.561,
+      "end": 7.713,
+      "duration": 0.152
+    },
+    {
+      "index": 25,
+      "word": "technology",
+      "start": 7.73,
+      "end": 8.11,
+      "duration": 0.38
+    },
+    {
+      "index": 26,
+      "word": "ke...",
+      "start": 8.648,
+      "end": 8.876,
+      "duration": 0.228
+    },
+    {
+      "index": 27,
+      "word": "sirf",
+      "start": 8.902,
+      "end": 9.084,
+      "duration": 0.183
+    },
+    {
+      "index": 28,
+      "word": "kachha",
+      "start": 9.104,
+      "end": 9.378,
+      "duration": 0.274
+    },
+    {
+      "index": 29,
+      "word": "khaake?",
+      "start": 9.409,
+      "end": 9.728,
+      "duration": 0.319
+    },
+    {
+      "index": 30,
+      "word": "Bahut",
+      "start": 9.763,
+      "end": 9.992,
+      "duration": 0.228
+    },
+    {
+      "index": 31,
+      "word": "mushkil.",
+      "start": 10.563,
+      "end": 10.822,
+      "duration": 0.259
+    }
+  ]
+}

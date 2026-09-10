@@ -1,0 +1,195 @@
+{
+  "total_words": 27,
+  "total_duration": 12.32,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ab",
+      "start": 0.303,
+      "end": 0.405,
+      "duration": 0.102
+    },
+    {
+      "index": 2,
+      "word": "uska",
+      "start": 0.417,
+      "end": 0.622,
+      "duration": 0.205
+    },
+    {
+      "index": 3,
+      "word": "agla",
+      "start": 0.644,
+      "end": 0.849,
+      "duration": 0.205
+    },
+    {
+      "index": 4,
+      "word": "chapter.",
+      "start": 1.03,
+      "end": 1.524,
+      "duration": 0.494
+    },
+    {
+      "index": 5,
+      "word": "Aag",
+      "start": 1.578,
+      "end": 1.763,
+      "duration": 0.185
+    },
+    {
+      "index": 6,
+      "word": "ne",
+      "start": 2.112,
+      "end": 2.231,
+      "duration": 0.119
+    },
+    {
+      "index": 7,
+      "word": "humein",
+      "start": 2.397,
+      "end": 2.796,
+      "duration": 0.399
+    },
+    {
+      "index": 8,
+      "word": "warmth",
+      "start": 2.84,
+      "end": 3.239,
+      "duration": 0.399
+    },
+    {
+      "index": 9,
+      "word": "di.",
+      "start": 3.283,
+      "end": 3.482,
+      "duration": 0.199
+    },
+    {
+      "index": 10,
+      "word": "Raat",
+      "start": 3.505,
+      "end": 3.77,
+      "duration": 0.266
+    },
+    {
+      "index": 11,
+      "word": "mein",
+      "start": 4.158,
+      "end": 4.42,
+      "duration": 0.262
+    },
+    {
+      "index": 12,
+      "word": "suraksha",
+      "start": 4.449,
+      "end": 4.973,
+      "duration": 0.524
+    },
+    {
+      "index": 13,
+      "word": "di.",
+      "start": 5.031,
+      "end": 5.227,
+      "duration": 0.196
+    },
+    {
+      "index": 14,
+      "word": "Predators",
+      "start": 5.536,
+      "end": 6.095,
+      "duration": 0.559
+    },
+    {
+      "index": 15,
+      "word": "ko",
+      "start": 6.157,
+      "end": 6.281,
+      "duration": 0.124
+    },
+    {
+      "index": 16,
+      "word": "door",
+      "start": 6.294,
+      "end": 6.543,
+      "duration": 0.248
+    },
+    {
+      "index": 17,
+      "word": "rakha.",
+      "start": 6.57,
+      "end": 6.943,
+      "duration": 0.372
+    },
+    {
+      "index": 18,
+      "word": "Lekin",
+      "start": 7.644,
+      "end": 7.911,
+      "duration": 0.267
+    },
+    {
+      "index": 19,
+      "word": "aag",
+      "start": 7.941,
+      "end": 8.101,
+      "duration": 0.16
+    },
+    {
+      "index": 20,
+      "word": "ki",
+      "start": 8.7,
+      "end": 8.827,
+      "duration": 0.127
+    },
+    {
+      "index": 21,
+      "word": "sabse",
+      "start": 8.841,
+      "end": 9.157,
+      "duration": 0.316
+    },
+    {
+      "index": 22,
+      "word": "badi",
+      "start": 9.192,
+      "end": 9.445,
+      "duration": 0.253
+    },
+    {
+      "index": 23,
+      "word": "den",
+      "start": 9.473,
+      "end": 9.663,
+      "duration": 0.19
+    },
+    {
+      "index": 24,
+      "word": "shayad",
+      "start": 9.684,
+      "end": 10.064,
+      "duration": 0.38
+    },
+    {
+      "index": 25,
+      "word": "kuch",
+      "start": 10.106,
+      "end": 10.359,
+      "duration": 0.253
+    },
+    {
+      "index": 26,
+      "word": "aur",
+      "start": 10.387,
+      "end": 10.577,
+      "duration": 0.19
+    },
+    {
+      "index": 27,
+      "word": "thi.",
+      "start": 10.899,
+      "end": 11.846,
+      "duration": 0.947
+    }
+  ]
+}

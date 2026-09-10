@@ -101,7 +101,13 @@ def enrich_batch(batch: Batch, db: Session) -> BatchResponse:
     paragraphs = [enrich_paragraph(p, db) for p in batch.paragraphs]
     total_words = sum(p.word_count for p in paragraphs)
     total_characters = sum(p.character_count for p in paragraphs)
-    ready_count = sum(1 for p in paragraphs if p.status == "READY" and p.limit_status != "OVER_LIMIT")
+    ready_count = sum(
+        1 for p in paragraphs
+        if p.status != "COMPLETED"
+        and not p.latest_generation
+        and p.limit_status != "OVER_LIMIT"
+        and (p.transcript and p.transcript.strip())
+    )
     over_limit_count = sum(1 for p in paragraphs if p.limit_status == "OVER_LIMIT")
     completed_count = sum(1 for p in paragraphs if p.status == "COMPLETED")
 
@@ -585,6 +591,9 @@ def generate_all_ready(batch_id: int, db: Session = Depends(get_db)):
     skipped_paras = []
 
     for p in paragraphs:
+        # Skip if already completed or has valid generation
+        if p.status == "COMPLETED" or p.generation_id is not None:
+            continue
         limit_info = TextSplitter.check_limit_status(p.transcript, max_c, max_w)
         if limit_info["is_over_limit"]:
             p.status = "OVER_LIMIT"
@@ -599,7 +608,7 @@ def generate_all_ready(batch_id: int, db: Session = Depends(get_db)):
     if not ready_paras:
         raise HTTPException(
             status_code=400,
-            detail="No valid READY paragraphs found for generation. Note: Over-limit paragraphs must be split first."
+            detail="All paragraphs in this batch are already generated. To re-generate, click Generate on individual paragraph cards."
         )
 
     results = []
@@ -784,63 +793,6 @@ def import_reference_into_batch(batch_id: int, request_data: ParseReferenceReque
     db.commit()
     db.refresh(batch)
     return enrich_batch(batch, db)
-
-
-@router.post("/api/batches/{batch_id}/generate-ready")
-def generate_all_ready(batch_id: int, db: Session = Depends(get_db)):
-    """
-    Sequentially generates audio for all READY paragraphs in this batch.
-    Skips any OVER_LIMIT paragraphs.
-    """
-    from backend.routers.paragraphs import execute_paragraph_generation
-
-    batch = db.query(Batch).filter(Batch.id == batch_id).first()
-    if not batch:
-        raise HTTPException(status_code=404, detail="Batch not found")
-
-    paragraphs = db.query(Paragraph).filter(
-        Paragraph.batch_id == batch_id
-    ).order_by(Paragraph.paragraph_number.asc()).all()
-
-    # Filter only ready paragraphs that are not over limit
-    max_c = int(db.query(AppSetting).filter(AppSetting.key == "MAX_TTS_CHARACTERS").first().value if db.query(AppSetting).filter(AppSetting.key == "MAX_TTS_CHARACTERS").first() else settings.MAX_TTS_CHARACTERS)
-    max_w = int(db.query(AppSetting).filter(AppSetting.key == "MAX_TTS_WORDS").first().value if db.query(AppSetting).filter(AppSetting.key == "MAX_TTS_WORDS").first() else settings.MAX_TTS_WORDS)
-
-    ready_paras = []
-    skipped_paras = []
-
-    for p in paragraphs:
-        limit_info = TextSplitter.check_limit_status(p.transcript, max_c, max_w)
-        if limit_info["is_over_limit"]:
-            p.status = "OVER_LIMIT"
-            skipped_paras.append(p.id)
-        elif p.transcript and p.transcript.strip():
-            ready_paras.append(p)
-        else:
-            skipped_paras.append(p.id)
-
-    db.commit()
-
-    if not ready_paras:
-        raise HTTPException(
-            status_code=400,
-            detail="No valid READY paragraphs found for generation. Note: Over-limit paragraphs must be split first."
-        )
-
-    results = []
-    for p in ready_paras:
-        res = execute_paragraph_generation(p.id, db)
-        results.append(res)
-
-    batch.status = "COMPLETED" if all(r.get("status") == "COMPLETED" for r in results) else "PARTIAL"
-    db.commit()
-
-    return {
-        "batch_id": batch_id,
-        "generated_count": len(results),
-        "skipped_over_limit_count": len(skipped_paras),
-        "results": results
-    }
 
 
 # =========================================================================

@@ -1,0 +1,286 @@
+{
+  "total_words": 40,
+  "total_duration": 14.96,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.289,
+      "end": 0.46,
+      "duration": 0.171
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.479,
+      "end": 0.593,
+      "duration": 0.114
+    },
+    {
+      "index": 3,
+      "word": "badlaav",
+      "start": 0.606,
+      "end": 1.004,
+      "duration": 0.399
+    },
+    {
+      "index": 4,
+      "word": "shuru",
+      "start": 1.049,
+      "end": 1.334,
+      "duration": 0.285
+    },
+    {
+      "index": 5,
+      "word": "kahan",
+      "start": 1.365,
+      "end": 1.65,
+      "duration": 0.285
+    },
+    {
+      "index": 6,
+      "word": "se",
+      "start": 1.682,
+      "end": 1.796,
+      "duration": 0.114
+    },
+    {
+      "index": 7,
+      "word": "hua?",
+      "start": 1.809,
+      "end": 2.036,
+      "duration": 0.228
+    },
+    {
+      "index": 8,
+      "word": "Ek",
+      "start": 2.062,
+      "end": 2.176,
+      "duration": 0.114
+    },
+    {
+      "index": 9,
+      "word": "cheez",
+      "start": 2.188,
+      "end": 2.473,
+      "duration": 0.285
+    },
+    {
+      "index": 10,
+      "word": "se",
+      "start": 3.398,
+      "end": 3.483,
+      "duration": 0.085
+    },
+    {
+      "index": 11,
+      "word": "...",
+      "start": 3.492,
+      "end": 3.619,
+      "duration": 0.127
+    },
+    {
+      "index": 12,
+      "word": "jiski",
+      "start": 3.633,
+      "end": 3.845,
+      "duration": 0.212
+    },
+    {
+      "index": 13,
+      "word": "kahani",
+      "start": 3.869,
+      "end": 4.123,
+      "duration": 0.254
+    },
+    {
+      "index": 14,
+      "word": "humne",
+      "start": 4.614,
+      "end": 4.865,
+      "duration": 0.251
+    },
+    {
+      "index": 15,
+      "word": "pehle",
+      "start": 4.893,
+      "end": 5.144,
+      "duration": 0.251
+    },
+    {
+      "index": 16,
+      "word": "bhi",
+      "start": 5.172,
+      "end": 5.323,
+      "duration": 0.151
+    },
+    {
+      "index": 17,
+      "word": "ki",
+      "start": 5.339,
+      "end": 5.44,
+      "duration": 0.1
+    },
+    {
+      "index": 18,
+      "word": "thi.",
+      "start": 5.451,
+      "end": 5.652,
+      "duration": 0.201
+    },
+    {
+      "index": 19,
+      "word": "Yaad",
+      "start": 5.858,
+      "end": 6.08,
+      "duration": 0.222
+    },
+    {
+      "index": 20,
+      "word": "hai",
+      "start": 6.105,
+      "end": 6.272,
+      "duration": 0.167
+    },
+    {
+      "index": 21,
+      "word": "humne",
+      "start": 6.29,
+      "end": 6.568,
+      "duration": 0.278
+    },
+    {
+      "index": 22,
+      "word": "aag",
+      "start": 7.034,
+      "end": 7.114,
+      "duration": 0.08
+    },
+    {
+      "index": 23,
+      "word": "wali",
+      "start": 7.123,
+      "end": 7.23,
+      "duration": 0.107
+    },
+    {
+      "index": 24,
+      "word": "video",
+      "start": 7.491,
+      "end": 7.751,
+      "duration": 0.26
+    },
+    {
+      "index": 25,
+      "word": "mein",
+      "start": 7.78,
+      "end": 7.988,
+      "duration": 0.208
+    },
+    {
+      "index": 26,
+      "word": "baat",
+      "start": 8.012,
+      "end": 8.22,
+      "duration": 0.208
+    },
+    {
+      "index": 27,
+      "word": "ki",
+      "start": 8.401,
+      "end": 8.504,
+      "duration": 0.103
+    },
+    {
+      "index": 28,
+      "word": "thi?",
+      "start": 8.516,
+      "end": 8.722,
+      "duration": 0.207
+    },
+    {
+      "index": 29,
+      "word": "Insaan",
+      "start": 8.745,
+      "end": 9.055,
+      "duration": 0.31
+    },
+    {
+      "index": 30,
+      "word": "ne",
+      "start": 9.09,
+      "end": 9.193,
+      "duration": 0.103
+    },
+    {
+      "index": 31,
+      "word": "aag",
+      "start": 9.204,
+      "end": 9.359,
+      "duration": 0.155
+    },
+    {
+      "index": 32,
+      "word": "ko",
+      "start": 9.376,
+      "end": 9.48,
+      "duration": 0.103
+    },
+    {
+      "index": 33,
+      "word": "kaise",
+      "start": 9.491,
+      "end": 9.749,
+      "duration": 0.258
+    },
+    {
+      "index": 34,
+      "word": "control",
+      "start": 10.302,
+      "end": 10.608,
+      "duration": 0.306
+    },
+    {
+      "index": 35,
+      "word": "kiya.",
+      "start": 10.642,
+      "end": 10.861,
+      "duration": 0.219
+    },
+    {
+      "index": 36,
+      "word": "Kaise",
+      "start": 11.043,
+      "end": 11.306,
+      "duration": 0.263
+    },
+    {
+      "index": 37,
+      "word": "wo",
+      "start": 11.335,
+      "end": 11.441,
+      "duration": 0.105
+    },
+    {
+      "index": 38,
+      "word": "pehli",
+      "start": 11.452,
+      "end": 11.715,
+      "duration": 0.263
+    },
+    {
+      "index": 39,
+      "word": "technology",
+      "start": 11.745,
+      "end": 12.271,
+      "duration": 0.526
+    },
+    {
+      "index": 40,
+      "word": "thi.",
+      "start": 12.329,
+      "end": 12.54,
+      "duration": 0.21
+    }
+  ]
+}

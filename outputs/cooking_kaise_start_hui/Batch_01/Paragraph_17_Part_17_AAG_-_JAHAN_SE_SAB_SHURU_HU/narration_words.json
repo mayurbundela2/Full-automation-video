@@ -1,0 +1,237 @@
+{
+  "total_words": 33,
+  "total_duration": 17.12,
+  "words": [
+    {
+      "index": 1,
+      "word": "Kisi",
+      "start": 0.278,
+      "end": 0.536,
+      "duration": 0.258
+    },
+    {
+      "index": 2,
+      "word": "ne",
+      "start": 0.565,
+      "end": 0.694,
+      "duration": 0.129
+    },
+    {
+      "index": 3,
+      "word": "...",
+      "start": 0.708,
+      "end": 0.901,
+      "duration": 0.194
+    },
+    {
+      "index": 4,
+      "word": "lakhon",
+      "start": 1.443,
+      "end": 1.869,
+      "duration": 0.426
+    },
+    {
+      "index": 5,
+      "word": "saal",
+      "start": 1.916,
+      "end": 2.2,
+      "duration": 0.284
+    },
+    {
+      "index": 6,
+      "word": "pehle",
+      "start": 2.232,
+      "end": 2.587,
+      "duration": 0.355
+    },
+    {
+      "index": 7,
+      "word": "...",
+      "start": 2.626,
+      "end": 2.839,
+      "duration": 0.213
+    },
+    {
+      "index": 8,
+      "word": "galti",
+      "start": 3.513,
+      "end": 3.872,
+      "duration": 0.359
+    },
+    {
+      "index": 9,
+      "word": "se",
+      "start": 3.912,
+      "end": 4.056,
+      "duration": 0.144
+    },
+    {
+      "index": 10,
+      "word": "ya",
+      "start": 4.072,
+      "end": 4.215,
+      "duration": 0.144
+    },
+    {
+      "index": 11,
+      "word": "jaanbujh",
+      "start": 4.231,
+      "end": 4.806,
+      "duration": 0.575
+    },
+    {
+      "index": 12,
+      "word": "kar",
+      "start": 4.87,
+      "end": 5.086,
+      "duration": 0.216
+    },
+    {
+      "index": 13,
+      "word": "...",
+      "start": 5.11,
+      "end": 5.325,
+      "duration": 0.216
+    },
+    {
+      "index": 14,
+      "word": "maas",
+      "start": 5.716,
+      "end": 5.955,
+      "duration": 0.239
+    },
+    {
+      "index": 15,
+      "word": "ka",
+      "start": 5.982,
+      "end": 6.101,
+      "duration": 0.12
+    },
+    {
+      "index": 16,
+      "word": "ek",
+      "start": 6.115,
+      "end": 6.234,
+      "duration": 0.12
+    },
+    {
+      "index": 17,
+      "word": "tukda",
+      "start": 6.248,
+      "end": 6.546,
+      "duration": 0.299
+    },
+    {
+      "index": 18,
+      "word": "aag",
+      "start": 6.58,
+      "end": 6.759,
+      "duration": 0.179
+    },
+    {
+      "index": 19,
+      "word": "ke",
+      "start": 6.948,
+      "end": 7.065,
+      "duration": 0.117
+    },
+    {
+      "index": 20,
+      "word": "paas",
+      "start": 7.078,
+      "end": 7.312,
+      "duration": 0.234
+    },
+    {
+      "index": 21,
+      "word": "rakha.",
+      "start": 7.637,
+      "end": 8.005,
+      "duration": 0.368
+    },
+    {
+      "index": 22,
+      "word": "Aur",
+      "start": 8.045,
+      "end": 8.229,
+      "duration": 0.184
+    },
+    {
+      "index": 23,
+      "word": "wo",
+      "start": 8.25,
+      "end": 8.372,
+      "duration": 0.123
+    },
+    {
+      "index": 24,
+      "word": "badal",
+      "start": 8.386,
+      "end": 8.692,
+      "duration": 0.306
+    },
+    {
+      "index": 25,
+      "word": "gaya.",
+      "start": 9.613,
+      "end": 9.886,
+      "duration": 0.273
+    },
+    {
+      "index": 26,
+      "word": "Rang",
+      "start": 9.916,
+      "end": 10.135,
+      "duration": 0.218
+    },
+    {
+      "index": 27,
+      "word": "badla.",
+      "start": 10.565,
+      "end": 10.928,
+      "duration": 0.363
+    },
+    {
+      "index": 28,
+      "word": "Smell",
+      "start": 10.969,
+      "end": 11.271,
+      "duration": 0.303
+    },
+    {
+      "index": 29,
+      "word": "badli.",
+      "start": 12.245,
+      "end": 12.577,
+      "duration": 0.332
+    },
+    {
+      "index": 30,
+      "word": "Texture",
+      "start": 12.614,
+      "end": 13.001,
+      "duration": 0.387
+    },
+    {
+      "index": 31,
+      "word": "narm",
+      "start": 13.655,
+      "end": 13.935,
+      "duration": 0.28
+    },
+    {
+      "index": 32,
+      "word": "ho",
+      "start": 13.967,
+      "end": 14.107,
+      "duration": 0.14
+    },
+    {
+      "index": 33,
+      "word": "gayi.",
+      "start": 14.122,
+      "end": 14.473,
+      "duration": 0.351
+    }
+  ]
+}
