@@ -1,0 +1,195 @@
+{
+  "total_words": 27,
+  "total_duration": 11.84,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.429,
+      "end": 0.625,
+      "duration": 0.197
+    },
+    {
+      "index": 2,
+      "word": "us",
+      "start": 0.647,
+      "end": 0.778,
+      "duration": 0.131
+    },
+    {
+      "index": 3,
+      "word": "agni",
+      "start": 0.793,
+      "end": 1.055,
+      "duration": 0.262
+    },
+    {
+      "index": 4,
+      "word": "jaise",
+      "start": 1.084,
+      "end": 1.412,
+      "duration": 0.328
+    },
+    {
+      "index": 5,
+      "word": "vish",
+      "start": 1.448,
+      "end": 1.71,
+      "duration": 0.262
+    },
+    {
+      "index": 6,
+      "word": "ki",
+      "start": 1.739,
+      "end": 1.87,
+      "duration": 0.131
+    },
+    {
+      "index": 7,
+      "word": "jalan",
+      "start": 1.885,
+      "end": 2.212,
+      "duration": 0.328
+    },
+    {
+      "index": 8,
+      "word": "ko",
+      "start": 2.248,
+      "end": 2.379,
+      "duration": 0.131
+    },
+    {
+      "index": 9,
+      "word": "shant",
+      "start": 2.394,
+      "end": 2.722,
+      "duration": 0.328
+    },
+    {
+      "index": 10,
+      "word": "karne",
+      "start": 2.758,
+      "end": 3.085,
+      "duration": 0.328
+    },
+    {
+      "index": 11,
+      "word": "ke",
+      "start": 3.122,
+      "end": 3.253,
+      "duration": 0.131
+    },
+    {
+      "index": 12,
+      "word": "liye...",
+      "start": 3.267,
+      "end": 3.726,
+      "duration": 0.459
+    },
+    {
+      "index": 13,
+      "word": "Ayurveda",
+      "start": 3.777,
+      "end": 4.301,
+      "duration": 0.524
+    },
+    {
+      "index": 14,
+      "word": "ke",
+      "start": 5.271,
+      "end": 5.413,
+      "duration": 0.142
+    },
+    {
+      "index": 15,
+      "word": "anusaar",
+      "start": 5.429,
+      "end": 5.925,
+      "duration": 0.496
+    },
+    {
+      "index": 16,
+      "word": "cannabis",
+      "start": 5.98,
+      "end": 6.547,
+      "duration": 0.567
+    },
+    {
+      "index": 17,
+      "word": "ko",
+      "start": 6.61,
+      "end": 6.752,
+      "duration": 0.142
+    },
+    {
+      "index": 18,
+      "word": "ek",
+      "start": 6.768,
+      "end": 6.91,
+      "duration": 0.142
+    },
+    {
+      "index": 19,
+      "word": "cooling",
+      "start": 6.925,
+      "end": 7.422,
+      "duration": 0.496
+    },
+    {
+      "index": 20,
+      "word": "medicinal",
+      "start": 7.477,
+      "end": 8.115,
+      "duration": 0.638
+    },
+    {
+      "index": 21,
+      "word": "herb",
+      "start": 8.441,
+      "end": 8.85,
+      "duration": 0.409
+    },
+    {
+      "index": 22,
+      "word": "ki",
+      "start": 8.895,
+      "end": 9.1,
+      "duration": 0.204
+    },
+    {
+      "index": 23,
+      "word": "tarah",
+      "start": 9.122,
+      "end": 9.633,
+      "duration": 0.511
+    },
+    {
+      "index": 24,
+      "word": "use",
+      "start": 9.69,
+      "end": 9.996,
+      "duration": 0.307
+    },
+    {
+      "index": 25,
+      "word": "kiya",
+      "start": 10.031,
+      "end": 10.439,
+      "duration": 0.409
+    },
+    {
+      "index": 26,
+      "word": "gaya",
+      "start": 10.485,
+      "end": 10.893,
+      "duration": 0.409
+    },
+    {
+      "index": 27,
+      "word": "tha!",
+      "start": 10.939,
+      "end": 11.348,
+      "duration": 0.409
+    }
+  ]
+}

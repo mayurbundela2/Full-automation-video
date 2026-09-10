@@ -1,16 +1,30 @@
-from typing import List
+from typing import List, Dict, Any
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 from backend.database import get_db
 from backend.models import Project, Batch, Paragraph, Generation
 from backend.schemas import ProjectCreate, ProjectUpdate, ProjectResponse
+from backend.services.project_syncer import ProjectSyncer
 
 router = APIRouter(prefix="/api/projects", tags=["Projects"])
 
 
+@router.post("/sync-outputs")
+def sync_outputs(db: Session = Depends(get_db)) -> Dict[str, Any]:
+    """Scans and synchronizes outputs folder with the SQLite database."""
+    return ProjectSyncer.sync_outputs(db)
+
+
 @router.get("", response_model=List[ProjectResponse])
 def list_projects(db: Session = Depends(get_db)):
+    # Automatically discover any newly added project folders in outputs/
+    try:
+        ProjectSyncer.sync_outputs(db)
+    except Exception as e:
+        # Non-blocking fallback if directory scan encounters transient permission issue
+        pass
+
     projects = db.query(Project).order_by(Project.updated_at.desc()).all()
     results = []
     for p in projects:
@@ -34,6 +48,7 @@ def list_projects(db: Session = Depends(get_db)):
             completed_generations=completed_gen_count
         ))
     return results
+
 
 
 @router.post("", response_model=ProjectResponse)
@@ -126,6 +141,13 @@ def delete_project(project_id: int, db: Session = Depends(get_db)):
     if not project:
         raise HTTPException(status_code=404, detail="Project not found")
 
+    project_name = project.name
+    # Remove project folder from outputs/ on disk
+    try:
+        ProjectSyncer.delete_project_storage(project_name)
+    except Exception as e:
+        pass
+
     db.delete(project)
     db.commit()
-    return {"status": "deleted", "id": project_id}
+    return {"status": "deleted", "id": project_id, "name": project_name}

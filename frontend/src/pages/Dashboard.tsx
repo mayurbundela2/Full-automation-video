@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Plus, FolderKanban, ArrowRight, Trash2, Mic, Clock, FileAudio, Sparkles } from 'lucide-react';
+import { Plus, FolderKanban, ArrowRight, Trash2, Mic, Clock, FileAudio, Sparkles, RefreshCw } from 'lucide-react';
 import { api } from '../api';
 import { Project } from '../types';
 
@@ -10,6 +10,8 @@ interface DashboardProps {
 export const Dashboard: React.FC<DashboardProps> = ({ onSelectProject }) => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
+  const [syncing, setSyncing] = useState(false);
+  const [syncStatus, setSyncStatus] = useState<string | null>(null);
   const [showNewModal, setShowNewModal] = useState(false);
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -25,6 +27,27 @@ export const Dashboard: React.FC<DashboardProps> = ({ onSelectProject }) => {
       console.error(e);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleSyncOutputs = async () => {
+    setSyncing(true);
+    setSyncStatus(null);
+    try {
+      const res = await api.syncOutputs();
+      await fetchProjects();
+      if (res.synced_projects > 0) {
+        setSyncStatus(`Discovered & synced ${res.synced_projects} new project(s) from outputs/!`);
+      } else {
+        setSyncStatus(`All ${res.total_projects} projects in outputs/ are up to date.`);
+      }
+      setTimeout(() => setSyncStatus(null), 4000);
+    } catch (e: any) {
+      console.error(e);
+      setSyncStatus('Failed to sync outputs folder.');
+      setTimeout(() => setSyncStatus(null), 4000);
+    } finally {
+      setSyncing(false);
     }
   };
 
@@ -50,13 +73,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ onSelectProject }) => {
     }
   };
 
-  const handleDelete = async (id: number, e: React.MouseEvent) => {
+  const handleDelete = async (id: number, projectName: string, e: React.MouseEvent) => {
     e.stopPropagation();
-    if (confirm('Are you sure you want to delete this project and all its batches?')) {
+    if (confirm(`Are you sure you want to delete "${projectName}" and all its batches?\n\nThis will permanently delete the project from the database and remove its folder from the outputs/ directory.`)) {
       await api.deleteProject(id);
       fetchProjects();
     }
   };
+
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-8 space-y-8 animate-fadeIn">
@@ -75,17 +99,41 @@ export const Dashboard: React.FC<DashboardProps> = ({ onSelectProject }) => {
           </p>
         </div>
 
-        <button
-          onClick={() => setShowNewModal(true)}
-          className="z-10 flex items-center space-x-2 px-5 py-3 rounded-2xl bg-blue-600 hover:bg-blue-500 active:scale-95 text-white font-bold text-sm shadow-xl shadow-blue-600/30 transition-all whitespace-nowrap"
-        >
-          <Plus className="w-5 h-5" />
-          <span>NEW PROJECT</span>
-        </button>
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 z-10">
+          <button
+            onClick={handleSyncOutputs}
+            disabled={syncing}
+            className="flex items-center justify-center space-x-2 px-4 py-3 rounded-2xl bg-slate-800/90 hover:bg-slate-750 border border-slate-700 active:scale-95 text-slate-200 hover:text-white font-semibold text-xs shadow-lg transition-all whitespace-nowrap"
+            title="Scan outputs/ directory and sync any projects, batches, or paragraphs on disk"
+          >
+            <RefreshCw className={`w-4 h-4 ${syncing ? 'animate-spin text-blue-400' : 'text-blue-400'}`} />
+            <span>{syncing ? 'Syncing...' : 'Sync Outputs Folder'}</span>
+          </button>
+
+          <button
+            onClick={() => setShowNewModal(true)}
+            className="flex items-center justify-center space-x-2 px-5 py-3 rounded-2xl bg-blue-600 hover:bg-blue-500 active:scale-95 text-white font-bold text-sm shadow-xl shadow-blue-600/30 transition-all whitespace-nowrap"
+          >
+            <Plus className="w-5 h-5" />
+            <span>NEW PROJECT</span>
+          </button>
+        </div>
 
         {/* Decorative background glow */}
         <div className="absolute -right-10 -bottom-10 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
       </div>
+
+      {syncStatus && (
+        <div className="flex items-center justify-between px-4 py-3 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-medium animate-fadeIn">
+          <div className="flex items-center space-x-2">
+            <Sparkles className="w-4 h-4 text-blue-400" />
+            <span>{syncStatus}</span>
+          </div>
+          <button onClick={() => setSyncStatus(null)} className="text-blue-400 hover:text-blue-200">
+            &times;
+          </button>
+        </div>
+      )}
 
       {/* Projects Grid Header */}
       <div className="flex items-center justify-between">
@@ -114,16 +162,25 @@ export const Dashboard: React.FC<DashboardProps> = ({ onSelectProject }) => {
           <div className="space-y-1">
             <h3 className="text-base font-bold text-white">No projects yet</h3>
             <p className="text-xs text-studio-textMuted max-w-sm mx-auto">
-              Create your first project (e.g., "Cannabis Documentary") to start batching narration scripts.
+              Create your first project (e.g., "Cannabis Documentary") or place folders in the outputs/ directory.
             </p>
           </div>
-          <button
-            onClick={() => setShowNewModal(true)}
-            className="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow transition-all"
-          >
-            <Plus className="w-4 h-4" />
-            <span>Create First Project</span>
-          </button>
+          <div className="flex items-center justify-center gap-3">
+            <button
+              onClick={handleSyncOutputs}
+              className="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold shadow transition-all"
+            >
+              <RefreshCw className="w-3.5 h-3.5" />
+              <span>Sync from Outputs</span>
+            </button>
+            <button
+              onClick={() => setShowNewModal(true)}
+              className="inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow transition-all"
+            >
+              <Plus className="w-4 h-4" />
+              <span>Create First Project</span>
+            </button>
+          </div>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -142,9 +199,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ onSelectProject }) => {
                   </div>
 
                   <button
-                    onClick={(e) => handleDelete(proj.id, e)}
+                    onClick={(e) => handleDelete(proj.id, proj.name, e)}
                     className="p-2 rounded-lg text-studio-textMuted hover:text-rose-400 hover:bg-rose-500/15 transition-all"
-                    title="Delete project"
+                    title="Delete project from database and outputs/"
                   >
                     <Trash2 className="w-4 h-4" />
                   </button>

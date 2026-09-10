@@ -115,6 +115,18 @@ export const api = {
   },
 
   // Projects
+  async syncOutputs(): Promise<{ synced_projects: number; total_projects: number }> {
+    if (await checkBackend()) {
+      try {
+        const res = await fetch(`${API_BASE}/projects/sync-outputs`, { method: 'POST' });
+        if (res.ok) return res.json();
+      } catch (e) {
+        console.warn('syncOutputs failed:', e);
+      }
+    }
+    return { synced_projects: 0, total_projects: (await MobileStorage.getProjects()).length };
+  },
+
   async getProjects(): Promise<Project[]> {
     if (await checkBackend()) {
       try {

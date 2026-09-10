@@ -1,0 +1,104 @@
+{
+  "total_words": 14,
+  "total_duration": 6.64,
+  "words": [
+    {
+      "index": 1,
+      "word": "Sher",
+      "start": 0.259,
+      "end": 0.47,
+      "duration": 0.211
+    },
+    {
+      "index": 2,
+      "word": "shikaar",
+      "start": 0.494,
+      "end": 0.863,
+      "duration": 0.37
+    },
+    {
+      "index": 3,
+      "word": "karke",
+      "start": 0.904,
+      "end": 1.169,
+      "duration": 0.264
+    },
+    {
+      "index": 4,
+      "word": "turant",
+      "start": 1.198,
+      "end": 1.515,
+      "duration": 0.317
+    },
+    {
+      "index": 5,
+      "word": "khaata",
+      "start": 1.701,
+      "end": 2.048,
+      "duration": 0.347
+    },
+    {
+      "index": 6,
+      "word": "hai...",
+      "start": 2.086,
+      "end": 2.433,
+      "duration": 0.347
+    },
+    {
+      "index": 7,
+      "word": "Bandar",
+      "start": 3.423,
+      "end": 3.81,
+      "duration": 0.387
+    },
+    {
+      "index": 8,
+      "word": "phal",
+      "start": 3.853,
+      "end": 4.112,
+      "duration": 0.258
+    },
+    {
+      "index": 9,
+      "word": "todkar",
+      "start": 4.14,
+      "end": 4.528,
+      "duration": 0.387
+    },
+    {
+      "index": 10,
+      "word": "seedha",
+      "start": 4.571,
+      "end": 4.958,
+      "duration": 0.387
+    },
+    {
+      "index": 11,
+      "word": "muh",
+      "start": 5.001,
+      "end": 5.195,
+      "duration": 0.194
+    },
+    {
+      "index": 12,
+      "word": "mein",
+      "start": 5.217,
+      "end": 5.475,
+      "duration": 0.258
+    },
+    {
+      "index": 13,
+      "word": "daalta",
+      "start": 5.504,
+      "end": 5.891,
+      "duration": 0.387
+    },
+    {
+      "index": 14,
+      "word": "hai.",
+      "start": 5.934,
+      "end": 6.192,
+      "duration": 0.258
+    }
+  ]
+}

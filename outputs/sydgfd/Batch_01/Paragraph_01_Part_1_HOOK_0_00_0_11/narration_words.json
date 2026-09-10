@@ -1,0 +1,167 @@
+{
+  "total_words": 23,
+  "total_duration": 9.76,
+  "words": [
+    {
+      "index": 1,
+      "word": "Kya",
+      "start": 0.0,
+      "end": 0.253,
+      "duration": 0.253
+    },
+    {
+      "index": 2,
+      "word": "Shiva",
+      "start": 0.282,
+      "end": 0.704,
+      "duration": 0.422
+    },
+    {
+      "index": 3,
+      "word": "ne...",
+      "start": 0.751,
+      "end": 1.173,
+      "duration": 0.422
+    },
+    {
+      "index": 4,
+      "word": "sach",
+      "start": 1.22,
+      "end": 1.558,
+      "duration": 0.338
+    },
+    {
+      "index": 5,
+      "word": "mein",
+      "start": 1.595,
+      "end": 1.933,
+      "duration": 0.338
+    },
+    {
+      "index": 6,
+      "word": "bhang",
+      "start": 1.971,
+      "end": 2.393,
+      "duration": 0.422
+    },
+    {
+      "index": 7,
+      "word": "piya",
+      "start": 2.44,
+      "end": 2.778,
+      "duration": 0.338
+    },
+    {
+      "index": 8,
+      "word": "tha?",
+      "start": 2.815,
+      "end": 3.153,
+      "duration": 0.338
+    },
+    {
+      "index": 9,
+      "word": "Sirf",
+      "start": 3.191,
+      "end": 3.529,
+      "duration": 0.338
+    },
+    {
+      "index": 10,
+      "word": "ek",
+      "start": 3.566,
+      "end": 3.735,
+      "duration": 0.169
+    },
+    {
+      "index": 11,
+      "word": "myth",
+      "start": 3.754,
+      "end": 4.092,
+      "duration": 0.338
+    },
+    {
+      "index": 12,
+      "word": "nahi",
+      "start": 4.129,
+      "end": 4.467,
+      "duration": 0.338
+    },
+    {
+      "index": 13,
+      "word": "hai...",
+      "start": 4.505,
+      "end": 5.011,
+      "duration": 0.507
+    },
+    {
+      "index": 14,
+      "word": "iske",
+      "start": 5.068,
+      "end": 5.406,
+      "duration": 0.338
+    },
+    {
+      "index": 15,
+      "word": "peechhe",
+      "start": 5.443,
+      "end": 6.034,
+      "duration": 0.591
+    },
+    {
+      "index": 16,
+      "word": "ek",
+      "start": 6.1,
+      "end": 6.269,
+      "duration": 0.169
+    },
+    {
+      "index": 17,
+      "word": "teen",
+      "start": 6.288,
+      "end": 6.626,
+      "duration": 0.338
+    },
+    {
+      "index": 18,
+      "word": "hazaar",
+      "start": 6.663,
+      "end": 7.17,
+      "duration": 0.507
+    },
+    {
+      "index": 19,
+      "word": "saal",
+      "start": 7.226,
+      "end": 7.564,
+      "duration": 0.338
+    },
+    {
+      "index": 20,
+      "word": "purani...",
+      "start": 7.602,
+      "end": 8.362,
+      "duration": 0.76
+    },
+    {
+      "index": 21,
+      "word": "real",
+      "start": 8.446,
+      "end": 8.784,
+      "duration": 0.338
+    },
+    {
+      "index": 22,
+      "word": "kahani",
+      "start": 8.822,
+      "end": 9.328,
+      "duration": 0.507
+    },
+    {
+      "index": 23,
+      "word": "hai!",
+      "start": 9.385,
+      "end": 9.722,
+      "duration": 0.338
+    }
+  ]
+}

@@ -1,0 +1,573 @@
+{
+  "total_words": 81,
+  "total_duration": 27.81,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aaj",
+      "start": 0.0,
+      "end": 0.16,
+      "duration": 0.16
+    },
+    {
+      "index": 2,
+      "word": "tumne",
+      "start": 0.178,
+      "end": 0.445,
+      "duration": 0.267
+    },
+    {
+      "index": 3,
+      "word": "kya",
+      "start": 0.475,
+      "end": 0.635,
+      "duration": 0.16
+    },
+    {
+      "index": 4,
+      "word": "khaya?",
+      "start": 0.653,
+      "end": 0.973,
+      "duration": 0.321
+    },
+    {
+      "index": 5,
+      "word": "Maggie?",
+      "start": 1.198,
+      "end": 1.518,
+      "duration": 0.32
+    },
+    {
+      "index": 6,
+      "word": "Pizza?",
+      "start": 1.749,
+      "end": 2.025,
+      "duration": 0.276
+    },
+    {
+      "index": 7,
+      "word": "Ghar",
+      "start": 2.248,
+      "end": 2.456,
+      "duration": 0.208
+    },
+    {
+      "index": 8,
+      "word": "ka",
+      "start": 2.479,
+      "end": 2.583,
+      "duration": 0.104
+    },
+    {
+      "index": 9,
+      "word": "dal",
+      "start": 2.594,
+      "end": 2.75,
+      "duration": 0.156
+    },
+    {
+      "index": 10,
+      "word": "chawal?",
+      "start": 2.767,
+      "end": 3.131,
+      "duration": 0.363
+    },
+    {
+      "index": 11,
+      "word": "Ya",
+      "start": 3.366,
+      "end": 3.51,
+      "duration": 0.144
+    },
+    {
+      "index": 12,
+      "word": "raat",
+      "start": 3.526,
+      "end": 3.815,
+      "duration": 0.289
+    },
+    {
+      "index": 13,
+      "word": "ke",
+      "start": 3.847,
+      "end": 3.992,
+      "duration": 0.144
+    },
+    {
+      "index": 14,
+      "word": "do",
+      "start": 4.008,
+      "end": 4.152,
+      "duration": 0.144
+    },
+    {
+      "index": 15,
+      "word": "baje",
+      "start": 4.168,
+      "end": 4.457,
+      "duration": 0.289
+    },
+    {
+      "index": 16,
+      "word": "wala",
+      "start": 4.489,
+      "end": 4.778,
+      "duration": 0.289
+    },
+    {
+      "index": 17,
+      "word": "Kurkure?",
+      "start": 4.81,
+      "end": 5.388,
+      "duration": 0.578
+    },
+    {
+      "index": 1,
+      "word": "Chahe",
+      "start": 5.7,
+      "end": 5.922,
+      "duration": 0.222
+    },
+    {
+      "index": 2,
+      "word": "kuch",
+      "start": 6.145,
+      "end": 6.318,
+      "duration": 0.173
+    },
+    {
+      "index": 3,
+      "word": "bhi",
+      "start": 6.337,
+      "end": 6.467,
+      "duration": 0.13
+    },
+    {
+      "index": 4,
+      "word": "khaya",
+      "start": 6.481,
+      "end": 6.697,
+      "duration": 0.216
+    },
+    {
+      "index": 5,
+      "word": "ho...",
+      "start": 6.721,
+      "end": 6.937,
+      "duration": 0.216
+    },
+    {
+      "index": 6,
+      "word": "ek",
+      "start": 7.155,
+      "end": 7.215,
+      "duration": 0.06
+    },
+    {
+      "index": 7,
+      "word": "cheez",
+      "start": 7.197,
+      "end": 7.291,
+      "duration": 0.095
+    },
+    {
+      "index": 8,
+      "word": "common",
+      "start": 7.475,
+      "end": 7.714,
+      "duration": 0.239
+    },
+    {
+      "index": 9,
+      "word": "thi.",
+      "start": 7.74,
+      "end": 7.9,
+      "duration": 0.159
+    },
+    {
+      "index": 10,
+      "word": "Wo",
+      "start": 7.917,
+      "end": 7.997,
+      "duration": 0.08
+    },
+    {
+      "index": 11,
+      "word": "pakaya",
+      "start": 8.006,
+      "end": 8.244,
+      "duration": 0.239
+    },
+    {
+      "index": 12,
+      "word": "hua",
+      "start": 8.46,
+      "end": 8.548,
+      "duration": 0.088
+    },
+    {
+      "index": 13,
+      "word": "tha...",
+      "start": 8.558,
+      "end": 8.733,
+      "duration": 0.176
+    },
+    {
+      "index": 14,
+      "word": "Aur",
+      "start": 8.947,
+      "end": 9.074,
+      "duration": 0.127
+    },
+    {
+      "index": 15,
+      "word": "ye",
+      "start": 9.089,
+      "end": 9.174,
+      "duration": 0.085
+    },
+    {
+      "index": 16,
+      "word": "baat",
+      "start": 9.183,
+      "end": 9.353,
+      "duration": 0.17
+    },
+    {
+      "index": 17,
+      "word": "itni",
+      "start": 9.372,
+      "end": 9.542,
+      "duration": 0.17
+    },
+    {
+      "index": 18,
+      "word": "normal",
+      "start": 9.561,
+      "end": 9.816,
+      "duration": 0.255
+    },
+    {
+      "index": 19,
+      "word": "lagti",
+      "start": 10.005,
+      "end": 10.458,
+      "duration": 0.453
+    },
+    {
+      "index": 20,
+      "word": "hai",
+      "start": 10.508,
+      "end": 10.78,
+      "duration": 0.272
+    },
+    {
+      "index": 21,
+      "word": "ki",
+      "start": 10.81,
+      "end": 10.992,
+      "duration": 0.181
+    },
+    {
+      "index": 22,
+      "word": "tumne",
+      "start": 11.012,
+      "end": 11.465,
+      "duration": 0.453
+    },
+    {
+      "index": 23,
+      "word": "kabhi",
+      "start": 11.515,
+      "end": 11.968,
+      "duration": 0.453
+    },
+    {
+      "index": 24,
+      "word": "socha",
+      "start": 12.019,
+      "end": 12.472,
+      "duration": 0.453
+    },
+    {
+      "index": 25,
+      "word": "bhi",
+      "start": 12.522,
+      "end": 12.794,
+      "duration": 0.272
+    },
+    {
+      "index": 26,
+      "word": "nahi",
+      "start": 12.824,
+      "end": 13.186,
+      "duration": 0.362
+    },
+    {
+      "index": 27,
+      "word": "hoga.",
+      "start": 13.227,
+      "end": 13.68,
+      "duration": 0.453
+    },
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 13.98,
+      "end": 14.288,
+      "duration": 0.308
+    },
+    {
+      "index": 2,
+      "word": "ruk...",
+      "start": 14.322,
+      "end": 14.691,
+      "duration": 0.369
+    },
+    {
+      "index": 3,
+      "word": "Duniya",
+      "start": 14.921,
+      "end": 15.29,
+      "duration": 0.369
+    },
+    {
+      "index": 4,
+      "word": "mein",
+      "start": 15.331,
+      "end": 15.578,
+      "duration": 0.246
+    },
+    {
+      "index": 5,
+      "word": "millions",
+      "start": 15.605,
+      "end": 16.097,
+      "duration": 0.492
+    },
+    {
+      "index": 6,
+      "word": "of",
+      "start": 16.152,
+      "end": 16.275,
+      "duration": 0.123
+    },
+    {
+      "index": 7,
+      "word": "animal",
+      "start": 16.289,
+      "end": 16.658,
+      "duration": 0.369
+    },
+    {
+      "index": 8,
+      "word": "species",
+      "start": 16.699,
+      "end": 17.13,
+      "duration": 0.431
+    },
+    {
+      "index": 9,
+      "word": "hain.",
+      "start": 17.178,
+      "end": 17.486,
+      "duration": 0.308
+    },
+    {
+      "index": 10,
+      "word": "Har",
+      "start": 17.52,
+      "end": 17.704,
+      "duration": 0.185
+    },
+    {
+      "index": 11,
+      "word": "ek",
+      "start": 17.725,
+      "end": 17.848,
+      "duration": 0.123
+    },
+    {
+      "index": 12,
+      "word": "janwar,",
+      "start": 17.862,
+      "end": 18.293,
+      "duration": 0.431
+    },
+    {
+      "index": 13,
+      "word": "har",
+      "start": 18.34,
+      "end": 18.525,
+      "duration": 0.185
+    },
+    {
+      "index": 14,
+      "word": "ek",
+      "start": 18.546,
+      "end": 18.669,
+      "duration": 0.123
+    },
+    {
+      "index": 15,
+      "word": "pakshi,",
+      "start": 18.682,
+      "end": 19.113,
+      "duration": 0.431
+    },
+    {
+      "index": 16,
+      "word": "har",
+      "start": 19.161,
+      "end": 19.346,
+      "duration": 0.185
+    },
+    {
+      "index": 17,
+      "word": "ek",
+      "start": 19.366,
+      "end": 19.489,
+      "duration": 0.123
+    },
+    {
+      "index": 18,
+      "word": "machhli...",
+      "start": 19.503,
+      "end": 20.118,
+      "duration": 0.615
+    },
+    {
+      "index": 19,
+      "word": "sab",
+      "start": 20.187,
+      "end": 20.371,
+      "duration": 0.185
+    },
+    {
+      "index": 20,
+      "word": "kachha",
+      "start": 20.577,
+      "end": 20.969,
+      "duration": 0.392
+    },
+    {
+      "index": 21,
+      "word": "khaana",
+      "start": 21.012,
+      "end": 21.404,
+      "duration": 0.392
+    },
+    {
+      "index": 22,
+      "word": "khaate",
+      "start": 21.447,
+      "end": 21.839,
+      "duration": 0.392
+    },
+    {
+      "index": 23,
+      "word": "hain.",
+      "start": 21.882,
+      "end": 22.209,
+      "duration": 0.326
+    },
+    {
+      "index": 1,
+      "word": "Sher",
+      "start": 22.49,
+      "end": 22.694,
+      "duration": 0.204
+    },
+    {
+      "index": 2,
+      "word": "shikaar",
+      "start": 22.716,
+      "end": 23.072,
+      "duration": 0.356
+    },
+    {
+      "index": 3,
+      "word": "karke",
+      "start": 23.112,
+      "end": 23.366,
+      "duration": 0.254
+    },
+    {
+      "index": 4,
+      "word": "turant",
+      "start": 23.395,
+      "end": 23.7,
+      "duration": 0.305
+    },
+    {
+      "index": 5,
+      "word": "khaata",
+      "start": 23.885,
+      "end": 24.232,
+      "duration": 0.347
+    },
+    {
+      "index": 6,
+      "word": "hai...",
+      "start": 24.27,
+      "end": 24.617,
+      "duration": 0.347
+    },
+    {
+      "index": 7,
+      "word": "Bandar",
+      "start": 24.841,
+      "end": 25.228,
+      "duration": 0.387
+    },
+    {
+      "index": 8,
+      "word": "phal",
+      "start": 25.271,
+      "end": 25.529,
+      "duration": 0.258
+    },
+    {
+      "index": 9,
+      "word": "todkar",
+      "start": 25.558,
+      "end": 25.945,
+      "duration": 0.387
+    },
+    {
+      "index": 10,
+      "word": "seedha",
+      "start": 25.988,
+      "end": 26.375,
+      "duration": 0.387
+    },
+    {
+      "index": 11,
+      "word": "muh",
+      "start": 26.418,
+      "end": 26.611,
+      "duration": 0.194
+    },
+    {
+      "index": 12,
+      "word": "mein",
+      "start": 26.633,
+      "end": 26.891,
+      "duration": 0.258
+    },
+    {
+      "index": 13,
+      "word": "daalta",
+      "start": 26.919,
+      "end": 27.306,
+      "duration": 0.387
+    },
+    {
+      "index": 14,
+      "word": "hai.",
+      "start": 27.349,
+      "end": 27.607,
+      "duration": 0.258
+    }
+  ]
+}

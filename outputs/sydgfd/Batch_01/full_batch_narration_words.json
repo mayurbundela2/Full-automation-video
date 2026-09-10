@@ -1,0 +1,545 @@
+{
+  "total_words": 77,
+  "total_duration": 32.52,
+  "words": [
+    {
+      "index": 1,
+      "word": "Kya",
+      "start": 0.265,
+      "end": 0.422,
+      "duration": 0.157
+    },
+    {
+      "index": 2,
+      "word": "Shiva",
+      "start": 0.44,
+      "end": 0.702,
+      "duration": 0.262
+    },
+    {
+      "index": 3,
+      "word": "ne...",
+      "start": 0.731,
+      "end": 0.993,
+      "duration": 0.262
+    },
+    {
+      "index": 4,
+      "word": "sach",
+      "start": 1.562,
+      "end": 1.787,
+      "duration": 0.225
+    },
+    {
+      "index": 5,
+      "word": "mein",
+      "start": 1.812,
+      "end": 2.038,
+      "duration": 0.225
+    },
+    {
+      "index": 6,
+      "word": "bhang",
+      "start": 2.063,
+      "end": 2.344,
+      "duration": 0.282
+    },
+    {
+      "index": 7,
+      "word": "piya",
+      "start": 2.375,
+      "end": 2.601,
+      "duration": 0.225
+    },
+    {
+      "index": 8,
+      "word": "tha?",
+      "start": 2.626,
+      "end": 2.851,
+      "duration": 0.225
+    },
+    {
+      "index": 9,
+      "word": "Sirf",
+      "start": 3.73,
+      "end": 3.946,
+      "duration": 0.216
+    },
+    {
+      "index": 10,
+      "word": "ek",
+      "start": 3.97,
+      "end": 4.078,
+      "duration": 0.108
+    },
+    {
+      "index": 11,
+      "word": "myth",
+      "start": 4.09,
+      "end": 4.305,
+      "duration": 0.216
+    },
+    {
+      "index": 12,
+      "word": "nahi",
+      "start": 4.329,
+      "end": 4.545,
+      "duration": 0.216
+    },
+    {
+      "index": 13,
+      "word": "hai...",
+      "start": 4.569,
+      "end": 4.892,
+      "duration": 0.324
+    },
+    {
+      "index": 14,
+      "word": "iske",
+      "start": 4.928,
+      "end": 5.144,
+      "duration": 0.216
+    },
+    {
+      "index": 15,
+      "word": "peechhe",
+      "start": 5.355,
+      "end": 5.722,
+      "duration": 0.367
+    },
+    {
+      "index": 16,
+      "word": "ek",
+      "start": 5.762,
+      "end": 5.867,
+      "duration": 0.105
+    },
+    {
+      "index": 17,
+      "word": "teen",
+      "start": 5.879,
+      "end": 6.088,
+      "duration": 0.21
+    },
+    {
+      "index": 18,
+      "word": "hazaar",
+      "start": 6.112,
+      "end": 6.426,
+      "duration": 0.314
+    },
+    {
+      "index": 19,
+      "word": "saal",
+      "start": 6.613,
+      "end": 6.829,
+      "duration": 0.216
+    },
+    {
+      "index": 20,
+      "word": "purani...",
+      "start": 6.853,
+      "end": 7.34,
+      "duration": 0.486
+    },
+    {
+      "index": 21,
+      "word": "real",
+      "start": 7.394,
+      "end": 7.61,
+      "duration": 0.216
+    },
+    {
+      "index": 22,
+      "word": "kahani",
+      "start": 7.634,
+      "end": 7.958,
+      "duration": 0.324
+    },
+    {
+      "index": 23,
+      "word": "hai!",
+      "start": 8.267,
+      "end": 9.184,
+      "duration": 0.917
+    },
+    {
+      "index": 1,
+      "word": "Puranon",
+      "start": 10.44,
+      "end": 10.899,
+      "duration": 0.459
+    },
+    {
+      "index": 2,
+      "word": "ke",
+      "start": 10.95,
+      "end": 11.081,
+      "duration": 0.131
+    },
+    {
+      "index": 3,
+      "word": "anusaar...",
+      "start": 11.096,
+      "end": 11.751,
+      "duration": 0.656
+    },
+    {
+      "index": 4,
+      "word": "jab",
+      "start": 12.013,
+      "end": 12.245,
+      "duration": 0.232
+    },
+    {
+      "index": 5,
+      "word": "Samudra",
+      "start": 12.271,
+      "end": 12.812,
+      "duration": 0.541
+    },
+    {
+      "index": 6,
+      "word": "Manthan",
+      "start": 12.872,
+      "end": 13.414,
+      "duration": 0.541
+    },
+    {
+      "index": 7,
+      "word": "ke",
+      "start": 13.474,
+      "end": 13.629,
+      "duration": 0.155
+    },
+    {
+      "index": 8,
+      "word": "dauraan",
+      "start": 13.646,
+      "end": 14.187,
+      "duration": 0.541
+    },
+    {
+      "index": 9,
+      "word": "Halahala",
+      "start": 14.247,
+      "end": 14.866,
+      "duration": 0.619
+    },
+    {
+      "index": 10,
+      "word": "vish",
+      "start": 14.935,
+      "end": 15.244,
+      "duration": 0.309
+    },
+    {
+      "index": 11,
+      "word": "nikla...",
+      "start": 15.279,
+      "end": 15.897,
+      "duration": 0.619
+    },
+    {
+      "index": 12,
+      "word": "Toh",
+      "start": 15.966,
+      "end": 16.198,
+      "duration": 0.232
+    },
+    {
+      "index": 13,
+      "word": "sansaar",
+      "start": 16.434,
+      "end": 17.027,
+      "duration": 0.593
+    },
+    {
+      "index": 14,
+      "word": "ko",
+      "start": 17.093,
+      "end": 17.262,
+      "duration": 0.169
+    },
+    {
+      "index": 15,
+      "word": "bachane",
+      "start": 17.281,
+      "end": 17.873,
+      "duration": 0.593
+    },
+    {
+      "index": 16,
+      "word": "ke",
+      "start": 17.939,
+      "end": 18.109,
+      "duration": 0.169
+    },
+    {
+      "index": 17,
+      "word": "liye...",
+      "start": 18.127,
+      "end": 18.72,
+      "duration": 0.593
+    },
+    {
+      "index": 18,
+      "word": "Lord",
+      "start": 18.786,
+      "end": 19.125,
+      "duration": 0.339
+    },
+    {
+      "index": 19,
+      "word": "Shiva",
+      "start": 19.162,
+      "end": 19.586,
+      "duration": 0.423
+    },
+    {
+      "index": 20,
+      "word": "ne",
+      "start": 19.633,
+      "end": 19.802,
+      "duration": 0.169
+    },
+    {
+      "index": 21,
+      "word": "use",
+      "start": 19.821,
+      "end": 20.075,
+      "duration": 0.254
+    },
+    {
+      "index": 22,
+      "word": "apne",
+      "start": 20.103,
+      "end": 20.442,
+      "duration": 0.339
+    },
+    {
+      "index": 23,
+      "word": "gale",
+      "start": 20.479,
+      "end": 20.818,
+      "duration": 0.339
+    },
+    {
+      "index": 24,
+      "word": "mein",
+      "start": 20.856,
+      "end": 21.194,
+      "duration": 0.339
+    },
+    {
+      "index": 25,
+      "word": "dharan",
+      "start": 21.232,
+      "end": 21.74,
+      "duration": 0.508
+    },
+    {
+      "index": 26,
+      "word": "kar",
+      "start": 21.796,
+      "end": 22.05,
+      "duration": 0.254
+    },
+    {
+      "index": 27,
+      "word": "liya!",
+      "start": 22.079,
+      "end": 22.502,
+      "duration": 0.423
+    },
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 23.547,
+      "end": 23.727,
+      "duration": 0.18
+    },
+    {
+      "index": 2,
+      "word": "us",
+      "start": 23.747,
+      "end": 23.867,
+      "duration": 0.12
+    },
+    {
+      "index": 3,
+      "word": "agni",
+      "start": 23.88,
+      "end": 24.12,
+      "duration": 0.24
+    },
+    {
+      "index": 4,
+      "word": "jaise",
+      "start": 24.147,
+      "end": 24.447,
+      "duration": 0.3
+    },
+    {
+      "index": 5,
+      "word": "vish",
+      "start": 24.48,
+      "end": 24.72,
+      "duration": 0.24
+    },
+    {
+      "index": 6,
+      "word": "ki",
+      "start": 24.747,
+      "end": 24.867,
+      "duration": 0.12
+    },
+    {
+      "index": 7,
+      "word": "jalan",
+      "start": 24.88,
+      "end": 25.18,
+      "duration": 0.3
+    },
+    {
+      "index": 8,
+      "word": "ko",
+      "start": 25.213,
+      "end": 25.333,
+      "duration": 0.12
+    },
+    {
+      "index": 9,
+      "word": "shant",
+      "start": 25.347,
+      "end": 25.647,
+      "duration": 0.3
+    },
+    {
+      "index": 10,
+      "word": "karne",
+      "start": 25.68,
+      "end": 25.98,
+      "duration": 0.3
+    },
+    {
+      "index": 11,
+      "word": "ke",
+      "start": 26.013,
+      "end": 26.133,
+      "duration": 0.12
+    },
+    {
+      "index": 12,
+      "word": "liye...",
+      "start": 26.147,
+      "end": 26.567,
+      "duration": 0.42
+    },
+    {
+      "index": 13,
+      "word": "Ayurveda",
+      "start": 26.613,
+      "end": 27.093,
+      "duration": 0.48
+    },
+    {
+      "index": 14,
+      "word": "ke",
+      "start": 27.147,
+      "end": 27.267,
+      "duration": 0.12
+    },
+    {
+      "index": 15,
+      "word": "anusaar",
+      "start": 27.28,
+      "end": 27.7,
+      "duration": 0.42
+    },
+    {
+      "index": 16,
+      "word": "cannabis",
+      "start": 27.746,
+      "end": 28.226,
+      "duration": 0.48
+    },
+    {
+      "index": 17,
+      "word": "ko",
+      "start": 28.28,
+      "end": 28.4,
+      "duration": 0.12
+    },
+    {
+      "index": 18,
+      "word": "ek",
+      "start": 28.413,
+      "end": 28.533,
+      "duration": 0.12
+    },
+    {
+      "index": 19,
+      "word": "cooling",
+      "start": 28.546,
+      "end": 28.966,
+      "duration": 0.42
+    },
+    {
+      "index": 20,
+      "word": "medicinal",
+      "start": 29.2,
+      "end": 29.272,
+      "duration": 0.072
+    },
+    {
+      "index": 21,
+      "word": "herb",
+      "start": 29.476,
+      "end": 29.848,
+      "duration": 0.372
+    },
+    {
+      "index": 22,
+      "word": "ki",
+      "start": 29.89,
+      "end": 30.076,
+      "duration": 0.186
+    },
+    {
+      "index": 23,
+      "word": "tarah",
+      "start": 30.097,
+      "end": 30.562,
+      "duration": 0.465
+    },
+    {
+      "index": 24,
+      "word": "use",
+      "start": 30.614,
+      "end": 30.893,
+      "duration": 0.279
+    },
+    {
+      "index": 25,
+      "word": "kiya",
+      "start": 30.924,
+      "end": 31.296,
+      "duration": 0.372
+    },
+    {
+      "index": 26,
+      "word": "gaya",
+      "start": 31.338,
+      "end": 31.71,
+      "duration": 0.372
+    },
+    {
+      "index": 27,
+      "word": "tha!",
+      "start": 31.751,
+      "end": 32.124,
+      "duration": 0.372
+    }
+  ]
+}

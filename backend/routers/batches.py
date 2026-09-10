@@ -22,6 +22,7 @@ from backend.services.audio_converter import AudioConverter
 from backend.services.waveform_service import WaveformService
 from backend.services.subtitle_service import SubtitleService
 from backend.services.delivery_provider import LocalDeliveryProvider, sanitize_filename
+from backend.services.project_syncer import ProjectSyncer
 from backend.config.settings import settings
 
 router = APIRouter(tags=["Batches"])
@@ -670,9 +671,18 @@ def delete_batch(batch_id: int, db: Session = Depends(get_db)):
     batch = db.query(Batch).filter(Batch.id == batch_id).first()
     if not batch:
         raise HTTPException(status_code=404, detail="Batch not found")
+
+    project = db.query(Project).filter(Project.id == batch.project_id).first()
+    if project:
+        try:
+            ProjectSyncer.delete_batch_storage(project.name, batch.batch_number)
+        except Exception:
+            pass
+
     db.delete(batch)
     db.commit()
     return {"status": "deleted", "id": batch_id}
+
 
 
 @router.post("/api/batches/{batch_id}/parse-reference", response_model=ParseReferenceResponse)
