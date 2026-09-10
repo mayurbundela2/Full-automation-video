@@ -1,0 +1,328 @@
+{
+  "total_words": 46,
+  "total_duration": 20.8,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.287,
+      "end": 0.468,
+      "duration": 0.181
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.488,
+      "end": 0.609,
+      "duration": 0.121
+    },
+    {
+      "index": 3,
+      "word": "sirf",
+      "start": 0.622,
+      "end": 0.863,
+      "duration": 0.241
+    },
+    {
+      "index": 4,
+      "word": "modern",
+      "start": 0.89,
+      "end": 1.252,
+      "duration": 0.362
+    },
+    {
+      "index": 5,
+      "word": "humans",
+      "start": 1.292,
+      "end": 1.654,
+      "duration": 0.362
+    },
+    {
+      "index": 6,
+      "word": "ki",
+      "start": 1.695,
+      "end": 1.815,
+      "duration": 0.121
+    },
+    {
+      "index": 7,
+      "word": "kahani",
+      "start": 1.829,
+      "end": 2.191,
+      "duration": 0.362
+    },
+    {
+      "index": 8,
+      "word": "nahi",
+      "start": 2.231,
+      "end": 2.472,
+      "duration": 0.241
+    },
+    {
+      "index": 9,
+      "word": "hai.",
+      "start": 2.499,
+      "end": 2.74,
+      "duration": 0.241
+    },
+    {
+      "index": 10,
+      "word": "Kyunki",
+      "start": 3.114,
+      "end": 3.451,
+      "duration": 0.337
+    },
+    {
+      "index": 11,
+      "word": "modern",
+      "start": 3.489,
+      "end": 3.826,
+      "duration": 0.337
+    },
+    {
+      "index": 12,
+      "word": "humans",
+      "start": 3.863,
+      "end": 4.201,
+      "duration": 0.337
+    },
+    {
+      "index": 13,
+      "word": "se",
+      "start": 4.238,
+      "end": 4.351,
+      "duration": 0.112
+    },
+    {
+      "index": 14,
+      "word": "pehle",
+      "start": 4.363,
+      "end": 4.644,
+      "duration": 0.281
+    },
+    {
+      "index": 15,
+      "word": "bhi...",
+      "start": 4.675,
+      "end": 5.013,
+      "duration": 0.337
+    },
+    {
+      "index": 16,
+      "word": "is",
+      "start": 5.291,
+      "end": 5.403,
+      "duration": 0.112
+    },
+    {
+      "index": 17,
+      "word": "dharti",
+      "start": 5.415,
+      "end": 5.75,
+      "duration": 0.335
+    },
+    {
+      "index": 18,
+      "word": "pe",
+      "start": 5.787,
+      "end": 5.899,
+      "duration": 0.112
+    },
+    {
+      "index": 19,
+      "word": "koi",
+      "start": 5.912,
+      "end": 6.079,
+      "duration": 0.168
+    },
+    {
+      "index": 20,
+      "word": "aur",
+      "start": 6.098,
+      "end": 6.265,
+      "duration": 0.168
+    },
+    {
+      "index": 21,
+      "word": "tha",
+      "start": 6.284,
+      "end": 6.451,
+      "duration": 0.168
+    },
+    {
+      "index": 22,
+      "word": "jiske",
+      "start": 6.633,
+      "end": 6.873,
+      "duration": 0.24
+    },
+    {
+      "index": 23,
+      "word": "paas",
+      "start": 6.9,
+      "end": 7.092,
+      "duration": 0.192
+    },
+    {
+      "index": 24,
+      "word": "awaaz",
+      "start": 7.495,
+      "end": 7.771,
+      "duration": 0.276
+    },
+    {
+      "index": 25,
+      "word": "thi!",
+      "start": 7.802,
+      "end": 8.023,
+      "duration": 0.221
+    },
+    {
+      "index": 26,
+      "word": "Neanderthals...",
+      "start": 8.047,
+      "end": 8.876,
+      "duration": 0.829
+    },
+    {
+      "index": 27,
+      "word": "Humse",
+      "start": 9.546,
+      "end": 9.813,
+      "duration": 0.267
+    },
+    {
+      "index": 28,
+      "word": "alag",
+      "start": 9.842,
+      "end": 10.056,
+      "duration": 0.213
+    },
+    {
+      "index": 29,
+      "word": "species.",
+      "start": 10.08,
+      "end": 10.507,
+      "duration": 0.427
+    },
+    {
+      "index": 30,
+      "word": "Humse",
+      "start": 11.328,
+      "end": 11.605,
+      "duration": 0.277
+    },
+    {
+      "index": 31,
+      "word": "pehle",
+      "start": 11.636,
+      "end": 11.913,
+      "duration": 0.277
+    },
+    {
+      "index": 32,
+      "word": "exist",
+      "start": 11.944,
+      "end": 12.221,
+      "duration": 0.277
+    },
+    {
+      "index": 33,
+      "word": "karte",
+      "start": 12.252,
+      "end": 12.529,
+      "duration": 0.277
+    },
+    {
+      "index": 34,
+      "word": "the.",
+      "start": 12.763,
+      "end": 12.975,
+      "duration": 0.212
+    },
+    {
+      "index": 35,
+      "word": "Aur",
+      "start": 12.999,
+      "end": 13.158,
+      "duration": 0.159
+    },
+    {
+      "index": 36,
+      "word": "humse",
+      "start": 13.176,
+      "end": 13.441,
+      "duration": 0.266
+    },
+    {
+      "index": 37,
+      "word": "zyada",
+      "start": 13.471,
+      "end": 13.736,
+      "duration": 0.266
+    },
+    {
+      "index": 38,
+      "word": "strong",
+      "start": 13.766,
+      "end": 14.085,
+      "duration": 0.319
+    },
+    {
+      "index": 39,
+      "word": "the...",
+      "start": 14.12,
+      "end": 14.439,
+      "duration": 0.319
+    },
+    {
+      "index": 40,
+      "word": "thick",
+      "start": 15.131,
+      "end": 15.402,
+      "duration": 0.271
+    },
+    {
+      "index": 41,
+      "word": "bones...",
+      "start": 15.432,
+      "end": 15.866,
+      "duration": 0.433
+    },
+    {
+      "index": 42,
+      "word": "packed",
+      "start": 15.914,
+      "end": 16.239,
+      "duration": 0.325
+    },
+    {
+      "index": 43,
+      "word": "muscles...",
+      "start": 16.275,
+      "end": 16.817,
+      "duration": 0.542
+    },
+    {
+      "index": 44,
+      "word": "bigger",
+      "start": 17.1,
+      "end": 17.183,
+      "duration": 0.083
+    },
+    {
+      "index": 45,
+      "word": "brain",
+      "start": 17.343,
+      "end": 18.544,
+      "duration": 1.201
+    },
+    {
+      "index": 46,
+      "word": "volume!",
+      "start": 18.677,
+      "end": 20.358,
+      "duration": 1.681
+    }
+  ]
+}

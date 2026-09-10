@@ -1,0 +1,321 @@
+{
+  "total_words": 45,
+  "total_duration": 22.64,
+  "words": [
+    {
+      "index": 1,
+      "word": "Toh",
+      "start": 0.312,
+      "end": 0.504,
+      "duration": 0.192
+    },
+    {
+      "index": 2,
+      "word": "aaj",
+      "start": 0.526,
+      "end": 0.718,
+      "duration": 0.192
+    },
+    {
+      "index": 3,
+      "word": "ka",
+      "start": 0.739,
+      "end": 0.867,
+      "duration": 0.128
+    },
+    {
+      "index": 4,
+      "word": "scientific",
+      "start": 0.882,
+      "end": 1.523,
+      "duration": 0.641
+    },
+    {
+      "index": 5,
+      "word": "consensus?",
+      "start": 1.594,
+      "end": 2.235,
+      "duration": 0.641
+    },
+    {
+      "index": 6,
+      "word": "Neanderthals",
+      "start": 2.801,
+      "end": 3.567,
+      "duration": 0.766
+    },
+    {
+      "index": 7,
+      "word": "ke",
+      "start": 3.652,
+      "end": 3.779,
+      "duration": 0.128
+    },
+    {
+      "index": 8,
+      "word": "paas",
+      "start": 3.793,
+      "end": 4.049,
+      "duration": 0.255
+    },
+    {
+      "index": 9,
+      "word": "FOXP2",
+      "start": 4.077,
+      "end": 4.396,
+      "duration": 0.319
+    },
+    {
+      "index": 10,
+      "word": "tha.",
+      "start": 4.432,
+      "end": 4.687,
+      "duration": 0.255
+    },
+    {
+      "index": 11,
+      "word": "Unke",
+      "start": 4.715,
+      "end": 4.97,
+      "duration": 0.255
+    },
+    {
+      "index": 12,
+      "word": "gale",
+      "start": 4.999,
+      "end": 5.254,
+      "duration": 0.255
+    },
+    {
+      "index": 13,
+      "word": "ka",
+      "start": 5.282,
+      "end": 5.41,
+      "duration": 0.128
+    },
+    {
+      "index": 14,
+      "word": "structure",
+      "start": 5.961,
+      "end": 6.452,
+      "duration": 0.491
+    },
+    {
+      "index": 15,
+      "word": "hamare",
+      "start": 6.506,
+      "end": 6.834,
+      "duration": 0.327
+    },
+    {
+      "index": 16,
+      "word": "jaisa",
+      "start": 6.87,
+      "end": 7.143,
+      "duration": 0.273
+    },
+    {
+      "index": 17,
+      "word": "tha.",
+      "start": 7.413,
+      "end": 7.587,
+      "duration": 0.174
+    },
+    {
+      "index": 18,
+      "word": "Physically...",
+      "start": 7.607,
+      "end": 8.174,
+      "duration": 0.567
+    },
+    {
+      "index": 19,
+      "word": "unke",
+      "start": 9.006,
+      "end": 9.201,
+      "duration": 0.195
+    },
+    {
+      "index": 20,
+      "word": "paas",
+      "start": 9.222,
+      "end": 9.417,
+      "duration": 0.195
+    },
+    {
+      "index": 21,
+      "word": "shayad",
+      "start": 9.438,
+      "end": 9.73,
+      "duration": 0.292
+    },
+    {
+      "index": 22,
+      "word": "basic",
+      "start": 9.763,
+      "end": 10.006,
+      "duration": 0.243
+    },
+    {
+      "index": 23,
+      "word": "vocal",
+      "start": 10.217,
+      "end": 10.546,
+      "duration": 0.329
+    },
+    {
+      "index": 24,
+      "word": "communication",
+      "start": 10.583,
+      "end": 11.439,
+      "duration": 0.856
+    },
+    {
+      "index": 25,
+      "word": "ki",
+      "start": 11.534,
+      "end": 11.665,
+      "duration": 0.132
+    },
+    {
+      "index": 26,
+      "word": "possibility",
+      "start": 11.68,
+      "end": 12.404,
+      "duration": 0.724
+    },
+    {
+      "index": 27,
+      "word": "thi...",
+      "start": 12.485,
+      "end": 12.88,
+      "duration": 0.395
+    },
+    {
+      "index": 28,
+      "word": "Lekin",
+      "start": 12.924,
+      "end": 13.253,
+      "duration": 0.329
+    },
+    {
+      "index": 29,
+      "word": "exactly",
+      "start": 13.289,
+      "end": 13.75,
+      "duration": 0.461
+    },
+    {
+      "index": 30,
+      "word": "kya",
+      "start": 13.802,
+      "end": 13.999,
+      "duration": 0.198
+    },
+    {
+      "index": 31,
+      "word": "bolte",
+      "start": 14.557,
+      "end": 14.839,
+      "duration": 0.282
+    },
+    {
+      "index": 32,
+      "word": "the...",
+      "start": 14.87,
+      "end": 15.208,
+      "duration": 0.338
+    },
+    {
+      "index": 33,
+      "word": "kaise",
+      "start": 15.246,
+      "end": 15.528,
+      "duration": 0.282
+    },
+    {
+      "index": 34,
+      "word": "bolte",
+      "start": 15.559,
+      "end": 15.841,
+      "duration": 0.282
+    },
+    {
+      "index": 35,
+      "word": "the...",
+      "start": 15.872,
+      "end": 16.211,
+      "duration": 0.338
+    },
+    {
+      "index": 36,
+      "word": "ya",
+      "start": 16.248,
+      "end": 16.361,
+      "duration": 0.113
+    },
+    {
+      "index": 37,
+      "word": "kitna",
+      "start": 16.373,
+      "end": 16.655,
+      "duration": 0.282
+    },
+    {
+      "index": 38,
+      "word": "complex",
+      "start": 16.687,
+      "end": 17.081,
+      "duration": 0.395
+    },
+    {
+      "index": 39,
+      "word": "bolte",
+      "start": 17.616,
+      "end": 17.935,
+      "duration": 0.319
+    },
+    {
+      "index": 40,
+      "word": "the...",
+      "start": 17.97,
+      "end": 18.352,
+      "duration": 0.382
+    },
+    {
+      "index": 41,
+      "word": "ye",
+      "start": 18.395,
+      "end": 18.522,
+      "duration": 0.127
+    },
+    {
+      "index": 42,
+      "word": "hum",
+      "start": 18.536,
+      "end": 18.728,
+      "duration": 0.191
+    },
+    {
+      "index": 43,
+      "word": "kabhi",
+      "start": 18.749,
+      "end": 19.067,
+      "duration": 0.319
+    },
+    {
+      "index": 44,
+      "word": "nahi",
+      "start": 19.103,
+      "end": 19.358,
+      "duration": 0.255
+    },
+    {
+      "index": 45,
+      "word": "jaanenge.",
+      "start": 19.556,
+      "end": 20.402,
+      "duration": 0.846
+    }
+  ]
+}

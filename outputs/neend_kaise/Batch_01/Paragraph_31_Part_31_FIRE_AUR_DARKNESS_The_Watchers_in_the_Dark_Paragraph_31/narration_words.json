@@ -1,0 +1,286 @@
+{
+  "total_words": 40,
+  "total_duration": 17.72,
+  "words": [
+    {
+      "index": 1,
+      "word": "Sochke",
+      "start": 0.294,
+      "end": 0.642,
+      "duration": 0.348
+    },
+    {
+      "index": 2,
+      "word": "dekho.",
+      "start": 0.68,
+      "end": 1.028,
+      "duration": 0.348
+    },
+    {
+      "index": 3,
+      "word": "Aag",
+      "start": 1.774,
+      "end": 1.918,
+      "duration": 0.144
+    },
+    {
+      "index": 4,
+      "word": "ke",
+      "start": 1.934,
+      "end": 2.029,
+      "duration": 0.096
+    },
+    {
+      "index": 5,
+      "word": "bina,",
+      "start": 2.04,
+      "end": 2.279,
+      "duration": 0.239
+    },
+    {
+      "index": 6,
+      "word": "raat",
+      "start": 2.306,
+      "end": 2.498,
+      "duration": 0.192
+    },
+    {
+      "index": 7,
+      "word": "matlab",
+      "start": 2.519,
+      "end": 2.806,
+      "duration": 0.287
+    },
+    {
+      "index": 8,
+      "word": "total",
+      "start": 2.838,
+      "end": 3.078,
+      "duration": 0.239
+    },
+    {
+      "index": 9,
+      "word": "darkness.",
+      "start": 3.104,
+      "end": 3.535,
+      "duration": 0.431
+    },
+    {
+      "index": 10,
+      "word": "Total",
+      "start": 3.778,
+      "end": 4.073,
+      "duration": 0.295
+    },
+    {
+      "index": 11,
+      "word": "darkness",
+      "start": 4.106,
+      "end": 4.579,
+      "duration": 0.472
+    },
+    {
+      "index": 12,
+      "word": "matlab",
+      "start": 5.345,
+      "end": 5.661,
+      "duration": 0.316
+    },
+    {
+      "index": 13,
+      "word": "predators",
+      "start": 5.696,
+      "end": 6.17,
+      "duration": 0.474
+    },
+    {
+      "index": 14,
+      "word": "tumhe",
+      "start": 6.223,
+      "end": 6.486,
+      "duration": 0.263
+    },
+    {
+      "index": 15,
+      "word": "dekh",
+      "start": 6.515,
+      "end": 6.726,
+      "duration": 0.211
+    },
+    {
+      "index": 16,
+      "word": "sakte,",
+      "start": 6.75,
+      "end": 7.066,
+      "duration": 0.316
+    },
+    {
+      "index": 17,
+      "word": "tum",
+      "start": 7.101,
+      "end": 7.259,
+      "duration": 0.158
+    },
+    {
+      "index": 18,
+      "word": "unhe",
+      "start": 7.276,
+      "end": 7.487,
+      "duration": 0.211
+    },
+    {
+      "index": 19,
+      "word": "nahi.",
+      "start": 7.51,
+      "end": 7.774,
+      "duration": 0.263
+    },
+    {
+      "index": 20,
+      "word": "Isliye",
+      "start": 7.803,
+      "end": 8.119,
+      "duration": 0.316
+    },
+    {
+      "index": 21,
+      "word": "insaan",
+      "start": 8.563,
+      "end": 8.864,
+      "duration": 0.301
+    },
+    {
+      "index": 22,
+      "word": "raat",
+      "start": 8.897,
+      "end": 9.097,
+      "duration": 0.2
+    },
+    {
+      "index": 23,
+      "word": "ko",
+      "start": 9.12,
+      "end": 9.22,
+      "duration": 0.1
+    },
+    {
+      "index": 24,
+      "word": "kabhi",
+      "start": 10.237,
+      "end": 10.48,
+      "duration": 0.243
+    },
+    {
+      "index": 25,
+      "word": "bhi",
+      "start": 10.507,
+      "end": 10.653,
+      "duration": 0.146
+    },
+    {
+      "index": 26,
+      "word": "properly",
+      "start": 10.67,
+      "end": 11.059,
+      "duration": 0.389
+    },
+    {
+      "index": 27,
+      "word": "nahi",
+      "start": 11.102,
+      "end": 11.297,
+      "duration": 0.195
+    },
+    {
+      "index": 28,
+      "word": "so",
+      "start": 11.318,
+      "end": 11.416,
+      "duration": 0.097
+    },
+    {
+      "index": 29,
+      "word": "paata",
+      "start": 11.427,
+      "end": 11.67,
+      "duration": 0.243
+    },
+    {
+      "index": 30,
+      "word": "tha.",
+      "start": 11.855,
+      "end": 12.058,
+      "duration": 0.203
+    },
+    {
+      "index": 31,
+      "word": "Ek",
+      "start": 12.081,
+      "end": 12.182,
+      "duration": 0.101
+    },
+    {
+      "index": 32,
+      "word": "insaan",
+      "start": 12.193,
+      "end": 12.498,
+      "duration": 0.304
+    },
+    {
+      "index": 33,
+      "word": "hamesha",
+      "start": 12.532,
+      "end": 12.887,
+      "duration": 0.355
+    },
+    {
+      "index": 34,
+      "word": "jagta",
+      "start": 12.926,
+      "end": 13.18,
+      "duration": 0.254
+    },
+    {
+      "index": 35,
+      "word": "rehta",
+      "start": 13.208,
+      "end": 13.462,
+      "duration": 0.254
+    },
+    {
+      "index": 36,
+      "word": "tha,",
+      "start": 13.868,
+      "end": 13.957,
+      "duration": 0.089
+    },
+    {
+      "index": 37,
+      "word": "watch",
+      "start": 14.227,
+      "end": 14.727,
+      "duration": 0.5
+    },
+    {
+      "index": 38,
+      "word": "karne",
+      "start": 14.783,
+      "end": 15.283,
+      "duration": 0.5
+    },
+    {
+      "index": 39,
+      "word": "ke",
+      "start": 15.339,
+      "end": 15.539,
+      "duration": 0.2
+    },
+    {
+      "index": 40,
+      "word": "liye.",
+      "start": 15.561,
+      "end": 16.061,
+      "duration": 0.5
+    }
+  ]
+}

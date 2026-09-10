@@ -1,0 +1,818 @@
+{
+  "total_words": 116,
+  "total_duration": 44.64,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.168,
+      "end": 0.269,
+      "duration": 0.101
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.28,
+      "end": 0.381,
+      "duration": 0.101
+    },
+    {
+      "index": 3,
+      "word": "soch",
+      "start": 0.392,
+      "end": 0.594,
+      "duration": 0.202
+    },
+    {
+      "index": 4,
+      "word": "ki",
+      "start": 0.616,
+      "end": 0.717,
+      "duration": 0.101
+    },
+    {
+      "index": 5,
+      "word": "cheez",
+      "start": 0.728,
+      "end": 0.98,
+      "duration": 0.252
+    },
+    {
+      "index": 6,
+      "word": "hai...",
+      "start": 1.008,
+      "end": 1.31,
+      "duration": 0.302
+    },
+    {
+      "index": 7,
+      "word": "kaise",
+      "start": 1.344,
+      "end": 1.596,
+      "duration": 0.252
+    },
+    {
+      "index": 8,
+      "word": "same",
+      "start": 2.213,
+      "end": 2.45,
+      "duration": 0.237
+    },
+    {
+      "index": 9,
+      "word": "biology",
+      "start": 2.477,
+      "end": 2.892,
+      "duration": 0.415
+    },
+    {
+      "index": 10,
+      "word": "alag",
+      "start": 2.938,
+      "end": 3.175,
+      "duration": 0.237
+    },
+    {
+      "index": 11,
+      "word": "alag",
+      "start": 3.202,
+      "end": 3.439,
+      "duration": 0.237
+    },
+    {
+      "index": 12,
+      "word": "cultures",
+      "start": 3.465,
+      "end": 3.94,
+      "duration": 0.475
+    },
+    {
+      "index": 13,
+      "word": "ko",
+      "start": 3.993,
+      "end": 4.111,
+      "duration": 0.119
+    },
+    {
+      "index": 14,
+      "word": "ek",
+      "start": 4.124,
+      "end": 4.243,
+      "duration": 0.119
+    },
+    {
+      "index": 15,
+      "word": "jaisi",
+      "start": 4.256,
+      "end": 4.553,
+      "duration": 0.297
+    },
+    {
+      "index": 16,
+      "word": "awaaz",
+      "start": 4.586,
+      "end": 4.882,
+      "duration": 0.297
+    },
+    {
+      "index": 17,
+      "word": "tak",
+      "start": 4.915,
+      "end": 5.093,
+      "duration": 0.178
+    },
+    {
+      "index": 18,
+      "word": "le",
+      "start": 5.113,
+      "end": 5.232,
+      "duration": 0.119
+    },
+    {
+      "index": 19,
+      "word": "aayi.",
+      "start": 5.423,
+      "end": 5.711,
+      "duration": 0.288
+    },
+    {
+      "index": 20,
+      "word": "Kuch",
+      "start": 5.743,
+      "end": 5.974,
+      "duration": 0.231
+    },
+    {
+      "index": 21,
+      "word": "linguists...",
+      "start": 5.999,
+      "end": 6.691,
+      "duration": 0.692
+    },
+    {
+      "index": 22,
+      "word": "jaise",
+      "start": 6.768,
+      "end": 7.056,
+      "duration": 0.288
+    },
+    {
+      "index": 23,
+      "word": "Merritt",
+      "start": 8.251,
+      "end": 8.635,
+      "duration": 0.384
+    },
+    {
+      "index": 24,
+      "word": "Ruhlen",
+      "start": 8.677,
+      "end": 9.006,
+      "duration": 0.329
+    },
+    {
+      "index": 25,
+      "word": "aur",
+      "start": 9.042,
+      "end": 9.207,
+      "duration": 0.164
+    },
+    {
+      "index": 26,
+      "word": "Mark",
+      "start": 9.225,
+      "end": 9.444,
+      "duration": 0.219
+    },
+    {
+      "index": 27,
+      "word": "Pagel...",
+      "start": 9.469,
+      "end": 9.907,
+      "duration": 0.438
+    },
+    {
+      "index": 28,
+      "word": "dava",
+      "start": 9.956,
+      "end": 10.175,
+      "duration": 0.219
+    },
+    {
+      "index": 29,
+      "word": "karte",
+      "start": 10.199,
+      "end": 10.473,
+      "duration": 0.274
+    },
+    {
+      "index": 30,
+      "word": "hain",
+      "start": 10.504,
+      "end": 10.723,
+      "duration": 0.219
+    },
+    {
+      "index": 31,
+      "word": "ki",
+      "start": 10.747,
+      "end": 10.857,
+      "duration": 0.11
+    },
+    {
+      "index": 32,
+      "word": "kuch",
+      "start": 10.869,
+      "end": 11.088,
+      "duration": 0.219
+    },
+    {
+      "index": 33,
+      "word": "shabd",
+      "start": 11.112,
+      "end": 11.386,
+      "duration": 0.274
+    },
+    {
+      "index": 34,
+      "word": "pandrah",
+      "start": 11.417,
+      "end": 11.8,
+      "duration": 0.384
+    },
+    {
+      "index": 35,
+      "word": "hazaar",
+      "start": 12.049,
+      "end": 12.37,
+      "duration": 0.321
+    },
+    {
+      "index": 36,
+      "word": "saal",
+      "start": 12.405,
+      "end": 12.619,
+      "duration": 0.214
+    },
+    {
+      "index": 37,
+      "word": "ya",
+      "start": 12.643,
+      "end": 12.75,
+      "duration": 0.107
+    },
+    {
+      "index": 38,
+      "word": "usse",
+      "start": 12.761,
+      "end": 12.975,
+      "duration": 0.214
+    },
+    {
+      "index": 39,
+      "word": "bhi",
+      "start": 12.999,
+      "end": 13.159,
+      "duration": 0.16
+    },
+    {
+      "index": 40,
+      "word": "purane",
+      "start": 13.365,
+      "end": 13.717,
+      "duration": 0.352
+    },
+    {
+      "index": 41,
+      "word": "ho",
+      "start": 13.756,
+      "end": 13.874,
+      "duration": 0.117
+    },
+    {
+      "index": 42,
+      "word": "sakte",
+      "start": 13.887,
+      "end": 14.18,
+      "duration": 0.293
+    },
+    {
+      "index": 43,
+      "word": "hain...",
+      "start": 14.213,
+      "end": 14.623,
+      "duration": 0.411
+    },
+    {
+      "index": 44,
+      "word": "aur",
+      "start": 14.669,
+      "end": 14.845,
+      "duration": 0.176
+    },
+    {
+      "index": 45,
+      "word": "unhone",
+      "start": 14.865,
+      "end": 15.217,
+      "duration": 0.352
+    },
+    {
+      "index": 46,
+      "word": "modern",
+      "start": 15.256,
+      "end": 15.608,
+      "duration": 0.352
+    },
+    {
+      "index": 47,
+      "word": "languages",
+      "start": 15.647,
+      "end": 16.175,
+      "duration": 0.528
+    },
+    {
+      "index": 48,
+      "word": "ki",
+      "start": 16.234,
+      "end": 16.351,
+      "duration": 0.117
+    },
+    {
+      "index": 49,
+      "word": "alag",
+      "start": 16.364,
+      "end": 16.599,
+      "duration": 0.235
+    },
+    {
+      "index": 50,
+      "word": "alag",
+      "start": 16.625,
+      "end": 16.86,
+      "duration": 0.235
+    },
+    {
+      "index": 51,
+      "word": "shakhaon",
+      "start": 17.148,
+      "end": 17.625,
+      "duration": 0.477
+    },
+    {
+      "index": 52,
+      "word": "ka",
+      "start": 17.678,
+      "end": 17.798,
+      "duration": 0.119
+    },
+    {
+      "index": 53,
+      "word": "ek",
+      "start": 17.811,
+      "end": 17.93,
+      "duration": 0.119
+    },
+    {
+      "index": 54,
+      "word": "common",
+      "start": 17.944,
+      "end": 18.302,
+      "duration": 0.358
+    },
+    {
+      "index": 55,
+      "word": "source",
+      "start": 18.342,
+      "end": 18.7,
+      "duration": 0.358
+    },
+    {
+      "index": 56,
+      "word": "tak",
+      "start": 18.739,
+      "end": 18.919,
+      "duration": 0.179
+    },
+    {
+      "index": 57,
+      "word": "trace",
+      "start": 18.938,
+      "end": 19.237,
+      "duration": 0.298
+    },
+    {
+      "index": 58,
+      "word": "karne",
+      "start": 19.427,
+      "end": 19.734,
+      "duration": 0.307
+    },
+    {
+      "index": 59,
+      "word": "ki",
+      "start": 19.768,
+      "end": 19.891,
+      "duration": 0.123
+    },
+    {
+      "index": 60,
+      "word": "koshish",
+      "start": 19.904,
+      "end": 20.334,
+      "duration": 0.43
+    },
+    {
+      "index": 61,
+      "word": "ki.",
+      "start": 20.382,
+      "end": 20.566,
+      "duration": 0.184
+    },
+    {
+      "index": 62,
+      "word": "Lekin",
+      "start": 20.586,
+      "end": 20.893,
+      "duration": 0.307
+    },
+    {
+      "index": 63,
+      "word": "mainstream",
+      "start": 21.115,
+      "end": 21.726,
+      "duration": 0.611
+    },
+    {
+      "index": 64,
+      "word": "linguistics",
+      "start": 21.794,
+      "end": 22.466,
+      "duration": 0.672
+    },
+    {
+      "index": 65,
+      "word": "is",
+      "start": 22.541,
+      "end": 22.663,
+      "duration": 0.122
+    },
+    {
+      "index": 66,
+      "word": "theory",
+      "start": 22.677,
+      "end": 23.043,
+      "duration": 0.367
+    },
+    {
+      "index": 67,
+      "word": "ko",
+      "start": 24.217,
+      "end": 24.336,
+      "duration": 0.119
+    },
+    {
+      "index": 68,
+      "word": "largely",
+      "start": 24.349,
+      "end": 24.765,
+      "duration": 0.416
+    },
+    {
+      "index": 69,
+      "word": "reject",
+      "start": 24.812,
+      "end": 25.169,
+      "duration": 0.357
+    },
+    {
+      "index": 70,
+      "word": "karti",
+      "start": 25.208,
+      "end": 25.506,
+      "duration": 0.297
+    },
+    {
+      "index": 71,
+      "word": "hai.",
+      "start": 25.539,
+      "end": 25.777,
+      "duration": 0.238
+    },
+    {
+      "index": 72,
+      "word": "Similarities",
+      "start": 25.803,
+      "end": 26.517,
+      "duration": 0.714
+    },
+    {
+      "index": 73,
+      "word": "coincidence",
+      "start": 26.596,
+      "end": 27.25,
+      "duration": 0.654
+    },
+    {
+      "index": 74,
+      "word": "ho",
+      "start": 27.323,
+      "end": 27.442,
+      "duration": 0.119
+    },
+    {
+      "index": 75,
+      "word": "sakti",
+      "start": 27.455,
+      "end": 27.752,
+      "duration": 0.297
+    },
+    {
+      "index": 76,
+      "word": "hain...",
+      "start": 27.785,
+      "end": 28.202,
+      "duration": 0.416
+    },
+    {
+      "index": 77,
+      "word": "borrowing",
+      "start": 28.646,
+      "end": 29.152,
+      "duration": 0.506
+    },
+    {
+      "index": 78,
+      "word": "se",
+      "start": 29.209,
+      "end": 29.321,
+      "duration": 0.113
+    },
+    {
+      "index": 79,
+      "word": "aa",
+      "start": 29.334,
+      "end": 29.446,
+      "duration": 0.113
+    },
+    {
+      "index": 80,
+      "word": "sakti",
+      "start": 29.459,
+      "end": 29.74,
+      "duration": 0.281
+    },
+    {
+      "index": 81,
+      "word": "hain...",
+      "start": 29.771,
+      "end": 30.165,
+      "duration": 0.394
+    },
+    {
+      "index": 82,
+      "word": "ya",
+      "start": 30.209,
+      "end": 30.321,
+      "duration": 0.113
+    },
+    {
+      "index": 83,
+      "word": "sound",
+      "start": 30.334,
+      "end": 30.615,
+      "duration": 0.281
+    },
+    {
+      "index": 84,
+      "word": "symbolism",
+      "start": 31.01,
+      "end": 31.52,
+      "duration": 0.51
+    },
+    {
+      "index": 85,
+      "word": "ki",
+      "start": 31.577,
+      "end": 31.69,
+      "duration": 0.113
+    },
+    {
+      "index": 86,
+      "word": "wajah",
+      "start": 31.702,
+      "end": 31.986,
+      "duration": 0.283
+    },
+    {
+      "index": 87,
+      "word": "se",
+      "start": 32.017,
+      "end": 32.13,
+      "duration": 0.113
+    },
+    {
+      "index": 88,
+      "word": "ho",
+      "start": 32.143,
+      "end": 32.256,
+      "duration": 0.113
+    },
+    {
+      "index": 89,
+      "word": "sakti",
+      "start": 32.269,
+      "end": 32.552,
+      "duration": 0.283
+    },
+    {
+      "index": 90,
+      "word": "hain...",
+      "start": 32.584,
+      "end": 32.98,
+      "duration": 0.397
+    },
+    {
+      "index": 91,
+      "word": "ek",
+      "start": 33.024,
+      "end": 33.138,
+      "duration": 0.113
+    },
+    {
+      "index": 92,
+      "word": "hi",
+      "start": 33.15,
+      "end": 33.264,
+      "duration": 0.113
+    },
+    {
+      "index": 93,
+      "word": "ancient",
+      "start": 33.276,
+      "end": 33.673,
+      "duration": 0.397
+    },
+    {
+      "index": 94,
+      "word": "source",
+      "start": 33.717,
+      "end": 34.057,
+      "duration": 0.34
+    },
+    {
+      "index": 95,
+      "word": "ki",
+      "start": 34.095,
+      "end": 34.208,
+      "duration": 0.113
+    },
+    {
+      "index": 96,
+      "word": "zaroorat",
+      "start": 34.22,
+      "end": 34.674,
+      "duration": 0.453
+    },
+    {
+      "index": 97,
+      "word": "nahi",
+      "start": 34.992,
+      "end": 35.222,
+      "duration": 0.23
+    },
+    {
+      "index": 98,
+      "word": "hai.",
+      "start": 35.248,
+      "end": 35.478,
+      "duration": 0.23
+    },
+    {
+      "index": 99,
+      "word": "Toh",
+      "start": 35.503,
+      "end": 35.676,
+      "duration": 0.173
+    },
+    {
+      "index": 100,
+      "word": "honest",
+      "start": 35.695,
+      "end": 36.04,
+      "duration": 0.345
+    },
+    {
+      "index": 101,
+      "word": "jawab?",
+      "start": 36.078,
+      "end": 36.423,
+      "duration": 0.345
+    },
+    {
+      "index": 102,
+      "word": "Hum",
+      "start": 36.462,
+      "end": 36.634,
+      "duration": 0.173
+    },
+    {
+      "index": 103,
+      "word": "abhi",
+      "start": 36.653,
+      "end": 36.883,
+      "duration": 0.23
+    },
+    {
+      "index": 104,
+      "word": "tak",
+      "start": 36.909,
+      "end": 37.081,
+      "duration": 0.173
+    },
+    {
+      "index": 105,
+      "word": "nahi",
+      "start": 37.1,
+      "end": 37.33,
+      "duration": 0.23
+    },
+    {
+      "index": 106,
+      "word": "jaante",
+      "start": 38.306,
+      "end": 38.497,
+      "duration": 0.191
+    },
+    {
+      "index": 107,
+      "word": "ki",
+      "start": 38.719,
+      "end": 38.801,
+      "duration": 0.082
+    },
+    {
+      "index": 108,
+      "word": "pehli",
+      "start": 38.81,
+      "end": 39.015,
+      "duration": 0.205
+    },
+    {
+      "index": 109,
+      "word": "language",
+      "start": 39.038,
+      "end": 39.366,
+      "duration": 0.328
+    },
+    {
+      "index": 110,
+      "word": "kya",
+      "start": 39.68,
+      "end": 40.086,
+      "duration": 0.406
+    },
+    {
+      "index": 111,
+      "word": "thi.",
+      "start": 40.131,
+      "end": 40.672,
+      "duration": 0.541
+    },
+    {
+      "index": 112,
+      "word": "Ya",
+      "start": 40.732,
+      "end": 41.002,
+      "duration": 0.27
+    },
+    {
+      "index": 113,
+      "word": "kya",
+      "start": 41.032,
+      "end": 41.438,
+      "duration": 0.406
+    },
+    {
+      "index": 114,
+      "word": "woh",
+      "start": 41.483,
+      "end": 41.888,
+      "duration": 0.406
+    },
+    {
+      "index": 115,
+      "word": "ek",
+      "start": 41.934,
+      "end": 42.204,
+      "duration": 0.27
+    },
+    {
+      "index": 116,
+      "word": "thi.",
+      "start": 42.234,
+      "end": 42.775,
+      "duration": 0.541
+    }
+  ]
+}

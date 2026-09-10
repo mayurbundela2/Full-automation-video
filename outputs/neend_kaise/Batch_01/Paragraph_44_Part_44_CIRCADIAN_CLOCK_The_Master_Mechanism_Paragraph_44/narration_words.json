@@ -1,0 +1,160 @@
+{
+  "total_words": 22,
+  "total_duration": 9.68,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.293,
+      "end": 0.502,
+      "duration": 0.209
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.525,
+      "end": 0.665,
+      "duration": 0.139
+    },
+    {
+      "index": 3,
+      "word": "poora",
+      "start": 0.854,
+      "end": 1.138,
+      "duration": 0.284
+    },
+    {
+      "index": 4,
+      "word": "sleep",
+      "start": 1.17,
+      "end": 1.454,
+      "duration": 0.284
+    },
+    {
+      "index": 5,
+      "word": "system",
+      "start": 1.485,
+      "end": 1.826,
+      "duration": 0.341
+    },
+    {
+      "index": 6,
+      "word": "chalta",
+      "start": 1.864,
+      "end": 2.205,
+      "duration": 0.341
+    },
+    {
+      "index": 7,
+      "word": "hai",
+      "start": 2.424,
+      "end": 2.627,
+      "duration": 0.203
+    },
+    {
+      "index": 8,
+      "word": "kaise?",
+      "start": 2.649,
+      "end": 3.055,
+      "duration": 0.405
+    },
+    {
+      "index": 9,
+      "word": "Har",
+      "start": 3.1,
+      "end": 3.302,
+      "duration": 0.203
+    },
+    {
+      "index": 10,
+      "word": "cell",
+      "start": 3.779,
+      "end": 4.041,
+      "duration": 0.262
+    },
+    {
+      "index": 11,
+      "word": "mein",
+      "start": 4.071,
+      "end": 4.333,
+      "duration": 0.262
+    },
+    {
+      "index": 12,
+      "word": "hai",
+      "start": 4.362,
+      "end": 4.559,
+      "duration": 0.197
+    },
+    {
+      "index": 13,
+      "word": "ek",
+      "start": 4.581,
+      "end": 4.712,
+      "duration": 0.131
+    },
+    {
+      "index": 14,
+      "word": "chhota",
+      "start": 4.727,
+      "end": 5.12,
+      "duration": 0.394
+    },
+    {
+      "index": 15,
+      "word": "sa",
+      "start": 5.164,
+      "end": 5.295,
+      "duration": 0.131
+    },
+    {
+      "index": 16,
+      "word": "clock.",
+      "start": 5.31,
+      "end": 5.703,
+      "duration": 0.394
+    },
+    {
+      "index": 17,
+      "word": "Aur",
+      "start": 5.747,
+      "end": 5.944,
+      "duration": 0.197
+    },
+    {
+      "index": 18,
+      "word": "wo",
+      "start": 5.966,
+      "end": 6.097,
+      "duration": 0.131
+    },
+    {
+      "index": 19,
+      "word": "clock",
+      "start": 6.112,
+      "end": 6.44,
+      "duration": 0.328
+    },
+    {
+      "index": 20,
+      "word": "incredibly",
+      "start": 6.659,
+      "end": 7.371,
+      "duration": 0.712
+    },
+    {
+      "index": 21,
+      "word": "ancient",
+      "start": 7.45,
+      "end": 7.949,
+      "duration": 0.498
+    },
+    {
+      "index": 22,
+      "word": "hai.",
+      "start": 8.216,
+      "end": 9.179,
+      "duration": 0.963
+    }
+  ]
+}

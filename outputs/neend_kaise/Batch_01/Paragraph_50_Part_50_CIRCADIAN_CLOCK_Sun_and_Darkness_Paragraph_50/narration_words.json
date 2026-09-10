@@ -1,0 +1,195 @@
+{
+  "total_words": 27,
+  "total_duration": 11.25,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.265,
+      "end": 0.365,
+      "duration": 0.1
+    },
+    {
+      "index": 2,
+      "word": "humari",
+      "start": 0.376,
+      "end": 0.677,
+      "duration": 0.301
+    },
+    {
+      "index": 3,
+      "word": "body",
+      "start": 0.71,
+      "end": 0.911,
+      "duration": 0.2
+    },
+    {
+      "index": 4,
+      "word": "ki",
+      "start": 0.933,
+      "end": 1.033,
+      "duration": 0.1
+    },
+    {
+      "index": 5,
+      "word": "foundational",
+      "start": 1.044,
+      "end": 1.646,
+      "duration": 0.601
+    },
+    {
+      "index": 6,
+      "word": "programming",
+      "start": 1.712,
+      "end": 2.263,
+      "duration": 0.551
+    },
+    {
+      "index": 7,
+      "word": "hai.",
+      "start": 2.325,
+      "end": 2.525,
+      "duration": 0.2
+    },
+    {
+      "index": 8,
+      "word": "Isse",
+      "start": 2.547,
+      "end": 2.748,
+      "duration": 0.2
+    },
+    {
+      "index": 9,
+      "word": "tum",
+      "start": 3.24,
+      "end": 3.401,
+      "duration": 0.161
+    },
+    {
+      "index": 10,
+      "word": "bypass",
+      "start": 3.419,
+      "end": 3.74,
+      "duration": 0.321
+    },
+    {
+      "index": 11,
+      "word": "nahi",
+      "start": 3.776,
+      "end": 3.99,
+      "duration": 0.214
+    },
+    {
+      "index": 12,
+      "word": "kar",
+      "start": 4.014,
+      "end": 4.174,
+      "duration": 0.161
+    },
+    {
+      "index": 13,
+      "word": "sakte.",
+      "start": 4.192,
+      "end": 4.514,
+      "duration": 0.321
+    },
+    {
+      "index": 14,
+      "word": "Aur",
+      "start": 4.549,
+      "end": 4.71,
+      "duration": 0.161
+    },
+    {
+      "index": 15,
+      "word": "ye",
+      "start": 5.547,
+      "end": 5.649,
+      "duration": 0.102
+    },
+    {
+      "index": 16,
+      "word": "clock",
+      "start": 5.66,
+      "end": 5.914,
+      "duration": 0.254
+    },
+    {
+      "index": 17,
+      "word": "kaise",
+      "start": 5.942,
+      "end": 6.197,
+      "duration": 0.254
+    },
+    {
+      "index": 18,
+      "word": "time",
+      "start": 6.225,
+      "end": 6.428,
+      "duration": 0.203
+    },
+    {
+      "index": 19,
+      "word": "samajhta",
+      "start": 6.451,
+      "end": 6.858,
+      "duration": 0.407
+    },
+    {
+      "index": 20,
+      "word": "hai?",
+      "start": 6.903,
+      "end": 7.106,
+      "duration": 0.203
+    },
+    {
+      "index": 21,
+      "word": "Do",
+      "start": 7.754,
+      "end": 7.836,
+      "duration": 0.082
+    },
+    {
+      "index": 22,
+      "word": "main",
+      "start": 7.845,
+      "end": 8.008,
+      "duration": 0.164
+    },
+    {
+      "index": 23,
+      "word": "signals",
+      "start": 8.027,
+      "end": 8.313,
+      "duration": 0.286
+    },
+    {
+      "index": 24,
+      "word": "se...",
+      "start": 8.345,
+      "end": 8.549,
+      "duration": 0.204
+    },
+    {
+      "index": 25,
+      "word": "sunlight",
+      "start": 8.572,
+      "end": 8.899,
+      "duration": 0.327
+    },
+    {
+      "index": 26,
+      "word": "aur",
+      "start": 9.468,
+      "end": 9.6,
+      "duration": 0.132
+    },
+    {
+      "index": 27,
+      "word": "darkness.",
+      "start": 9.615,
+      "end": 10.011,
+      "duration": 0.396
+    }
+  ]
+}

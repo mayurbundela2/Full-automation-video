@@ -1,0 +1,40 @@
+1
+00:00:00,287 --> 00:00:01,420
+Ye ek genetic problem
+
+2
+00:00:01,440 --> 00:00:03,401
+thi... kyunki har generation
+
+3
+00:00:03,421 --> 00:00:04,707
+mein exactly aadhe log
+
+4
+00:00:04,727 --> 00:00:06,123
+affected the. Ye pattern
+
+5
+00:00:06,565 --> 00:00:07,462
+batata hai ki ek
+
+6
+00:00:07,482 --> 00:00:08,874
+single gene ka mutation
+
+7
+00:00:08,894 --> 00:00:11,192
+cause hai. Geneticists ne
+
+8
+00:00:11,212 --> 00:00:12,223
+khoj shuru ki. Do
+
+9
+00:00:12,243 --> 00:00:14,234
+hazaar ek mein... unhe
+
+10
+00:00:14,254 --> 00:00:14,637
+mila!
+

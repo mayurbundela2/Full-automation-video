@@ -1,0 +1,251 @@
+{
+  "total_words": 35,
+  "total_duration": 15.92,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ek",
+      "start": 0.283,
+      "end": 0.41,
+      "duration": 0.127
+    },
+    {
+      "index": 2,
+      "word": "Australian",
+      "start": 0.425,
+      "end": 1.061,
+      "duration": 0.637
+    },
+    {
+      "index": 3,
+      "word": "aboriginal",
+      "start": 1.132,
+      "end": 1.769,
+      "duration": 0.637
+    },
+    {
+      "index": 4,
+      "word": "language...",
+      "start": 1.84,
+      "end": 2.54,
+      "duration": 0.701
+    },
+    {
+      "index": 5,
+      "word": "Guugu",
+      "start": 2.952,
+      "end": 3.261,
+      "duration": 0.309
+    },
+    {
+      "index": 6,
+      "word": "Yimithirr...",
+      "start": 3.296,
+      "end": 4.038,
+      "duration": 0.743
+    },
+    {
+      "index": 7,
+      "word": "usme",
+      "start": 4.521,
+      "end": 4.777,
+      "duration": 0.256
+    },
+    {
+      "index": 8,
+      "word": "left",
+      "start": 4.805,
+      "end": 5.061,
+      "duration": 0.256
+    },
+    {
+      "index": 9,
+      "word": "aur",
+      "start": 5.09,
+      "end": 5.281,
+      "duration": 0.192
+    },
+    {
+      "index": 10,
+      "word": "right",
+      "start": 5.303,
+      "end": 5.623,
+      "duration": 0.32
+    },
+    {
+      "index": 11,
+      "word": "hote",
+      "start": 5.658,
+      "end": 5.914,
+      "duration": 0.256
+    },
+    {
+      "index": 12,
+      "word": "hi",
+      "start": 5.942,
+      "end": 6.07,
+      "duration": 0.128
+    },
+    {
+      "index": 13,
+      "word": "nahi!",
+      "start": 6.084,
+      "end": 6.404,
+      "duration": 0.32
+    },
+    {
+      "index": 14,
+      "word": "Sab",
+      "start": 6.44,
+      "end": 6.632,
+      "duration": 0.192
+    },
+    {
+      "index": 15,
+      "word": "kuch",
+      "start": 6.879,
+      "end": 7.127,
+      "duration": 0.248
+    },
+    {
+      "index": 16,
+      "word": "north,",
+      "start": 7.155,
+      "end": 7.527,
+      "duration": 0.372
+    },
+    {
+      "index": 17,
+      "word": "south,",
+      "start": 7.569,
+      "end": 7.941,
+      "duration": 0.372
+    },
+    {
+      "index": 18,
+      "word": "east,",
+      "start": 7.983,
+      "end": 8.293,
+      "duration": 0.31
+    },
+    {
+      "index": 19,
+      "word": "west",
+      "start": 8.328,
+      "end": 8.576,
+      "duration": 0.248
+    },
+    {
+      "index": 20,
+      "word": "mein",
+      "start": 8.604,
+      "end": 8.852,
+      "duration": 0.248
+    },
+    {
+      "index": 21,
+      "word": "bataya",
+      "start": 8.879,
+      "end": 9.252,
+      "duration": 0.372
+    },
+    {
+      "index": 22,
+      "word": "jaata",
+      "start": 9.293,
+      "end": 9.604,
+      "duration": 0.31
+    },
+    {
+      "index": 23,
+      "word": "hai!",
+      "start": 9.638,
+      "end": 9.887,
+      "duration": 0.248
+    },
+    {
+      "index": 24,
+      "word": "Un",
+      "start": 9.914,
+      "end": 10.038,
+      "duration": 0.124
+    },
+    {
+      "index": 25,
+      "word": "logon",
+      "start": 10.052,
+      "end": 10.363,
+      "duration": 0.31
+    },
+    {
+      "index": 26,
+      "word": "ka",
+      "start": 11.083,
+      "end": 11.236,
+      "duration": 0.153
+    },
+    {
+      "index": 27,
+      "word": "sense",
+      "start": 11.253,
+      "end": 11.635,
+      "duration": 0.382
+    },
+    {
+      "index": 28,
+      "word": "of",
+      "start": 11.677,
+      "end": 11.83,
+      "duration": 0.153
+    },
+    {
+      "index": 29,
+      "word": "direction...",
+      "start": 11.847,
+      "end": 12.763,
+      "duration": 0.917
+    },
+    {
+      "index": 30,
+      "word": "humse",
+      "start": 12.865,
+      "end": 13.247,
+      "duration": 0.382
+    },
+    {
+      "index": 31,
+      "word": "bahut",
+      "start": 13.29,
+      "end": 13.671,
+      "duration": 0.382
+    },
+    {
+      "index": 32,
+      "word": "zyada",
+      "start": 13.714,
+      "end": 14.096,
+      "duration": 0.382
+    },
+    {
+      "index": 33,
+      "word": "developed",
+      "start": 14.138,
+      "end": 14.826,
+      "duration": 0.687
+    },
+    {
+      "index": 34,
+      "word": "hota",
+      "start": 14.902,
+      "end": 15.208,
+      "duration": 0.306
+    },
+    {
+      "index": 35,
+      "word": "hai!",
+      "start": 15.242,
+      "end": 15.547,
+      "duration": 0.306
+    }
+  ]
+}

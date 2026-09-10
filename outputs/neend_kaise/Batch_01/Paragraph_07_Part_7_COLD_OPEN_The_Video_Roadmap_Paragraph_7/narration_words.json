@@ -1,0 +1,279 @@
+{
+  "total_words": 39,
+  "total_duration": 12.48,
+  "words": [
+    {
+      "index": 1,
+      "word": "Is",
+      "start": 0.277,
+      "end": 0.357,
+      "duration": 0.08
+    },
+    {
+      "index": 2,
+      "word": "video",
+      "start": 0.366,
+      "end": 0.565,
+      "duration": 0.2
+    },
+    {
+      "index": 3,
+      "word": "mein",
+      "start": 0.587,
+      "end": 0.747,
+      "duration": 0.16
+    },
+    {
+      "index": 4,
+      "word": "tumhe",
+      "start": 0.765,
+      "end": 0.964,
+      "duration": 0.2
+    },
+    {
+      "index": 5,
+      "word": "pata",
+      "start": 0.986,
+      "end": 1.146,
+      "duration": 0.16
+    },
+    {
+      "index": 6,
+      "word": "chalega...",
+      "start": 1.164,
+      "end": 1.563,
+      "duration": 0.399
+    },
+    {
+      "index": 7,
+      "word": "insaan",
+      "start": 1.886,
+      "end": 2.191,
+      "duration": 0.305
+    },
+    {
+      "index": 8,
+      "word": "ne",
+      "start": 2.225,
+      "end": 2.327,
+      "duration": 0.102
+    },
+    {
+      "index": 9,
+      "word": "neend",
+      "start": 2.338,
+      "end": 2.592,
+      "duration": 0.254
+    },
+    {
+      "index": 10,
+      "word": "kaise",
+      "start": 2.62,
+      "end": 2.875,
+      "duration": 0.254
+    },
+    {
+      "index": 11,
+      "word": "shuru",
+      "start": 2.903,
+      "end": 3.157,
+      "duration": 0.254
+    },
+    {
+      "index": 12,
+      "word": "ki.",
+      "start": 3.185,
+      "end": 3.338,
+      "duration": 0.153
+    },
+    {
+      "index": 13,
+      "word": "Kyun",
+      "start": 3.355,
+      "end": 3.558,
+      "duration": 0.203
+    },
+    {
+      "index": 14,
+      "word": "ye",
+      "start": 3.741,
+      "end": 3.83,
+      "duration": 0.089
+    },
+    {
+      "index": 15,
+      "word": "evolution",
+      "start": 3.84,
+      "end": 4.24,
+      "duration": 0.4
+    },
+    {
+      "index": 16,
+      "word": "ka",
+      "start": 4.284,
+      "end": 4.373,
+      "duration": 0.089
+    },
+    {
+      "index": 17,
+      "word": "sabse",
+      "start": 4.383,
+      "end": 4.605,
+      "duration": 0.222
+    },
+    {
+      "index": 18,
+      "word": "strange",
+      "start": 4.63,
+      "end": 4.941,
+      "duration": 0.311
+    },
+    {
+      "index": 19,
+      "word": "decision",
+      "start": 4.975,
+      "end": 5.331,
+      "duration": 0.356
+    },
+    {
+      "index": 20,
+      "word": "tha.",
+      "start": 5.371,
+      "end": 5.548,
+      "duration": 0.178
+    },
+    {
+      "index": 21,
+      "word": "Aur",
+      "start": 5.568,
+      "end": 5.701,
+      "duration": 0.133
+    },
+    {
+      "index": 22,
+      "word": "most",
+      "start": 5.716,
+      "end": 5.894,
+      "duration": 0.178
+    },
+    {
+      "index": 23,
+      "word": "importantly...",
+      "start": 5.914,
+      "end": 6.536,
+      "duration": 0.622
+    },
+    {
+      "index": 24,
+      "word": "ye",
+      "start": 7.132,
+      "end": 7.224,
+      "duration": 0.092
+    },
+    {
+      "index": 25,
+      "word": "jo",
+      "start": 7.235,
+      "end": 7.327,
+      "duration": 0.092
+    },
+    {
+      "index": 26,
+      "word": "tum",
+      "start": 7.337,
+      "end": 7.475,
+      "duration": 0.138
+    },
+    {
+      "index": 27,
+      "word": "kar",
+      "start": 7.491,
+      "end": 7.629,
+      "duration": 0.138
+    },
+    {
+      "index": 28,
+      "word": "rahe",
+      "start": 7.645,
+      "end": 7.829,
+      "duration": 0.185
+    },
+    {
+      "index": 29,
+      "word": "ho,",
+      "start": 7.85,
+      "end": 7.988,
+      "duration": 0.138
+    },
+    {
+      "index": 30,
+      "word": "ye",
+      "start": 8.003,
+      "end": 8.096,
+      "duration": 0.092
+    },
+    {
+      "index": 31,
+      "word": "tumhare",
+      "start": 8.106,
+      "end": 8.429,
+      "duration": 0.323
+    },
+    {
+      "index": 32,
+      "word": "brain",
+      "start": 8.465,
+      "end": 8.695,
+      "duration": 0.231
+    },
+    {
+      "index": 33,
+      "word": "ke",
+      "start": 8.721,
+      "end": 8.813,
+      "duration": 0.092
+    },
+    {
+      "index": 34,
+      "word": "saath",
+      "start": 8.824,
+      "end": 9.054,
+      "duration": 0.231
+    },
+    {
+      "index": 35,
+      "word": "actually",
+      "start": 9.08,
+      "end": 9.449,
+      "duration": 0.369
+    },
+    {
+      "index": 36,
+      "word": "kya",
+      "start": 9.729,
+      "end": 10.2,
+      "duration": 0.471
+    },
+    {
+      "index": 37,
+      "word": "kar",
+      "start": 10.252,
+      "end": 10.724,
+      "duration": 0.471
+    },
+    {
+      "index": 38,
+      "word": "raha",
+      "start": 10.776,
+      "end": 11.404,
+      "duration": 0.628
+    },
+    {
+      "index": 39,
+      "word": "hai.",
+      "start": 11.474,
+      "end": 12.102,
+      "duration": 0.628
+    }
+  ]
+}

@@ -1,0 +1,636 @@
+{
+  "total_words": 90,
+  "total_duration": 32.52,
+  "words": [
+    {
+      "index": 1,
+      "word": "Sochne",
+      "start": 0.263,
+      "end": 0.58,
+      "duration": 0.317
+    },
+    {
+      "index": 2,
+      "word": "wali",
+      "start": 0.615,
+      "end": 0.826,
+      "duration": 0.211
+    },
+    {
+      "index": 3,
+      "word": "baat",
+      "start": 0.85,
+      "end": 1.061,
+      "duration": 0.211
+    },
+    {
+      "index": 4,
+      "word": "hai...",
+      "start": 1.084,
+      "end": 1.401,
+      "duration": 0.317
+    },
+    {
+      "index": 5,
+      "word": "Har",
+      "start": 1.837,
+      "end": 1.983,
+      "duration": 0.146
+    },
+    {
+      "index": 6,
+      "word": "language",
+      "start": 2.0,
+      "end": 2.39,
+      "duration": 0.391
+    },
+    {
+      "index": 7,
+      "word": "duniya",
+      "start": 2.434,
+      "end": 2.727,
+      "duration": 0.293
+    },
+    {
+      "index": 8,
+      "word": "ko",
+      "start": 2.759,
+      "end": 2.857,
+      "duration": 0.098
+    },
+    {
+      "index": 9,
+      "word": "alag",
+      "start": 2.868,
+      "end": 3.063,
+      "duration": 0.195
+    },
+    {
+      "index": 10,
+      "word": "tarah",
+      "start": 3.085,
+      "end": 3.329,
+      "duration": 0.244
+    },
+    {
+      "index": 11,
+      "word": "dekhti",
+      "start": 3.356,
+      "end": 3.649,
+      "duration": 0.293
+    },
+    {
+      "index": 12,
+      "word": "hai.",
+      "start": 3.682,
+      "end": 3.877,
+      "duration": 0.195
+    },
+    {
+      "index": 13,
+      "word": "Kuch",
+      "start": 3.899,
+      "end": 4.094,
+      "duration": 0.195
+    },
+    {
+      "index": 14,
+      "word": "languages",
+      "start": 4.116,
+      "end": 4.555,
+      "duration": 0.439
+    },
+    {
+      "index": 15,
+      "word": "mein...",
+      "start": 5.044,
+      "end": 5.145,
+      "duration": 0.101
+    },
+    {
+      "index": 16,
+      "word": "future",
+      "start": 5.361,
+      "end": 5.67,
+      "duration": 0.309
+    },
+    {
+      "index": 17,
+      "word": "tense",
+      "start": 5.704,
+      "end": 5.962,
+      "duration": 0.258
+    },
+    {
+      "index": 18,
+      "word": "hoti",
+      "start": 5.99,
+      "end": 6.197,
+      "duration": 0.206
+    },
+    {
+      "index": 19,
+      "word": "hi",
+      "start": 6.219,
+      "end": 6.322,
+      "duration": 0.103
+    },
+    {
+      "index": 20,
+      "word": "nahi!",
+      "start": 6.334,
+      "end": 6.591,
+      "duration": 0.258
+    },
+    {
+      "index": 21,
+      "word": "Un",
+      "start": 6.62,
+      "end": 6.723,
+      "duration": 0.103
+    },
+    {
+      "index": 22,
+      "word": "logon",
+      "start": 6.734,
+      "end": 6.992,
+      "duration": 0.258
+    },
+    {
+      "index": 23,
+      "word": "ke",
+      "start": 7.021,
+      "end": 7.124,
+      "duration": 0.103
+    },
+    {
+      "index": 24,
+      "word": "liye...",
+      "start": 7.135,
+      "end": 7.496,
+      "duration": 0.361
+    },
+    {
+      "index": 25,
+      "word": "kal",
+      "start": 7.536,
+      "end": 7.69,
+      "duration": 0.155
+    },
+    {
+      "index": 26,
+      "word": "aur",
+      "start": 7.707,
+      "end": 7.862,
+      "duration": 0.155
+    },
+    {
+      "index": 27,
+      "word": "aaj",
+      "start": 8.267,
+      "end": 8.408,
+      "duration": 0.141
+    },
+    {
+      "index": 28,
+      "word": "ek",
+      "start": 8.424,
+      "end": 8.518,
+      "duration": 0.094
+    },
+    {
+      "index": 29,
+      "word": "jaisa",
+      "start": 8.529,
+      "end": 8.764,
+      "duration": 0.236
+    },
+    {
+      "index": 30,
+      "word": "concept",
+      "start": 8.791,
+      "end": 9.12,
+      "duration": 0.33
+    },
+    {
+      "index": 31,
+      "word": "hai.",
+      "start": 9.315,
+      "end": 9.487,
+      "duration": 0.172
+    },
+    {
+      "index": 32,
+      "word": "Kya",
+      "start": 9.506,
+      "end": 9.636,
+      "duration": 0.129
+    },
+    {
+      "index": 33,
+      "word": "woh",
+      "start": 9.65,
+      "end": 9.779,
+      "duration": 0.129
+    },
+    {
+      "index": 34,
+      "word": "alag",
+      "start": 9.793,
+      "end": 9.966,
+      "duration": 0.172
+    },
+    {
+      "index": 35,
+      "word": "tarah",
+      "start": 9.985,
+      "end": 10.2,
+      "duration": 0.215
+    },
+    {
+      "index": 36,
+      "word": "decisions",
+      "start": 10.379,
+      "end": 10.823,
+      "duration": 0.444
+    },
+    {
+      "index": 37,
+      "word": "lete",
+      "start": 10.872,
+      "end": 11.069,
+      "duration": 0.197
+    },
+    {
+      "index": 38,
+      "word": "hain?",
+      "start": 11.091,
+      "end": 11.338,
+      "duration": 0.247
+    },
+    {
+      "index": 39,
+      "word": "Research",
+      "start": 11.678,
+      "end": 12.015,
+      "duration": 0.337
+    },
+    {
+      "index": 40,
+      "word": "kehti",
+      "start": 12.052,
+      "end": 12.263,
+      "duration": 0.21
+    },
+    {
+      "index": 41,
+      "word": "hai...",
+      "start": 12.455,
+      "end": 12.741,
+      "duration": 0.286
+    },
+    {
+      "index": 42,
+      "word": "haan!",
+      "start": 12.773,
+      "end": 13.012,
+      "duration": 0.239
+    },
+    {
+      "index": 43,
+      "word": "Kuch",
+      "start": 13.038,
+      "end": 13.229,
+      "duration": 0.191
+    },
+    {
+      "index": 44,
+      "word": "languages",
+      "start": 13.251,
+      "end": 13.68,
+      "duration": 0.43
+    },
+    {
+      "index": 45,
+      "word": "mein...",
+      "start": 14.185,
+      "end": 14.565,
+      "duration": 0.38
+    },
+    {
+      "index": 46,
+      "word": "colors",
+      "start": 14.607,
+      "end": 14.932,
+      "duration": 0.325
+    },
+    {
+      "index": 47,
+      "word": "ke",
+      "start": 14.968,
+      "end": 15.077,
+      "duration": 0.108
+    },
+    {
+      "index": 48,
+      "word": "liye",
+      "start": 15.089,
+      "end": 15.306,
+      "duration": 0.217
+    },
+    {
+      "index": 49,
+      "word": "words",
+      "start": 15.33,
+      "end": 15.601,
+      "duration": 0.271
+    },
+    {
+      "index": 50,
+      "word": "alag",
+      "start": 16.158,
+      "end": 16.281,
+      "duration": 0.123
+    },
+    {
+      "index": 51,
+      "word": "hote",
+      "start": 16.511,
+      "end": 16.697,
+      "duration": 0.186
+    },
+    {
+      "index": 52,
+      "word": "hain.",
+      "start": 16.718,
+      "end": 16.951,
+      "duration": 0.233
+    },
+    {
+      "index": 53,
+      "word": "Russian",
+      "start": 16.977,
+      "end": 17.303,
+      "duration": 0.326
+    },
+    {
+      "index": 54,
+      "word": "mein",
+      "start": 17.513,
+      "end": 17.704,
+      "duration": 0.191
+    },
+    {
+      "index": 55,
+      "word": "blue",
+      "start": 17.726,
+      "end": 17.917,
+      "duration": 0.191
+    },
+    {
+      "index": 56,
+      "word": "ke",
+      "start": 17.938,
+      "end": 18.034,
+      "duration": 0.096
+    },
+    {
+      "index": 57,
+      "word": "liye",
+      "start": 18.045,
+      "end": 18.236,
+      "duration": 0.191
+    },
+    {
+      "index": 58,
+      "word": "do",
+      "start": 18.257,
+      "end": 18.353,
+      "duration": 0.096
+    },
+    {
+      "index": 59,
+      "word": "alag",
+      "start": 18.364,
+      "end": 18.555,
+      "duration": 0.191
+    },
+    {
+      "index": 60,
+      "word": "words",
+      "start": 18.576,
+      "end": 18.815,
+      "duration": 0.239
+    },
+    {
+      "index": 61,
+      "word": "hain...",
+      "start": 18.842,
+      "end": 19.177,
+      "duration": 0.335
+    },
+    {
+      "index": 62,
+      "word": "light",
+      "start": 19.488,
+      "end": 19.757,
+      "duration": 0.269
+    },
+    {
+      "index": 63,
+      "word": "blue",
+      "start": 19.787,
+      "end": 20.003,
+      "duration": 0.216
+    },
+    {
+      "index": 64,
+      "word": "aur",
+      "start": 20.027,
+      "end": 20.189,
+      "duration": 0.162
+    },
+    {
+      "index": 65,
+      "word": "dark",
+      "start": 20.207,
+      "end": 20.422,
+      "duration": 0.216
+    },
+    {
+      "index": 66,
+      "word": "blue.",
+      "start": 20.446,
+      "end": 20.715,
+      "duration": 0.269
+    },
+    {
+      "index": 67,
+      "word": "Research",
+      "start": 20.745,
+      "end": 21.177,
+      "duration": 0.431
+    },
+    {
+      "index": 68,
+      "word": "batati",
+      "start": 21.224,
+      "end": 21.548,
+      "duration": 0.323
+    },
+    {
+      "index": 69,
+      "word": "hai...",
+      "start": 21.584,
+      "end": 21.907,
+      "duration": 0.323
+    },
+    {
+      "index": 70,
+      "word": "Russian",
+      "start": 22.292,
+      "end": 22.515,
+      "duration": 0.223
+    },
+    {
+      "index": 71,
+      "word": "speakers",
+      "start": 22.539,
+      "end": 22.794,
+      "duration": 0.254
+    },
+    {
+      "index": 72,
+      "word": "un",
+      "start": 23.029,
+      "end": 23.13,
+      "duration": 0.101
+    },
+    {
+      "index": 73,
+      "word": "colors",
+      "start": 23.141,
+      "end": 23.443,
+      "duration": 0.302
+    },
+    {
+      "index": 74,
+      "word": "ke",
+      "start": 23.476,
+      "end": 23.577,
+      "duration": 0.101
+    },
+    {
+      "index": 75,
+      "word": "beech",
+      "start": 23.956,
+      "end": 24.218,
+      "duration": 0.262
+    },
+    {
+      "index": 76,
+      "word": "difference",
+      "start": 24.247,
+      "end": 24.771,
+      "duration": 0.524
+    },
+    {
+      "index": 77,
+      "word": "speed",
+      "start": 24.83,
+      "end": 25.092,
+      "duration": 0.262
+    },
+    {
+      "index": 78,
+      "word": "se",
+      "start": 25.121,
+      "end": 25.226,
+      "duration": 0.105
+    },
+    {
+      "index": 79,
+      "word": "identify",
+      "start": 25.238,
+      "end": 25.657,
+      "duration": 0.419
+    },
+    {
+      "index": 80,
+      "word": "kar",
+      "start": 25.704,
+      "end": 25.861,
+      "duration": 0.157
+    },
+    {
+      "index": 81,
+      "word": "lete",
+      "start": 25.878,
+      "end": 26.088,
+      "duration": 0.21
+    },
+    {
+      "index": 82,
+      "word": "hain...",
+      "start": 26.111,
+      "end": 26.478,
+      "duration": 0.367
+    },
+    {
+      "index": 83,
+      "word": "kyunki",
+      "start": 26.519,
+      "end": 26.834,
+      "duration": 0.315
+    },
+    {
+      "index": 84,
+      "word": "unke",
+      "start": 26.869,
+      "end": 27.078,
+      "duration": 0.21
+    },
+    {
+      "index": 85,
+      "word": "brain",
+      "start": 27.102,
+      "end": 27.364,
+      "duration": 0.262
+    },
+    {
+      "index": 86,
+      "word": "mein",
+      "start": 27.393,
+      "end": 27.602,
+      "duration": 0.21
+    },
+    {
+      "index": 87,
+      "word": "woh",
+      "start": 27.626,
+      "end": 27.783,
+      "duration": 0.157
+    },
+    {
+      "index": 88,
+      "word": "separately",
+      "start": 27.801,
+      "end": 28.325,
+      "duration": 0.524
+    },
+    {
+      "index": 89,
+      "word": "categorized",
+      "start": 28.383,
+      "end": 28.96,
+      "duration": 0.577
+    },
+    {
+      "index": 90,
+      "word": "hain!",
+      "start": 29.024,
+      "end": 29.286,
+      "duration": 0.262
+    }
+  ]
+}

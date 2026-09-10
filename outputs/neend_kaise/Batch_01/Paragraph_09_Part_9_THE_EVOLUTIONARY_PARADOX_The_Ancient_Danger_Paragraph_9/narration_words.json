@@ -1,0 +1,174 @@
+{
+  "total_words": 24,
+  "total_duration": 10.48,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ek",
+      "start": 0.303,
+      "end": 0.395,
+      "duration": 0.092
+    },
+    {
+      "index": 2,
+      "word": "sochne",
+      "start": 0.405,
+      "end": 0.68,
+      "duration": 0.275
+    },
+    {
+      "index": 3,
+      "word": "wali",
+      "start": 0.711,
+      "end": 0.895,
+      "duration": 0.184
+    },
+    {
+      "index": 4,
+      "word": "baat.",
+      "start": 0.915,
+      "end": 1.144,
+      "duration": 0.23
+    },
+    {
+      "index": 5,
+      "word": "Tumhare",
+      "start": 1.17,
+      "end": 1.491,
+      "duration": 0.321
+    },
+    {
+      "index": 6,
+      "word": "ancestors",
+      "start": 1.913,
+      "end": 2.469,
+      "duration": 0.556
+    },
+    {
+      "index": 7,
+      "word": "teen",
+      "start": 2.531,
+      "end": 2.778,
+      "duration": 0.247
+    },
+    {
+      "index": 8,
+      "word": "lakh",
+      "start": 2.805,
+      "end": 3.052,
+      "duration": 0.247
+    },
+    {
+      "index": 9,
+      "word": "saal",
+      "start": 3.08,
+      "end": 3.327,
+      "duration": 0.247
+    },
+    {
+      "index": 10,
+      "word": "pehle",
+      "start": 3.729,
+      "end": 4.019,
+      "duration": 0.29
+    },
+    {
+      "index": 11,
+      "word": "Africa",
+      "start": 4.051,
+      "end": 4.399,
+      "duration": 0.348
+    },
+    {
+      "index": 12,
+      "word": "mein",
+      "start": 4.438,
+      "end": 4.67,
+      "duration": 0.232
+    },
+    {
+      "index": 13,
+      "word": "rehte",
+      "start": 4.696,
+      "end": 4.986,
+      "duration": 0.29
+    },
+    {
+      "index": 14,
+      "word": "the.",
+      "start": 5.184,
+      "end": 5.39,
+      "duration": 0.206
+    },
+    {
+      "index": 15,
+      "word": "Unke",
+      "start": 5.413,
+      "end": 5.619,
+      "duration": 0.206
+    },
+    {
+      "index": 16,
+      "word": "paas",
+      "start": 5.642,
+      "end": 5.848,
+      "duration": 0.206
+    },
+    {
+      "index": 17,
+      "word": "na",
+      "start": 5.871,
+      "end": 5.974,
+      "duration": 0.103
+    },
+    {
+      "index": 18,
+      "word": "ghar",
+      "start": 5.985,
+      "end": 6.191,
+      "duration": 0.206
+    },
+    {
+      "index": 19,
+      "word": "tha,",
+      "start": 6.632,
+      "end": 6.816,
+      "duration": 0.184
+    },
+    {
+      "index": 20,
+      "word": "na",
+      "start": 6.837,
+      "end": 6.929,
+      "duration": 0.092
+    },
+    {
+      "index": 21,
+      "word": "darwaza,",
+      "start": 6.939,
+      "end": 7.308,
+      "duration": 0.369
+    },
+    {
+      "index": 22,
+      "word": "na",
+      "start": 7.349,
+      "end": 7.442,
+      "duration": 0.092
+    },
+    {
+      "index": 23,
+      "word": "koi",
+      "start": 7.452,
+      "end": 7.59,
+      "duration": 0.138
+    },
+    {
+      "index": 24,
+      "word": "security.",
+      "start": 7.606,
+      "end": 8.021,
+      "duration": 0.415
+    }
+  ]
+}

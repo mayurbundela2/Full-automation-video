@@ -1,0 +1,160 @@
+{
+  "total_words": 22,
+  "total_duration": 10.52,
+  "words": [
+    {
+      "index": 1,
+      "word": "Tumhare",
+      "start": 0.322,
+      "end": 0.775,
+      "duration": 0.453
+    },
+    {
+      "index": 2,
+      "word": "ancestors...",
+      "start": 0.826,
+      "end": 1.603,
+      "duration": 0.777
+    },
+    {
+      "index": 3,
+      "word": "jinke",
+      "start": 2.105,
+      "end": 2.437,
+      "duration": 0.332
+    },
+    {
+      "index": 4,
+      "word": "paas",
+      "start": 2.474,
+      "end": 2.739,
+      "duration": 0.265
+    },
+    {
+      "index": 5,
+      "word": "na",
+      "start": 2.768,
+      "end": 2.901,
+      "duration": 0.133
+    },
+    {
+      "index": 6,
+      "word": "alarm",
+      "start": 2.916,
+      "end": 3.248,
+      "duration": 0.332
+    },
+    {
+      "index": 7,
+      "word": "clock",
+      "start": 3.285,
+      "end": 3.616,
+      "duration": 0.332
+    },
+    {
+      "index": 8,
+      "word": "tha,",
+      "start": 3.653,
+      "end": 3.919,
+      "duration": 0.265
+    },
+    {
+      "index": 9,
+      "word": "na",
+      "start": 4.19,
+      "end": 4.315,
+      "duration": 0.125
+    },
+    {
+      "index": 10,
+      "word": "phone,",
+      "start": 4.329,
+      "end": 4.704,
+      "duration": 0.375
+    },
+    {
+      "index": 11,
+      "word": "na",
+      "start": 4.745,
+      "end": 4.87,
+      "duration": 0.125
+    },
+    {
+      "index": 12,
+      "word": "blue",
+      "start": 5.163,
+      "end": 5.403,
+      "duration": 0.24
+    },
+    {
+      "index": 13,
+      "word": "light...",
+      "start": 5.429,
+      "end": 5.909,
+      "duration": 0.479
+    },
+    {
+      "index": 14,
+      "word": "woh",
+      "start": 6.211,
+      "end": 6.403,
+      "duration": 0.192
+    },
+    {
+      "index": 15,
+      "word": "aath-nau",
+      "start": 6.424,
+      "end": 6.937,
+      "duration": 0.512
+    },
+    {
+      "index": 16,
+      "word": "ghante",
+      "start": 6.994,
+      "end": 7.378,
+      "duration": 0.384
+    },
+    {
+      "index": 17,
+      "word": "rozana",
+      "start": 7.42,
+      "end": 7.805,
+      "duration": 0.384
+    },
+    {
+      "index": 18,
+      "word": "sote",
+      "start": 7.847,
+      "end": 8.103,
+      "duration": 0.256
+    },
+    {
+      "index": 19,
+      "word": "the.",
+      "start": 8.132,
+      "end": 8.388,
+      "duration": 0.256
+    },
+    {
+      "index": 20,
+      "word": "Bina",
+      "start": 8.416,
+      "end": 8.673,
+      "duration": 0.256
+    },
+    {
+      "index": 21,
+      "word": "koshish",
+      "start": 9.138,
+      "end": 9.809,
+      "duration": 0.671
+    },
+    {
+      "index": 22,
+      "word": "ke.",
+      "start": 9.883,
+      "end": 10.171,
+      "duration": 0.288
+    }
+  ]
+}

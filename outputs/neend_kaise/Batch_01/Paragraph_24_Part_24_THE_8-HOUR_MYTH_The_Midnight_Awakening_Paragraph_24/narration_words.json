@@ -1,0 +1,230 @@
+{
+  "total_words": 32,
+  "total_duration": 14.8,
+  "words": [
+    {
+      "index": 1,
+      "word": "Phir",
+      "start": 0.35,
+      "end": 0.557,
+      "duration": 0.207
+    },
+    {
+      "index": 2,
+      "word": "raat",
+      "start": 0.58,
+      "end": 0.788,
+      "duration": 0.207
+    },
+    {
+      "index": 3,
+      "word": "ke",
+      "start": 0.811,
+      "end": 0.915,
+      "duration": 0.104
+    },
+    {
+      "index": 4,
+      "word": "baarah",
+      "start": 0.926,
+      "end": 1.237,
+      "duration": 0.311
+    },
+    {
+      "index": 5,
+      "word": "baje",
+      "start": 1.272,
+      "end": 1.479,
+      "duration": 0.207
+    },
+    {
+      "index": 6,
+      "word": "ke",
+      "start": 1.502,
+      "end": 1.606,
+      "duration": 0.104
+    },
+    {
+      "index": 7,
+      "word": "aas",
+      "start": 1.618,
+      "end": 1.773,
+      "duration": 0.156
+    },
+    {
+      "index": 8,
+      "word": "paas...",
+      "start": 1.791,
+      "end": 2.154,
+      "duration": 0.363
+    },
+    {
+      "index": 9,
+      "word": "automatically",
+      "start": 2.194,
+      "end": 2.868,
+      "duration": 0.674
+    },
+    {
+      "index": 10,
+      "word": "uth",
+      "start": 3.35,
+      "end": 3.526,
+      "duration": 0.176
+    },
+    {
+      "index": 11,
+      "word": "jaate.",
+      "start": 3.546,
+      "end": 3.898,
+      "duration": 0.352
+    },
+    {
+      "index": 12,
+      "word": "Ek-do",
+      "start": 3.937,
+      "end": 4.231,
+      "duration": 0.294
+    },
+    {
+      "index": 13,
+      "word": "ghante",
+      "start": 4.263,
+      "end": 4.616,
+      "duration": 0.352
+    },
+    {
+      "index": 14,
+      "word": "awake",
+      "start": 5.106,
+      "end": 5.384,
+      "duration": 0.278
+    },
+    {
+      "index": 15,
+      "word": "rehte.",
+      "start": 5.415,
+      "end": 5.748,
+      "duration": 0.333
+    },
+    {
+      "index": 16,
+      "word": "Is",
+      "start": 5.785,
+      "end": 5.896,
+      "duration": 0.111
+    },
+    {
+      "index": 17,
+      "word": "time",
+      "start": 5.908,
+      "end": 6.13,
+      "duration": 0.222
+    },
+    {
+      "index": 18,
+      "word": "mein",
+      "start": 6.155,
+      "end": 6.377,
+      "duration": 0.222
+    },
+    {
+      "index": 19,
+      "word": "log",
+      "start": 7.242,
+      "end": 7.421,
+      "duration": 0.179
+    },
+    {
+      "index": 20,
+      "word": "praying",
+      "start": 7.441,
+      "end": 7.86,
+      "duration": 0.419
+    },
+    {
+      "index": 21,
+      "word": "karte,",
+      "start": 7.907,
+      "end": 8.266,
+      "duration": 0.359
+    },
+    {
+      "index": 22,
+      "word": "chatting",
+      "start": 8.306,
+      "end": 8.784,
+      "duration": 0.479
+    },
+    {
+      "index": 23,
+      "word": "karte,",
+      "start": 8.837,
+      "end": 9.196,
+      "duration": 0.359
+    },
+    {
+      "index": 24,
+      "word": "chores",
+      "start": 9.236,
+      "end": 9.595,
+      "duration": 0.359
+    },
+    {
+      "index": 25,
+      "word": "nipta",
+      "start": 9.823,
+      "end": 10.048,
+      "duration": 0.225
+    },
+    {
+      "index": 26,
+      "word": "te,",
+      "start": 10.073,
+      "end": 10.208,
+      "duration": 0.135
+    },
+    {
+      "index": 27,
+      "word": "sex",
+      "start": 10.223,
+      "end": 10.358,
+      "duration": 0.135
+    },
+    {
+      "index": 28,
+      "word": "karte,",
+      "start": 10.373,
+      "end": 10.643,
+      "duration": 0.27
+    },
+    {
+      "index": 29,
+      "word": "dreams",
+      "start": 10.974,
+      "end": 11.298,
+      "duration": 0.324
+    },
+    {
+      "index": 30,
+      "word": "pe",
+      "start": 11.334,
+      "end": 11.441,
+      "duration": 0.108
+    },
+    {
+      "index": 31,
+      "word": "reflect",
+      "start": 11.453,
+      "end": 11.831,
+      "duration": 0.378
+    },
+    {
+      "index": 32,
+      "word": "karte.",
+      "start": 12.064,
+      "end": 12.672,
+      "duration": 0.608
+    }
+  ]
+}

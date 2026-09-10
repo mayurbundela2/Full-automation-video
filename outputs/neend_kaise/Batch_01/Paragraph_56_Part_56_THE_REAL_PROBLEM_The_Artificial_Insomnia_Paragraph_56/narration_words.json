@@ -1,0 +1,111 @@
+{
+  "total_words": 15,
+  "total_duration": 7.37,
+  "words": [
+    {
+      "index": 1,
+      "word": "Teen",
+      "start": 0.246,
+      "end": 0.487,
+      "duration": 0.241
+    },
+    {
+      "index": 2,
+      "word": "pandrah",
+      "start": 0.514,
+      "end": 0.936,
+      "duration": 0.422
+    },
+    {
+      "index": 3,
+      "word": "AM.",
+      "start": 0.982,
+      "end": 1.163,
+      "duration": 0.181
+    },
+    {
+      "index": 4,
+      "word": "Finally",
+      "start": 1.183,
+      "end": 1.605,
+      "duration": 0.422
+    },
+    {
+      "index": 5,
+      "word": "phone",
+      "start": 1.856,
+      "end": 2.333,
+      "duration": 0.477
+    },
+    {
+      "index": 6,
+      "word": "rakha.",
+      "start": 2.386,
+      "end": 2.959,
+      "duration": 0.573
+    },
+    {
+      "index": 7,
+      "word": "Aankhein",
+      "start": 3.022,
+      "end": 3.786,
+      "duration": 0.763
+    },
+    {
+      "index": 8,
+      "word": "band",
+      "start": 3.871,
+      "end": 4.252,
+      "duration": 0.382
+    },
+    {
+      "index": 9,
+      "word": "ki.",
+      "start": 4.295,
+      "end": 4.581,
+      "duration": 0.286
+    },
+    {
+      "index": 10,
+      "word": "Lekin",
+      "start": 4.613,
+      "end": 5.09,
+      "duration": 0.477
+    },
+    {
+      "index": 11,
+      "word": "neend",
+      "start": 5.143,
+      "end": 5.62,
+      "duration": 0.477
+    },
+    {
+      "index": 12,
+      "word": "nahi",
+      "start": 5.673,
+      "end": 6.055,
+      "duration": 0.382
+    },
+    {
+      "index": 13,
+      "word": "aa",
+      "start": 6.098,
+      "end": 6.288,
+      "duration": 0.191
+    },
+    {
+      "index": 14,
+      "word": "rahi.",
+      "start": 6.31,
+      "end": 6.787,
+      "duration": 0.477
+    },
+    {
+      "index": 15,
+      "word": "Kyun?",
+      "start": 6.84,
+      "end": 7.317,
+      "duration": 0.477
+    }
+  ]
+}

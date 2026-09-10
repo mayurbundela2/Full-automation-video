@@ -1,0 +1,223 @@
+{
+  "total_words": 31,
+  "total_duration": 12.36,
+  "words": [
+    {
+      "index": 1,
+      "word": "Tumhari",
+      "start": 0.281,
+      "end": 0.714,
+      "duration": 0.433
+    },
+    {
+      "index": 2,
+      "word": "generation",
+      "start": 0.762,
+      "end": 1.381,
+      "duration": 0.619
+    },
+    {
+      "index": 3,
+      "word": "late",
+      "start": 1.449,
+      "end": 1.697,
+      "duration": 0.247
+    },
+    {
+      "index": 4,
+      "word": "soti",
+      "start": 1.724,
+      "end": 1.972,
+      "duration": 0.247
+    },
+    {
+      "index": 5,
+      "word": "hain.",
+      "start": 1.999,
+      "end": 2.309,
+      "duration": 0.309
+    },
+    {
+      "index": 6,
+      "word": "Aur",
+      "start": 2.845,
+      "end": 3.01,
+      "duration": 0.165
+    },
+    {
+      "index": 7,
+      "word": "tumne",
+      "start": 3.029,
+      "end": 3.304,
+      "duration": 0.275
+    },
+    {
+      "index": 8,
+      "word": "ise",
+      "start": 3.335,
+      "end": 3.5,
+      "duration": 0.165
+    },
+    {
+      "index": 9,
+      "word": "normal",
+      "start": 3.518,
+      "end": 3.849,
+      "duration": 0.33
+    },
+    {
+      "index": 10,
+      "word": "maan",
+      "start": 3.885,
+      "end": 4.106,
+      "duration": 0.22
+    },
+    {
+      "index": 11,
+      "word": "liya",
+      "start": 4.13,
+      "end": 4.351,
+      "duration": 0.22
+    },
+    {
+      "index": 12,
+      "word": "hai.",
+      "start": 4.899,
+      "end": 5.008,
+      "duration": 0.109
+    },
+    {
+      "index": 13,
+      "word": "Ek",
+      "start": 5.424,
+      "end": 5.547,
+      "duration": 0.123
+    },
+    {
+      "index": 14,
+      "word": "bas",
+      "start": 5.56,
+      "end": 5.744,
+      "duration": 0.184
+    },
+    {
+      "index": 15,
+      "word": "ek",
+      "start": 5.765,
+      "end": 5.888,
+      "duration": 0.123
+    },
+    {
+      "index": 16,
+      "word": "aur",
+      "start": 5.901,
+      "end": 6.085,
+      "duration": 0.184
+    },
+    {
+      "index": 17,
+      "word": "reel",
+      "start": 6.106,
+      "end": 6.351,
+      "duration": 0.245
+    },
+    {
+      "index": 18,
+      "word": "wala",
+      "start": 6.379,
+      "end": 6.624,
+      "duration": 0.245
+    },
+    {
+      "index": 19,
+      "word": "moment...",
+      "start": 6.651,
+      "end": 7.204,
+      "duration": 0.552
+    },
+    {
+      "index": 20,
+      "word": "phir",
+      "start": 7.265,
+      "end": 7.511,
+      "duration": 0.245
+    },
+    {
+      "index": 21,
+      "word": "raat",
+      "start": 7.538,
+      "end": 7.783,
+      "duration": 0.245
+    },
+    {
+      "index": 22,
+      "word": "ke",
+      "start": 7.811,
+      "end": 7.933,
+      "duration": 0.123
+    },
+    {
+      "index": 23,
+      "word": "do",
+      "start": 8.447,
+      "end": 8.553,
+      "duration": 0.106
+    },
+    {
+      "index": 24,
+      "word": "baj",
+      "start": 8.565,
+      "end": 8.724,
+      "duration": 0.159
+    },
+    {
+      "index": 25,
+      "word": "gaye.",
+      "start": 8.742,
+      "end": 9.007,
+      "duration": 0.265
+    },
+    {
+      "index": 26,
+      "word": "Uthne",
+      "start": 9.037,
+      "end": 9.302,
+      "duration": 0.265
+    },
+    {
+      "index": 27,
+      "word": "ka",
+      "start": 9.331,
+      "end": 9.437,
+      "duration": 0.106
+    },
+    {
+      "index": 28,
+      "word": "time",
+      "start": 9.449,
+      "end": 9.661,
+      "duration": 0.212
+    },
+    {
+      "index": 29,
+      "word": "subah",
+      "start": 10.405,
+      "end": 10.939,
+      "duration": 0.534
+    },
+    {
+      "index": 30,
+      "word": "saat",
+      "start": 10.998,
+      "end": 11.425,
+      "duration": 0.427
+    },
+    {
+      "index": 31,
+      "word": "baje.",
+      "start": 11.473,
+      "end": 12.007,
+      "duration": 0.534
+    }
+  ]
+}

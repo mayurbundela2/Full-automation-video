@@ -1,0 +1,664 @@
+{
+  "total_words": 94,
+  "total_duration": 35.32,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin...",
+      "start": 0.298,
+      "end": 0.749,
+      "duration": 0.451
+    },
+    {
+      "index": 2,
+      "word": "aur",
+      "start": 1.179,
+      "end": 1.312,
+      "duration": 0.133
+    },
+    {
+      "index": 3,
+      "word": "ye",
+      "start": 1.327,
+      "end": 1.416,
+      "duration": 0.089
+    },
+    {
+      "index": 4,
+      "word": "zaroori",
+      "start": 1.426,
+      "end": 1.736,
+      "duration": 0.311
+    },
+    {
+      "index": 5,
+      "word": "hai...",
+      "start": 1.771,
+      "end": 2.037,
+      "duration": 0.266
+    },
+    {
+      "index": 6,
+      "word": "iska",
+      "start": 2.409,
+      "end": 2.634,
+      "duration": 0.225
+    },
+    {
+      "index": 7,
+      "word": "matlab",
+      "start": 2.66,
+      "end": 2.998,
+      "duration": 0.338
+    },
+    {
+      "index": 8,
+      "word": "ye",
+      "start": 3.035,
+      "end": 3.148,
+      "duration": 0.113
+    },
+    {
+      "index": 9,
+      "word": "nahi",
+      "start": 3.161,
+      "end": 3.386,
+      "duration": 0.225
+    },
+    {
+      "index": 10,
+      "word": "ki",
+      "start": 3.411,
+      "end": 3.524,
+      "duration": 0.113
+    },
+    {
+      "index": 11,
+      "word": "humein",
+      "start": 3.536,
+      "end": 3.874,
+      "duration": 0.338
+    },
+    {
+      "index": 12,
+      "word": "Neanderthal",
+      "start": 3.912,
+      "end": 4.532,
+      "duration": 0.62
+    },
+    {
+      "index": 13,
+      "word": "language",
+      "start": 4.601,
+      "end": 5.052,
+      "duration": 0.451
+    },
+    {
+      "index": 14,
+      "word": "mil",
+      "start": 5.102,
+      "end": 5.271,
+      "duration": 0.169
+    },
+    {
+      "index": 15,
+      "word": "gayi.",
+      "start": 5.29,
+      "end": 5.572,
+      "duration": 0.282
+    },
+    {
+      "index": 16,
+      "word": "Iska",
+      "start": 6.185,
+      "end": 6.409,
+      "duration": 0.224
+    },
+    {
+      "index": 17,
+      "word": "matlab",
+      "start": 6.434,
+      "end": 6.77,
+      "duration": 0.336
+    },
+    {
+      "index": 18,
+      "word": "sirf",
+      "start": 6.808,
+      "end": 7.032,
+      "duration": 0.224
+    },
+    {
+      "index": 19,
+      "word": "itna",
+      "start": 7.057,
+      "end": 7.281,
+      "duration": 0.224
+    },
+    {
+      "index": 20,
+      "word": "hai",
+      "start": 7.306,
+      "end": 7.474,
+      "duration": 0.168
+    },
+    {
+      "index": 21,
+      "word": "ki",
+      "start": 7.493,
+      "end": 7.605,
+      "duration": 0.112
+    },
+    {
+      "index": 22,
+      "word": "Neanderthals",
+      "start": 7.617,
+      "end": 8.29,
+      "duration": 0.672
+    },
+    {
+      "index": 23,
+      "word": "ke",
+      "start": 8.364,
+      "end": 8.476,
+      "duration": 0.112
+    },
+    {
+      "index": 24,
+      "word": "paas",
+      "start": 8.489,
+      "end": 8.713,
+      "duration": 0.224
+    },
+    {
+      "index": 25,
+      "word": "usi",
+      "start": 8.738,
+      "end": 8.906,
+      "duration": 0.168
+    },
+    {
+      "index": 26,
+      "word": "gene",
+      "start": 8.925,
+      "end": 9.149,
+      "duration": 0.224
+    },
+    {
+      "index": 27,
+      "word": "ke",
+      "start": 9.174,
+      "end": 9.286,
+      "duration": 0.112
+    },
+    {
+      "index": 28,
+      "word": "variants",
+      "start": 9.298,
+      "end": 9.747,
+      "duration": 0.448
+    },
+    {
+      "index": 29,
+      "word": "the.",
+      "start": 9.797,
+      "end": 10.021,
+      "duration": 0.224
+    },
+    {
+      "index": 30,
+      "word": "Us",
+      "start": 10.046,
+      "end": 10.158,
+      "duration": 0.112
+    },
+    {
+      "index": 31,
+      "word": "waqt...",
+      "start": 10.17,
+      "end": 10.562,
+      "duration": 0.392
+    },
+    {
+      "index": 32,
+      "word": "do",
+      "start": 11.278,
+      "end": 11.382,
+      "duration": 0.104
+    },
+    {
+      "index": 33,
+      "word": "hazaar",
+      "start": 11.394,
+      "end": 11.705,
+      "duration": 0.312
+    },
+    {
+      "index": 34,
+      "word": "saat",
+      "start": 11.74,
+      "end": 11.948,
+      "duration": 0.208
+    },
+    {
+      "index": 35,
+      "word": "mein...",
+      "start": 11.971,
+      "end": 12.335,
+      "duration": 0.364
+    },
+    {
+      "index": 36,
+      "word": "headlines",
+      "start": 12.375,
+      "end": 12.843,
+      "duration": 0.468
+    },
+    {
+      "index": 37,
+      "word": "aayi",
+      "start": 13.089,
+      "end": 13.286,
+      "duration": 0.197
+    },
+    {
+      "index": 38,
+      "word": "ki",
+      "start": 13.308,
+      "end": 13.407,
+      "duration": 0.099
+    },
+    {
+      "index": 39,
+      "word": "Neanderthals",
+      "start": 13.418,
+      "end": 14.01,
+      "duration": 0.592
+    },
+    {
+      "index": 40,
+      "word": "could",
+      "start": 14.076,
+      "end": 14.323,
+      "duration": 0.247
+    },
+    {
+      "index": 41,
+      "word": "talk!",
+      "start": 14.351,
+      "end": 14.597,
+      "duration": 0.247
+    },
+    {
+      "index": 42,
+      "word": "Lekin",
+      "start": 14.625,
+      "end": 14.872,
+      "duration": 0.247
+    },
+    {
+      "index": 43,
+      "word": "science",
+      "start": 14.899,
+      "end": 15.245,
+      "duration": 0.346
+    },
+    {
+      "index": 44,
+      "word": "zyada",
+      "start": 15.772,
+      "end": 16.034,
+      "duration": 0.262
+    },
+    {
+      "index": 45,
+      "word": "complicated",
+      "start": 16.063,
+      "end": 16.638,
+      "duration": 0.576
+    },
+    {
+      "index": 46,
+      "word": "hai.",
+      "start": 16.702,
+      "end": 16.912,
+      "duration": 0.209
+    },
+    {
+      "index": 47,
+      "word": "Do",
+      "start": 16.935,
+      "end": 17.04,
+      "duration": 0.105
+    },
+    {
+      "index": 48,
+      "word": "hazaar",
+      "start": 17.051,
+      "end": 17.365,
+      "duration": 0.314
+    },
+    {
+      "index": 49,
+      "word": "atharah",
+      "start": 17.4,
+      "end": 17.766,
+      "duration": 0.366
+    },
+    {
+      "index": 50,
+      "word": "mein",
+      "start": 18.39,
+      "end": 18.609,
+      "duration": 0.219
+    },
+    {
+      "index": 51,
+      "word": "Elizabeth",
+      "start": 18.634,
+      "end": 19.127,
+      "duration": 0.493
+    },
+    {
+      "index": 52,
+      "word": "Atkinson",
+      "start": 19.182,
+      "end": 19.62,
+      "duration": 0.439
+    },
+    {
+      "index": 53,
+      "word": "aur",
+      "start": 19.669,
+      "end": 19.834,
+      "duration": 0.164
+    },
+    {
+      "index": 54,
+      "word": "unki",
+      "start": 19.852,
+      "end": 20.071,
+      "duration": 0.219
+    },
+    {
+      "index": 55,
+      "word": "team",
+      "start": 20.096,
+      "end": 20.315,
+      "duration": 0.219
+    },
+    {
+      "index": 56,
+      "word": "ki",
+      "start": 20.339,
+      "end": 20.449,
+      "duration": 0.11
+    },
+    {
+      "index": 57,
+      "word": "ek",
+      "start": 20.461,
+      "end": 20.571,
+      "duration": 0.11
+    },
+    {
+      "index": 58,
+      "word": "badi",
+      "start": 20.583,
+      "end": 20.802,
+      "duration": 0.219
+    },
+    {
+      "index": 59,
+      "word": "study",
+      "start": 20.827,
+      "end": 21.101,
+      "duration": 0.274
+    },
+    {
+      "index": 60,
+      "word": "aayi.",
+      "start": 21.131,
+      "end": 21.405,
+      "duration": 0.274
+    },
+    {
+      "index": 61,
+      "word": "Unhone",
+      "start": 21.436,
+      "end": 21.765,
+      "duration": 0.329
+    },
+    {
+      "index": 62,
+      "word": "find",
+      "start": 21.801,
+      "end": 22.021,
+      "duration": 0.219
+    },
+    {
+      "index": 63,
+      "word": "kiya",
+      "start": 22.045,
+      "end": 22.264,
+      "duration": 0.219
+    },
+    {
+      "index": 64,
+      "word": "ki",
+      "start": 22.289,
+      "end": 22.398,
+      "duration": 0.11
+    },
+    {
+      "index": 65,
+      "word": "FOXP2",
+      "start": 22.41,
+      "end": 22.685,
+      "duration": 0.274
+    },
+    {
+      "index": 66,
+      "word": "shayad",
+      "start": 23.247,
+      "end": 23.591,
+      "duration": 0.344
+    },
+    {
+      "index": 67,
+      "word": "utna",
+      "start": 23.629,
+      "end": 23.858,
+      "duration": 0.229
+    },
+    {
+      "index": 68,
+      "word": "special",
+      "start": 23.884,
+      "end": 24.285,
+      "duration": 0.401
+    },
+    {
+      "index": 69,
+      "word": "nahi",
+      "start": 24.33,
+      "end": 24.559,
+      "duration": 0.229
+    },
+    {
+      "index": 70,
+      "word": "hai",
+      "start": 24.585,
+      "end": 24.757,
+      "duration": 0.172
+    },
+    {
+      "index": 71,
+      "word": "jitna",
+      "start": 24.776,
+      "end": 25.062,
+      "duration": 0.287
+    },
+    {
+      "index": 72,
+      "word": "pehle",
+      "start": 25.094,
+      "end": 25.381,
+      "duration": 0.287
+    },
+    {
+      "index": 73,
+      "word": "socha",
+      "start": 25.413,
+      "end": 25.699,
+      "duration": 0.287
+    },
+    {
+      "index": 74,
+      "word": "gaya.",
+      "start": 25.902,
+      "end": 26.184,
+      "duration": 0.282
+    },
+    {
+      "index": 75,
+      "word": "Language",
+      "start": 26.215,
+      "end": 26.666,
+      "duration": 0.451
+    },
+    {
+      "index": 76,
+      "word": "gene",
+      "start": 26.716,
+      "end": 26.941,
+      "duration": 0.225
+    },
+    {
+      "index": 77,
+      "word": "label...",
+      "start": 26.966,
+      "end": 27.417,
+      "duration": 0.451
+    },
+    {
+      "index": 78,
+      "word": "jo",
+      "start": 27.467,
+      "end": 27.579,
+      "duration": 0.113
+    },
+    {
+      "index": 79,
+      "word": "media",
+      "start": 27.592,
+      "end": 27.874,
+      "duration": 0.282
+    },
+    {
+      "index": 80,
+      "word": "ne",
+      "start": 27.905,
+      "end": 28.017,
+      "duration": 0.113
+    },
+    {
+      "index": 81,
+      "word": "diya",
+      "start": 28.736,
+      "end": 28.934,
+      "duration": 0.198
+    },
+    {
+      "index": 82,
+      "word": "tha...",
+      "start": 28.956,
+      "end": 29.253,
+      "duration": 0.297
+    },
+    {
+      "index": 83,
+      "word": "woh",
+      "start": 29.286,
+      "end": 29.434,
+      "duration": 0.148
+    },
+    {
+      "index": 84,
+      "word": "galat",
+      "start": 29.451,
+      "end": 29.698,
+      "duration": 0.247
+    },
+    {
+      "index": 85,
+      "word": "hai.",
+      "start": 29.726,
+      "end": 29.924,
+      "duration": 0.198
+    },
+    {
+      "index": 86,
+      "word": "Ye",
+      "start": 30.214,
+      "end": 30.319,
+      "duration": 0.105
+    },
+    {
+      "index": 87,
+      "word": "gene",
+      "start": 30.33,
+      "end": 30.54,
+      "duration": 0.209
+    },
+    {
+      "index": 88,
+      "word": "sirf",
+      "start": 30.563,
+      "end": 30.772,
+      "duration": 0.209
+    },
+    {
+      "index": 89,
+      "word": "ek",
+      "start": 30.796,
+      "end": 30.9,
+      "duration": 0.105
+    },
+    {
+      "index": 90,
+      "word": "piece",
+      "start": 30.912,
+      "end": 31.174,
+      "duration": 0.262
+    },
+    {
+      "index": 91,
+      "word": "hai",
+      "start": 31.562,
+      "end": 31.668,
+      "duration": 0.106
+    },
+    {
+      "index": 92,
+      "word": "bade",
+      "start": 31.68,
+      "end": 31.822,
+      "duration": 0.142
+    },
+    {
+      "index": 93,
+      "word": "puzzle",
+      "start": 31.838,
+      "end": 32.05,
+      "duration": 0.213
+    },
+    {
+      "index": 94,
+      "word": "ka.",
+      "start": 32.484,
+      "end": 33.392,
+      "duration": 0.908
+    }
+  ]
+}

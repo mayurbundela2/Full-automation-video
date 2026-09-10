@@ -1,0 +1,209 @@
+{
+  "total_words": 29,
+  "total_duration": 10.69,
+  "words": [
+    {
+      "index": 1,
+      "word": "Kyunki",
+      "start": 0.233,
+      "end": 0.561,
+      "duration": 0.328
+    },
+    {
+      "index": 2,
+      "word": "tumne",
+      "start": 0.598,
+      "end": 0.871,
+      "duration": 0.273
+    },
+    {
+      "index": 3,
+      "word": "apni",
+      "start": 0.902,
+      "end": 1.12,
+      "duration": 0.219
+    },
+    {
+      "index": 4,
+      "word": "body",
+      "start": 1.145,
+      "end": 1.363,
+      "duration": 0.219
+    },
+    {
+      "index": 5,
+      "word": "ki",
+      "start": 1.388,
+      "end": 1.497,
+      "duration": 0.109
+    },
+    {
+      "index": 6,
+      "word": "teen",
+      "start": 1.509,
+      "end": 1.728,
+      "duration": 0.219
+    },
+    {
+      "index": 7,
+      "word": "lakh",
+      "start": 1.752,
+      "end": 1.971,
+      "duration": 0.219
+    },
+    {
+      "index": 8,
+      "word": "saal",
+      "start": 1.995,
+      "end": 2.214,
+      "duration": 0.219
+    },
+    {
+      "index": 9,
+      "word": "purani",
+      "start": 2.239,
+      "end": 2.567,
+      "duration": 0.328
+    },
+    {
+      "index": 10,
+      "word": "programming",
+      "start": 2.603,
+      "end": 3.205,
+      "duration": 0.602
+    },
+    {
+      "index": 11,
+      "word": "ko",
+      "start": 3.272,
+      "end": 3.381,
+      "duration": 0.109
+    },
+    {
+      "index": 12,
+      "word": "force",
+      "start": 3.393,
+      "end": 3.667,
+      "duration": 0.273
+    },
+    {
+      "index": 13,
+      "word": "fully",
+      "start": 3.697,
+      "end": 3.971,
+      "duration": 0.273
+    },
+    {
+      "index": 14,
+      "word": "hijack",
+      "start": 4.309,
+      "end": 4.609,
+      "duration": 0.3
+    },
+    {
+      "index": 15,
+      "word": "kar",
+      "start": 4.642,
+      "end": 4.792,
+      "duration": 0.15
+    },
+    {
+      "index": 16,
+      "word": "liya",
+      "start": 4.809,
+      "end": 5.009,
+      "duration": 0.2
+    },
+    {
+      "index": 17,
+      "word": "hai.",
+      "start": 5.031,
+      "end": 5.231,
+      "duration": 0.2
+    },
+    {
+      "index": 18,
+      "word": "Phone",
+      "start": 5.253,
+      "end": 5.503,
+      "duration": 0.25
+    },
+    {
+      "index": 19,
+      "word": "ka",
+      "start": 5.531,
+      "end": 5.631,
+      "duration": 0.1
+    },
+    {
+      "index": 20,
+      "word": "blue",
+      "start": 5.642,
+      "end": 5.842,
+      "duration": 0.2
+    },
+    {
+      "index": 21,
+      "word": "light...",
+      "start": 6.39,
+      "end": 6.764,
+      "duration": 0.374
+    },
+    {
+      "index": 22,
+      "word": "ye",
+      "start": 6.805,
+      "end": 6.899,
+      "duration": 0.093
+    },
+    {
+      "index": 23,
+      "word": "specifically",
+      "start": 6.909,
+      "end": 7.47,
+      "duration": 0.561
+    },
+    {
+      "index": 24,
+      "word": "sunrise",
+      "start": 7.819,
+      "end": 8.337,
+      "duration": 0.518
+    },
+    {
+      "index": 25,
+      "word": "ka",
+      "start": 8.394,
+      "end": 8.542,
+      "duration": 0.148
+    },
+    {
+      "index": 26,
+      "word": "wavelength",
+      "start": 8.558,
+      "end": 9.298,
+      "duration": 0.739
+    },
+    {
+      "index": 27,
+      "word": "match",
+      "start": 9.38,
+      "end": 9.75,
+      "duration": 0.37
+    },
+    {
+      "index": 28,
+      "word": "karta",
+      "start": 9.791,
+      "end": 10.16,
+      "duration": 0.37
+    },
+    {
+      "index": 29,
+      "word": "hai.",
+      "start": 10.201,
+      "end": 10.497,
+      "duration": 0.296
+    }
+  ]
+}

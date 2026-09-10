@@ -1,0 +1,188 @@
+{
+  "total_words": 26,
+  "total_duration": 11.96,
+  "words": [
+    {
+      "index": 1,
+      "word": "Unhone",
+      "start": 0.274,
+      "end": 0.632,
+      "duration": 0.358
+    },
+    {
+      "index": 2,
+      "word": "neend",
+      "start": 0.672,
+      "end": 0.971,
+      "duration": 0.299
+    },
+    {
+      "index": 3,
+      "word": "chuni.",
+      "start": 1.004,
+      "end": 1.362,
+      "duration": 0.358
+    },
+    {
+      "index": 4,
+      "word": "Aur",
+      "start": 1.402,
+      "end": 1.581,
+      "duration": 0.179
+    },
+    {
+      "index": 5,
+      "word": "is",
+      "start": 2.223,
+      "end": 2.337,
+      "duration": 0.114
+    },
+    {
+      "index": 6,
+      "word": "decision",
+      "start": 2.35,
+      "end": 2.808,
+      "duration": 0.458
+    },
+    {
+      "index": 7,
+      "word": "ne",
+      "start": 2.859,
+      "end": 2.973,
+      "duration": 0.114
+    },
+    {
+      "index": 8,
+      "word": "humari",
+      "start": 2.986,
+      "end": 3.329,
+      "duration": 0.343
+    },
+    {
+      "index": 9,
+      "word": "species",
+      "start": 3.591,
+      "end": 4.046,
+      "duration": 0.455
+    },
+    {
+      "index": 10,
+      "word": "banayi.",
+      "start": 4.097,
+      "end": 4.552,
+      "duration": 0.455
+    },
+    {
+      "index": 11,
+      "word": "Aur",
+      "start": 4.603,
+      "end": 4.798,
+      "duration": 0.195
+    },
+    {
+      "index": 12,
+      "word": "is",
+      "start": 4.819,
+      "end": 4.95,
+      "duration": 0.13
+    },
+    {
+      "index": 13,
+      "word": "decision",
+      "start": 5.443,
+      "end": 5.624,
+      "duration": 0.181
+    },
+    {
+      "index": 14,
+      "word": "ke",
+      "start": 5.801,
+      "end": 5.93,
+      "duration": 0.129
+    },
+    {
+      "index": 15,
+      "word": "saath...",
+      "start": 5.944,
+      "end": 6.458,
+      "duration": 0.514
+    },
+    {
+      "index": 16,
+      "word": "ek",
+      "start": 6.516,
+      "end": 6.644,
+      "duration": 0.129
+    },
+    {
+      "index": 17,
+      "word": "aisa",
+      "start": 6.658,
+      "end": 6.916,
+      "duration": 0.257
+    },
+    {
+      "index": 18,
+      "word": "system",
+      "start": 6.944,
+      "end": 7.33,
+      "duration": 0.386
+    },
+    {
+      "index": 19,
+      "word": "evolve",
+      "start": 7.691,
+      "end": 7.862,
+      "duration": 0.171
+    },
+    {
+      "index": 20,
+      "word": "hua",
+      "start": 8.046,
+      "end": 8.216,
+      "duration": 0.17
+    },
+    {
+      "index": 21,
+      "word": "jo",
+      "start": 8.235,
+      "end": 8.348,
+      "duration": 0.113
+    },
+    {
+      "index": 22,
+      "word": "aaj",
+      "start": 8.361,
+      "end": 8.53,
+      "duration": 0.17
+    },
+    {
+      "index": 23,
+      "word": "bhi",
+      "start": 8.549,
+      "end": 8.719,
+      "duration": 0.17
+    },
+    {
+      "index": 24,
+      "word": "tumhare",
+      "start": 8.738,
+      "end": 9.134,
+      "duration": 0.396
+    },
+    {
+      "index": 25,
+      "word": "andar",
+      "start": 9.178,
+      "end": 9.462,
+      "duration": 0.283
+    },
+    {
+      "index": 26,
+      "word": "hai.",
+      "start": 9.706,
+      "end": 11.394,
+      "duration": 1.688
+    }
+  ]
+}

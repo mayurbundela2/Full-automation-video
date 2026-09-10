@@ -1,0 +1,307 @@
+{
+  "total_words": 43,
+  "total_duration": 15.4,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.278,
+      "end": 0.392,
+      "duration": 0.114
+    },
+    {
+      "index": 2,
+      "word": "sawaal",
+      "start": 0.405,
+      "end": 0.748,
+      "duration": 0.343
+    },
+    {
+      "index": 3,
+      "word": "itne",
+      "start": 0.787,
+      "end": 1.016,
+      "duration": 0.229
+    },
+    {
+      "index": 4,
+      "word": "bade",
+      "start": 1.041,
+      "end": 1.27,
+      "duration": 0.229
+    },
+    {
+      "index": 5,
+      "word": "hain...",
+      "start": 1.295,
+      "end": 1.696,
+      "duration": 0.401
+    },
+    {
+      "index": 6,
+      "word": "ki",
+      "start": 1.74,
+      "end": 1.855,
+      "duration": 0.114
+    },
+    {
+      "index": 7,
+      "word": "scientists",
+      "start": 1.867,
+      "end": 2.44,
+      "duration": 0.572
+    },
+    {
+      "index": 8,
+      "word": "aaj",
+      "start": 2.503,
+      "end": 2.675,
+      "duration": 0.172
+    },
+    {
+      "index": 9,
+      "word": "bhi",
+      "start": 2.694,
+      "end": 2.866,
+      "duration": 0.172
+    },
+    {
+      "index": 10,
+      "word": "debate",
+      "start": 2.885,
+      "end": 3.228,
+      "duration": 0.343
+    },
+    {
+      "index": 11,
+      "word": "karte",
+      "start": 3.266,
+      "end": 3.552,
+      "duration": 0.286
+    },
+    {
+      "index": 12,
+      "word": "hain!",
+      "start": 3.584,
+      "end": 3.87,
+      "duration": 0.286
+    },
+    {
+      "index": 13,
+      "word": "Aur",
+      "start": 4.246,
+      "end": 4.423,
+      "duration": 0.177
+    },
+    {
+      "index": 14,
+      "word": "is",
+      "start": 4.443,
+      "end": 4.56,
+      "duration": 0.118
+    },
+    {
+      "index": 15,
+      "word": "video",
+      "start": 4.574,
+      "end": 4.868,
+      "duration": 0.295
+    },
+    {
+      "index": 16,
+      "word": "mein...",
+      "start": 4.901,
+      "end": 5.314,
+      "duration": 0.413
+    },
+    {
+      "index": 17,
+      "word": "hum",
+      "start": 5.36,
+      "end": 5.537,
+      "duration": 0.177
+    },
+    {
+      "index": 18,
+      "word": "jaanenge",
+      "start": 5.556,
+      "end": 6.028,
+      "duration": 0.472
+    },
+    {
+      "index": 19,
+      "word": "asli",
+      "start": 6.08,
+      "end": 6.316,
+      "duration": 0.236
+    },
+    {
+      "index": 20,
+      "word": "sach!",
+      "start": 6.342,
+      "end": 6.637,
+      "duration": 0.295
+    },
+    {
+      "index": 21,
+      "word": "Ek",
+      "start": 6.67,
+      "end": 6.788,
+      "duration": 0.118
+    },
+    {
+      "index": 22,
+      "word": "family",
+      "start": 6.801,
+      "end": 7.155,
+      "duration": 0.354
+    },
+    {
+      "index": 23,
+      "word": "jinke",
+      "start": 7.518,
+      "end": 7.822,
+      "duration": 0.304
+    },
+    {
+      "index": 24,
+      "word": "DNA",
+      "start": 7.856,
+      "end": 8.038,
+      "duration": 0.182
+    },
+    {
+      "index": 25,
+      "word": "mein",
+      "start": 8.059,
+      "end": 8.302,
+      "duration": 0.243
+    },
+    {
+      "index": 26,
+      "word": "language",
+      "start": 8.329,
+      "end": 8.815,
+      "duration": 0.486
+    },
+    {
+      "index": 27,
+      "word": "kho",
+      "start": 8.869,
+      "end": 9.052,
+      "duration": 0.182
+    },
+    {
+      "index": 28,
+      "word": "gayi",
+      "start": 9.072,
+      "end": 9.315,
+      "duration": 0.243
+    },
+    {
+      "index": 29,
+      "word": "thi...",
+      "start": 9.342,
+      "end": 9.707,
+      "duration": 0.365
+    },
+    {
+      "index": 30,
+      "word": "Ek",
+      "start": 9.748,
+      "end": 9.869,
+      "duration": 0.122
+    },
+    {
+      "index": 31,
+      "word": "gene",
+      "start": 9.883,
+      "end": 10.126,
+      "duration": 0.243
+    },
+    {
+      "index": 32,
+      "word": "jise",
+      "start": 10.375,
+      "end": 10.611,
+      "duration": 0.236
+    },
+    {
+      "index": 33,
+      "word": "language",
+      "start": 10.638,
+      "end": 11.11,
+      "duration": 0.473
+    },
+    {
+      "index": 34,
+      "word": "gene",
+      "start": 11.163,
+      "end": 11.399,
+      "duration": 0.236
+    },
+    {
+      "index": 35,
+      "word": "kaha",
+      "start": 11.425,
+      "end": 11.662,
+      "duration": 0.236
+    },
+    {
+      "index": 36,
+      "word": "gaya...",
+      "start": 11.688,
+      "end": 12.102,
+      "duration": 0.414
+    },
+    {
+      "index": 37,
+      "word": "aur",
+      "start": 12.147,
+      "end": 12.325,
+      "duration": 0.177
+    },
+    {
+      "index": 38,
+      "word": "phir",
+      "start": 12.344,
+      "end": 12.581,
+      "duration": 0.236
+    },
+    {
+      "index": 39,
+      "word": "ye",
+      "start": 13.001,
+      "end": 13.173,
+      "duration": 0.172
+    },
+    {
+      "index": 40,
+      "word": "label",
+      "start": 13.192,
+      "end": 13.623,
+      "duration": 0.43
+    },
+    {
+      "index": 41,
+      "word": "galat",
+      "start": 13.67,
+      "end": 14.101,
+      "duration": 0.43
+    },
+    {
+      "index": 42,
+      "word": "saabit",
+      "start": 14.149,
+      "end": 14.665,
+      "duration": 0.516
+    },
+    {
+      "index": 43,
+      "word": "hua!",
+      "start": 14.722,
+      "end": 15.067,
+      "duration": 0.344
+    }
+  ]
+}

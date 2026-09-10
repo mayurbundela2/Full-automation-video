@@ -1,0 +1,461 @@
+{
+  "total_words": 65,
+  "total_duration": 21.2,
+  "words": [
+    {
+      "index": 1,
+      "word": "Language",
+      "start": 0.271,
+      "end": 0.597,
+      "duration": 0.326
+    },
+    {
+      "index": 2,
+      "word": "ne",
+      "start": 0.633,
+      "end": 0.714,
+      "duration": 0.081
+    },
+    {
+      "index": 3,
+      "word": "kya",
+      "start": 0.724,
+      "end": 0.846,
+      "duration": 0.122
+    },
+    {
+      "index": 4,
+      "word": "diya",
+      "start": 0.859,
+      "end": 1.022,
+      "duration": 0.163
+    },
+    {
+      "index": 5,
+      "word": "humein?",
+      "start": 1.04,
+      "end": 1.325,
+      "duration": 0.285
+    },
+    {
+      "index": 6,
+      "word": "Sirf",
+      "start": 1.698,
+      "end": 1.888,
+      "duration": 0.19
+    },
+    {
+      "index": 7,
+      "word": "ek",
+      "start": 1.909,
+      "end": 2.004,
+      "duration": 0.095
+    },
+    {
+      "index": 8,
+      "word": "cheez...",
+      "start": 2.014,
+      "end": 2.393,
+      "duration": 0.379
+    },
+    {
+      "index": 9,
+      "word": "but",
+      "start": 2.435,
+      "end": 2.578,
+      "duration": 0.142
+    },
+    {
+      "index": 10,
+      "word": "sabse",
+      "start": 2.593,
+      "end": 2.83,
+      "duration": 0.237
+    },
+    {
+      "index": 11,
+      "word": "important",
+      "start": 2.857,
+      "end": 3.283,
+      "duration": 0.427
+    },
+    {
+      "index": 12,
+      "word": "cheez...",
+      "start": 3.331,
+      "end": 3.71,
+      "duration": 0.379
+    },
+    {
+      "index": 13,
+      "word": "Coordination!",
+      "start": 3.752,
+      "end": 4.369,
+      "duration": 0.616
+    },
+    {
+      "index": 14,
+      "word": "Socho...",
+      "start": 4.874,
+      "end": 5.215,
+      "duration": 0.341
+    },
+    {
+      "index": 15,
+      "word": "tum",
+      "start": 5.253,
+      "end": 5.381,
+      "duration": 0.128
+    },
+    {
+      "index": 16,
+      "word": "aur",
+      "start": 5.395,
+      "end": 5.523,
+      "duration": 0.128
+    },
+    {
+      "index": 17,
+      "word": "main",
+      "start": 6.047,
+      "end": 6.182,
+      "duration": 0.135
+    },
+    {
+      "index": 18,
+      "word": "agar",
+      "start": 6.196,
+      "end": 6.331,
+      "duration": 0.135
+    },
+    {
+      "index": 19,
+      "word": "milkar",
+      "start": 6.765,
+      "end": 7.054,
+      "duration": 0.289
+    },
+    {
+      "index": 20,
+      "word": "shikar",
+      "start": 7.086,
+      "end": 7.376,
+      "duration": 0.289
+    },
+    {
+      "index": 21,
+      "word": "karna",
+      "start": 7.408,
+      "end": 7.649,
+      "duration": 0.241
+    },
+    {
+      "index": 22,
+      "word": "chahein...",
+      "start": 7.676,
+      "end": 8.158,
+      "duration": 0.482
+    },
+    {
+      "index": 23,
+      "word": "aur",
+      "start": 8.211,
+      "end": 8.356,
+      "duration": 0.145
+    },
+    {
+      "index": 24,
+      "word": "hum",
+      "start": 8.372,
+      "end": 8.517,
+      "duration": 0.145
+    },
+    {
+      "index": 25,
+      "word": "baat",
+      "start": 8.533,
+      "end": 8.726,
+      "duration": 0.193
+    },
+    {
+      "index": 26,
+      "word": "nahi",
+      "start": 8.747,
+      "end": 8.94,
+      "duration": 0.193
+    },
+    {
+      "index": 27,
+      "word": "kar",
+      "start": 8.961,
+      "end": 9.106,
+      "duration": 0.145
+    },
+    {
+      "index": 28,
+      "word": "sakte...",
+      "start": 9.122,
+      "end": 9.508,
+      "duration": 0.386
+    },
+    {
+      "index": 29,
+      "word": "toh",
+      "start": 9.551,
+      "end": 9.695,
+      "duration": 0.145
+    },
+    {
+      "index": 30,
+      "word": "hum",
+      "start": 9.711,
+      "end": 9.856,
+      "duration": 0.145
+    },
+    {
+      "index": 31,
+      "word": "sirf",
+      "start": 10.119,
+      "end": 10.289,
+      "duration": 0.17
+    },
+    {
+      "index": 32,
+      "word": "apne",
+      "start": 10.308,
+      "end": 10.478,
+      "duration": 0.17
+    },
+    {
+      "index": 33,
+      "word": "haath",
+      "start": 10.497,
+      "end": 10.709,
+      "duration": 0.213
+    },
+    {
+      "index": 34,
+      "word": "se",
+      "start": 10.733,
+      "end": 10.818,
+      "duration": 0.085
+    },
+    {
+      "index": 35,
+      "word": "kuch",
+      "start": 10.828,
+      "end": 10.998,
+      "duration": 0.17
+    },
+    {
+      "index": 36,
+      "word": "signals",
+      "start": 11.017,
+      "end": 11.314,
+      "duration": 0.298
+    },
+    {
+      "index": 37,
+      "word": "de",
+      "start": 11.347,
+      "end": 11.432,
+      "duration": 0.085
+    },
+    {
+      "index": 38,
+      "word": "sakte",
+      "start": 11.442,
+      "end": 11.654,
+      "duration": 0.213
+    },
+    {
+      "index": 39,
+      "word": "hain.",
+      "start": 11.678,
+      "end": 11.89,
+      "duration": 0.213
+    },
+    {
+      "index": 40,
+      "word": "Basic...",
+      "start": 11.914,
+      "end": 12.254,
+      "duration": 0.34
+    },
+    {
+      "index": 41,
+      "word": "Slow.",
+      "start": 12.557,
+      "end": 12.761,
+      "duration": 0.204
+    },
+    {
+      "index": 42,
+      "word": "Lekin",
+      "start": 12.784,
+      "end": 12.987,
+      "duration": 0.204
+    },
+    {
+      "index": 43,
+      "word": "agar",
+      "start": 13.177,
+      "end": 13.312,
+      "duration": 0.135
+    },
+    {
+      "index": 44,
+      "word": "hum",
+      "start": 13.327,
+      "end": 13.429,
+      "duration": 0.101
+    },
+    {
+      "index": 45,
+      "word": "baat",
+      "start": 13.44,
+      "end": 13.575,
+      "duration": 0.135
+    },
+    {
+      "index": 46,
+      "word": "kar",
+      "start": 14.04,
+      "end": 14.185,
+      "duration": 0.145
+    },
+    {
+      "index": 47,
+      "word": "sakein...",
+      "start": 14.201,
+      "end": 14.635,
+      "duration": 0.434
+    },
+    {
+      "index": 48,
+      "word": "tum",
+      "start": 14.683,
+      "end": 14.827,
+      "duration": 0.145
+    },
+    {
+      "index": 49,
+      "word": "uss",
+      "start": 14.844,
+      "end": 14.988,
+      "duration": 0.145
+    },
+    {
+      "index": 50,
+      "word": "taraf",
+      "start": 15.004,
+      "end": 15.245,
+      "duration": 0.241
+    },
+    {
+      "index": 51,
+      "word": "jaao...",
+      "start": 15.272,
+      "end": 15.61,
+      "duration": 0.337
+    },
+    {
+      "index": 52,
+      "word": "main",
+      "start": 15.969,
+      "end": 16.159,
+      "duration": 0.19
+    },
+    {
+      "index": 53,
+      "word": "is",
+      "start": 16.181,
+      "end": 16.276,
+      "duration": 0.095
+    },
+    {
+      "index": 54,
+      "word": "taraf...",
+      "start": 16.286,
+      "end": 16.667,
+      "duration": 0.381
+    },
+    {
+      "index": 55,
+      "word": "deer",
+      "start": 16.71,
+      "end": 16.9,
+      "duration": 0.19
+    },
+    {
+      "index": 56,
+      "word": "ko",
+      "start": 16.921,
+      "end": 17.017,
+      "duration": 0.095
+    },
+    {
+      "index": 57,
+      "word": "trap",
+      "start": 17.027,
+      "end": 17.218,
+      "duration": 0.19
+    },
+    {
+      "index": 58,
+      "word": "karenge...",
+      "start": 17.239,
+      "end": 17.715,
+      "duration": 0.476
+    },
+    {
+      "index": 59,
+      "word": "ye",
+      "start": 17.768,
+      "end": 17.863,
+      "duration": 0.095
+    },
+    {
+      "index": 60,
+      "word": "ek",
+      "start": 17.874,
+      "end": 17.969,
+      "duration": 0.095
+    },
+    {
+      "index": 61,
+      "word": "complete",
+      "start": 17.98,
+      "end": 18.361,
+      "duration": 0.381
+    },
+    {
+      "index": 62,
+      "word": "strategy",
+      "start": 18.794,
+      "end": 19.559,
+      "duration": 0.765
+    },
+    {
+      "index": 63,
+      "word": "ban",
+      "start": 19.644,
+      "end": 19.93,
+      "duration": 0.287
+    },
+    {
+      "index": 64,
+      "word": "jaati",
+      "start": 19.962,
+      "end": 20.44,
+      "duration": 0.478
+    },
+    {
+      "index": 65,
+      "word": "hai!",
+      "start": 20.493,
+      "end": 20.876,
+      "duration": 0.382
+    }
+  ]
+}

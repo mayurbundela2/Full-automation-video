@@ -1,0 +1,160 @@
+{
+  "total_words": 22,
+  "total_duration": 7.33,
+  "words": [
+    {
+      "index": 1,
+      "word": "Tum",
+      "start": 0.316,
+      "end": 0.493,
+      "duration": 0.177
+    },
+    {
+      "index": 2,
+      "word": "wo",
+      "start": 0.512,
+      "end": 0.63,
+      "duration": 0.118
+    },
+    {
+      "index": 3,
+      "word": "system",
+      "start": 0.643,
+      "end": 0.996,
+      "duration": 0.353
+    },
+    {
+      "index": 4,
+      "word": "disrupt",
+      "start": 1.036,
+      "end": 1.448,
+      "duration": 0.412
+    },
+    {
+      "index": 5,
+      "word": "kar",
+      "start": 1.494,
+      "end": 1.67,
+      "duration": 0.177
+    },
+    {
+      "index": 6,
+      "word": "rahi",
+      "start": 1.69,
+      "end": 1.925,
+      "duration": 0.235
+    },
+    {
+      "index": 7,
+      "word": "thi",
+      "start": 1.951,
+      "end": 2.128,
+      "duration": 0.177
+    },
+    {
+      "index": 8,
+      "word": "jo",
+      "start": 2.148,
+      "end": 2.265,
+      "duration": 0.118
+    },
+    {
+      "index": 9,
+      "word": "teen",
+      "start": 2.279,
+      "end": 2.514,
+      "duration": 0.235
+    },
+    {
+      "index": 10,
+      "word": "sau",
+      "start": 2.54,
+      "end": 2.717,
+      "duration": 0.177
+    },
+    {
+      "index": 11,
+      "word": "million",
+      "start": 2.736,
+      "end": 3.149,
+      "duration": 0.412
+    },
+    {
+      "index": 12,
+      "word": "saal",
+      "start": 3.194,
+      "end": 3.43,
+      "duration": 0.235
+    },
+    {
+      "index": 13,
+      "word": "purana",
+      "start": 3.456,
+      "end": 3.809,
+      "duration": 0.353
+    },
+    {
+      "index": 14,
+      "word": "hai...",
+      "start": 3.849,
+      "end": 4.202,
+      "duration": 0.353
+    },
+    {
+      "index": 15,
+      "word": "plants",
+      "start": 4.505,
+      "end": 4.959,
+      "duration": 0.454
+    },
+    {
+      "index": 16,
+      "word": "aur",
+      "start": 5.009,
+      "end": 5.236,
+      "duration": 0.227
+    },
+    {
+      "index": 17,
+      "word": "bacteria",
+      "start": 5.261,
+      "end": 5.866,
+      "duration": 0.605
+    },
+    {
+      "index": 18,
+      "word": "se",
+      "start": 5.933,
+      "end": 6.084,
+      "duration": 0.151
+    },
+    {
+      "index": 19,
+      "word": "le",
+      "start": 6.101,
+      "end": 6.252,
+      "duration": 0.151
+    },
+    {
+      "index": 20,
+      "word": "kar",
+      "start": 6.269,
+      "end": 6.496,
+      "duration": 0.227
+    },
+    {
+      "index": 21,
+      "word": "aaj",
+      "start": 6.521,
+      "end": 6.748,
+      "duration": 0.227
+    },
+    {
+      "index": 22,
+      "word": "tak.",
+      "start": 6.773,
+      "end": 7.075,
+      "duration": 0.302
+    }
+  ]
+}

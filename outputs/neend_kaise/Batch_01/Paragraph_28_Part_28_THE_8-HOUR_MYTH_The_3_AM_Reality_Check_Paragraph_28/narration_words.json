@@ -1,0 +1,258 @@
+{
+  "total_words": 36,
+  "total_duration": 13.88,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.305,
+      "end": 0.448,
+      "duration": 0.143
+    },
+    {
+      "index": 2,
+      "word": "agar",
+      "start": 0.464,
+      "end": 0.655,
+      "duration": 0.191
+    },
+    {
+      "index": 3,
+      "word": "tum",
+      "start": 0.898,
+      "end": 1.073,
+      "duration": 0.175
+    },
+    {
+      "index": 4,
+      "word": "kabhi",
+      "start": 1.093,
+      "end": 1.384,
+      "duration": 0.292
+    },
+    {
+      "index": 5,
+      "word": "raat",
+      "start": 1.417,
+      "end": 1.65,
+      "duration": 0.233
+    },
+    {
+      "index": 6,
+      "word": "ke",
+      "start": 1.676,
+      "end": 1.793,
+      "duration": 0.117
+    },
+    {
+      "index": 7,
+      "word": "teen",
+      "start": 1.806,
+      "end": 2.039,
+      "duration": 0.233
+    },
+    {
+      "index": 8,
+      "word": "baje",
+      "start": 2.242,
+      "end": 2.478,
+      "duration": 0.236
+    },
+    {
+      "index": 9,
+      "word": "uth",
+      "start": 2.504,
+      "end": 2.681,
+      "duration": 0.177
+    },
+    {
+      "index": 10,
+      "word": "ke",
+      "start": 2.7,
+      "end": 2.818,
+      "duration": 0.118
+    },
+    {
+      "index": 11,
+      "word": "sochte",
+      "start": 2.832,
+      "end": 3.185,
+      "duration": 0.354
+    },
+    {
+      "index": 12,
+      "word": "ho",
+      "start": 3.224,
+      "end": 3.342,
+      "duration": 0.118
+    },
+    {
+      "index": 13,
+      "word": "yaar,",
+      "start": 3.356,
+      "end": 3.65,
+      "duration": 0.295
+    },
+    {
+      "index": 14,
+      "word": "aaj",
+      "start": 4.168,
+      "end": 4.32,
+      "duration": 0.152
+    },
+    {
+      "index": 15,
+      "word": "phir",
+      "start": 4.337,
+      "end": 4.54,
+      "duration": 0.203
+    },
+    {
+      "index": 16,
+      "word": "nahi",
+      "start": 4.562,
+      "end": 4.765,
+      "duration": 0.203
+    },
+    {
+      "index": 17,
+      "word": "so",
+      "start": 4.787,
+      "end": 4.889,
+      "duration": 0.101
+    },
+    {
+      "index": 18,
+      "word": "paaya...",
+      "start": 4.9,
+      "end": 5.305,
+      "duration": 0.405
+    },
+    {
+      "index": 19,
+      "word": "ye",
+      "start": 5.35,
+      "end": 5.451,
+      "duration": 0.101
+    },
+    {
+      "index": 20,
+      "word": "actually",
+      "start": 5.463,
+      "end": 5.868,
+      "duration": 0.405
+    },
+    {
+      "index": 21,
+      "word": "shayad",
+      "start": 6.476,
+      "end": 6.816,
+      "duration": 0.34
+    },
+    {
+      "index": 22,
+      "word": "natural",
+      "start": 6.853,
+      "end": 7.25,
+      "duration": 0.396
+    },
+    {
+      "index": 23,
+      "word": "hai.",
+      "start": 7.294,
+      "end": 7.52,
+      "duration": 0.226
+    },
+    {
+      "index": 24,
+      "word": "Tumhara",
+      "start": 7.545,
+      "end": 7.941,
+      "duration": 0.396
+    },
+    {
+      "index": 25,
+      "word": "body",
+      "start": 7.985,
+      "end": 8.212,
+      "duration": 0.226
+    },
+    {
+      "index": 26,
+      "word": "kabhi",
+      "start": 9.03,
+      "end": 9.332,
+      "duration": 0.302
+    },
+    {
+      "index": 27,
+      "word": "kabhi",
+      "start": 9.365,
+      "end": 9.667,
+      "duration": 0.302
+    },
+    {
+      "index": 28,
+      "word": "apna",
+      "start": 9.701,
+      "end": 9.942,
+      "duration": 0.241
+    },
+    {
+      "index": 29,
+      "word": "original",
+      "start": 9.969,
+      "end": 10.452,
+      "duration": 0.483
+    },
+    {
+      "index": 30,
+      "word": "ancient",
+      "start": 10.506,
+      "end": 10.928,
+      "duration": 0.423
+    },
+    {
+      "index": 31,
+      "word": "pattern",
+      "start": 10.975,
+      "end": 11.398,
+      "duration": 0.423
+    },
+    {
+      "index": 32,
+      "word": "try",
+      "start": 11.445,
+      "end": 11.626,
+      "duration": 0.181
+    },
+    {
+      "index": 33,
+      "word": "kar",
+      "start": 11.812,
+      "end": 12.124,
+      "duration": 0.312
+    },
+    {
+      "index": 34,
+      "word": "raha",
+      "start": 12.158,
+      "end": 12.574,
+      "duration": 0.416
+    },
+    {
+      "index": 35,
+      "word": "hota",
+      "start": 12.62,
+      "end": 13.036,
+      "duration": 0.416
+    },
+    {
+      "index": 36,
+      "word": "hai.",
+      "start": 13.082,
+      "end": 13.498,
+      "duration": 0.416
+    }
+  ]
+}

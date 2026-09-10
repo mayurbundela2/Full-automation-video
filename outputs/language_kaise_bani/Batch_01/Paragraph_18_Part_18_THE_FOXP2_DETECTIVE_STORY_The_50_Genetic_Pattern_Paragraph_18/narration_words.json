@@ -1,0 +1,314 @@
+{
+  "total_words": 44,
+  "total_duration": 17.52,
+  "words": [
+    {
+      "index": 1,
+      "word": "Pandrah",
+      "start": 0.273,
+      "end": 0.632,
+      "duration": 0.359
+    },
+    {
+      "index": 2,
+      "word": "members...",
+      "start": 0.672,
+      "end": 1.185,
+      "duration": 0.513
+    },
+    {
+      "index": 3,
+      "word": "Teen",
+      "start": 1.594,
+      "end": 1.81,
+      "duration": 0.216
+    },
+    {
+      "index": 4,
+      "word": "generations...",
+      "start": 1.834,
+      "end": 2.591,
+      "duration": 0.756
+    },
+    {
+      "index": 5,
+      "word": "Aur",
+      "start": 2.675,
+      "end": 2.837,
+      "duration": 0.162
+    },
+    {
+      "index": 6,
+      "word": "lagbhag",
+      "start": 2.855,
+      "end": 3.233,
+      "duration": 0.378
+    },
+    {
+      "index": 7,
+      "word": "aadhe",
+      "start": 3.275,
+      "end": 3.545,
+      "duration": 0.27
+    },
+    {
+      "index": 8,
+      "word": "members",
+      "start": 3.728,
+      "end": 4.082,
+      "duration": 0.354
+    },
+    {
+      "index": 9,
+      "word": "ko...",
+      "start": 4.121,
+      "end": 4.374,
+      "duration": 0.253
+    },
+    {
+      "index": 10,
+      "word": "ek",
+      "start": 4.402,
+      "end": 4.504,
+      "duration": 0.101
+    },
+    {
+      "index": 11,
+      "word": "unique",
+      "start": 4.515,
+      "end": 4.818,
+      "duration": 0.303
+    },
+    {
+      "index": 12,
+      "word": "language",
+      "start": 5.005,
+      "end": 5.408,
+      "duration": 0.403
+    },
+    {
+      "index": 13,
+      "word": "disorder",
+      "start": 5.453,
+      "end": 5.857,
+      "duration": 0.403
+    },
+    {
+      "index": 14,
+      "word": "tha!",
+      "start": 5.901,
+      "end": 6.103,
+      "duration": 0.202
+    },
+    {
+      "index": 15,
+      "word": "Woh",
+      "start": 6.126,
+      "end": 6.277,
+      "duration": 0.151
+    },
+    {
+      "index": 16,
+      "word": "shabd",
+      "start": 6.294,
+      "end": 6.546,
+      "duration": 0.252
+    },
+    {
+      "index": 17,
+      "word": "banate",
+      "start": 6.574,
+      "end": 6.876,
+      "duration": 0.303
+    },
+    {
+      "index": 18,
+      "word": "the...",
+      "start": 7.306,
+      "end": 7.644,
+      "duration": 0.338
+    },
+    {
+      "index": 19,
+      "word": "lekin",
+      "start": 7.682,
+      "end": 7.963,
+      "duration": 0.282
+    },
+    {
+      "index": 20,
+      "word": "galat",
+      "start": 7.995,
+      "end": 8.277,
+      "duration": 0.282
+    },
+    {
+      "index": 21,
+      "word": "tarah",
+      "start": 8.308,
+      "end": 8.59,
+      "duration": 0.282
+    },
+    {
+      "index": 22,
+      "word": "se.",
+      "start": 8.865,
+      "end": 9.006,
+      "duration": 0.141
+    },
+    {
+      "index": 23,
+      "word": "Grammar",
+      "start": 9.022,
+      "end": 9.352,
+      "duration": 0.33
+    },
+    {
+      "index": 24,
+      "word": "unhe",
+      "start": 9.389,
+      "end": 9.578,
+      "duration": 0.189
+    },
+    {
+      "index": 25,
+      "word": "samajh",
+      "start": 9.599,
+      "end": 9.882,
+      "duration": 0.283
+    },
+    {
+      "index": 26,
+      "word": "nahi",
+      "start": 10.209,
+      "end": 10.404,
+      "duration": 0.195
+    },
+    {
+      "index": 27,
+      "word": "aati.",
+      "start": 10.426,
+      "end": 10.67,
+      "duration": 0.244
+    },
+    {
+      "index": 28,
+      "word": "Face",
+      "start": 10.698,
+      "end": 10.893,
+      "duration": 0.195
+    },
+    {
+      "index": 29,
+      "word": "aur",
+      "start": 10.915,
+      "end": 11.061,
+      "duration": 0.147
+    },
+    {
+      "index": 30,
+      "word": "mouth",
+      "start": 11.077,
+      "end": 11.322,
+      "duration": 0.244
+    },
+    {
+      "index": 31,
+      "word": "ke",
+      "start": 11.349,
+      "end": 11.447,
+      "duration": 0.098
+    },
+    {
+      "index": 32,
+      "word": "movements",
+      "start": 11.457,
+      "end": 11.897,
+      "duration": 0.44
+    },
+    {
+      "index": 33,
+      "word": "coordinate",
+      "start": 12.263,
+      "end": 12.813,
+      "duration": 0.55
+    },
+    {
+      "index": 34,
+      "word": "nahi",
+      "start": 12.874,
+      "end": 13.095,
+      "duration": 0.22
+    },
+    {
+      "index": 35,
+      "word": "kar",
+      "start": 13.119,
+      "end": 13.284,
+      "duration": 0.165
+    },
+    {
+      "index": 36,
+      "word": "paate",
+      "start": 13.302,
+      "end": 13.578,
+      "duration": 0.275
+    },
+    {
+      "index": 37,
+      "word": "the",
+      "start": 13.608,
+      "end": 13.773,
+      "duration": 0.165
+    },
+    {
+      "index": 38,
+      "word": "jo",
+      "start": 13.791,
+      "end": 13.902,
+      "duration": 0.11
+    },
+    {
+      "index": 39,
+      "word": "speech",
+      "start": 13.914,
+      "end": 14.244,
+      "duration": 0.33
+    },
+    {
+      "index": 40,
+      "word": "ke",
+      "start": 14.281,
+      "end": 14.391,
+      "duration": 0.11
+    },
+    {
+      "index": 41,
+      "word": "liye",
+      "start": 14.403,
+      "end": 14.623,
+      "duration": 0.22
+    },
+    {
+      "index": 42,
+      "word": "zaroori",
+      "start": 14.647,
+      "end": 15.033,
+      "duration": 0.385
+    },
+    {
+      "index": 43,
+      "word": "hote",
+      "start": 15.075,
+      "end": 15.296,
+      "duration": 0.22
+    },
+    {
+      "index": 44,
+      "word": "hain.",
+      "start": 15.565,
+      "end": 16.947,
+      "duration": 1.382
+    }
+  ]
+}

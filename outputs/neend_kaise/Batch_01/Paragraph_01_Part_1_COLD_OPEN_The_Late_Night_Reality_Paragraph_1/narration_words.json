@@ -1,0 +1,118 @@
+{
+  "total_words": 16,
+  "total_duration": 7.48,
+  "words": [
+    {
+      "index": 1,
+      "word": "Kal",
+      "start": 0.324,
+      "end": 0.433,
+      "duration": 0.109
+    },
+    {
+      "index": 2,
+      "word": "raat",
+      "start": 0.445,
+      "end": 0.591,
+      "duration": 0.146
+    },
+    {
+      "index": 3,
+      "word": "tum",
+      "start": 0.607,
+      "end": 0.716,
+      "duration": 0.109
+    },
+    {
+      "index": 4,
+      "word": "kitne",
+      "start": 0.728,
+      "end": 0.91,
+      "duration": 0.182
+    },
+    {
+      "index": 5,
+      "word": "baje",
+      "start": 0.93,
+      "end": 1.076,
+      "duration": 0.146
+    },
+    {
+      "index": 6,
+      "word": "soye?",
+      "start": 1.282,
+      "end": 1.478,
+      "duration": 0.196
+    },
+    {
+      "index": 7,
+      "word": "Baarah",
+      "start": 1.5,
+      "end": 1.735,
+      "duration": 0.235
+    },
+    {
+      "index": 8,
+      "word": "baje?",
+      "start": 1.761,
+      "end": 1.957,
+      "duration": 0.196
+    },
+    {
+      "index": 9,
+      "word": "Ek",
+      "start": 2.651,
+      "end": 2.714,
+      "duration": 0.063
+    },
+    {
+      "index": 10,
+      "word": "baje?",
+      "start": 2.721,
+      "end": 2.877,
+      "duration": 0.157
+    },
+    {
+      "index": 11,
+      "word": "Do",
+      "start": 2.894,
+      "end": 2.957,
+      "duration": 0.063
+    },
+    {
+      "index": 12,
+      "word": "baje?",
+      "start": 2.964,
+      "end": 3.121,
+      "duration": 0.157
+    },
+    {
+      "index": 13,
+      "word": "Yeah,",
+      "start": 3.708,
+      "end": 3.897,
+      "duration": 0.189
+    },
+    {
+      "index": 14,
+      "word": "main",
+      "start": 3.917,
+      "end": 4.068,
+      "duration": 0.151
+    },
+    {
+      "index": 15,
+      "word": "jaanta",
+      "start": 4.804,
+      "end": 5.04,
+      "duration": 0.236
+    },
+    {
+      "index": 16,
+      "word": "hoon.",
+      "start": 5.066,
+      "end": 5.263,
+      "duration": 0.197
+    }
+  ]
+}

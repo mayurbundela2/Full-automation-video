@@ -1,0 +1,258 @@
+{
+  "total_words": 36,
+  "total_duration": 13.64,
+  "words": [
+    {
+      "index": 1,
+      "word": "Jab",
+      "start": 0.335,
+      "end": 0.49,
+      "duration": 0.155
+    },
+    {
+      "index": 2,
+      "word": "subah",
+      "start": 0.507,
+      "end": 0.766,
+      "duration": 0.258
+    },
+    {
+      "index": 3,
+      "word": "suraj",
+      "start": 0.794,
+      "end": 1.053,
+      "duration": 0.258
+    },
+    {
+      "index": 4,
+      "word": "ki",
+      "start": 1.081,
+      "end": 1.185,
+      "duration": 0.103
+    },
+    {
+      "index": 5,
+      "word": "roshni",
+      "start": 1.196,
+      "end": 1.506,
+      "duration": 0.31
+    },
+    {
+      "index": 6,
+      "word": "tumhari",
+      "start": 1.541,
+      "end": 1.903,
+      "duration": 0.362
+    },
+    {
+      "index": 7,
+      "word": "aankhon",
+      "start": 1.943,
+      "end": 2.305,
+      "duration": 0.362
+    },
+    {
+      "index": 8,
+      "word": "mein",
+      "start": 2.345,
+      "end": 2.551,
+      "duration": 0.207
+    },
+    {
+      "index": 9,
+      "word": "padti",
+      "start": 2.574,
+      "end": 2.833,
+      "duration": 0.258
+    },
+    {
+      "index": 10,
+      "word": "hai...",
+      "start": 2.861,
+      "end": 3.172,
+      "duration": 0.31
+    },
+    {
+      "index": 11,
+      "word": "brain",
+      "start": 3.585,
+      "end": 3.845,
+      "duration": 0.26
+    },
+    {
+      "index": 12,
+      "word": "ek",
+      "start": 3.874,
+      "end": 3.978,
+      "duration": 0.104
+    },
+    {
+      "index": 13,
+      "word": "chemical",
+      "start": 3.99,
+      "end": 4.406,
+      "duration": 0.416
+    },
+    {
+      "index": 14,
+      "word": "release",
+      "start": 4.453,
+      "end": 4.817,
+      "duration": 0.364
+    },
+    {
+      "index": 15,
+      "word": "karta",
+      "start": 4.858,
+      "end": 5.118,
+      "duration": 0.26
+    },
+    {
+      "index": 16,
+      "word": "hai",
+      "start": 5.147,
+      "end": 5.303,
+      "duration": 0.156
+    },
+    {
+      "index": 17,
+      "word": "jo",
+      "start": 5.32,
+      "end": 5.424,
+      "duration": 0.104
+    },
+    {
+      "index": 18,
+      "word": "tumhe",
+      "start": 5.695,
+      "end": 5.962,
+      "duration": 0.267
+    },
+    {
+      "index": 19,
+      "word": "alert",
+      "start": 5.992,
+      "end": 6.26,
+      "duration": 0.267
+    },
+    {
+      "index": 20,
+      "word": "banata",
+      "start": 6.289,
+      "end": 6.61,
+      "duration": 0.321
+    },
+    {
+      "index": 21,
+      "word": "hai.",
+      "start": 6.646,
+      "end": 6.86,
+      "duration": 0.214
+    },
+    {
+      "index": 22,
+      "word": "Jab",
+      "start": 6.884,
+      "end": 7.044,
+      "duration": 0.16
+    },
+    {
+      "index": 23,
+      "word": "raat",
+      "start": 7.948,
+      "end": 8.158,
+      "duration": 0.21
+    },
+    {
+      "index": 24,
+      "word": "andhera",
+      "start": 8.182,
+      "end": 8.549,
+      "duration": 0.368
+    },
+    {
+      "index": 25,
+      "word": "hota",
+      "start": 8.59,
+      "end": 8.8,
+      "duration": 0.21
+    },
+    {
+      "index": 26,
+      "word": "hai...",
+      "start": 8.824,
+      "end": 9.139,
+      "duration": 0.315
+    },
+    {
+      "index": 27,
+      "word": "brain",
+      "start": 9.174,
+      "end": 9.437,
+      "duration": 0.263
+    },
+    {
+      "index": 28,
+      "word": "release",
+      "start": 9.818,
+      "end": 10.148,
+      "duration": 0.33
+    },
+    {
+      "index": 29,
+      "word": "karta",
+      "start": 10.185,
+      "end": 10.421,
+      "duration": 0.236
+    },
+    {
+      "index": 30,
+      "word": "hai",
+      "start": 10.447,
+      "end": 10.588,
+      "duration": 0.142
+    },
+    {
+      "index": 31,
+      "word": "melatonin...",
+      "start": 10.604,
+      "end": 11.17,
+      "duration": 0.566
+    },
+    {
+      "index": 32,
+      "word": "jo",
+      "start": 11.233,
+      "end": 11.327,
+      "duration": 0.094
+    },
+    {
+      "index": 33,
+      "word": "tumhe",
+      "start": 11.338,
+      "end": 11.574,
+      "duration": 0.236
+    },
+    {
+      "index": 34,
+      "word": "sleepy",
+      "start": 11.95,
+      "end": 12.418,
+      "duration": 0.468
+    },
+    {
+      "index": 35,
+      "word": "banata",
+      "start": 12.47,
+      "end": 12.938,
+      "duration": 0.468
+    },
+    {
+      "index": 36,
+      "word": "hai.",
+      "start": 12.989,
+      "end": 13.301,
+      "duration": 0.312
+    }
+  ]
+}

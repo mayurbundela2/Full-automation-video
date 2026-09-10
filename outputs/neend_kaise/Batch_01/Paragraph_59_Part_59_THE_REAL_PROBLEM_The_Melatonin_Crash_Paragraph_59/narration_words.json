@@ -1,0 +1,230 @@
+{
+  "total_words": 32,
+  "total_duration": 11.57,
+  "words": [
+    {
+      "index": 1,
+      "word": "Studies",
+      "start": 0.239,
+      "end": 0.628,
+      "duration": 0.389
+    },
+    {
+      "index": 2,
+      "word": "dikhati",
+      "start": 0.671,
+      "end": 1.061,
+      "duration": 0.389
+    },
+    {
+      "index": 3,
+      "word": "hain...",
+      "start": 1.104,
+      "end": 1.493,
+      "duration": 0.389
+    },
+    {
+      "index": 4,
+      "word": "sleeping",
+      "start": 1.536,
+      "end": 1.981,
+      "duration": 0.445
+    },
+    {
+      "index": 5,
+      "word": "se",
+      "start": 2.031,
+      "end": 2.142,
+      "duration": 0.111
+    },
+    {
+      "index": 6,
+      "word": "pehle",
+      "start": 2.154,
+      "end": 2.432,
+      "duration": 0.278
+    },
+    {
+      "index": 7,
+      "word": "tees",
+      "start": 2.463,
+      "end": 2.686,
+      "duration": 0.222
+    },
+    {
+      "index": 8,
+      "word": "minute",
+      "start": 2.71,
+      "end": 3.044,
+      "duration": 0.334
+    },
+    {
+      "index": 9,
+      "word": "phone",
+      "start": 3.081,
+      "end": 3.359,
+      "duration": 0.278
+    },
+    {
+      "index": 10,
+      "word": "use",
+      "start": 3.39,
+      "end": 3.557,
+      "duration": 0.167
+    },
+    {
+      "index": 11,
+      "word": "karne",
+      "start": 3.575,
+      "end": 3.853,
+      "duration": 0.278
+    },
+    {
+      "index": 12,
+      "word": "se",
+      "start": 3.884,
+      "end": 3.995,
+      "duration": 0.111
+    },
+    {
+      "index": 13,
+      "word": "melatonin",
+      "start": 4.008,
+      "end": 4.508,
+      "duration": 0.5
+    },
+    {
+      "index": 14,
+      "word": "production",
+      "start": 4.564,
+      "end": 5.12,
+      "duration": 0.556
+    },
+    {
+      "index": 15,
+      "word": "pachaas",
+      "start": 5.182,
+      "end": 5.571,
+      "duration": 0.389
+    },
+    {
+      "index": 16,
+      "word": "percent",
+      "start": 5.614,
+      "end": 6.003,
+      "duration": 0.389
+    },
+    {
+      "index": 17,
+      "word": "tak",
+      "start": 6.047,
+      "end": 6.213,
+      "duration": 0.167
+    },
+    {
+      "index": 18,
+      "word": "reduce",
+      "start": 6.232,
+      "end": 6.566,
+      "duration": 0.334
+    },
+    {
+      "index": 19,
+      "word": "ho",
+      "start": 6.603,
+      "end": 6.714,
+      "duration": 0.111
+    },
+    {
+      "index": 20,
+      "word": "jaati",
+      "start": 6.726,
+      "end": 7.004,
+      "duration": 0.278
+    },
+    {
+      "index": 21,
+      "word": "hai.",
+      "start": 7.035,
+      "end": 7.258,
+      "duration": 0.222
+    },
+    {
+      "index": 22,
+      "word": "Matlab",
+      "start": 7.282,
+      "end": 7.616,
+      "duration": 0.334
+    },
+    {
+      "index": 23,
+      "word": "tumhara",
+      "start": 8.079,
+      "end": 8.508,
+      "duration": 0.429
+    },
+    {
+      "index": 24,
+      "word": "body",
+      "start": 8.556,
+      "end": 8.801,
+      "duration": 0.245
+    },
+    {
+      "index": 25,
+      "word": "physically",
+      "start": 8.828,
+      "end": 9.441,
+      "duration": 0.613
+    },
+    {
+      "index": 26,
+      "word": "neend",
+      "start": 9.509,
+      "end": 9.816,
+      "duration": 0.306
+    },
+    {
+      "index": 27,
+      "word": "ke",
+      "start": 9.85,
+      "end": 9.972,
+      "duration": 0.123
+    },
+    {
+      "index": 28,
+      "word": "liye",
+      "start": 9.986,
+      "end": 10.231,
+      "duration": 0.245
+    },
+    {
+      "index": 29,
+      "word": "ready",
+      "start": 10.258,
+      "end": 10.565,
+      "duration": 0.306
+    },
+    {
+      "index": 30,
+      "word": "hi",
+      "start": 10.599,
+      "end": 10.721,
+      "duration": 0.123
+    },
+    {
+      "index": 31,
+      "word": "nahi",
+      "start": 10.735,
+      "end": 10.98,
+      "duration": 0.245
+    },
+    {
+      "index": 32,
+      "word": "hota.",
+      "start": 11.007,
+      "end": 11.314,
+      "duration": 0.306
+    }
+  ]
+}

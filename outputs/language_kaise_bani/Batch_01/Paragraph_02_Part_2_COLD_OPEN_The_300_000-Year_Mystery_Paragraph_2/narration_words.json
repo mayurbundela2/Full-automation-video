@@ -1,0 +1,146 @@
+{
+  "total_words": 20,
+  "total_duration": 11.0,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 0.278,
+      "end": 0.527,
+      "duration": 0.249
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.555,
+      "end": 0.654,
+      "duration": 0.1
+    },
+    {
+      "index": 3,
+      "word": "ek",
+      "start": 0.665,
+      "end": 0.765,
+      "duration": 0.1
+    },
+    {
+      "index": 4,
+      "word": "cheez...",
+      "start": 0.776,
+      "end": 1.174,
+      "duration": 0.398
+    },
+    {
+      "index": 5,
+      "word": "bolna...",
+      "start": 1.218,
+      "end": 1.617,
+      "duration": 0.398
+    },
+    {
+      "index": 6,
+      "word": "samajhna...",
+      "start": 2.188,
+      "end": 2.763,
+      "duration": 0.575
+    },
+    {
+      "index": 7,
+      "word": "sochna",
+      "start": 3.233,
+      "end": 3.574,
+      "duration": 0.341
+    },
+    {
+      "index": 8,
+      "word": "words",
+      "start": 3.612,
+      "end": 3.896,
+      "duration": 0.284
+    },
+    {
+      "index": 9,
+      "word": "mein...",
+      "start": 4.427,
+      "end": 4.833,
+      "duration": 0.407
+    },
+    {
+      "index": 10,
+      "word": "Ye",
+      "start": 4.879,
+      "end": 4.995,
+      "duration": 0.116
+    },
+    {
+      "index": 11,
+      "word": "insaan",
+      "start": 5.008,
+      "end": 5.356,
+      "duration": 0.348
+    },
+    {
+      "index": 12,
+      "word": "ki",
+      "start": 5.395,
+      "end": 5.511,
+      "duration": 0.116
+    },
+    {
+      "index": 13,
+      "word": "teen",
+      "start": 5.524,
+      "end": 5.756,
+      "duration": 0.232
+    },
+    {
+      "index": 14,
+      "word": "lakh",
+      "start": 6.355,
+      "end": 6.532,
+      "duration": 0.177
+    },
+    {
+      "index": 15,
+      "word": "saal",
+      "start": 6.552,
+      "end": 6.729,
+      "duration": 0.177
+    },
+    {
+      "index": 16,
+      "word": "ki",
+      "start": 6.748,
+      "end": 6.837,
+      "duration": 0.088
+    },
+    {
+      "index": 17,
+      "word": "sabse",
+      "start": 6.847,
+      "end": 7.068,
+      "duration": 0.221
+    },
+    {
+      "index": 18,
+      "word": "mysterious",
+      "start": 7.092,
+      "end": 7.535,
+      "duration": 0.442
+    },
+    {
+      "index": 19,
+      "word": "ability",
+      "start": 7.773,
+      "end": 9.469,
+      "duration": 1.696
+    },
+    {
+      "index": 20,
+      "word": "hai!",
+      "start": 9.657,
+      "end": 10.626,
+      "duration": 0.969
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "total_words": 21,
+  "total_duration": 10.69,
+  "words": [
+    {
+      "index": 1,
+      "word": "Number",
+      "start": 0.305,
+      "end": 0.706,
+      "duration": 0.401
+    },
+    {
+      "index": 2,
+      "word": "five...",
+      "start": 0.751,
+      "end": 1.219,
+      "duration": 0.468
+    },
+    {
+      "index": 3,
+      "word": "brain",
+      "start": 1.271,
+      "end": 1.606,
+      "duration": 0.334
+    },
+    {
+      "index": 4,
+      "word": "damage",
+      "start": 1.643,
+      "end": 2.044,
+      "duration": 0.401
+    },
+    {
+      "index": 5,
+      "word": "jo",
+      "start": 2.089,
+      "end": 2.223,
+      "duration": 0.134
+    },
+    {
+      "index": 6,
+      "word": "humne",
+      "start": 2.238,
+      "end": 2.572,
+      "duration": 0.334
+    },
+    {
+      "index": 7,
+      "word": "pehle",
+      "start": 2.609,
+      "end": 2.944,
+      "duration": 0.334
+    },
+    {
+      "index": 8,
+      "word": "mention",
+      "start": 2.981,
+      "end": 3.449,
+      "duration": 0.468
+    },
+    {
+      "index": 9,
+      "word": "kiya.",
+      "start": 3.501,
+      "end": 3.836,
+      "duration": 0.334
+    },
+    {
+      "index": 10,
+      "word": "Wo",
+      "start": 3.873,
+      "end": 4.007,
+      "duration": 0.134
+    },
+    {
+      "index": 11,
+      "word": "glymphatic",
+      "start": 4.022,
+      "end": 4.691,
+      "duration": 0.669
+    },
+    {
+      "index": 12,
+      "word": "cleaning",
+      "start": 5.339,
+      "end": 5.943,
+      "duration": 0.604
+    },
+    {
+      "index": 13,
+      "word": "system?",
+      "start": 6.01,
+      "end": 6.538,
+      "duration": 0.528
+    },
+    {
+      "index": 14,
+      "word": "Wo",
+      "start": 6.597,
+      "end": 6.748,
+      "duration": 0.151
+    },
+    {
+      "index": 15,
+      "word": "sirf",
+      "start": 6.765,
+      "end": 7.066,
+      "duration": 0.302
+    },
+    {
+      "index": 16,
+      "word": "gehri",
+      "start": 7.1,
+      "end": 7.477,
+      "duration": 0.377
+    },
+    {
+      "index": 17,
+      "word": "neend",
+      "start": 7.519,
+      "end": 7.897,
+      "duration": 0.377
+    },
+    {
+      "index": 18,
+      "word": "mein",
+      "start": 7.939,
+      "end": 8.24,
+      "duration": 0.302
+    },
+    {
+      "index": 19,
+      "word": "activate",
+      "start": 8.471,
+      "end": 9.374,
+      "duration": 0.903
+    },
+    {
+      "index": 20,
+      "word": "hota",
+      "start": 9.475,
+      "end": 9.926,
+      "duration": 0.452
+    },
+    {
+      "index": 21,
+      "word": "hai.",
+      "start": 9.976,
+      "end": 10.428,
+      "duration": 0.452
+    }
+  ]
+}

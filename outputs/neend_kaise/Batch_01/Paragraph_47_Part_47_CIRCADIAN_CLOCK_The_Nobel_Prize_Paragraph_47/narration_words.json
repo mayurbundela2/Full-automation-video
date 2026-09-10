@@ -1,0 +1,160 @@
+{
+  "total_words": 22,
+  "total_duration": 9.81,
+  "words": [
+    {
+      "index": 1,
+      "word": "Do",
+      "start": 0.572,
+      "end": 0.662,
+      "duration": 0.09
+    },
+    {
+      "index": 2,
+      "word": "hazaar",
+      "start": 0.672,
+      "end": 0.943,
+      "duration": 0.271
+    },
+    {
+      "index": 3,
+      "word": "satrah",
+      "start": 0.973,
+      "end": 1.243,
+      "duration": 0.271
+    },
+    {
+      "index": 4,
+      "word": "mein...",
+      "start": 1.273,
+      "end": 1.589,
+      "duration": 0.316
+    },
+    {
+      "index": 5,
+      "word": "three",
+      "start": 2.153,
+      "end": 2.358,
+      "duration": 0.205
+    },
+    {
+      "index": 6,
+      "word": "scientists",
+      "start": 2.381,
+      "end": 2.792,
+      "duration": 0.411
+    },
+    {
+      "index": 7,
+      "word": "ko",
+      "start": 2.837,
+      "end": 2.919,
+      "duration": 0.082
+    },
+    {
+      "index": 8,
+      "word": "Nobel",
+      "start": 2.929,
+      "end": 3.134,
+      "duration": 0.205
+    },
+    {
+      "index": 9,
+      "word": "Prize",
+      "start": 3.157,
+      "end": 3.362,
+      "duration": 0.205
+    },
+    {
+      "index": 10,
+      "word": "mila",
+      "start": 3.385,
+      "end": 3.549,
+      "duration": 0.164
+    },
+    {
+      "index": 11,
+      "word": "circadian",
+      "start": 3.567,
+      "end": 3.937,
+      "duration": 0.37
+    },
+    {
+      "index": 12,
+      "word": "rhythm",
+      "start": 4.271,
+      "end": 4.548,
+      "duration": 0.277
+    },
+    {
+      "index": 13,
+      "word": "ki",
+      "start": 4.579,
+      "end": 4.671,
+      "duration": 0.092
+    },
+    {
+      "index": 14,
+      "word": "discovery",
+      "start": 4.681,
+      "end": 5.097,
+      "duration": 0.415
+    },
+    {
+      "index": 15,
+      "word": "pe.",
+      "start": 5.143,
+      "end": 5.281,
+      "duration": 0.138
+    },
+    {
+      "index": 16,
+      "word": "Jeffrey",
+      "start": 5.297,
+      "end": 5.62,
+      "duration": 0.323
+    },
+    {
+      "index": 17,
+      "word": "Hall,",
+      "start": 5.656,
+      "end": 5.886,
+      "duration": 0.231
+    },
+    {
+      "index": 18,
+      "word": "Michael",
+      "start": 6.491,
+      "end": 6.793,
+      "duration": 0.302
+    },
+    {
+      "index": 19,
+      "word": "Rosbash,",
+      "start": 6.827,
+      "end": 7.172,
+      "duration": 0.345
+    },
+    {
+      "index": 20,
+      "word": "aur",
+      "start": 7.528,
+      "end": 7.68,
+      "duration": 0.152
+    },
+    {
+      "index": 21,
+      "word": "Michael",
+      "start": 7.697,
+      "end": 8.052,
+      "duration": 0.355
+    },
+    {
+      "index": 22,
+      "word": "Young.",
+      "start": 8.092,
+      "end": 8.396,
+      "duration": 0.304
+    }
+  ]
+}

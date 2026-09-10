@@ -1,0 +1,153 @@
+{
+  "total_words": 21,
+  "total_duration": 9.84,
+  "words": [
+    {
+      "index": 1,
+      "word": "Suraj",
+      "start": 0.595,
+      "end": 0.92,
+      "duration": 0.325
+    },
+    {
+      "index": 2,
+      "word": "doobne",
+      "start": 0.956,
+      "end": 1.346,
+      "duration": 0.39
+    },
+    {
+      "index": 3,
+      "word": "ke",
+      "start": 1.389,
+      "end": 1.519,
+      "duration": 0.13
+    },
+    {
+      "index": 4,
+      "word": "kuch",
+      "start": 1.534,
+      "end": 1.793,
+      "duration": 0.26
+    },
+    {
+      "index": 5,
+      "word": "time",
+      "start": 1.822,
+      "end": 2.082,
+      "duration": 0.26
+    },
+    {
+      "index": 6,
+      "word": "baad,",
+      "start": 2.111,
+      "end": 2.436,
+      "duration": 0.325
+    },
+    {
+      "index": 7,
+      "word": "lagbhag",
+      "start": 2.801,
+      "end": 3.212,
+      "duration": 0.411
+    },
+    {
+      "index": 8,
+      "word": "aath",
+      "start": 3.258,
+      "end": 3.493,
+      "duration": 0.235
+    },
+    {
+      "index": 9,
+      "word": "baje,",
+      "start": 3.519,
+      "end": 3.812,
+      "duration": 0.294
+    },
+    {
+      "index": 10,
+      "word": "log",
+      "start": 4.212,
+      "end": 4.395,
+      "duration": 0.183
+    },
+    {
+      "index": 11,
+      "word": "so",
+      "start": 4.415,
+      "end": 4.537,
+      "duration": 0.122
+    },
+    {
+      "index": 12,
+      "word": "jaate.",
+      "start": 4.55,
+      "end": 4.915,
+      "duration": 0.365
+    },
+    {
+      "index": 13,
+      "word": "Ye",
+      "start": 4.956,
+      "end": 5.077,
+      "duration": 0.122
+    },
+    {
+      "index": 14,
+      "word": "tha",
+      "start": 5.653,
+      "end": 5.813,
+      "duration": 0.16
+    },
+    {
+      "index": 15,
+      "word": "first",
+      "start": 5.831,
+      "end": 6.097,
+      "duration": 0.267
+    },
+    {
+      "index": 16,
+      "word": "sleep.",
+      "start": 6.127,
+      "end": 6.447,
+      "duration": 0.32
+    },
+    {
+      "index": 17,
+      "word": "Teen-chaar",
+      "start": 6.482,
+      "end": 7.016,
+      "duration": 0.533
+    },
+    {
+      "index": 18,
+      "word": "ghante",
+      "start": 7.452,
+      "end": 8.04,
+      "duration": 0.588
+    },
+    {
+      "index": 19,
+      "word": "ki",
+      "start": 8.105,
+      "end": 8.301,
+      "duration": 0.196
+    },
+    {
+      "index": 20,
+      "word": "gehri",
+      "start": 8.323,
+      "end": 8.813,
+      "duration": 0.49
+    },
+    {
+      "index": 21,
+      "word": "neend.",
+      "start": 8.868,
+      "end": 9.456,
+      "duration": 0.588
+    }
+  ]
+}

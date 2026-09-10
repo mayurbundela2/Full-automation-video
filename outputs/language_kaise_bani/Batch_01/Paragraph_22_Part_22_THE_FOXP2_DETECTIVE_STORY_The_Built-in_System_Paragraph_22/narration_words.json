@@ -1,0 +1,454 @@
+{
+  "total_words": 64,
+  "total_duration": 25.76,
+  "words": [
+    {
+      "index": 1,
+      "word": "Toh",
+      "start": 0.314,
+      "end": 0.473,
+      "duration": 0.159
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.491,
+      "end": 0.597,
+      "duration": 0.106
+    },
+    {
+      "index": 3,
+      "word": "simple",
+      "start": 0.609,
+      "end": 0.927,
+      "duration": 0.318
+    },
+    {
+      "index": 4,
+      "word": "story",
+      "start": 0.963,
+      "end": 1.228,
+      "duration": 0.265
+    },
+    {
+      "index": 5,
+      "word": "nahi",
+      "start": 1.257,
+      "end": 1.47,
+      "duration": 0.212
+    },
+    {
+      "index": 6,
+      "word": "thi...",
+      "start": 1.493,
+      "end": 1.812,
+      "duration": 0.318
+    },
+    {
+      "index": 7,
+      "word": "ki",
+      "start": 2.172,
+      "end": 2.286,
+      "duration": 0.114
+    },
+    {
+      "index": 8,
+      "word": "ek",
+      "start": 2.299,
+      "end": 2.414,
+      "duration": 0.114
+    },
+    {
+      "index": 9,
+      "word": "gene",
+      "start": 2.426,
+      "end": 2.655,
+      "duration": 0.229
+    },
+    {
+      "index": 10,
+      "word": "mila",
+      "start": 2.681,
+      "end": 2.91,
+      "duration": 0.229
+    },
+    {
+      "index": 11,
+      "word": "jisne",
+      "start": 2.935,
+      "end": 3.221,
+      "duration": 0.286
+    },
+    {
+      "index": 12,
+      "word": "humein",
+      "start": 3.253,
+      "end": 3.596,
+      "duration": 0.343
+    },
+    {
+      "index": 13,
+      "word": "bolne",
+      "start": 3.635,
+      "end": 3.921,
+      "duration": 0.286
+    },
+    {
+      "index": 14,
+      "word": "wala",
+      "start": 3.953,
+      "end": 4.181,
+      "duration": 0.229
+    },
+    {
+      "index": 15,
+      "word": "banaya.",
+      "start": 4.207,
+      "end": 4.608,
+      "duration": 0.401
+    },
+    {
+      "index": 16,
+      "word": "Lekin",
+      "start": 4.652,
+      "end": 4.938,
+      "duration": 0.286
+    },
+    {
+      "index": 17,
+      "word": "ye",
+      "start": 5.424,
+      "end": 5.534,
+      "duration": 0.11
+    },
+    {
+      "index": 18,
+      "word": "ek",
+      "start": 5.546,
+      "end": 5.655,
+      "duration": 0.11
+    },
+    {
+      "index": 19,
+      "word": "important",
+      "start": 5.667,
+      "end": 6.161,
+      "duration": 0.493
+    },
+    {
+      "index": 20,
+      "word": "discovery",
+      "start": 6.215,
+      "end": 6.708,
+      "duration": 0.493
+    },
+    {
+      "index": 21,
+      "word": "thi.",
+      "start": 6.763,
+      "end": 6.982,
+      "duration": 0.219
+    },
+    {
+      "index": 22,
+      "word": "Kyunki",
+      "start": 7.007,
+      "end": 7.335,
+      "duration": 0.329
+    },
+    {
+      "index": 23,
+      "word": "ye",
+      "start": 7.372,
+      "end": 7.481,
+      "duration": 0.11
+    },
+    {
+      "index": 24,
+      "word": "prove",
+      "start": 7.494,
+      "end": 7.768,
+      "duration": 0.274
+    },
+    {
+      "index": 25,
+      "word": "karta",
+      "start": 8.076,
+      "end": 8.379,
+      "duration": 0.303
+    },
+    {
+      "index": 26,
+      "word": "hai...",
+      "start": 8.413,
+      "end": 8.776,
+      "duration": 0.364
+    },
+    {
+      "index": 27,
+      "word": "language",
+      "start": 8.817,
+      "end": 9.302,
+      "duration": 0.485
+    },
+    {
+      "index": 28,
+      "word": "biological",
+      "start": 9.356,
+      "end": 9.962,
+      "duration": 0.606
+    },
+    {
+      "index": 29,
+      "word": "hai!",
+      "start": 10.029,
+      "end": 10.271,
+      "duration": 0.242
+    },
+    {
+      "index": 30,
+      "word": "Genes",
+      "start": 10.298,
+      "end": 10.601,
+      "duration": 0.303
+    },
+    {
+      "index": 31,
+      "word": "mein",
+      "start": 10.635,
+      "end": 10.878,
+      "duration": 0.242
+    },
+    {
+      "index": 32,
+      "word": "written",
+      "start": 10.905,
+      "end": 11.329,
+      "duration": 0.424
+    },
+    {
+      "index": 33,
+      "word": "hai!",
+      "start": 11.376,
+      "end": 11.618,
+      "duration": 0.242
+    },
+    {
+      "index": 34,
+      "word": "Ye",
+      "start": 11.645,
+      "end": 11.767,
+      "duration": 0.121
+    },
+    {
+      "index": 35,
+      "word": "sirf",
+      "start": 12.035,
+      "end": 12.267,
+      "duration": 0.232
+    },
+    {
+      "index": 36,
+      "word": "culture",
+      "start": 12.293,
+      "end": 12.699,
+      "duration": 0.406
+    },
+    {
+      "index": 37,
+      "word": "nahi",
+      "start": 12.744,
+      "end": 12.977,
+      "duration": 0.232
+    },
+    {
+      "index": 38,
+      "word": "hai",
+      "start": 13.002,
+      "end": 13.177,
+      "duration": 0.174
+    },
+    {
+      "index": 39,
+      "word": "jo",
+      "start": 13.627,
+      "end": 13.704,
+      "duration": 0.077
+    },
+    {
+      "index": 40,
+      "word": "humne",
+      "start": 13.713,
+      "end": 13.907,
+      "duration": 0.194
+    },
+    {
+      "index": 41,
+      "word": "seekhi.",
+      "start": 14.082,
+      "end": 14.417,
+      "duration": 0.335
+    },
+    {
+      "index": 42,
+      "word": "Language",
+      "start": 14.454,
+      "end": 14.837,
+      "duration": 0.383
+    },
+    {
+      "index": 43,
+      "word": "ki",
+      "start": 14.879,
+      "end": 14.975,
+      "duration": 0.096
+    },
+    {
+      "index": 44,
+      "word": "bunyaad...",
+      "start": 14.986,
+      "end": 15.464,
+      "duration": 0.478
+    },
+    {
+      "index": 45,
+      "word": "kuch",
+      "start": 16.041,
+      "end": 16.217,
+      "duration": 0.176
+    },
+    {
+      "index": 46,
+      "word": "had",
+      "start": 16.464,
+      "end": 16.609,
+      "duration": 0.145
+    },
+    {
+      "index": 47,
+      "word": "tak...",
+      "start": 16.625,
+      "end": 16.914,
+      "duration": 0.289
+    },
+    {
+      "index": 48,
+      "word": "humare",
+      "start": 16.946,
+      "end": 17.235,
+      "duration": 0.289
+    },
+    {
+      "index": 49,
+      "word": "andar",
+      "start": 17.267,
+      "end": 17.508,
+      "duration": 0.241
+    },
+    {
+      "index": 50,
+      "word": "built-in",
+      "start": 17.535,
+      "end": 17.92,
+      "duration": 0.385
+    },
+    {
+      "index": 51,
+      "word": "hai.",
+      "start": 18.309,
+      "end": 18.548,
+      "duration": 0.239
+    },
+    {
+      "index": 52,
+      "word": "Aur",
+      "start": 18.575,
+      "end": 18.754,
+      "duration": 0.179
+    },
+    {
+      "index": 53,
+      "word": "ye",
+      "start": 18.774,
+      "end": 18.894,
+      "duration": 0.12
+    },
+    {
+      "index": 54,
+      "word": "built-in",
+      "start": 19.092,
+      "end": 19.571,
+      "duration": 0.479
+    },
+    {
+      "index": 55,
+      "word": "system",
+      "start": 19.625,
+      "end": 19.984,
+      "duration": 0.36
+    },
+    {
+      "index": 56,
+      "word": "sirf",
+      "start": 20.024,
+      "end": 20.264,
+      "duration": 0.24
+    },
+    {
+      "index": 57,
+      "word": "gene",
+      "start": 20.291,
+      "end": 20.53,
+      "duration": 0.24
+    },
+    {
+      "index": 58,
+      "word": "mein",
+      "start": 21.091,
+      "end": 21.395,
+      "duration": 0.304
+    },
+    {
+      "index": 59,
+      "word": "nahi...",
+      "start": 21.428,
+      "end": 21.96,
+      "duration": 0.531
+    },
+    {
+      "index": 60,
+      "word": "humare",
+      "start": 22.019,
+      "end": 22.474,
+      "duration": 0.455
+    },
+    {
+      "index": 61,
+      "word": "body",
+      "start": 22.525,
+      "end": 22.828,
+      "duration": 0.304
+    },
+    {
+      "index": 62,
+      "word": "mein",
+      "start": 22.862,
+      "end": 23.166,
+      "duration": 0.304
+    },
+    {
+      "index": 63,
+      "word": "bhi",
+      "start": 23.2,
+      "end": 23.427,
+      "duration": 0.228
+    },
+    {
+      "index": 64,
+      "word": "hai!",
+      "start": 23.453,
+      "end": 23.756,
+      "duration": 0.304
+    }
+  ]
+}

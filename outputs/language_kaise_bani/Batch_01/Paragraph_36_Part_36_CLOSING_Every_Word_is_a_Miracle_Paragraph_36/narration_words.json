@@ -1,0 +1,664 @@
+{
+  "total_words": 94,
+  "total_duration": 35.48,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ice",
+      "start": 0.347,
+      "end": 0.497,
+      "duration": 0.15
+    },
+    {
+      "index": 2,
+      "word": "Age",
+      "start": 0.513,
+      "end": 0.663,
+      "duration": 0.15
+    },
+    {
+      "index": 3,
+      "word": "ke",
+      "start": 0.68,
+      "end": 0.78,
+      "duration": 0.1
+    },
+    {
+      "index": 4,
+      "word": "insaan",
+      "start": 0.791,
+      "end": 1.091,
+      "duration": 0.3
+    },
+    {
+      "index": 5,
+      "word": "ne",
+      "start": 1.124,
+      "end": 1.224,
+      "duration": 0.1
+    },
+    {
+      "index": 6,
+      "word": "shabd",
+      "start": 1.235,
+      "end": 1.485,
+      "duration": 0.25
+    },
+    {
+      "index": 7,
+      "word": "banaye.",
+      "start": 1.512,
+      "end": 1.862,
+      "duration": 0.35
+    },
+    {
+      "index": 8,
+      "word": "Kuch",
+      "start": 1.901,
+      "end": 2.101,
+      "duration": 0.2
+    },
+    {
+      "index": 9,
+      "word": "simple",
+      "start": 2.123,
+      "end": 2.423,
+      "duration": 0.3
+    },
+    {
+      "index": 10,
+      "word": "sounds...",
+      "start": 2.976,
+      "end": 3.402,
+      "duration": 0.426
+    },
+    {
+      "index": 11,
+      "word": "jaise",
+      "start": 3.45,
+      "end": 3.687,
+      "duration": 0.237
+    },
+    {
+      "index": 12,
+      "word": "maa...",
+      "start": 3.713,
+      "end": 3.997,
+      "duration": 0.284
+    },
+    {
+      "index": 13,
+      "word": "shayad",
+      "start": 4.427,
+      "end": 4.733,
+      "duration": 0.306
+    },
+    {
+      "index": 14,
+      "word": "aaj",
+      "start": 4.768,
+      "end": 4.921,
+      "duration": 0.153
+    },
+    {
+      "index": 15,
+      "word": "bhi",
+      "start": 4.938,
+      "end": 5.091,
+      "duration": 0.153
+    },
+    {
+      "index": 16,
+      "word": "tumhare",
+      "start": 5.612,
+      "end": 5.966,
+      "duration": 0.354
+    },
+    {
+      "index": 17,
+      "word": "honthon",
+      "start": 6.005,
+      "end": 6.359,
+      "duration": 0.354
+    },
+    {
+      "index": 18,
+      "word": "pe",
+      "start": 6.399,
+      "end": 6.5,
+      "duration": 0.101
+    },
+    {
+      "index": 19,
+      "word": "hain.",
+      "start": 6.511,
+      "end": 6.764,
+      "duration": 0.253
+    },
+    {
+      "index": 20,
+      "word": "Ek",
+      "start": 6.792,
+      "end": 6.893,
+      "duration": 0.101
+    },
+    {
+      "index": 21,
+      "word": "KE",
+      "start": 6.904,
+      "end": 7.006,
+      "duration": 0.101
+    },
+    {
+      "index": 22,
+      "word": "family",
+      "start": 7.017,
+      "end": 7.32,
+      "duration": 0.303
+    },
+    {
+      "index": 23,
+      "word": "ka",
+      "start": 7.963,
+      "end": 8.059,
+      "duration": 0.096
+    },
+    {
+      "index": 24,
+      "word": "mutation...",
+      "start": 8.305,
+      "end": 8.785,
+      "duration": 0.48
+    },
+    {
+      "index": 25,
+      "word": "jisne",
+      "start": 8.838,
+      "end": 9.056,
+      "duration": 0.218
+    },
+    {
+      "index": 26,
+      "word": "humein",
+      "start": 9.08,
+      "end": 9.342,
+      "duration": 0.262
+    },
+    {
+      "index": 27,
+      "word": "language",
+      "start": 9.371,
+      "end": 9.72,
+      "duration": 0.349
+    },
+    {
+      "index": 28,
+      "word": "ke",
+      "start": 10.186,
+      "end": 10.286,
+      "duration": 0.1
+    },
+    {
+      "index": 29,
+      "word": "biology",
+      "start": 10.297,
+      "end": 10.645,
+      "duration": 0.349
+    },
+    {
+      "index": 30,
+      "word": "ka",
+      "start": 10.684,
+      "end": 10.784,
+      "duration": 0.1
+    },
+    {
+      "index": 31,
+      "word": "pehla",
+      "start": 10.795,
+      "end": 11.044,
+      "duration": 0.249
+    },
+    {
+      "index": 32,
+      "word": "clue",
+      "start": 11.072,
+      "end": 11.271,
+      "duration": 0.199
+    },
+    {
+      "index": 33,
+      "word": "diya.",
+      "start": 11.293,
+      "end": 11.542,
+      "duration": 0.249
+    },
+    {
+      "index": 34,
+      "word": "Ek",
+      "start": 11.57,
+      "end": 11.669,
+      "duration": 0.1
+    },
+    {
+      "index": 35,
+      "word": "gene...",
+      "start": 11.681,
+      "end": 12.029,
+      "duration": 0.349
+    },
+    {
+      "index": 36,
+      "word": "ek",
+      "start": 12.262,
+      "end": 12.353,
+      "duration": 0.091
+    },
+    {
+      "index": 37,
+      "word": "haddi...",
+      "start": 12.364,
+      "end": 12.729,
+      "duration": 0.365
+    },
+    {
+      "index": 38,
+      "word": "ek",
+      "start": 12.77,
+      "end": 12.861,
+      "duration": 0.091
+    },
+    {
+      "index": 39,
+      "word": "teen",
+      "start": 12.871,
+      "end": 13.054,
+      "duration": 0.183
+    },
+    {
+      "index": 40,
+      "word": "lakh",
+      "start": 13.676,
+      "end": 13.836,
+      "duration": 0.16
+    },
+    {
+      "index": 41,
+      "word": "saal",
+      "start": 13.854,
+      "end": 14.014,
+      "duration": 0.16
+    },
+    {
+      "index": 42,
+      "word": "purani",
+      "start": 14.032,
+      "end": 14.272,
+      "duration": 0.24
+    },
+    {
+      "index": 43,
+      "word": "journey.",
+      "start": 14.775,
+      "end": 15.148,
+      "duration": 0.373
+    },
+    {
+      "index": 44,
+      "word": "Sab",
+      "start": 15.19,
+      "end": 15.329,
+      "duration": 0.14
+    },
+    {
+      "index": 45,
+      "word": "ne",
+      "start": 15.907,
+      "end": 15.992,
+      "duration": 0.086
+    },
+    {
+      "index": 46,
+      "word": "milkar",
+      "start": 16.257,
+      "end": 16.59,
+      "duration": 0.333
+    },
+    {
+      "index": 47,
+      "word": "tumhe",
+      "start": 16.627,
+      "end": 16.904,
+      "duration": 0.277
+    },
+    {
+      "index": 48,
+      "word": "ye",
+      "start": 16.935,
+      "end": 17.045,
+      "duration": 0.111
+    },
+    {
+      "index": 49,
+      "word": "ability",
+      "start": 17.058,
+      "end": 17.446,
+      "duration": 0.388
+    },
+    {
+      "index": 50,
+      "word": "di...",
+      "start": 17.489,
+      "end": 17.766,
+      "duration": 0.277
+    },
+    {
+      "index": 51,
+      "word": "jisse",
+      "start": 18.529,
+      "end": 18.8,
+      "duration": 0.271
+    },
+    {
+      "index": 52,
+      "word": "tum",
+      "start": 18.83,
+      "end": 18.992,
+      "duration": 0.162
+    },
+    {
+      "index": 53,
+      "word": "apne",
+      "start": 19.01,
+      "end": 19.227,
+      "duration": 0.217
+    },
+    {
+      "index": 54,
+      "word": "pyaar",
+      "start": 19.251,
+      "end": 19.522,
+      "duration": 0.271
+    },
+    {
+      "index": 55,
+      "word": "ko",
+      "start": 19.552,
+      "end": 19.66,
+      "duration": 0.108
+    },
+    {
+      "index": 56,
+      "word": "I",
+      "start": 19.672,
+      "end": 19.732,
+      "duration": 0.06
+    },
+    {
+      "index": 57,
+      "word": "love",
+      "start": 19.732,
+      "end": 19.949,
+      "duration": 0.217
+    },
+    {
+      "index": 58,
+      "word": "you",
+      "start": 19.973,
+      "end": 20.136,
+      "duration": 0.162
+    },
+    {
+      "index": 59,
+      "word": "bol",
+      "start": 20.154,
+      "end": 20.316,
+      "duration": 0.162
+    },
+    {
+      "index": 60,
+      "word": "sakte",
+      "start": 20.334,
+      "end": 20.605,
+      "duration": 0.271
+    },
+    {
+      "index": 61,
+      "word": "ho.",
+      "start": 21.087,
+      "end": 21.228,
+      "duration": 0.141
+    },
+    {
+      "index": 62,
+      "word": "Apne",
+      "start": 21.244,
+      "end": 21.432,
+      "duration": 0.188
+    },
+    {
+      "index": 63,
+      "word": "bacche",
+      "start": 21.453,
+      "end": 21.735,
+      "duration": 0.282
+    },
+    {
+      "index": 64,
+      "word": "ko",
+      "start": 21.766,
+      "end": 21.86,
+      "duration": 0.094
+    },
+    {
+      "index": 65,
+      "word": "story",
+      "start": 21.871,
+      "end": 22.106,
+      "duration": 0.235
+    },
+    {
+      "index": 66,
+      "word": "suna",
+      "start": 22.132,
+      "end": 22.32,
+      "duration": 0.188
+    },
+    {
+      "index": 67,
+      "word": "sakte",
+      "start": 22.509,
+      "end": 22.73,
+      "duration": 0.221
+    },
+    {
+      "index": 68,
+      "word": "ho.",
+      "start": 22.755,
+      "end": 22.888,
+      "duration": 0.133
+    },
+    {
+      "index": 69,
+      "word": "Apne",
+      "start": 22.902,
+      "end": 23.079,
+      "duration": 0.177
+    },
+    {
+      "index": 70,
+      "word": "dost",
+      "start": 23.099,
+      "end": 23.276,
+      "duration": 0.177
+    },
+    {
+      "index": 71,
+      "word": "se",
+      "start": 23.296,
+      "end": 23.384,
+      "duration": 0.089
+    },
+    {
+      "index": 72,
+      "word": "argue",
+      "start": 23.394,
+      "end": 23.615,
+      "duration": 0.221
+    },
+    {
+      "index": 73,
+      "word": "kar",
+      "start": 24.071,
+      "end": 24.238,
+      "duration": 0.167
+    },
+    {
+      "index": 74,
+      "word": "sakte",
+      "start": 24.257,
+      "end": 24.536,
+      "duration": 0.279
+    },
+    {
+      "index": 75,
+      "word": "ho.",
+      "start": 24.567,
+      "end": 24.734,
+      "duration": 0.167
+    },
+    {
+      "index": 76,
+      "word": "Apne",
+      "start": 24.753,
+      "end": 24.976,
+      "duration": 0.223
+    },
+    {
+      "index": 77,
+      "word": "dukh",
+      "start": 25.0,
+      "end": 25.224,
+      "duration": 0.223
+    },
+    {
+      "index": 78,
+      "word": "apne",
+      "start": 25.248,
+      "end": 25.471,
+      "duration": 0.223
+    },
+    {
+      "index": 79,
+      "word": "shabd",
+      "start": 25.496,
+      "end": 25.775,
+      "duration": 0.279
+    },
+    {
+      "index": 80,
+      "word": "mein",
+      "start": 26.237,
+      "end": 26.433,
+      "duration": 0.196
+    },
+    {
+      "index": 81,
+      "word": "express",
+      "start": 26.455,
+      "end": 26.798,
+      "duration": 0.343
+    },
+    {
+      "index": 82,
+      "word": "kar",
+      "start": 26.836,
+      "end": 26.983,
+      "duration": 0.147
+    },
+    {
+      "index": 83,
+      "word": "sakte",
+      "start": 26.999,
+      "end": 27.244,
+      "duration": 0.245
+    },
+    {
+      "index": 84,
+      "word": "ho.",
+      "start": 27.271,
+      "end": 27.418,
+      "duration": 0.147
+    },
+    {
+      "index": 85,
+      "word": "Har",
+      "start": 27.434,
+      "end": 27.581,
+      "duration": 0.147
+    },
+    {
+      "index": 86,
+      "word": "shabd...",
+      "start": 27.598,
+      "end": 27.989,
+      "duration": 0.392
+    },
+    {
+      "index": 87,
+      "word": "jo",
+      "start": 28.509,
+      "end": 28.589,
+      "duration": 0.08
+    },
+    {
+      "index": 88,
+      "word": "tum",
+      "start": 28.598,
+      "end": 28.718,
+      "duration": 0.12
+    },
+    {
+      "index": 89,
+      "word": "aaj",
+      "start": 28.731,
+      "end": 28.851,
+      "duration": 0.12
+    },
+    {
+      "index": 90,
+      "word": "bolte",
+      "start": 28.865,
+      "end": 29.065,
+      "duration": 0.2
+    },
+    {
+      "index": 91,
+      "word": "ho...",
+      "start": 29.398,
+      "end": 29.791,
+      "duration": 0.393
+    },
+    {
+      "index": 92,
+      "word": "ek",
+      "start": 29.835,
+      "end": 29.992,
+      "duration": 0.157
+    },
+    {
+      "index": 93,
+      "word": "miracle",
+      "start": 30.009,
+      "end": 30.56,
+      "duration": 0.55
+    },
+    {
+      "index": 94,
+      "word": "hai!",
+      "start": 30.621,
+      "end": 30.935,
+      "duration": 0.314
+    }
+  ]
+}

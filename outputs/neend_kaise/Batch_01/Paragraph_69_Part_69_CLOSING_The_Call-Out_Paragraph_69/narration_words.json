@@ -1,0 +1,216 @@
+{
+  "total_words": 30,
+  "total_duration": 10.41,
+  "words": [
+    {
+      "index": 1,
+      "word": "Toh",
+      "start": 0.237,
+      "end": 0.395,
+      "duration": 0.158
+    },
+    {
+      "index": 2,
+      "word": "wapas",
+      "start": 0.412,
+      "end": 0.675,
+      "duration": 0.263
+    },
+    {
+      "index": 3,
+      "word": "chalte",
+      "start": 0.704,
+      "end": 1.019,
+      "duration": 0.315
+    },
+    {
+      "index": 4,
+      "word": "hain",
+      "start": 1.054,
+      "end": 1.264,
+      "duration": 0.21
+    },
+    {
+      "index": 5,
+      "word": "kal",
+      "start": 1.287,
+      "end": 1.445,
+      "duration": 0.158
+    },
+    {
+      "index": 6,
+      "word": "raat",
+      "start": 1.462,
+      "end": 1.673,
+      "duration": 0.21
+    },
+    {
+      "index": 7,
+      "word": "pe.",
+      "start": 1.696,
+      "end": 1.853,
+      "duration": 0.158
+    },
+    {
+      "index": 8,
+      "word": "Jab",
+      "start": 2.958,
+      "end": 3.124,
+      "duration": 0.166
+    },
+    {
+      "index": 9,
+      "word": "tum",
+      "start": 3.142,
+      "end": 3.308,
+      "duration": 0.166
+    },
+    {
+      "index": 10,
+      "word": "bed",
+      "start": 3.326,
+      "end": 3.492,
+      "duration": 0.166
+    },
+    {
+      "index": 11,
+      "word": "pe",
+      "start": 3.51,
+      "end": 3.62,
+      "duration": 0.11
+    },
+    {
+      "index": 12,
+      "word": "leti",
+      "start": 3.633,
+      "end": 3.853,
+      "duration": 0.221
+    },
+    {
+      "index": 13,
+      "word": "hui",
+      "start": 3.878,
+      "end": 4.044,
+      "duration": 0.166
+    },
+    {
+      "index": 14,
+      "word": "thi,",
+      "start": 4.062,
+      "end": 4.283,
+      "duration": 0.221
+    },
+    {
+      "index": 15,
+      "word": "phone",
+      "start": 4.307,
+      "end": 4.583,
+      "duration": 0.276
+    },
+    {
+      "index": 16,
+      "word": "haath",
+      "start": 5.024,
+      "end": 5.267,
+      "duration": 0.243
+    },
+    {
+      "index": 17,
+      "word": "mein,",
+      "start": 5.294,
+      "end": 5.536,
+      "duration": 0.243
+    },
+    {
+      "index": 18,
+      "word": "ek",
+      "start": 5.563,
+      "end": 5.66,
+      "duration": 0.097
+    },
+    {
+      "index": 19,
+      "word": "baj",
+      "start": 5.671,
+      "end": 5.817,
+      "duration": 0.146
+    },
+    {
+      "index": 20,
+      "word": "gaya",
+      "start": 6.372,
+      "end": 6.556,
+      "duration": 0.184
+    },
+    {
+      "index": 21,
+      "word": "tha,",
+      "start": 6.577,
+      "end": 6.761,
+      "duration": 0.184
+    },
+    {
+      "index": 22,
+      "word": "aur",
+      "start": 6.781,
+      "end": 6.92,
+      "duration": 0.138
+    },
+    {
+      "index": 23,
+      "word": "tumne",
+      "start": 6.935,
+      "end": 7.165,
+      "duration": 0.23
+    },
+    {
+      "index": 24,
+      "word": "apne",
+      "start": 7.779,
+      "end": 7.993,
+      "duration": 0.214
+    },
+    {
+      "index": 25,
+      "word": "aap",
+      "start": 8.016,
+      "end": 8.177,
+      "duration": 0.16
+    },
+    {
+      "index": 26,
+      "word": "se",
+      "start": 8.194,
+      "end": 8.301,
+      "duration": 0.107
+    },
+    {
+      "index": 27,
+      "word": "kaha...",
+      "start": 8.313,
+      "end": 8.687,
+      "duration": 0.374
+    },
+    {
+      "index": 28,
+      "word": "bas",
+      "start": 8.728,
+      "end": 8.889,
+      "duration": 0.16
+    },
+    {
+      "index": 29,
+      "word": "ek",
+      "start": 8.906,
+      "end": 9.013,
+      "duration": 0.107
+    },
+    {
+      "index": 30,
+      "word": "aur.",
+      "start": 9.696,
+      "end": 10.339,
+      "duration": 0.643
+    }
+  ]
+}

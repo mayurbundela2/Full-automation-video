@@ -1,0 +1,412 @@
+{
+  "total_words": 58,
+  "total_duration": 25.6,
+  "words": [
+    {
+      "index": 1,
+      "word": "Modern",
+      "start": 0.253,
+      "end": 0.583,
+      "duration": 0.33
+    },
+    {
+      "index": 2,
+      "word": "humans",
+      "start": 0.62,
+      "end": 0.95,
+      "duration": 0.33
+    },
+    {
+      "index": 3,
+      "word": "jab",
+      "start": 0.986,
+      "end": 1.151,
+      "duration": 0.165
+    },
+    {
+      "index": 4,
+      "word": "pehli",
+      "start": 1.169,
+      "end": 1.444,
+      "duration": 0.275
+    },
+    {
+      "index": 5,
+      "word": "baar",
+      "start": 1.661,
+      "end": 1.912,
+      "duration": 0.251
+    },
+    {
+      "index": 6,
+      "word": "Europe",
+      "start": 1.939,
+      "end": 2.315,
+      "duration": 0.376
+    },
+    {
+      "index": 7,
+      "word": "pohonche...",
+      "start": 2.357,
+      "end": 3.046,
+      "duration": 0.689
+    },
+    {
+      "index": 8,
+      "word": "unke",
+      "start": 3.478,
+      "end": 3.731,
+      "duration": 0.253
+    },
+    {
+      "index": 9,
+      "word": "saamne",
+      "start": 3.759,
+      "end": 4.139,
+      "duration": 0.38
+    },
+    {
+      "index": 10,
+      "word": "Neanderthals",
+      "start": 4.182,
+      "end": 4.941,
+      "duration": 0.76
+    },
+    {
+      "index": 11,
+      "word": "the...",
+      "start": 5.026,
+      "end": 5.406,
+      "duration": 0.38
+    },
+    {
+      "index": 12,
+      "word": "jo",
+      "start": 5.74,
+      "end": 5.875,
+      "duration": 0.135
+    },
+    {
+      "index": 13,
+      "word": "shayad",
+      "start": 5.89,
+      "end": 6.296,
+      "duration": 0.406
+    },
+    {
+      "index": 14,
+      "word": "apne",
+      "start": 6.341,
+      "end": 6.612,
+      "duration": 0.271
+    },
+    {
+      "index": 15,
+      "word": "tarike",
+      "start": 6.642,
+      "end": 7.048,
+      "duration": 0.406
+    },
+    {
+      "index": 16,
+      "word": "se",
+      "start": 7.093,
+      "end": 7.228,
+      "duration": 0.135
+    },
+    {
+      "index": 17,
+      "word": "kuch",
+      "start": 7.243,
+      "end": 7.514,
+      "duration": 0.271
+    },
+    {
+      "index": 18,
+      "word": "bolte",
+      "start": 7.544,
+      "end": 7.882,
+      "duration": 0.338
+    },
+    {
+      "index": 19,
+      "word": "the!",
+      "start": 7.919,
+      "end": 8.19,
+      "duration": 0.271
+    },
+    {
+      "index": 20,
+      "word": "Ye",
+      "start": 9.065,
+      "end": 9.125,
+      "duration": 0.06
+    },
+    {
+      "index": 21,
+      "word": "pehli",
+      "start": 9.122,
+      "end": 9.249,
+      "duration": 0.127
+    },
+    {
+      "index": 22,
+      "word": "baar",
+      "start": 9.438,
+      "end": 9.706,
+      "duration": 0.268
+    },
+    {
+      "index": 23,
+      "word": "tha",
+      "start": 9.735,
+      "end": 9.936,
+      "duration": 0.201
+    },
+    {
+      "index": 24,
+      "word": "jab",
+      "start": 9.958,
+      "end": 10.159,
+      "duration": 0.201
+    },
+    {
+      "index": 25,
+      "word": "Earth",
+      "start": 10.181,
+      "end": 10.516,
+      "duration": 0.334
+    },
+    {
+      "index": 26,
+      "word": "pe",
+      "start": 10.553,
+      "end": 10.687,
+      "duration": 0.134
+    },
+    {
+      "index": 27,
+      "word": "shayad",
+      "start": 10.702,
+      "end": 11.103,
+      "duration": 0.401
+    },
+    {
+      "index": 28,
+      "word": "do",
+      "start": 11.148,
+      "end": 11.281,
+      "duration": 0.134
+    },
+    {
+      "index": 29,
+      "word": "bolne",
+      "start": 11.296,
+      "end": 11.631,
+      "duration": 0.334
+    },
+    {
+      "index": 30,
+      "word": "wali",
+      "start": 11.668,
+      "end": 11.936,
+      "duration": 0.268
+    },
+    {
+      "index": 31,
+      "word": "species",
+      "start": 11.965,
+      "end": 12.434,
+      "duration": 0.468
+    },
+    {
+      "index": 32,
+      "word": "existed!",
+      "start": 12.486,
+      "end": 13.021,
+      "duration": 0.535
+    },
+    {
+      "index": 33,
+      "word": "Aur",
+      "start": 13.08,
+      "end": 13.281,
+      "duration": 0.201
+    },
+    {
+      "index": 34,
+      "word": "ek",
+      "start": 13.303,
+      "end": 13.437,
+      "duration": 0.134
+    },
+    {
+      "index": 35,
+      "word": "doosre",
+      "start": 13.452,
+      "end": 13.853,
+      "duration": 0.401
+    },
+    {
+      "index": 36,
+      "word": "ko",
+      "start": 14.276,
+      "end": 14.397,
+      "duration": 0.121
+    },
+    {
+      "index": 37,
+      "word": "dekhkar",
+      "start": 14.411,
+      "end": 14.835,
+      "duration": 0.425
+    },
+    {
+      "index": 38,
+      "word": "soch",
+      "start": 14.883,
+      "end": 15.125,
+      "duration": 0.243
+    },
+    {
+      "index": 39,
+      "word": "rahe",
+      "start": 15.152,
+      "end": 15.395,
+      "duration": 0.243
+    },
+    {
+      "index": 40,
+      "word": "the...",
+      "start": 15.422,
+      "end": 15.786,
+      "duration": 0.364
+    },
+    {
+      "index": 41,
+      "word": "kya",
+      "start": 15.826,
+      "end": 16.008,
+      "duration": 0.182
+    },
+    {
+      "index": 42,
+      "word": "ye",
+      "start": 16.028,
+      "end": 16.15,
+      "duration": 0.121
+    },
+    {
+      "index": 43,
+      "word": "humein",
+      "start": 16.163,
+      "end": 16.527,
+      "duration": 0.364
+    },
+    {
+      "index": 44,
+      "word": "samajh",
+      "start": 16.568,
+      "end": 16.932,
+      "duration": 0.364
+    },
+    {
+      "index": 45,
+      "word": "raha",
+      "start": 17.629,
+      "end": 17.854,
+      "duration": 0.225
+    },
+    {
+      "index": 46,
+      "word": "hai?",
+      "start": 17.879,
+      "end": 18.104,
+      "duration": 0.225
+    },
+    {
+      "index": 47,
+      "word": "Aur",
+      "start": 18.13,
+      "end": 18.298,
+      "duration": 0.169
+    },
+    {
+      "index": 48,
+      "word": "phir",
+      "start": 18.317,
+      "end": 18.542,
+      "duration": 0.225
+    },
+    {
+      "index": 49,
+      "word": "humne...",
+      "start": 18.567,
+      "end": 19.018,
+      "duration": 0.45
+    },
+    {
+      "index": 50,
+      "word": "is",
+      "start": 20.061,
+      "end": 20.192,
+      "duration": 0.131
+    },
+    {
+      "index": 51,
+      "word": "ability",
+      "start": 20.207,
+      "end": 20.667,
+      "duration": 0.46
+    },
+    {
+      "index": 52,
+      "word": "se",
+      "start": 20.718,
+      "end": 20.849,
+      "duration": 0.131
+    },
+    {
+      "index": 53,
+      "word": "poori",
+      "start": 20.864,
+      "end": 21.192,
+      "duration": 0.328
+    },
+    {
+      "index": 54,
+      "word": "duniya",
+      "start": 21.229,
+      "end": 21.623,
+      "duration": 0.394
+    },
+    {
+      "index": 55,
+      "word": "pe",
+      "start": 21.666,
+      "end": 21.798,
+      "duration": 0.131
+    },
+    {
+      "index": 56,
+      "word": "supremacy",
+      "start": 21.812,
+      "end": 22.403,
+      "duration": 0.591
+    },
+    {
+      "index": 57,
+      "word": "haasil",
+      "start": 22.658,
+      "end": 23.605,
+      "duration": 0.947
+    },
+    {
+      "index": 58,
+      "word": "ki!",
+      "start": 23.71,
+      "end": 24.183,
+      "duration": 0.473
+    }
+  ]
+}

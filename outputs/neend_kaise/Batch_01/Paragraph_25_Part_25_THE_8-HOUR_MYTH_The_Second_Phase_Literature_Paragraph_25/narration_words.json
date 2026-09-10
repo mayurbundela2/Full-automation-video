@@ -1,0 +1,188 @@
+{
+  "total_words": 26,
+  "total_duration": 10.76,
+  "words": [
+    {
+      "index": 1,
+      "word": "Phir",
+      "start": 0.295,
+      "end": 0.506,
+      "duration": 0.211
+    },
+    {
+      "index": 2,
+      "word": "dobara",
+      "start": 0.53,
+      "end": 0.846,
+      "duration": 0.317
+    },
+    {
+      "index": 3,
+      "word": "so",
+      "start": 0.882,
+      "end": 0.987,
+      "duration": 0.106
+    },
+    {
+      "index": 4,
+      "word": "jaate...",
+      "start": 0.999,
+      "end": 1.421,
+      "duration": 0.422
+    },
+    {
+      "index": 5,
+      "word": "ye",
+      "start": 1.92,
+      "end": 2.026,
+      "duration": 0.106
+    },
+    {
+      "index": 6,
+      "word": "tha",
+      "start": 2.038,
+      "end": 2.197,
+      "duration": 0.159
+    },
+    {
+      "index": 7,
+      "word": "second",
+      "start": 2.214,
+      "end": 2.532,
+      "duration": 0.318
+    },
+    {
+      "index": 8,
+      "word": "sleep.",
+      "start": 2.567,
+      "end": 2.885,
+      "duration": 0.318
+    },
+    {
+      "index": 9,
+      "word": "Subah",
+      "start": 2.921,
+      "end": 3.186,
+      "duration": 0.265
+    },
+    {
+      "index": 10,
+      "word": "tak.",
+      "start": 3.459,
+      "end": 3.617,
+      "duration": 0.158
+    },
+    {
+      "index": 11,
+      "word": "Historical",
+      "start": 3.634,
+      "end": 4.029,
+      "duration": 0.395
+    },
+    {
+      "index": 12,
+      "word": "documents",
+      "start": 4.652,
+      "end": 5.248,
+      "duration": 0.596
+    },
+    {
+      "index": 13,
+      "word": "mein",
+      "start": 5.314,
+      "end": 5.579,
+      "duration": 0.265
+    },
+    {
+      "index": 14,
+      "word": "ye",
+      "start": 5.609,
+      "end": 5.741,
+      "duration": 0.132
+    },
+    {
+      "index": 15,
+      "word": "pattern",
+      "start": 5.756,
+      "end": 6.22,
+      "duration": 0.464
+    },
+    {
+      "index": 16,
+      "word": "Homer's",
+      "start": 6.271,
+      "end": 6.735,
+      "duration": 0.464
+    },
+    {
+      "index": 17,
+      "word": "Odyssey",
+      "start": 6.786,
+      "end": 7.25,
+      "duration": 0.464
+    },
+    {
+      "index": 18,
+      "word": "se",
+      "start": 7.302,
+      "end": 7.434,
+      "duration": 0.132
+    },
+    {
+      "index": 19,
+      "word": "lekar",
+      "start": 7.449,
+      "end": 7.78,
+      "duration": 0.331
+    },
+    {
+      "index": 20,
+      "word": "Charles",
+      "start": 7.817,
+      "end": 8.281,
+      "duration": 0.464
+    },
+    {
+      "index": 21,
+      "word": "Dickens",
+      "start": 8.332,
+      "end": 8.796,
+      "duration": 0.464
+    },
+    {
+      "index": 22,
+      "word": "ke",
+      "start": 8.847,
+      "end": 8.98,
+      "duration": 0.132
+    },
+    {
+      "index": 23,
+      "word": "novels",
+      "start": 8.995,
+      "end": 9.392,
+      "duration": 0.397
+    },
+    {
+      "index": 24,
+      "word": "tak",
+      "start": 9.436,
+      "end": 9.635,
+      "duration": 0.199
+    },
+    {
+      "index": 25,
+      "word": "dikhta",
+      "start": 9.657,
+      "end": 10.054,
+      "duration": 0.397
+    },
+    {
+      "index": 26,
+      "word": "hai.",
+      "start": 10.099,
+      "end": 10.364,
+      "duration": 0.265
+    }
+  ]
+}

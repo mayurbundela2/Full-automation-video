@@ -1,0 +1,244 @@
+{
+  "total_words": 34,
+  "total_duration": 12.17,
+  "words": [
+    {
+      "index": 1,
+      "word": "Chronic",
+      "start": 0.264,
+      "end": 0.635,
+      "duration": 0.371
+    },
+    {
+      "index": 2,
+      "word": "sleep",
+      "start": 0.676,
+      "end": 0.942,
+      "duration": 0.265
+    },
+    {
+      "index": 3,
+      "word": "deprivation",
+      "start": 0.971,
+      "end": 1.554,
+      "duration": 0.583
+    },
+    {
+      "index": 4,
+      "word": "matlab",
+      "start": 1.619,
+      "end": 1.937,
+      "duration": 0.318
+    },
+    {
+      "index": 5,
+      "word": "brain",
+      "start": 1.972,
+      "end": 2.238,
+      "duration": 0.265
+    },
+    {
+      "index": 6,
+      "word": "toxins",
+      "start": 2.267,
+      "end": 2.585,
+      "duration": 0.318
+    },
+    {
+      "index": 7,
+      "word": "jama",
+      "start": 2.621,
+      "end": 2.833,
+      "duration": 0.212
+    },
+    {
+      "index": 8,
+      "word": "hote",
+      "start": 2.856,
+      "end": 3.068,
+      "duration": 0.212
+    },
+    {
+      "index": 9,
+      "word": "rehte",
+      "start": 3.092,
+      "end": 3.357,
+      "duration": 0.265
+    },
+    {
+      "index": 10,
+      "word": "hain.",
+      "start": 3.386,
+      "end": 3.652,
+      "duration": 0.265
+    },
+    {
+      "index": 11,
+      "word": "Long-term",
+      "start": 4.07,
+      "end": 4.545,
+      "duration": 0.475
+    },
+    {
+      "index": 12,
+      "word": "Alzheimer's",
+      "start": 4.598,
+      "end": 5.179,
+      "duration": 0.581
+    },
+    {
+      "index": 13,
+      "word": "ke",
+      "start": 5.243,
+      "end": 5.349,
+      "duration": 0.106
+    },
+    {
+      "index": 14,
+      "word": "risk",
+      "start": 5.361,
+      "end": 5.572,
+      "duration": 0.211
+    },
+    {
+      "index": 15,
+      "word": "factors",
+      "start": 5.595,
+      "end": 5.965,
+      "duration": 0.37
+    },
+    {
+      "index": 16,
+      "word": "mein",
+      "start": 6.006,
+      "end": 6.217,
+      "duration": 0.211
+    },
+    {
+      "index": 17,
+      "word": "sleep",
+      "start": 6.241,
+      "end": 6.505,
+      "duration": 0.264
+    },
+    {
+      "index": 18,
+      "word": "deprivation",
+      "start": 6.534,
+      "end": 7.115,
+      "duration": 0.581
+    },
+    {
+      "index": 19,
+      "word": "ek",
+      "start": 7.179,
+      "end": 7.285,
+      "duration": 0.106
+    },
+    {
+      "index": 20,
+      "word": "bada",
+      "start": 7.297,
+      "end": 7.508,
+      "duration": 0.211
+    },
+    {
+      "index": 21,
+      "word": "factor",
+      "start": 7.531,
+      "end": 7.848,
+      "duration": 0.317
+    },
+    {
+      "index": 22,
+      "word": "hai.",
+      "start": 7.883,
+      "end": 8.095,
+      "duration": 0.211
+    },
+    {
+      "index": 23,
+      "word": "Aur",
+      "start": 8.553,
+      "end": 8.674,
+      "duration": 0.121
+    },
+    {
+      "index": 24,
+      "word": "sabse",
+      "start": 8.687,
+      "end": 8.889,
+      "duration": 0.201
+    },
+    {
+      "index": 25,
+      "word": "bura",
+      "start": 8.911,
+      "end": 9.072,
+      "duration": 0.161
+    },
+    {
+      "index": 26,
+      "word": "part?",
+      "start": 9.09,
+      "end": 9.291,
+      "duration": 0.201
+    },
+    {
+      "index": 27,
+      "word": "Tumhari",
+      "start": 9.314,
+      "end": 9.596,
+      "duration": 0.282
+    },
+    {
+      "index": 28,
+      "word": "generation",
+      "start": 9.789,
+      "end": 10.419,
+      "duration": 0.63
+    },
+    {
+      "index": 29,
+      "word": "ne",
+      "start": 10.489,
+      "end": 10.615,
+      "duration": 0.126
+    },
+    {
+      "index": 30,
+      "word": "isko",
+      "start": 10.629,
+      "end": 10.881,
+      "duration": 0.252
+    },
+    {
+      "index": 31,
+      "word": "normal",
+      "start": 10.909,
+      "end": 11.288,
+      "duration": 0.378
+    },
+    {
+      "index": 32,
+      "word": "maan",
+      "start": 11.33,
+      "end": 11.582,
+      "duration": 0.252
+    },
+    {
+      "index": 33,
+      "word": "liya",
+      "start": 11.61,
+      "end": 11.862,
+      "duration": 0.252
+    },
+    {
+      "index": 34,
+      "word": "hai.",
+      "start": 11.89,
+      "end": 12.142,
+      "duration": 0.252
+    }
+  ]
+}

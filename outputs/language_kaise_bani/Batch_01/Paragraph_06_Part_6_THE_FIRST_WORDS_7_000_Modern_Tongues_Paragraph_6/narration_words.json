@@ -1,0 +1,202 @@
+{
+  "total_words": 28,
+  "total_duration": 13.12,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ek",
+      "start": 0.284,
+      "end": 0.412,
+      "duration": 0.128
+    },
+    {
+      "index": 2,
+      "word": "sawaal...",
+      "start": 0.426,
+      "end": 1.003,
+      "duration": 0.576
+    },
+    {
+      "index": 3,
+      "word": "jo",
+      "start": 1.067,
+      "end": 1.195,
+      "duration": 0.128
+    },
+    {
+      "index": 4,
+      "word": "linguists",
+      "start": 1.546,
+      "end": 2.111,
+      "duration": 0.565
+    },
+    {
+      "index": 5,
+      "word": "sadiyon",
+      "start": 2.174,
+      "end": 2.613,
+      "duration": 0.439
+    },
+    {
+      "index": 6,
+      "word": "se",
+      "start": 2.662,
+      "end": 2.788,
+      "duration": 0.126
+    },
+    {
+      "index": 7,
+      "word": "puchhte",
+      "start": 2.801,
+      "end": 3.241,
+      "duration": 0.439
+    },
+    {
+      "index": 8,
+      "word": "aa",
+      "start": 3.29,
+      "end": 3.415,
+      "duration": 0.126
+    },
+    {
+      "index": 9,
+      "word": "rahe",
+      "start": 3.429,
+      "end": 3.68,
+      "duration": 0.251
+    },
+    {
+      "index": 10,
+      "word": "hain.",
+      "start": 3.708,
+      "end": 4.022,
+      "duration": 0.314
+    },
+    {
+      "index": 11,
+      "word": "Duniya",
+      "start": 4.857,
+      "end": 5.255,
+      "duration": 0.398
+    },
+    {
+      "index": 12,
+      "word": "mein",
+      "start": 5.299,
+      "end": 5.564,
+      "duration": 0.265
+    },
+    {
+      "index": 13,
+      "word": "aaj",
+      "start": 5.593,
+      "end": 5.792,
+      "duration": 0.199
+    },
+    {
+      "index": 14,
+      "word": "lagbhag",
+      "start": 5.814,
+      "end": 6.278,
+      "duration": 0.464
+    },
+    {
+      "index": 15,
+      "word": "saat",
+      "start": 6.329,
+      "end": 6.594,
+      "duration": 0.265
+    },
+    {
+      "index": 16,
+      "word": "hazaar",
+      "start": 6.624,
+      "end": 7.021,
+      "duration": 0.398
+    },
+    {
+      "index": 17,
+      "word": "languages",
+      "start": 7.065,
+      "end": 7.662,
+      "duration": 0.596
+    },
+    {
+      "index": 18,
+      "word": "hain.",
+      "start": 7.728,
+      "end": 8.059,
+      "duration": 0.331
+    },
+    {
+      "index": 19,
+      "word": "Har",
+      "start": 8.865,
+      "end": 9.074,
+      "duration": 0.209
+    },
+    {
+      "index": 20,
+      "word": "language",
+      "start": 9.097,
+      "end": 9.653,
+      "duration": 0.556
+    },
+    {
+      "index": 21,
+      "word": "ke",
+      "start": 9.715,
+      "end": 9.854,
+      "duration": 0.139
+    },
+    {
+      "index": 22,
+      "word": "apne",
+      "start": 9.87,
+      "end": 10.148,
+      "duration": 0.278
+    },
+    {
+      "index": 23,
+      "word": "rules",
+      "start": 10.179,
+      "end": 10.526,
+      "duration": 0.348
+    },
+    {
+      "index": 24,
+      "word": "hain...",
+      "start": 10.565,
+      "end": 11.052,
+      "duration": 0.487
+    },
+    {
+      "index": 25,
+      "word": "Apne",
+      "start": 11.106,
+      "end": 11.384,
+      "duration": 0.278
+    },
+    {
+      "index": 26,
+      "word": "shabd...",
+      "start": 11.415,
+      "end": 11.971,
+      "duration": 0.556
+    },
+    {
+      "index": 27,
+      "word": "Apne",
+      "start": 12.033,
+      "end": 12.311,
+      "duration": 0.278
+    },
+    {
+      "index": 28,
+      "word": "sound.",
+      "start": 12.342,
+      "end": 12.76,
+      "duration": 0.417
+    }
+  ]
+}

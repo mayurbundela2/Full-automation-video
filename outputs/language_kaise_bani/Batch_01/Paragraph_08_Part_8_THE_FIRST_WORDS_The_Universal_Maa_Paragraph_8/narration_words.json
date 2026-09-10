@@ -1,0 +1,279 @@
+{
+  "total_words": 39,
+  "total_duration": 20.04,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 0.36,
+      "end": 0.557,
+      "duration": 0.198
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.579,
+      "end": 0.658,
+      "duration": 0.079
+    },
+    {
+      "index": 3,
+      "word": "interesting",
+      "start": 0.667,
+      "end": 1.102,
+      "duration": 0.435
+    },
+    {
+      "index": 4,
+      "word": "observation",
+      "start": 1.308,
+      "end": 1.975,
+      "duration": 0.667
+    },
+    {
+      "index": 5,
+      "word": "hai...",
+      "start": 2.049,
+      "end": 2.413,
+      "duration": 0.364
+    },
+    {
+      "index": 6,
+      "word": "jo",
+      "start": 2.453,
+      "end": 2.575,
+      "duration": 0.121
+    },
+    {
+      "index": 7,
+      "word": "linguists",
+      "start": 3.034,
+      "end": 3.457,
+      "duration": 0.423
+    },
+    {
+      "index": 8,
+      "word": "ne",
+      "start": 3.504,
+      "end": 3.598,
+      "duration": 0.094
+    },
+    {
+      "index": 9,
+      "word": "kai",
+      "start": 3.608,
+      "end": 3.749,
+      "duration": 0.141
+    },
+    {
+      "index": 10,
+      "word": "jagah",
+      "start": 3.765,
+      "end": 4.0,
+      "duration": 0.235
+    },
+    {
+      "index": 11,
+      "word": "dekha.",
+      "start": 4.203,
+      "end": 4.45,
+      "duration": 0.247
+    },
+    {
+      "index": 12,
+      "word": "Ma...",
+      "start": 4.478,
+      "end": 4.684,
+      "duration": 0.206
+    },
+    {
+      "index": 13,
+      "word": "matlab",
+      "start": 4.707,
+      "end": 4.955,
+      "duration": 0.247
+    },
+    {
+      "index": 14,
+      "word": "maa.",
+      "start": 5.896,
+      "end": 6.062,
+      "duration": 0.166
+    },
+    {
+      "index": 15,
+      "word": "Hindi",
+      "start": 6.08,
+      "end": 6.287,
+      "duration": 0.207
+    },
+    {
+      "index": 16,
+      "word": "mein...",
+      "start": 6.995,
+      "end": 7.324,
+      "duration": 0.329
+    },
+    {
+      "index": 17,
+      "word": "Chinese",
+      "start": 7.36,
+      "end": 7.689,
+      "duration": 0.329
+    },
+    {
+      "index": 18,
+      "word": "mein...",
+      "start": 8.207,
+      "end": 8.617,
+      "duration": 0.41
+    },
+    {
+      "index": 19,
+      "word": "Arabic",
+      "start": 8.662,
+      "end": 9.013,
+      "duration": 0.351
+    },
+    {
+      "index": 20,
+      "word": "mein...",
+      "start": 9.052,
+      "end": 9.462,
+      "duration": 0.41
+    },
+    {
+      "index": 21,
+      "word": "Swahili",
+      "start": 9.507,
+      "end": 9.917,
+      "duration": 0.41
+    },
+    {
+      "index": 22,
+      "word": "mein...",
+      "start": 9.962,
+      "end": 10.372,
+      "duration": 0.41
+    },
+    {
+      "index": 23,
+      "word": "sab",
+      "start": 10.417,
+      "end": 10.593,
+      "duration": 0.176
+    },
+    {
+      "index": 24,
+      "word": "jagah",
+      "start": 10.612,
+      "end": 10.905,
+      "duration": 0.293
+    },
+    {
+      "index": 25,
+      "word": "ma",
+      "start": 10.937,
+      "end": 11.054,
+      "duration": 0.117
+    },
+    {
+      "index": 26,
+      "word": "ya",
+      "start": 11.067,
+      "end": 11.184,
+      "duration": 0.117
+    },
+    {
+      "index": 27,
+      "word": "mama",
+      "start": 11.197,
+      "end": 11.431,
+      "duration": 0.234
+    },
+    {
+      "index": 28,
+      "word": "bacche",
+      "start": 11.457,
+      "end": 11.808,
+      "duration": 0.351
+    },
+    {
+      "index": 29,
+      "word": "apni",
+      "start": 12.053,
+      "end": 12.269,
+      "duration": 0.216
+    },
+    {
+      "index": 30,
+      "word": "maa",
+      "start": 12.293,
+      "end": 12.455,
+      "duration": 0.162
+    },
+    {
+      "index": 31,
+      "word": "ke",
+      "start": 12.473,
+      "end": 12.581,
+      "duration": 0.108
+    },
+    {
+      "index": 32,
+      "word": "liye",
+      "start": 12.593,
+      "end": 12.809,
+      "duration": 0.216
+    },
+    {
+      "index": 33,
+      "word": "bolte",
+      "start": 12.833,
+      "end": 13.103,
+      "duration": 0.27
+    },
+    {
+      "index": 34,
+      "word": "hain.",
+      "start": 13.133,
+      "end": 13.403,
+      "duration": 0.27
+    },
+    {
+      "index": 35,
+      "word": "Pa",
+      "start": 13.606,
+      "end": 13.718,
+      "duration": 0.112
+    },
+    {
+      "index": 36,
+      "word": "ya",
+      "start": 13.73,
+      "end": 13.842,
+      "duration": 0.112
+    },
+    {
+      "index": 37,
+      "word": "papa...",
+      "start": 13.854,
+      "end": 14.246,
+      "duration": 0.391
+    },
+    {
+      "index": 38,
+      "word": "similarly",
+      "start": 14.521,
+      "end": 15.121,
+      "duration": 0.6
+    },
+    {
+      "index": 39,
+      "word": "widespread.",
+      "start": 15.187,
+      "end": 15.921,
+      "duration": 0.733
+    }
+  ]
+}

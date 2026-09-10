@@ -1,0 +1,370 @@
+{
+  "total_words": 52,
+  "total_duration": 23.08,
+  "words": [
+    {
+      "index": 1,
+      "word": "Language",
+      "start": 0.276,
+      "end": 0.75,
+      "duration": 0.474
+    },
+    {
+      "index": 2,
+      "word": "se",
+      "start": 0.802,
+      "end": 0.921,
+      "duration": 0.118
+    },
+    {
+      "index": 3,
+      "word": "abstract",
+      "start": 0.934,
+      "end": 1.408,
+      "duration": 0.474
+    },
+    {
+      "index": 4,
+      "word": "thinking",
+      "start": 1.461,
+      "end": 1.934,
+      "duration": 0.474
+    },
+    {
+      "index": 5,
+      "word": "possible",
+      "start": 2.163,
+      "end": 2.674,
+      "duration": 0.511
+    },
+    {
+      "index": 6,
+      "word": "hui!",
+      "start": 2.73,
+      "end": 2.986,
+      "duration": 0.255
+    },
+    {
+      "index": 7,
+      "word": "Tum",
+      "start": 3.014,
+      "end": 3.206,
+      "duration": 0.192
+    },
+    {
+      "index": 8,
+      "word": "kal...",
+      "start": 3.536,
+      "end": 3.923,
+      "duration": 0.387
+    },
+    {
+      "index": 9,
+      "word": "agar...",
+      "start": 3.966,
+      "end": 4.418,
+      "duration": 0.452
+    },
+    {
+      "index": 10,
+      "word": "aur",
+      "start": 4.468,
+      "end": 4.661,
+      "duration": 0.194
+    },
+    {
+      "index": 11,
+      "word": "kabhi",
+      "start": 4.683,
+      "end": 5.005,
+      "duration": 0.323
+    },
+    {
+      "index": 12,
+      "word": "nahi",
+      "start": 5.041,
+      "end": 5.299,
+      "duration": 0.258
+    },
+    {
+      "index": 13,
+      "word": "ke",
+      "start": 5.328,
+      "end": 5.457,
+      "duration": 0.129
+    },
+    {
+      "index": 14,
+      "word": "baare",
+      "start": 5.644,
+      "end": 5.892,
+      "duration": 0.248
+    },
+    {
+      "index": 15,
+      "word": "mein",
+      "start": 5.92,
+      "end": 6.118,
+      "duration": 0.199
+    },
+    {
+      "index": 16,
+      "word": "soch",
+      "start": 6.141,
+      "end": 6.339,
+      "duration": 0.199
+    },
+    {
+      "index": 17,
+      "word": "sakte",
+      "start": 6.361,
+      "end": 6.61,
+      "duration": 0.248
+    },
+    {
+      "index": 18,
+      "word": "ho!",
+      "start": 6.637,
+      "end": 6.786,
+      "duration": 0.149
+    },
+    {
+      "index": 19,
+      "word": "Language",
+      "start": 6.803,
+      "end": 7.2,
+      "duration": 0.397
+    },
+    {
+      "index": 20,
+      "word": "se",
+      "start": 7.842,
+      "end": 7.944,
+      "duration": 0.102
+    },
+    {
+      "index": 21,
+      "word": "kahaniyan",
+      "start": 7.955,
+      "end": 8.414,
+      "duration": 0.459
+    },
+    {
+      "index": 22,
+      "word": "bani...",
+      "start": 8.465,
+      "end": 8.822,
+      "duration": 0.357
+    },
+    {
+      "index": 23,
+      "word": "Culture",
+      "start": 8.861,
+      "end": 9.218,
+      "duration": 0.357
+    },
+    {
+      "index": 24,
+      "word": "bani...",
+      "start": 9.258,
+      "end": 9.614,
+      "duration": 0.357
+    },
+    {
+      "index": 25,
+      "word": "Poori",
+      "start": 9.815,
+      "end": 9.888,
+      "duration": 0.073
+    },
+    {
+      "index": 26,
+      "word": "human",
+      "start": 10.069,
+      "end": 10.228,
+      "duration": 0.159
+    },
+    {
+      "index": 27,
+      "word": "civilization",
+      "start": 10.246,
+      "end": 10.629,
+      "duration": 0.382
+    },
+    {
+      "index": 28,
+      "word": "ki",
+      "start": 10.91,
+      "end": 11.029,
+      "duration": 0.119
+    },
+    {
+      "index": 29,
+      "word": "neenv...",
+      "start": 11.042,
+      "end": 11.518,
+      "duration": 0.476
+    },
+    {
+      "index": 30,
+      "word": "is",
+      "start": 11.571,
+      "end": 11.69,
+      "duration": 0.119
+    },
+    {
+      "index": 31,
+      "word": "ek",
+      "start": 11.703,
+      "end": 11.822,
+      "duration": 0.119
+    },
+    {
+      "index": 32,
+      "word": "ability",
+      "start": 11.836,
+      "end": 12.252,
+      "duration": 0.417
+    },
+    {
+      "index": 33,
+      "word": "pe",
+      "start": 12.298,
+      "end": 12.417,
+      "duration": 0.119
+    },
+    {
+      "index": 34,
+      "word": "rakhi",
+      "start": 12.431,
+      "end": 12.728,
+      "duration": 0.297
+    },
+    {
+      "index": 35,
+      "word": "gayi!",
+      "start": 12.761,
+      "end": 13.059,
+      "duration": 0.297
+    },
+    {
+      "index": 36,
+      "word": "Fire",
+      "start": 13.092,
+      "end": 13.33,
+      "duration": 0.238
+    },
+    {
+      "index": 37,
+      "word": "ne",
+      "start": 13.356,
+      "end": 13.475,
+      "duration": 0.119
+    },
+    {
+      "index": 38,
+      "word": "humein",
+      "start": 13.488,
+      "end": 13.845,
+      "duration": 0.357
+    },
+    {
+      "index": 39,
+      "word": "warmth",
+      "start": 14.043,
+      "end": 14.362,
+      "duration": 0.319
+    },
+    {
+      "index": 40,
+      "word": "di...",
+      "start": 14.398,
+      "end": 14.663,
+      "duration": 0.266
+    },
+    {
+      "index": 41,
+      "word": "Tools",
+      "start": 14.693,
+      "end": 14.959,
+      "duration": 0.266
+    },
+    {
+      "index": 42,
+      "word": "ne",
+      "start": 14.988,
+      "end": 15.095,
+      "duration": 0.106
+    },
+    {
+      "index": 43,
+      "word": "power",
+      "start": 15.107,
+      "end": 15.372,
+      "duration": 0.266
+    },
+    {
+      "index": 44,
+      "word": "di...",
+      "start": 15.932,
+      "end": 16.207,
+      "duration": 0.275
+    },
+    {
+      "index": 45,
+      "word": "Lekin",
+      "start": 16.238,
+      "end": 16.512,
+      "duration": 0.275
+    },
+    {
+      "index": 46,
+      "word": "language",
+      "start": 16.543,
+      "end": 16.983,
+      "duration": 0.44
+    },
+    {
+      "index": 47,
+      "word": "ne",
+      "start": 17.032,
+      "end": 17.142,
+      "duration": 0.11
+    },
+    {
+      "index": 48,
+      "word": "humein...",
+      "start": 17.154,
+      "end": 17.649,
+      "duration": 0.495
+    },
+    {
+      "index": 49,
+      "word": "ek",
+      "start": 17.937,
+      "end": 18.092,
+      "duration": 0.155
+    },
+    {
+      "index": 50,
+      "word": "doosre",
+      "start": 18.109,
+      "end": 18.573,
+      "duration": 0.464
+    },
+    {
+      "index": 51,
+      "word": "ko",
+      "start": 18.625,
+      "end": 18.78,
+      "duration": 0.155
+    },
+    {
+      "index": 52,
+      "word": "diya!",
+      "start": 18.797,
+      "end": 19.184,
+      "duration": 0.387
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "total_words": 22,
+  "total_duration": 2.5,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ek",
+      "start": 0.0,
+      "end": 0.06,
+      "duration": 0.06
+    },
+    {
+      "index": 2,
+      "word": "sawaal...",
+      "start": 0.05,
+      "end": 0.253,
+      "duration": 0.202
+    },
+    {
+      "index": 3,
+      "word": "Pichle",
+      "start": 0.275,
+      "end": 0.41,
+      "duration": 0.135
+    },
+    {
+      "index": 4,
+      "word": "baarah",
+      "start": 0.425,
+      "end": 0.56,
+      "duration": 0.135
+    },
+    {
+      "index": 5,
+      "word": "hazaar",
+      "start": 0.575,
+      "end": 0.71,
+      "duration": 0.135
+    },
+    {
+      "index": 6,
+      "word": "saalon",
+      "start": 0.725,
+      "end": 0.86,
+      "duration": 0.135
+    },
+    {
+      "index": 7,
+      "word": "mein",
+      "start": 0.875,
+      "end": 0.965,
+      "duration": 0.09
+    },
+    {
+      "index": 8,
+      "word": "insaan",
+      "start": 0.975,
+      "end": 1.11,
+      "duration": 0.135
+    },
+    {
+      "index": 9,
+      "word": "ne",
+      "start": 1.125,
+      "end": 1.185,
+      "duration": 0.06
+    },
+    {
+      "index": 10,
+      "word": "aisi",
+      "start": 1.175,
+      "end": 1.265,
+      "duration": 0.09
+    },
+    {
+      "index": 11,
+      "word": "kaunsi",
+      "start": 1.275,
+      "end": 1.41,
+      "duration": 0.135
+    },
+    {
+      "index": 12,
+      "word": "cheez",
+      "start": 1.425,
+      "end": 1.538,
+      "duration": 0.113
+    },
+    {
+      "index": 13,
+      "word": "khoji",
+      "start": 1.55,
+      "end": 1.663,
+      "duration": 0.113
+    },
+    {
+      "index": 14,
+      "word": "hai",
+      "start": 1.675,
+      "end": 1.743,
+      "duration": 0.068
+    },
+    {
+      "index": 15,
+      "word": "jo",
+      "start": 1.75,
+      "end": 1.81,
+      "duration": 0.06
+    },
+    {
+      "index": 16,
+      "word": "pehle",
+      "start": 1.8,
+      "end": 1.913,
+      "duration": 0.113
+    },
+    {
+      "index": 17,
+      "word": "aam",
+      "start": 1.925,
+      "end": 1.993,
+      "duration": 0.068
+    },
+    {
+      "index": 18,
+      "word": "thi",
+      "start": 2.0,
+      "end": 2.067,
+      "duration": 0.068
+    },
+    {
+      "index": 19,
+      "word": "aur",
+      "start": 2.075,
+      "end": 2.143,
+      "duration": 0.068
+    },
+    {
+      "index": 20,
+      "word": "aaj",
+      "start": 2.15,
+      "end": 2.218,
+      "duration": 0.068
+    },
+    {
+      "index": 21,
+      "word": "illegal",
+      "start": 2.225,
+      "end": 2.383,
+      "duration": 0.158
+    },
+    {
+      "index": 22,
+      "word": "hai?",
+      "start": 2.4,
+      "end": 2.49,
+      "duration": 0.09
+    }
+  ]
+}

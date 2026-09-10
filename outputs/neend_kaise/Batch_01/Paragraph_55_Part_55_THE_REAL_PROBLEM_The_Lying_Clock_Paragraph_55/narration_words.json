@@ -1,0 +1,125 @@
+{
+  "total_words": 17,
+  "total_duration": 8.21,
+  "words": [
+    {
+      "index": 1,
+      "word": "Time",
+      "start": 0.348,
+      "end": 0.587,
+      "duration": 0.239
+    },
+    {
+      "index": 2,
+      "word": "dekhte",
+      "start": 0.613,
+      "end": 0.971,
+      "duration": 0.358
+    },
+    {
+      "index": 3,
+      "word": "ho...",
+      "start": 1.011,
+      "end": 1.309,
+      "duration": 0.298
+    },
+    {
+      "index": 4,
+      "word": "ek",
+      "start": 1.53,
+      "end": 1.612,
+      "duration": 0.082
+    },
+    {
+      "index": 5,
+      "word": "saintalis",
+      "start": 1.81,
+      "end": 2.43,
+      "duration": 0.62
+    },
+    {
+      "index": 6,
+      "word": "AM.",
+      "start": 2.499,
+      "end": 2.705,
+      "duration": 0.207
+    },
+    {
+      "index": 7,
+      "word": "Bas",
+      "start": 2.728,
+      "end": 2.935,
+      "duration": 0.207
+    },
+    {
+      "index": 8,
+      "word": "ek",
+      "start": 3.251,
+      "end": 3.376,
+      "duration": 0.125
+    },
+    {
+      "index": 9,
+      "word": "aur",
+      "start": 3.39,
+      "end": 3.577,
+      "duration": 0.187
+    },
+    {
+      "index": 10,
+      "word": "reel.",
+      "start": 3.799,
+      "end": 4.083,
+      "duration": 0.284
+    },
+    {
+      "index": 11,
+      "word": "Do",
+      "start": 4.115,
+      "end": 4.229,
+      "duration": 0.114
+    },
+    {
+      "index": 12,
+      "word": "teish",
+      "start": 4.241,
+      "end": 4.525,
+      "duration": 0.284
+    },
+    {
+      "index": 13,
+      "word": "AM.",
+      "start": 5.344,
+      "end": 5.521,
+      "duration": 0.177
+    },
+    {
+      "index": 14,
+      "word": "OK",
+      "start": 5.54,
+      "end": 5.658,
+      "duration": 0.118
+    },
+    {
+      "index": 15,
+      "word": "ab",
+      "start": 5.671,
+      "end": 5.789,
+      "duration": 0.118
+    },
+    {
+      "index": 16,
+      "word": "so",
+      "start": 5.802,
+      "end": 5.92,
+      "duration": 0.118
+    },
+    {
+      "index": 17,
+      "word": "jaunga.",
+      "start": 5.933,
+      "end": 6.345,
+      "duration": 0.412
+    }
+  ]
+}

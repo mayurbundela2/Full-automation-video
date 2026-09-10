@@ -1,0 +1,265 @@
+{
+  "total_words": 37,
+  "total_duration": 15.76,
+  "words": [
+    {
+      "index": 1,
+      "word": "Jab",
+      "start": 0.0,
+      "end": 0.185,
+      "duration": 0.185
+    },
+    {
+      "index": 2,
+      "word": "neend",
+      "start": 0.206,
+      "end": 0.514,
+      "duration": 0.308
+    },
+    {
+      "index": 3,
+      "word": "deeper",
+      "start": 0.548,
+      "end": 0.919,
+      "duration": 0.37
+    },
+    {
+      "index": 4,
+      "word": "hui,",
+      "start": 0.96,
+      "end": 1.207,
+      "duration": 0.247
+    },
+    {
+      "index": 5,
+      "word": "jab",
+      "start": 1.234,
+      "end": 1.419,
+      "duration": 0.185
+    },
+    {
+      "index": 6,
+      "word": "REM",
+      "start": 1.44,
+      "end": 1.625,
+      "duration": 0.185
+    },
+    {
+      "index": 7,
+      "word": "sleep",
+      "start": 1.645,
+      "end": 1.954,
+      "duration": 0.308
+    },
+    {
+      "index": 8,
+      "word": "zyada",
+      "start": 1.988,
+      "end": 2.297,
+      "duration": 0.308
+    },
+    {
+      "index": 9,
+      "word": "mila...",
+      "start": 2.331,
+      "end": 2.763,
+      "duration": 0.432
+    },
+    {
+      "index": 10,
+      "word": "dreams",
+      "start": 2.811,
+      "end": 3.181,
+      "duration": 0.37
+    },
+    {
+      "index": 11,
+      "word": "start",
+      "start": 3.427,
+      "end": 3.714,
+      "duration": 0.287
+    },
+    {
+      "index": 12,
+      "word": "hue.",
+      "start": 3.746,
+      "end": 3.976,
+      "duration": 0.23
+    },
+    {
+      "index": 13,
+      "word": "Complex",
+      "start": 4.001,
+      "end": 4.403,
+      "duration": 0.402
+    },
+    {
+      "index": 14,
+      "word": "dreams.",
+      "start": 4.755,
+      "end": 5.201,
+      "duration": 0.446
+    },
+    {
+      "index": 15,
+      "word": "Memory",
+      "start": 5.251,
+      "end": 5.633,
+      "duration": 0.383
+    },
+    {
+      "index": 16,
+      "word": "formation",
+      "start": 5.676,
+      "end": 6.25,
+      "duration": 0.574
+    },
+    {
+      "index": 17,
+      "word": "strong",
+      "start": 6.314,
+      "end": 6.696,
+      "duration": 0.383
+    },
+    {
+      "index": 18,
+      "word": "hui.",
+      "start": 6.739,
+      "end": 6.994,
+      "duration": 0.255
+    },
+    {
+      "index": 19,
+      "word": "Brain",
+      "start": 7.022,
+      "end": 7.341,
+      "duration": 0.319
+    },
+    {
+      "index": 20,
+      "word": "grow",
+      "start": 7.376,
+      "end": 7.631,
+      "duration": 0.255
+    },
+    {
+      "index": 21,
+      "word": "karna",
+      "start": 7.66,
+      "end": 7.978,
+      "duration": 0.319
+    },
+    {
+      "index": 22,
+      "word": "shuru",
+      "start": 8.014,
+      "end": 8.333,
+      "duration": 0.319
+    },
+    {
+      "index": 23,
+      "word": "hua.",
+      "start": 8.368,
+      "end": 8.623,
+      "duration": 0.255
+    },
+    {
+      "index": 24,
+      "word": "Aag",
+      "start": 8.651,
+      "end": 8.843,
+      "duration": 0.191
+    },
+    {
+      "index": 25,
+      "word": "se",
+      "start": 9.833,
+      "end": 9.971,
+      "duration": 0.138
+    },
+    {
+      "index": 26,
+      "word": "safe",
+      "start": 9.987,
+      "end": 10.263,
+      "duration": 0.277
+    },
+    {
+      "index": 27,
+      "word": "raat.",
+      "start": 10.294,
+      "end": 10.64,
+      "duration": 0.346
+    },
+    {
+      "index": 28,
+      "word": "Phir",
+      "start": 10.678,
+      "end": 10.955,
+      "duration": 0.277
+    },
+    {
+      "index": 29,
+      "word": "deep",
+      "start": 10.985,
+      "end": 11.262,
+      "duration": 0.277
+    },
+    {
+      "index": 30,
+      "word": "sleep.",
+      "start": 11.293,
+      "end": 11.707,
+      "duration": 0.415
+    },
+    {
+      "index": 31,
+      "word": "Phir",
+      "start": 11.753,
+      "end": 12.03,
+      "duration": 0.277
+    },
+    {
+      "index": 32,
+      "word": "developed",
+      "start": 12.061,
+      "end": 12.683,
+      "duration": 0.622
+    },
+    {
+      "index": 33,
+      "word": "brain.",
+      "start": 12.752,
+      "end": 13.167,
+      "duration": 0.415
+    },
+    {
+      "index": 34,
+      "word": "Phir",
+      "start": 13.213,
+      "end": 13.49,
+      "duration": 0.277
+    },
+    {
+      "index": 35,
+      "word": "language",
+      "start": 13.52,
+      "end": 14.073,
+      "duration": 0.553
+    },
+    {
+      "index": 36,
+      "word": "aur",
+      "start": 14.135,
+      "end": 14.342,
+      "duration": 0.207
+    },
+    {
+      "index": 37,
+      "word": "civilization.",
+      "start": 14.365,
+      "end": 15.264,
+      "duration": 0.899
+    }
+  ]
+}

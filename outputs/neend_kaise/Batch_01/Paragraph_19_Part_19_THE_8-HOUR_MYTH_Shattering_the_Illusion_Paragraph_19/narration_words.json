@@ -1,0 +1,286 @@
+{
+  "total_words": 40,
+  "total_duration": 13.84,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ab",
+      "start": 0.302,
+      "end": 0.413,
+      "duration": 0.111
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.425,
+      "end": 0.535,
+      "duration": 0.111
+    },
+    {
+      "index": 3,
+      "word": "baat",
+      "start": 0.548,
+      "end": 0.769,
+      "duration": 0.221
+    },
+    {
+      "index": 4,
+      "word": "jo",
+      "start": 0.793,
+      "end": 0.904,
+      "duration": 0.111
+    },
+    {
+      "index": 5,
+      "word": "tumhe",
+      "start": 0.916,
+      "end": 1.192,
+      "duration": 0.276
+    },
+    {
+      "index": 6,
+      "word": "genuinely",
+      "start": 1.223,
+      "end": 1.72,
+      "duration": 0.497
+    },
+    {
+      "index": 7,
+      "word": "shock",
+      "start": 1.775,
+      "end": 2.052,
+      "duration": 0.276
+    },
+    {
+      "index": 8,
+      "word": "karegi.",
+      "start": 2.082,
+      "end": 2.469,
+      "duration": 0.387
+    },
+    {
+      "index": 9,
+      "word": "Ye",
+      "start": 2.512,
+      "end": 2.623,
+      "duration": 0.111
+    },
+    {
+      "index": 10,
+      "word": "jo",
+      "start": 3.189,
+      "end": 3.294,
+      "duration": 0.105
+    },
+    {
+      "index": 11,
+      "word": "aath",
+      "start": 3.306,
+      "end": 3.516,
+      "duration": 0.21
+    },
+    {
+      "index": 12,
+      "word": "ghante",
+      "start": 3.54,
+      "end": 3.855,
+      "duration": 0.316
+    },
+    {
+      "index": 13,
+      "word": "ki",
+      "start": 3.89,
+      "end": 3.996,
+      "duration": 0.105
+    },
+    {
+      "index": 14,
+      "word": "continuous",
+      "start": 4.007,
+      "end": 4.533,
+      "duration": 0.526
+    },
+    {
+      "index": 15,
+      "word": "neend",
+      "start": 4.592,
+      "end": 4.855,
+      "duration": 0.263
+    },
+    {
+      "index": 16,
+      "word": "concept",
+      "start": 4.884,
+      "end": 5.252,
+      "duration": 0.368
+    },
+    {
+      "index": 17,
+      "word": "hai...",
+      "start": 5.293,
+      "end": 5.609,
+      "duration": 0.316
+    },
+    {
+      "index": 18,
+      "word": "jo",
+      "start": 5.644,
+      "end": 5.749,
+      "duration": 0.105
+    },
+    {
+      "index": 19,
+      "word": "tumhe",
+      "start": 5.761,
+      "end": 6.024,
+      "duration": 0.263
+    },
+    {
+      "index": 20,
+      "word": "school",
+      "start": 6.428,
+      "end": 6.762,
+      "duration": 0.334
+    },
+    {
+      "index": 21,
+      "word": "mein",
+      "start": 6.799,
+      "end": 7.022,
+      "duration": 0.223
+    },
+    {
+      "index": 22,
+      "word": "sikhaya",
+      "start": 7.047,
+      "end": 7.437,
+      "duration": 0.39
+    },
+    {
+      "index": 23,
+      "word": "gaya,",
+      "start": 7.48,
+      "end": 7.759,
+      "duration": 0.279
+    },
+    {
+      "index": 24,
+      "word": "jo",
+      "start": 7.79,
+      "end": 7.901,
+      "duration": 0.111
+    },
+    {
+      "index": 25,
+      "word": "har",
+      "start": 7.914,
+      "end": 8.081,
+      "duration": 0.167
+    },
+    {
+      "index": 26,
+      "word": "health",
+      "start": 8.099,
+      "end": 8.434,
+      "duration": 0.334
+    },
+    {
+      "index": 27,
+      "word": "article",
+      "start": 8.471,
+      "end": 8.861,
+      "duration": 0.39
+    },
+    {
+      "index": 28,
+      "word": "mein",
+      "start": 8.904,
+      "end": 9.127,
+      "duration": 0.223
+    },
+    {
+      "index": 29,
+      "word": "likha",
+      "start": 9.152,
+      "end": 9.43,
+      "duration": 0.279
+    },
+    {
+      "index": 30,
+      "word": "hota",
+      "start": 9.461,
+      "end": 9.684,
+      "duration": 0.223
+    },
+    {
+      "index": 31,
+      "word": "hai...",
+      "start": 9.709,
+      "end": 10.043,
+      "duration": 0.334
+    },
+    {
+      "index": 32,
+      "word": "ye",
+      "start": 10.649,
+      "end": 10.769,
+      "duration": 0.12
+    },
+    {
+      "index": 33,
+      "word": "actually",
+      "start": 10.782,
+      "end": 11.263,
+      "duration": 0.48
+    },
+    {
+      "index": 34,
+      "word": "humari",
+      "start": 11.316,
+      "end": 11.677,
+      "duration": 0.36
+    },
+    {
+      "index": 35,
+      "word": "species",
+      "start": 11.717,
+      "end": 12.137,
+      "duration": 0.42
+    },
+    {
+      "index": 36,
+      "word": "ke",
+      "start": 12.184,
+      "end": 12.304,
+      "duration": 0.12
+    },
+    {
+      "index": 37,
+      "word": "liye",
+      "start": 12.317,
+      "end": 12.557,
+      "duration": 0.24
+    },
+    {
+      "index": 38,
+      "word": "normal",
+      "start": 12.584,
+      "end": 12.944,
+      "duration": 0.36
+    },
+    {
+      "index": 39,
+      "word": "nahi",
+      "start": 12.984,
+      "end": 13.224,
+      "duration": 0.24
+    },
+    {
+      "index": 40,
+      "word": "hai.",
+      "start": 13.251,
+      "end": 13.491,
+      "duration": 0.24
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "total_words": 37,
+  "total_duration": 22.44,
+  "words": [
+    {
+      "index": 1,
+      "word": "Teen",
+      "start": 0.348,
+      "end": 0.57,
+      "duration": 0.222
+    },
+    {
+      "index": 2,
+      "word": "lakh",
+      "start": 0.595,
+      "end": 0.817,
+      "duration": 0.222
+    },
+    {
+      "index": 3,
+      "word": "saal",
+      "start": 0.842,
+      "end": 1.064,
+      "duration": 0.222
+    },
+    {
+      "index": 4,
+      "word": "mein",
+      "start": 1.089,
+      "end": 1.311,
+      "duration": 0.222
+    },
+    {
+      "index": 5,
+      "word": "pehli",
+      "start": 1.336,
+      "end": 1.614,
+      "duration": 0.278
+    },
+    {
+      "index": 6,
+      "word": "baar...",
+      "start": 2.005,
+      "end": 2.366,
+      "duration": 0.361
+    },
+    {
+      "index": 7,
+      "word": "kuch",
+      "start": 2.406,
+      "end": 2.612,
+      "duration": 0.206
+    },
+    {
+      "index": 8,
+      "word": "dominant",
+      "start": 3.336,
+      "end": 3.773,
+      "duration": 0.437
+    },
+    {
+      "index": 9,
+      "word": "languages",
+      "start": 3.821,
+      "end": 4.313,
+      "duration": 0.491
+    },
+    {
+      "index": 10,
+      "word": "baaki",
+      "start": 4.367,
+      "end": 4.64,
+      "duration": 0.273
+    },
+    {
+      "index": 11,
+      "word": "sabko",
+      "start": 4.671,
+      "end": 4.944,
+      "duration": 0.273
+    },
+    {
+      "index": 12,
+      "word": "khatam",
+      "start": 5.214,
+      "end": 5.541,
+      "duration": 0.327
+    },
+    {
+      "index": 13,
+      "word": "kar",
+      "start": 5.577,
+      "end": 5.74,
+      "duration": 0.163
+    },
+    {
+      "index": 14,
+      "word": "rahi",
+      "start": 5.758,
+      "end": 5.976,
+      "duration": 0.218
+    },
+    {
+      "index": 15,
+      "word": "hain...",
+      "start": 6.0,
+      "end": 6.382,
+      "duration": 0.381
+    },
+    {
+      "index": 16,
+      "word": "English...",
+      "start": 6.424,
+      "end": 6.968,
+      "duration": 0.544
+    },
+    {
+      "index": 17,
+      "word": "Mandarin...",
+      "start": 7.989,
+      "end": 8.46,
+      "duration": 0.471
+    },
+    {
+      "index": 18,
+      "word": "Spanish...",
+      "start": 8.969,
+      "end": 9.476,
+      "duration": 0.507
+    },
+    {
+      "index": 19,
+      "word": "Hindi.",
+      "start": 10.001,
+      "end": 10.28,
+      "duration": 0.279
+    },
+    {
+      "index": 20,
+      "word": "Ye",
+      "start": 10.311,
+      "end": 10.404,
+      "duration": 0.093
+    },
+    {
+      "index": 21,
+      "word": "galat",
+      "start": 10.414,
+      "end": 10.646,
+      "duration": 0.232
+    },
+    {
+      "index": 22,
+      "word": "nahi",
+      "start": 11.247,
+      "end": 11.386,
+      "duration": 0.139
+    },
+    {
+      "index": 23,
+      "word": "hai...",
+      "start": 11.402,
+      "end": 11.611,
+      "duration": 0.209
+    },
+    {
+      "index": 24,
+      "word": "ye",
+      "start": 12.867,
+      "end": 12.974,
+      "duration": 0.107
+    },
+    {
+      "index": 25,
+      "word": "communication",
+      "start": 12.986,
+      "end": 13.679,
+      "duration": 0.693
+    },
+    {
+      "index": 26,
+      "word": "ka",
+      "start": 14.243,
+      "end": 14.306,
+      "duration": 0.063
+    },
+    {
+      "index": 27,
+      "word": "evolution",
+      "start": 14.312,
+      "end": 14.594,
+      "duration": 0.281
+    },
+    {
+      "index": 28,
+      "word": "hai.",
+      "start": 14.798,
+      "end": 15.011,
+      "duration": 0.213
+    },
+    {
+      "index": 29,
+      "word": "Lekin",
+      "start": 15.035,
+      "end": 15.301,
+      "duration": 0.266
+    },
+    {
+      "index": 30,
+      "word": "ek",
+      "start": 15.331,
+      "end": 15.437,
+      "duration": 0.107
+    },
+    {
+      "index": 31,
+      "word": "loss",
+      "start": 15.449,
+      "end": 15.662,
+      "duration": 0.213
+    },
+    {
+      "index": 32,
+      "word": "hai...",
+      "start": 15.844,
+      "end": 16.188,
+      "duration": 0.344
+    },
+    {
+      "index": 33,
+      "word": "Aur",
+      "start": 16.226,
+      "end": 16.398,
+      "duration": 0.172
+    },
+    {
+      "index": 34,
+      "word": "ye",
+      "start": 16.417,
+      "end": 16.531,
+      "duration": 0.115
+    },
+    {
+      "index": 35,
+      "word": "loss...",
+      "start": 17.523,
+      "end": 17.888,
+      "duration": 0.365
+    },
+    {
+      "index": 36,
+      "word": "silent",
+      "start": 18.329,
+      "end": 18.786,
+      "duration": 0.457
+    },
+    {
+      "index": 37,
+      "word": "hai.",
+      "start": 18.837,
+      "end": 19.142,
+      "duration": 0.305
+    }
+  ]
+}

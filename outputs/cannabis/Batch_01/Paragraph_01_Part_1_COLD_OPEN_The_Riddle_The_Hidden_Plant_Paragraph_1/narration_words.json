@@ -1,0 +1,209 @@
+{
+  "total_words": 29,
+  "total_duration": 21.48,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ek",
+      "start": 0.0,
+      "end": 0.204,
+      "duration": 0.204
+    },
+    {
+      "index": 2,
+      "word": "sawaal...",
+      "start": 0.226,
+      "end": 1.55,
+      "duration": 1.324
+    },
+    {
+      "index": 3,
+      "word": "Pichle",
+      "start": 1.698,
+      "end": 2.309,
+      "duration": 0.611
+    },
+    {
+      "index": 4,
+      "word": "baarah",
+      "start": 2.377,
+      "end": 2.988,
+      "duration": 0.611
+    },
+    {
+      "index": 5,
+      "word": "hazaar",
+      "start": 3.056,
+      "end": 3.667,
+      "duration": 0.611
+    },
+    {
+      "index": 6,
+      "word": "saalon",
+      "start": 3.735,
+      "end": 4.346,
+      "duration": 0.611
+    },
+    {
+      "index": 7,
+      "word": "mein...",
+      "start": 4.414,
+      "end": 5.534,
+      "duration": 1.12
+    },
+    {
+      "index": 8,
+      "word": "duniya",
+      "start": 5.659,
+      "end": 6.27,
+      "duration": 0.611
+    },
+    {
+      "index": 9,
+      "word": "ka",
+      "start": 6.338,
+      "end": 6.541,
+      "duration": 0.204
+    },
+    {
+      "index": 10,
+      "word": "sabse",
+      "start": 6.564,
+      "end": 7.073,
+      "duration": 0.509
+    },
+    {
+      "index": 11,
+      "word": "important",
+      "start": 7.13,
+      "end": 8.047,
+      "duration": 0.917
+    },
+    {
+      "index": 12,
+      "word": "plant",
+      "start": 8.148,
+      "end": 8.658,
+      "duration": 0.509
+    },
+    {
+      "index": 13,
+      "word": "kaun",
+      "start": 8.714,
+      "end": 9.122,
+      "duration": 0.407
+    },
+    {
+      "index": 14,
+      "word": "sa",
+      "start": 9.167,
+      "end": 9.371,
+      "duration": 0.204
+    },
+    {
+      "index": 15,
+      "word": "tha?",
+      "start": 9.393,
+      "end": 10.086,
+      "duration": 0.693
+    },
+    {
+      "index": 16,
+      "word": "Socho...",
+      "start": 10.163,
+      "end": 11.385,
+      "duration": 1.222
+    },
+    {
+      "index": 17,
+      "word": "Gehu?",
+      "start": 11.521,
+      "end": 12.315,
+      "duration": 0.794
+    },
+    {
+      "index": 18,
+      "word": "...",
+      "start": 12.404,
+      "end": 13.117,
+      "duration": 0.713
+    },
+    {
+      "index": 19,
+      "word": "Chawal?",
+      "start": 13.196,
+      "end": 14.194,
+      "duration": 0.998
+    },
+    {
+      "index": 20,
+      "word": "...",
+      "start": 14.305,
+      "end": 15.018,
+      "duration": 0.713
+    },
+    {
+      "index": 21,
+      "word": "Makka?",
+      "start": 15.097,
+      "end": 15.993,
+      "duration": 0.896
+    },
+    {
+      "index": 22,
+      "word": "Sabne",
+      "start": 16.093,
+      "end": 16.602,
+      "duration": 0.509
+    },
+    {
+      "index": 23,
+      "word": "yahi",
+      "start": 16.659,
+      "end": 17.066,
+      "duration": 0.407
+    },
+    {
+      "index": 24,
+      "word": "socha",
+      "start": 17.112,
+      "end": 17.621,
+      "duration": 0.509
+    },
+    {
+      "index": 25,
+      "word": "hoga.",
+      "start": 17.677,
+      "end": 18.472,
+      "duration": 0.794
+    },
+    {
+      "index": 26,
+      "word": "Aur",
+      "start": 18.56,
+      "end": 18.866,
+      "duration": 0.306
+    },
+    {
+      "index": 27,
+      "word": "sab...",
+      "start": 18.9,
+      "end": 19.918,
+      "duration": 1.019
+    },
+    {
+      "index": 28,
+      "word": "galat",
+      "start": 20.031,
+      "end": 20.541,
+      "duration": 0.509
+    },
+    {
+      "index": 29,
+      "word": "hain.",
+      "start": 20.597,
+      "end": 21.392,
+      "duration": 0.794
+    }
+  ]
+}

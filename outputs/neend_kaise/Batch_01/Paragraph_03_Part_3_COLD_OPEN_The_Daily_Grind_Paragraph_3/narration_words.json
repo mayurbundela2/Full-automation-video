@@ -1,0 +1,125 @@
+{
+  "total_words": 17,
+  "total_duration": 9.24,
+  "words": [
+    {
+      "index": 1,
+      "word": "Matlab",
+      "start": 0.332,
+      "end": 0.669,
+      "duration": 0.337
+    },
+    {
+      "index": 2,
+      "word": "chaar-paanch",
+      "start": 0.869,
+      "end": 1.443,
+      "duration": 0.574
+    },
+    {
+      "index": 3,
+      "word": "ghante",
+      "start": 1.507,
+      "end": 1.795,
+      "duration": 0.287
+    },
+    {
+      "index": 4,
+      "word": "ki",
+      "start": 1.826,
+      "end": 1.922,
+      "duration": 0.096
+    },
+    {
+      "index": 5,
+      "word": "neend.",
+      "start": 1.933,
+      "end": 2.22,
+      "duration": 0.287
+    },
+    {
+      "index": 6,
+      "word": "Aur",
+      "start": 2.576,
+      "end": 2.731,
+      "duration": 0.155
+    },
+    {
+      "index": 7,
+      "word": "ye",
+      "start": 2.749,
+      "end": 2.852,
+      "duration": 0.104
+    },
+    {
+      "index": 8,
+      "word": "har",
+      "start": 2.864,
+      "end": 3.019,
+      "duration": 0.155
+    },
+    {
+      "index": 9,
+      "word": "din.",
+      "start": 3.036,
+      "end": 3.243,
+      "duration": 0.207
+    },
+    {
+      "index": 10,
+      "word": "Har",
+      "start": 3.266,
+      "end": 3.422,
+      "duration": 0.155
+    },
+    {
+      "index": 11,
+      "word": "hafte.",
+      "start": 3.439,
+      "end": 3.749,
+      "duration": 0.311
+    },
+    {
+      "index": 12,
+      "word": "Har",
+      "start": 4.024,
+      "end": 4.173,
+      "duration": 0.149
+    },
+    {
+      "index": 13,
+      "word": "mahine.",
+      "start": 4.19,
+      "end": 4.538,
+      "duration": 0.348
+    },
+    {
+      "index": 14,
+      "word": "Rukh...",
+      "start": 4.577,
+      "end": 4.925,
+      "duration": 0.348
+    },
+    {
+      "index": 15,
+      "word": "tumhe",
+      "start": 5.135,
+      "end": 5.477,
+      "duration": 0.342
+    },
+    {
+      "index": 16,
+      "word": "pata",
+      "start": 5.515,
+      "end": 5.788,
+      "duration": 0.273
+    },
+    {
+      "index": 17,
+      "word": "hai?",
+      "start": 5.818,
+      "end": 6.092,
+      "duration": 0.273
+    }
+  ]
+}

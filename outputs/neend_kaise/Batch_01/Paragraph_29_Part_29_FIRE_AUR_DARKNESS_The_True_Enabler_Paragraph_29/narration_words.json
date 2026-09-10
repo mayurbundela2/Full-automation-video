@@ -1,0 +1,244 @@
+{
+  "total_words": 34,
+  "total_duration": 14.4,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 0.324,
+      "end": 0.621,
+      "duration": 0.297
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.654,
+      "end": 0.773,
+      "duration": 0.119
+    },
+    {
+      "index": 3,
+      "word": "toh",
+      "start": 0.786,
+      "end": 0.964,
+      "duration": 0.178
+    },
+    {
+      "index": 4,
+      "word": "pichhle",
+      "start": 0.984,
+      "end": 1.4,
+      "duration": 0.416
+    },
+    {
+      "index": 5,
+      "word": "do",
+      "start": 1.446,
+      "end": 1.565,
+      "duration": 0.119
+    },
+    {
+      "index": 6,
+      "word": "sau",
+      "start": 1.579,
+      "end": 1.757,
+      "duration": 0.178
+    },
+    {
+      "index": 7,
+      "word": "saal",
+      "start": 1.777,
+      "end": 2.014,
+      "duration": 0.238
+    },
+    {
+      "index": 8,
+      "word": "ki",
+      "start": 2.041,
+      "end": 2.16,
+      "duration": 0.119
+    },
+    {
+      "index": 9,
+      "word": "baat",
+      "start": 2.173,
+      "end": 2.41,
+      "duration": 0.238
+    },
+    {
+      "index": 10,
+      "word": "hai.",
+      "start": 2.437,
+      "end": 2.675,
+      "duration": 0.238
+    },
+    {
+      "index": 11,
+      "word": "Ancient",
+      "start": 3.436,
+      "end": 3.836,
+      "duration": 0.4
+    },
+    {
+      "index": 12,
+      "word": "humans,",
+      "start": 3.881,
+      "end": 4.281,
+      "duration": 0.4
+    },
+    {
+      "index": 13,
+      "word": "jinki",
+      "start": 4.325,
+      "end": 4.611,
+      "duration": 0.286
+    },
+    {
+      "index": 14,
+      "word": "hum",
+      "start": 4.643,
+      "end": 4.814,
+      "duration": 0.171
+    },
+    {
+      "index": 15,
+      "word": "baat",
+      "start": 4.833,
+      "end": 5.062,
+      "duration": 0.229
+    },
+    {
+      "index": 16,
+      "word": "kar",
+      "start": 5.087,
+      "end": 5.258,
+      "duration": 0.171
+    },
+    {
+      "index": 17,
+      "word": "rahe",
+      "start": 5.277,
+      "end": 5.506,
+      "duration": 0.229
+    },
+    {
+      "index": 18,
+      "word": "hain,",
+      "start": 5.531,
+      "end": 5.817,
+      "duration": 0.286
+    },
+    {
+      "index": 19,
+      "word": "unke",
+      "start": 6.116,
+      "end": 6.37,
+      "duration": 0.254
+    },
+    {
+      "index": 20,
+      "word": "liye",
+      "start": 6.398,
+      "end": 6.653,
+      "duration": 0.254
+    },
+    {
+      "index": 21,
+      "word": "ek",
+      "start": 6.681,
+      "end": 6.808,
+      "duration": 0.127
+    },
+    {
+      "index": 22,
+      "word": "aur",
+      "start": 7.059,
+      "end": 7.229,
+      "duration": 0.17
+    },
+    {
+      "index": 23,
+      "word": "factor",
+      "start": 7.248,
+      "end": 7.589,
+      "duration": 0.341
+    },
+    {
+      "index": 24,
+      "word": "tha",
+      "start": 7.627,
+      "end": 7.797,
+      "duration": 0.17
+    },
+    {
+      "index": 25,
+      "word": "jisne",
+      "start": 7.816,
+      "end": 8.1,
+      "duration": 0.284
+    },
+    {
+      "index": 26,
+      "word": "unki",
+      "start": 8.543,
+      "end": 8.768,
+      "duration": 0.225
+    },
+    {
+      "index": 27,
+      "word": "neend",
+      "start": 8.793,
+      "end": 9.074,
+      "duration": 0.281
+    },
+    {
+      "index": 28,
+      "word": "genuinely",
+      "start": 9.106,
+      "end": 9.612,
+      "duration": 0.506
+    },
+    {
+      "index": 29,
+      "word": "possible",
+      "start": 9.668,
+      "end": 10.119,
+      "duration": 0.45
+    },
+    {
+      "index": 30,
+      "word": "ki.",
+      "start": 10.169,
+      "end": 10.337,
+      "duration": 0.169
+    },
+    {
+      "index": 31,
+      "word": "Aur",
+      "start": 10.356,
+      "end": 10.525,
+      "duration": 0.169
+    },
+    {
+      "index": 32,
+      "word": "wo",
+      "start": 10.544,
+      "end": 10.656,
+      "duration": 0.113
+    },
+    {
+      "index": 33,
+      "word": "hai...",
+      "start": 10.669,
+      "end": 11.006,
+      "duration": 0.338
+    },
+    {
+      "index": 34,
+      "word": "aag.",
+      "start": 11.904,
+      "end": 12.585,
+      "duration": 0.681
+    }
+  ]
+}

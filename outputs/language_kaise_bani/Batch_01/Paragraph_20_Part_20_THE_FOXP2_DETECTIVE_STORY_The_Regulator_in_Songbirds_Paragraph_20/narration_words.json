@@ -1,0 +1,321 @@
+{
+  "total_words": 45,
+  "total_duration": 19.92,
+  "words": [
+    {
+      "index": 1,
+      "word": "Chromosome",
+      "start": 0.281,
+      "end": 0.862,
+      "duration": 0.581
+    },
+    {
+      "index": 2,
+      "word": "saat",
+      "start": 0.927,
+      "end": 1.159,
+      "duration": 0.232
+    },
+    {
+      "index": 3,
+      "word": "pe...",
+      "start": 1.185,
+      "end": 1.476,
+      "duration": 0.291
+    },
+    {
+      "index": 4,
+      "word": "ek",
+      "start": 1.757,
+      "end": 1.843,
+      "duration": 0.086
+    },
+    {
+      "index": 5,
+      "word": "gene",
+      "start": 1.853,
+      "end": 2.025,
+      "duration": 0.173
+    },
+    {
+      "index": 6,
+      "word": "jise",
+      "start": 2.045,
+      "end": 2.217,
+      "duration": 0.173
+    },
+    {
+      "index": 7,
+      "word": "unhone",
+      "start": 2.236,
+      "end": 2.495,
+      "duration": 0.259
+    },
+    {
+      "index": 8,
+      "word": "naam",
+      "start": 2.679,
+      "end": 2.933,
+      "duration": 0.254
+    },
+    {
+      "index": 9,
+      "word": "diya",
+      "start": 2.961,
+      "end": 3.215,
+      "duration": 0.254
+    },
+    {
+      "index": 10,
+      "word": "FOXP2.",
+      "start": 3.244,
+      "end": 3.625,
+      "duration": 0.381
+    },
+    {
+      "index": 11,
+      "word": "Us",
+      "start": 3.667,
+      "end": 3.794,
+      "duration": 0.127
+    },
+    {
+      "index": 12,
+      "word": "gene",
+      "start": 3.808,
+      "end": 4.062,
+      "duration": 0.254
+    },
+    {
+      "index": 13,
+      "word": "ka",
+      "start": 4.091,
+      "end": 4.218,
+      "duration": 0.127
+    },
+    {
+      "index": 14,
+      "word": "ek",
+      "start": 4.232,
+      "end": 4.359,
+      "duration": 0.127
+    },
+    {
+      "index": 15,
+      "word": "chota",
+      "start": 4.373,
+      "end": 4.691,
+      "duration": 0.318
+    },
+    {
+      "index": 16,
+      "word": "sa",
+      "start": 4.885,
+      "end": 4.945,
+      "duration": 0.06
+    },
+    {
+      "index": 17,
+      "word": "mutation...",
+      "start": 4.909,
+      "end": 5.03,
+      "duration": 0.12
+    },
+    {
+      "index": 18,
+      "word": "aur",
+      "start": 5.479,
+      "end": 5.655,
+      "duration": 0.176
+    },
+    {
+      "index": 19,
+      "word": "poori",
+      "start": 5.675,
+      "end": 5.969,
+      "duration": 0.294
+    },
+    {
+      "index": 20,
+      "word": "family",
+      "start": 6.001,
+      "end": 6.354,
+      "duration": 0.353
+    },
+    {
+      "index": 21,
+      "word": "ki",
+      "start": 6.558,
+      "end": 6.675,
+      "duration": 0.117
+    },
+    {
+      "index": 22,
+      "word": "language",
+      "start": 6.688,
+      "end": 7.158,
+      "duration": 0.469
+    },
+    {
+      "index": 23,
+      "word": "ability",
+      "start": 7.21,
+      "end": 7.62,
+      "duration": 0.411
+    },
+    {
+      "index": 24,
+      "word": "disrupt",
+      "start": 8.011,
+      "end": 8.357,
+      "duration": 0.346
+    },
+    {
+      "index": 25,
+      "word": "ho",
+      "start": 8.573,
+      "end": 8.678,
+      "duration": 0.105
+    },
+    {
+      "index": 26,
+      "word": "gayi!",
+      "start": 8.689,
+      "end": 8.951,
+      "duration": 0.262
+    },
+    {
+      "index": 27,
+      "word": "Media",
+      "start": 8.98,
+      "end": 9.242,
+      "duration": 0.262
+    },
+    {
+      "index": 28,
+      "word": "ne",
+      "start": 9.271,
+      "end": 9.375,
+      "duration": 0.105
+    },
+    {
+      "index": 29,
+      "word": "isse",
+      "start": 9.387,
+      "end": 9.596,
+      "duration": 0.209
+    },
+    {
+      "index": 30,
+      "word": "the",
+      "start": 9.62,
+      "end": 9.777,
+      "duration": 0.157
+    },
+    {
+      "index": 31,
+      "word": "language",
+      "start": 9.794,
+      "end": 10.213,
+      "duration": 0.419
+    },
+    {
+      "index": 32,
+      "word": "gene",
+      "start": 10.259,
+      "end": 10.469,
+      "duration": 0.209
+    },
+    {
+      "index": 33,
+      "word": "kaha.",
+      "start": 10.492,
+      "end": 10.753,
+      "duration": 0.262
+    },
+    {
+      "index": 34,
+      "word": "Newspapers",
+      "start": 10.783,
+      "end": 11.306,
+      "duration": 0.523
+    },
+    {
+      "index": 35,
+      "word": "ne",
+      "start": 11.948,
+      "end": 12.067,
+      "duration": 0.119
+    },
+    {
+      "index": 36,
+      "word": "headlines",
+      "start": 12.08,
+      "end": 12.617,
+      "duration": 0.537
+    },
+    {
+      "index": 37,
+      "word": "banayi...",
+      "start": 12.677,
+      "end": 13.213,
+      "duration": 0.537
+    },
+    {
+      "index": 38,
+      "word": "scientists",
+      "start": 13.273,
+      "end": 13.869,
+      "duration": 0.596
+    },
+    {
+      "index": 39,
+      "word": "discover",
+      "start": 13.935,
+      "end": 14.412,
+      "duration": 0.477
+    },
+    {
+      "index": 40,
+      "word": "the",
+      "start": 14.802,
+      "end": 14.994,
+      "duration": 0.192
+    },
+    {
+      "index": 41,
+      "word": "gene",
+      "start": 15.016,
+      "end": 15.272,
+      "duration": 0.256
+    },
+    {
+      "index": 42,
+      "word": "that",
+      "start": 15.301,
+      "end": 15.557,
+      "duration": 0.256
+    },
+    {
+      "index": 43,
+      "word": "makes",
+      "start": 15.585,
+      "end": 15.906,
+      "duration": 0.32
+    },
+    {
+      "index": 44,
+      "word": "us",
+      "start": 15.941,
+      "end": 16.07,
+      "duration": 0.128
+    },
+    {
+      "index": 45,
+      "word": "talk!",
+      "start": 16.084,
+      "end": 16.404,
+      "duration": 0.32
+    }
+  ]
+}

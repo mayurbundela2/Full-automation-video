@@ -1,0 +1,223 @@
+{
+  "total_words": 31,
+  "total_duration": 12.48,
+  "words": [
+    {
+      "index": 1,
+      "word": "Sab",
+      "start": 0.319,
+      "end": 0.475,
+      "duration": 0.156
+    },
+    {
+      "index": 2,
+      "word": "connected",
+      "start": 0.493,
+      "end": 0.961,
+      "duration": 0.469
+    },
+    {
+      "index": 3,
+      "word": "hai.",
+      "start": 1.013,
+      "end": 1.221,
+      "duration": 0.208
+    },
+    {
+      "index": 4,
+      "word": "Aur",
+      "start": 1.244,
+      "end": 1.401,
+      "duration": 0.156
+    },
+    {
+      "index": 5,
+      "word": "agar",
+      "start": 1.645,
+      "end": 1.853,
+      "duration": 0.208
+    },
+    {
+      "index": 6,
+      "word": "tumne",
+      "start": 1.876,
+      "end": 2.136,
+      "duration": 0.26
+    },
+    {
+      "index": 7,
+      "word": "fire",
+      "start": 2.165,
+      "end": 2.374,
+      "duration": 0.208
+    },
+    {
+      "index": 8,
+      "word": "wali",
+      "start": 2.397,
+      "end": 2.605,
+      "duration": 0.208
+    },
+    {
+      "index": 9,
+      "word": "video",
+      "start": 2.628,
+      "end": 2.888,
+      "duration": 0.26
+    },
+    {
+      "index": 10,
+      "word": "nahi",
+      "start": 2.917,
+      "end": 3.125,
+      "duration": 0.208
+    },
+    {
+      "index": 11,
+      "word": "dekhi",
+      "start": 3.148,
+      "end": 3.408,
+      "duration": 0.26
+    },
+    {
+      "index": 12,
+      "word": "hai...",
+      "start": 3.437,
+      "end": 3.75,
+      "duration": 0.312
+    },
+    {
+      "index": 13,
+      "word": "end",
+      "start": 3.784,
+      "end": 3.94,
+      "duration": 0.156
+    },
+    {
+      "index": 14,
+      "word": "mein",
+      "start": 3.958,
+      "end": 4.166,
+      "duration": 0.208
+    },
+    {
+      "index": 15,
+      "word": "main",
+      "start": 4.552,
+      "end": 4.774,
+      "duration": 0.222
+    },
+    {
+      "index": 16,
+      "word": "dikhaunga",
+      "start": 4.798,
+      "end": 5.297,
+      "duration": 0.499
+    },
+    {
+      "index": 17,
+      "word": "link.",
+      "start": 5.353,
+      "end": 5.63,
+      "duration": 0.277
+    },
+    {
+      "index": 18,
+      "word": "Ye",
+      "start": 5.945,
+      "end": 6.055,
+      "duration": 0.11
+    },
+    {
+      "index": 19,
+      "word": "video",
+      "start": 6.068,
+      "end": 6.343,
+      "duration": 0.276
+    },
+    {
+      "index": 20,
+      "word": "uske",
+      "start": 6.374,
+      "end": 6.595,
+      "duration": 0.221
+    },
+    {
+      "index": 21,
+      "word": "baad",
+      "start": 6.619,
+      "end": 6.84,
+      "duration": 0.221
+    },
+    {
+      "index": 22,
+      "word": "aur",
+      "start": 6.864,
+      "end": 7.03,
+      "duration": 0.165
+    },
+    {
+      "index": 23,
+      "word": "bhi",
+      "start": 7.048,
+      "end": 7.214,
+      "duration": 0.165
+    },
+    {
+      "index": 24,
+      "word": "make",
+      "start": 7.413,
+      "end": 7.612,
+      "duration": 0.199
+    },
+    {
+      "index": 25,
+      "word": "sense",
+      "start": 7.634,
+      "end": 7.883,
+      "duration": 0.249
+    },
+    {
+      "index": 26,
+      "word": "karega.",
+      "start": 7.911,
+      "end": 8.259,
+      "duration": 0.349
+    },
+    {
+      "index": 27,
+      "word": "Ab",
+      "start": 8.298,
+      "end": 8.398,
+      "duration": 0.1
+    },
+    {
+      "index": 28,
+      "word": "aate",
+      "start": 8.409,
+      "end": 8.608,
+      "duration": 0.199
+    },
+    {
+      "index": 29,
+      "word": "hain...",
+      "start": 9.969,
+      "end": 10.276,
+      "duration": 0.307
+    },
+    {
+      "index": 30,
+      "word": "dreams",
+      "start": 10.31,
+      "end": 10.573,
+      "duration": 0.263
+    },
+    {
+      "index": 31,
+      "word": "pe.",
+      "start": 11.269,
+      "end": 12.092,
+      "duration": 0.824
+    }
+  ]
+}

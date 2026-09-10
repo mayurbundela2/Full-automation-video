@@ -1,0 +1,188 @@
+{
+  "total_words": 26,
+  "total_duration": 9.01,
+  "words": [
+    {
+      "index": 1,
+      "word": "REM",
+      "start": 0.267,
+      "end": 0.409,
+      "duration": 0.142
+    },
+    {
+      "index": 2,
+      "word": "sleep",
+      "start": 0.425,
+      "end": 0.662,
+      "duration": 0.237
+    },
+    {
+      "index": 3,
+      "word": "skip",
+      "start": 0.688,
+      "end": 0.878,
+      "duration": 0.19
+    },
+    {
+      "index": 4,
+      "word": "karne",
+      "start": 0.899,
+      "end": 1.136,
+      "duration": 0.237
+    },
+    {
+      "index": 5,
+      "word": "se",
+      "start": 1.163,
+      "end": 1.257,
+      "duration": 0.095
+    },
+    {
+      "index": 6,
+      "word": "long-term",
+      "start": 1.268,
+      "end": 1.695,
+      "duration": 0.427
+    },
+    {
+      "index": 7,
+      "word": "memory",
+      "start": 2.068,
+      "end": 2.36,
+      "duration": 0.292
+    },
+    {
+      "index": 8,
+      "word": "formation",
+      "start": 2.393,
+      "end": 2.832,
+      "duration": 0.439
+    },
+    {
+      "index": 9,
+      "word": "weak",
+      "start": 2.88,
+      "end": 3.075,
+      "duration": 0.195
+    },
+    {
+      "index": 10,
+      "word": "ho",
+      "start": 3.097,
+      "end": 3.194,
+      "duration": 0.097
+    },
+    {
+      "index": 11,
+      "word": "jaati",
+      "start": 3.205,
+      "end": 3.449,
+      "duration": 0.244
+    },
+    {
+      "index": 12,
+      "word": "hai.",
+      "start": 3.476,
+      "end": 3.671,
+      "duration": 0.195
+    },
+    {
+      "index": 13,
+      "word": "Tumhe",
+      "start": 3.693,
+      "end": 3.936,
+      "duration": 0.244
+    },
+    {
+      "index": 14,
+      "word": "lagta",
+      "start": 3.963,
+      "end": 4.207,
+      "duration": 0.244
+    },
+    {
+      "index": 15,
+      "word": "hai",
+      "start": 4.746,
+      "end": 4.884,
+      "duration": 0.138
+    },
+    {
+      "index": 16,
+      "word": "concentration",
+      "start": 4.9,
+      "end": 5.498,
+      "duration": 0.599
+    },
+    {
+      "index": 17,
+      "word": "nahi",
+      "start": 5.565,
+      "end": 5.749,
+      "duration": 0.184
+    },
+    {
+      "index": 18,
+      "word": "ho",
+      "start": 5.77,
+      "end": 5.862,
+      "duration": 0.092
+    },
+    {
+      "index": 19,
+      "word": "pa",
+      "start": 5.872,
+      "end": 5.964,
+      "duration": 0.092
+    },
+    {
+      "index": 20,
+      "word": "raha...",
+      "start": 5.975,
+      "end": 6.297,
+      "duration": 0.322
+    },
+    {
+      "index": 21,
+      "word": "actual",
+      "start": 6.333,
+      "end": 6.609,
+      "duration": 0.276
+    },
+    {
+      "index": 22,
+      "word": "mein",
+      "start": 7.005,
+      "end": 7.202,
+      "duration": 0.197
+    },
+    {
+      "index": 23,
+      "word": "neend",
+      "start": 7.224,
+      "end": 7.47,
+      "duration": 0.246
+    },
+    {
+      "index": 24,
+      "word": "ki",
+      "start": 7.498,
+      "end": 7.596,
+      "duration": 0.099
+    },
+    {
+      "index": 25,
+      "word": "kami",
+      "start": 7.914,
+      "end": 8.283,
+      "duration": 0.369
+    },
+    {
+      "index": 26,
+      "word": "hai.",
+      "start": 8.324,
+      "end": 8.693,
+      "duration": 0.369
+    }
+  ]
+}

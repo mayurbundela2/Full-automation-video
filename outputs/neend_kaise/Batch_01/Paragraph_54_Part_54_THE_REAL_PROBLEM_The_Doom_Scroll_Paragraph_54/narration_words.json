@@ -1,0 +1,188 @@
+{
+  "total_words": 26,
+  "total_duration": 10.01,
+  "words": [
+    {
+      "index": 1,
+      "word": "Bed",
+      "start": 0.344,
+      "end": 0.482,
+      "duration": 0.138
+    },
+    {
+      "index": 2,
+      "word": "pe",
+      "start": 0.498,
+      "end": 0.59,
+      "duration": 0.092
+    },
+    {
+      "index": 3,
+      "word": "leti",
+      "start": 0.6,
+      "end": 0.785,
+      "duration": 0.185
+    },
+    {
+      "index": 4,
+      "word": "hui",
+      "start": 0.806,
+      "end": 0.944,
+      "duration": 0.138
+    },
+    {
+      "index": 5,
+      "word": "tumhari",
+      "start": 0.96,
+      "end": 1.283,
+      "duration": 0.323
+    },
+    {
+      "index": 6,
+      "word": "body",
+      "start": 1.319,
+      "end": 1.503,
+      "duration": 0.185
+    },
+    {
+      "index": 7,
+      "word": "hai.",
+      "start": 1.524,
+      "end": 1.708,
+      "duration": 0.185
+    },
+    {
+      "index": 8,
+      "word": "Ankhein",
+      "start": 1.729,
+      "end": 2.052,
+      "duration": 0.323
+    },
+    {
+      "index": 9,
+      "word": "khuli.",
+      "start": 2.667,
+      "end": 2.956,
+      "duration": 0.289
+    },
+    {
+      "index": 10,
+      "word": "Phone",
+      "start": 2.988,
+      "end": 3.229,
+      "duration": 0.241
+    },
+    {
+      "index": 11,
+      "word": "screen",
+      "start": 3.669,
+      "end": 3.955,
+      "duration": 0.286
+    },
+    {
+      "index": 12,
+      "word": "face",
+      "start": 3.986,
+      "end": 4.177,
+      "duration": 0.19
+    },
+    {
+      "index": 13,
+      "word": "ke",
+      "start": 4.198,
+      "end": 4.293,
+      "duration": 0.095
+    },
+    {
+      "index": 14,
+      "word": "dus",
+      "start": 4.304,
+      "end": 4.446,
+      "duration": 0.143
+    },
+    {
+      "index": 15,
+      "word": "inch",
+      "start": 4.462,
+      "end": 4.653,
+      "duration": 0.19
+    },
+    {
+      "index": 16,
+      "word": "door.",
+      "start": 4.674,
+      "end": 4.912,
+      "duration": 0.238
+    },
+    {
+      "index": 17,
+      "word": "Instagram",
+      "start": 4.938,
+      "end": 5.366,
+      "duration": 0.428
+    },
+    {
+      "index": 18,
+      "word": "scroll.",
+      "start": 6.016,
+      "end": 6.377,
+      "duration": 0.361
+    },
+    {
+      "index": 19,
+      "word": "YouTube",
+      "start": 6.417,
+      "end": 6.777,
+      "duration": 0.361
+    },
+    {
+      "index": 20,
+      "word": "shorts.",
+      "start": 6.817,
+      "end": 7.178,
+      "duration": 0.361
+    },
+    {
+      "index": 21,
+      "word": "Ek",
+      "start": 7.218,
+      "end": 7.321,
+      "duration": 0.103
+    },
+    {
+      "index": 22,
+      "word": "video,",
+      "start": 7.333,
+      "end": 7.642,
+      "duration": 0.309
+    },
+    {
+      "index": 23,
+      "word": "doosri",
+      "start": 7.931,
+      "end": 8.364,
+      "duration": 0.433
+    },
+    {
+      "index": 24,
+      "word": "video,",
+      "start": 8.412,
+      "end": 8.846,
+      "duration": 0.433
+    },
+    {
+      "index": 25,
+      "word": "teesri",
+      "start": 8.894,
+      "end": 9.327,
+      "duration": 0.433
+    },
+    {
+      "index": 26,
+      "word": "video.",
+      "start": 9.376,
+      "end": 9.809,
+      "duration": 0.433
+    }
+  ]
+}

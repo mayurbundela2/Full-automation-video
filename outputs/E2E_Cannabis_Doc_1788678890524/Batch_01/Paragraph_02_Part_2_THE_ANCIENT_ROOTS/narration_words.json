@@ -1,0 +1,111 @@
+{
+  "total_words": 15,
+  "total_duration": 2.5,
+  "words": [
+    {
+      "index": 1,
+      "word": "Himalaya",
+      "start": 0.0,
+      "end": 0.237,
+      "duration": 0.237
+    },
+    {
+      "index": 2,
+      "word": "ki",
+      "start": 0.263,
+      "end": 0.323,
+      "duration": 0.06
+    },
+    {
+      "index": 3,
+      "word": "vaadiyon",
+      "start": 0.329,
+      "end": 0.566,
+      "duration": 0.237
+    },
+    {
+      "index": 4,
+      "word": "se",
+      "start": 0.592,
+      "end": 0.652,
+      "duration": 0.06
+    },
+    {
+      "index": 5,
+      "word": "lekar",
+      "start": 0.658,
+      "end": 0.806,
+      "duration": 0.148
+    },
+    {
+      "index": 6,
+      "word": "Atharvaveda",
+      "start": 0.822,
+      "end": 1.148,
+      "duration": 0.326
+    },
+    {
+      "index": 7,
+      "word": "ke",
+      "start": 1.184,
+      "end": 1.244,
+      "duration": 0.06
+    },
+    {
+      "index": 8,
+      "word": "pannon",
+      "start": 1.25,
+      "end": 1.428,
+      "duration": 0.178
+    },
+    {
+      "index": 9,
+      "word": "tak,",
+      "start": 1.447,
+      "end": 1.566,
+      "duration": 0.118
+    },
+    {
+      "index": 10,
+      "word": "yeh",
+      "start": 1.579,
+      "end": 1.668,
+      "duration": 0.089
+    },
+    {
+      "index": 11,
+      "word": "paudha",
+      "start": 1.678,
+      "end": 1.855,
+      "duration": 0.178
+    },
+    {
+      "index": 12,
+      "word": "har",
+      "start": 1.875,
+      "end": 1.964,
+      "duration": 0.089
+    },
+    {
+      "index": 13,
+      "word": "jagah",
+      "start": 1.974,
+      "end": 2.122,
+      "duration": 0.148
+    },
+    {
+      "index": 14,
+      "word": "maujood",
+      "start": 2.138,
+      "end": 2.345,
+      "duration": 0.207
+    },
+    {
+      "index": 15,
+      "word": "tha.",
+      "start": 2.368,
+      "end": 2.487,
+      "duration": 0.118
+    }
+  ]
+}

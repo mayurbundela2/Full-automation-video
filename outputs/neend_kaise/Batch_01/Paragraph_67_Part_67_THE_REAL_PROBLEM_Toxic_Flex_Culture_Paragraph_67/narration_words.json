@@ -1,0 +1,153 @@
+{
+  "total_words": 21,
+  "total_duration": 7.41,
+  "words": [
+    {
+      "index": 1,
+      "word": "Chaar",
+      "start": 0.248,
+      "end": 0.503,
+      "duration": 0.255
+    },
+    {
+      "index": 2,
+      "word": "ghante",
+      "start": 0.532,
+      "end": 0.838,
+      "duration": 0.306
+    },
+    {
+      "index": 3,
+      "word": "ki",
+      "start": 0.872,
+      "end": 0.975,
+      "duration": 0.102
+    },
+    {
+      "index": 4,
+      "word": "neend",
+      "start": 0.986,
+      "end": 1.241,
+      "duration": 0.255
+    },
+    {
+      "index": 5,
+      "word": "hoti",
+      "start": 1.27,
+      "end": 1.474,
+      "duration": 0.204
+    },
+    {
+      "index": 6,
+      "word": "hai",
+      "start": 1.497,
+      "end": 1.65,
+      "duration": 0.153
+    },
+    {
+      "index": 7,
+      "word": "bro,",
+      "start": 1.667,
+      "end": 1.871,
+      "duration": 0.204
+    },
+    {
+      "index": 8,
+      "word": "bas",
+      "start": 2.132,
+      "end": 2.282,
+      "duration": 0.15
+    },
+    {
+      "index": 9,
+      "word": "coffee",
+      "start": 2.298,
+      "end": 2.598,
+      "duration": 0.3
+    },
+    {
+      "index": 10,
+      "word": "peeta",
+      "start": 2.631,
+      "end": 2.881,
+      "duration": 0.25
+    },
+    {
+      "index": 11,
+      "word": "hoon.",
+      "start": 2.909,
+      "end": 3.158,
+      "duration": 0.25
+    },
+    {
+      "index": 12,
+      "word": "Dark",
+      "start": 3.547,
+      "end": 3.704,
+      "duration": 0.157
+    },
+    {
+      "index": 13,
+      "word": "circles",
+      "start": 3.721,
+      "end": 3.996,
+      "duration": 0.274
+    },
+    {
+      "index": 14,
+      "word": "cool",
+      "start": 4.026,
+      "end": 4.183,
+      "duration": 0.157
+    },
+    {
+      "index": 15,
+      "word": "lagte",
+      "start": 4.2,
+      "end": 4.396,
+      "duration": 0.196
+    },
+    {
+      "index": 16,
+      "word": "hain.",
+      "start": 4.418,
+      "end": 4.614,
+      "duration": 0.196
+    },
+    {
+      "index": 17,
+      "word": "Nightlife",
+      "start": 4.636,
+      "end": 4.989,
+      "duration": 0.353
+    },
+    {
+      "index": 18,
+      "word": "hai",
+      "start": 5.396,
+      "end": 5.561,
+      "duration": 0.165
+    },
+    {
+      "index": 19,
+      "word": "bro,",
+      "start": 5.58,
+      "end": 5.8,
+      "duration": 0.221
+    },
+    {
+      "index": 20,
+      "word": "jeena",
+      "start": 5.825,
+      "end": 6.1,
+      "duration": 0.276
+    },
+    {
+      "index": 21,
+      "word": "hai.",
+      "start": 6.131,
+      "end": 6.352,
+      "duration": 0.221
+    }
+  ]
+}

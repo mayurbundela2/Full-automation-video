@@ -1,0 +1,132 @@
+{
+  "total_words": 18,
+  "total_duration": 7.8,
+  "words": [
+    {
+      "index": 1,
+      "word": "Kyunki",
+      "start": 0.323,
+      "end": 0.572,
+      "duration": 0.249
+    },
+    {
+      "index": 2,
+      "word": "har",
+      "start": 0.599,
+      "end": 0.723,
+      "duration": 0.124
+    },
+    {
+      "index": 3,
+      "word": "doosri",
+      "start": 0.737,
+      "end": 0.986,
+      "duration": 0.249
+    },
+    {
+      "index": 4,
+      "word": "species",
+      "start": 1.013,
+      "end": 1.303,
+      "duration": 0.29
+    },
+    {
+      "index": 5,
+      "word": "jo",
+      "start": 1.336,
+      "end": 1.418,
+      "duration": 0.083
+    },
+    {
+      "index": 6,
+      "word": "defenseless",
+      "start": 1.428,
+      "end": 1.883,
+      "duration": 0.456
+    },
+    {
+      "index": 7,
+      "word": "sleeping",
+      "start": 2.115,
+      "end": 2.509,
+      "duration": 0.394
+    },
+    {
+      "index": 8,
+      "word": "karti",
+      "start": 2.553,
+      "end": 2.799,
+      "duration": 0.246
+    },
+    {
+      "index": 9,
+      "word": "thi...",
+      "start": 2.827,
+      "end": 3.122,
+      "duration": 0.296
+    },
+    {
+      "index": 10,
+      "word": "usse",
+      "start": 3.155,
+      "end": 3.352,
+      "duration": 0.197
+    },
+    {
+      "index": 11,
+      "word": "predators",
+      "start": 3.374,
+      "end": 3.818,
+      "duration": 0.443
+    },
+    {
+      "index": 12,
+      "word": "khaa",
+      "start": 4.28,
+      "end": 4.485,
+      "duration": 0.205
+    },
+    {
+      "index": 13,
+      "word": "jaate",
+      "start": 4.508,
+      "end": 4.764,
+      "duration": 0.256
+    },
+    {
+      "index": 14,
+      "word": "the.",
+      "start": 4.792,
+      "end": 4.997,
+      "duration": 0.205
+    },
+    {
+      "index": 15,
+      "word": "Ye",
+      "start": 5.02,
+      "end": 5.122,
+      "duration": 0.102
+    },
+    {
+      "index": 16,
+      "word": "simple",
+      "start": 5.133,
+      "end": 5.44,
+      "duration": 0.307
+    },
+    {
+      "index": 17,
+      "word": "logic",
+      "start": 5.475,
+      "end": 5.731,
+      "duration": 0.256
+    },
+    {
+      "index": 18,
+      "word": "hai.",
+      "start": 6.275,
+      "end": 7.244,
+      "duration": 0.969
+    }
+  ]
+}

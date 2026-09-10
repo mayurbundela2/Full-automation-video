@@ -1,0 +1,223 @@
+{
+  "total_words": 31,
+  "total_duration": 13.16,
+  "words": [
+    {
+      "index": 1,
+      "word": "Yaani...",
+      "start": 0.313,
+      "end": 0.716,
+      "duration": 0.403
+    },
+    {
+      "index": 2,
+      "word": "jab",
+      "start": 0.761,
+      "end": 0.912,
+      "duration": 0.151
+    },
+    {
+      "index": 3,
+      "word": "tum",
+      "start": 1.208,
+      "end": 1.392,
+      "duration": 0.184
+    },
+    {
+      "index": 4,
+      "word": "raat",
+      "start": 1.413,
+      "end": 1.658,
+      "duration": 0.246
+    },
+    {
+      "index": 5,
+      "word": "ko",
+      "start": 1.686,
+      "end": 1.809,
+      "duration": 0.123
+    },
+    {
+      "index": 6,
+      "word": "darr",
+      "start": 1.822,
+      "end": 2.068,
+      "duration": 0.246
+    },
+    {
+      "index": 7,
+      "word": "wale",
+      "start": 2.095,
+      "end": 2.341,
+      "duration": 0.246
+    },
+    {
+      "index": 8,
+      "word": "dream",
+      "start": 2.368,
+      "end": 2.675,
+      "duration": 0.307
+    },
+    {
+      "index": 9,
+      "word": "se",
+      "start": 2.709,
+      "end": 2.832,
+      "duration": 0.123
+    },
+    {
+      "index": 10,
+      "word": "uthte",
+      "start": 2.846,
+      "end": 3.153,
+      "duration": 0.307
+    },
+    {
+      "index": 11,
+      "word": "ho...",
+      "start": 3.187,
+      "end": 3.494,
+      "duration": 0.307
+    },
+    {
+      "index": 12,
+      "word": "tumhara",
+      "start": 3.528,
+      "end": 3.958,
+      "duration": 0.43
+    },
+    {
+      "index": 13,
+      "word": "ancient",
+      "start": 4.685,
+      "end": 5.143,
+      "duration": 0.458
+    },
+    {
+      "index": 14,
+      "word": "brain",
+      "start": 5.194,
+      "end": 5.522,
+      "duration": 0.327
+    },
+    {
+      "index": 15,
+      "word": "wahi",
+      "start": 5.558,
+      "end": 5.82,
+      "duration": 0.262
+    },
+    {
+      "index": 16,
+      "word": "kar",
+      "start": 5.849,
+      "end": 6.046,
+      "duration": 0.196
+    },
+    {
+      "index": 17,
+      "word": "raha",
+      "start": 6.068,
+      "end": 6.33,
+      "duration": 0.262
+    },
+    {
+      "index": 18,
+      "word": "hota",
+      "start": 6.359,
+      "end": 6.621,
+      "duration": 0.262
+    },
+    {
+      "index": 19,
+      "word": "hai",
+      "start": 6.65,
+      "end": 6.846,
+      "duration": 0.196
+    },
+    {
+      "index": 20,
+      "word": "jo",
+      "start": 6.868,
+      "end": 6.999,
+      "duration": 0.131
+    },
+    {
+      "index": 21,
+      "word": "teen",
+      "start": 7.014,
+      "end": 7.276,
+      "duration": 0.262
+    },
+    {
+      "index": 22,
+      "word": "lakh",
+      "start": 7.305,
+      "end": 7.567,
+      "duration": 0.262
+    },
+    {
+      "index": 23,
+      "word": "saal",
+      "start": 7.596,
+      "end": 7.858,
+      "duration": 0.262
+    },
+    {
+      "index": 24,
+      "word": "se",
+      "start": 8.109,
+      "end": 8.24,
+      "duration": 0.131
+    },
+    {
+      "index": 25,
+      "word": "karta",
+      "start": 8.254,
+      "end": 8.581,
+      "duration": 0.327
+    },
+    {
+      "index": 26,
+      "word": "aa",
+      "start": 8.617,
+      "end": 8.748,
+      "duration": 0.131
+    },
+    {
+      "index": 27,
+      "word": "raha",
+      "start": 8.762,
+      "end": 9.024,
+      "duration": 0.261
+    },
+    {
+      "index": 28,
+      "word": "hai.",
+      "start": 9.053,
+      "end": 9.314,
+      "duration": 0.261
+    },
+    {
+      "index": 29,
+      "word": "Practice",
+      "start": 9.343,
+      "end": 9.866,
+      "duration": 0.523
+    },
+    {
+      "index": 30,
+      "word": "for",
+      "start": 9.924,
+      "end": 10.12,
+      "duration": 0.196
+    },
+    {
+      "index": 31,
+      "word": "survival.",
+      "start": 11.073,
+      "end": 11.267,
+      "duration": 0.194
+    }
+  ]
+}

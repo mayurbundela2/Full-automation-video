@@ -1,0 +1,286 @@
+{
+  "total_words": 40,
+  "total_duration": 13.65,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.255,
+      "end": 0.363,
+      "duration": 0.108
+    },
+    {
+      "index": 2,
+      "word": "sab",
+      "start": 0.375,
+      "end": 0.538,
+      "duration": 0.162
+    },
+    {
+      "index": 3,
+      "word": "defense",
+      "start": 0.556,
+      "end": 0.935,
+      "duration": 0.379
+    },
+    {
+      "index": 4,
+      "word": "mechanisms",
+      "start": 0.977,
+      "end": 1.518,
+      "duration": 0.541
+    },
+    {
+      "index": 5,
+      "word": "hain",
+      "start": 1.579,
+      "end": 1.795,
+      "duration": 0.217
+    },
+    {
+      "index": 6,
+      "word": "ek",
+      "start": 1.819,
+      "end": 1.928,
+      "duration": 0.108
+    },
+    {
+      "index": 7,
+      "word": "problem",
+      "start": 1.94,
+      "end": 2.319,
+      "duration": 0.379
+    },
+    {
+      "index": 8,
+      "word": "se",
+      "start": 2.361,
+      "end": 2.469,
+      "duration": 0.108
+    },
+    {
+      "index": 9,
+      "word": "jise",
+      "start": 2.481,
+      "end": 2.698,
+      "duration": 0.217
+    },
+    {
+      "index": 10,
+      "word": "tum",
+      "start": 2.722,
+      "end": 2.884,
+      "duration": 0.162
+    },
+    {
+      "index": 11,
+      "word": "face",
+      "start": 2.902,
+      "end": 3.119,
+      "duration": 0.217
+    },
+    {
+      "index": 12,
+      "word": "nahi",
+      "start": 3.143,
+      "end": 3.359,
+      "duration": 0.217
+    },
+    {
+      "index": 13,
+      "word": "karna",
+      "start": 3.384,
+      "end": 3.654,
+      "duration": 0.271
+    },
+    {
+      "index": 14,
+      "word": "chahte.",
+      "start": 3.684,
+      "end": 4.063,
+      "duration": 0.379
+    },
+    {
+      "index": 15,
+      "word": "Aur",
+      "start": 4.106,
+      "end": 4.268,
+      "duration": 0.162
+    },
+    {
+      "index": 16,
+      "word": "ye",
+      "start": 4.74,
+      "end": 4.826,
+      "duration": 0.086
+    },
+    {
+      "index": 17,
+      "word": "problem",
+      "start": 4.836,
+      "end": 5.136,
+      "duration": 0.301
+    },
+    {
+      "index": 18,
+      "word": "hai...",
+      "start": 5.17,
+      "end": 5.428,
+      "duration": 0.258
+    },
+    {
+      "index": 19,
+      "word": "tumne",
+      "start": 5.456,
+      "end": 5.671,
+      "duration": 0.215
+    },
+    {
+      "index": 20,
+      "word": "apne",
+      "start": 5.993,
+      "end": 6.207,
+      "duration": 0.214
+    },
+    {
+      "index": 21,
+      "word": "ancestors",
+      "start": 6.231,
+      "end": 6.713,
+      "duration": 0.482
+    },
+    {
+      "index": 22,
+      "word": "ki",
+      "start": 6.767,
+      "end": 6.874,
+      "duration": 0.107
+    },
+    {
+      "index": 23,
+      "word": "di",
+      "start": 6.886,
+      "end": 6.993,
+      "duration": 0.107
+    },
+    {
+      "index": 24,
+      "word": "hui",
+      "start": 7.005,
+      "end": 7.166,
+      "duration": 0.161
+    },
+    {
+      "index": 25,
+      "word": "sabse",
+      "start": 7.184,
+      "end": 7.452,
+      "duration": 0.268
+    },
+    {
+      "index": 26,
+      "word": "important",
+      "start": 7.482,
+      "end": 7.964,
+      "duration": 0.482
+    },
+    {
+      "index": 27,
+      "word": "ability",
+      "start": 8.017,
+      "end": 8.393,
+      "duration": 0.375
+    },
+    {
+      "index": 28,
+      "word": "barbaad",
+      "start": 8.434,
+      "end": 8.809,
+      "duration": 0.375
+    },
+    {
+      "index": 29,
+      "word": "karna",
+      "start": 8.851,
+      "end": 9.119,
+      "duration": 0.268
+    },
+    {
+      "index": 30,
+      "word": "shuru",
+      "start": 9.149,
+      "end": 9.417,
+      "duration": 0.268
+    },
+    {
+      "index": 31,
+      "word": "kar",
+      "start": 9.447,
+      "end": 9.607,
+      "duration": 0.161
+    },
+    {
+      "index": 32,
+      "word": "diya",
+      "start": 9.625,
+      "end": 9.839,
+      "duration": 0.214
+    },
+    {
+      "index": 33,
+      "word": "hai.",
+      "start": 9.863,
+      "end": 10.078,
+      "duration": 0.214
+    },
+    {
+      "index": 34,
+      "word": "Chhota",
+      "start": 10.101,
+      "end": 10.423,
+      "duration": 0.322
+    },
+    {
+      "index": 35,
+      "word": "chhota",
+      "start": 10.459,
+      "end": 10.78,
+      "duration": 0.322
+    },
+    {
+      "index": 36,
+      "word": "karke.",
+      "start": 11.077,
+      "end": 11.347,
+      "duration": 0.27
+    },
+    {
+      "index": 37,
+      "word": "Roz",
+      "start": 11.377,
+      "end": 11.512,
+      "duration": 0.135
+    },
+    {
+      "index": 38,
+      "word": "thoda",
+      "start": 11.527,
+      "end": 11.752,
+      "duration": 0.225
+    },
+    {
+      "index": 39,
+      "word": "thoda",
+      "start": 11.777,
+      "end": 12.002,
+      "duration": 0.225
+    },
+    {
+      "index": 40,
+      "word": "karke.",
+      "start": 12.268,
+      "end": 13.321,
+      "duration": 1.053
+    }
+  ]
+}

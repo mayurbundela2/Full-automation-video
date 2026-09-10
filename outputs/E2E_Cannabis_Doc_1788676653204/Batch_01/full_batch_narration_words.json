@@ -1,0 +1,433 @@
+{
+  "total_words": 61,
+  "total_duration": 11.2,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ek",
+      "start": 0.0,
+      "end": 0.06,
+      "duration": 0.06
+    },
+    {
+      "index": 2,
+      "word": "sawaal...",
+      "start": 0.05,
+      "end": 0.253,
+      "duration": 0.202
+    },
+    {
+      "index": 3,
+      "word": "Pichle",
+      "start": 0.275,
+      "end": 0.41,
+      "duration": 0.135
+    },
+    {
+      "index": 4,
+      "word": "baarah",
+      "start": 0.425,
+      "end": 0.56,
+      "duration": 0.135
+    },
+    {
+      "index": 5,
+      "word": "hazaar",
+      "start": 0.575,
+      "end": 0.71,
+      "duration": 0.135
+    },
+    {
+      "index": 6,
+      "word": "saalon",
+      "start": 0.725,
+      "end": 0.86,
+      "duration": 0.135
+    },
+    {
+      "index": 7,
+      "word": "mein",
+      "start": 0.875,
+      "end": 0.965,
+      "duration": 0.09
+    },
+    {
+      "index": 8,
+      "word": "insaan",
+      "start": 0.975,
+      "end": 1.11,
+      "duration": 0.135
+    },
+    {
+      "index": 9,
+      "word": "ne",
+      "start": 1.125,
+      "end": 1.185,
+      "duration": 0.06
+    },
+    {
+      "index": 10,
+      "word": "aisi",
+      "start": 1.175,
+      "end": 1.265,
+      "duration": 0.09
+    },
+    {
+      "index": 11,
+      "word": "kaunsi",
+      "start": 1.275,
+      "end": 1.41,
+      "duration": 0.135
+    },
+    {
+      "index": 12,
+      "word": "cheez",
+      "start": 1.425,
+      "end": 1.538,
+      "duration": 0.113
+    },
+    {
+      "index": 13,
+      "word": "khoji",
+      "start": 1.55,
+      "end": 1.663,
+      "duration": 0.113
+    },
+    {
+      "index": 14,
+      "word": "hai",
+      "start": 1.675,
+      "end": 1.743,
+      "duration": 0.068
+    },
+    {
+      "index": 15,
+      "word": "jo",
+      "start": 1.75,
+      "end": 1.81,
+      "duration": 0.06
+    },
+    {
+      "index": 16,
+      "word": "pehle",
+      "start": 1.8,
+      "end": 1.913,
+      "duration": 0.113
+    },
+    {
+      "index": 17,
+      "word": "aam",
+      "start": 1.925,
+      "end": 1.993,
+      "duration": 0.068
+    },
+    {
+      "index": 18,
+      "word": "thi",
+      "start": 2.0,
+      "end": 2.067,
+      "duration": 0.068
+    },
+    {
+      "index": 19,
+      "word": "aur",
+      "start": 2.075,
+      "end": 2.143,
+      "duration": 0.068
+    },
+    {
+      "index": 20,
+      "word": "aaj",
+      "start": 2.15,
+      "end": 2.218,
+      "duration": 0.068
+    },
+    {
+      "index": 21,
+      "word": "illegal",
+      "start": 2.225,
+      "end": 2.383,
+      "duration": 0.158
+    },
+    {
+      "index": 22,
+      "word": "hai?",
+      "start": 2.4,
+      "end": 2.49,
+      "duration": 0.09
+    },
+    {
+      "index": 1,
+      "word": "Himalaya",
+      "start": 2.9,
+      "end": 3.137,
+      "duration": 0.237
+    },
+    {
+      "index": 2,
+      "word": "ki",
+      "start": 3.163,
+      "end": 3.223,
+      "duration": 0.06
+    },
+    {
+      "index": 3,
+      "word": "vaadiyon",
+      "start": 3.229,
+      "end": 3.466,
+      "duration": 0.237
+    },
+    {
+      "index": 4,
+      "word": "se",
+      "start": 3.492,
+      "end": 3.552,
+      "duration": 0.06
+    },
+    {
+      "index": 5,
+      "word": "lekar",
+      "start": 3.558,
+      "end": 3.706,
+      "duration": 0.148
+    },
+    {
+      "index": 6,
+      "word": "Atharvaveda",
+      "start": 3.722,
+      "end": 4.048,
+      "duration": 0.326
+    },
+    {
+      "index": 7,
+      "word": "ke",
+      "start": 4.084,
+      "end": 4.144,
+      "duration": 0.06
+    },
+    {
+      "index": 8,
+      "word": "pannon",
+      "start": 4.15,
+      "end": 4.328,
+      "duration": 0.178
+    },
+    {
+      "index": 9,
+      "word": "tak,",
+      "start": 4.347,
+      "end": 4.466,
+      "duration": 0.118
+    },
+    {
+      "index": 10,
+      "word": "yeh",
+      "start": 4.479,
+      "end": 4.568,
+      "duration": 0.089
+    },
+    {
+      "index": 11,
+      "word": "paudha",
+      "start": 4.578,
+      "end": 4.755,
+      "duration": 0.178
+    },
+    {
+      "index": 12,
+      "word": "har",
+      "start": 4.775,
+      "end": 4.864,
+      "duration": 0.089
+    },
+    {
+      "index": 13,
+      "word": "jagah",
+      "start": 4.874,
+      "end": 5.022,
+      "duration": 0.148
+    },
+    {
+      "index": 14,
+      "word": "maujood",
+      "start": 5.038,
+      "end": 5.245,
+      "duration": 0.207
+    },
+    {
+      "index": 15,
+      "word": "tha.",
+      "start": 5.268,
+      "end": 5.387,
+      "duration": 0.118
+    },
+    {
+      "index": 1,
+      "word": "1894",
+      "start": 5.8,
+      "end": 5.973,
+      "duration": 0.173
+    },
+    {
+      "index": 2,
+      "word": "mein",
+      "start": 5.992,
+      "end": 6.165,
+      "duration": 0.173
+    },
+    {
+      "index": 3,
+      "word": "Britishers",
+      "start": 6.185,
+      "end": 6.617,
+      "duration": 0.433
+    },
+    {
+      "index": 4,
+      "word": "ne",
+      "start": 6.665,
+      "end": 6.752,
+      "duration": 0.087
+    },
+    {
+      "index": 5,
+      "word": "banaya",
+      "start": 6.762,
+      "end": 7.021,
+      "duration": 0.26
+    },
+    {
+      "index": 6,
+      "word": "Indian",
+      "start": 7.05,
+      "end": 7.31,
+      "duration": 0.26
+    },
+    {
+      "index": 7,
+      "word": "Hemp",
+      "start": 7.338,
+      "end": 7.512,
+      "duration": 0.173
+    },
+    {
+      "index": 8,
+      "word": "Drugs",
+      "start": 7.531,
+      "end": 7.747,
+      "duration": 0.216
+    },
+    {
+      "index": 9,
+      "word": "Commission.",
+      "start": 7.771,
+      "end": 8.247,
+      "duration": 0.476
+    },
+    {
+      "index": 1,
+      "word": "Aaj",
+      "start": 8.7,
+      "end": 8.816,
+      "duration": 0.116
+    },
+    {
+      "index": 2,
+      "word": "duniya",
+      "start": 8.829,
+      "end": 9.062,
+      "duration": 0.233
+    },
+    {
+      "index": 3,
+      "word": "phir",
+      "start": 9.088,
+      "end": 9.243,
+      "duration": 0.155
+    },
+    {
+      "index": 4,
+      "word": "se",
+      "start": 9.26,
+      "end": 9.338,
+      "duration": 0.078
+    },
+    {
+      "index": 5,
+      "word": "wahi",
+      "start": 9.347,
+      "end": 9.502,
+      "duration": 0.155
+    },
+    {
+      "index": 6,
+      "word": "mudh",
+      "start": 9.519,
+      "end": 9.674,
+      "duration": 0.155
+    },
+    {
+      "index": 7,
+      "word": "rahi",
+      "start": 9.691,
+      "end": 9.847,
+      "duration": 0.155
+    },
+    {
+      "index": 8,
+      "word": "hai",
+      "start": 9.864,
+      "end": 9.98,
+      "duration": 0.116
+    },
+    {
+      "index": 9,
+      "word": "jahan",
+      "start": 9.993,
+      "end": 10.187,
+      "duration": 0.194
+    },
+    {
+      "index": 10,
+      "word": "se",
+      "start": 10.209,
+      "end": 10.286,
+      "duration": 0.078
+    },
+    {
+      "index": 11,
+      "word": "yeh",
+      "start": 10.295,
+      "end": 10.411,
+      "duration": 0.116
+    },
+    {
+      "index": 12,
+      "word": "kahani",
+      "start": 10.424,
+      "end": 10.657,
+      "duration": 0.233
+    },
+    {
+      "index": 13,
+      "word": "shuru",
+      "start": 10.683,
+      "end": 10.877,
+      "duration": 0.194
+    },
+    {
+      "index": 14,
+      "word": "hui",
+      "start": 10.898,
+      "end": 11.015,
+      "duration": 0.116
+    },
+    {
+      "index": 15,
+      "word": "thi.",
+      "start": 11.028,
+      "end": 11.183,
+      "duration": 0.155
+    }
+  ]
+}

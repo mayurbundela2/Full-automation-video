@@ -1,0 +1,244 @@
+{
+  "total_words": 34,
+  "total_duration": 13.28,
+  "words": [
+    {
+      "index": 1,
+      "word": "Yaad",
+      "start": 0.199,
+      "end": 0.453,
+      "duration": 0.254
+    },
+    {
+      "index": 2,
+      "word": "hai",
+      "start": 0.481,
+      "end": 0.672,
+      "duration": 0.191
+    },
+    {
+      "index": 3,
+      "word": "humne",
+      "start": 0.693,
+      "end": 1.011,
+      "duration": 0.318
+    },
+    {
+      "index": 4,
+      "word": "fire",
+      "start": 1.046,
+      "end": 1.3,
+      "duration": 0.254
+    },
+    {
+      "index": 5,
+      "word": "wali",
+      "start": 1.328,
+      "end": 1.582,
+      "duration": 0.254
+    },
+    {
+      "index": 6,
+      "word": "video",
+      "start": 1.61,
+      "end": 1.928,
+      "duration": 0.318
+    },
+    {
+      "index": 7,
+      "word": "mein",
+      "start": 1.963,
+      "end": 2.217,
+      "duration": 0.254
+    },
+    {
+      "index": 8,
+      "word": "baat",
+      "start": 2.246,
+      "end": 2.5,
+      "duration": 0.254
+    },
+    {
+      "index": 9,
+      "word": "ki",
+      "start": 2.528,
+      "end": 2.655,
+      "duration": 0.127
+    },
+    {
+      "index": 10,
+      "word": "thi...",
+      "start": 3.252,
+      "end": 3.585,
+      "duration": 0.333
+    },
+    {
+      "index": 11,
+      "word": "insaan",
+      "start": 3.622,
+      "end": 3.955,
+      "duration": 0.333
+    },
+    {
+      "index": 12,
+      "word": "ne",
+      "start": 3.992,
+      "end": 4.103,
+      "duration": 0.111
+    },
+    {
+      "index": 13,
+      "word": "aag",
+      "start": 4.116,
+      "end": 4.282,
+      "duration": 0.167
+    },
+    {
+      "index": 14,
+      "word": "ko",
+      "start": 4.301,
+      "end": 4.412,
+      "duration": 0.111
+    },
+    {
+      "index": 15,
+      "word": "kaise",
+      "start": 4.424,
+      "end": 4.702,
+      "duration": 0.278
+    },
+    {
+      "index": 16,
+      "word": "control",
+      "start": 4.733,
+      "end": 5.121,
+      "duration": 0.389
+    },
+    {
+      "index": 17,
+      "word": "kiya?",
+      "start": 5.165,
+      "end": 5.442,
+      "duration": 0.278
+    },
+    {
+      "index": 18,
+      "word": "Aag",
+      "start": 5.99,
+      "end": 6.174,
+      "duration": 0.184
+    },
+    {
+      "index": 19,
+      "word": "ne",
+      "start": 6.194,
+      "end": 6.317,
+      "duration": 0.122
+    },
+    {
+      "index": 20,
+      "word": "humein",
+      "start": 6.33,
+      "end": 6.697,
+      "duration": 0.367
+    },
+    {
+      "index": 21,
+      "word": "sirf",
+      "start": 6.738,
+      "end": 6.983,
+      "duration": 0.245
+    },
+    {
+      "index": 22,
+      "word": "khaana",
+      "start": 7.01,
+      "end": 7.378,
+      "duration": 0.367
+    },
+    {
+      "index": 23,
+      "word": "pakane",
+      "start": 7.419,
+      "end": 7.786,
+      "duration": 0.367
+    },
+    {
+      "index": 24,
+      "word": "nahi",
+      "start": 7.827,
+      "end": 8.072,
+      "duration": 0.245
+    },
+    {
+      "index": 25,
+      "word": "diya.",
+      "start": 8.099,
+      "end": 8.405,
+      "duration": 0.306
+    },
+    {
+      "index": 26,
+      "word": "Warmth",
+      "start": 8.795,
+      "end": 9.156,
+      "duration": 0.361
+    },
+    {
+      "index": 27,
+      "word": "nahi",
+      "start": 9.196,
+      "end": 9.437,
+      "duration": 0.241
+    },
+    {
+      "index": 28,
+      "word": "di.",
+      "start": 9.463,
+      "end": 9.644,
+      "duration": 0.18
+    },
+    {
+      "index": 29,
+      "word": "Aag",
+      "start": 10.046,
+      "end": 10.194,
+      "duration": 0.149
+    },
+    {
+      "index": 30,
+      "word": "ne",
+      "start": 10.385,
+      "end": 10.493,
+      "duration": 0.108
+    },
+    {
+      "index": 31,
+      "word": "humein",
+      "start": 10.505,
+      "end": 10.831,
+      "duration": 0.325
+    },
+    {
+      "index": 32,
+      "word": "di...",
+      "start": 10.867,
+      "end": 11.138,
+      "duration": 0.271
+    },
+    {
+      "index": 33,
+      "word": "safe",
+      "start": 11.168,
+      "end": 11.385,
+      "duration": 0.217
+    },
+    {
+      "index": 34,
+      "word": "raat.",
+      "start": 11.677,
+      "end": 12.607,
+      "duration": 0.93
+    }
+  ]
+}

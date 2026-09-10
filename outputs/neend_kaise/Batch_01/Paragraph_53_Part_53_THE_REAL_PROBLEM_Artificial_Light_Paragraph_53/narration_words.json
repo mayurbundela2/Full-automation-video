@@ -1,0 +1,181 @@
+{
+  "total_words": 25,
+  "total_duration": 9.93,
+  "words": [
+    {
+      "index": 1,
+      "word": "Electric",
+      "start": 0.184,
+      "end": 0.701,
+      "duration": 0.517
+    },
+    {
+      "index": 2,
+      "word": "light.",
+      "start": 0.758,
+      "end": 1.146,
+      "duration": 0.388
+    },
+    {
+      "index": 3,
+      "word": "Aur",
+      "start": 1.518,
+      "end": 1.697,
+      "duration": 0.179
+    },
+    {
+      "index": 4,
+      "word": "uske",
+      "start": 1.717,
+      "end": 1.956,
+      "duration": 0.239
+    },
+    {
+      "index": 5,
+      "word": "baad",
+      "start": 1.983,
+      "end": 2.222,
+      "duration": 0.239
+    },
+    {
+      "index": 6,
+      "word": "kuch",
+      "start": 2.248,
+      "end": 2.487,
+      "duration": 0.239
+    },
+    {
+      "index": 7,
+      "word": "aur",
+      "start": 2.514,
+      "end": 2.693,
+      "duration": 0.179
+    },
+    {
+      "index": 8,
+      "word": "bhi",
+      "start": 2.713,
+      "end": 2.892,
+      "duration": 0.179
+    },
+    {
+      "index": 9,
+      "word": "bura...",
+      "start": 2.912,
+      "end": 3.331,
+      "duration": 0.418
+    },
+    {
+      "index": 10,
+      "word": "phone",
+      "start": 3.783,
+      "end": 4.122,
+      "duration": 0.339
+    },
+    {
+      "index": 11,
+      "word": "screens",
+      "start": 4.16,
+      "end": 4.635,
+      "duration": 0.475
+    },
+    {
+      "index": 12,
+      "word": "ka",
+      "start": 4.688,
+      "end": 4.824,
+      "duration": 0.136
+    },
+    {
+      "index": 13,
+      "word": "blue",
+      "start": 4.839,
+      "end": 5.11,
+      "duration": 0.272
+    },
+    {
+      "index": 14,
+      "word": "light.",
+      "start": 5.141,
+      "end": 5.548,
+      "duration": 0.407
+    },
+    {
+      "index": 15,
+      "word": "Ab",
+      "start": 5.593,
+      "end": 5.729,
+      "duration": 0.136
+    },
+    {
+      "index": 16,
+      "word": "aata",
+      "start": 6.187,
+      "end": 6.247,
+      "duration": 0.06
+    },
+    {
+      "index": 17,
+      "word": "hai",
+      "start": 6.476,
+      "end": 6.631,
+      "duration": 0.155
+    },
+    {
+      "index": 18,
+      "word": "wo",
+      "start": 6.649,
+      "end": 6.752,
+      "duration": 0.104
+    },
+    {
+      "index": 19,
+      "word": "part",
+      "start": 6.764,
+      "end": 6.971,
+      "duration": 0.207
+    },
+    {
+      "index": 20,
+      "word": "jise",
+      "start": 6.994,
+      "end": 7.201,
+      "duration": 0.207
+    },
+    {
+      "index": 21,
+      "word": "tum",
+      "start": 7.224,
+      "end": 7.379,
+      "duration": 0.155
+    },
+    {
+      "index": 22,
+      "word": "ignore",
+      "start": 7.397,
+      "end": 7.707,
+      "duration": 0.311
+    },
+    {
+      "index": 23,
+      "word": "nahi",
+      "start": 7.899,
+      "end": 8.461,
+      "duration": 0.562
+    },
+    {
+      "index": 24,
+      "word": "kar",
+      "start": 8.524,
+      "end": 8.946,
+      "duration": 0.422
+    },
+    {
+      "index": 25,
+      "word": "sakte.",
+      "start": 8.993,
+      "end": 9.836,
+      "duration": 0.844
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "total_words": 34,
+  "total_duration": 16.76,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ab",
+      "start": 0.2,
+      "end": 0.26,
+      "duration": 0.06
+    },
+    {
+      "index": 2,
+      "word": "interesting",
+      "start": 0.248,
+      "end": 0.483,
+      "duration": 0.235
+    },
+    {
+      "index": 3,
+      "word": "part...",
+      "start": 0.677,
+      "end": 1.028,
+      "duration": 0.351
+    },
+    {
+      "index": 4,
+      "word": "Neanderthals",
+      "start": 1.067,
+      "end": 1.668,
+      "duration": 0.601
+    },
+    {
+      "index": 5,
+      "word": "ke",
+      "start": 2.399,
+      "end": 2.524,
+      "duration": 0.125
+    },
+    {
+      "index": 6,
+      "word": "skeletons",
+      "start": 2.537,
+      "end": 3.098,
+      "duration": 0.561
+    },
+    {
+      "index": 7,
+      "word": "se",
+      "start": 3.161,
+      "end": 3.285,
+      "duration": 0.125
+    },
+    {
+      "index": 8,
+      "word": "bhi",
+      "start": 3.299,
+      "end": 3.486,
+      "duration": 0.187
+    },
+    {
+      "index": 9,
+      "word": "hyoid",
+      "start": 3.507,
+      "end": 3.818,
+      "duration": 0.312
+    },
+    {
+      "index": 10,
+      "word": "bone",
+      "start": 3.853,
+      "end": 4.102,
+      "duration": 0.249
+    },
+    {
+      "index": 11,
+      "word": "milta",
+      "start": 4.13,
+      "end": 4.441,
+      "duration": 0.312
+    },
+    {
+      "index": 12,
+      "word": "hai!",
+      "start": 4.476,
+      "end": 4.725,
+      "duration": 0.249
+    },
+    {
+      "index": 13,
+      "word": "Aur",
+      "start": 4.955,
+      "end": 5.149,
+      "duration": 0.194
+    },
+    {
+      "index": 14,
+      "word": "ye",
+      "start": 5.171,
+      "end": 5.3,
+      "duration": 0.129
+    },
+    {
+      "index": 15,
+      "word": "kaafi",
+      "start": 5.314,
+      "end": 5.638,
+      "duration": 0.323
+    },
+    {
+      "index": 16,
+      "word": "had",
+      "start": 5.673,
+      "end": 5.867,
+      "duration": 0.194
+    },
+    {
+      "index": 17,
+      "word": "tak...",
+      "start": 5.889,
+      "end": 6.277,
+      "duration": 0.388
+    },
+    {
+      "index": 18,
+      "word": "humare",
+      "start": 6.719,
+      "end": 7.126,
+      "duration": 0.407
+    },
+    {
+      "index": 19,
+      "word": "jaisa",
+      "start": 7.171,
+      "end": 7.51,
+      "duration": 0.339
+    },
+    {
+      "index": 20,
+      "word": "hai!",
+      "start": 7.547,
+      "end": 7.819,
+      "duration": 0.271
+    },
+    {
+      "index": 21,
+      "word": "Yaani...",
+      "start": 7.849,
+      "end": 8.391,
+      "duration": 0.542
+    },
+    {
+      "index": 22,
+      "word": "Neanderthals",
+      "start": 8.451,
+      "end": 9.265,
+      "duration": 0.813
+    },
+    {
+      "index": 23,
+      "word": "ke",
+      "start": 10.117,
+      "end": 10.246,
+      "duration": 0.129
+    },
+    {
+      "index": 24,
+      "word": "paas",
+      "start": 10.26,
+      "end": 10.518,
+      "duration": 0.258
+    },
+    {
+      "index": 25,
+      "word": "speech",
+      "start": 10.547,
+      "end": 10.934,
+      "duration": 0.387
+    },
+    {
+      "index": 26,
+      "word": "ke",
+      "start": 10.977,
+      "end": 11.106,
+      "duration": 0.129
+    },
+    {
+      "index": 27,
+      "word": "liye",
+      "start": 11.121,
+      "end": 11.379,
+      "duration": 0.258
+    },
+    {
+      "index": 28,
+      "word": "compatible",
+      "start": 11.407,
+      "end": 12.053,
+      "duration": 0.645
+    },
+    {
+      "index": 29,
+      "word": "anatomy",
+      "start": 12.124,
+      "end": 12.576,
+      "duration": 0.452
+    },
+    {
+      "index": 30,
+      "word": "ka",
+      "start": 12.626,
+      "end": 12.755,
+      "duration": 0.129
+    },
+    {
+      "index": 31,
+      "word": "ek",
+      "start": 12.769,
+      "end": 12.898,
+      "duration": 0.129
+    },
+    {
+      "index": 32,
+      "word": "important",
+      "start": 12.913,
+      "end": 13.493,
+      "duration": 0.581
+    },
+    {
+      "index": 33,
+      "word": "piece",
+      "start": 13.748,
+      "end": 15.086,
+      "duration": 1.338
+    },
+    {
+      "index": 34,
+      "word": "tha.",
+      "start": 15.235,
+      "end": 16.305,
+      "duration": 1.07
+    }
+  ]
+}

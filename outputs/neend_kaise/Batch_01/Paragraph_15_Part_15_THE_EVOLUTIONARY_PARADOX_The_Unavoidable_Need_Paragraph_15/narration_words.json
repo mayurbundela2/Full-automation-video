@@ -1,0 +1,153 @@
+{
+  "total_words": 21,
+  "total_duration": 9.96,
+  "words": [
+    {
+      "index": 1,
+      "word": "Toh",
+      "start": 0.0,
+      "end": 0.13,
+      "duration": 0.13
+    },
+    {
+      "index": 2,
+      "word": "phir",
+      "start": 0.144,
+      "end": 0.318,
+      "duration": 0.173
+    },
+    {
+      "index": 3,
+      "word": "insaan",
+      "start": 0.337,
+      "end": 0.597,
+      "duration": 0.26
+    },
+    {
+      "index": 4,
+      "word": "ne",
+      "start": 0.778,
+      "end": 0.903,
+      "duration": 0.125
+    },
+    {
+      "index": 5,
+      "word": "neend",
+      "start": 0.917,
+      "end": 1.228,
+      "duration": 0.312
+    },
+    {
+      "index": 6,
+      "word": "evolve",
+      "start": 1.263,
+      "end": 1.637,
+      "duration": 0.374
+    },
+    {
+      "index": 7,
+      "word": "kyun",
+      "start": 1.678,
+      "end": 1.928,
+      "duration": 0.249
+    },
+    {
+      "index": 8,
+      "word": "ki?",
+      "start": 1.956,
+      "end": 2.143,
+      "duration": 0.187
+    },
+    {
+      "index": 9,
+      "word": "Kyun",
+      "start": 2.163,
+      "end": 2.413,
+      "duration": 0.249
+    },
+    {
+      "index": 10,
+      "word": "humari",
+      "start": 2.44,
+      "end": 2.814,
+      "duration": 0.374
+    },
+    {
+      "index": 11,
+      "word": "species",
+      "start": 3.29,
+      "end": 3.359,
+      "duration": 0.069
+    },
+    {
+      "index": 12,
+      "word": "is",
+      "start": 3.567,
+      "end": 3.684,
+      "duration": 0.117
+    },
+    {
+      "index": 13,
+      "word": "dangerous",
+      "start": 3.697,
+      "end": 4.226,
+      "duration": 0.528
+    },
+    {
+      "index": 14,
+      "word": "behavior",
+      "start": 4.285,
+      "end": 4.754,
+      "duration": 0.47
+    },
+    {
+      "index": 15,
+      "word": "ko",
+      "start": 4.806,
+      "end": 4.924,
+      "duration": 0.117
+    },
+    {
+      "index": 16,
+      "word": "chhod",
+      "start": 4.937,
+      "end": 5.23,
+      "duration": 0.294
+    },
+    {
+      "index": 17,
+      "word": "nahi",
+      "start": 5.263,
+      "end": 5.498,
+      "duration": 0.235
+    },
+    {
+      "index": 18,
+      "word": "paayi?",
+      "start": 5.524,
+      "end": 5.876,
+      "duration": 0.352
+    },
+    {
+      "index": 19,
+      "word": "Answer",
+      "start": 5.915,
+      "end": 6.268,
+      "duration": 0.352
+    },
+    {
+      "index": 20,
+      "word": "surprising",
+      "start": 6.307,
+      "end": 6.894,
+      "duration": 0.587
+    },
+    {
+      "index": 21,
+      "word": "hai.",
+      "start": 8.236,
+      "end": 9.438,
+      "duration": 1.202
+    }
+  ]
+}

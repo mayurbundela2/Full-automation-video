@@ -1,0 +1,265 @@
+{
+  "total_words": 37,
+  "total_duration": 16.2,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.287,
+      "end": 0.402,
+      "duration": 0.115
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.415,
+      "end": 0.53,
+      "duration": 0.115
+    },
+    {
+      "index": 3,
+      "word": "genetic",
+      "start": 0.543,
+      "end": 0.947,
+      "duration": 0.404
+    },
+    {
+      "index": 4,
+      "word": "problem",
+      "start": 0.992,
+      "end": 1.395,
+      "duration": 0.404
+    },
+    {
+      "index": 5,
+      "word": "thi...",
+      "start": 1.44,
+      "end": 1.786,
+      "duration": 0.346
+    },
+    {
+      "index": 6,
+      "word": "kyunki",
+      "start": 1.825,
+      "end": 2.171,
+      "duration": 0.346
+    },
+    {
+      "index": 7,
+      "word": "har",
+      "start": 2.527,
+      "end": 2.713,
+      "duration": 0.186
+    },
+    {
+      "index": 8,
+      "word": "generation",
+      "start": 2.733,
+      "end": 3.352,
+      "duration": 0.619
+    },
+    {
+      "index": 9,
+      "word": "mein",
+      "start": 3.421,
+      "end": 3.668,
+      "duration": 0.248
+    },
+    {
+      "index": 10,
+      "word": "exactly",
+      "start": 3.696,
+      "end": 4.129,
+      "duration": 0.433
+    },
+    {
+      "index": 11,
+      "word": "aadhe",
+      "start": 4.177,
+      "end": 4.487,
+      "duration": 0.309
+    },
+    {
+      "index": 12,
+      "word": "log",
+      "start": 4.521,
+      "end": 4.707,
+      "duration": 0.186
+    },
+    {
+      "index": 13,
+      "word": "affected",
+      "start": 4.727,
+      "end": 5.222,
+      "duration": 0.495
+    },
+    {
+      "index": 14,
+      "word": "the.",
+      "start": 5.277,
+      "end": 5.525,
+      "duration": 0.248
+    },
+    {
+      "index": 15,
+      "word": "Ye",
+      "start": 5.552,
+      "end": 5.676,
+      "duration": 0.124
+    },
+    {
+      "index": 16,
+      "word": "pattern",
+      "start": 5.69,
+      "end": 6.123,
+      "duration": 0.433
+    },
+    {
+      "index": 17,
+      "word": "batata",
+      "start": 6.565,
+      "end": 6.946,
+      "duration": 0.381
+    },
+    {
+      "index": 18,
+      "word": "hai",
+      "start": 6.988,
+      "end": 7.179,
+      "duration": 0.191
+    },
+    {
+      "index": 19,
+      "word": "ki",
+      "start": 7.2,
+      "end": 7.327,
+      "duration": 0.127
+    },
+    {
+      "index": 20,
+      "word": "ek",
+      "start": 7.341,
+      "end": 7.468,
+      "duration": 0.127
+    },
+    {
+      "index": 21,
+      "word": "single",
+      "start": 7.482,
+      "end": 7.863,
+      "duration": 0.381
+    },
+    {
+      "index": 22,
+      "word": "gene",
+      "start": 7.906,
+      "end": 8.16,
+      "duration": 0.254
+    },
+    {
+      "index": 23,
+      "word": "ka",
+      "start": 8.188,
+      "end": 8.315,
+      "duration": 0.127
+    },
+    {
+      "index": 24,
+      "word": "mutation",
+      "start": 8.329,
+      "end": 8.837,
+      "duration": 0.508
+    },
+    {
+      "index": 25,
+      "word": "cause",
+      "start": 8.894,
+      "end": 9.211,
+      "duration": 0.318
+    },
+    {
+      "index": 26,
+      "word": "hai.",
+      "start": 9.247,
+      "end": 9.501,
+      "duration": 0.254
+    },
+    {
+      "index": 27,
+      "word": "Geneticists",
+      "start": 9.529,
+      "end": 10.227,
+      "duration": 0.699
+    },
+    {
+      "index": 28,
+      "word": "ne",
+      "start": 11.065,
+      "end": 11.198,
+      "duration": 0.133
+    },
+    {
+      "index": 29,
+      "word": "khoj",
+      "start": 11.212,
+      "end": 11.477,
+      "duration": 0.265
+    },
+    {
+      "index": 30,
+      "word": "shuru",
+      "start": 11.507,
+      "end": 11.838,
+      "duration": 0.331
+    },
+    {
+      "index": 31,
+      "word": "ki.",
+      "start": 11.875,
+      "end": 12.074,
+      "duration": 0.199
+    },
+    {
+      "index": 32,
+      "word": "Do",
+      "start": 12.096,
+      "end": 12.228,
+      "duration": 0.133
+    },
+    {
+      "index": 33,
+      "word": "hazaar",
+      "start": 12.243,
+      "end": 12.641,
+      "duration": 0.398
+    },
+    {
+      "index": 34,
+      "word": "ek",
+      "start": 12.685,
+      "end": 12.817,
+      "duration": 0.133
+    },
+    {
+      "index": 35,
+      "word": "mein...",
+      "start": 13.319,
+      "end": 13.855,
+      "duration": 0.536
+    },
+    {
+      "index": 36,
+      "word": "unhe",
+      "start": 13.914,
+      "end": 14.22,
+      "duration": 0.306
+    },
+    {
+      "index": 37,
+      "word": "mila!",
+      "start": 14.254,
+      "end": 14.637,
+      "duration": 0.383
+    }
+  ]
+}

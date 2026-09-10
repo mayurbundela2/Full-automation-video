@@ -1,0 +1,216 @@
+{
+  "total_words": 30,
+  "total_duration": 14.48,
+  "words": [
+    {
+      "index": 1,
+      "word": "Iska",
+      "start": 0.29,
+      "end": 0.522,
+      "duration": 0.232
+    },
+    {
+      "index": 2,
+      "word": "evidence?",
+      "start": 0.547,
+      "end": 1.068,
+      "duration": 0.521
+    },
+    {
+      "index": 3,
+      "word": "Aaj",
+      "start": 1.126,
+      "end": 1.3,
+      "duration": 0.174
+    },
+    {
+      "index": 4,
+      "word": "bhi",
+      "start": 2.146,
+      "end": 2.33,
+      "duration": 0.184
+    },
+    {
+      "index": 5,
+      "word": "humare",
+      "start": 2.351,
+      "end": 2.719,
+      "duration": 0.368
+    },
+    {
+      "index": 6,
+      "word": "dreams",
+      "start": 2.76,
+      "end": 3.128,
+      "duration": 0.368
+    },
+    {
+      "index": 7,
+      "word": "mein",
+      "start": 3.169,
+      "end": 3.415,
+      "duration": 0.246
+    },
+    {
+      "index": 8,
+      "word": "sabse",
+      "start": 3.442,
+      "end": 3.749,
+      "duration": 0.307
+    },
+    {
+      "index": 9,
+      "word": "common",
+      "start": 3.783,
+      "end": 4.151,
+      "duration": 0.368
+    },
+    {
+      "index": 10,
+      "word": "themes",
+      "start": 4.351,
+      "end": 4.702,
+      "duration": 0.351
+    },
+    {
+      "index": 11,
+      "word": "hain...",
+      "start": 4.741,
+      "end": 5.15,
+      "duration": 0.409
+    },
+    {
+      "index": 12,
+      "word": "being",
+      "start": 5.433,
+      "end": 5.718,
+      "duration": 0.285
+    },
+    {
+      "index": 13,
+      "word": "chased,",
+      "start": 5.75,
+      "end": 6.149,
+      "duration": 0.399
+    },
+    {
+      "index": 14,
+      "word": "falling,",
+      "start": 6.193,
+      "end": 6.649,
+      "duration": 0.456
+    },
+    {
+      "index": 15,
+      "word": "fighting,",
+      "start": 6.878,
+      "end": 7.454,
+      "duration": 0.576
+    },
+    {
+      "index": 16,
+      "word": "danger.",
+      "start": 7.518,
+      "end": 7.966,
+      "duration": 0.448
+    },
+    {
+      "index": 17,
+      "word": "Ye",
+      "start": 8.015,
+      "end": 8.143,
+      "duration": 0.128
+    },
+    {
+      "index": 18,
+      "word": "teen",
+      "start": 8.158,
+      "end": 8.414,
+      "duration": 0.256
+    },
+    {
+      "index": 19,
+      "word": "lakh",
+      "start": 8.6,
+      "end": 8.831,
+      "duration": 0.231
+    },
+    {
+      "index": 20,
+      "word": "saal",
+      "start": 8.857,
+      "end": 9.087,
+      "duration": 0.231
+    },
+    {
+      "index": 21,
+      "word": "purani",
+      "start": 9.402,
+      "end": 9.555,
+      "duration": 0.153
+    },
+    {
+      "index": 22,
+      "word": "programming",
+      "start": 9.572,
+      "end": 9.853,
+      "duration": 0.281
+    },
+    {
+      "index": 23,
+      "word": "hai",
+      "start": 10.117,
+      "end": 10.457,
+      "duration": 0.34
+    },
+    {
+      "index": 24,
+      "word": "jo",
+      "start": 10.495,
+      "end": 10.722,
+      "duration": 0.227
+    },
+    {
+      "index": 25,
+      "word": "humare",
+      "start": 10.747,
+      "end": 11.428,
+      "duration": 0.681
+    },
+    {
+      "index": 26,
+      "word": "brain",
+      "start": 11.503,
+      "end": 12.071,
+      "duration": 0.567
+    },
+    {
+      "index": 27,
+      "word": "mein",
+      "start": 12.134,
+      "end": 12.587,
+      "duration": 0.454
+    },
+    {
+      "index": 28,
+      "word": "reh",
+      "start": 12.638,
+      "end": 12.978,
+      "duration": 0.34
+    },
+    {
+      "index": 29,
+      "word": "gayi",
+      "start": 13.016,
+      "end": 13.469,
+      "duration": 0.454
+    },
+    {
+      "index": 30,
+      "word": "hai.",
+      "start": 13.52,
+      "end": 13.974,
+      "duration": 0.454
+    }
+  ]
+}

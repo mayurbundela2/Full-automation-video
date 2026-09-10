@@ -1,0 +1,272 @@
+{
+  "total_words": 38,
+  "total_duration": 14.76,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 0.295,
+      "end": 0.554,
+      "duration": 0.259
+    },
+    {
+      "index": 2,
+      "word": "jab",
+      "start": 0.583,
+      "end": 0.738,
+      "duration": 0.155
+    },
+    {
+      "index": 3,
+      "word": "aag",
+      "start": 0.755,
+      "end": 0.911,
+      "duration": 0.155
+    },
+    {
+      "index": 4,
+      "word": "control",
+      "start": 0.928,
+      "end": 1.291,
+      "duration": 0.363
+    },
+    {
+      "index": 5,
+      "word": "mein",
+      "start": 1.484,
+      "end": 1.702,
+      "duration": 0.218
+    },
+    {
+      "index": 6,
+      "word": "aa",
+      "start": 1.727,
+      "end": 1.836,
+      "duration": 0.109
+    },
+    {
+      "index": 7,
+      "word": "gayi...",
+      "start": 1.848,
+      "end": 2.23,
+      "duration": 0.382
+    },
+    {
+      "index": 8,
+      "word": "sab",
+      "start": 2.273,
+      "end": 2.437,
+      "duration": 0.164
+    },
+    {
+      "index": 9,
+      "word": "kuch",
+      "start": 2.772,
+      "end": 3.003,
+      "duration": 0.231
+    },
+    {
+      "index": 10,
+      "word": "badal",
+      "start": 3.029,
+      "end": 3.318,
+      "duration": 0.289
+    },
+    {
+      "index": 11,
+      "word": "gaya.",
+      "start": 3.35,
+      "end": 3.639,
+      "duration": 0.289
+    },
+    {
+      "index": 12,
+      "word": "Aag",
+      "start": 3.671,
+      "end": 3.844,
+      "duration": 0.173
+    },
+    {
+      "index": 13,
+      "word": "ka",
+      "start": 3.864,
+      "end": 3.979,
+      "duration": 0.116
+    },
+    {
+      "index": 14,
+      "word": "roshni",
+      "start": 4.305,
+      "end": 4.678,
+      "duration": 0.373
+    },
+    {
+      "index": 15,
+      "word": "predators",
+      "start": 4.72,
+      "end": 5.28,
+      "duration": 0.56
+    },
+    {
+      "index": 16,
+      "word": "ko",
+      "start": 5.342,
+      "end": 5.467,
+      "duration": 0.124
+    },
+    {
+      "index": 17,
+      "word": "door",
+      "start": 5.481,
+      "end": 5.73,
+      "duration": 0.249
+    },
+    {
+      "index": 18,
+      "word": "rakhta",
+      "start": 5.757,
+      "end": 6.131,
+      "duration": 0.373
+    },
+    {
+      "index": 19,
+      "word": "tha.",
+      "start": 6.172,
+      "end": 6.421,
+      "duration": 0.249
+    },
+    {
+      "index": 20,
+      "word": "Sher",
+      "start": 6.449,
+      "end": 6.698,
+      "duration": 0.249
+    },
+    {
+      "index": 21,
+      "word": "aur",
+      "start": 6.726,
+      "end": 6.912,
+      "duration": 0.187
+    },
+    {
+      "index": 22,
+      "word": "tendue",
+      "start": 6.933,
+      "end": 7.307,
+      "duration": 0.373
+    },
+    {
+      "index": 23,
+      "word": "aag",
+      "start": 8.334,
+      "end": 8.454,
+      "duration": 0.12
+    },
+    {
+      "index": 24,
+      "word": "se",
+      "start": 8.467,
+      "end": 8.548,
+      "duration": 0.08
+    },
+    {
+      "index": 25,
+      "word": "darr",
+      "start": 8.556,
+      "end": 8.717,
+      "duration": 0.16
+    },
+    {
+      "index": 26,
+      "word": "te",
+      "start": 8.735,
+      "end": 8.815,
+      "duration": 0.08
+    },
+    {
+      "index": 27,
+      "word": "hain...",
+      "start": 8.824,
+      "end": 9.104,
+      "duration": 0.28
+    },
+    {
+      "index": 28,
+      "word": "teen",
+      "start": 9.316,
+      "end": 9.55,
+      "duration": 0.234
+    },
+    {
+      "index": 29,
+      "word": "lakh",
+      "start": 9.576,
+      "end": 9.809,
+      "duration": 0.234
+    },
+    {
+      "index": 30,
+      "word": "saal",
+      "start": 9.835,
+      "end": 10.069,
+      "duration": 0.234
+    },
+    {
+      "index": 31,
+      "word": "pehle",
+      "start": 10.095,
+      "end": 10.387,
+      "duration": 0.292
+    },
+    {
+      "index": 32,
+      "word": "bhi",
+      "start": 10.419,
+      "end": 10.594,
+      "duration": 0.175
+    },
+    {
+      "index": 33,
+      "word": "darrte",
+      "start": 10.614,
+      "end": 10.964,
+      "duration": 0.35
+    },
+    {
+      "index": 34,
+      "word": "the,",
+      "start": 11.284,
+      "end": 11.386,
+      "duration": 0.102
+    },
+    {
+      "index": 35,
+      "word": "aaj",
+      "start": 11.568,
+      "end": 11.859,
+      "duration": 0.291
+    },
+    {
+      "index": 36,
+      "word": "bhi",
+      "start": 11.892,
+      "end": 12.183,
+      "duration": 0.291
+    },
+    {
+      "index": 37,
+      "word": "darrte",
+      "start": 12.216,
+      "end": 12.799,
+      "duration": 0.583
+    },
+    {
+      "index": 38,
+      "word": "hain.",
+      "start": 12.863,
+      "end": 13.349,
+      "duration": 0.486
+    }
+  ]
+}

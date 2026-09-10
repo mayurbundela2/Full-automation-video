@@ -1,0 +1,230 @@
+{
+  "total_words": 32,
+  "total_duration": 12.57,
+  "words": [
+    {
+      "index": 1,
+      "word": "Number",
+      "start": 0.337,
+      "end": 0.646,
+      "duration": 0.309
+    },
+    {
+      "index": 2,
+      "word": "two...",
+      "start": 0.681,
+      "end": 0.99,
+      "duration": 0.309
+    },
+    {
+      "index": 3,
+      "word": "immunity.",
+      "start": 1.301,
+      "end": 1.698,
+      "duration": 0.397
+    },
+    {
+      "index": 4,
+      "word": "Saat",
+      "start": 1.742,
+      "end": 1.918,
+      "duration": 0.176
+    },
+    {
+      "index": 5,
+      "word": "ghante",
+      "start": 2.297,
+      "end": 2.639,
+      "duration": 0.342
+    },
+    {
+      "index": 6,
+      "word": "se",
+      "start": 2.677,
+      "end": 2.791,
+      "duration": 0.114
+    },
+    {
+      "index": 7,
+      "word": "kam",
+      "start": 2.804,
+      "end": 2.975,
+      "duration": 0.171
+    },
+    {
+      "index": 8,
+      "word": "sone",
+      "start": 2.994,
+      "end": 3.222,
+      "duration": 0.228
+    },
+    {
+      "index": 9,
+      "word": "wale",
+      "start": 3.247,
+      "end": 3.475,
+      "duration": 0.228
+    },
+    {
+      "index": 10,
+      "word": "log",
+      "start": 3.5,
+      "end": 3.671,
+      "duration": 0.171
+    },
+    {
+      "index": 11,
+      "word": "three",
+      "start": 3.69,
+      "end": 3.975,
+      "duration": 0.285
+    },
+    {
+      "index": 12,
+      "word": "x",
+      "start": 4.007,
+      "end": 4.067,
+      "duration": 0.06
+    },
+    {
+      "index": 13,
+      "word": "zyada",
+      "start": 4.07,
+      "end": 4.355,
+      "duration": 0.285
+    },
+    {
+      "index": 14,
+      "word": "bimaar",
+      "start": 4.638,
+      "end": 4.975,
+      "duration": 0.337
+    },
+    {
+      "index": 15,
+      "word": "padte",
+      "start": 5.012,
+      "end": 5.293,
+      "duration": 0.281
+    },
+    {
+      "index": 16,
+      "word": "hain.",
+      "start": 5.324,
+      "end": 5.605,
+      "duration": 0.281
+    },
+    {
+      "index": 17,
+      "word": "Har",
+      "start": 5.636,
+      "end": 5.805,
+      "duration": 0.168
+    },
+    {
+      "index": 18,
+      "word": "cold,",
+      "start": 5.823,
+      "end": 6.104,
+      "duration": 0.281
+    },
+    {
+      "index": 19,
+      "word": "flu,",
+      "start": 6.135,
+      "end": 6.36,
+      "duration": 0.225
+    },
+    {
+      "index": 20,
+      "word": "infection",
+      "start": 6.831,
+      "end": 7.378,
+      "duration": 0.547
+    },
+    {
+      "index": 21,
+      "word": "tumhe",
+      "start": 7.439,
+      "end": 7.743,
+      "duration": 0.304
+    },
+    {
+      "index": 22,
+      "word": "zyada",
+      "start": 7.777,
+      "end": 8.081,
+      "duration": 0.304
+    },
+    {
+      "index": 23,
+      "word": "affect",
+      "start": 8.114,
+      "end": 8.479,
+      "duration": 0.365
+    },
+    {
+      "index": 24,
+      "word": "karta",
+      "start": 8.52,
+      "end": 8.824,
+      "duration": 0.304
+    },
+    {
+      "index": 25,
+      "word": "hai.",
+      "start": 8.858,
+      "end": 9.101,
+      "duration": 0.243
+    },
+    {
+      "index": 26,
+      "word": "Ye",
+      "start": 9.128,
+      "end": 9.249,
+      "duration": 0.122
+    },
+    {
+      "index": 27,
+      "word": "actual",
+      "start": 9.263,
+      "end": 9.628,
+      "duration": 0.365
+    },
+    {
+      "index": 28,
+      "word": "studies",
+      "start": 9.668,
+      "end": 10.094,
+      "duration": 0.426
+    },
+    {
+      "index": 29,
+      "word": "mein",
+      "start": 10.322,
+      "end": 10.768,
+      "duration": 0.446
+    },
+    {
+      "index": 30,
+      "word": "prove",
+      "start": 10.818,
+      "end": 11.376,
+      "duration": 0.558
+    },
+    {
+      "index": 31,
+      "word": "hua",
+      "start": 11.438,
+      "end": 11.773,
+      "duration": 0.335
+    },
+    {
+      "index": 32,
+      "word": "hai.",
+      "start": 11.81,
+      "end": 12.256,
+      "duration": 0.446
+    }
+  ]
+}

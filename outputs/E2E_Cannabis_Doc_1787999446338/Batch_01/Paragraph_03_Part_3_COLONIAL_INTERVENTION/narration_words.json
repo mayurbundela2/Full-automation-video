@@ -1,0 +1,69 @@
+{
+  "total_words": 9,
+  "total_duration": 2.5,
+  "words": [
+    {
+      "index": 1,
+      "word": "1894",
+      "start": 0.0,
+      "end": 0.173,
+      "duration": 0.173
+    },
+    {
+      "index": 2,
+      "word": "mein",
+      "start": 0.192,
+      "end": 0.365,
+      "duration": 0.173
+    },
+    {
+      "index": 3,
+      "word": "Britishers",
+      "start": 0.385,
+      "end": 0.817,
+      "duration": 0.433
+    },
+    {
+      "index": 4,
+      "word": "ne",
+      "start": 0.865,
+      "end": 0.952,
+      "duration": 0.087
+    },
+    {
+      "index": 5,
+      "word": "banaya",
+      "start": 0.962,
+      "end": 1.221,
+      "duration": 0.26
+    },
+    {
+      "index": 6,
+      "word": "Indian",
+      "start": 1.25,
+      "end": 1.51,
+      "duration": 0.26
+    },
+    {
+      "index": 7,
+      "word": "Hemp",
+      "start": 1.538,
+      "end": 1.712,
+      "duration": 0.173
+    },
+    {
+      "index": 8,
+      "word": "Drugs",
+      "start": 1.731,
+      "end": 1.947,
+      "duration": 0.216
+    },
+    {
+      "index": 9,
+      "word": "Commission.",
+      "start": 1.971,
+      "end": 2.447,
+      "duration": 0.476
+    }
+  ]
+}

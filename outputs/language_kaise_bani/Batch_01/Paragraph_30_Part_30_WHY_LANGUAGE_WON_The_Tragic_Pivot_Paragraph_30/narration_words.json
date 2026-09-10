@@ -1,0 +1,314 @@
+{
+  "total_words": 44,
+  "total_duration": 20.12,
+  "words": [
+    {
+      "index": 1,
+      "word": "Fire",
+      "start": 0.284,
+      "end": 0.508,
+      "duration": 0.224
+    },
+    {
+      "index": 2,
+      "word": "ne",
+      "start": 0.533,
+      "end": 0.645,
+      "duration": 0.112
+    },
+    {
+      "index": 3,
+      "word": "humein",
+      "start": 0.658,
+      "end": 0.994,
+      "duration": 0.336
+    },
+    {
+      "index": 4,
+      "word": "warmth",
+      "start": 1.031,
+      "end": 1.368,
+      "duration": 0.336
+    },
+    {
+      "index": 5,
+      "word": "di.",
+      "start": 1.405,
+      "end": 1.573,
+      "duration": 0.168
+    },
+    {
+      "index": 6,
+      "word": "Tools",
+      "start": 1.592,
+      "end": 1.872,
+      "duration": 0.28
+    },
+    {
+      "index": 7,
+      "word": "ne",
+      "start": 1.903,
+      "end": 2.016,
+      "duration": 0.112
+    },
+    {
+      "index": 8,
+      "word": "humein",
+      "start": 2.376,
+      "end": 2.653,
+      "duration": 0.277
+    },
+    {
+      "index": 9,
+      "word": "power",
+      "start": 2.684,
+      "end": 2.915,
+      "duration": 0.231
+    },
+    {
+      "index": 10,
+      "word": "di.",
+      "start": 2.94,
+      "end": 3.079,
+      "duration": 0.139
+    },
+    {
+      "index": 11,
+      "word": "Lekin",
+      "start": 3.094,
+      "end": 3.325,
+      "duration": 0.231
+    },
+    {
+      "index": 12,
+      "word": "language",
+      "start": 3.524,
+      "end": 3.918,
+      "duration": 0.394
+    },
+    {
+      "index": 13,
+      "word": "ne",
+      "start": 3.962,
+      "end": 4.06,
+      "duration": 0.098
+    },
+    {
+      "index": 14,
+      "word": "humein...",
+      "start": 4.641,
+      "end": 5.111,
+      "duration": 0.47
+    },
+    {
+      "index": 15,
+      "word": "ek",
+      "start": 5.163,
+      "end": 5.267,
+      "duration": 0.104
+    },
+    {
+      "index": 16,
+      "word": "doosre",
+      "start": 5.279,
+      "end": 5.592,
+      "duration": 0.313
+    },
+    {
+      "index": 17,
+      "word": "ko",
+      "start": 5.627,
+      "end": 5.731,
+      "duration": 0.104
+    },
+    {
+      "index": 18,
+      "word": "diya!",
+      "start": 5.743,
+      "end": 6.004,
+      "duration": 0.261
+    },
+    {
+      "index": 19,
+      "word": "Aur",
+      "start": 6.631,
+      "end": 6.792,
+      "duration": 0.161
+    },
+    {
+      "index": 20,
+      "word": "ab...",
+      "start": 6.81,
+      "end": 7.078,
+      "duration": 0.268
+    },
+    {
+      "index": 21,
+      "word": "ek",
+      "start": 7.108,
+      "end": 7.215,
+      "duration": 0.107
+    },
+    {
+      "index": 22,
+      "word": "dukh-ad",
+      "start": 7.227,
+      "end": 7.603,
+      "duration": 0.376
+    },
+    {
+      "index": 23,
+      "word": "twist.",
+      "start": 7.644,
+      "end": 7.966,
+      "duration": 0.322
+    },
+    {
+      "index": 24,
+      "word": "Ye",
+      "start": 9.054,
+      "end": 9.129,
+      "duration": 0.075
+    },
+    {
+      "index": 25,
+      "word": "ability",
+      "start": 9.137,
+      "end": 9.399,
+      "duration": 0.262
+    },
+    {
+      "index": 26,
+      "word": "jo",
+      "start": 10.105,
+      "end": 10.188,
+      "duration": 0.083
+    },
+    {
+      "index": 27,
+      "word": "humein",
+      "start": 10.197,
+      "end": 10.447,
+      "duration": 0.249
+    },
+    {
+      "index": 28,
+      "word": "banati",
+      "start": 10.474,
+      "end": 10.723,
+      "duration": 0.249
+    },
+    {
+      "index": 29,
+      "word": "hai...",
+      "start": 10.751,
+      "end": 11.0,
+      "duration": 0.249
+    },
+    {
+      "index": 30,
+      "word": "ye",
+      "start": 11.763,
+      "end": 11.873,
+      "duration": 0.11
+    },
+    {
+      "index": 31,
+      "word": "abhi",
+      "start": 11.886,
+      "end": 12.106,
+      "duration": 0.221
+    },
+    {
+      "index": 32,
+      "word": "silently",
+      "start": 12.131,
+      "end": 12.572,
+      "duration": 0.441
+    },
+    {
+      "index": 33,
+      "word": "khatam",
+      "start": 12.621,
+      "end": 12.952,
+      "duration": 0.331
+    },
+    {
+      "index": 34,
+      "word": "ho",
+      "start": 12.988,
+      "end": 13.099,
+      "duration": 0.11
+    },
+    {
+      "index": 35,
+      "word": "rahi",
+      "start": 13.111,
+      "end": 13.331,
+      "duration": 0.221
+    },
+    {
+      "index": 36,
+      "word": "hai.",
+      "start": 13.356,
+      "end": 13.576,
+      "duration": 0.221
+    },
+    {
+      "index": 37,
+      "word": "Aur",
+      "start": 14.441,
+      "end": 14.611,
+      "duration": 0.17
+    },
+    {
+      "index": 38,
+      "word": "zyadatar",
+      "start": 14.63,
+      "end": 15.084,
+      "duration": 0.454
+    },
+    {
+      "index": 39,
+      "word": "log...",
+      "start": 15.134,
+      "end": 15.474,
+      "duration": 0.34
+    },
+    {
+      "index": 40,
+      "word": "notice",
+      "start": 15.512,
+      "end": 15.852,
+      "duration": 0.34
+    },
+    {
+      "index": 41,
+      "word": "bhi",
+      "start": 15.89,
+      "end": 16.06,
+      "duration": 0.17
+    },
+    {
+      "index": 42,
+      "word": "nahi",
+      "start": 16.079,
+      "end": 16.306,
+      "duration": 0.227
+    },
+    {
+      "index": 43,
+      "word": "kar",
+      "start": 17.171,
+      "end": 17.501,
+      "duration": 0.33
+    },
+    {
+      "index": 44,
+      "word": "rahe.",
+      "start": 17.538,
+      "end": 18.089,
+      "duration": 0.551
+    }
+  ]
+}

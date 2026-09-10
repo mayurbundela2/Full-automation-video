@@ -1,0 +1,146 @@
+{
+  "total_words": 20,
+  "total_duration": 9.05,
+  "words": [
+    {
+      "index": 1,
+      "word": "Unhone",
+      "start": 0.304,
+      "end": 0.654,
+      "duration": 0.35
+    },
+    {
+      "index": 2,
+      "word": "prove",
+      "start": 0.692,
+      "end": 0.984,
+      "duration": 0.291
+    },
+    {
+      "index": 3,
+      "word": "kiya",
+      "start": 1.016,
+      "end": 1.249,
+      "duration": 0.233
+    },
+    {
+      "index": 4,
+      "word": "ki",
+      "start": 1.503,
+      "end": 1.62,
+      "duration": 0.117
+    },
+    {
+      "index": 5,
+      "word": "ye",
+      "start": 1.633,
+      "end": 1.749,
+      "duration": 0.117
+    },
+    {
+      "index": 6,
+      "word": "system",
+      "start": 1.762,
+      "end": 2.112,
+      "duration": 0.35
+    },
+    {
+      "index": 7,
+      "word": "har",
+      "start": 2.151,
+      "end": 2.326,
+      "duration": 0.175
+    },
+    {
+      "index": 8,
+      "word": "living",
+      "start": 2.345,
+      "end": 2.695,
+      "duration": 0.35
+    },
+    {
+      "index": 9,
+      "word": "being",
+      "start": 2.734,
+      "end": 3.025,
+      "duration": 0.292
+    },
+    {
+      "index": 10,
+      "word": "mein",
+      "start": 3.058,
+      "end": 3.291,
+      "duration": 0.233
+    },
+    {
+      "index": 11,
+      "word": "hai...",
+      "start": 3.789,
+      "end": 3.976,
+      "duration": 0.187
+    },
+    {
+      "index": 12,
+      "word": "plants,",
+      "start": 3.997,
+      "end": 4.216,
+      "duration": 0.219
+    },
+    {
+      "index": 13,
+      "word": "insects,",
+      "start": 4.396,
+      "end": 4.76,
+      "duration": 0.364
+    },
+    {
+      "index": 14,
+      "word": "fish,",
+      "start": 4.801,
+      "end": 5.028,
+      "duration": 0.228
+    },
+    {
+      "index": 15,
+      "word": "birds,",
+      "start": 5.054,
+      "end": 5.327,
+      "duration": 0.273
+    },
+    {
+      "index": 16,
+      "word": "humans...",
+      "start": 5.513,
+      "end": 5.968,
+      "duration": 0.455
+    },
+    {
+      "index": 17,
+      "word": "sab.",
+      "start": 6.018,
+      "end": 6.22,
+      "duration": 0.202
+    },
+    {
+      "index": 18,
+      "word": "Sabse",
+      "start": 6.242,
+      "end": 6.495,
+      "duration": 0.253
+    },
+    {
+      "index": 19,
+      "word": "crazy",
+      "start": 6.703,
+      "end": 6.878,
+      "duration": 0.175
+    },
+    {
+      "index": 20,
+      "word": "fact?",
+      "start": 6.897,
+      "end": 7.073,
+      "duration": 0.175
+    }
+  ]
+}

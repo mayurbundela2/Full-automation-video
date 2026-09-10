@@ -1,0 +1,202 @@
+{
+  "total_words": 28,
+  "total_duration": 12.69,
+  "words": [
+    {
+      "index": 1,
+      "word": "Number",
+      "start": 0.289,
+      "end": 0.54,
+      "duration": 0.251
+    },
+    {
+      "index": 2,
+      "word": "three...",
+      "start": 0.568,
+      "end": 0.904,
+      "duration": 0.335
+    },
+    {
+      "index": 3,
+      "word": "mental",
+      "start": 1.194,
+      "end": 1.402,
+      "duration": 0.208
+    },
+    {
+      "index": 4,
+      "word": "health.",
+      "start": 1.425,
+      "end": 1.667,
+      "duration": 0.242
+    },
+    {
+      "index": 5,
+      "word": "Depression",
+      "start": 1.694,
+      "end": 2.041,
+      "duration": 0.346
+    },
+    {
+      "index": 6,
+      "word": "aur",
+      "start": 2.471,
+      "end": 2.602,
+      "duration": 0.131
+    },
+    {
+      "index": 7,
+      "word": "anxiety",
+      "start": 2.617,
+      "end": 2.923,
+      "duration": 0.306
+    },
+    {
+      "index": 8,
+      "word": "ka",
+      "start": 2.957,
+      "end": 3.045,
+      "duration": 0.088
+    },
+    {
+      "index": 9,
+      "word": "direct",
+      "start": 3.055,
+      "end": 3.317,
+      "duration": 0.263
+    },
+    {
+      "index": 10,
+      "word": "link",
+      "start": 3.346,
+      "end": 3.521,
+      "duration": 0.175
+    },
+    {
+      "index": 11,
+      "word": "hai",
+      "start": 3.541,
+      "end": 3.672,
+      "duration": 0.131
+    },
+    {
+      "index": 12,
+      "word": "poor",
+      "start": 3.687,
+      "end": 3.862,
+      "duration": 0.175
+    },
+    {
+      "index": 13,
+      "word": "sleep",
+      "start": 3.881,
+      "end": 4.1,
+      "duration": 0.219
+    },
+    {
+      "index": 14,
+      "word": "se.",
+      "start": 4.124,
+      "end": 4.256,
+      "duration": 0.131
+    },
+    {
+      "index": 15,
+      "word": "Chicken-and-egg",
+      "start": 4.27,
+      "end": 4.927,
+      "duration": 0.656
+    },
+    {
+      "index": 16,
+      "word": "problem...",
+      "start": 5.0,
+      "end": 5.437,
+      "duration": 0.438
+    },
+    {
+      "index": 17,
+      "word": "kam",
+      "start": 6.09,
+      "end": 6.224,
+      "duration": 0.134
+    },
+    {
+      "index": 18,
+      "word": "neend",
+      "start": 6.239,
+      "end": 6.461,
+      "duration": 0.223
+    },
+    {
+      "index": 19,
+      "word": "depression",
+      "start": 6.486,
+      "end": 6.932,
+      "duration": 0.446
+    },
+    {
+      "index": 20,
+      "word": "cause",
+      "start": 6.981,
+      "end": 7.204,
+      "duration": 0.223
+    },
+    {
+      "index": 21,
+      "word": "karti",
+      "start": 7.89,
+      "end": 8.142,
+      "duration": 0.252
+    },
+    {
+      "index": 22,
+      "word": "hai,",
+      "start": 8.17,
+      "end": 8.372,
+      "duration": 0.202
+    },
+    {
+      "index": 23,
+      "word": "depression",
+      "start": 8.394,
+      "end": 8.899,
+      "duration": 0.504
+    },
+    {
+      "index": 24,
+      "word": "neend",
+      "start": 8.955,
+      "end": 9.207,
+      "duration": 0.252
+    },
+    {
+      "index": 25,
+      "word": "kharab",
+      "start": 9.235,
+      "end": 9.537,
+      "duration": 0.303
+    },
+    {
+      "index": 26,
+      "word": "karti",
+      "start": 9.995,
+      "end": 10.501,
+      "duration": 0.506
+    },
+    {
+      "index": 27,
+      "word": "hai.",
+      "start": 10.557,
+      "end": 10.962,
+      "duration": 0.405
+    },
+    {
+      "index": 28,
+      "word": "Loop.",
+      "start": 11.007,
+      "end": 11.513,
+      "duration": 0.506
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "total_words": 26,
+  "total_duration": 9.77,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.217,
+      "end": 0.319,
+      "duration": 0.102
+    },
+    {
+      "index": 2,
+      "word": "clock",
+      "start": 0.331,
+      "end": 0.586,
+      "duration": 0.256
+    },
+    {
+      "index": 3,
+      "word": "decide",
+      "start": 0.615,
+      "end": 0.921,
+      "duration": 0.307
+    },
+    {
+      "index": 4,
+      "word": "karta",
+      "start": 0.955,
+      "end": 1.211,
+      "duration": 0.256
+    },
+    {
+      "index": 5,
+      "word": "hai...",
+      "start": 1.239,
+      "end": 1.546,
+      "duration": 0.307
+    },
+    {
+      "index": 6,
+      "word": "kab",
+      "start": 1.868,
+      "end": 2.008,
+      "duration": 0.14
+    },
+    {
+      "index": 7,
+      "word": "neend",
+      "start": 2.024,
+      "end": 2.258,
+      "duration": 0.234
+    },
+    {
+      "index": 8,
+      "word": "aayegi,",
+      "start": 2.284,
+      "end": 2.612,
+      "duration": 0.328
+    },
+    {
+      "index": 9,
+      "word": "kab",
+      "start": 2.869,
+      "end": 3.014,
+      "duration": 0.145
+    },
+    {
+      "index": 10,
+      "word": "bhookh",
+      "start": 3.03,
+      "end": 3.319,
+      "duration": 0.289
+    },
+    {
+      "index": 11,
+      "word": "lagegi,",
+      "start": 3.351,
+      "end": 3.689,
+      "duration": 0.337
+    },
+    {
+      "index": 12,
+      "word": "kab",
+      "start": 4.038,
+      "end": 4.192,
+      "duration": 0.154
+    },
+    {
+      "index": 13,
+      "word": "body",
+      "start": 4.209,
+      "end": 4.414,
+      "duration": 0.205
+    },
+    {
+      "index": 14,
+      "word": "temperature",
+      "start": 4.437,
+      "end": 5.001,
+      "duration": 0.564
+    },
+    {
+      "index": 15,
+      "word": "kya",
+      "start": 5.064,
+      "end": 5.218,
+      "duration": 0.154
+    },
+    {
+      "index": 16,
+      "word": "rahega,",
+      "start": 5.235,
+      "end": 5.594,
+      "duration": 0.359
+    },
+    {
+      "index": 17,
+      "word": "kab",
+      "start": 5.785,
+      "end": 5.927,
+      "duration": 0.142
+    },
+    {
+      "index": 18,
+      "word": "hormones",
+      "start": 5.943,
+      "end": 6.323,
+      "duration": 0.38
+    },
+    {
+      "index": 19,
+      "word": "release",
+      "start": 6.365,
+      "end": 6.697,
+      "duration": 0.332
+    },
+    {
+      "index": 20,
+      "word": "honge.",
+      "start": 6.734,
+      "end": 7.018,
+      "duration": 0.285
+    },
+    {
+      "index": 21,
+      "word": "Aur",
+      "start": 7.517,
+      "end": 7.617,
+      "duration": 0.1
+    },
+    {
+      "index": 22,
+      "word": "ye",
+      "start": 7.628,
+      "end": 7.695,
+      "duration": 0.067
+    },
+    {
+      "index": 23,
+      "word": "system",
+      "start": 7.702,
+      "end": 7.903,
+      "duration": 0.2
+    },
+    {
+      "index": 24,
+      "word": "incredibly",
+      "start": 7.925,
+      "end": 8.259,
+      "duration": 0.334
+    },
+    {
+      "index": 25,
+      "word": "purana",
+      "start": 8.504,
+      "end": 9.188,
+      "duration": 0.684
+    },
+    {
+      "index": 26,
+      "word": "hai.",
+      "start": 9.264,
+      "end": 9.719,
+      "duration": 0.456
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "total_words": 28,
+  "total_duration": 11.12,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.331,
+      "end": 0.471,
+      "duration": 0.14
+    },
+    {
+      "index": 2,
+      "word": "sirf",
+      "start": 0.487,
+      "end": 0.766,
+      "duration": 0.28
+    },
+    {
+      "index": 3,
+      "word": "pichle",
+      "start": 0.798,
+      "end": 1.218,
+      "duration": 0.42
+    },
+    {
+      "index": 4,
+      "word": "do",
+      "start": 1.264,
+      "end": 1.404,
+      "duration": 0.14
+    },
+    {
+      "index": 5,
+      "word": "sau",
+      "start": 1.42,
+      "end": 1.63,
+      "duration": 0.21
+    },
+    {
+      "index": 6,
+      "word": "saal",
+      "start": 1.653,
+      "end": 1.933,
+      "duration": 0.28
+    },
+    {
+      "index": 7,
+      "word": "purana",
+      "start": 1.964,
+      "end": 2.384,
+      "duration": 0.42
+    },
+    {
+      "index": 8,
+      "word": "concept",
+      "start": 2.431,
+      "end": 2.921,
+      "duration": 0.49
+    },
+    {
+      "index": 9,
+      "word": "hai.",
+      "start": 2.975,
+      "end": 3.255,
+      "duration": 0.28
+    },
+    {
+      "index": 10,
+      "word": "Historian",
+      "start": 3.722,
+      "end": 4.344,
+      "duration": 0.622
+    },
+    {
+      "index": 11,
+      "word": "A.",
+      "start": 4.413,
+      "end": 4.551,
+      "duration": 0.138
+    },
+    {
+      "index": 12,
+      "word": "Roger",
+      "start": 4.566,
+      "end": 4.912,
+      "duration": 0.345
+    },
+    {
+      "index": 13,
+      "word": "Ekirch",
+      "start": 4.95,
+      "end": 5.365,
+      "duration": 0.414
+    },
+    {
+      "index": 14,
+      "word": "ne",
+      "start": 5.411,
+      "end": 5.549,
+      "duration": 0.138
+    },
+    {
+      "index": 15,
+      "word": "do",
+      "start": 5.564,
+      "end": 5.702,
+      "duration": 0.138
+    },
+    {
+      "index": 16,
+      "word": "hazaar",
+      "start": 5.718,
+      "end": 6.132,
+      "duration": 0.414
+    },
+    {
+      "index": 17,
+      "word": "ek",
+      "start": 6.178,
+      "end": 6.316,
+      "duration": 0.138
+    },
+    {
+      "index": 18,
+      "word": "mein",
+      "start": 6.332,
+      "end": 6.608,
+      "duration": 0.276
+    },
+    {
+      "index": 19,
+      "word": "ek",
+      "start": 6.639,
+      "end": 6.777,
+      "duration": 0.138
+    },
+    {
+      "index": 20,
+      "word": "research",
+      "start": 6.792,
+      "end": 7.345,
+      "duration": 0.553
+    },
+    {
+      "index": 21,
+      "word": "publish",
+      "start": 7.406,
+      "end": 7.89,
+      "duration": 0.484
+    },
+    {
+      "index": 22,
+      "word": "ki",
+      "start": 7.944,
+      "end": 8.082,
+      "duration": 0.138
+    },
+    {
+      "index": 23,
+      "word": "jisne",
+      "start": 8.097,
+      "end": 8.443,
+      "duration": 0.345
+    },
+    {
+      "index": 24,
+      "word": "sleep",
+      "start": 8.662,
+      "end": 9.058,
+      "duration": 0.396
+    },
+    {
+      "index": 25,
+      "word": "science",
+      "start": 9.102,
+      "end": 9.656,
+      "duration": 0.554
+    },
+    {
+      "index": 26,
+      "word": "ko",
+      "start": 9.718,
+      "end": 9.876,
+      "duration": 0.158
+    },
+    {
+      "index": 27,
+      "word": "badal",
+      "start": 9.894,
+      "end": 10.29,
+      "duration": 0.396
+    },
+    {
+      "index": 28,
+      "word": "diya.",
+      "start": 10.334,
+      "end": 10.73,
+      "duration": 0.396
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "total_words": 40,
+  "total_duration": 15.88,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin...",
+      "start": 0.332,
+      "end": 0.722,
+      "duration": 0.39
+    },
+    {
+      "index": 2,
+      "word": "kya",
+      "start": 0.765,
+      "end": 0.912,
+      "duration": 0.146
+    },
+    {
+      "index": 3,
+      "word": "sab",
+      "start": 1.328,
+      "end": 1.495,
+      "duration": 0.167
+    },
+    {
+      "index": 4,
+      "word": "languages",
+      "start": 1.514,
+      "end": 2.016,
+      "duration": 0.502
+    },
+    {
+      "index": 5,
+      "word": "ka...",
+      "start": 2.072,
+      "end": 2.35,
+      "duration": 0.279
+    },
+    {
+      "index": 6,
+      "word": "ek",
+      "start": 2.381,
+      "end": 2.493,
+      "duration": 0.112
+    },
+    {
+      "index": 7,
+      "word": "common",
+      "start": 2.505,
+      "end": 2.84,
+      "duration": 0.335
+    },
+    {
+      "index": 8,
+      "word": "ancestor",
+      "start": 3.098,
+      "end": 3.246,
+      "duration": 0.148
+    },
+    {
+      "index": 9,
+      "word": "tha?",
+      "start": 3.418,
+      "end": 3.614,
+      "duration": 0.196
+    },
+    {
+      "index": 10,
+      "word": "Ek",
+      "start": 3.636,
+      "end": 3.734,
+      "duration": 0.098
+    },
+    {
+      "index": 11,
+      "word": "pehli",
+      "start": 3.745,
+      "end": 3.989,
+      "duration": 0.245
+    },
+    {
+      "index": 12,
+      "word": "language",
+      "start": 4.017,
+      "end": 4.408,
+      "duration": 0.392
+    },
+    {
+      "index": 13,
+      "word": "jise",
+      "start": 4.773,
+      "end": 4.917,
+      "duration": 0.144
+    },
+    {
+      "index": 14,
+      "word": "sab",
+      "start": 5.151,
+      "end": 5.268,
+      "duration": 0.117
+    },
+    {
+      "index": 15,
+      "word": "log",
+      "start": 5.281,
+      "end": 5.398,
+      "duration": 0.117
+    },
+    {
+      "index": 16,
+      "word": "bolte",
+      "start": 5.574,
+      "end": 5.85,
+      "duration": 0.276
+    },
+    {
+      "index": 17,
+      "word": "the...",
+      "start": 5.881,
+      "end": 6.213,
+      "duration": 0.332
+    },
+    {
+      "index": 18,
+      "word": "aur",
+      "start": 6.25,
+      "end": 6.416,
+      "duration": 0.166
+    },
+    {
+      "index": 19,
+      "word": "baad",
+      "start": 6.673,
+      "end": 6.906,
+      "duration": 0.233
+    },
+    {
+      "index": 20,
+      "word": "mein",
+      "start": 6.932,
+      "end": 7.165,
+      "duration": 0.233
+    },
+    {
+      "index": 21,
+      "word": "woh",
+      "start": 7.191,
+      "end": 7.366,
+      "duration": 0.175
+    },
+    {
+      "index": 22,
+      "word": "alag",
+      "start": 7.385,
+      "end": 7.618,
+      "duration": 0.233
+    },
+    {
+      "index": 23,
+      "word": "ho",
+      "start": 7.644,
+      "end": 7.76,
+      "duration": 0.117
+    },
+    {
+      "index": 24,
+      "word": "gayi?",
+      "start": 7.773,
+      "end": 8.065,
+      "duration": 0.291
+    },
+    {
+      "index": 25,
+      "word": "Iska",
+      "start": 8.339,
+      "end": 8.575,
+      "duration": 0.236
+    },
+    {
+      "index": 26,
+      "word": "pakka",
+      "start": 8.601,
+      "end": 8.897,
+      "duration": 0.295
+    },
+    {
+      "index": 27,
+      "word": "jawab",
+      "start": 8.93,
+      "end": 9.225,
+      "duration": 0.295
+    },
+    {
+      "index": 28,
+      "word": "kisi",
+      "start": 9.258,
+      "end": 9.494,
+      "duration": 0.236
+    },
+    {
+      "index": 29,
+      "word": "ke",
+      "start": 9.52,
+      "end": 9.638,
+      "duration": 0.118
+    },
+    {
+      "index": 30,
+      "word": "paas",
+      "start": 9.651,
+      "end": 9.888,
+      "duration": 0.236
+    },
+    {
+      "index": 31,
+      "word": "nahi",
+      "start": 10.718,
+      "end": 10.938,
+      "duration": 0.22
+    },
+    {
+      "index": 32,
+      "word": "hai.",
+      "start": 10.963,
+      "end": 11.183,
+      "duration": 0.22
+    },
+    {
+      "index": 33,
+      "word": "Aur",
+      "start": 11.208,
+      "end": 11.373,
+      "duration": 0.165
+    },
+    {
+      "index": 34,
+      "word": "ye",
+      "start": 11.391,
+      "end": 11.501,
+      "duration": 0.11
+    },
+    {
+      "index": 35,
+      "word": "sirf",
+      "start": 11.514,
+      "end": 11.734,
+      "duration": 0.22
+    },
+    {
+      "index": 36,
+      "word": "ek",
+      "start": 11.758,
+      "end": 11.868,
+      "duration": 0.11
+    },
+    {
+      "index": 37,
+      "word": "sawaal",
+      "start": 11.881,
+      "end": 12.211,
+      "duration": 0.33
+    },
+    {
+      "index": 38,
+      "word": "hai...",
+      "start": 12.248,
+      "end": 12.578,
+      "duration": 0.33
+    },
+    {
+      "index": 39,
+      "word": "jawab",
+      "start": 12.899,
+      "end": 13.61,
+      "duration": 0.711
+    },
+    {
+      "index": 40,
+      "word": "nahi.",
+      "start": 13.689,
+      "end": 14.401,
+      "duration": 0.711
+    }
+  ]
+}

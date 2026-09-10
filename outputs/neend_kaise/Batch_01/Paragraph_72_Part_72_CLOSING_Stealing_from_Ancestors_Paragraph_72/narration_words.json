@@ -1,0 +1,188 @@
+{
+  "total_words": 26,
+  "total_duration": 10.41,
+  "words": [
+    {
+      "index": 1,
+      "word": "Tum",
+      "start": 0.453,
+      "end": 0.644,
+      "duration": 0.191
+    },
+    {
+      "index": 2,
+      "word": "wo",
+      "start": 0.665,
+      "end": 0.793,
+      "duration": 0.128
+    },
+    {
+      "index": 3,
+      "word": "neend",
+      "start": 0.807,
+      "end": 1.126,
+      "duration": 0.319
+    },
+    {
+      "index": 4,
+      "word": "chura",
+      "start": 1.161,
+      "end": 1.48,
+      "duration": 0.319
+    },
+    {
+      "index": 5,
+      "word": "rahi",
+      "start": 1.516,
+      "end": 1.771,
+      "duration": 0.255
+    },
+    {
+      "index": 6,
+      "word": "thi",
+      "start": 1.799,
+      "end": 1.99,
+      "duration": 0.191
+    },
+    {
+      "index": 7,
+      "word": "jo",
+      "start": 2.011,
+      "end": 2.139,
+      "duration": 0.128
+    },
+    {
+      "index": 8,
+      "word": "tumhare",
+      "start": 2.594,
+      "end": 3.023,
+      "duration": 0.429
+    },
+    {
+      "index": 9,
+      "word": "ancestors",
+      "start": 3.07,
+      "end": 3.621,
+      "duration": 0.551
+    },
+    {
+      "index": 10,
+      "word": "ne",
+      "start": 3.682,
+      "end": 3.805,
+      "duration": 0.122
+    },
+    {
+      "index": 11,
+      "word": "predators",
+      "start": 3.818,
+      "end": 4.369,
+      "duration": 0.551
+    },
+    {
+      "index": 12,
+      "word": "ke",
+      "start": 4.43,
+      "end": 4.553,
+      "duration": 0.122
+    },
+    {
+      "index": 13,
+      "word": "saamne",
+      "start": 4.567,
+      "end": 4.934,
+      "duration": 0.367
+    },
+    {
+      "index": 14,
+      "word": "bhi",
+      "start": 4.975,
+      "end": 5.158,
+      "duration": 0.184
+    },
+    {
+      "index": 15,
+      "word": "hasil",
+      "start": 5.179,
+      "end": 5.485,
+      "duration": 0.306
+    },
+    {
+      "index": 16,
+      "word": "ki",
+      "start": 5.519,
+      "end": 5.641,
+      "duration": 0.122
+    },
+    {
+      "index": 17,
+      "word": "thi...",
+      "start": 5.655,
+      "end": 6.022,
+      "duration": 0.367
+    },
+    {
+      "index": 18,
+      "word": "kyunki",
+      "start": 6.063,
+      "end": 6.43,
+      "duration": 0.367
+    },
+    {
+      "index": 19,
+      "word": "wo",
+      "start": 7.05,
+      "end": 7.143,
+      "duration": 0.093
+    },
+    {
+      "index": 20,
+      "word": "jaante",
+      "start": 7.153,
+      "end": 7.433,
+      "duration": 0.279
+    },
+    {
+      "index": 21,
+      "word": "the,",
+      "start": 7.464,
+      "end": 7.65,
+      "duration": 0.186
+    },
+    {
+      "index": 22,
+      "word": "ye",
+      "start": 7.671,
+      "end": 7.764,
+      "duration": 0.093
+    },
+    {
+      "index": 23,
+      "word": "chahiye",
+      "start": 7.774,
+      "end": 8.1,
+      "duration": 0.326
+    },
+    {
+      "index": 24,
+      "word": "humari",
+      "start": 8.437,
+      "end": 9.024,
+      "duration": 0.587
+    },
+    {
+      "index": 25,
+      "word": "species",
+      "start": 9.089,
+      "end": 9.774,
+      "duration": 0.685
+    },
+    {
+      "index": 26,
+      "word": "ko.",
+      "start": 9.85,
+      "end": 10.143,
+      "duration": 0.293
+    }
+  ]
+}

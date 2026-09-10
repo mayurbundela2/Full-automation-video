@@ -1,0 +1,244 @@
+{
+  "total_words": 34,
+  "total_duration": 12.77,
+  "words": [
+    {
+      "index": 1,
+      "word": "Number",
+      "start": 0.0,
+      "end": 0.204,
+      "duration": 0.204
+    },
+    {
+      "index": 2,
+      "word": "four...",
+      "start": 0.227,
+      "end": 0.465,
+      "duration": 0.238
+    },
+    {
+      "index": 3,
+      "word": "weight",
+      "start": 0.492,
+      "end": 0.696,
+      "duration": 0.204
+    },
+    {
+      "index": 4,
+      "word": "aur",
+      "start": 1.042,
+      "end": 1.149,
+      "duration": 0.107
+    },
+    {
+      "index": 5,
+      "word": "hormones.",
+      "start": 1.161,
+      "end": 1.482,
+      "duration": 0.321
+    },
+    {
+      "index": 6,
+      "word": "Sleep",
+      "start": 1.517,
+      "end": 1.696,
+      "duration": 0.178
+    },
+    {
+      "index": 7,
+      "word": "deprivation",
+      "start": 1.715,
+      "end": 2.107,
+      "duration": 0.392
+    },
+    {
+      "index": 8,
+      "word": "ghrelin...",
+      "start": 2.568,
+      "end": 2.972,
+      "duration": 0.404
+    },
+    {
+      "index": 9,
+      "word": "hunger",
+      "start": 3.017,
+      "end": 3.26,
+      "duration": 0.243
+    },
+    {
+      "index": 10,
+      "word": "hormone...",
+      "start": 3.287,
+      "end": 3.691,
+      "duration": 0.404
+    },
+    {
+      "index": 11,
+      "word": "badhata",
+      "start": 3.736,
+      "end": 4.02,
+      "duration": 0.283
+    },
+    {
+      "index": 12,
+      "word": "hai.",
+      "start": 4.31,
+      "end": 4.493,
+      "duration": 0.183
+    },
+    {
+      "index": 13,
+      "word": "Isliye",
+      "start": 4.514,
+      "end": 4.789,
+      "duration": 0.275
+    },
+    {
+      "index": 14,
+      "word": "late",
+      "start": 4.82,
+      "end": 5.003,
+      "duration": 0.183
+    },
+    {
+      "index": 15,
+      "word": "night",
+      "start": 5.024,
+      "end": 5.253,
+      "duration": 0.229
+    },
+    {
+      "index": 16,
+      "word": "mein",
+      "start": 5.278,
+      "end": 5.462,
+      "duration": 0.183
+    },
+    {
+      "index": 17,
+      "word": "tumhe",
+      "start": 5.482,
+      "end": 5.712,
+      "duration": 0.229
+    },
+    {
+      "index": 18,
+      "word": "cravings",
+      "start": 6.148,
+      "end": 6.518,
+      "duration": 0.37
+    },
+    {
+      "index": 19,
+      "word": "hoti",
+      "start": 6.779,
+      "end": 6.958,
+      "duration": 0.179
+    },
+    {
+      "index": 20,
+      "word": "hain.",
+      "start": 6.978,
+      "end": 7.202,
+      "duration": 0.224
+    },
+    {
+      "index": 21,
+      "word": "Chips,",
+      "start": 7.227,
+      "end": 7.495,
+      "duration": 0.269
+    },
+    {
+      "index": 22,
+      "word": "chocolate,",
+      "start": 7.525,
+      "end": 7.973,
+      "duration": 0.448
+    },
+    {
+      "index": 23,
+      "word": "kuch",
+      "start": 8.023,
+      "end": 8.202,
+      "duration": 0.179
+    },
+    {
+      "index": 24,
+      "word": "bhi",
+      "start": 8.222,
+      "end": 8.356,
+      "duration": 0.134
+    },
+    {
+      "index": 25,
+      "word": "jo",
+      "start": 8.736,
+      "end": 8.833,
+      "duration": 0.097
+    },
+    {
+      "index": 26,
+      "word": "hai.",
+      "start": 8.844,
+      "end": 9.038,
+      "duration": 0.194
+    },
+    {
+      "index": 27,
+      "word": "Tumhari",
+      "start": 9.06,
+      "end": 9.399,
+      "duration": 0.34
+    },
+    {
+      "index": 28,
+      "word": "body",
+      "start": 9.437,
+      "end": 9.631,
+      "duration": 0.194
+    },
+    {
+      "index": 29,
+      "word": "galat",
+      "start": 9.653,
+      "end": 9.896,
+      "duration": 0.243
+    },
+    {
+      "index": 30,
+      "word": "signal",
+      "start": 9.923,
+      "end": 10.214,
+      "duration": 0.291
+    },
+    {
+      "index": 31,
+      "word": "de",
+      "start": 10.246,
+      "end": 10.343,
+      "duration": 0.097
+    },
+    {
+      "index": 32,
+      "word": "rahi",
+      "start": 10.649,
+      "end": 11.222,
+      "duration": 0.573
+    },
+    {
+      "index": 33,
+      "word": "hoti",
+      "start": 11.286,
+      "end": 11.859,
+      "duration": 0.573
+    },
+    {
+      "index": 34,
+      "word": "hai.",
+      "start": 11.922,
+      "end": 12.495,
+      "duration": 0.573
+    }
+  ]
+}

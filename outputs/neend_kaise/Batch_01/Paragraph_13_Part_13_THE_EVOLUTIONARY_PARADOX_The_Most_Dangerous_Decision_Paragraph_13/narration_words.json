@@ -1,0 +1,97 @@
+{
+  "total_words": 13,
+  "total_duration": 6.6,
+  "words": [
+    {
+      "index": 1,
+      "word": "Sochke",
+      "start": 0.272,
+      "end": 0.578,
+      "duration": 0.306
+    },
+    {
+      "index": 2,
+      "word": "dekho...",
+      "start": 0.612,
+      "end": 1.021,
+      "duration": 0.408
+    },
+    {
+      "index": 3,
+      "word": "ye",
+      "start": 1.624,
+      "end": 1.736,
+      "duration": 0.112
+    },
+    {
+      "index": 4,
+      "word": "evolutionary",
+      "start": 1.749,
+      "end": 2.423,
+      "duration": 0.675
+    },
+    {
+      "index": 5,
+      "word": "sabse",
+      "start": 2.498,
+      "end": 2.779,
+      "duration": 0.281
+    },
+    {
+      "index": 6,
+      "word": "dangerous",
+      "start": 2.811,
+      "end": 3.317,
+      "duration": 0.506
+    },
+    {
+      "index": 7,
+      "word": "decision",
+      "start": 3.373,
+      "end": 3.823,
+      "duration": 0.45
+    },
+    {
+      "index": 8,
+      "word": "tha",
+      "start": 3.872,
+      "end": 4.041,
+      "duration": 0.169
+    },
+    {
+      "index": 9,
+      "word": "jo",
+      "start": 4.06,
+      "end": 4.172,
+      "duration": 0.112
+    },
+    {
+      "index": 10,
+      "word": "insaan",
+      "start": 4.185,
+      "end": 4.522,
+      "duration": 0.337
+    },
+    {
+      "index": 11,
+      "word": "ne",
+      "start": 4.56,
+      "end": 4.672,
+      "duration": 0.112
+    },
+    {
+      "index": 12,
+      "word": "liya.",
+      "start": 4.684,
+      "end": 4.965,
+      "duration": 0.281
+    },
+    {
+      "index": 13,
+      "word": "Kyun?",
+      "start": 4.997,
+      "end": 5.278,
+      "duration": 0.281
+    }
+  ]
+}

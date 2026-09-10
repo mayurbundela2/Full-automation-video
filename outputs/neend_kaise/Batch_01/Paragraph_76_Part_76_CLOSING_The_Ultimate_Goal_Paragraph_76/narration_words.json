@@ -1,0 +1,321 @@
+{
+  "total_words": 45,
+  "total_duration": 17.13,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 0.26,
+      "end": 0.511,
+      "duration": 0.251
+    },
+    {
+      "index": 2,
+      "word": "agar",
+      "start": 0.539,
+      "end": 0.74,
+      "duration": 0.201
+    },
+    {
+      "index": 3,
+      "word": "ye",
+      "start": 0.762,
+      "end": 0.863,
+      "duration": 0.1
+    },
+    {
+      "index": 4,
+      "word": "video",
+      "start": 0.874,
+      "end": 1.125,
+      "duration": 0.251
+    },
+    {
+      "index": 5,
+      "word": "dekhne",
+      "start": 1.153,
+      "end": 1.455,
+      "duration": 0.301
+    },
+    {
+      "index": 6,
+      "word": "ke",
+      "start": 1.488,
+      "end": 1.589,
+      "duration": 0.1
+    },
+    {
+      "index": 7,
+      "word": "baad",
+      "start": 1.6,
+      "end": 1.801,
+      "duration": 0.201
+    },
+    {
+      "index": 8,
+      "word": "tumhare",
+      "start": 1.823,
+      "end": 2.175,
+      "duration": 0.352
+    },
+    {
+      "index": 9,
+      "word": "andar",
+      "start": 2.539,
+      "end": 2.818,
+      "duration": 0.279
+    },
+    {
+      "index": 10,
+      "word": "ek",
+      "start": 2.849,
+      "end": 2.961,
+      "duration": 0.112
+    },
+    {
+      "index": 11,
+      "word": "chhoti",
+      "start": 2.973,
+      "end": 3.308,
+      "duration": 0.335
+    },
+    {
+      "index": 12,
+      "word": "si",
+      "start": 3.345,
+      "end": 3.457,
+      "duration": 0.112
+    },
+    {
+      "index": 13,
+      "word": "awareness",
+      "start": 3.469,
+      "end": 3.972,
+      "duration": 0.502
+    },
+    {
+      "index": 14,
+      "word": "bhi",
+      "start": 4.028,
+      "end": 4.195,
+      "duration": 0.167
+    },
+    {
+      "index": 15,
+      "word": "aayi...",
+      "start": 4.214,
+      "end": 4.605,
+      "duration": 0.391
+    },
+    {
+      "index": 16,
+      "word": "ki",
+      "start": 4.893,
+      "end": 5.002,
+      "duration": 0.109
+    },
+    {
+      "index": 17,
+      "word": "wo",
+      "start": 5.014,
+      "end": 5.122,
+      "duration": 0.109
+    },
+    {
+      "index": 18,
+      "word": "phone",
+      "start": 5.134,
+      "end": 5.405,
+      "duration": 0.271
+    },
+    {
+      "index": 19,
+      "word": "rakhna",
+      "start": 5.436,
+      "end": 5.761,
+      "duration": 0.326
+    },
+    {
+      "index": 20,
+      "word": "zaroori",
+      "start": 5.797,
+      "end": 6.177,
+      "duration": 0.38
+    },
+    {
+      "index": 21,
+      "word": "hai,",
+      "start": 6.219,
+      "end": 6.436,
+      "duration": 0.217
+    },
+    {
+      "index": 22,
+      "word": "ki",
+      "start": 6.46,
+      "end": 6.569,
+      "duration": 0.109
+    },
+    {
+      "index": 23,
+      "word": "saat-aath",
+      "start": 6.868,
+      "end": 7.386,
+      "duration": 0.518
+    },
+    {
+      "index": 24,
+      "word": "ghante",
+      "start": 7.443,
+      "end": 7.789,
+      "duration": 0.345
+    },
+    {
+      "index": 25,
+      "word": "ki",
+      "start": 7.827,
+      "end": 7.942,
+      "duration": 0.115
+    },
+    {
+      "index": 26,
+      "word": "neend",
+      "start": 7.955,
+      "end": 8.242,
+      "duration": 0.288
+    },
+    {
+      "index": 27,
+      "word": "luxury",
+      "start": 8.274,
+      "end": 8.62,
+      "duration": 0.345
+    },
+    {
+      "index": 28,
+      "word": "nahi",
+      "start": 8.658,
+      "end": 8.888,
+      "duration": 0.23
+    },
+    {
+      "index": 29,
+      "word": "zaroorat",
+      "start": 8.914,
+      "end": 9.374,
+      "duration": 0.46
+    },
+    {
+      "index": 30,
+      "word": "hai,",
+      "start": 9.735,
+      "end": 9.93,
+      "duration": 0.195
+    },
+    {
+      "index": 31,
+      "word": "ki",
+      "start": 9.951,
+      "end": 10.049,
+      "duration": 0.097
+    },
+    {
+      "index": 32,
+      "word": "wo",
+      "start": 10.059,
+      "end": 10.157,
+      "duration": 0.097
+    },
+    {
+      "index": 33,
+      "word": "dark",
+      "start": 10.168,
+      "end": 10.362,
+      "duration": 0.195
+    },
+    {
+      "index": 34,
+      "word": "circles",
+      "start": 10.697,
+      "end": 11.049,
+      "duration": 0.352
+    },
+    {
+      "index": 35,
+      "word": "actually",
+      "start": 11.088,
+      "end": 11.491,
+      "duration": 0.403
+    },
+    {
+      "index": 36,
+      "word": "warning",
+      "start": 11.536,
+      "end": 11.888,
+      "duration": 0.352
+    },
+    {
+      "index": 37,
+      "word": "signs",
+      "start": 11.927,
+      "end": 12.179,
+      "duration": 0.252
+    },
+    {
+      "index": 38,
+      "word": "hain",
+      "start": 12.207,
+      "end": 12.408,
+      "duration": 0.201
+    },
+    {
+      "index": 39,
+      "word": "celebrations",
+      "start": 12.431,
+      "end": 13.034,
+      "duration": 0.604
+    },
+    {
+      "index": 40,
+      "word": "nahi...",
+      "start": 13.102,
+      "end": 13.454,
+      "duration": 0.352
+    },
+    {
+      "index": 41,
+      "word": "Toh",
+      "start": 13.808,
+      "end": 13.934,
+      "duration": 0.126
+    },
+    {
+      "index": 42,
+      "word": "ye",
+      "start": 13.948,
+      "end": 14.033,
+      "duration": 0.084
+    },
+    {
+      "index": 43,
+      "word": "video",
+      "start": 14.042,
+      "end": 14.253,
+      "duration": 0.211
+    },
+    {
+      "index": 44,
+      "word": "successful",
+      "start": 14.276,
+      "end": 14.697,
+      "duration": 0.421
+    },
+    {
+      "index": 45,
+      "word": "hai.",
+      "start": 15.293,
+      "end": 16.726,
+      "duration": 1.433
+    }
+  ]
+}

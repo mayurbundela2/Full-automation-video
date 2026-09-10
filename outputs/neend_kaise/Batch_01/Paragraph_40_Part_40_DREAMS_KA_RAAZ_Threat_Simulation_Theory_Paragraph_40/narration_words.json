@@ -1,0 +1,160 @@
+{
+  "total_words": 22,
+  "total_duration": 11.92,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ek",
+      "start": 0.296,
+      "end": 0.4,
+      "duration": 0.104
+    },
+    {
+      "index": 2,
+      "word": "doosri",
+      "start": 0.412,
+      "end": 0.725,
+      "duration": 0.313
+    },
+    {
+      "index": 3,
+      "word": "theory...",
+      "start": 0.76,
+      "end": 1.23,
+      "duration": 0.47
+    },
+    {
+      "index": 4,
+      "word": "Finnish",
+      "start": 1.282,
+      "end": 1.647,
+      "duration": 0.365
+    },
+    {
+      "index": 5,
+      "word": "researcher",
+      "start": 2.005,
+      "end": 2.671,
+      "duration": 0.666
+    },
+    {
+      "index": 6,
+      "word": "Antti",
+      "start": 2.745,
+      "end": 3.078,
+      "duration": 0.333
+    },
+    {
+      "index": 7,
+      "word": "Revonsuo",
+      "start": 3.115,
+      "end": 3.648,
+      "duration": 0.533
+    },
+    {
+      "index": 8,
+      "word": "ne",
+      "start": 3.707,
+      "end": 3.84,
+      "duration": 0.133
+    },
+    {
+      "index": 9,
+      "word": "di.",
+      "start": 3.855,
+      "end": 4.055,
+      "duration": 0.2
+    },
+    {
+      "index": 10,
+      "word": "Ye",
+      "start": 4.077,
+      "end": 4.21,
+      "duration": 0.133
+    },
+    {
+      "index": 11,
+      "word": "threat",
+      "start": 4.225,
+      "end": 4.625,
+      "duration": 0.4
+    },
+    {
+      "index": 12,
+      "word": "simulation",
+      "start": 5.009,
+      "end": 5.547,
+      "duration": 0.538
+    },
+    {
+      "index": 13,
+      "word": "theory",
+      "start": 5.787,
+      "end": 6.09,
+      "duration": 0.303
+    },
+    {
+      "index": 14,
+      "word": "kehlati",
+      "start": 6.123,
+      "end": 6.476,
+      "duration": 0.353
+    },
+    {
+      "index": 15,
+      "word": "hai.",
+      "start": 6.515,
+      "end": 6.717,
+      "duration": 0.202
+    },
+    {
+      "index": 16,
+      "word": "Ye",
+      "start": 6.739,
+      "end": 6.84,
+      "duration": 0.101
+    },
+    {
+      "index": 17,
+      "word": "theory",
+      "start": 6.852,
+      "end": 7.154,
+      "duration": 0.303
+    },
+    {
+      "index": 18,
+      "word": "contested",
+      "start": 7.188,
+      "end": 7.642,
+      "duration": 0.454
+    },
+    {
+      "index": 19,
+      "word": "hai,",
+      "start": 8.456,
+      "end": 8.733,
+      "duration": 0.277
+    },
+    {
+      "index": 20,
+      "word": "but",
+      "start": 8.764,
+      "end": 8.971,
+      "duration": 0.208
+    },
+    {
+      "index": 21,
+      "word": "interesting",
+      "start": 8.994,
+      "end": 9.756,
+      "duration": 0.761
+    },
+    {
+      "index": 22,
+      "word": "hai.",
+      "start": 9.84,
+      "end": 10.117,
+      "duration": 0.277
+    }
+  ]
+}

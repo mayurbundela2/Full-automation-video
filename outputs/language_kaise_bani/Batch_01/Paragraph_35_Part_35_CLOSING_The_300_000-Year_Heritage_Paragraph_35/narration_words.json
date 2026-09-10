@@ -1,0 +1,454 @@
+{
+  "total_words": 64,
+  "total_duration": 30.6,
+  "words": [
+    {
+      "index": 1,
+      "word": "Wapas",
+      "start": 0.36,
+      "end": 0.63,
+      "duration": 0.27
+    },
+    {
+      "index": 2,
+      "word": "chalte",
+      "start": 0.66,
+      "end": 0.984,
+      "duration": 0.324
+    },
+    {
+      "index": 3,
+      "word": "hain",
+      "start": 1.02,
+      "end": 1.237,
+      "duration": 0.216
+    },
+    {
+      "index": 4,
+      "word": "shuruaat",
+      "start": 1.261,
+      "end": 1.693,
+      "duration": 0.432
+    },
+    {
+      "index": 5,
+      "word": "pe.",
+      "start": 1.741,
+      "end": 1.903,
+      "duration": 0.162
+    },
+    {
+      "index": 6,
+      "word": "Tum",
+      "start": 2.676,
+      "end": 2.841,
+      "duration": 0.165
+    },
+    {
+      "index": 7,
+      "word": "abhi",
+      "start": 2.859,
+      "end": 3.08,
+      "duration": 0.22
+    },
+    {
+      "index": 8,
+      "word": "ye",
+      "start": 3.104,
+      "end": 3.214,
+      "duration": 0.11
+    },
+    {
+      "index": 9,
+      "word": "video",
+      "start": 3.226,
+      "end": 3.502,
+      "duration": 0.275
+    },
+    {
+      "index": 10,
+      "word": "sun",
+      "start": 3.532,
+      "end": 3.697,
+      "duration": 0.165
+    },
+    {
+      "index": 11,
+      "word": "rahe",
+      "start": 3.716,
+      "end": 3.936,
+      "duration": 0.22
+    },
+    {
+      "index": 12,
+      "word": "ho.",
+      "start": 3.96,
+      "end": 4.125,
+      "duration": 0.165
+    },
+    {
+      "index": 13,
+      "word": "Har",
+      "start": 4.144,
+      "end": 4.309,
+      "duration": 0.165
+    },
+    {
+      "index": 14,
+      "word": "shabd",
+      "start": 4.872,
+      "end": 5.173,
+      "duration": 0.301
+    },
+    {
+      "index": 15,
+      "word": "samajh",
+      "start": 5.207,
+      "end": 5.568,
+      "duration": 0.361
+    },
+    {
+      "index": 16,
+      "word": "rahe",
+      "start": 5.608,
+      "end": 5.849,
+      "duration": 0.241
+    },
+    {
+      "index": 17,
+      "word": "ho.",
+      "start": 5.875,
+      "end": 6.056,
+      "duration": 0.181
+    },
+    {
+      "index": 18,
+      "word": "Ye",
+      "start": 6.076,
+      "end": 6.197,
+      "duration": 0.12
+    },
+    {
+      "index": 19,
+      "word": "simple",
+      "start": 7.049,
+      "end": 7.378,
+      "duration": 0.329
+    },
+    {
+      "index": 20,
+      "word": "ability...",
+      "start": 7.414,
+      "end": 7.962,
+      "duration": 0.548
+    },
+    {
+      "index": 21,
+      "word": "teen",
+      "start": 8.023,
+      "end": 8.242,
+      "duration": 0.219
+    },
+    {
+      "index": 22,
+      "word": "lakh",
+      "start": 8.266,
+      "end": 8.486,
+      "duration": 0.219
+    },
+    {
+      "index": 23,
+      "word": "saal",
+      "start": 9.192,
+      "end": 9.415,
+      "duration": 0.223
+    },
+    {
+      "index": 24,
+      "word": "ki",
+      "start": 9.44,
+      "end": 9.552,
+      "duration": 0.112
+    },
+    {
+      "index": 25,
+      "word": "journey",
+      "start": 9.564,
+      "end": 9.955,
+      "duration": 0.391
+    },
+    {
+      "index": 26,
+      "word": "ka",
+      "start": 9.998,
+      "end": 10.11,
+      "duration": 0.112
+    },
+    {
+      "index": 27,
+      "word": "result",
+      "start": 10.122,
+      "end": 10.457,
+      "duration": 0.335
+    },
+    {
+      "index": 28,
+      "word": "hai!",
+      "start": 10.494,
+      "end": 10.717,
+      "duration": 0.223
+    },
+    {
+      "index": 29,
+      "word": "Neanderthals",
+      "start": 10.742,
+      "end": 11.412,
+      "duration": 0.67
+    },
+    {
+      "index": 30,
+      "word": "ke",
+      "start": 12.424,
+      "end": 12.539,
+      "duration": 0.115
+    },
+    {
+      "index": 31,
+      "word": "DNA",
+      "start": 12.552,
+      "end": 12.724,
+      "duration": 0.172
+    },
+    {
+      "index": 32,
+      "word": "mein",
+      "start": 12.743,
+      "end": 12.973,
+      "duration": 0.23
+    },
+    {
+      "index": 33,
+      "word": "wahi",
+      "start": 12.999,
+      "end": 13.229,
+      "duration": 0.23
+    },
+    {
+      "index": 34,
+      "word": "FOXP2",
+      "start": 13.255,
+      "end": 13.542,
+      "duration": 0.287
+    },
+    {
+      "index": 35,
+      "word": "gene",
+      "start": 13.574,
+      "end": 13.804,
+      "duration": 0.23
+    },
+    {
+      "index": 36,
+      "word": "tha.",
+      "start": 13.829,
+      "end": 14.059,
+      "duration": 0.23
+    },
+    {
+      "index": 37,
+      "word": "Unke",
+      "start": 14.437,
+      "end": 14.654,
+      "duration": 0.217
+    },
+    {
+      "index": 38,
+      "word": "gale",
+      "start": 14.678,
+      "end": 14.895,
+      "duration": 0.217
+    },
+    {
+      "index": 39,
+      "word": "mein",
+      "start": 14.919,
+      "end": 15.136,
+      "duration": 0.217
+    },
+    {
+      "index": 40,
+      "word": "wahi",
+      "start": 15.16,
+      "end": 15.377,
+      "duration": 0.217
+    },
+    {
+      "index": 41,
+      "word": "hyoid",
+      "start": 15.401,
+      "end": 15.673,
+      "duration": 0.271
+    },
+    {
+      "index": 42,
+      "word": "bone",
+      "start": 15.703,
+      "end": 15.92,
+      "duration": 0.217
+    },
+    {
+      "index": 43,
+      "word": "thi.",
+      "start": 15.944,
+      "end": 16.161,
+      "duration": 0.217
+    },
+    {
+      "index": 44,
+      "word": "Woh",
+      "start": 16.783,
+      "end": 16.951,
+      "duration": 0.168
+    },
+    {
+      "index": 45,
+      "word": "shayad...",
+      "start": 16.969,
+      "end": 17.472,
+      "duration": 0.503
+    },
+    {
+      "index": 46,
+      "word": "apni",
+      "start": 17.894,
+      "end": 18.126,
+      "duration": 0.232
+    },
+    {
+      "index": 47,
+      "word": "tarah...",
+      "start": 18.152,
+      "end": 18.617,
+      "duration": 0.465
+    },
+    {
+      "index": 48,
+      "word": "kuch",
+      "start": 18.669,
+      "end": 18.901,
+      "duration": 0.232
+    },
+    {
+      "index": 49,
+      "word": "bolte",
+      "start": 18.927,
+      "end": 19.218,
+      "duration": 0.291
+    },
+    {
+      "index": 50,
+      "word": "the.",
+      "start": 20.088,
+      "end": 20.292,
+      "duration": 0.204
+    },
+    {
+      "index": 51,
+      "word": "Phir",
+      "start": 20.315,
+      "end": 20.518,
+      "duration": 0.204
+    },
+    {
+      "index": 52,
+      "word": "woh",
+      "start": 20.541,
+      "end": 20.694,
+      "duration": 0.153
+    },
+    {
+      "index": 53,
+      "word": "gayab",
+      "start": 21.184,
+      "end": 21.422,
+      "duration": 0.238
+    },
+    {
+      "index": 54,
+      "word": "ho",
+      "start": 21.449,
+      "end": 21.544,
+      "duration": 0.095
+    },
+    {
+      "index": 55,
+      "word": "gaye.",
+      "start": 21.555,
+      "end": 21.793,
+      "duration": 0.238
+    },
+    {
+      "index": 56,
+      "word": "Aur",
+      "start": 21.82,
+      "end": 21.963,
+      "duration": 0.143
+    },
+    {
+      "index": 57,
+      "word": "unki",
+      "start": 21.978,
+      "end": 22.169,
+      "duration": 0.191
+    },
+    {
+      "index": 58,
+      "word": "awaazein",
+      "start": 22.19,
+      "end": 22.572,
+      "duration": 0.381
+    },
+    {
+      "index": 59,
+      "word": "hamesha",
+      "start": 23.774,
+      "end": 24.12,
+      "duration": 0.346
+    },
+    {
+      "index": 60,
+      "word": "ke",
+      "start": 25.081,
+      "end": 25.191,
+      "duration": 0.11
+    },
+    {
+      "index": 61,
+      "word": "liye",
+      "start": 25.203,
+      "end": 25.424,
+      "duration": 0.22
+    },
+    {
+      "index": 62,
+      "word": "khatam",
+      "start": 25.448,
+      "end": 25.778,
+      "duration": 0.33
+    },
+    {
+      "index": 63,
+      "word": "ho",
+      "start": 26.895,
+      "end": 27.122,
+      "duration": 0.227
+    },
+    {
+      "index": 64,
+      "word": "gayi.",
+      "start": 27.147,
+      "end": 27.714,
+      "duration": 0.567
+    }
+  ]
+}

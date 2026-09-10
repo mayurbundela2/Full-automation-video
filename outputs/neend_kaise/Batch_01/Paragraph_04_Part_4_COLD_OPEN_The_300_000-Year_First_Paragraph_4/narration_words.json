@@ -1,0 +1,167 @@
+{
+  "total_words": 23,
+  "total_duration": 9.36,
+  "words": [
+    {
+      "index": 1,
+      "word": "Teen",
+      "start": 0.311,
+      "end": 0.526,
+      "duration": 0.215
+    },
+    {
+      "index": 2,
+      "word": "lakh",
+      "start": 0.55,
+      "end": 0.765,
+      "duration": 0.215
+    },
+    {
+      "index": 3,
+      "word": "saal",
+      "start": 0.789,
+      "end": 1.004,
+      "duration": 0.215
+    },
+    {
+      "index": 4,
+      "word": "ki",
+      "start": 1.028,
+      "end": 1.135,
+      "duration": 0.108
+    },
+    {
+      "index": 5,
+      "word": "human",
+      "start": 1.147,
+      "end": 1.416,
+      "duration": 0.269
+    },
+    {
+      "index": 6,
+      "word": "history",
+      "start": 1.446,
+      "end": 1.822,
+      "duration": 0.376
+    },
+    {
+      "index": 7,
+      "word": "mein...",
+      "start": 1.864,
+      "end": 2.24,
+      "duration": 0.376
+    },
+    {
+      "index": 8,
+      "word": "pehli",
+      "start": 2.282,
+      "end": 2.551,
+      "duration": 0.269
+    },
+    {
+      "index": 9,
+      "word": "baar...",
+      "start": 3.194,
+      "end": 3.472,
+      "duration": 0.278
+    },
+    {
+      "index": 10,
+      "word": "ek",
+      "start": 3.503,
+      "end": 3.582,
+      "duration": 0.079
+    },
+    {
+      "index": 11,
+      "word": "poori",
+      "start": 3.591,
+      "end": 3.79,
+      "duration": 0.199
+    },
+    {
+      "index": 12,
+      "word": "generation",
+      "start": 4.09,
+      "end": 4.423,
+      "duration": 0.333
+    },
+    {
+      "index": 13,
+      "word": "itna",
+      "start": 4.703,
+      "end": 4.92,
+      "duration": 0.217
+    },
+    {
+      "index": 14,
+      "word": "kam",
+      "start": 4.945,
+      "end": 5.108,
+      "duration": 0.163
+    },
+    {
+      "index": 15,
+      "word": "so",
+      "start": 5.126,
+      "end": 5.235,
+      "duration": 0.109
+    },
+    {
+      "index": 16,
+      "word": "rahi",
+      "start": 5.247,
+      "end": 5.464,
+      "duration": 0.217
+    },
+    {
+      "index": 17,
+      "word": "hai.",
+      "start": 5.488,
+      "end": 5.706,
+      "duration": 0.217
+    },
+    {
+      "index": 18,
+      "word": "Aur",
+      "start": 5.933,
+      "end": 6.079,
+      "duration": 0.146
+    },
+    {
+      "index": 19,
+      "word": "ise",
+      "start": 6.095,
+      "end": 6.242,
+      "duration": 0.146
+    },
+    {
+      "index": 20,
+      "word": "normal",
+      "start": 6.258,
+      "end": 6.55,
+      "duration": 0.292
+    },
+    {
+      "index": 21,
+      "word": "maan",
+      "start": 6.583,
+      "end": 6.778,
+      "duration": 0.195
+    },
+    {
+      "index": 22,
+      "word": "rahi",
+      "start": 6.799,
+      "end": 6.994,
+      "duration": 0.195
+    },
+    {
+      "index": 23,
+      "word": "hai.",
+      "start": 7.488,
+      "end": 8.887,
+      "duration": 1.399
+    }
+  ]
+}

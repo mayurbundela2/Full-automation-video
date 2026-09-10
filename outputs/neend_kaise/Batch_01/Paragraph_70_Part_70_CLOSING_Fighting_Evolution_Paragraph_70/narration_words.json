@@ -1,0 +1,181 @@
+{
+  "total_words": 25,
+  "total_duration": 7.21,
+  "words": [
+    {
+      "index": 1,
+      "word": "Us",
+      "start": 0.299,
+      "end": 0.404,
+      "duration": 0.105
+    },
+    {
+      "index": 2,
+      "word": "moment",
+      "start": 0.415,
+      "end": 0.729,
+      "duration": 0.314
+    },
+    {
+      "index": 3,
+      "word": "mein",
+      "start": 0.764,
+      "end": 0.973,
+      "duration": 0.209
+    },
+    {
+      "index": 4,
+      "word": "tum",
+      "start": 0.997,
+      "end": 1.154,
+      "duration": 0.157
+    },
+    {
+      "index": 5,
+      "word": "sirf",
+      "start": 1.171,
+      "end": 1.38,
+      "duration": 0.209
+    },
+    {
+      "index": 6,
+      "word": "phone",
+      "start": 1.404,
+      "end": 1.665,
+      "duration": 0.262
+    },
+    {
+      "index": 7,
+      "word": "nahi",
+      "start": 1.694,
+      "end": 1.904,
+      "duration": 0.209
+    },
+    {
+      "index": 8,
+      "word": "use",
+      "start": 1.927,
+      "end": 2.084,
+      "duration": 0.157
+    },
+    {
+      "index": 9,
+      "word": "kar",
+      "start": 2.101,
+      "end": 2.258,
+      "duration": 0.157
+    },
+    {
+      "index": 10,
+      "word": "rahi",
+      "start": 2.276,
+      "end": 2.485,
+      "duration": 0.209
+    },
+    {
+      "index": 11,
+      "word": "thi.",
+      "start": 2.508,
+      "end": 2.718,
+      "duration": 0.209
+    },
+    {
+      "index": 12,
+      "word": "Tum",
+      "start": 3.184,
+      "end": 3.363,
+      "duration": 0.179
+    },
+    {
+      "index": 13,
+      "word": "apni",
+      "start": 3.383,
+      "end": 3.622,
+      "duration": 0.239
+    },
+    {
+      "index": 14,
+      "word": "species",
+      "start": 3.648,
+      "end": 4.066,
+      "duration": 0.418
+    },
+    {
+      "index": 15,
+      "word": "ki",
+      "start": 4.113,
+      "end": 4.232,
+      "duration": 0.119
+    },
+    {
+      "index": 16,
+      "word": "teen",
+      "start": 4.246,
+      "end": 4.484,
+      "duration": 0.239
+    },
+    {
+      "index": 17,
+      "word": "lakh",
+      "start": 4.511,
+      "end": 4.75,
+      "duration": 0.239
+    },
+    {
+      "index": 18,
+      "word": "saal",
+      "start": 4.776,
+      "end": 5.015,
+      "duration": 0.239
+    },
+    {
+      "index": 19,
+      "word": "ki",
+      "start": 5.042,
+      "end": 5.161,
+      "duration": 0.119
+    },
+    {
+      "index": 20,
+      "word": "evolution",
+      "start": 5.174,
+      "end": 5.712,
+      "duration": 0.537
+    },
+    {
+      "index": 21,
+      "word": "ke",
+      "start": 5.771,
+      "end": 5.891,
+      "duration": 0.119
+    },
+    {
+      "index": 22,
+      "word": "against",
+      "start": 5.904,
+      "end": 6.322,
+      "duration": 0.418
+    },
+    {
+      "index": 23,
+      "word": "ja",
+      "start": 6.369,
+      "end": 6.488,
+      "duration": 0.119
+    },
+    {
+      "index": 24,
+      "word": "rahi",
+      "start": 6.501,
+      "end": 6.74,
+      "duration": 0.239
+    },
+    {
+      "index": 25,
+      "word": "thi.",
+      "start": 6.767,
+      "end": 7.005,
+      "duration": 0.239
+    }
+  ]
+}

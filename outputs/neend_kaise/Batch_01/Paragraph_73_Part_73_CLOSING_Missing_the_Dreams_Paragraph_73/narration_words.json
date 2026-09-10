@@ -1,0 +1,153 @@
+{
+  "total_words": 21,
+  "total_duration": 7.65,
+  "words": [
+    {
+      "index": 1,
+      "word": "Tum",
+      "start": 0.298,
+      "end": 0.465,
+      "duration": 0.167
+    },
+    {
+      "index": 2,
+      "word": "wo",
+      "start": 0.483,
+      "end": 0.595,
+      "duration": 0.111
+    },
+    {
+      "index": 3,
+      "word": "dreams",
+      "start": 0.607,
+      "end": 0.941,
+      "duration": 0.334
+    },
+    {
+      "index": 4,
+      "word": "miss",
+      "start": 0.978,
+      "end": 1.2,
+      "duration": 0.222
+    },
+    {
+      "index": 5,
+      "word": "kar",
+      "start": 1.225,
+      "end": 1.392,
+      "duration": 0.167
+    },
+    {
+      "index": 6,
+      "word": "rahi",
+      "start": 1.41,
+      "end": 1.633,
+      "duration": 0.222
+    },
+    {
+      "index": 7,
+      "word": "thi",
+      "start": 1.657,
+      "end": 1.824,
+      "duration": 0.167
+    },
+    {
+      "index": 8,
+      "word": "jo",
+      "start": 1.843,
+      "end": 1.954,
+      "duration": 0.111
+    },
+    {
+      "index": 9,
+      "word": "tumhare",
+      "start": 1.966,
+      "end": 2.356,
+      "duration": 0.389
+    },
+    {
+      "index": 10,
+      "word": "brain",
+      "start": 2.887,
+      "end": 3.19,
+      "duration": 0.303
+    },
+    {
+      "index": 11,
+      "word": "ko",
+      "start": 3.223,
+      "end": 3.344,
+      "duration": 0.121
+    },
+    {
+      "index": 12,
+      "word": "survival",
+      "start": 3.358,
+      "end": 3.842,
+      "duration": 0.484
+    },
+    {
+      "index": 13,
+      "word": "ke",
+      "start": 3.896,
+      "end": 4.017,
+      "duration": 0.121
+    },
+    {
+      "index": 14,
+      "word": "liye",
+      "start": 4.031,
+      "end": 4.273,
+      "duration": 0.242
+    },
+    {
+      "index": 15,
+      "word": "prepare",
+      "start": 4.3,
+      "end": 4.724,
+      "duration": 0.424
+    },
+    {
+      "index": 16,
+      "word": "karte",
+      "start": 4.771,
+      "end": 5.073,
+      "duration": 0.303
+    },
+    {
+      "index": 17,
+      "word": "hain...",
+      "start": 5.107,
+      "end": 5.531,
+      "duration": 0.424
+    },
+    {
+      "index": 18,
+      "word": "teen",
+      "start": 5.578,
+      "end": 5.82,
+      "duration": 0.242
+    },
+    {
+      "index": 19,
+      "word": "lakh",
+      "start": 6.44,
+      "end": 6.836,
+      "duration": 0.396
+    },
+    {
+      "index": 20,
+      "word": "saal",
+      "start": 6.88,
+      "end": 7.276,
+      "duration": 0.396
+    },
+    {
+      "index": 21,
+      "word": "se.",
+      "start": 7.32,
+      "end": 7.617,
+      "duration": 0.297
+    }
+  ]
+}

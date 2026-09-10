@@ -1,0 +1,132 @@
+{
+  "total_words": 18,
+  "total_duration": 8.09,
+  "words": [
+    {
+      "index": 1,
+      "word": "Tumhare",
+      "start": 0.271,
+      "end": 0.645,
+      "duration": 0.374
+    },
+    {
+      "index": 2,
+      "word": "body",
+      "start": 0.687,
+      "end": 0.901,
+      "duration": 0.214
+    },
+    {
+      "index": 3,
+      "word": "ke",
+      "start": 0.925,
+      "end": 1.032,
+      "duration": 0.107
+    },
+    {
+      "index": 4,
+      "word": "har",
+      "start": 1.043,
+      "end": 1.204,
+      "duration": 0.16
+    },
+    {
+      "index": 5,
+      "word": "cell",
+      "start": 1.222,
+      "end": 1.436,
+      "duration": 0.214
+    },
+    {
+      "index": 6,
+      "word": "mein",
+      "start": 1.459,
+      "end": 1.673,
+      "duration": 0.214
+    },
+    {
+      "index": 7,
+      "word": "ek",
+      "start": 1.697,
+      "end": 1.804,
+      "duration": 0.107
+    },
+    {
+      "index": 8,
+      "word": "internal",
+      "start": 2.026,
+      "end": 2.436,
+      "duration": 0.41
+    },
+    {
+      "index": 9,
+      "word": "clock",
+      "start": 2.482,
+      "end": 2.738,
+      "duration": 0.256
+    },
+    {
+      "index": 10,
+      "word": "hai.",
+      "start": 2.766,
+      "end": 2.971,
+      "duration": 0.205
+    },
+    {
+      "index": 11,
+      "word": "Iska",
+      "start": 2.994,
+      "end": 3.199,
+      "duration": 0.205
+    },
+    {
+      "index": 12,
+      "word": "scientific",
+      "start": 3.607,
+      "end": 4.127,
+      "duration": 0.52
+    },
+    {
+      "index": 13,
+      "word": "naam",
+      "start": 4.185,
+      "end": 4.393,
+      "duration": 0.208
+    },
+    {
+      "index": 14,
+      "word": "hai...",
+      "start": 4.416,
+      "end": 4.728,
+      "duration": 0.312
+    },
+    {
+      "index": 15,
+      "word": "circadian",
+      "start": 5.111,
+      "end": 5.589,
+      "duration": 0.478
+    },
+    {
+      "index": 16,
+      "word": "rhythm.",
+      "start": 5.642,
+      "end": 6.014,
+      "duration": 0.372
+    },
+    {
+      "index": 17,
+      "word": "Twenty-four-hour",
+      "start": 6.684,
+      "end": 7.604,
+      "duration": 0.92
+    },
+    {
+      "index": 18,
+      "word": "cycle.",
+      "start": 7.707,
+      "end": 8.052,
+      "duration": 0.345
+    }
+  ]
+}

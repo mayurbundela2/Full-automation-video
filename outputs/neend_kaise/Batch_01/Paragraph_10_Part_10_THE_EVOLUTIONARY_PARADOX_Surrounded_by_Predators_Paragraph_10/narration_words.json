@@ -1,0 +1,174 @@
+{
+  "total_words": 24,
+  "total_duration": 11.96,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.295,
+      "end": 0.477,
+      "duration": 0.182
+    },
+    {
+      "index": 2,
+      "word": "unke",
+      "start": 0.497,
+      "end": 0.74,
+      "duration": 0.243
+    },
+    {
+      "index": 3,
+      "word": "around",
+      "start": 0.767,
+      "end": 1.13,
+      "duration": 0.364
+    },
+    {
+      "index": 4,
+      "word": "the...",
+      "start": 1.171,
+      "end": 1.535,
+      "duration": 0.364
+    },
+    {
+      "index": 5,
+      "word": "sher,",
+      "start": 1.886,
+      "end": 2.128,
+      "duration": 0.242
+    },
+    {
+      "index": 6,
+      "word": "tendua,",
+      "start": 2.155,
+      "end": 2.494,
+      "duration": 0.339
+    },
+    {
+      "index": 7,
+      "word": "saanp,",
+      "start": 2.957,
+      "end": 3.368,
+      "duration": 0.411
+    },
+    {
+      "index": 8,
+      "word": "aur",
+      "start": 3.413,
+      "end": 3.619,
+      "duration": 0.205
+    },
+    {
+      "index": 9,
+      "word": "kabhi",
+      "start": 3.641,
+      "end": 3.984,
+      "duration": 0.342
+    },
+    {
+      "index": 10,
+      "word": "kabhi",
+      "start": 4.022,
+      "end": 4.364,
+      "duration": 0.342
+    },
+    {
+      "index": 11,
+      "word": "doosre",
+      "start": 4.402,
+      "end": 4.812,
+      "duration": 0.411
+    },
+    {
+      "index": 12,
+      "word": "humans",
+      "start": 4.858,
+      "end": 5.269,
+      "duration": 0.411
+    },
+    {
+      "index": 13,
+      "word": "jo",
+      "start": 5.314,
+      "end": 5.451,
+      "duration": 0.137
+    },
+    {
+      "index": 14,
+      "word": "unhe",
+      "start": 5.466,
+      "end": 5.74,
+      "duration": 0.274
+    },
+    {
+      "index": 15,
+      "word": "maar",
+      "start": 5.771,
+      "end": 6.044,
+      "duration": 0.274
+    },
+    {
+      "index": 16,
+      "word": "sakte",
+      "start": 6.075,
+      "end": 6.417,
+      "duration": 0.342
+    },
+    {
+      "index": 17,
+      "word": "the.",
+      "start": 6.455,
+      "end": 6.729,
+      "duration": 0.274
+    },
+    {
+      "index": 18,
+      "word": "Ab",
+      "start": 6.759,
+      "end": 6.896,
+      "duration": 0.137
+    },
+    {
+      "index": 19,
+      "word": "is",
+      "start": 6.911,
+      "end": 7.048,
+      "duration": 0.137
+    },
+    {
+      "index": 20,
+      "word": "situation",
+      "start": 7.063,
+      "end": 7.679,
+      "duration": 0.616
+    },
+    {
+      "index": 21,
+      "word": "mein...",
+      "start": 7.748,
+      "end": 8.227,
+      "duration": 0.479
+    },
+    {
+      "index": 22,
+      "word": "tum",
+      "start": 8.658,
+      "end": 8.952,
+      "duration": 0.294
+    },
+    {
+      "index": 23,
+      "word": "kya",
+      "start": 8.985,
+      "end": 9.279,
+      "duration": 0.294
+    },
+    {
+      "index": 24,
+      "word": "karoge?",
+      "start": 9.312,
+      "end": 9.998,
+      "duration": 0.686
+    }
+  ]
+}

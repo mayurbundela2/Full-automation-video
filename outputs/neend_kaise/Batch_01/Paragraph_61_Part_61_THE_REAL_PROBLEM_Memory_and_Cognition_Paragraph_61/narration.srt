@@ -1,0 +1,28 @@
+1
+00:00:00,267 --> 00:00:01,143
+REM sleep skip karne
+
+2
+00:00:01,163 --> 00:00:02,860
+se long-term memory formation
+
+3
+00:00:02,880 --> 00:00:03,673
+weak ho jaati hai.
+
+4
+00:00:03,693 --> 00:00:05,545
+Tumhe lagta hai concentration
+
+5
+00:00:05,565 --> 00:00:06,313
+nahi ho pa raha...
+
+6
+00:00:06,333 --> 00:00:07,596
+actual mein neend ki
+
+7
+00:00:07,914 --> 00:00:08,693
+kami hai.
+

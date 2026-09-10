@@ -1,0 +1,139 @@
+{
+  "total_words": 19,
+  "total_duration": 5.25,
+  "words": [
+    {
+      "index": 1,
+      "word": "Tumhara",
+      "start": 0.0,
+      "end": 0.38,
+      "duration": 0.38
+    },
+    {
+      "index": 2,
+      "word": "ancient",
+      "start": 0.422,
+      "end": 0.803,
+      "duration": 0.38
+    },
+    {
+      "index": 3,
+      "word": "brain",
+      "start": 0.845,
+      "end": 1.116,
+      "duration": 0.272
+    },
+    {
+      "index": 4,
+      "word": "jo",
+      "start": 1.147,
+      "end": 1.255,
+      "duration": 0.109
+    },
+    {
+      "index": 5,
+      "word": "ye",
+      "start": 1.267,
+      "end": 1.376,
+      "duration": 0.109
+    },
+    {
+      "index": 6,
+      "word": "light",
+      "start": 1.388,
+      "end": 1.659,
+      "duration": 0.272
+    },
+    {
+      "index": 7,
+      "word": "dekhta",
+      "start": 1.69,
+      "end": 2.016,
+      "duration": 0.326
+    },
+    {
+      "index": 8,
+      "word": "hai...",
+      "start": 2.052,
+      "end": 2.378,
+      "duration": 0.326
+    },
+    {
+      "index": 9,
+      "word": "samajhta",
+      "start": 2.414,
+      "end": 2.848,
+      "duration": 0.434
+    },
+    {
+      "index": 10,
+      "word": "hai",
+      "start": 2.897,
+      "end": 3.059,
+      "duration": 0.163
+    },
+    {
+      "index": 11,
+      "word": "arey,",
+      "start": 3.078,
+      "end": 3.349,
+      "duration": 0.272
+    },
+    {
+      "index": 12,
+      "word": "subah",
+      "start": 3.379,
+      "end": 3.651,
+      "duration": 0.272
+    },
+    {
+      "index": 13,
+      "word": "ho",
+      "start": 3.681,
+      "end": 3.79,
+      "duration": 0.109
+    },
+    {
+      "index": 14,
+      "word": "gayi,",
+      "start": 3.802,
+      "end": 4.073,
+      "duration": 0.272
+    },
+    {
+      "index": 15,
+      "word": "uth",
+      "start": 4.103,
+      "end": 4.266,
+      "duration": 0.163
+    },
+    {
+      "index": 16,
+      "word": "jao,",
+      "start": 4.284,
+      "end": 4.502,
+      "duration": 0.217
+    },
+    {
+      "index": 17,
+      "word": "active",
+      "start": 4.526,
+      "end": 4.852,
+      "duration": 0.326
+    },
+    {
+      "index": 18,
+      "word": "ho",
+      "start": 4.888,
+      "end": 4.997,
+      "duration": 0.109
+    },
+    {
+      "index": 19,
+      "word": "jao!",
+      "start": 5.009,
+      "end": 5.226,
+      "duration": 0.217
+    }
+  ]
+}

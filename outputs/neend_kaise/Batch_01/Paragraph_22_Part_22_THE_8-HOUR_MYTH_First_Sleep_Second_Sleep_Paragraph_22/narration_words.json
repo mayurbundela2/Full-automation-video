@@ -1,0 +1,146 @@
+{
+  "total_words": 20,
+  "total_duration": 7.88,
+  "words": [
+    {
+      "index": 1,
+      "word": "Log",
+      "start": 0.312,
+      "end": 0.493,
+      "duration": 0.181
+    },
+    {
+      "index": 2,
+      "word": "do",
+      "start": 0.513,
+      "end": 0.633,
+      "duration": 0.12
+    },
+    {
+      "index": 3,
+      "word": "sau",
+      "start": 0.646,
+      "end": 0.827,
+      "duration": 0.181
+    },
+    {
+      "index": 4,
+      "word": "saal",
+      "start": 0.847,
+      "end": 1.088,
+      "duration": 0.241
+    },
+    {
+      "index": 5,
+      "word": "pehle",
+      "start": 1.115,
+      "end": 1.416,
+      "duration": 0.301
+    },
+    {
+      "index": 6,
+      "word": "do",
+      "start": 1.449,
+      "end": 1.569,
+      "duration": 0.12
+    },
+    {
+      "index": 7,
+      "word": "phases",
+      "start": 1.583,
+      "end": 1.944,
+      "duration": 0.361
+    },
+    {
+      "index": 8,
+      "word": "mein",
+      "start": 2.173,
+      "end": 2.41,
+      "duration": 0.237
+    },
+    {
+      "index": 9,
+      "word": "sote",
+      "start": 2.437,
+      "end": 2.674,
+      "duration": 0.237
+    },
+    {
+      "index": 10,
+      "word": "the.",
+      "start": 2.7,
+      "end": 2.937,
+      "duration": 0.237
+    },
+    {
+      "index": 11,
+      "word": "Isko",
+      "start": 2.964,
+      "end": 3.201,
+      "duration": 0.237
+    },
+    {
+      "index": 12,
+      "word": "first",
+      "start": 3.227,
+      "end": 3.524,
+      "duration": 0.297
+    },
+    {
+      "index": 13,
+      "word": "sleep",
+      "start": 3.86,
+      "end": 4.202,
+      "duration": 0.342
+    },
+    {
+      "index": 14,
+      "word": "aur",
+      "start": 4.241,
+      "end": 4.446,
+      "duration": 0.205
+    },
+    {
+      "index": 15,
+      "word": "second",
+      "start": 4.469,
+      "end": 4.88,
+      "duration": 0.411
+    },
+    {
+      "index": 16,
+      "word": "sleep",
+      "start": 4.925,
+      "end": 5.268,
+      "duration": 0.342
+    },
+    {
+      "index": 17,
+      "word": "kaha",
+      "start": 5.306,
+      "end": 5.58,
+      "duration": 0.274
+    },
+    {
+      "index": 18,
+      "word": "jaata",
+      "start": 5.61,
+      "end": 5.953,
+      "duration": 0.342
+    },
+    {
+      "index": 19,
+      "word": "tha.",
+      "start": 5.991,
+      "end": 6.265,
+      "duration": 0.274
+    },
+    {
+      "index": 20,
+      "word": "Kaise?",
+      "start": 6.295,
+      "end": 6.706,
+      "duration": 0.411
+    }
+  ]
+}

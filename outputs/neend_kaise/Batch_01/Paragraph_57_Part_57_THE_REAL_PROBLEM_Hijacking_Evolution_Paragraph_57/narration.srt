@@ -1,0 +1,32 @@
+1
+00:00:00,233 --> 00:00:01,368
+Kyunki tumne apni body
+
+2
+00:00:01,388 --> 00:00:02,219
+ki teen lakh saal
+
+3
+00:00:02,239 --> 00:00:03,677
+purani programming ko force
+
+4
+00:00:03,697 --> 00:00:05,011
+fully hijack kar liya
+
+5
+00:00:05,031 --> 00:00:05,842
+hai. Phone ka blue
+
+6
+00:00:06,390 --> 00:00:08,374
+light... ye specifically sunrise
+
+7
+00:00:08,394 --> 00:00:10,181
+ka wavelength match karta
+
+8
+00:00:10,201 --> 00:00:10,497
+hai.
+

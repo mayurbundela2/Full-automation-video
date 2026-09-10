@@ -40,13 +40,7 @@ env/
 backend.db
 app.db
 
-# Audio & Video outputs
-outputs/
-*.wav
-*.mp3
-*.mp4
-*.srt
-*.vtt
+# Mobile builds
 *.apk
 
 # Node & Frontend
@@ -68,6 +62,7 @@ htmlcov/
 .system_generated/
 .tempmediaStorage/
 .DS_Store
+**/.DS_Store
 .idea/
 .vscode/
 ai_studio_profile/

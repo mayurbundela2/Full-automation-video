@@ -1,0 +1,363 @@
+{
+  "total_words": 51,
+  "total_duration": 22.08,
+  "words": [
+    {
+      "index": 1,
+      "word": "Russian",
+      "start": 0.266,
+      "end": 0.568,
+      "duration": 0.302
+    },
+    {
+      "index": 2,
+      "word": "mein",
+      "start": 0.602,
+      "end": 0.774,
+      "duration": 0.173
+    },
+    {
+      "index": 3,
+      "word": "light",
+      "start": 0.793,
+      "end": 1.009,
+      "duration": 0.216
+    },
+    {
+      "index": 4,
+      "word": "blue",
+      "start": 1.308,
+      "end": 1.549,
+      "duration": 0.241
+    },
+    {
+      "index": 5,
+      "word": "aur",
+      "start": 1.575,
+      "end": 1.756,
+      "duration": 0.181
+    },
+    {
+      "index": 6,
+      "word": "dark",
+      "start": 1.776,
+      "end": 2.017,
+      "duration": 0.241
+    },
+    {
+      "index": 7,
+      "word": "blue",
+      "start": 2.044,
+      "end": 2.284,
+      "duration": 0.241
+    },
+    {
+      "index": 8,
+      "word": "ke",
+      "start": 2.311,
+      "end": 2.431,
+      "duration": 0.12
+    },
+    {
+      "index": 9,
+      "word": "liye",
+      "start": 2.445,
+      "end": 2.686,
+      "duration": 0.241
+    },
+    {
+      "index": 10,
+      "word": "do",
+      "start": 2.712,
+      "end": 2.833,
+      "duration": 0.12
+    },
+    {
+      "index": 11,
+      "word": "alag",
+      "start": 2.846,
+      "end": 3.087,
+      "duration": 0.241
+    },
+    {
+      "index": 12,
+      "word": "words",
+      "start": 3.113,
+      "end": 3.414,
+      "duration": 0.301
+    },
+    {
+      "index": 13,
+      "word": "hain...",
+      "start": 3.448,
+      "end": 3.869,
+      "duration": 0.421
+    },
+    {
+      "index": 14,
+      "word": "isiliye",
+      "start": 3.916,
+      "end": 4.337,
+      "duration": 0.421
+    },
+    {
+      "index": 15,
+      "word": "wo",
+      "start": 4.899,
+      "end": 4.992,
+      "duration": 0.093
+    },
+    {
+      "index": 16,
+      "word": "unhe",
+      "start": 5.002,
+      "end": 5.189,
+      "duration": 0.186
+    },
+    {
+      "index": 17,
+      "word": "tez",
+      "start": 5.209,
+      "end": 5.349,
+      "duration": 0.14
+    },
+    {
+      "index": 18,
+      "word": "identify",
+      "start": 5.364,
+      "end": 5.737,
+      "duration": 0.372
+    },
+    {
+      "index": 19,
+      "word": "karte",
+      "start": 5.953,
+      "end": 6.196,
+      "duration": 0.243
+    },
+    {
+      "index": 20,
+      "word": "hain.",
+      "start": 6.223,
+      "end": 6.466,
+      "duration": 0.243
+    },
+    {
+      "index": 21,
+      "word": "Australian",
+      "start": 6.493,
+      "end": 6.979,
+      "duration": 0.486
+    },
+    {
+      "index": 22,
+      "word": "aboriginal",
+      "start": 7.635,
+      "end": 8.222,
+      "duration": 0.587
+    },
+    {
+      "index": 23,
+      "word": "language",
+      "start": 8.288,
+      "end": 8.758,
+      "duration": 0.47
+    },
+    {
+      "index": 24,
+      "word": "Guugu",
+      "start": 8.81,
+      "end": 9.103,
+      "duration": 0.294
+    },
+    {
+      "index": 25,
+      "word": "Yimithirr",
+      "start": 9.136,
+      "end": 9.665,
+      "duration": 0.529
+    },
+    {
+      "index": 26,
+      "word": "mein",
+      "start": 9.723,
+      "end": 9.958,
+      "duration": 0.235
+    },
+    {
+      "index": 27,
+      "word": "left-right",
+      "start": 9.984,
+      "end": 10.572,
+      "duration": 0.587
+    },
+    {
+      "index": 28,
+      "word": "nahi",
+      "start": 10.637,
+      "end": 10.872,
+      "duration": 0.235
+    },
+    {
+      "index": 29,
+      "word": "hota...",
+      "start": 10.898,
+      "end": 11.309,
+      "duration": 0.411
+    },
+    {
+      "index": 30,
+      "word": "sab",
+      "start": 11.355,
+      "end": 11.531,
+      "duration": 0.176
+    },
+    {
+      "index": 31,
+      "word": "north,",
+      "start": 11.551,
+      "end": 11.903,
+      "duration": 0.352
+    },
+    {
+      "index": 32,
+      "word": "south,",
+      "start": 11.942,
+      "end": 12.295,
+      "duration": 0.352
+    },
+    {
+      "index": 33,
+      "word": "east,",
+      "start": 12.538,
+      "end": 12.828,
+      "duration": 0.29
+    },
+    {
+      "index": 34,
+      "word": "west",
+      "start": 12.86,
+      "end": 13.092,
+      "duration": 0.232
+    },
+    {
+      "index": 35,
+      "word": "hota",
+      "start": 13.118,
+      "end": 13.35,
+      "duration": 0.232
+    },
+    {
+      "index": 36,
+      "word": "hai!",
+      "start": 13.375,
+      "end": 13.607,
+      "duration": 0.232
+    },
+    {
+      "index": 37,
+      "word": "Unka",
+      "start": 13.633,
+      "end": 13.865,
+      "duration": 0.232
+    },
+    {
+      "index": 38,
+      "word": "sense",
+      "start": 13.891,
+      "end": 14.18,
+      "duration": 0.29
+    },
+    {
+      "index": 39,
+      "word": "of",
+      "start": 14.213,
+      "end": 14.328,
+      "duration": 0.116
+    },
+    {
+      "index": 40,
+      "word": "direction",
+      "start": 14.341,
+      "end": 14.863,
+      "duration": 0.522
+    },
+    {
+      "index": 41,
+      "word": "humse",
+      "start": 14.921,
+      "end": 15.211,
+      "duration": 0.29
+    },
+    {
+      "index": 42,
+      "word": "behtar",
+      "start": 15.886,
+      "end": 16.228,
+      "duration": 0.342
+    },
+    {
+      "index": 43,
+      "word": "hai...",
+      "start": 16.266,
+      "end": 16.609,
+      "duration": 0.342
+    },
+    {
+      "index": 44,
+      "word": "Har",
+      "start": 16.647,
+      "end": 16.818,
+      "duration": 0.171
+    },
+    {
+      "index": 45,
+      "word": "language...",
+      "start": 16.837,
+      "end": 17.465,
+      "duration": 0.628
+    },
+    {
+      "index": 46,
+      "word": "alag",
+      "start": 17.535,
+      "end": 17.763,
+      "duration": 0.228
+    },
+    {
+      "index": 47,
+      "word": "tarah",
+      "start": 17.788,
+      "end": 18.074,
+      "duration": 0.285
+    },
+    {
+      "index": 48,
+      "word": "se",
+      "start": 18.106,
+      "end": 18.22,
+      "duration": 0.114
+    },
+    {
+      "index": 49,
+      "word": "soch",
+      "start": 18.232,
+      "end": 18.461,
+      "duration": 0.228
+    },
+    {
+      "index": 50,
+      "word": "banati",
+      "start": 19.078,
+      "end": 19.592,
+      "duration": 0.514
+    },
+    {
+      "index": 51,
+      "word": "hai.",
+      "start": 19.649,
+      "end": 19.991,
+      "duration": 0.342
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "total_words": 34,
+  "total_duration": 15.24,
+  "words": [
+    {
+      "index": 1,
+      "word": "Har",
+      "start": 0.732,
+      "end": 0.926,
+      "duration": 0.194
+    },
+    {
+      "index": 2,
+      "word": "raat,",
+      "start": 0.948,
+      "end": 1.271,
+      "duration": 0.324
+    },
+    {
+      "index": 3,
+      "word": "jab",
+      "start": 1.307,
+      "end": 1.501,
+      "duration": 0.194
+    },
+    {
+      "index": 4,
+      "word": "tum",
+      "start": 1.823,
+      "end": 2.018,
+      "duration": 0.195
+    },
+    {
+      "index": 5,
+      "word": "gehri",
+      "start": 2.039,
+      "end": 2.364,
+      "duration": 0.324
+    },
+    {
+      "index": 6,
+      "word": "neend",
+      "start": 2.4,
+      "end": 2.724,
+      "duration": 0.324
+    },
+    {
+      "index": 7,
+      "word": "mein",
+      "start": 2.76,
+      "end": 3.02,
+      "duration": 0.26
+    },
+    {
+      "index": 8,
+      "word": "hote",
+      "start": 3.048,
+      "end": 3.308,
+      "duration": 0.26
+    },
+    {
+      "index": 9,
+      "word": "ho,",
+      "start": 3.337,
+      "end": 3.531,
+      "duration": 0.195
+    },
+    {
+      "index": 10,
+      "word": "tumhare",
+      "start": 3.834,
+      "end": 4.225,
+      "duration": 0.391
+    },
+    {
+      "index": 11,
+      "word": "brain",
+      "start": 4.268,
+      "end": 4.547,
+      "duration": 0.279
+    },
+    {
+      "index": 12,
+      "word": "mein",
+      "start": 4.578,
+      "end": 4.801,
+      "duration": 0.223
+    },
+    {
+      "index": 13,
+      "word": "ek",
+      "start": 4.826,
+      "end": 4.938,
+      "duration": 0.112
+    },
+    {
+      "index": 14,
+      "word": "phase",
+      "start": 4.95,
+      "end": 5.229,
+      "duration": 0.279
+    },
+    {
+      "index": 15,
+      "word": "aata",
+      "start": 5.26,
+      "end": 5.483,
+      "duration": 0.223
+    },
+    {
+      "index": 16,
+      "word": "hai...",
+      "start": 5.508,
+      "end": 5.843,
+      "duration": 0.335
+    },
+    {
+      "index": 17,
+      "word": "REM",
+      "start": 6.352,
+      "end": 6.524,
+      "duration": 0.172
+    },
+    {
+      "index": 18,
+      "word": "sleep.",
+      "start": 6.543,
+      "end": 6.888,
+      "duration": 0.344
+    },
+    {
+      "index": 19,
+      "word": "Rapid",
+      "start": 6.926,
+      "end": 7.213,
+      "duration": 0.287
+    },
+    {
+      "index": 20,
+      "word": "Eye",
+      "start": 7.63,
+      "end": 7.786,
+      "duration": 0.156
+    },
+    {
+      "index": 21,
+      "word": "Movement.",
+      "start": 7.803,
+      "end": 8.27,
+      "duration": 0.467
+    },
+    {
+      "index": 22,
+      "word": "Is",
+      "start": 8.322,
+      "end": 8.426,
+      "duration": 0.104
+    },
+    {
+      "index": 23,
+      "word": "phase",
+      "start": 8.438,
+      "end": 8.697,
+      "duration": 0.26
+    },
+    {
+      "index": 24,
+      "word": "mein...",
+      "start": 8.726,
+      "end": 9.09,
+      "duration": 0.363
+    },
+    {
+      "index": 25,
+      "word": "tumhari",
+      "start": 9.815,
+      "end": 10.359,
+      "duration": 0.544
+    },
+    {
+      "index": 26,
+      "word": "aankhein",
+      "start": 10.42,
+      "end": 11.042,
+      "duration": 0.622
+    },
+    {
+      "index": 27,
+      "word": "closed",
+      "start": 11.111,
+      "end": 11.578,
+      "duration": 0.467
+    },
+    {
+      "index": 28,
+      "word": "hone",
+      "start": 11.63,
+      "end": 11.941,
+      "duration": 0.311
+    },
+    {
+      "index": 29,
+      "word": "ke",
+      "start": 11.976,
+      "end": 12.131,
+      "duration": 0.156
+    },
+    {
+      "index": 30,
+      "word": "bawajood...",
+      "start": 12.148,
+      "end": 13.004,
+      "duration": 0.856
+    },
+    {
+      "index": 31,
+      "word": "rapidly",
+      "start": 13.099,
+      "end": 13.644,
+      "duration": 0.544
+    },
+    {
+      "index": 32,
+      "word": "move",
+      "start": 13.704,
+      "end": 14.015,
+      "duration": 0.311
+    },
+    {
+      "index": 33,
+      "word": "karti",
+      "start": 14.05,
+      "end": 14.439,
+      "duration": 0.389
+    },
+    {
+      "index": 34,
+      "word": "hain.",
+      "start": 14.482,
+      "end": 14.871,
+      "duration": 0.389
+    }
+  ]
+}

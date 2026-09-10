@@ -1,0 +1,335 @@
+{
+  "total_words": 47,
+  "total_duration": 18.56,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 0.296,
+      "end": 0.587,
+      "duration": 0.291
+    },
+    {
+      "index": 2,
+      "word": "scientists",
+      "start": 0.619,
+      "end": 1.201,
+      "duration": 0.582
+    },
+    {
+      "index": 3,
+      "word": "khud",
+      "start": 1.266,
+      "end": 1.499,
+      "duration": 0.233
+    },
+    {
+      "index": 4,
+      "word": "zyada",
+      "start": 1.525,
+      "end": 1.816,
+      "duration": 0.291
+    },
+    {
+      "index": 5,
+      "word": "cautious",
+      "start": 1.848,
+      "end": 2.314,
+      "duration": 0.466
+    },
+    {
+      "index": 6,
+      "word": "the.",
+      "start": 2.365,
+      "end": 2.598,
+      "duration": 0.233
+    },
+    {
+      "index": 7,
+      "word": "Kyunki",
+      "start": 2.624,
+      "end": 2.973,
+      "duration": 0.349
+    },
+    {
+      "index": 8,
+      "word": "further",
+      "start": 3.432,
+      "end": 3.814,
+      "duration": 0.382
+    },
+    {
+      "index": 9,
+      "word": "research",
+      "start": 3.856,
+      "end": 4.293,
+      "duration": 0.436
+    },
+    {
+      "index": 10,
+      "word": "mein",
+      "start": 4.341,
+      "end": 4.559,
+      "duration": 0.218
+    },
+    {
+      "index": 11,
+      "word": "pata",
+      "start": 4.584,
+      "end": 4.802,
+      "duration": 0.218
+    },
+    {
+      "index": 12,
+      "word": "chala...",
+      "start": 4.826,
+      "end": 5.263,
+      "duration": 0.436
+    },
+    {
+      "index": 13,
+      "word": "FOXP2",
+      "start": 5.532,
+      "end": 5.826,
+      "duration": 0.294
+    },
+    {
+      "index": 14,
+      "word": "sirf",
+      "start": 5.858,
+      "end": 6.093,
+      "duration": 0.235
+    },
+    {
+      "index": 15,
+      "word": "language",
+      "start": 6.12,
+      "end": 6.59,
+      "duration": 0.47
+    },
+    {
+      "index": 16,
+      "word": "ka",
+      "start": 6.642,
+      "end": 6.759,
+      "duration": 0.118
+    },
+    {
+      "index": 17,
+      "word": "gene",
+      "start": 6.772,
+      "end": 7.007,
+      "duration": 0.235
+    },
+    {
+      "index": 18,
+      "word": "nahi",
+      "start": 7.033,
+      "end": 7.268,
+      "duration": 0.235
+    },
+    {
+      "index": 19,
+      "word": "hai.",
+      "start": 7.295,
+      "end": 7.53,
+      "duration": 0.235
+    },
+    {
+      "index": 20,
+      "word": "Ye",
+      "start": 7.556,
+      "end": 7.673,
+      "duration": 0.118
+    },
+    {
+      "index": 21,
+      "word": "chuhon",
+      "start": 7.686,
+      "end": 8.039,
+      "duration": 0.353
+    },
+    {
+      "index": 22,
+      "word": "mein",
+      "start": 8.078,
+      "end": 8.313,
+      "duration": 0.235
+    },
+    {
+      "index": 23,
+      "word": "bhi",
+      "start": 8.709,
+      "end": 8.867,
+      "duration": 0.158
+    },
+    {
+      "index": 24,
+      "word": "hota",
+      "start": 8.884,
+      "end": 9.095,
+      "duration": 0.21
+    },
+    {
+      "index": 25,
+      "word": "hai.",
+      "start": 9.118,
+      "end": 9.328,
+      "duration": 0.21
+    },
+    {
+      "index": 26,
+      "word": "Songbirds",
+      "start": 9.352,
+      "end": 9.825,
+      "duration": 0.473
+    },
+    {
+      "index": 27,
+      "word": "mein",
+      "start": 9.877,
+      "end": 10.088,
+      "duration": 0.21
+    },
+    {
+      "index": 28,
+      "word": "bhi",
+      "start": 10.492,
+      "end": 10.648,
+      "duration": 0.156
+    },
+    {
+      "index": 29,
+      "word": "hota",
+      "start": 10.665,
+      "end": 10.873,
+      "duration": 0.208
+    },
+    {
+      "index": 30,
+      "word": "hai...",
+      "start": 10.896,
+      "end": 11.208,
+      "duration": 0.312
+    },
+    {
+      "index": 31,
+      "word": "jo",
+      "start": 11.243,
+      "end": 11.347,
+      "duration": 0.104
+    },
+    {
+      "index": 32,
+      "word": "apne",
+      "start": 11.358,
+      "end": 11.566,
+      "duration": 0.208
+    },
+    {
+      "index": 33,
+      "word": "songs",
+      "start": 11.589,
+      "end": 11.849,
+      "duration": 0.26
+    },
+    {
+      "index": 34,
+      "word": "seekhte",
+      "start": 12.146,
+      "end": 12.476,
+      "duration": 0.33
+    },
+    {
+      "index": 35,
+      "word": "hain.",
+      "start": 12.513,
+      "end": 12.748,
+      "duration": 0.236
+    },
+    {
+      "index": 36,
+      "word": "Ye",
+      "start": 12.774,
+      "end": 12.869,
+      "duration": 0.094
+    },
+    {
+      "index": 37,
+      "word": "ek",
+      "start": 12.879,
+      "end": 12.973,
+      "duration": 0.094
+    },
+    {
+      "index": 38,
+      "word": "regulator",
+      "start": 12.984,
+      "end": 13.408,
+      "duration": 0.424
+    },
+    {
+      "index": 39,
+      "word": "gene",
+      "start": 13.912,
+      "end": 14.128,
+      "duration": 0.216
+    },
+    {
+      "index": 40,
+      "word": "hai...",
+      "start": 14.152,
+      "end": 14.476,
+      "duration": 0.324
+    },
+    {
+      "index": 41,
+      "word": "jo",
+      "start": 14.512,
+      "end": 14.62,
+      "duration": 0.108
+    },
+    {
+      "index": 42,
+      "word": "doosre",
+      "start": 14.632,
+      "end": 14.956,
+      "duration": 0.324
+    },
+    {
+      "index": 43,
+      "word": "genes",
+      "start": 14.992,
+      "end": 15.262,
+      "duration": 0.27
+    },
+    {
+      "index": 44,
+      "word": "ko",
+      "start": 15.292,
+      "end": 15.4,
+      "duration": 0.108
+    },
+    {
+      "index": 45,
+      "word": "control",
+      "start": 15.412,
+      "end": 15.79,
+      "duration": 0.378
+    },
+    {
+      "index": 46,
+      "word": "karta",
+      "start": 16.066,
+      "end": 17.158,
+      "duration": 1.092
+    },
+    {
+      "index": 47,
+      "word": "hai!",
+      "start": 17.279,
+      "end": 18.153,
+      "duration": 0.874
+    }
+  ]
+}

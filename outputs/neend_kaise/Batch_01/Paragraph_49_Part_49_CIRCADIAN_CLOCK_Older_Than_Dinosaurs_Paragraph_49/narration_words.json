@@ -1,0 +1,181 @@
+{
+  "total_words": 25,
+  "total_duration": 11.29,
+  "words": [
+    {
+      "index": 1,
+      "word": "Circadian",
+      "start": 0.236,
+      "end": 0.683,
+      "duration": 0.447
+    },
+    {
+      "index": 2,
+      "word": "rhythm",
+      "start": 0.733,
+      "end": 1.031,
+      "duration": 0.298
+    },
+    {
+      "index": 3,
+      "word": "lagbhag",
+      "start": 1.064,
+      "end": 1.411,
+      "duration": 0.348
+    },
+    {
+      "index": 4,
+      "word": "teen",
+      "start": 1.654,
+      "end": 1.865,
+      "duration": 0.211
+    },
+    {
+      "index": 5,
+      "word": "sau",
+      "start": 1.889,
+      "end": 2.048,
+      "duration": 0.159
+    },
+    {
+      "index": 6,
+      "word": "million",
+      "start": 2.065,
+      "end": 2.435,
+      "duration": 0.37
+    },
+    {
+      "index": 7,
+      "word": "saal",
+      "start": 2.476,
+      "end": 2.688,
+      "duration": 0.211
+    },
+    {
+      "index": 8,
+      "word": "purana",
+      "start": 2.711,
+      "end": 3.029,
+      "duration": 0.317
+    },
+    {
+      "index": 9,
+      "word": "hai.",
+      "start": 3.064,
+      "end": 3.275,
+      "duration": 0.211
+    },
+    {
+      "index": 10,
+      "word": "Matlab",
+      "start": 3.299,
+      "end": 3.616,
+      "duration": 0.317
+    },
+    {
+      "index": 11,
+      "word": "dinosaurs",
+      "start": 3.651,
+      "end": 4.127,
+      "duration": 0.476
+    },
+    {
+      "index": 12,
+      "word": "se",
+      "start": 4.529,
+      "end": 4.652,
+      "duration": 0.123
+    },
+    {
+      "index": 13,
+      "word": "pehle",
+      "start": 4.666,
+      "end": 4.975,
+      "duration": 0.308
+    },
+    {
+      "index": 14,
+      "word": "bhi",
+      "start": 5.009,
+      "end": 5.194,
+      "duration": 0.185
+    },
+    {
+      "index": 15,
+      "word": "tha.",
+      "start": 5.215,
+      "end": 5.461,
+      "duration": 0.247
+    },
+    {
+      "index": 16,
+      "word": "Cyanobacteria",
+      "start": 5.489,
+      "end": 6.291,
+      "duration": 0.802
+    },
+    {
+      "index": 17,
+      "word": "mein",
+      "start": 6.847,
+      "end": 7.098,
+      "duration": 0.251
+    },
+    {
+      "index": 18,
+      "word": "tha...",
+      "start": 7.126,
+      "end": 7.503,
+      "duration": 0.377
+    },
+    {
+      "index": 19,
+      "word": "earth",
+      "start": 7.545,
+      "end": 7.859,
+      "duration": 0.314
+    },
+    {
+      "index": 20,
+      "word": "ki",
+      "start": 7.894,
+      "end": 8.019,
+      "duration": 0.126
+    },
+    {
+      "index": 21,
+      "word": "sabse",
+      "start": 8.033,
+      "end": 8.347,
+      "duration": 0.314
+    },
+    {
+      "index": 22,
+      "word": "purani",
+      "start": 8.758,
+      "end": 9.366,
+      "duration": 0.608
+    },
+    {
+      "index": 23,
+      "word": "life",
+      "start": 9.434,
+      "end": 9.839,
+      "duration": 0.405
+    },
+    {
+      "index": 24,
+      "word": "forms",
+      "start": 9.884,
+      "end": 10.391,
+      "duration": 0.507
+    },
+    {
+      "index": 25,
+      "word": "mein.",
+      "start": 10.447,
+      "end": 10.954,
+      "duration": 0.507
+    }
+  ]
+}

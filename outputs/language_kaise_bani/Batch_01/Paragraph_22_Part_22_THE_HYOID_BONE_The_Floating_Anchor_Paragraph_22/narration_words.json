@@ -1,0 +1,293 @@
+{
+  "total_words": 41,
+  "total_duration": 13.0,
+  "words": [
+    {
+      "index": 1,
+      "word": "Tumhare",
+      "start": 0.491,
+      "end": 0.755,
+      "duration": 0.264
+    },
+    {
+      "index": 2,
+      "word": "gale",
+      "start": 0.784,
+      "end": 0.935,
+      "duration": 0.151
+    },
+    {
+      "index": 3,
+      "word": "mein...",
+      "start": 0.951,
+      "end": 1.215,
+      "duration": 0.264
+    },
+    {
+      "index": 4,
+      "word": "ek",
+      "start": 1.244,
+      "end": 1.32,
+      "duration": 0.075
+    },
+    {
+      "index": 5,
+      "word": "chhoti",
+      "start": 1.328,
+      "end": 1.554,
+      "duration": 0.226
+    },
+    {
+      "index": 6,
+      "word": "si",
+      "start": 1.951,
+      "end": 2.011,
+      "duration": 0.06
+    },
+    {
+      "index": 7,
+      "word": "haddi",
+      "start": 1.982,
+      "end": 2.052,
+      "duration": 0.07
+    },
+    {
+      "index": 8,
+      "word": "hai.",
+      "start": 2.236,
+      "end": 2.409,
+      "duration": 0.173
+    },
+    {
+      "index": 9,
+      "word": "Iska",
+      "start": 2.428,
+      "end": 2.601,
+      "duration": 0.173
+    },
+    {
+      "index": 10,
+      "word": "naam",
+      "start": 2.621,
+      "end": 2.794,
+      "duration": 0.173
+    },
+    {
+      "index": 11,
+      "word": "hai...",
+      "start": 2.813,
+      "end": 3.072,
+      "duration": 0.26
+    },
+    {
+      "index": 12,
+      "word": "hyoid",
+      "start": 3.101,
+      "end": 3.318,
+      "duration": 0.216
+    },
+    {
+      "index": 13,
+      "word": "bone.",
+      "start": 3.342,
+      "end": 3.558,
+      "duration": 0.216
+    },
+    {
+      "index": 14,
+      "word": "Ye",
+      "start": 4.138,
+      "end": 4.231,
+      "duration": 0.093
+    },
+    {
+      "index": 15,
+      "word": "tumhari",
+      "start": 4.241,
+      "end": 4.566,
+      "duration": 0.325
+    },
+    {
+      "index": 16,
+      "word": "body",
+      "start": 4.603,
+      "end": 4.788,
+      "duration": 0.186
+    },
+    {
+      "index": 17,
+      "word": "ki",
+      "start": 5.166,
+      "end": 5.259,
+      "duration": 0.093
+    },
+    {
+      "index": 18,
+      "word": "ekmatra",
+      "start": 5.269,
+      "end": 5.595,
+      "duration": 0.326
+    },
+    {
+      "index": 19,
+      "word": "haddi",
+      "start": 5.632,
+      "end": 5.864,
+      "duration": 0.233
+    },
+    {
+      "index": 20,
+      "word": "hai",
+      "start": 5.89,
+      "end": 6.03,
+      "duration": 0.14
+    },
+    {
+      "index": 21,
+      "word": "jo",
+      "start": 6.046,
+      "end": 6.139,
+      "duration": 0.093
+    },
+    {
+      "index": 22,
+      "word": "kisi",
+      "start": 6.595,
+      "end": 6.754,
+      "duration": 0.159
+    },
+    {
+      "index": 23,
+      "word": "doosri",
+      "start": 6.771,
+      "end": 7.009,
+      "duration": 0.238
+    },
+    {
+      "index": 24,
+      "word": "haddi",
+      "start": 7.036,
+      "end": 7.234,
+      "duration": 0.198
+    },
+    {
+      "index": 25,
+      "word": "se",
+      "start": 7.256,
+      "end": 7.335,
+      "duration": 0.079
+    },
+    {
+      "index": 26,
+      "word": "seedha",
+      "start": 7.344,
+      "end": 7.582,
+      "duration": 0.238
+    },
+    {
+      "index": 27,
+      "word": "connected",
+      "start": 7.608,
+      "end": 7.965,
+      "duration": 0.357
+    },
+    {
+      "index": 28,
+      "word": "nahi",
+      "start": 8.209,
+      "end": 8.465,
+      "duration": 0.256
+    },
+    {
+      "index": 29,
+      "word": "hai!",
+      "start": 8.493,
+      "end": 8.749,
+      "duration": 0.256
+    },
+    {
+      "index": 30,
+      "word": "Ye",
+      "start": 8.777,
+      "end": 8.905,
+      "duration": 0.128
+    },
+    {
+      "index": 31,
+      "word": "alag",
+      "start": 8.919,
+      "end": 9.175,
+      "duration": 0.256
+    },
+    {
+      "index": 32,
+      "word": "se...",
+      "start": 9.203,
+      "end": 9.523,
+      "duration": 0.32
+    },
+    {
+      "index": 33,
+      "word": "muscles",
+      "start": 9.558,
+      "end": 10.006,
+      "duration": 0.447
+    },
+    {
+      "index": 34,
+      "word": "aur",
+      "start": 10.055,
+      "end": 10.247,
+      "duration": 0.192
+    },
+    {
+      "index": 35,
+      "word": "ligaments",
+      "start": 10.268,
+      "end": 10.844,
+      "duration": 0.575
+    },
+    {
+      "index": 36,
+      "word": "ke",
+      "start": 10.908,
+      "end": 11.035,
+      "duration": 0.128
+    },
+    {
+      "index": 37,
+      "word": "through",
+      "start": 11.05,
+      "end": 11.497,
+      "duration": 0.447
+    },
+    {
+      "index": 38,
+      "word": "hold",
+      "start": 11.547,
+      "end": 11.802,
+      "duration": 0.256
+    },
+    {
+      "index": 39,
+      "word": "ki",
+      "start": 11.831,
+      "end": 11.959,
+      "duration": 0.128
+    },
+    {
+      "index": 40,
+      "word": "jaati",
+      "start": 11.973,
+      "end": 12.292,
+      "duration": 0.32
+    },
+    {
+      "index": 41,
+      "word": "hai.",
+      "start": 12.328,
+      "end": 12.584,
+      "duration": 0.256
+    }
+  ]
+}

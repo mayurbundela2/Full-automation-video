@@ -1,0 +1,300 @@
+{
+  "total_words": 42,
+  "total_duration": 17.72,
+  "words": [
+    {
+      "index": 1,
+      "word": "Do",
+      "start": 0.0,
+      "end": 0.125,
+      "duration": 0.125
+    },
+    {
+      "index": 2,
+      "word": "hazaar",
+      "start": 0.139,
+      "end": 0.513,
+      "duration": 0.375
+    },
+    {
+      "index": 3,
+      "word": "saat",
+      "start": 0.555,
+      "end": 0.805,
+      "duration": 0.25
+    },
+    {
+      "index": 4,
+      "word": "mein...",
+      "start": 0.832,
+      "end": 1.269,
+      "duration": 0.437
+    },
+    {
+      "index": 5,
+      "word": "Max",
+      "start": 1.318,
+      "end": 1.505,
+      "duration": 0.187
+    },
+    {
+      "index": 6,
+      "word": "Planck",
+      "start": 1.526,
+      "end": 1.901,
+      "duration": 0.375
+    },
+    {
+      "index": 7,
+      "word": "Institute",
+      "start": 1.942,
+      "end": 2.504,
+      "duration": 0.562
+    },
+    {
+      "index": 8,
+      "word": "ke",
+      "start": 2.567,
+      "end": 2.692,
+      "duration": 0.125
+    },
+    {
+      "index": 9,
+      "word": "Svante",
+      "start": 2.705,
+      "end": 3.08,
+      "duration": 0.375
+    },
+    {
+      "index": 10,
+      "word": "Pääbo",
+      "start": 3.122,
+      "end": 3.434,
+      "duration": 0.312
+    },
+    {
+      "index": 11,
+      "word": "ki",
+      "start": 3.469,
+      "end": 3.593,
+      "duration": 0.125
+    },
+    {
+      "index": 12,
+      "word": "team",
+      "start": 3.607,
+      "end": 3.857,
+      "duration": 0.25
+    },
+    {
+      "index": 13,
+      "word": "ne",
+      "start": 3.885,
+      "end": 4.01,
+      "duration": 0.125
+    },
+    {
+      "index": 14,
+      "word": "Neanderthal",
+      "start": 4.024,
+      "end": 4.71,
+      "duration": 0.687
+    },
+    {
+      "index": 15,
+      "word": "skeletons",
+      "start": 4.787,
+      "end": 5.349,
+      "duration": 0.562
+    },
+    {
+      "index": 16,
+      "word": "se",
+      "start": 5.411,
+      "end": 5.536,
+      "duration": 0.125
+    },
+    {
+      "index": 17,
+      "word": "DNA",
+      "start": 5.55,
+      "end": 5.737,
+      "duration": 0.187
+    },
+    {
+      "index": 18,
+      "word": "nikaala.",
+      "start": 5.758,
+      "end": 6.257,
+      "duration": 0.499
+    },
+    {
+      "index": 19,
+      "word": "Aur",
+      "start": 6.313,
+      "end": 6.5,
+      "duration": 0.187
+    },
+    {
+      "index": 20,
+      "word": "Neanderthal",
+      "start": 6.521,
+      "end": 7.208,
+      "duration": 0.687
+    },
+    {
+      "index": 21,
+      "word": "genome",
+      "start": 7.959,
+      "end": 8.352,
+      "duration": 0.393
+    },
+    {
+      "index": 22,
+      "word": "mein...",
+      "start": 8.396,
+      "end": 8.855,
+      "duration": 0.459
+    },
+    {
+      "index": 23,
+      "word": "FOXP2",
+      "start": 8.906,
+      "end": 9.234,
+      "duration": 0.328
+    },
+    {
+      "index": 24,
+      "word": "gene",
+      "start": 9.27,
+      "end": 9.532,
+      "duration": 0.262
+    },
+    {
+      "index": 25,
+      "word": "ke",
+      "start": 9.561,
+      "end": 9.692,
+      "duration": 0.131
+    },
+    {
+      "index": 26,
+      "word": "wahi",
+      "start": 9.707,
+      "end": 9.969,
+      "duration": 0.262
+    },
+    {
+      "index": 27,
+      "word": "variants",
+      "start": 9.998,
+      "end": 10.523,
+      "duration": 0.524
+    },
+    {
+      "index": 28,
+      "word": "mile",
+      "start": 10.581,
+      "end": 10.843,
+      "duration": 0.262
+    },
+    {
+      "index": 29,
+      "word": "jo",
+      "start": 10.872,
+      "end": 11.003,
+      "duration": 0.131
+    },
+    {
+      "index": 30,
+      "word": "modern",
+      "start": 11.018,
+      "end": 11.411,
+      "duration": 0.393
+    },
+    {
+      "index": 31,
+      "word": "humans",
+      "start": 11.455,
+      "end": 11.848,
+      "duration": 0.393
+    },
+    {
+      "index": 32,
+      "word": "mein",
+      "start": 11.892,
+      "end": 12.154,
+      "duration": 0.262
+    },
+    {
+      "index": 33,
+      "word": "hain!",
+      "start": 12.183,
+      "end": 12.511,
+      "duration": 0.328
+    },
+    {
+      "index": 34,
+      "word": "Wahi",
+      "start": 12.547,
+      "end": 12.809,
+      "duration": 0.262
+    },
+    {
+      "index": 35,
+      "word": "gene...",
+      "start": 12.839,
+      "end": 13.297,
+      "duration": 0.459
+    },
+    {
+      "index": 36,
+      "word": "jo",
+      "start": 13.348,
+      "end": 13.479,
+      "duration": 0.131
+    },
+    {
+      "index": 37,
+      "word": "humari",
+      "start": 13.494,
+      "end": 13.887,
+      "duration": 0.393
+    },
+    {
+      "index": 38,
+      "word": "language",
+      "start": 14.493,
+      "end": 15.288,
+      "duration": 0.795
+    },
+    {
+      "index": 39,
+      "word": "ability",
+      "start": 15.376,
+      "end": 16.071,
+      "duration": 0.695
+    },
+    {
+      "index": 40,
+      "word": "se",
+      "start": 16.149,
+      "end": 16.347,
+      "duration": 0.199
+    },
+    {
+      "index": 41,
+      "word": "linked",
+      "start": 16.369,
+      "end": 16.965,
+      "duration": 0.596
+    },
+    {
+      "index": 42,
+      "word": "hai!",
+      "start": 17.032,
+      "end": 17.429,
+      "duration": 0.397
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "total_words": 28,
+  "total_duration": 13.25,
+  "words": [
+    {
+      "index": 1,
+      "word": "Tumhari",
+      "start": 0.277,
+      "end": 0.701,
+      "duration": 0.424
+    },
+    {
+      "index": 2,
+      "word": "species",
+      "start": 0.748,
+      "end": 1.173,
+      "duration": 0.424
+    },
+    {
+      "index": 3,
+      "word": "ne",
+      "start": 1.22,
+      "end": 1.341,
+      "duration": 0.121
+    },
+    {
+      "index": 4,
+      "word": "ye",
+      "start": 1.355,
+      "end": 1.476,
+      "duration": 0.121
+    },
+    {
+      "index": 5,
+      "word": "neend",
+      "start": 1.489,
+      "end": 1.792,
+      "duration": 0.303
+    },
+    {
+      "index": 6,
+      "word": "evolve",
+      "start": 1.826,
+      "end": 2.19,
+      "duration": 0.364
+    },
+    {
+      "index": 7,
+      "word": "karne",
+      "start": 2.23,
+      "end": 2.533,
+      "duration": 0.303
+    },
+    {
+      "index": 8,
+      "word": "mein",
+      "start": 2.567,
+      "end": 2.809,
+      "duration": 0.242
+    },
+    {
+      "index": 9,
+      "word": "millions",
+      "start": 2.836,
+      "end": 3.321,
+      "duration": 0.485
+    },
+    {
+      "index": 10,
+      "word": "of",
+      "start": 3.541,
+      "end": 3.675,
+      "duration": 0.134
+    },
+    {
+      "index": 11,
+      "word": "years",
+      "start": 3.689,
+      "end": 4.023,
+      "duration": 0.334
+    },
+    {
+      "index": 12,
+      "word": "lagaye.",
+      "start": 4.061,
+      "end": 4.528,
+      "duration": 0.468
+    },
+    {
+      "index": 13,
+      "word": "Tum",
+      "start": 4.58,
+      "end": 4.781,
+      "duration": 0.2
+    },
+    {
+      "index": 14,
+      "word": "ise",
+      "start": 4.803,
+      "end": 5.003,
+      "duration": 0.2
+    },
+    {
+      "index": 15,
+      "word": "ek",
+      "start": 5.026,
+      "end": 5.159,
+      "duration": 0.134
+    },
+    {
+      "index": 16,
+      "word": "sau",
+      "start": 7.588,
+      "end": 7.791,
+      "duration": 0.203
+    },
+    {
+      "index": 17,
+      "word": "pachaas",
+      "start": 7.814,
+      "end": 8.287,
+      "duration": 0.474
+    },
+    {
+      "index": 18,
+      "word": "saal",
+      "start": 8.34,
+      "end": 8.611,
+      "duration": 0.271
+    },
+    {
+      "index": 19,
+      "word": "mein...",
+      "start": 8.641,
+      "end": 9.115,
+      "duration": 0.474
+    },
+    {
+      "index": 20,
+      "word": "ek",
+      "start": 9.167,
+      "end": 9.303,
+      "duration": 0.135
+    },
+    {
+      "index": 21,
+      "word": "phone",
+      "start": 9.318,
+      "end": 9.656,
+      "duration": 0.338
+    },
+    {
+      "index": 22,
+      "word": "screen",
+      "start": 9.694,
+      "end": 10.1,
+      "duration": 0.406
+    },
+    {
+      "index": 23,
+      "word": "ke",
+      "start": 10.145,
+      "end": 10.28,
+      "duration": 0.135
+    },
+    {
+      "index": 24,
+      "word": "sath...",
+      "start": 10.295,
+      "end": 10.769,
+      "duration": 0.474
+    },
+    {
+      "index": 25,
+      "word": "barbaad",
+      "start": 10.822,
+      "end": 11.296,
+      "duration": 0.474
+    },
+    {
+      "index": 26,
+      "word": "kar",
+      "start": 11.348,
+      "end": 11.551,
+      "duration": 0.203
+    },
+    {
+      "index": 27,
+      "word": "rahi",
+      "start": 11.748,
+      "end": 12.43,
+      "duration": 0.682
+    },
+    {
+      "index": 28,
+      "word": "ho.",
+      "start": 12.506,
+      "end": 13.017,
+      "duration": 0.511
+    }
+  ]
+}

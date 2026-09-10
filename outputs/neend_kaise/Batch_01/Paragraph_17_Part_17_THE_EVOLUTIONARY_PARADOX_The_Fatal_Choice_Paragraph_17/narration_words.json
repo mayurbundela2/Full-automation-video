@@ -1,0 +1,272 @@
+{
+  "total_words": 38,
+  "total_duration": 17.52,
+  "words": [
+    {
+      "index": 1,
+      "word": "Neend",
+      "start": 0.24,
+      "end": 0.599,
+      "duration": 0.359
+    },
+    {
+      "index": 2,
+      "word": "ke",
+      "start": 0.639,
+      "end": 0.783,
+      "duration": 0.144
+    },
+    {
+      "index": 3,
+      "word": "bina...",
+      "start": 0.798,
+      "end": 1.301,
+      "duration": 0.503
+    },
+    {
+      "index": 4,
+      "word": "ye",
+      "start": 1.644,
+      "end": 1.775,
+      "duration": 0.131
+    },
+    {
+      "index": 5,
+      "word": "toxins",
+      "start": 1.789,
+      "end": 2.181,
+      "duration": 0.392
+    },
+    {
+      "index": 6,
+      "word": "jama",
+      "start": 2.224,
+      "end": 2.485,
+      "duration": 0.261
+    },
+    {
+      "index": 7,
+      "word": "hote",
+      "start": 2.514,
+      "end": 2.775,
+      "duration": 0.261
+    },
+    {
+      "index": 8,
+      "word": "rehte",
+      "start": 2.804,
+      "end": 3.131,
+      "duration": 0.326
+    },
+    {
+      "index": 9,
+      "word": "hain.",
+      "start": 3.167,
+      "end": 3.493,
+      "duration": 0.326
+    },
+    {
+      "index": 10,
+      "word": "Brain",
+      "start": 3.529,
+      "end": 3.856,
+      "duration": 0.326
+    },
+    {
+      "index": 11,
+      "word": "damage",
+      "start": 4.354,
+      "end": 4.74,
+      "duration": 0.386
+    },
+    {
+      "index": 12,
+      "word": "hota",
+      "start": 4.783,
+      "end": 5.041,
+      "duration": 0.258
+    },
+    {
+      "index": 13,
+      "word": "jaata",
+      "start": 5.07,
+      "end": 5.392,
+      "duration": 0.322
+    },
+    {
+      "index": 14,
+      "word": "hai.",
+      "start": 5.427,
+      "end": 5.685,
+      "duration": 0.258
+    },
+    {
+      "index": 15,
+      "word": "Yaani...",
+      "start": 5.714,
+      "end": 6.229,
+      "duration": 0.515
+    },
+    {
+      "index": 16,
+      "word": "tumhare",
+      "start": 7.308,
+      "end": 7.682,
+      "duration": 0.374
+    },
+    {
+      "index": 17,
+      "word": "ancestors",
+      "start": 7.923,
+      "end": 8.53,
+      "duration": 0.607
+    },
+    {
+      "index": 18,
+      "word": "ke",
+      "start": 8.597,
+      "end": 8.732,
+      "duration": 0.135
+    },
+    {
+      "index": 19,
+      "word": "paas",
+      "start": 8.747,
+      "end": 9.016,
+      "duration": 0.27
+    },
+    {
+      "index": 20,
+      "word": "choice",
+      "start": 9.046,
+      "end": 9.451,
+      "duration": 0.404
+    },
+    {
+      "index": 21,
+      "word": "thi:",
+      "start": 9.496,
+      "end": 9.765,
+      "duration": 0.27
+    },
+    {
+      "index": 22,
+      "word": "neend",
+      "start": 9.795,
+      "end": 10.132,
+      "duration": 0.337
+    },
+    {
+      "index": 23,
+      "word": "liye",
+      "start": 10.169,
+      "end": 10.439,
+      "duration": 0.27
+    },
+    {
+      "index": 24,
+      "word": "aur",
+      "start": 10.919,
+      "end": 11.121,
+      "duration": 0.202
+    },
+    {
+      "index": 25,
+      "word": "predator",
+      "start": 11.143,
+      "end": 11.682,
+      "duration": 0.538
+    },
+    {
+      "index": 26,
+      "word": "ka",
+      "start": 11.742,
+      "end": 11.876,
+      "duration": 0.135
+    },
+    {
+      "index": 27,
+      "word": "risk",
+      "start": 11.891,
+      "end": 12.16,
+      "duration": 0.269
+    },
+    {
+      "index": 28,
+      "word": "lo,",
+      "start": 12.19,
+      "end": 12.392,
+      "duration": 0.202
+    },
+    {
+      "index": 29,
+      "word": "ya",
+      "start": 12.414,
+      "end": 12.549,
+      "duration": 0.135
+    },
+    {
+      "index": 30,
+      "word": "na",
+      "start": 12.564,
+      "end": 12.699,
+      "duration": 0.135
+    },
+    {
+      "index": 31,
+      "word": "sote",
+      "start": 12.714,
+      "end": 12.983,
+      "duration": 0.269
+    },
+    {
+      "index": 32,
+      "word": "aur",
+      "start": 13.013,
+      "end": 13.215,
+      "duration": 0.202
+    },
+    {
+      "index": 33,
+      "word": "khud",
+      "start": 13.546,
+      "end": 13.945,
+      "duration": 0.399
+    },
+    {
+      "index": 34,
+      "word": "ka",
+      "start": 13.989,
+      "end": 14.188,
+      "duration": 0.199
+    },
+    {
+      "index": 35,
+      "word": "brain",
+      "start": 14.21,
+      "end": 14.709,
+      "duration": 0.498
+    },
+    {
+      "index": 36,
+      "word": "slowly",
+      "start": 14.764,
+      "end": 15.362,
+      "duration": 0.598
+    },
+    {
+      "index": 37,
+      "word": "kill",
+      "start": 15.428,
+      "end": 15.827,
+      "duration": 0.399
+    },
+    {
+      "index": 38,
+      "word": "karo.",
+      "start": 15.871,
+      "end": 16.37,
+      "duration": 0.498
+    }
+  ]
+}

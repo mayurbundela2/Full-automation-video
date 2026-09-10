@@ -1,0 +1,279 @@
+{
+  "total_words": 39,
+  "total_duration": 18.24,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ab",
+      "start": 0.314,
+      "end": 0.424,
+      "duration": 0.11
+    },
+    {
+      "index": 2,
+      "word": "wapas",
+      "start": 0.436,
+      "end": 0.711,
+      "duration": 0.275
+    },
+    {
+      "index": 3,
+      "word": "chalte",
+      "start": 0.742,
+      "end": 1.072,
+      "duration": 0.33
+    },
+    {
+      "index": 4,
+      "word": "hain",
+      "start": 1.109,
+      "end": 1.329,
+      "duration": 0.22
+    },
+    {
+      "index": 5,
+      "word": "us",
+      "start": 1.353,
+      "end": 1.463,
+      "duration": 0.11
+    },
+    {
+      "index": 6,
+      "word": "gene",
+      "start": 1.476,
+      "end": 1.696,
+      "duration": 0.22
+    },
+    {
+      "index": 7,
+      "word": "pe...",
+      "start": 1.72,
+      "end": 1.995,
+      "duration": 0.275
+    },
+    {
+      "index": 8,
+      "word": "FOXP2...",
+      "start": 2.551,
+      "end": 3.019,
+      "duration": 0.468
+    },
+    {
+      "index": 9,
+      "word": "jisne",
+      "start": 3.07,
+      "end": 3.363,
+      "duration": 0.292
+    },
+    {
+      "index": 10,
+      "word": "is",
+      "start": 3.395,
+      "end": 3.512,
+      "duration": 0.117
+    },
+    {
+      "index": 11,
+      "word": "poori",
+      "start": 4.167,
+      "end": 4.444,
+      "duration": 0.277
+    },
+    {
+      "index": 12,
+      "word": "kahani",
+      "start": 4.475,
+      "end": 4.807,
+      "duration": 0.332
+    },
+    {
+      "index": 13,
+      "word": "ki",
+      "start": 4.844,
+      "end": 4.954,
+      "duration": 0.111
+    },
+    {
+      "index": 14,
+      "word": "shuruaat",
+      "start": 4.967,
+      "end": 5.41,
+      "duration": 0.443
+    },
+    {
+      "index": 15,
+      "word": "ki.",
+      "start": 5.459,
+      "end": 5.625,
+      "duration": 0.166
+    },
+    {
+      "index": 16,
+      "word": "Unnees",
+      "start": 5.643,
+      "end": 5.976,
+      "duration": 0.332
+    },
+    {
+      "index": 17,
+      "word": "sau",
+      "start": 6.012,
+      "end": 6.179,
+      "duration": 0.166
+    },
+    {
+      "index": 18,
+      "word": "nabbe...",
+      "start": 7.337,
+      "end": 7.733,
+      "duration": 0.396
+    },
+    {
+      "index": 19,
+      "word": "London.",
+      "start": 7.776,
+      "end": 8.123,
+      "duration": 0.346
+    },
+    {
+      "index": 20,
+      "word": "Doctors",
+      "start": 8.785,
+      "end": 9.117,
+      "duration": 0.332
+    },
+    {
+      "index": 21,
+      "word": "ne",
+      "start": 9.655,
+      "end": 9.768,
+      "duration": 0.113
+    },
+    {
+      "index": 22,
+      "word": "ek",
+      "start": 9.781,
+      "end": 9.894,
+      "duration": 0.113
+    },
+    {
+      "index": 23,
+      "word": "family",
+      "start": 9.906,
+      "end": 10.246,
+      "duration": 0.34
+    },
+    {
+      "index": 24,
+      "word": "notice",
+      "start": 10.284,
+      "end": 10.623,
+      "duration": 0.34
+    },
+    {
+      "index": 25,
+      "word": "ki...",
+      "start": 10.661,
+      "end": 10.944,
+      "duration": 0.283
+    },
+    {
+      "index": 26,
+      "word": "jise",
+      "start": 10.975,
+      "end": 11.202,
+      "duration": 0.226
+    },
+    {
+      "index": 27,
+      "word": "unhone",
+      "start": 11.227,
+      "end": 11.566,
+      "duration": 0.34
+    },
+    {
+      "index": 28,
+      "word": "KE",
+      "start": 12.107,
+      "end": 12.219,
+      "duration": 0.112
+    },
+    {
+      "index": 29,
+      "word": "Family",
+      "start": 12.231,
+      "end": 12.567,
+      "duration": 0.336
+    },
+    {
+      "index": 30,
+      "word": "ka",
+      "start": 12.604,
+      "end": 12.716,
+      "duration": 0.112
+    },
+    {
+      "index": 31,
+      "word": "code",
+      "start": 12.729,
+      "end": 12.952,
+      "duration": 0.224
+    },
+    {
+      "index": 32,
+      "word": "name",
+      "start": 12.977,
+      "end": 13.201,
+      "duration": 0.224
+    },
+    {
+      "index": 33,
+      "word": "diya.",
+      "start": 13.226,
+      "end": 13.505,
+      "duration": 0.28
+    },
+    {
+      "index": 34,
+      "word": "Is",
+      "start": 13.537,
+      "end": 13.648,
+      "duration": 0.112
+    },
+    {
+      "index": 35,
+      "word": "family",
+      "start": 13.661,
+      "end": 13.996,
+      "duration": 0.336
+    },
+    {
+      "index": 36,
+      "word": "mein",
+      "start": 14.034,
+      "end": 14.258,
+      "duration": 0.224
+    },
+    {
+      "index": 37,
+      "word": "kuch",
+      "start": 14.282,
+      "end": 14.506,
+      "duration": 0.224
+    },
+    {
+      "index": 38,
+      "word": "strange",
+      "start": 15.637,
+      "end": 16.196,
+      "duration": 0.559
+    },
+    {
+      "index": 39,
+      "word": "tha...",
+      "start": 16.258,
+      "end": 16.738,
+      "duration": 0.479
+    }
+  ]
+}

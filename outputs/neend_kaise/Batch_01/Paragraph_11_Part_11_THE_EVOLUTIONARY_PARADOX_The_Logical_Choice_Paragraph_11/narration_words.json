@@ -1,0 +1,139 @@
+{
+  "total_words": 19,
+  "total_duration": 8.48,
+  "words": [
+    {
+      "index": 1,
+      "word": "Tum",
+      "start": 0.225,
+      "end": 0.385,
+      "duration": 0.16
+    },
+    {
+      "index": 2,
+      "word": "pura",
+      "start": 0.593,
+      "end": 0.813,
+      "duration": 0.22
+    },
+    {
+      "index": 3,
+      "word": "din",
+      "start": 0.837,
+      "end": 1.002,
+      "duration": 0.165
+    },
+    {
+      "index": 4,
+      "word": "alert",
+      "start": 1.02,
+      "end": 1.295,
+      "duration": 0.275
+    },
+    {
+      "index": 5,
+      "word": "rahoge.",
+      "start": 1.326,
+      "end": 1.71,
+      "duration": 0.385
+    },
+    {
+      "index": 6,
+      "word": "Har",
+      "start": 1.753,
+      "end": 1.918,
+      "duration": 0.165
+    },
+    {
+      "index": 7,
+      "word": "awaaz",
+      "start": 2.338,
+      "end": 2.626,
+      "duration": 0.288
+    },
+    {
+      "index": 8,
+      "word": "pe",
+      "start": 2.658,
+      "end": 2.773,
+      "duration": 0.115
+    },
+    {
+      "index": 9,
+      "word": "cheeekk.",
+      "start": 2.785,
+      "end": 3.246,
+      "duration": 0.46
+    },
+    {
+      "index": 10,
+      "word": "Har",
+      "start": 3.297,
+      "end": 3.469,
+      "duration": 0.173
+    },
+    {
+      "index": 11,
+      "word": "hint",
+      "start": 3.488,
+      "end": 3.718,
+      "duration": 0.23
+    },
+    {
+      "index": 12,
+      "word": "pe",
+      "start": 3.98,
+      "end": 4.086,
+      "duration": 0.106
+    },
+    {
+      "index": 13,
+      "word": "react.",
+      "start": 4.098,
+      "end": 4.415,
+      "duration": 0.318
+    },
+    {
+      "index": 14,
+      "word": "Lekin",
+      "start": 4.45,
+      "end": 4.715,
+      "duration": 0.265
+    },
+    {
+      "index": 15,
+      "word": "nahi...",
+      "start": 4.744,
+      "end": 5.115,
+      "duration": 0.37
+    },
+    {
+      "index": 16,
+      "word": "insaan",
+      "start": 5.93,
+      "end": 6.265,
+      "duration": 0.335
+    },
+    {
+      "index": 17,
+      "word": "ne",
+      "start": 6.302,
+      "end": 6.414,
+      "duration": 0.112
+    },
+    {
+      "index": 18,
+      "word": "kya",
+      "start": 7.035,
+      "end": 7.405,
+      "duration": 0.37
+    },
+    {
+      "index": 19,
+      "word": "kiya?",
+      "start": 7.446,
+      "end": 8.062,
+      "duration": 0.617
+    }
+  ]
+}

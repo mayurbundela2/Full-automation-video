@@ -1,0 +1,265 @@
+{
+  "total_words": 37,
+  "total_duration": 14.0,
+  "words": [
+    {
+      "index": 1,
+      "word": "Language",
+      "start": 0.315,
+      "end": 0.745,
+      "duration": 0.43
+    },
+    {
+      "index": 2,
+      "word": "se",
+      "start": 0.793,
+      "end": 0.901,
+      "duration": 0.108
+    },
+    {
+      "index": 3,
+      "word": "knowledge",
+      "start": 0.913,
+      "end": 1.397,
+      "duration": 0.484
+    },
+    {
+      "index": 4,
+      "word": "transfer",
+      "start": 1.451,
+      "end": 1.881,
+      "duration": 0.43
+    },
+    {
+      "index": 5,
+      "word": "hoti",
+      "start": 1.929,
+      "end": 2.144,
+      "duration": 0.215
+    },
+    {
+      "index": 6,
+      "word": "hai!",
+      "start": 2.168,
+      "end": 2.383,
+      "duration": 0.215
+    },
+    {
+      "index": 7,
+      "word": "Dada",
+      "start": 2.407,
+      "end": 2.622,
+      "duration": 0.215
+    },
+    {
+      "index": 8,
+      "word": "apne",
+      "start": 3.079,
+      "end": 3.313,
+      "duration": 0.234
+    },
+    {
+      "index": 9,
+      "word": "pote",
+      "start": 3.339,
+      "end": 3.573,
+      "duration": 0.234
+    },
+    {
+      "index": 10,
+      "word": "ko",
+      "start": 3.599,
+      "end": 3.717,
+      "duration": 0.117
+    },
+    {
+      "index": 11,
+      "word": "bata",
+      "start": 3.73,
+      "end": 3.964,
+      "duration": 0.234
+    },
+    {
+      "index": 12,
+      "word": "sakta",
+      "start": 3.99,
+      "end": 4.283,
+      "duration": 0.293
+    },
+    {
+      "index": 13,
+      "word": "hai...",
+      "start": 4.315,
+      "end": 4.666,
+      "duration": 0.351
+    },
+    {
+      "index": 14,
+      "word": "yeh",
+      "start": 4.705,
+      "end": 4.881,
+      "duration": 0.176
+    },
+    {
+      "index": 15,
+      "word": "plant",
+      "start": 4.901,
+      "end": 5.193,
+      "duration": 0.293
+    },
+    {
+      "index": 16,
+      "word": "zaher",
+      "start": 5.226,
+      "end": 5.519,
+      "duration": 0.293
+    },
+    {
+      "index": 17,
+      "word": "hai...",
+      "start": 5.551,
+      "end": 5.902,
+      "duration": 0.351
+    },
+    {
+      "index": 18,
+      "word": "Woh",
+      "start": 5.941,
+      "end": 6.117,
+      "duration": 0.176
+    },
+    {
+      "index": 19,
+      "word": "pahaad",
+      "start": 6.137,
+      "end": 6.488,
+      "duration": 0.351
+    },
+    {
+      "index": 20,
+      "word": "ke",
+      "start": 6.686,
+      "end": 6.784,
+      "duration": 0.098
+    },
+    {
+      "index": 21,
+      "word": "peechhe",
+      "start": 6.795,
+      "end": 7.137,
+      "duration": 0.343
+    },
+    {
+      "index": 22,
+      "word": "paani",
+      "start": 7.175,
+      "end": 7.42,
+      "duration": 0.245
+    },
+    {
+      "index": 23,
+      "word": "hai.",
+      "start": 7.447,
+      "end": 7.643,
+      "duration": 0.196
+    },
+    {
+      "index": 24,
+      "word": "Ye",
+      "start": 7.665,
+      "end": 7.763,
+      "duration": 0.098
+    },
+    {
+      "index": 25,
+      "word": "information",
+      "start": 7.774,
+      "end": 8.312,
+      "duration": 0.538
+    },
+    {
+      "index": 26,
+      "word": "generations",
+      "start": 8.862,
+      "end": 9.476,
+      "duration": 0.614
+    },
+    {
+      "index": 27,
+      "word": "tak",
+      "start": 9.544,
+      "end": 9.711,
+      "duration": 0.167
+    },
+    {
+      "index": 28,
+      "word": "jaati",
+      "start": 9.73,
+      "end": 10.009,
+      "duration": 0.279
+    },
+    {
+      "index": 29,
+      "word": "hai!",
+      "start": 10.04,
+      "end": 10.263,
+      "duration": 0.223
+    },
+    {
+      "index": 30,
+      "word": "Zero",
+      "start": 10.287,
+      "end": 10.511,
+      "duration": 0.223
+    },
+    {
+      "index": 31,
+      "word": "se",
+      "start": 10.535,
+      "end": 10.647,
+      "duration": 0.112
+    },
+    {
+      "index": 32,
+      "word": "shuru",
+      "start": 10.659,
+      "end": 10.938,
+      "duration": 0.279
+    },
+    {
+      "index": 33,
+      "word": "nahi",
+      "start": 10.969,
+      "end": 11.192,
+      "duration": 0.223
+    },
+    {
+      "index": 34,
+      "word": "karna",
+      "start": 11.217,
+      "end": 11.496,
+      "duration": 0.279
+    },
+    {
+      "index": 35,
+      "word": "padta",
+      "start": 11.818,
+      "end": 12.428,
+      "duration": 0.61
+    },
+    {
+      "index": 36,
+      "word": "har",
+      "start": 12.496,
+      "end": 12.862,
+      "duration": 0.366
+    },
+    {
+      "index": 37,
+      "word": "baar!",
+      "start": 12.902,
+      "end": 13.512,
+      "duration": 0.61
+    }
+  ]
+}

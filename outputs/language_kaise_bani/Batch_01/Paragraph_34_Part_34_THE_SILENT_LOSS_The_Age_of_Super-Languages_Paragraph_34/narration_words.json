@@ -1,0 +1,510 @@
+{
+  "total_words": 72,
+  "total_duration": 30.76,
+  "words": [
+    {
+      "index": 1,
+      "word": "Har",
+      "start": 0.259,
+      "end": 0.401,
+      "duration": 0.142
+    },
+    {
+      "index": 2,
+      "word": "language...",
+      "start": 0.417,
+      "end": 0.937,
+      "duration": 0.52
+    },
+    {
+      "index": 3,
+      "word": "ek",
+      "start": 0.995,
+      "end": 1.089,
+      "duration": 0.095
+    },
+    {
+      "index": 4,
+      "word": "alag",
+      "start": 1.1,
+      "end": 1.289,
+      "duration": 0.189
+    },
+    {
+      "index": 5,
+      "word": "tarah",
+      "start": 1.551,
+      "end": 1.79,
+      "duration": 0.239
+    },
+    {
+      "index": 6,
+      "word": "se",
+      "start": 1.817,
+      "end": 1.913,
+      "duration": 0.096
+    },
+    {
+      "index": 7,
+      "word": "soch",
+      "start": 1.923,
+      "end": 2.115,
+      "duration": 0.191
+    },
+    {
+      "index": 8,
+      "word": "banati",
+      "start": 2.136,
+      "end": 2.423,
+      "duration": 0.287
+    },
+    {
+      "index": 9,
+      "word": "hai.",
+      "start": 2.455,
+      "end": 2.646,
+      "duration": 0.191
+    },
+    {
+      "index": 10,
+      "word": "Jab",
+      "start": 2.668,
+      "end": 2.811,
+      "duration": 0.144
+    },
+    {
+      "index": 11,
+      "word": "woh",
+      "start": 2.827,
+      "end": 2.971,
+      "duration": 0.144
+    },
+    {
+      "index": 12,
+      "word": "language",
+      "start": 2.987,
+      "end": 3.369,
+      "duration": 0.383
+    },
+    {
+      "index": 13,
+      "word": "marti",
+      "start": 3.933,
+      "end": 4.184,
+      "duration": 0.251
+    },
+    {
+      "index": 14,
+      "word": "hai...",
+      "start": 4.212,
+      "end": 4.514,
+      "duration": 0.302
+    },
+    {
+      "index": 15,
+      "word": "woh",
+      "start": 4.548,
+      "end": 4.698,
+      "duration": 0.151
+    },
+    {
+      "index": 16,
+      "word": "soch",
+      "start": 4.715,
+      "end": 4.916,
+      "duration": 0.201
+    },
+    {
+      "index": 17,
+      "word": "bhi",
+      "start": 4.939,
+      "end": 5.09,
+      "duration": 0.151
+    },
+    {
+      "index": 18,
+      "word": "mar",
+      "start": 5.106,
+      "end": 5.257,
+      "duration": 0.151
+    },
+    {
+      "index": 19,
+      "word": "jaati",
+      "start": 5.741,
+      "end": 6.009,
+      "duration": 0.268
+    },
+    {
+      "index": 20,
+      "word": "hai.",
+      "start": 6.038,
+      "end": 6.253,
+      "duration": 0.214
+    },
+    {
+      "index": 21,
+      "word": "Aur",
+      "start": 6.276,
+      "end": 6.437,
+      "duration": 0.161
+    },
+    {
+      "index": 22,
+      "word": "ek",
+      "start": 6.455,
+      "end": 6.562,
+      "duration": 0.107
+    },
+    {
+      "index": 23,
+      "word": "aur",
+      "start": 6.574,
+      "end": 6.734,
+      "duration": 0.161
+    },
+    {
+      "index": 24,
+      "word": "cheez.",
+      "start": 6.752,
+      "end": 7.073,
+      "duration": 0.321
+    },
+    {
+      "index": 25,
+      "word": "Teen",
+      "start": 7.711,
+      "end": 7.916,
+      "duration": 0.205
+    },
+    {
+      "index": 26,
+      "word": "lakh",
+      "start": 7.939,
+      "end": 8.145,
+      "duration": 0.205
+    },
+    {
+      "index": 27,
+      "word": "saal",
+      "start": 8.168,
+      "end": 8.373,
+      "duration": 0.205
+    },
+    {
+      "index": 28,
+      "word": "ki",
+      "start": 8.396,
+      "end": 8.499,
+      "duration": 0.103
+    },
+    {
+      "index": 29,
+      "word": "human",
+      "start": 9.473,
+      "end": 9.726,
+      "duration": 0.253
+    },
+    {
+      "index": 30,
+      "word": "history",
+      "start": 9.754,
+      "end": 10.108,
+      "duration": 0.354
+    },
+    {
+      "index": 31,
+      "word": "mein...",
+      "start": 10.147,
+      "end": 10.502,
+      "duration": 0.354
+    },
+    {
+      "index": 32,
+      "word": "pehli",
+      "start": 10.541,
+      "end": 10.794,
+      "duration": 0.253
+    },
+    {
+      "index": 33,
+      "word": "baar...",
+      "start": 10.822,
+      "end": 11.176,
+      "duration": 0.354
+    },
+    {
+      "index": 34,
+      "word": "hum",
+      "start": 11.215,
+      "end": 11.367,
+      "duration": 0.152
+    },
+    {
+      "index": 35,
+      "word": "ek",
+      "start": 11.936,
+      "end": 12.011,
+      "duration": 0.075
+    },
+    {
+      "index": 36,
+      "word": "aisi",
+      "start": 12.02,
+      "end": 12.171,
+      "duration": 0.151
+    },
+    {
+      "index": 37,
+      "word": "position",
+      "start": 12.188,
+      "end": 12.489,
+      "duration": 0.302
+    },
+    {
+      "index": 38,
+      "word": "mein",
+      "start": 13.002,
+      "end": 13.21,
+      "duration": 0.208
+    },
+    {
+      "index": 39,
+      "word": "hain",
+      "start": 13.233,
+      "end": 13.44,
+      "duration": 0.208
+    },
+    {
+      "index": 40,
+      "word": "jahan",
+      "start": 13.463,
+      "end": 13.723,
+      "duration": 0.26
+    },
+    {
+      "index": 41,
+      "word": "kuch",
+      "start": 13.752,
+      "end": 13.959,
+      "duration": 0.208
+    },
+    {
+      "index": 42,
+      "word": "dominant",
+      "start": 13.982,
+      "end": 14.398,
+      "duration": 0.415
+    },
+    {
+      "index": 43,
+      "word": "languages",
+      "start": 14.444,
+      "end": 14.911,
+      "duration": 0.467
+    },
+    {
+      "index": 44,
+      "word": "baaki",
+      "start": 14.963,
+      "end": 15.222,
+      "duration": 0.26
+    },
+    {
+      "index": 45,
+      "word": "sabko",
+      "start": 15.251,
+      "end": 15.511,
+      "duration": 0.26
+    },
+    {
+      "index": 46,
+      "word": "khatam",
+      "start": 15.54,
+      "end": 15.851,
+      "duration": 0.311
+    },
+    {
+      "index": 47,
+      "word": "kar",
+      "start": 15.886,
+      "end": 16.041,
+      "duration": 0.156
+    },
+    {
+      "index": 48,
+      "word": "rahi",
+      "start": 16.059,
+      "end": 16.266,
+      "duration": 0.208
+    },
+    {
+      "index": 49,
+      "word": "hain...",
+      "start": 16.289,
+      "end": 16.653,
+      "duration": 0.363
+    },
+    {
+      "index": 50,
+      "word": "English...",
+      "start": 16.693,
+      "end": 17.212,
+      "duration": 0.519
+    },
+    {
+      "index": 51,
+      "word": "Mandarin...",
+      "start": 17.27,
+      "end": 17.841,
+      "duration": 0.571
+    },
+    {
+      "index": 52,
+      "word": "Spanish...",
+      "start": 18.501,
+      "end": 19.021,
+      "duration": 0.52
+    },
+    {
+      "index": 53,
+      "word": "Hindi.",
+      "start": 19.365,
+      "end": 19.633,
+      "duration": 0.268
+    },
+    {
+      "index": 54,
+      "word": "Ye",
+      "start": 19.662,
+      "end": 19.751,
+      "duration": 0.089
+    },
+    {
+      "index": 55,
+      "word": "galat",
+      "start": 19.761,
+      "end": 19.984,
+      "duration": 0.223
+    },
+    {
+      "index": 56,
+      "word": "nahi",
+      "start": 20.274,
+      "end": 20.489,
+      "duration": 0.215
+    },
+    {
+      "index": 57,
+      "word": "hai...",
+      "start": 20.513,
+      "end": 20.836,
+      "duration": 0.323
+    },
+    {
+      "index": 58,
+      "word": "ye",
+      "start": 20.872,
+      "end": 20.98,
+      "duration": 0.108
+    },
+    {
+      "index": 59,
+      "word": "natural",
+      "start": 21.293,
+      "end": 21.656,
+      "duration": 0.363
+    },
+    {
+      "index": 60,
+      "word": "evolution",
+      "start": 22.522,
+      "end": 22.841,
+      "duration": 0.319
+    },
+    {
+      "index": 61,
+      "word": "hai",
+      "start": 22.876,
+      "end": 22.983,
+      "duration": 0.106
+    },
+    {
+      "index": 62,
+      "word": "communication",
+      "start": 22.994,
+      "end": 23.455,
+      "duration": 0.461
+    },
+    {
+      "index": 63,
+      "word": "ka.",
+      "start": 23.905,
+      "end": 24.053,
+      "duration": 0.148
+    },
+    {
+      "index": 64,
+      "word": "Lekin",
+      "start": 24.07,
+      "end": 24.317,
+      "duration": 0.247
+    },
+    {
+      "index": 65,
+      "word": "ek",
+      "start": 24.344,
+      "end": 24.443,
+      "duration": 0.099
+    },
+    {
+      "index": 66,
+      "word": "loss",
+      "start": 24.454,
+      "end": 24.651,
+      "duration": 0.198
+    },
+    {
+      "index": 67,
+      "word": "hai.",
+      "start": 24.673,
+      "end": 24.871,
+      "duration": 0.198
+    },
+    {
+      "index": 68,
+      "word": "Aur",
+      "start": 24.893,
+      "end": 25.041,
+      "duration": 0.148
+    },
+    {
+      "index": 69,
+      "word": "ye",
+      "start": 25.058,
+      "end": 25.156,
+      "duration": 0.099
+    },
+    {
+      "index": 70,
+      "word": "loss...",
+      "start": 25.167,
+      "end": 25.513,
+      "duration": 0.346
+    },
+    {
+      "index": 71,
+      "word": "silent",
+      "start": 25.552,
+      "end": 25.848,
+      "duration": 0.296
+    },
+    {
+      "index": 72,
+      "word": "hai.",
+      "start": 26.699,
+      "end": 27.646,
+      "duration": 0.947
+    }
+  ]
+}

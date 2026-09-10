@@ -1,0 +1,188 @@
+{
+  "total_words": 26,
+  "total_duration": 14.68,
+  "words": [
+    {
+      "index": 1,
+      "word": "Usne",
+      "start": 0.37,
+      "end": 0.596,
+      "duration": 0.226
+    },
+    {
+      "index": 2,
+      "word": "pre-industrial",
+      "start": 0.621,
+      "end": 1.411,
+      "duration": 0.79
+    },
+    {
+      "index": 3,
+      "word": "Europe",
+      "start": 1.499,
+      "end": 1.838,
+      "duration": 0.339
+    },
+    {
+      "index": 4,
+      "word": "aur",
+      "start": 1.876,
+      "end": 2.045,
+      "duration": 0.169
+    },
+    {
+      "index": 5,
+      "word": "America",
+      "start": 2.064,
+      "end": 2.459,
+      "duration": 0.395
+    },
+    {
+      "index": 6,
+      "word": "ke",
+      "start": 2.503,
+      "end": 2.616,
+      "duration": 0.113
+    },
+    {
+      "index": 7,
+      "word": "paanch",
+      "start": 2.629,
+      "end": 2.967,
+      "duration": 0.339
+    },
+    {
+      "index": 8,
+      "word": "sau",
+      "start": 3.279,
+      "end": 3.445,
+      "duration": 0.166
+    },
+    {
+      "index": 9,
+      "word": "plus",
+      "start": 3.464,
+      "end": 3.685,
+      "duration": 0.221
+    },
+    {
+      "index": 10,
+      "word": "historical",
+      "start": 3.71,
+      "end": 4.263,
+      "duration": 0.554
+    },
+    {
+      "index": 11,
+      "word": "documents",
+      "start": 4.325,
+      "end": 4.823,
+      "duration": 0.498
+    },
+    {
+      "index": 12,
+      "word": "study",
+      "start": 4.879,
+      "end": 5.155,
+      "duration": 0.277
+    },
+    {
+      "index": 13,
+      "word": "kiye...",
+      "start": 5.186,
+      "end": 5.574,
+      "duration": 0.388
+    },
+    {
+      "index": 14,
+      "word": "diaries,",
+      "start": 5.617,
+      "end": 6.06,
+      "duration": 0.443
+    },
+    {
+      "index": 15,
+      "word": "medical",
+      "start": 6.553,
+      "end": 6.885,
+      "duration": 0.332
+    },
+    {
+      "index": 16,
+      "word": "texts,",
+      "start": 6.922,
+      "end": 7.206,
+      "duration": 0.285
+    },
+    {
+      "index": 17,
+      "word": "court",
+      "start": 7.45,
+      "end": 7.623,
+      "duration": 0.173
+    },
+    {
+      "index": 18,
+      "word": "records,",
+      "start": 7.643,
+      "end": 7.92,
+      "duration": 0.278
+    },
+    {
+      "index": 19,
+      "word": "literature.",
+      "start": 7.951,
+      "end": 8.333,
+      "duration": 0.382
+    },
+    {
+      "index": 20,
+      "word": "Aur",
+      "start": 8.653,
+      "end": 8.786,
+      "duration": 0.133
+    },
+    {
+      "index": 21,
+      "word": "jo",
+      "start": 8.801,
+      "end": 8.889,
+      "duration": 0.089
+    },
+    {
+      "index": 22,
+      "word": "unhe",
+      "start": 8.899,
+      "end": 9.077,
+      "duration": 0.177
+    },
+    {
+      "index": 23,
+      "word": "mila...",
+      "start": 9.096,
+      "end": 9.407,
+      "duration": 0.31
+    },
+    {
+      "index": 24,
+      "word": "wo",
+      "start": 9.63,
+      "end": 9.692,
+      "duration": 0.062
+    },
+    {
+      "index": 25,
+      "word": "mind-blowing",
+      "start": 9.699,
+      "end": 10.073,
+      "duration": 0.374
+    },
+    {
+      "index": 26,
+      "word": "tha.",
+      "start": 11.063,
+      "end": 12.13,
+      "duration": 1.067
+    }
+  ]
+}

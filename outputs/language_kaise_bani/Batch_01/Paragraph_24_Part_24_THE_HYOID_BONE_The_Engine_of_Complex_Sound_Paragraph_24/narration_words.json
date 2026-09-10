@@ -1,0 +1,468 @@
+{
+  "total_words": 66,
+  "total_duration": 25.12,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.29,
+      "end": 0.447,
+      "duration": 0.157
+    },
+    {
+      "index": 2,
+      "word": "is",
+      "start": 0.464,
+      "end": 0.568,
+      "duration": 0.104
+    },
+    {
+      "index": 3,
+      "word": "chhoti",
+      "start": 0.58,
+      "end": 0.893,
+      "duration": 0.313
+    },
+    {
+      "index": 4,
+      "word": "si",
+      "start": 0.928,
+      "end": 1.032,
+      "duration": 0.104
+    },
+    {
+      "index": 5,
+      "word": "haddi",
+      "start": 1.044,
+      "end": 1.305,
+      "duration": 0.261
+    },
+    {
+      "index": 6,
+      "word": "ka",
+      "start": 1.334,
+      "end": 1.438,
+      "duration": 0.104
+    },
+    {
+      "index": 7,
+      "word": "ek",
+      "start": 1.45,
+      "end": 1.554,
+      "duration": 0.104
+    },
+    {
+      "index": 8,
+      "word": "bahut",
+      "start": 1.566,
+      "end": 1.827,
+      "duration": 0.261
+    },
+    {
+      "index": 9,
+      "word": "bada",
+      "start": 1.856,
+      "end": 2.065,
+      "duration": 0.209
+    },
+    {
+      "index": 10,
+      "word": "kaam",
+      "start": 2.088,
+      "end": 2.297,
+      "duration": 0.209
+    },
+    {
+      "index": 11,
+      "word": "hai...",
+      "start": 2.32,
+      "end": 2.633,
+      "duration": 0.313
+    },
+    {
+      "index": 12,
+      "word": "Ye",
+      "start": 2.668,
+      "end": 2.772,
+      "duration": 0.104
+    },
+    {
+      "index": 13,
+      "word": "tumhari",
+      "start": 2.784,
+      "end": 3.149,
+      "duration": 0.365
+    },
+    {
+      "index": 14,
+      "word": "tongue",
+      "start": 3.363,
+      "end": 3.694,
+      "duration": 0.331
+    },
+    {
+      "index": 15,
+      "word": "aur",
+      "start": 3.731,
+      "end": 3.897,
+      "duration": 0.166
+    },
+    {
+      "index": 16,
+      "word": "larynx",
+      "start": 3.915,
+      "end": 4.246,
+      "duration": 0.331
+    },
+    {
+      "index": 17,
+      "word": "ko",
+      "start": 4.283,
+      "end": 4.393,
+      "duration": 0.11
+    },
+    {
+      "index": 18,
+      "word": "support",
+      "start": 4.406,
+      "end": 4.792,
+      "duration": 0.386
+    },
+    {
+      "index": 19,
+      "word": "karti",
+      "start": 4.835,
+      "end": 5.111,
+      "duration": 0.276
+    },
+    {
+      "index": 20,
+      "word": "hai.",
+      "start": 5.142,
+      "end": 5.362,
+      "duration": 0.221
+    },
+    {
+      "index": 21,
+      "word": "Isi",
+      "start": 5.387,
+      "end": 5.553,
+      "duration": 0.166
+    },
+    {
+      "index": 22,
+      "word": "ki",
+      "start": 5.571,
+      "end": 5.681,
+      "duration": 0.11
+    },
+    {
+      "index": 23,
+      "word": "wajah",
+      "start": 5.694,
+      "end": 5.97,
+      "duration": 0.276
+    },
+    {
+      "index": 24,
+      "word": "se",
+      "start": 6.0,
+      "end": 6.111,
+      "duration": 0.11
+    },
+    {
+      "index": 25,
+      "word": "tum",
+      "start": 6.123,
+      "end": 6.289,
+      "duration": 0.166
+    },
+    {
+      "index": 26,
+      "word": "complex",
+      "start": 7.062,
+      "end": 7.39,
+      "duration": 0.328
+    },
+    {
+      "index": 27,
+      "word": "sounds",
+      "start": 7.426,
+      "end": 7.708,
+      "duration": 0.281
+    },
+    {
+      "index": 28,
+      "word": "bana",
+      "start": 7.739,
+      "end": 7.926,
+      "duration": 0.187
+    },
+    {
+      "index": 29,
+      "word": "sakte",
+      "start": 7.947,
+      "end": 8.181,
+      "duration": 0.234
+    },
+    {
+      "index": 30,
+      "word": "ho...",
+      "start": 8.207,
+      "end": 8.442,
+      "duration": 0.234
+    },
+    {
+      "index": 31,
+      "word": "vowels...",
+      "start": 8.468,
+      "end": 8.889,
+      "duration": 0.422
+    },
+    {
+      "index": 32,
+      "word": "consonants...",
+      "start": 8.936,
+      "end": 9.545,
+      "duration": 0.609
+    },
+    {
+      "index": 33,
+      "word": "tones...",
+      "start": 9.818,
+      "end": 10.265,
+      "duration": 0.447
+    },
+    {
+      "index": 34,
+      "word": "poori",
+      "start": 10.314,
+      "end": 10.594,
+      "duration": 0.279
+    },
+    {
+      "index": 35,
+      "word": "range!",
+      "start": 10.625,
+      "end": 10.96,
+      "duration": 0.335
+    },
+    {
+      "index": 36,
+      "word": "Chimpanzees",
+      "start": 10.997,
+      "end": 11.612,
+      "duration": 0.614
+    },
+    {
+      "index": 37,
+      "word": "ka",
+      "start": 11.68,
+      "end": 11.792,
+      "duration": 0.112
+    },
+    {
+      "index": 38,
+      "word": "hyoid",
+      "start": 12.108,
+      "end": 12.31,
+      "duration": 0.202
+    },
+    {
+      "index": 39,
+      "word": "bone",
+      "start": 12.332,
+      "end": 12.493,
+      "duration": 0.161
+    },
+    {
+      "index": 40,
+      "word": "humare",
+      "start": 12.511,
+      "end": 12.753,
+      "duration": 0.242
+    },
+    {
+      "index": 41,
+      "word": "se",
+      "start": 13.456,
+      "end": 13.568,
+      "duration": 0.112
+    },
+    {
+      "index": 42,
+      "word": "alag",
+      "start": 13.581,
+      "end": 13.806,
+      "duration": 0.225
+    },
+    {
+      "index": 43,
+      "word": "shape",
+      "start": 13.831,
+      "end": 14.112,
+      "duration": 0.281
+    },
+    {
+      "index": 44,
+      "word": "ka",
+      "start": 14.143,
+      "end": 14.255,
+      "duration": 0.112
+    },
+    {
+      "index": 45,
+      "word": "hota",
+      "start": 14.268,
+      "end": 14.493,
+      "duration": 0.225
+    },
+    {
+      "index": 46,
+      "word": "hai.",
+      "start": 14.518,
+      "end": 14.742,
+      "duration": 0.225
+    },
+    {
+      "index": 47,
+      "word": "Isiliye",
+      "start": 14.767,
+      "end": 15.161,
+      "duration": 0.393
+    },
+    {
+      "index": 48,
+      "word": "chimps",
+      "start": 15.205,
+      "end": 15.542,
+      "duration": 0.337
+    },
+    {
+      "index": 49,
+      "word": "chahe",
+      "start": 15.579,
+      "end": 15.86,
+      "duration": 0.281
+    },
+    {
+      "index": 50,
+      "word": "kitni",
+      "start": 15.891,
+      "end": 16.172,
+      "duration": 0.281
+    },
+    {
+      "index": 51,
+      "word": "bhi",
+      "start": 16.204,
+      "end": 16.372,
+      "duration": 0.169
+    },
+    {
+      "index": 52,
+      "word": "koshish",
+      "start": 16.552,
+      "end": 16.663,
+      "duration": 0.111
+    },
+    {
+      "index": 53,
+      "word": "karein...",
+      "start": 16.831,
+      "end": 17.296,
+      "duration": 0.465
+    },
+    {
+      "index": 54,
+      "word": "hamari",
+      "start": 17.347,
+      "end": 17.657,
+      "duration": 0.31
+    },
+    {
+      "index": 55,
+      "word": "tarah",
+      "start": 17.692,
+      "end": 17.95,
+      "duration": 0.258
+    },
+    {
+      "index": 56,
+      "word": "nahi",
+      "start": 17.978,
+      "end": 18.185,
+      "duration": 0.207
+    },
+    {
+      "index": 57,
+      "word": "bol",
+      "start": 18.208,
+      "end": 18.363,
+      "duration": 0.155
+    },
+    {
+      "index": 58,
+      "word": "sakte.",
+      "start": 18.38,
+      "end": 18.69,
+      "duration": 0.31
+    },
+    {
+      "index": 59,
+      "word": "Their",
+      "start": 18.724,
+      "end": 18.982,
+      "duration": 0.258
+    },
+    {
+      "index": 60,
+      "word": "anatomy",
+      "start": 19.31,
+      "end": 19.686,
+      "duration": 0.376
+    },
+    {
+      "index": 61,
+      "word": "doesn't",
+      "start": 19.727,
+      "end": 20.103,
+      "duration": 0.376
+    },
+    {
+      "index": 62,
+      "word": "allow",
+      "start": 20.145,
+      "end": 20.413,
+      "duration": 0.268
+    },
+    {
+      "index": 63,
+      "word": "it.",
+      "start": 20.443,
+      "end": 20.604,
+      "duration": 0.161
+    },
+    {
+      "index": 64,
+      "word": "Ab",
+      "start": 21.032,
+      "end": 21.195,
+      "duration": 0.163
+    },
+    {
+      "index": 65,
+      "word": "interesting",
+      "start": 21.213,
+      "end": 22.11,
+      "duration": 0.896
+    },
+    {
+      "index": 66,
+      "word": "part...",
+      "start": 22.209,
+      "end": 22.78,
+      "duration": 0.57
+    }
+  ]
+}

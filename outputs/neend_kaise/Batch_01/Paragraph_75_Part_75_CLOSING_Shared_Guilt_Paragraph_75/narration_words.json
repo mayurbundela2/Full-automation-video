@@ -1,0 +1,132 @@
+{
+  "total_words": 18,
+  "total_duration": 5.01,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.159,
+      "end": 0.247,
+      "duration": 0.088
+    },
+    {
+      "index": 2,
+      "word": "main",
+      "start": 0.256,
+      "end": 0.373,
+      "duration": 0.117
+    },
+    {
+      "index": 3,
+      "word": "tumhe",
+      "start": 0.666,
+      "end": 0.883,
+      "duration": 0.217
+    },
+    {
+      "index": 4,
+      "word": "judge",
+      "start": 0.907,
+      "end": 1.123,
+      "duration": 0.217
+    },
+    {
+      "index": 5,
+      "word": "nahi",
+      "start": 1.147,
+      "end": 1.321,
+      "duration": 0.173
+    },
+    {
+      "index": 6,
+      "word": "kar",
+      "start": 1.34,
+      "end": 1.47,
+      "duration": 0.13
+    },
+    {
+      "index": 7,
+      "word": "raha.",
+      "start": 1.484,
+      "end": 1.701,
+      "duration": 0.217
+    },
+    {
+      "index": 8,
+      "word": "Ye",
+      "start": 1.725,
+      "end": 1.811,
+      "duration": 0.087
+    },
+    {
+      "index": 9,
+      "word": "main",
+      "start": 2.126,
+      "end": 2.309,
+      "duration": 0.183
+    },
+    {
+      "index": 10,
+      "word": "bhi",
+      "start": 2.33,
+      "end": 2.467,
+      "duration": 0.137
+    },
+    {
+      "index": 11,
+      "word": "karta",
+      "start": 2.482,
+      "end": 2.711,
+      "duration": 0.229
+    },
+    {
+      "index": 12,
+      "word": "hoon.",
+      "start": 2.737,
+      "end": 2.966,
+      "duration": 0.229
+    },
+    {
+      "index": 13,
+      "word": "Ye",
+      "start": 3.269,
+      "end": 3.374,
+      "duration": 0.105
+    },
+    {
+      "index": 14,
+      "word": "almost",
+      "start": 3.386,
+      "end": 3.702,
+      "duration": 0.316
+    },
+    {
+      "index": 15,
+      "word": "sab",
+      "start": 3.737,
+      "end": 3.895,
+      "duration": 0.158
+    },
+    {
+      "index": 16,
+      "word": "karte",
+      "start": 3.913,
+      "end": 4.176,
+      "duration": 0.263
+    },
+    {
+      "index": 17,
+      "word": "hain",
+      "start": 4.205,
+      "end": 4.416,
+      "duration": 0.211
+    },
+    {
+      "index": 18,
+      "word": "aajkal.",
+      "start": 4.439,
+      "end": 4.808,
+      "duration": 0.369
+    }
+  ]
+}

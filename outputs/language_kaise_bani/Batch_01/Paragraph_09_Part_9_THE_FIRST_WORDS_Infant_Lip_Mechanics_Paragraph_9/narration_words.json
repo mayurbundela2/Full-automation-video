@@ -1,0 +1,398 @@
+{
+  "total_words": 56,
+  "total_duration": 25.56,
+  "words": [
+    {
+      "index": 1,
+      "word": "Kyun?",
+      "start": 0.307,
+      "end": 0.582,
+      "duration": 0.275
+    },
+    {
+      "index": 2,
+      "word": "Iski",
+      "start": 1.09,
+      "end": 1.27,
+      "duration": 0.18
+    },
+    {
+      "index": 3,
+      "word": "wajah",
+      "start": 1.45,
+      "end": 1.648,
+      "duration": 0.198
+    },
+    {
+      "index": 4,
+      "word": "ek",
+      "start": 1.67,
+      "end": 1.749,
+      "duration": 0.079
+    },
+    {
+      "index": 5,
+      "word": "common",
+      "start": 1.757,
+      "end": 1.994,
+      "duration": 0.237
+    },
+    {
+      "index": 6,
+      "word": "ancestor",
+      "start": 2.021,
+      "end": 2.337,
+      "duration": 0.316
+    },
+    {
+      "index": 7,
+      "word": "language",
+      "start": 2.575,
+      "end": 3.05,
+      "duration": 0.475
+    },
+    {
+      "index": 8,
+      "word": "nahi",
+      "start": 3.103,
+      "end": 3.34,
+      "duration": 0.237
+    },
+    {
+      "index": 9,
+      "word": "hai...",
+      "start": 3.367,
+      "end": 3.723,
+      "duration": 0.356
+    },
+    {
+      "index": 10,
+      "word": "balki",
+      "start": 3.762,
+      "end": 4.059,
+      "duration": 0.297
+    },
+    {
+      "index": 11,
+      "word": "ek",
+      "start": 4.092,
+      "end": 4.211,
+      "duration": 0.119
+    },
+    {
+      "index": 12,
+      "word": "biological",
+      "start": 4.473,
+      "end": 5.077,
+      "duration": 0.604
+    },
+    {
+      "index": 13,
+      "word": "reason",
+      "start": 5.144,
+      "end": 5.507,
+      "duration": 0.363
+    },
+    {
+      "index": 14,
+      "word": "hai!",
+      "start": 5.547,
+      "end": 5.789,
+      "duration": 0.242
+    },
+    {
+      "index": 15,
+      "word": "Jab",
+      "start": 5.816,
+      "end": 5.997,
+      "duration": 0.181
+    },
+    {
+      "index": 16,
+      "word": "baby",
+      "start": 6.017,
+      "end": 6.259,
+      "duration": 0.242
+    },
+    {
+      "index": 17,
+      "word": "paida",
+      "start": 6.286,
+      "end": 6.588,
+      "duration": 0.302
+    },
+    {
+      "index": 18,
+      "word": "hota",
+      "start": 6.621,
+      "end": 6.863,
+      "duration": 0.242
+    },
+    {
+      "index": 19,
+      "word": "hai...",
+      "start": 7.626,
+      "end": 7.993,
+      "duration": 0.367
+    },
+    {
+      "index": 20,
+      "word": "uske",
+      "start": 8.033,
+      "end": 8.278,
+      "duration": 0.244
+    },
+    {
+      "index": 21,
+      "word": "pehle",
+      "start": 8.305,
+      "end": 8.611,
+      "duration": 0.306
+    },
+    {
+      "index": 22,
+      "word": "sounds",
+      "start": 8.645,
+      "end": 9.011,
+      "duration": 0.367
+    },
+    {
+      "index": 23,
+      "word": "m",
+      "start": 9.052,
+      "end": 9.113,
+      "duration": 0.061
+    },
+    {
+      "index": 24,
+      "word": "aur",
+      "start": 9.418,
+      "end": 9.602,
+      "duration": 0.184
+    },
+    {
+      "index": 25,
+      "word": "p",
+      "start": 9.623,
+      "end": 9.684,
+      "duration": 0.061
+    },
+    {
+      "index": 26,
+      "word": "hote",
+      "start": 9.878,
+      "end": 10.047,
+      "duration": 0.169
+    },
+    {
+      "index": 27,
+      "word": "hain...",
+      "start": 10.066,
+      "end": 10.362,
+      "duration": 0.296
+    },
+    {
+      "index": 28,
+      "word": "kyunki",
+      "start": 10.395,
+      "end": 10.649,
+      "duration": 0.254
+    },
+    {
+      "index": 29,
+      "word": "ye",
+      "start": 10.859,
+      "end": 10.944,
+      "duration": 0.085
+    },
+    {
+      "index": 30,
+      "word": "honthon",
+      "start": 10.953,
+      "end": 11.249,
+      "duration": 0.296
+    },
+    {
+      "index": 31,
+      "word": "ki",
+      "start": 11.473,
+      "end": 11.587,
+      "duration": 0.114
+    },
+    {
+      "index": 32,
+      "word": "simplest",
+      "start": 11.848,
+      "end": 12.339,
+      "duration": 0.491
+    },
+    {
+      "index": 33,
+      "word": "movement",
+      "start": 12.639,
+      "end": 13.089,
+      "duration": 0.45
+    },
+    {
+      "index": 34,
+      "word": "se",
+      "start": 13.139,
+      "end": 13.252,
+      "duration": 0.113
+    },
+    {
+      "index": 35,
+      "word": "aate",
+      "start": 13.264,
+      "end": 13.489,
+      "duration": 0.225
+    },
+    {
+      "index": 36,
+      "word": "hain...",
+      "start": 13.514,
+      "end": 13.908,
+      "duration": 0.394
+    },
+    {
+      "index": 37,
+      "word": "Bina",
+      "start": 13.952,
+      "end": 14.177,
+      "duration": 0.225
+    },
+    {
+      "index": 38,
+      "word": "koshish",
+      "start": 14.202,
+      "end": 14.596,
+      "duration": 0.394
+    },
+    {
+      "index": 39,
+      "word": "ke!",
+      "start": 14.64,
+      "end": 14.809,
+      "duration": 0.169
+    },
+    {
+      "index": 40,
+      "word": "Toh",
+      "start": 14.827,
+      "end": 14.996,
+      "duration": 0.169
+    },
+    {
+      "index": 41,
+      "word": "har",
+      "start": 15.015,
+      "end": 15.184,
+      "duration": 0.169
+    },
+    {
+      "index": 42,
+      "word": "jagah",
+      "start": 15.202,
+      "end": 15.484,
+      "duration": 0.281
+    },
+    {
+      "index": 43,
+      "word": "ke",
+      "start": 15.823,
+      "end": 15.941,
+      "duration": 0.118
+    },
+    {
+      "index": 44,
+      "word": "insaan",
+      "start": 15.954,
+      "end": 16.309,
+      "duration": 0.354
+    },
+    {
+      "index": 45,
+      "word": "ne...",
+      "start": 16.348,
+      "end": 16.643,
+      "duration": 0.295
+    },
+    {
+      "index": 46,
+      "word": "independently...",
+      "start": 17.21,
+      "end": 17.367,
+      "duration": 0.158
+    },
+    {
+      "index": 47,
+      "word": "ek",
+      "start": 17.542,
+      "end": 17.637,
+      "duration": 0.095
+    },
+    {
+      "index": 48,
+      "word": "hi",
+      "start": 17.648,
+      "end": 17.743,
+      "duration": 0.095
+    },
+    {
+      "index": 49,
+      "word": "word",
+      "start": 17.754,
+      "end": 17.944,
+      "duration": 0.191
+    },
+    {
+      "index": 50,
+      "word": "banaya...",
+      "start": 17.965,
+      "end": 18.394,
+      "duration": 0.429
+    },
+    {
+      "index": 51,
+      "word": "Sabse",
+      "start": 18.442,
+      "end": 18.68,
+      "duration": 0.238
+    },
+    {
+      "index": 52,
+      "word": "important",
+      "start": 18.707,
+      "end": 19.135,
+      "duration": 0.429
+    },
+    {
+      "index": 53,
+      "word": "insaan",
+      "start": 19.387,
+      "end": 19.706,
+      "duration": 0.319
+    },
+    {
+      "index": 54,
+      "word": "ke",
+      "start": 19.742,
+      "end": 19.848,
+      "duration": 0.106
+    },
+    {
+      "index": 55,
+      "word": "liye...",
+      "start": 19.86,
+      "end": 20.233,
+      "duration": 0.373
+    },
+    {
+      "index": 56,
+      "word": "Maa.",
+      "start": 20.64,
+      "end": 21.744,
+      "duration": 1.104
+    }
+  ]
+}

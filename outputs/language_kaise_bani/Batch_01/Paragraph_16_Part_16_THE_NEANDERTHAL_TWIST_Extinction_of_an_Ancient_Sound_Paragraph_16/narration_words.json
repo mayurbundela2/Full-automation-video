@@ -1,0 +1,440 @@
+{
+  "total_words": 62,
+  "total_duration": 28.36,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ek",
+      "start": 0.351,
+      "end": 0.468,
+      "duration": 0.117
+    },
+    {
+      "index": 2,
+      "word": "possibility",
+      "start": 0.481,
+      "end": 1.127,
+      "duration": 0.645
+    },
+    {
+      "index": 3,
+      "word": "ye",
+      "start": 1.198,
+      "end": 1.316,
+      "duration": 0.117
+    },
+    {
+      "index": 4,
+      "word": "hai...",
+      "start": 1.329,
+      "end": 1.681,
+      "duration": 0.352
+    },
+    {
+      "index": 5,
+      "word": "humse",
+      "start": 2.073,
+      "end": 2.339,
+      "duration": 0.266
+    },
+    {
+      "index": 6,
+      "word": "pehle",
+      "start": 2.368,
+      "end": 2.634,
+      "duration": 0.266
+    },
+    {
+      "index": 7,
+      "word": "bhi",
+      "start": 2.664,
+      "end": 2.823,
+      "duration": 0.159
+    },
+    {
+      "index": 8,
+      "word": "is",
+      "start": 2.841,
+      "end": 2.947,
+      "duration": 0.106
+    },
+    {
+      "index": 9,
+      "word": "dharti",
+      "start": 2.959,
+      "end": 3.278,
+      "duration": 0.319
+    },
+    {
+      "index": 10,
+      "word": "pe",
+      "start": 3.313,
+      "end": 3.42,
+      "duration": 0.106
+    },
+    {
+      "index": 11,
+      "word": "koi",
+      "start": 3.432,
+      "end": 3.591,
+      "duration": 0.159
+    },
+    {
+      "index": 12,
+      "word": "tha",
+      "start": 3.609,
+      "end": 3.768,
+      "duration": 0.159
+    },
+    {
+      "index": 13,
+      "word": "jo",
+      "start": 3.786,
+      "end": 3.892,
+      "duration": 0.106
+    },
+    {
+      "index": 14,
+      "word": "shabd",
+      "start": 3.904,
+      "end": 4.17,
+      "duration": 0.266
+    },
+    {
+      "index": 15,
+      "word": "banata",
+      "start": 4.2,
+      "end": 4.519,
+      "duration": 0.319
+    },
+    {
+      "index": 16,
+      "word": "tha.",
+      "start": 4.921,
+      "end": 5.077,
+      "duration": 0.156
+    },
+    {
+      "index": 17,
+      "word": "Aur",
+      "start": 5.094,
+      "end": 5.211,
+      "duration": 0.117
+    },
+    {
+      "index": 18,
+      "word": "ek",
+      "start": 5.224,
+      "end": 5.302,
+      "duration": 0.078
+    },
+    {
+      "index": 19,
+      "word": "dukh-ad",
+      "start": 5.311,
+      "end": 5.583,
+      "duration": 0.273
+    },
+    {
+      "index": 20,
+      "word": "possibility",
+      "start": 5.614,
+      "end": 6.042,
+      "duration": 0.429
+    },
+    {
+      "index": 21,
+      "word": "ye",
+      "start": 6.811,
+      "end": 6.918,
+      "duration": 0.107
+    },
+    {
+      "index": 22,
+      "word": "hai...",
+      "start": 6.93,
+      "end": 7.25,
+      "duration": 0.32
+    },
+    {
+      "index": 23,
+      "word": "jab",
+      "start": 7.285,
+      "end": 7.445,
+      "duration": 0.16
+    },
+    {
+      "index": 24,
+      "word": "Homo",
+      "start": 7.463,
+      "end": 7.677,
+      "duration": 0.213
+    },
+    {
+      "index": 25,
+      "word": "sapiens",
+      "start": 7.7,
+      "end": 8.074,
+      "duration": 0.374
+    },
+    {
+      "index": 26,
+      "word": "Africa",
+      "start": 8.115,
+      "end": 8.435,
+      "duration": 0.32
+    },
+    {
+      "index": 27,
+      "word": "se",
+      "start": 8.471,
+      "end": 8.578,
+      "duration": 0.107
+    },
+    {
+      "index": 28,
+      "word": "bahar",
+      "start": 8.59,
+      "end": 8.856,
+      "duration": 0.267
+    },
+    {
+      "index": 29,
+      "word": "nikla",
+      "start": 9.252,
+      "end": 9.553,
+      "duration": 0.301
+    },
+    {
+      "index": 30,
+      "word": "aur",
+      "start": 9.586,
+      "end": 9.767,
+      "duration": 0.18
+    },
+    {
+      "index": 31,
+      "word": "Neanderthals",
+      "start": 9.787,
+      "end": 10.508,
+      "duration": 0.722
+    },
+    {
+      "index": 32,
+      "word": "se",
+      "start": 10.588,
+      "end": 10.709,
+      "duration": 0.12
+    },
+    {
+      "index": 33,
+      "word": "mila...",
+      "start": 10.722,
+      "end": 11.143,
+      "duration": 0.421
+    },
+    {
+      "index": 34,
+      "word": "dono",
+      "start": 11.19,
+      "end": 11.43,
+      "duration": 0.241
+    },
+    {
+      "index": 35,
+      "word": "ke",
+      "start": 11.457,
+      "end": 11.577,
+      "duration": 0.12
+    },
+    {
+      "index": 36,
+      "word": "paas",
+      "start": 11.591,
+      "end": 11.831,
+      "duration": 0.241
+    },
+    {
+      "index": 37,
+      "word": "kuch",
+      "start": 12.127,
+      "end": 12.36,
+      "duration": 0.233
+    },
+    {
+      "index": 38,
+      "word": "awaaz",
+      "start": 12.386,
+      "end": 12.677,
+      "duration": 0.291
+    },
+    {
+      "index": 39,
+      "word": "thi.",
+      "start": 12.709,
+      "end": 12.942,
+      "duration": 0.233
+    },
+    {
+      "index": 40,
+      "word": "Dono",
+      "start": 12.967,
+      "end": 13.2,
+      "duration": 0.233
+    },
+    {
+      "index": 41,
+      "word": "ke",
+      "start": 13.226,
+      "end": 13.342,
+      "duration": 0.116
+    },
+    {
+      "index": 42,
+      "word": "apne",
+      "start": 13.355,
+      "end": 13.588,
+      "duration": 0.233
+    },
+    {
+      "index": 43,
+      "word": "sounds",
+      "start": 14.201,
+      "end": 14.445,
+      "duration": 0.244
+    },
+    {
+      "index": 44,
+      "word": "the.",
+      "start": 14.472,
+      "end": 14.635,
+      "duration": 0.163
+    },
+    {
+      "index": 45,
+      "word": "Aur",
+      "start": 14.653,
+      "end": 14.774,
+      "duration": 0.122
+    },
+    {
+      "index": 46,
+      "word": "phir...",
+      "start": 14.788,
+      "end": 15.073,
+      "duration": 0.284
+    },
+    {
+      "index": 47,
+      "word": "Neanderthals",
+      "start": 15.104,
+      "end": 15.592,
+      "duration": 0.488
+    },
+    {
+      "index": 48,
+      "word": "gayab",
+      "start": 15.988,
+      "end": 16.252,
+      "duration": 0.263
+    },
+    {
+      "index": 49,
+      "word": "ho",
+      "start": 16.281,
+      "end": 16.386,
+      "duration": 0.105
+    },
+    {
+      "index": 50,
+      "word": "gaye.",
+      "start": 16.398,
+      "end": 16.661,
+      "duration": 0.263
+    },
+    {
+      "index": 51,
+      "word": "Unki",
+      "start": 16.691,
+      "end": 16.901,
+      "duration": 0.211
+    },
+    {
+      "index": 52,
+      "word": "awaazein...",
+      "start": 16.925,
+      "end": 17.505,
+      "duration": 0.58
+    },
+    {
+      "index": 53,
+      "word": "unke",
+      "start": 18.39,
+      "end": 18.566,
+      "duration": 0.176
+    },
+    {
+      "index": 54,
+      "word": "saath",
+      "start": 18.585,
+      "end": 18.805,
+      "duration": 0.22
+    },
+    {
+      "index": 55,
+      "word": "chali",
+      "start": 19.623,
+      "end": 19.882,
+      "duration": 0.259
+    },
+    {
+      "index": 56,
+      "word": "gayi.",
+      "start": 19.911,
+      "end": 20.17,
+      "duration": 0.259
+    },
+    {
+      "index": 57,
+      "word": "Aur",
+      "start": 20.198,
+      "end": 20.354,
+      "duration": 0.155
+    },
+    {
+      "index": 58,
+      "word": "ab",
+      "start": 20.371,
+      "end": 20.475,
+      "duration": 0.104
+    },
+    {
+      "index": 59,
+      "word": "kabhi...",
+      "start": 20.486,
+      "end": 20.9,
+      "duration": 0.414
+    },
+    {
+      "index": 60,
+      "word": "wapas",
+      "start": 20.946,
+      "end": 21.205,
+      "duration": 0.259
+    },
+    {
+      "index": 61,
+      "word": "nahi",
+      "start": 22.13,
+      "end": 22.373,
+      "duration": 0.243
+    },
+    {
+      "index": 62,
+      "word": "milengi.",
+      "start": 22.4,
+      "end": 22.887,
+      "duration": 0.487
+    }
+  ]
+}

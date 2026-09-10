@@ -1,0 +1,104 @@
+{
+  "total_words": 14,
+  "total_duration": 6.81,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aaj",
+      "start": 0.407,
+      "end": 0.621,
+      "duration": 0.214
+    },
+    {
+      "index": 2,
+      "word": "raat...",
+      "start": 0.645,
+      "end": 1.144,
+      "duration": 0.5
+    },
+    {
+      "index": 3,
+      "word": "gyarah",
+      "start": 1.398,
+      "end": 1.92,
+      "duration": 0.522
+    },
+    {
+      "index": 4,
+      "word": "baje",
+      "start": 1.978,
+      "end": 2.326,
+      "duration": 0.348
+    },
+    {
+      "index": 5,
+      "word": "phone",
+      "start": 2.364,
+      "end": 2.799,
+      "duration": 0.435
+    },
+    {
+      "index": 6,
+      "word": "rakh",
+      "start": 2.848,
+      "end": 3.196,
+      "duration": 0.348
+    },
+    {
+      "index": 7,
+      "word": "do.",
+      "start": 3.234,
+      "end": 3.495,
+      "duration": 0.261
+    },
+    {
+      "index": 8,
+      "word": "Aur",
+      "start": 3.524,
+      "end": 3.785,
+      "duration": 0.261
+    },
+    {
+      "index": 9,
+      "word": "dekho...",
+      "start": 3.814,
+      "end": 4.51,
+      "duration": 0.696
+    },
+    {
+      "index": 10,
+      "word": "tumhari",
+      "start": 4.587,
+      "end": 5.196,
+      "duration": 0.609
+    },
+    {
+      "index": 11,
+      "word": "body",
+      "start": 5.264,
+      "end": 5.612,
+      "duration": 0.348
+    },
+    {
+      "index": 12,
+      "word": "kya",
+      "start": 5.65,
+      "end": 5.911,
+      "duration": 0.261
+    },
+    {
+      "index": 13,
+      "word": "karti",
+      "start": 5.94,
+      "end": 6.375,
+      "duration": 0.435
+    },
+    {
+      "index": 14,
+      "word": "hai.",
+      "start": 6.423,
+      "end": 6.771,
+      "duration": 0.348
+    }
+  ]
+}

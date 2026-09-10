@@ -1,0 +1,195 @@
+{
+  "total_words": 27,
+  "total_duration": 13.64,
+  "words": [
+    {
+      "index": 1,
+      "word": "Kisi",
+      "start": 0.241,
+      "end": 0.478,
+      "duration": 0.237
+    },
+    {
+      "index": 2,
+      "word": "ne",
+      "start": 0.504,
+      "end": 0.623,
+      "duration": 0.118
+    },
+    {
+      "index": 3,
+      "word": "kabhi",
+      "start": 0.636,
+      "end": 0.932,
+      "duration": 0.296
+    },
+    {
+      "index": 4,
+      "word": "record",
+      "start": 0.965,
+      "end": 1.32,
+      "duration": 0.355
+    },
+    {
+      "index": 5,
+      "word": "nahi",
+      "start": 1.36,
+      "end": 1.597,
+      "duration": 0.237
+    },
+    {
+      "index": 6,
+      "word": "kiya...",
+      "start": 1.623,
+      "end": 2.038,
+      "duration": 0.415
+    },
+    {
+      "index": 7,
+      "word": "pehla",
+      "start": 2.584,
+      "end": 2.875,
+      "duration": 0.291
+    },
+    {
+      "index": 8,
+      "word": "shabd",
+      "start": 2.908,
+      "end": 3.199,
+      "duration": 0.291
+    },
+    {
+      "index": 9,
+      "word": "kaunsa",
+      "start": 3.232,
+      "end": 3.581,
+      "duration": 0.35
+    },
+    {
+      "index": 10,
+      "word": "tha.",
+      "start": 3.62,
+      "end": 3.853,
+      "duration": 0.233
+    },
+    {
+      "index": 11,
+      "word": "Kaun",
+      "start": 3.879,
+      "end": 4.112,
+      "duration": 0.233
+    },
+    {
+      "index": 12,
+      "word": "se",
+      "start": 4.912,
+      "end": 5.034,
+      "duration": 0.122
+    },
+    {
+      "index": 13,
+      "word": "insaan",
+      "start": 5.048,
+      "end": 5.415,
+      "duration": 0.367
+    },
+    {
+      "index": 14,
+      "word": "ne",
+      "start": 5.456,
+      "end": 5.578,
+      "duration": 0.122
+    },
+    {
+      "index": 15,
+      "word": "pehli",
+      "start": 5.592,
+      "end": 5.898,
+      "duration": 0.306
+    },
+    {
+      "index": 16,
+      "word": "baar",
+      "start": 5.931,
+      "end": 6.176,
+      "duration": 0.245
+    },
+    {
+      "index": 17,
+      "word": "bola?",
+      "start": 6.203,
+      "end": 6.509,
+      "duration": 0.306
+    },
+    {
+      "index": 18,
+      "word": "Aur",
+      "start": 6.543,
+      "end": 6.727,
+      "duration": 0.184
+    },
+    {
+      "index": 19,
+      "word": "kya",
+      "start": 6.747,
+      "end": 6.931,
+      "duration": 0.184
+    },
+    {
+      "index": 20,
+      "word": "baaki",
+      "start": 7.64,
+      "end": 7.899,
+      "duration": 0.259
+    },
+    {
+      "index": 21,
+      "word": "species...",
+      "start": 7.928,
+      "end": 8.446,
+      "duration": 0.518
+    },
+    {
+      "index": 22,
+      "word": "Neanderthals...",
+      "start": 8.504,
+      "end": 9.282,
+      "duration": 0.778
+    },
+    {
+      "index": 23,
+      "word": "Denisovans...",
+      "start": 9.858,
+      "end": 10.645,
+      "duration": 0.787
+    },
+    {
+      "index": 24,
+      "word": "bhi",
+      "start": 10.732,
+      "end": 10.914,
+      "duration": 0.182
+    },
+    {
+      "index": 25,
+      "word": "bol",
+      "start": 11.285,
+      "end": 11.471,
+      "duration": 0.186
+    },
+    {
+      "index": 26,
+      "word": "sakte",
+      "start": 11.492,
+      "end": 11.802,
+      "duration": 0.31
+    },
+    {
+      "index": 27,
+      "word": "the?",
+      "start": 11.836,
+      "end": 12.084,
+      "duration": 0.248
+    }
+  ]
+}

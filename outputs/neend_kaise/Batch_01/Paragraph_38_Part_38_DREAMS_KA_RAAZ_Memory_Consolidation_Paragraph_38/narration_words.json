@@ -1,0 +1,237 @@
+{
+  "total_words": 33,
+  "total_duration": 13.56,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ek",
+      "start": 0.299,
+      "end": 0.414,
+      "duration": 0.115
+    },
+    {
+      "index": 2,
+      "word": "theory",
+      "start": 0.426,
+      "end": 0.771,
+      "duration": 0.344
+    },
+    {
+      "index": 3,
+      "word": "jo",
+      "start": 0.809,
+      "end": 0.924,
+      "duration": 0.115
+    },
+    {
+      "index": 4,
+      "word": "popular",
+      "start": 0.936,
+      "end": 1.338,
+      "duration": 0.402
+    },
+    {
+      "index": 5,
+      "word": "hai...",
+      "start": 1.383,
+      "end": 1.727,
+      "duration": 0.344
+    },
+    {
+      "index": 6,
+      "word": "memory",
+      "start": 2.204,
+      "end": 2.56,
+      "duration": 0.356
+    },
+    {
+      "index": 7,
+      "word": "consolidation",
+      "start": 2.6,
+      "end": 3.372,
+      "duration": 0.772
+    },
+    {
+      "index": 8,
+      "word": "theory.",
+      "start": 3.458,
+      "end": 3.874,
+      "duration": 0.416
+    },
+    {
+      "index": 9,
+      "word": "Din",
+      "start": 4.265,
+      "end": 4.448,
+      "duration": 0.183
+    },
+    {
+      "index": 10,
+      "word": "bhar",
+      "start": 4.469,
+      "end": 4.713,
+      "duration": 0.244
+    },
+    {
+      "index": 11,
+      "word": "mein",
+      "start": 4.74,
+      "end": 4.984,
+      "duration": 0.244
+    },
+    {
+      "index": 12,
+      "word": "tumne",
+      "start": 5.012,
+      "end": 5.317,
+      "duration": 0.305
+    },
+    {
+      "index": 13,
+      "word": "jo",
+      "start": 5.351,
+      "end": 5.473,
+      "duration": 0.122
+    },
+    {
+      "index": 14,
+      "word": "experience",
+      "start": 5.487,
+      "end": 6.097,
+      "duration": 0.611
+    },
+    {
+      "index": 15,
+      "word": "kiya,",
+      "start": 6.165,
+      "end": 6.471,
+      "duration": 0.305
+    },
+    {
+      "index": 16,
+      "word": "jo",
+      "start": 6.505,
+      "end": 6.627,
+      "duration": 0.122
+    },
+    {
+      "index": 17,
+      "word": "seekha,",
+      "start": 6.64,
+      "end": 7.068,
+      "duration": 0.428
+    },
+    {
+      "index": 18,
+      "word": "jo",
+      "start": 7.115,
+      "end": 7.238,
+      "duration": 0.122
+    },
+    {
+      "index": 19,
+      "word": "dekha...",
+      "start": 7.251,
+      "end": 7.74,
+      "duration": 0.489
+    },
+    {
+      "index": 20,
+      "word": "REM",
+      "start": 7.794,
+      "end": 7.977,
+      "duration": 0.183
+    },
+    {
+      "index": 21,
+      "word": "sleep",
+      "start": 7.998,
+      "end": 8.303,
+      "duration": 0.305
+    },
+    {
+      "index": 22,
+      "word": "mein",
+      "start": 8.337,
+      "end": 8.581,
+      "duration": 0.244
+    },
+    {
+      "index": 23,
+      "word": "tumhara",
+      "start": 8.608,
+      "end": 9.036,
+      "duration": 0.428
+    },
+    {
+      "index": 24,
+      "word": "brain",
+      "start": 9.083,
+      "end": 9.389,
+      "duration": 0.305
+    },
+    {
+      "index": 25,
+      "word": "ise",
+      "start": 9.423,
+      "end": 9.606,
+      "duration": 0.183
+    },
+    {
+      "index": 26,
+      "word": "process",
+      "start": 9.626,
+      "end": 10.054,
+      "duration": 0.428
+    },
+    {
+      "index": 27,
+      "word": "karta",
+      "start": 10.101,
+      "end": 10.407,
+      "duration": 0.305
+    },
+    {
+      "index": 28,
+      "word": "hai.",
+      "start": 10.441,
+      "end": 10.685,
+      "duration": 0.244
+    },
+    {
+      "index": 29,
+      "word": "Long-term",
+      "start": 10.712,
+      "end": 11.262,
+      "duration": 0.55
+    },
+    {
+      "index": 30,
+      "word": "memory",
+      "start": 11.665,
+      "end": 12.078,
+      "duration": 0.413
+    },
+    {
+      "index": 31,
+      "word": "mein",
+      "start": 12.124,
+      "end": 12.4,
+      "duration": 0.276
+    },
+    {
+      "index": 32,
+      "word": "daalta",
+      "start": 12.431,
+      "end": 12.844,
+      "duration": 0.413
+    },
+    {
+      "index": 33,
+      "word": "hai.",
+      "start": 12.89,
+      "end": 13.165,
+      "duration": 0.276
+    }
+  ]
+}

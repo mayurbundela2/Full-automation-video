@@ -1,0 +1,363 @@
+{
+  "total_words": 51,
+  "total_duration": 21.8,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.291,
+      "end": 0.491,
+      "duration": 0.2
+    },
+    {
+      "index": 2,
+      "word": "is",
+      "start": 0.513,
+      "end": 0.647,
+      "duration": 0.133
+    },
+    {
+      "index": 3,
+      "word": "chhoti",
+      "start": 0.661,
+      "end": 1.061,
+      "duration": 0.4
+    },
+    {
+      "index": 4,
+      "word": "si",
+      "start": 1.106,
+      "end": 1.239,
+      "duration": 0.133
+    },
+    {
+      "index": 5,
+      "word": "haddi",
+      "start": 1.254,
+      "end": 1.587,
+      "duration": 0.333
+    },
+    {
+      "index": 6,
+      "word": "ka",
+      "start": 1.624,
+      "end": 1.758,
+      "duration": 0.133
+    },
+    {
+      "index": 7,
+      "word": "ek",
+      "start": 1.772,
+      "end": 1.906,
+      "duration": 0.133
+    },
+    {
+      "index": 8,
+      "word": "bahut",
+      "start": 1.921,
+      "end": 2.254,
+      "duration": 0.333
+    },
+    {
+      "index": 9,
+      "word": "bada",
+      "start": 2.291,
+      "end": 2.558,
+      "duration": 0.267
+    },
+    {
+      "index": 10,
+      "word": "kaam",
+      "start": 2.587,
+      "end": 2.854,
+      "duration": 0.267
+    },
+    {
+      "index": 11,
+      "word": "hai...",
+      "start": 2.884,
+      "end": 3.284,
+      "duration": 0.4
+    },
+    {
+      "index": 12,
+      "word": "Ye",
+      "start": 3.578,
+      "end": 3.691,
+      "duration": 0.113
+    },
+    {
+      "index": 13,
+      "word": "tumhari",
+      "start": 3.704,
+      "end": 4.099,
+      "duration": 0.396
+    },
+    {
+      "index": 14,
+      "word": "tongue",
+      "start": 4.143,
+      "end": 4.482,
+      "duration": 0.339
+    },
+    {
+      "index": 15,
+      "word": "aur",
+      "start": 4.673,
+      "end": 4.86,
+      "duration": 0.187
+    },
+    {
+      "index": 16,
+      "word": "larynx",
+      "start": 4.881,
+      "end": 5.256,
+      "duration": 0.375
+    },
+    {
+      "index": 17,
+      "word": "ko",
+      "start": 5.297,
+      "end": 5.422,
+      "duration": 0.125
+    },
+    {
+      "index": 18,
+      "word": "support",
+      "start": 5.436,
+      "end": 5.873,
+      "duration": 0.437
+    },
+    {
+      "index": 19,
+      "word": "karti",
+      "start": 5.922,
+      "end": 6.234,
+      "duration": 0.312
+    },
+    {
+      "index": 20,
+      "word": "hai!",
+      "start": 6.268,
+      "end": 6.518,
+      "duration": 0.25
+    },
+    {
+      "index": 21,
+      "word": "Isi",
+      "start": 6.546,
+      "end": 6.733,
+      "duration": 0.187
+    },
+    {
+      "index": 22,
+      "word": "ki",
+      "start": 7.379,
+      "end": 7.49,
+      "duration": 0.111
+    },
+    {
+      "index": 23,
+      "word": "wajah",
+      "start": 7.502,
+      "end": 7.78,
+      "duration": 0.278
+    },
+    {
+      "index": 24,
+      "word": "se",
+      "start": 7.811,
+      "end": 7.922,
+      "duration": 0.111
+    },
+    {
+      "index": 25,
+      "word": "tum",
+      "start": 7.935,
+      "end": 8.101,
+      "duration": 0.167
+    },
+    {
+      "index": 26,
+      "word": "complex",
+      "start": 8.349,
+      "end": 8.72,
+      "duration": 0.371
+    },
+    {
+      "index": 27,
+      "word": "sounds",
+      "start": 8.762,
+      "end": 9.08,
+      "duration": 0.318
+    },
+    {
+      "index": 28,
+      "word": "bana",
+      "start": 9.115,
+      "end": 9.328,
+      "duration": 0.212
+    },
+    {
+      "index": 29,
+      "word": "sakte",
+      "start": 9.351,
+      "end": 9.617,
+      "duration": 0.265
+    },
+    {
+      "index": 30,
+      "word": "ho...",
+      "start": 9.646,
+      "end": 9.911,
+      "duration": 0.265
+    },
+    {
+      "index": 31,
+      "word": "vowels...",
+      "start": 9.941,
+      "end": 10.418,
+      "duration": 0.478
+    },
+    {
+      "index": 32,
+      "word": "consonants...",
+      "start": 10.472,
+      "end": 11.161,
+      "duration": 0.69
+    },
+    {
+      "index": 33,
+      "word": "tones...",
+      "start": 11.417,
+      "end": 11.961,
+      "duration": 0.544
+    },
+    {
+      "index": 34,
+      "word": "poori",
+      "start": 12.021,
+      "end": 12.361,
+      "duration": 0.34
+    },
+    {
+      "index": 35,
+      "word": "range!",
+      "start": 12.398,
+      "end": 12.806,
+      "duration": 0.408
+    },
+    {
+      "index": 36,
+      "word": "Chimps",
+      "start": 12.851,
+      "end": 13.259,
+      "duration": 0.408
+    },
+    {
+      "index": 37,
+      "word": "ka",
+      "start": 13.304,
+      "end": 13.44,
+      "duration": 0.136
+    },
+    {
+      "index": 38,
+      "word": "hyoid",
+      "start": 13.455,
+      "end": 13.795,
+      "duration": 0.34
+    },
+    {
+      "index": 39,
+      "word": "bone",
+      "start": 13.833,
+      "end": 14.104,
+      "duration": 0.272
+    },
+    {
+      "index": 40,
+      "word": "alag",
+      "start": 14.135,
+      "end": 14.406,
+      "duration": 0.272
+    },
+    {
+      "index": 41,
+      "word": "shape",
+      "start": 14.437,
+      "end": 14.776,
+      "duration": 0.34
+    },
+    {
+      "index": 42,
+      "word": "ka",
+      "start": 14.814,
+      "end": 14.95,
+      "duration": 0.136
+    },
+    {
+      "index": 43,
+      "word": "hota",
+      "start": 15.716,
+      "end": 15.909,
+      "duration": 0.194
+    },
+    {
+      "index": 44,
+      "word": "hai...",
+      "start": 16.272,
+      "end": 16.642,
+      "duration": 0.37
+    },
+    {
+      "index": 45,
+      "word": "Isiliye",
+      "start": 16.683,
+      "end": 17.115,
+      "duration": 0.432
+    },
+    {
+      "index": 46,
+      "word": "unki",
+      "start": 17.163,
+      "end": 17.409,
+      "duration": 0.247
+    },
+    {
+      "index": 47,
+      "word": "anatomy",
+      "start": 17.437,
+      "end": 17.868,
+      "duration": 0.432
+    },
+    {
+      "index": 48,
+      "word": "unhe",
+      "start": 17.916,
+      "end": 18.163,
+      "duration": 0.247
+    },
+    {
+      "index": 49,
+      "word": "bolne",
+      "start": 18.19,
+      "end": 18.499,
+      "duration": 0.308
+    },
+    {
+      "index": 50,
+      "word": "nahi",
+      "start": 18.95,
+      "end": 19.918,
+      "duration": 0.968
+    },
+    {
+      "index": 51,
+      "word": "deti!",
+      "start": 20.026,
+      "end": 21.236,
+      "duration": 1.21
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+1
+00:00:00,315 --> 00:00:01,909
+Language se knowledge transfer
+
+2
+00:00:01,929 --> 00:00:03,319
+hoti hai! Dada apne
+
+3
+00:00:03,339 --> 00:00:04,295
+pote ko bata sakta
+
+4
+00:00:04,315 --> 00:00:05,531
+hai... yeh plant zaher
+
+5
+00:00:05,551 --> 00:00:06,775
+hai... Woh pahaad ke
+
+6
+00:00:06,795 --> 00:00:07,754
+peechhe paani hai. Ye
+
+7
+00:00:07,774 --> 00:00:10,020
+information generations tak jaati
+
+8
+00:00:10,040 --> 00:00:10,949
+hai! Zero se shuru
+
+9
+00:00:10,969 --> 00:00:12,882
+nahi karna padta har
+
+10
+00:00:12,902 --> 00:00:13,512
+baar!
+

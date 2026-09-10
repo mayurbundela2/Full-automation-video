@@ -1,0 +1,328 @@
+{
+  "total_words": 46,
+  "total_duration": 15.48,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.286,
+      "end": 0.401,
+      "duration": 0.115
+    },
+    {
+      "index": 2,
+      "word": "jo",
+      "start": 0.414,
+      "end": 0.53,
+      "duration": 0.115
+    },
+    {
+      "index": 3,
+      "word": "tum",
+      "start": 0.543,
+      "end": 0.716,
+      "duration": 0.173
+    },
+    {
+      "index": 4,
+      "word": "feel",
+      "start": 0.735,
+      "end": 0.966,
+      "duration": 0.231
+    },
+    {
+      "index": 5,
+      "word": "kar",
+      "start": 0.991,
+      "end": 1.165,
+      "duration": 0.173
+    },
+    {
+      "index": 6,
+      "word": "rahe",
+      "start": 1.184,
+      "end": 1.415,
+      "duration": 0.231
+    },
+    {
+      "index": 7,
+      "word": "ho...",
+      "start": 1.44,
+      "end": 1.729,
+      "duration": 0.289
+    },
+    {
+      "index": 8,
+      "word": "ye",
+      "start": 2.321,
+      "end": 2.409,
+      "duration": 0.088
+    },
+    {
+      "index": 9,
+      "word": "tumhari",
+      "start": 2.418,
+      "end": 2.725,
+      "duration": 0.307
+    },
+    {
+      "index": 10,
+      "word": "teen",
+      "start": 2.759,
+      "end": 2.935,
+      "duration": 0.175
+    },
+    {
+      "index": 11,
+      "word": "lakh",
+      "start": 3.153,
+      "end": 3.365,
+      "duration": 0.212
+    },
+    {
+      "index": 12,
+      "word": "saal",
+      "start": 3.388,
+      "end": 3.6,
+      "duration": 0.212
+    },
+    {
+      "index": 13,
+      "word": "ki",
+      "start": 3.624,
+      "end": 3.73,
+      "duration": 0.106
+    },
+    {
+      "index": 14,
+      "word": "virasat",
+      "start": 3.742,
+      "end": 4.112,
+      "duration": 0.371
+    },
+    {
+      "index": 15,
+      "word": "hai.",
+      "start": 4.154,
+      "end": 4.365,
+      "duration": 0.212
+    },
+    {
+      "index": 16,
+      "word": "Aur",
+      "start": 4.389,
+      "end": 4.548,
+      "duration": 0.159
+    },
+    {
+      "index": 17,
+      "word": "agar",
+      "start": 4.566,
+      "end": 4.777,
+      "duration": 0.212
+    },
+    {
+      "index": 18,
+      "word": "tum",
+      "start": 5.182,
+      "end": 5.333,
+      "duration": 0.151
+    },
+    {
+      "index": 19,
+      "word": "jaanna",
+      "start": 5.35,
+      "end": 5.653,
+      "duration": 0.303
+    },
+    {
+      "index": 20,
+      "word": "chahte",
+      "start": 5.687,
+      "end": 5.99,
+      "duration": 0.303
+    },
+    {
+      "index": 21,
+      "word": "ho",
+      "start": 6.023,
+      "end": 6.124,
+      "duration": 0.101
+    },
+    {
+      "index": 22,
+      "word": "ki",
+      "start": 6.135,
+      "end": 6.236,
+      "duration": 0.101
+    },
+    {
+      "index": 23,
+      "word": "fire",
+      "start": 6.247,
+      "end": 6.449,
+      "duration": 0.202
+    },
+    {
+      "index": 24,
+      "word": "ne",
+      "start": 6.472,
+      "end": 6.573,
+      "duration": 0.101
+    },
+    {
+      "index": 25,
+      "word": "isi",
+      "start": 6.584,
+      "end": 6.735,
+      "duration": 0.151
+    },
+    {
+      "index": 26,
+      "word": "language",
+      "start": 6.752,
+      "end": 7.156,
+      "duration": 0.404
+    },
+    {
+      "index": 27,
+      "word": "aur",
+      "start": 7.201,
+      "end": 7.352,
+      "duration": 0.151
+    },
+    {
+      "index": 28,
+      "word": "storytelling",
+      "start": 7.369,
+      "end": 7.975,
+      "duration": 0.606
+    },
+    {
+      "index": 29,
+      "word": "ki",
+      "start": 8.236,
+      "end": 8.35,
+      "duration": 0.114
+    },
+    {
+      "index": 30,
+      "word": "duniya",
+      "start": 8.362,
+      "end": 8.703,
+      "duration": 0.341
+    },
+    {
+      "index": 31,
+      "word": "banane",
+      "start": 8.741,
+      "end": 9.082,
+      "duration": 0.341
+    },
+    {
+      "index": 32,
+      "word": "mein",
+      "start": 9.12,
+      "end": 9.348,
+      "duration": 0.227
+    },
+    {
+      "index": 33,
+      "word": "kya",
+      "start": 9.373,
+      "end": 9.543,
+      "duration": 0.171
+    },
+    {
+      "index": 34,
+      "word": "role",
+      "start": 9.562,
+      "end": 9.79,
+      "duration": 0.227
+    },
+    {
+      "index": 35,
+      "word": "play",
+      "start": 9.815,
+      "end": 10.042,
+      "duration": 0.227
+    },
+    {
+      "index": 36,
+      "word": "kiya...",
+      "start": 10.068,
+      "end": 10.466,
+      "duration": 0.398
+    },
+    {
+      "index": 37,
+      "word": "Toh",
+      "start": 10.51,
+      "end": 10.68,
+      "duration": 0.171
+    },
+    {
+      "index": 38,
+      "word": "screen",
+      "start": 10.699,
+      "end": 11.04,
+      "duration": 0.341
+    },
+    {
+      "index": 39,
+      "word": "par",
+      "start": 11.078,
+      "end": 11.249,
+      "duration": 0.171
+    },
+    {
+      "index": 40,
+      "word": "jo",
+      "start": 11.268,
+      "end": 11.382,
+      "duration": 0.114
+    },
+    {
+      "index": 41,
+      "word": "video",
+      "start": 11.394,
+      "end": 11.678,
+      "duration": 0.284
+    },
+    {
+      "index": 42,
+      "word": "hai...",
+      "start": 12.064,
+      "end": 12.204,
+      "duration": 0.14
+    },
+    {
+      "index": 43,
+      "word": "woh",
+      "start": 12.4,
+      "end": 12.61,
+      "duration": 0.21
+    },
+    {
+      "index": 44,
+      "word": "agla",
+      "start": 12.633,
+      "end": 12.913,
+      "duration": 0.28
+    },
+    {
+      "index": 45,
+      "word": "chapter",
+      "start": 12.944,
+      "end": 13.434,
+      "duration": 0.49
+    },
+    {
+      "index": 46,
+      "word": "hai!",
+      "start": 13.489,
+      "end": 13.769,
+      "duration": 0.28
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "total_words": 31,
+  "total_duration": 18.64,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.282,
+      "end": 0.419,
+      "duration": 0.137
+    },
+    {
+      "index": 2,
+      "word": "is",
+      "start": 0.434,
+      "end": 0.526,
+      "duration": 0.091
+    },
+    {
+      "index": 3,
+      "word": "time",
+      "start": 0.706,
+      "end": 0.915,
+      "duration": 0.209
+    },
+    {
+      "index": 4,
+      "word": "mein...",
+      "start": 0.938,
+      "end": 1.303,
+      "duration": 0.365
+    },
+    {
+      "index": 5,
+      "word": "tumhe",
+      "start": 1.344,
+      "end": 1.605,
+      "duration": 0.261
+    },
+    {
+      "index": 6,
+      "word": "dreams",
+      "start": 2.233,
+      "end": 2.577,
+      "duration": 0.344
+    },
+    {
+      "index": 7,
+      "word": "aate",
+      "start": 2.615,
+      "end": 2.844,
+      "duration": 0.229
+    },
+    {
+      "index": 8,
+      "word": "hain.",
+      "start": 2.87,
+      "end": 3.157,
+      "duration": 0.287
+    },
+    {
+      "index": 9,
+      "word": "Ab",
+      "start": 3.188,
+      "end": 3.303,
+      "duration": 0.115
+    },
+    {
+      "index": 10,
+      "word": "honest",
+      "start": 3.316,
+      "end": 3.66,
+      "duration": 0.344
+    },
+    {
+      "index": 11,
+      "word": "sawaal...",
+      "start": 4.627,
+      "end": 4.858,
+      "duration": 0.231
+    },
+    {
+      "index": 12,
+      "word": "dreams",
+      "start": 5.302,
+      "end": 5.634,
+      "duration": 0.332
+    },
+    {
+      "index": 13,
+      "word": "kyun",
+      "start": 5.671,
+      "end": 5.892,
+      "duration": 0.221
+    },
+    {
+      "index": 14,
+      "word": "aate",
+      "start": 5.917,
+      "end": 6.138,
+      "duration": 0.221
+    },
+    {
+      "index": 15,
+      "word": "hain?",
+      "start": 6.9,
+      "end": 7.2,
+      "duration": 0.299
+    },
+    {
+      "index": 16,
+      "word": "Ye",
+      "start": 7.233,
+      "end": 7.353,
+      "duration": 0.12
+    },
+    {
+      "index": 17,
+      "word": "ek",
+      "start": 7.366,
+      "end": 7.486,
+      "duration": 0.12
+    },
+    {
+      "index": 18,
+      "word": "unsolved",
+      "start": 7.765,
+      "end": 8.152,
+      "duration": 0.387
+    },
+    {
+      "index": 19,
+      "word": "mystery",
+      "start": 8.195,
+      "end": 8.534,
+      "duration": 0.339
+    },
+    {
+      "index": 20,
+      "word": "hai.",
+      "start": 9.711,
+      "end": 9.886,
+      "duration": 0.175
+    },
+    {
+      "index": 21,
+      "word": "Scientists",
+      "start": 9.905,
+      "end": 10.342,
+      "duration": 0.437
+    },
+    {
+      "index": 22,
+      "word": "ke",
+      "start": 10.576,
+      "end": 10.704,
+      "duration": 0.128
+    },
+    {
+      "index": 23,
+      "word": "paas",
+      "start": 10.718,
+      "end": 10.975,
+      "duration": 0.256
+    },
+    {
+      "index": 24,
+      "word": "theories",
+      "start": 11.003,
+      "end": 11.516,
+      "duration": 0.513
+    },
+    {
+      "index": 25,
+      "word": "hain,",
+      "start": 11.573,
+      "end": 11.893,
+      "duration": 0.32
+    },
+    {
+      "index": 26,
+      "word": "lekin",
+      "start": 12.894,
+      "end": 13.219,
+      "duration": 0.325
+    },
+    {
+      "index": 27,
+      "word": "exact",
+      "start": 13.255,
+      "end": 13.58,
+      "duration": 0.325
+    },
+    {
+      "index": 28,
+      "word": "reason",
+      "start": 13.616,
+      "end": 14.006,
+      "duration": 0.39
+    },
+    {
+      "index": 29,
+      "word": "koi",
+      "start": 14.247,
+      "end": 14.467,
+      "duration": 0.22
+    },
+    {
+      "index": 30,
+      "word": "nahi",
+      "start": 14.491,
+      "end": 14.784,
+      "duration": 0.293
+    },
+    {
+      "index": 31,
+      "word": "jaanta.",
+      "start": 14.816,
+      "end": 15.329,
+      "duration": 0.513
+    }
+  ]
+}

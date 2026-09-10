@@ -1,0 +1,272 @@
+{
+  "total_words": 38,
+  "total_duration": 11.85,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.243,
+      "end": 0.407,
+      "duration": 0.164
+    },
+    {
+      "index": 2,
+      "word": "agar",
+      "start": 0.425,
+      "end": 0.643,
+      "duration": 0.218
+    },
+    {
+      "index": 3,
+      "word": "tum",
+      "start": 0.667,
+      "end": 0.83,
+      "duration": 0.164
+    },
+    {
+      "index": 4,
+      "word": "jaana",
+      "start": 0.849,
+      "end": 1.121,
+      "duration": 0.273
+    },
+    {
+      "index": 5,
+      "word": "chahte",
+      "start": 1.151,
+      "end": 1.479,
+      "duration": 0.327
+    },
+    {
+      "index": 6,
+      "word": "ho",
+      "start": 1.515,
+      "end": 1.624,
+      "duration": 0.109
+    },
+    {
+      "index": 7,
+      "word": "ki",
+      "start": 1.636,
+      "end": 1.745,
+      "duration": 0.109
+    },
+    {
+      "index": 8,
+      "word": "aag",
+      "start": 1.757,
+      "end": 1.921,
+      "duration": 0.164
+    },
+    {
+      "index": 9,
+      "word": "ne",
+      "start": 1.939,
+      "end": 2.048,
+      "duration": 0.109
+    },
+    {
+      "index": 10,
+      "word": "humari",
+      "start": 2.06,
+      "end": 2.387,
+      "duration": 0.327
+    },
+    {
+      "index": 11,
+      "word": "raat,",
+      "start": 2.423,
+      "end": 2.696,
+      "duration": 0.273
+    },
+    {
+      "index": 12,
+      "word": "humari",
+      "start": 2.726,
+      "end": 3.053,
+      "duration": 0.327
+    },
+    {
+      "index": 13,
+      "word": "neend,",
+      "start": 3.09,
+      "end": 3.417,
+      "duration": 0.327
+    },
+    {
+      "index": 14,
+      "word": "humara",
+      "start": 3.453,
+      "end": 3.78,
+      "duration": 0.327
+    },
+    {
+      "index": 15,
+      "word": "brain",
+      "start": 3.816,
+      "end": 4.089,
+      "duration": 0.273
+    },
+    {
+      "index": 16,
+      "word": "aur",
+      "start": 4.119,
+      "end": 4.283,
+      "duration": 0.164
+    },
+    {
+      "index": 17,
+      "word": "poori",
+      "start": 4.301,
+      "end": 4.573,
+      "duration": 0.273
+    },
+    {
+      "index": 18,
+      "word": "humari",
+      "start": 4.604,
+      "end": 4.931,
+      "duration": 0.327
+    },
+    {
+      "index": 19,
+      "word": "species",
+      "start": 5.146,
+      "end": 5.525,
+      "duration": 0.379
+    },
+    {
+      "index": 20,
+      "word": "ko",
+      "start": 5.567,
+      "end": 5.675,
+      "duration": 0.108
+    },
+    {
+      "index": 21,
+      "word": "kaise",
+      "start": 5.687,
+      "end": 5.958,
+      "duration": 0.271
+    },
+    {
+      "index": 22,
+      "word": "banayi...",
+      "start": 5.988,
+      "end": 6.475,
+      "duration": 0.487
+    },
+    {
+      "index": 23,
+      "word": "Screen",
+      "start": 6.529,
+      "end": 6.854,
+      "duration": 0.325
+    },
+    {
+      "index": 24,
+      "word": "par",
+      "start": 6.89,
+      "end": 7.053,
+      "duration": 0.162
+    },
+    {
+      "index": 25,
+      "word": "jo",
+      "start": 7.071,
+      "end": 7.179,
+      "duration": 0.108
+    },
+    {
+      "index": 26,
+      "word": "video",
+      "start": 7.635,
+      "end": 7.879,
+      "duration": 0.244
+    },
+    {
+      "index": 27,
+      "word": "hai,",
+      "start": 7.906,
+      "end": 8.102,
+      "duration": 0.195
+    },
+    {
+      "index": 28,
+      "word": "wo",
+      "start": 8.123,
+      "end": 8.221,
+      "duration": 0.098
+    },
+    {
+      "index": 29,
+      "word": "pehla",
+      "start": 8.232,
+      "end": 8.476,
+      "duration": 0.244
+    },
+    {
+      "index": 30,
+      "word": "chapter",
+      "start": 8.503,
+      "end": 8.845,
+      "duration": 0.342
+    },
+    {
+      "index": 31,
+      "word": "hai.",
+      "start": 8.883,
+      "end": 9.078,
+      "duration": 0.195
+    },
+    {
+      "index": 32,
+      "word": "Ye",
+      "start": 9.1,
+      "end": 9.197,
+      "duration": 0.098
+    },
+    {
+      "index": 33,
+      "word": "story",
+      "start": 9.208,
+      "end": 9.452,
+      "duration": 0.244
+    },
+    {
+      "index": 34,
+      "word": "wahaan",
+      "start": 9.479,
+      "end": 9.772,
+      "duration": 0.293
+    },
+    {
+      "index": 35,
+      "word": "se",
+      "start": 10.155,
+      "end": 10.358,
+      "duration": 0.203
+    },
+    {
+      "index": 36,
+      "word": "shuru",
+      "start": 10.381,
+      "end": 10.889,
+      "duration": 0.508
+    },
+    {
+      "index": 37,
+      "word": "hoti",
+      "start": 10.946,
+      "end": 11.353,
+      "duration": 0.407
+    },
+    {
+      "index": 38,
+      "word": "hai.",
+      "start": 11.398,
+      "end": 11.805,
+      "duration": 0.407
+    }
+  ]
+}

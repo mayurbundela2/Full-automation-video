@@ -1,0 +1,139 @@
+{
+  "total_words": 19,
+  "total_duration": 10.25,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.277,
+      "end": 0.434,
+      "duration": 0.157
+    },
+    {
+      "index": 2,
+      "word": "consequences?",
+      "start": 0.452,
+      "end": 1.132,
+      "duration": 0.681
+    },
+    {
+      "index": 3,
+      "word": "Ye",
+      "start": 1.455,
+      "end": 1.544,
+      "duration": 0.089
+    },
+    {
+      "index": 4,
+      "word": "sirf",
+      "start": 1.554,
+      "end": 1.732,
+      "duration": 0.178
+    },
+    {
+      "index": 5,
+      "word": "next-day",
+      "start": 1.752,
+      "end": 2.108,
+      "duration": 0.356
+    },
+    {
+      "index": 6,
+      "word": "tiredness",
+      "start": 2.148,
+      "end": 2.549,
+      "duration": 0.401
+    },
+    {
+      "index": 7,
+      "word": "nahi",
+      "start": 2.594,
+      "end": 2.772,
+      "duration": 0.178
+    },
+    {
+      "index": 8,
+      "word": "hai.",
+      "start": 2.792,
+      "end": 2.97,
+      "duration": 0.178
+    },
+    {
+      "index": 9,
+      "word": "Long-term",
+      "start": 2.99,
+      "end": 3.39,
+      "duration": 0.401
+    },
+    {
+      "index": 10,
+      "word": "sleep",
+      "start": 4.377,
+      "end": 4.627,
+      "duration": 0.25
+    },
+    {
+      "index": 11,
+      "word": "deprivation",
+      "start": 4.655,
+      "end": 5.205,
+      "duration": 0.55
+    },
+    {
+      "index": 12,
+      "word": "ka",
+      "start": 5.266,
+      "end": 5.366,
+      "duration": 0.1
+    },
+    {
+      "index": 13,
+      "word": "scientific",
+      "start": 5.377,
+      "end": 5.877,
+      "duration": 0.5
+    },
+    {
+      "index": 14,
+      "word": "damage...",
+      "start": 5.932,
+      "end": 6.382,
+      "duration": 0.45
+    },
+    {
+      "index": 15,
+      "word": "Number",
+      "start": 6.432,
+      "end": 6.732,
+      "duration": 0.3
+    },
+    {
+      "index": 16,
+      "word": "one...",
+      "start": 6.766,
+      "end": 7.066,
+      "duration": 0.3
+    },
+    {
+      "index": 17,
+      "word": "memory",
+      "start": 7.4,
+      "end": 7.61,
+      "duration": 0.21
+    },
+    {
+      "index": 18,
+      "word": "aur",
+      "start": 7.634,
+      "end": 7.739,
+      "duration": 0.105
+    },
+    {
+      "index": 19,
+      "word": "cognition.",
+      "start": 7.751,
+      "end": 8.101,
+      "duration": 0.351
+    }
+  ]
+}

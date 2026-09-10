@@ -1,0 +1,195 @@
+{
+  "total_words": 27,
+  "total_duration": 12.89,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.274,
+      "end": 0.396,
+      "duration": 0.122
+    },
+    {
+      "index": 2,
+      "word": "system",
+      "start": 0.41,
+      "end": 0.775,
+      "duration": 0.366
+    },
+    {
+      "index": 3,
+      "word": "teen",
+      "start": 0.816,
+      "end": 1.06,
+      "duration": 0.244
+    },
+    {
+      "index": 4,
+      "word": "sau",
+      "start": 1.087,
+      "end": 1.27,
+      "duration": 0.183
+    },
+    {
+      "index": 5,
+      "word": "million",
+      "start": 1.29,
+      "end": 1.717,
+      "duration": 0.427
+    },
+    {
+      "index": 6,
+      "word": "saal",
+      "start": 1.765,
+      "end": 2.009,
+      "duration": 0.244
+    },
+    {
+      "index": 7,
+      "word": "se",
+      "start": 2.036,
+      "end": 2.158,
+      "duration": 0.122
+    },
+    {
+      "index": 8,
+      "word": "perfectly",
+      "start": 2.171,
+      "end": 2.72,
+      "duration": 0.549
+    },
+    {
+      "index": 9,
+      "word": "kaam",
+      "start": 2.781,
+      "end": 3.025,
+      "duration": 0.244
+    },
+    {
+      "index": 10,
+      "word": "kar",
+      "start": 3.257,
+      "end": 3.434,
+      "duration": 0.177
+    },
+    {
+      "index": 11,
+      "word": "raha",
+      "start": 3.453,
+      "end": 3.689,
+      "duration": 0.236
+    },
+    {
+      "index": 12,
+      "word": "tha.",
+      "start": 3.715,
+      "end": 3.951,
+      "duration": 0.236
+    },
+    {
+      "index": 13,
+      "word": "Aur",
+      "start": 3.977,
+      "end": 4.153,
+      "duration": 0.177
+    },
+    {
+      "index": 14,
+      "word": "phir...",
+      "start": 4.173,
+      "end": 4.585,
+      "duration": 0.412
+    },
+    {
+      "index": 15,
+      "word": "ek",
+      "start": 6.049,
+      "end": 6.142,
+      "duration": 0.093
+    },
+    {
+      "index": 16,
+      "word": "sau",
+      "start": 6.152,
+      "end": 6.292,
+      "duration": 0.14
+    },
+    {
+      "index": 17,
+      "word": "pachaas",
+      "start": 6.307,
+      "end": 6.633,
+      "duration": 0.326
+    },
+    {
+      "index": 18,
+      "word": "saal",
+      "start": 7.497,
+      "end": 7.757,
+      "duration": 0.26
+    },
+    {
+      "index": 19,
+      "word": "pehle...",
+      "start": 7.786,
+      "end": 8.305,
+      "duration": 0.519
+    },
+    {
+      "index": 20,
+      "word": "humne",
+      "start": 8.363,
+      "end": 8.687,
+      "duration": 0.325
+    },
+    {
+      "index": 21,
+      "word": "kuch",
+      "start": 8.723,
+      "end": 8.983,
+      "duration": 0.26
+    },
+    {
+      "index": 22,
+      "word": "banaya",
+      "start": 9.676,
+      "end": 9.971,
+      "duration": 0.295
+    },
+    {
+      "index": 23,
+      "word": "jisne",
+      "start": 10.003,
+      "end": 10.249,
+      "duration": 0.246
+    },
+    {
+      "index": 24,
+      "word": "ise",
+      "start": 10.276,
+      "end": 10.424,
+      "duration": 0.147
+    },
+    {
+      "index": 25,
+      "word": "pehli",
+      "start": 10.44,
+      "end": 10.686,
+      "duration": 0.246
+    },
+    {
+      "index": 26,
+      "word": "baar",
+      "start": 11.145,
+      "end": 11.773,
+      "duration": 0.628
+    },
+    {
+      "index": 27,
+      "word": "toda.",
+      "start": 11.843,
+      "end": 12.628,
+      "duration": 0.785
+    }
+  ]
+}

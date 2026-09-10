@@ -1,0 +1,139 @@
+{
+  "total_words": 19,
+  "total_duration": 8.84,
+  "words": [
+    {
+      "index": 1,
+      "word": "Abhi",
+      "start": 0.49,
+      "end": 0.672,
+      "duration": 0.182
+    },
+    {
+      "index": 2,
+      "word": "tum",
+      "start": 0.693,
+      "end": 0.83,
+      "duration": 0.137
+    },
+    {
+      "index": 3,
+      "word": "ye",
+      "start": 0.845,
+      "end": 0.936,
+      "duration": 0.091
+    },
+    {
+      "index": 4,
+      "word": "video",
+      "start": 0.946,
+      "end": 1.174,
+      "duration": 0.228
+    },
+    {
+      "index": 5,
+      "word": "sun",
+      "start": 1.199,
+      "end": 1.336,
+      "duration": 0.137
+    },
+    {
+      "index": 6,
+      "word": "rahe",
+      "start": 1.351,
+      "end": 1.534,
+      "duration": 0.182
+    },
+    {
+      "index": 7,
+      "word": "ho...",
+      "start": 1.554,
+      "end": 1.782,
+      "duration": 0.228
+    },
+    {
+      "index": 8,
+      "word": "Har",
+      "start": 1.808,
+      "end": 1.944,
+      "duration": 0.137
+    },
+    {
+      "index": 9,
+      "word": "shabd...",
+      "start": 1.96,
+      "end": 2.324,
+      "duration": 0.365
+    },
+    {
+      "index": 10,
+      "word": "samajh",
+      "start": 3.298,
+      "end": 3.576,
+      "duration": 0.278
+    },
+    {
+      "index": 11,
+      "word": "rahe",
+      "start": 3.607,
+      "end": 3.793,
+      "duration": 0.186
+    },
+    {
+      "index": 12,
+      "word": "ho.",
+      "start": 3.813,
+      "end": 3.953,
+      "duration": 0.139
+    },
+    {
+      "index": 13,
+      "word": "Ye",
+      "start": 4.147,
+      "end": 4.258,
+      "duration": 0.111
+    },
+    {
+      "index": 14,
+      "word": "simple",
+      "start": 4.271,
+      "end": 4.605,
+      "duration": 0.334
+    },
+    {
+      "index": 15,
+      "word": "lagta",
+      "start": 4.642,
+      "end": 4.92,
+      "duration": 0.278
+    },
+    {
+      "index": 16,
+      "word": "hai...",
+      "start": 5.915,
+      "end": 6.208,
+      "duration": 0.293
+    },
+    {
+      "index": 17,
+      "word": "Automatic",
+      "start": 6.24,
+      "end": 6.68,
+      "duration": 0.439
+    },
+    {
+      "index": 18,
+      "word": "lagta",
+      "start": 6.729,
+      "end": 6.973,
+      "duration": 0.244
+    },
+    {
+      "index": 19,
+      "word": "hai.",
+      "start": 7.538,
+      "end": 8.399,
+      "duration": 0.861
+    }
+  ]
+}

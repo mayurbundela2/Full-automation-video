@@ -1,0 +1,265 @@
+{
+  "total_words": 37,
+  "total_duration": 16.44,
+  "words": [
+    {
+      "index": 1,
+      "word": "Sirf",
+      "start": 0.263,
+      "end": 0.358,
+      "duration": 0.095
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.369,
+      "end": 0.429,
+      "duration": 0.06
+    },
+    {
+      "index": 3,
+      "word": "question...",
+      "start": 0.422,
+      "end": 0.684,
+      "duration": 0.262
+    },
+    {
+      "index": 4,
+      "word": "kya",
+      "start": 0.875,
+      "end": 1.001,
+      "duration": 0.126
+    },
+    {
+      "index": 5,
+      "word": "woh",
+      "start": 1.015,
+      "end": 1.142,
+      "duration": 0.126
+    },
+    {
+      "index": 6,
+      "word": "bol",
+      "start": 1.156,
+      "end": 1.282,
+      "duration": 0.126
+    },
+    {
+      "index": 7,
+      "word": "sakte",
+      "start": 1.296,
+      "end": 1.507,
+      "duration": 0.211
+    },
+    {
+      "index": 8,
+      "word": "the?",
+      "start": 2.264,
+      "end": 2.442,
+      "duration": 0.178
+    },
+    {
+      "index": 9,
+      "word": "Sadiyon",
+      "start": 2.462,
+      "end": 2.774,
+      "duration": 0.312
+    },
+    {
+      "index": 10,
+      "word": "tak",
+      "start": 2.809,
+      "end": 2.943,
+      "duration": 0.134
+    },
+    {
+      "index": 11,
+      "word": "sabne",
+      "start": 2.958,
+      "end": 3.181,
+      "duration": 0.223
+    },
+    {
+      "index": 12,
+      "word": "socha...",
+      "start": 3.206,
+      "end": 3.562,
+      "duration": 0.357
+    },
+    {
+      "index": 13,
+      "word": "nahi.",
+      "start": 4.412,
+      "end": 4.639,
+      "duration": 0.227
+    },
+    {
+      "index": 14,
+      "word": "Woh",
+      "start": 4.664,
+      "end": 4.8,
+      "duration": 0.136
+    },
+    {
+      "index": 15,
+      "word": "grunt",
+      "start": 4.815,
+      "end": 5.042,
+      "duration": 0.227
+    },
+    {
+      "index": 16,
+      "word": "karte",
+      "start": 5.067,
+      "end": 5.294,
+      "duration": 0.227
+    },
+    {
+      "index": 17,
+      "word": "hain...",
+      "start": 5.319,
+      "end": 5.637,
+      "duration": 0.318
+    },
+    {
+      "index": 18,
+      "word": "sirf",
+      "start": 5.928,
+      "end": 6.152,
+      "duration": 0.224
+    },
+    {
+      "index": 19,
+      "word": "gestures",
+      "start": 6.59,
+      "end": 7.058,
+      "duration": 0.468
+    },
+    {
+      "index": 20,
+      "word": "use",
+      "start": 7.11,
+      "end": 7.285,
+      "duration": 0.175
+    },
+    {
+      "index": 21,
+      "word": "karte",
+      "start": 7.304,
+      "end": 7.597,
+      "duration": 0.292
+    },
+    {
+      "index": 22,
+      "word": "the.",
+      "start": 7.629,
+      "end": 7.863,
+      "duration": 0.234
+    },
+    {
+      "index": 23,
+      "word": "Language",
+      "start": 7.889,
+      "end": 8.357,
+      "duration": 0.468
+    },
+    {
+      "index": 24,
+      "word": "sirf",
+      "start": 8.409,
+      "end": 8.643,
+      "duration": 0.234
+    },
+    {
+      "index": 25,
+      "word": "Homo",
+      "start": 8.669,
+      "end": 8.902,
+      "duration": 0.234
+    },
+    {
+      "index": 26,
+      "word": "sapiens",
+      "start": 8.928,
+      "end": 9.338,
+      "duration": 0.409
+    },
+    {
+      "index": 27,
+      "word": "ki",
+      "start": 9.545,
+      "end": 9.66,
+      "duration": 0.115
+    },
+    {
+      "index": 28,
+      "word": "cheez",
+      "start": 9.673,
+      "end": 9.962,
+      "duration": 0.289
+    },
+    {
+      "index": 29,
+      "word": "thi.",
+      "start": 9.994,
+      "end": 10.225,
+      "duration": 0.231
+    },
+    {
+      "index": 30,
+      "word": "Phir",
+      "start": 10.25,
+      "end": 10.481,
+      "duration": 0.231
+    },
+    {
+      "index": 31,
+      "word": "kuch",
+      "start": 10.507,
+      "end": 10.738,
+      "duration": 0.231
+    },
+    {
+      "index": 32,
+      "word": "mila...",
+      "start": 10.763,
+      "end": 11.168,
+      "duration": 0.404
+    },
+    {
+      "index": 33,
+      "word": "jisne",
+      "start": 11.212,
+      "end": 11.501,
+      "duration": 0.289
+    },
+    {
+      "index": 34,
+      "word": "sab",
+      "start": 11.533,
+      "end": 11.706,
+      "duration": 0.173
+    },
+    {
+      "index": 35,
+      "word": "kuch",
+      "start": 11.725,
+      "end": 11.956,
+      "duration": 0.231
+    },
+    {
+      "index": 36,
+      "word": "badal",
+      "start": 12.806,
+      "end": 13.278,
+      "duration": 0.472
+    },
+    {
+      "index": 37,
+      "word": "diya!",
+      "start": 13.33,
+      "end": 13.803,
+      "duration": 0.472
+    }
+  ]
+}

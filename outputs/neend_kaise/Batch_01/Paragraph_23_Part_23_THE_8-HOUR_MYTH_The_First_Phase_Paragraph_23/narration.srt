@@ -1,0 +1,24 @@
+1
+00:00:00,595 --> 00:00:01,802
+Suraj doobne ke kuch
+
+2
+00:00:01,822 --> 00:00:03,499
+time baad, lagbhag aath
+
+3
+00:00:03,519 --> 00:00:04,936
+baje, log so jaate.
+
+4
+00:00:04,956 --> 00:00:06,462
+Ye tha first sleep.
+
+5
+00:00:06,482 --> 00:00:08,848
+Teen-chaar ghante ki gehri
+
+6
+00:00:08,868 --> 00:00:09,456
+neend.
+

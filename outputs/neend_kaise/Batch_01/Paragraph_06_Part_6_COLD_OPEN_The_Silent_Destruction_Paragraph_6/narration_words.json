@@ -1,0 +1,132 @@
+{
+  "total_words": 18,
+  "total_duration": 9.88,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.382,
+      "end": 0.61,
+      "duration": 0.228
+    },
+    {
+      "index": 2,
+      "word": "tum?",
+      "start": 0.635,
+      "end": 0.938,
+      "duration": 0.303
+    },
+    {
+      "index": 3,
+      "word": "Tum",
+      "start": 1.469,
+      "end": 1.669,
+      "duration": 0.2
+    },
+    {
+      "index": 4,
+      "word": "apni",
+      "start": 1.691,
+      "end": 1.957,
+      "duration": 0.266
+    },
+    {
+      "index": 5,
+      "word": "species",
+      "start": 1.987,
+      "end": 2.453,
+      "duration": 0.466
+    },
+    {
+      "index": 6,
+      "word": "ki",
+      "start": 2.504,
+      "end": 2.638,
+      "duration": 0.133
+    },
+    {
+      "index": 7,
+      "word": "teen",
+      "start": 2.652,
+      "end": 2.919,
+      "duration": 0.266
+    },
+    {
+      "index": 8,
+      "word": "lakh",
+      "start": 2.948,
+      "end": 3.214,
+      "duration": 0.266
+    },
+    {
+      "index": 9,
+      "word": "saal",
+      "start": 3.434,
+      "end": 3.741,
+      "duration": 0.307
+    },
+    {
+      "index": 10,
+      "word": "purani",
+      "start": 3.775,
+      "end": 4.236,
+      "duration": 0.461
+    },
+    {
+      "index": 11,
+      "word": "sabse",
+      "start": 4.287,
+      "end": 4.671,
+      "duration": 0.384
+    },
+    {
+      "index": 12,
+      "word": "important",
+      "start": 4.713,
+      "end": 5.404,
+      "duration": 0.691
+    },
+    {
+      "index": 13,
+      "word": "ability...",
+      "start": 5.481,
+      "end": 6.248,
+      "duration": 0.768
+    },
+    {
+      "index": 14,
+      "word": "silently",
+      "start": 6.334,
+      "end": 6.948,
+      "duration": 0.614
+    },
+    {
+      "index": 15,
+      "word": "barbaad",
+      "start": 7.586,
+      "end": 8.261,
+      "duration": 0.675
+    },
+    {
+      "index": 16,
+      "word": "kar",
+      "start": 8.336,
+      "end": 8.626,
+      "duration": 0.289
+    },
+    {
+      "index": 17,
+      "word": "rahe",
+      "start": 8.658,
+      "end": 9.044,
+      "duration": 0.386
+    },
+    {
+      "index": 18,
+      "word": "ho.",
+      "start": 9.086,
+      "end": 9.376,
+      "duration": 0.289
+    }
+  ]
+}

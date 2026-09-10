@@ -1,0 +1,230 @@
+{
+  "total_words": 32,
+  "total_duration": 11.45,
+  "words": [
+    {
+      "index": 1,
+      "word": "Kyunki",
+      "start": 0.241,
+      "end": 0.572,
+      "duration": 0.331
+    },
+    {
+      "index": 2,
+      "word": "tumhari",
+      "start": 0.608,
+      "end": 0.994,
+      "duration": 0.386
+    },
+    {
+      "index": 3,
+      "word": "body",
+      "start": 1.037,
+      "end": 1.257,
+      "duration": 0.22
+    },
+    {
+      "index": 4,
+      "word": "ne",
+      "start": 1.282,
+      "end": 1.392,
+      "duration": 0.11
+    },
+    {
+      "index": 5,
+      "word": "teen",
+      "start": 1.404,
+      "end": 1.625,
+      "duration": 0.22
+    },
+    {
+      "index": 6,
+      "word": "lakh",
+      "start": 1.649,
+      "end": 1.869,
+      "duration": 0.22
+    },
+    {
+      "index": 7,
+      "word": "saal",
+      "start": 1.894,
+      "end": 2.114,
+      "duration": 0.22
+    },
+    {
+      "index": 8,
+      "word": "mehnat",
+      "start": 2.139,
+      "end": 2.469,
+      "duration": 0.331
+    },
+    {
+      "index": 9,
+      "word": "ki",
+      "start": 2.506,
+      "end": 2.616,
+      "duration": 0.11
+    },
+    {
+      "index": 10,
+      "word": "hai...",
+      "start": 2.629,
+      "end": 2.959,
+      "duration": 0.331
+    },
+    {
+      "index": 11,
+      "word": "tumhe",
+      "start": 2.996,
+      "end": 3.271,
+      "duration": 0.275
+    },
+    {
+      "index": 12,
+      "word": "ye",
+      "start": 3.302,
+      "end": 3.412,
+      "duration": 0.11
+    },
+    {
+      "index": 13,
+      "word": "ability",
+      "start": 3.424,
+      "end": 3.81,
+      "duration": 0.386
+    },
+    {
+      "index": 14,
+      "word": "dene",
+      "start": 4.084,
+      "end": 4.307,
+      "duration": 0.223
+    },
+    {
+      "index": 15,
+      "word": "ke",
+      "start": 4.332,
+      "end": 4.444,
+      "duration": 0.112
+    },
+    {
+      "index": 16,
+      "word": "liye.",
+      "start": 4.456,
+      "end": 4.735,
+      "duration": 0.279
+    },
+    {
+      "index": 17,
+      "word": "Kam",
+      "start": 4.766,
+      "end": 4.934,
+      "duration": 0.168
+    },
+    {
+      "index": 18,
+      "word": "se",
+      "start": 4.953,
+      "end": 5.064,
+      "duration": 0.112
+    },
+    {
+      "index": 19,
+      "word": "kam",
+      "start": 5.077,
+      "end": 5.244,
+      "duration": 0.168
+    },
+    {
+      "index": 20,
+      "word": "ek",
+      "start": 5.263,
+      "end": 5.374,
+      "duration": 0.112
+    },
+    {
+      "index": 21,
+      "word": "video",
+      "start": 5.387,
+      "end": 5.666,
+      "duration": 0.279
+    },
+    {
+      "index": 22,
+      "word": "ke",
+      "start": 7.079,
+      "end": 7.187,
+      "duration": 0.108
+    },
+    {
+      "index": 23,
+      "word": "worth",
+      "start": 7.199,
+      "end": 7.468,
+      "duration": 0.269
+    },
+    {
+      "index": 24,
+      "word": "toh",
+      "start": 7.498,
+      "end": 7.659,
+      "duration": 0.161
+    },
+    {
+      "index": 25,
+      "word": "de",
+      "start": 7.879,
+      "end": 7.992,
+      "duration": 0.113
+    },
+    {
+      "index": 26,
+      "word": "sakte",
+      "start": 8.005,
+      "end": 8.288,
+      "duration": 0.283
+    },
+    {
+      "index": 27,
+      "word": "ho...",
+      "start": 8.319,
+      "end": 8.602,
+      "duration": 0.283
+    },
+    {
+      "index": 28,
+      "word": "usse",
+      "start": 8.633,
+      "end": 8.86,
+      "duration": 0.226
+    },
+    {
+      "index": 29,
+      "word": "respect",
+      "start": 8.885,
+      "end": 9.281,
+      "duration": 0.396
+    },
+    {
+      "index": 30,
+      "word": "karne",
+      "start": 9.325,
+      "end": 9.608,
+      "duration": 0.283
+    },
+    {
+      "index": 31,
+      "word": "ke",
+      "start": 9.998,
+      "end": 10.325,
+      "duration": 0.327
+    },
+    {
+      "index": 32,
+      "word": "liye.",
+      "start": 10.361,
+      "end": 11.178,
+      "duration": 0.817
+    }
+  ]
+}
