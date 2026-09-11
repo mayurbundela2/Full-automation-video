@@ -234,13 +234,26 @@ export const api = {
     return MobileStorage.deleteBatch(id);
   },
 
-  async parseReference(batchId: number, rawText: string, defaultVoice?: string, mediaFolder?: string): Promise<{ detected_count: number; paragraphs: any[] }> {
+  async parseReference(
+    batchId: number, 
+    rawText: string, 
+    defaultVoice?: string, 
+    mediaFolder?: string,
+    aspectRatio?: string,
+    fitMode?: string
+  ): Promise<{ detected_count: number; paragraphs: any[]; detected_aspect_ratio?: string }> {
     if (await checkBackend()) {
       try {
         const res = await fetch(`${API_BASE}/batches/${batchId}/parse-reference`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ raw_text: rawText, default_voice: defaultVoice, media_folder: mediaFolder }),
+          body: JSON.stringify({ 
+            raw_text: rawText, 
+            default_voice: defaultVoice, 
+            media_folder: mediaFolder,
+            aspect_ratio: aspectRatio,
+            fit_mode: fitMode
+          }),
         });
         if (res.ok) return res.json();
       } catch {}
@@ -254,14 +267,12 @@ export const api = {
       sample_context: p.sample_context,
       audio_profile: p.audio_profile,
       speaker: p.speaker,
-      style: p.style,
-      pace: p.pace,
-      accent: p.accent,
+      style: p.style || 'Newscaster',
+      pace: p.pace || 'Natural',
+      accent: p.accent || 'Neutral',
       voice: p.voice || defaultVoice || 'Algenib',
       transcript: p.transcript,
-      raw_reference: p.raw_reference,
-      on_screen_text: p.on_screen_text,
-      video_prompt: p.video_prompt,
+      scene_direction: p.scene_direction,
       scene_progression: p.scene_progression,
       overall_mood: p.overall_mood,
       sound_effects: p.sound_effects,
@@ -274,13 +285,26 @@ export const api = {
     return { detected_count: previewParagraphs.length, paragraphs: previewParagraphs };
   },
 
-  async importReference(batchId: number, rawText: string, defaultVoice?: string, mediaFolder?: string): Promise<Batch> {
+  async importReference(
+    batchId: number, 
+    rawText: string, 
+    defaultVoice?: string, 
+    mediaFolder?: string,
+    aspectRatio?: string,
+    fitMode?: string
+  ): Promise<Batch> {
     if (await checkBackend()) {
       try {
         const res = await fetch(`${API_BASE}/batches/${batchId}/import-reference`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ raw_text: rawText, default_voice: defaultVoice, media_folder: mediaFolder }),
+          body: JSON.stringify({ 
+            raw_text: rawText, 
+            default_voice: defaultVoice, 
+            media_folder: mediaFolder,
+            aspect_ratio: aspectRatio,
+            fit_mode: fitMode
+          }),
         });
         if (res.ok) return res.json();
       } catch {}
@@ -770,13 +794,21 @@ export const api = {
 
   async renderBatchVideo(
     batchId: number,
-    options?: { videoVolume?: number; narrationVolume?: number; audioSource?: 'master' | 'tight' }
+    options?: {
+      videoVolume?: number;
+      narrationVolume?: number;
+      audioSource?: 'master' | 'tight';
+      aspectRatio?: string;
+      fitMode?: string;
+    }
   ): Promise<{ status: string; master_video_path: string; duration: number }> {
     if (await checkBackend()) {
       const params = new URLSearchParams();
       if (options?.videoVolume !== undefined) params.append('video_volume', options.videoVolume.toString());
       if (options?.narrationVolume !== undefined) params.append('narration_volume', options.narrationVolume.toString());
       if (options?.audioSource) params.append('audio_source', options.audioSource);
+      if (options?.aspectRatio) params.append('aspect_ratio', options.aspectRatio);
+      if (options?.fitMode) params.append('fit_mode', options.fitMode);
       const query = params.toString() ? `?${params.toString()}` : '';
       const res = await fetch(`${API_BASE}/batches/${batchId}/render-video${query}`, {
         method: 'POST',
@@ -788,6 +820,24 @@ export const api = {
       return res.json();
     }
     throw new Error('Video rendering requires backend FFmpeg service');
+  },
+
+  async updateBatchVideoConfig(
+    batchId: number,
+    config: { aspectRatio?: string; fitMode?: string }
+  ): Promise<Batch> {
+    if (await checkBackend()) {
+      const res = await fetch(`${API_BASE}/batches/${batchId}/video-config`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          aspect_ratio: config.aspectRatio,
+          fit_mode: config.fitMode,
+        }),
+      });
+      if (res.ok) return res.json();
+    }
+    throw new Error('Failed to update video configuration');
   },
 
   async getBatchRenderStatus(batchId: number): Promise<{

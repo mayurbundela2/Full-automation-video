@@ -276,21 +276,25 @@ class AudioConverter:
         cls,
         input_audio_path: str,
         output_mp4_path: str,
-        ffmpeg_path: str = "ffmpeg"
+        ffmpeg_path: str = "ffmpeg",
+        width: int = 1920,
+        height: int = 1080
     ) -> Optional[str]:
         """
-        Creates a clean 1080p timeline video with 320k AAC audio ready for CapCut and Premiere Pro import.
+        Creates a clean timeline video with 320k AAC audio ready for CapCut and Premiere Pro import.
         """
         in_audio = Path(input_audio_path)
         out_mp4 = Path(output_mp4_path)
         out_mp4.parent.mkdir(parents=True, exist_ok=True)
 
+        w = width if width % 2 == 0 else width + 1
+        h = height if height % 2 == 0 else height + 1
         ffmpeg_bin = cls.resolve_ffmpeg(ffmpeg_path)
 
         cmd_mp4 = [
             ffmpeg_bin, "-y",
             "-threads", "0",
-            "-f", "lavfi", "-i", "color=c=0x0c121e:s=1920x1080:r=30",
+            "-f", "lavfi", "-i", f"color=c=0x0c121e:s={w}x{h}:r=30",
             "-i", str(in_audio),
             "-c:v", "libx264", "-preset", "ultrafast", "-tune", "stillimage", "-pix_fmt", "yuv420p",
             "-c:a", "aac", "-b:a", "320k",

@@ -160,6 +160,63 @@ class VideoService:
         filters.append(f"atempo={round(curr, 4)}")
         return ",".join(filters)
 
+    ASPECT_RATIO_RESOLUTIONS = {
+        "16:9": (1920, 1080),
+        "9:16": (1080, 1920),
+        "1:1": (1080, 1080),
+        "4:5": (1080, 1350),
+        "4:3": (1440, 1080),
+        "21:9": (2560, 1080),
+    }
+
+    @classmethod
+    def get_resolution_for_aspect_ratio(cls, aspect_ratio: Optional[str] = "16:9") -> Tuple[int, int]:
+        ar = (aspect_ratio or "16:9").strip()
+        if ar in cls.ASPECT_RATIO_RESOLUTIONS:
+            return cls.ASPECT_RATIO_RESOLUTIONS[ar]
+        if "x" in ar:
+            parts = ar.split("x")
+            try:
+                w, h = int(parts[0]), int(parts[1])
+                return (w if w % 2 == 0 else w + 1, h if h % 2 == 0 else h + 1)
+            except Exception:
+                pass
+        return (1920, 1080)
+
+    @classmethod
+    def build_video_scale_filter(
+        cls,
+        input_label: str,
+        output_label: str,
+        target_width: int = 1920,
+        target_height: int = 1080,
+        fit_mode: str = "crop"
+    ) -> str:
+        w = target_width if target_width % 2 == 0 else target_width + 1
+        h = target_height if target_height % 2 == 0 else target_height + 1
+        mode = (fit_mode or "crop").lower().strip()
+
+        if mode == "fit":
+            return (
+                f"{input_label}scale={w}:{h}:force_original_aspect_ratio=decrease,"
+                f"pad={w}:{h}:(ow-iw)/2:(oh-ih)/2:color=black,"
+                f"fps=30{output_label}"
+            )
+        elif mode in ("blur_pad", "blur", "blurred"):
+            return (
+                f"{input_label}split=2[__bgin][__fgin];"
+                f"[__bgin]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},boxblur=25:5[__bg];"
+                f"[__fgin]scale={w}:{h}:force_original_aspect_ratio=decrease[__fg];"
+                f"[__bg][__fg]overlay=(W-w)/2:(H-h)/2,"
+                f"fps=30{output_label}"
+            )
+        else:  # default "crop" (fill)
+            return (
+                f"{input_label}scale={w}:{h}:force_original_aspect_ratio=increase,"
+                f"crop={w}:{h},"
+                f"fps=30{output_label}"
+            )
+
     @classmethod
     def sync_media_to_audio(
         cls,
@@ -169,18 +226,16 @@ class VideoService:
         target_duration: Optional[float] = None,
         video_volume: float = 1.0,
         narration_volume: float = 1.0,
+        target_width: int = 1920,
+        target_height: int = 1080,
+        fit_mode: str = "crop",
         ffmpeg_path: str = "ffmpeg"
     ) -> Dict[str, Any]:
         """
-        Synchronizes media (video or image) to exact audio duration.
+        Synchronizes media (video or image) to exact audio duration and configured aspect ratio/fit mode.
         - Video: Adjusts speed with setpts=(target_duration / orig_duration)*PTS.
-                 If audio is 10s & video is 8s -> slows video to 10s.
-                 If audio is 8s & video is 10s -> speeds video to 8s.
-                 No frames are lost.
-                 If the video has audio, its original audio is speed-matched via atempo
-                 and mixed with the voiceover narration so video sound is preserved.
         - Image: Loops static frame for target_duration.
-        - Output is standardized to 1920x1080 30fps H.264 with 320k AAC audio.
+        - Scales & fits video according to fit_mode ('crop', 'fit', or 'blur_pad').
         """
         m_path = Path(media_path)
         a_path = Path(audio_path)
@@ -206,8 +261,9 @@ class VideoService:
         if media_type == "video":
             orig_duration = max(0.1, media_info["duration"])
             speed_factor = target_duration / orig_duration
-            # Round speed factor for filter string
             speed_ratio = round(speed_factor, 6)
+
+            scale_filter = cls.build_video_scale_filter("[__timed]", "[v]", target_width, target_height, fit_mode)
 
             if has_audio:
                 tempo = 1.0 / speed_factor if speed_factor > 0 else 1.0
@@ -215,14 +271,9 @@ class VideoService:
                 v_vol = round(max(0.0, min(2.0, video_volume)), 2)
                 n_vol = round(max(0.0, min(2.0, narration_volume)), 2)
 
-                # Filter: setpts changes timing, scale crops to 16:9 1080p center, fps sets constant 30fps.
-                # Audio: adjusts original video sound tempo to match duration, formats to stereo 44.1k,
-                # and mixes with narration audio via amix without muting either track.
                 filter_complex = (
-                    f"[0:v]setpts={speed_ratio}*PTS,"
-                    f"scale=1920:1080:force_original_aspect_ratio=increase,"
-                    f"crop=1920:1080,"
-                    f"fps=30[v];"
+                    f"[0:v]setpts={speed_ratio}*PTS[__timed];"
+                    f"{scale_filter};"
                     f"[0:a]{atempo_filter},aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=stereo,volume={v_vol}[va];"
                     f"[1:a]aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=stereo,volume={n_vol}[na];"
                     f"[va][na]amix=inputs=2:duration=longest:dropout_transition=0:normalize=0[a]"
@@ -231,10 +282,8 @@ class VideoService:
             else:
                 # Silent video / visual-only clip
                 filter_complex = (
-                    f"[0:v]setpts={speed_ratio}*PTS,"
-                    f"scale=1920:1080:force_original_aspect_ratio=increase,"
-                    f"crop=1920:1080,"
-                    f"fps=30[v]"
+                    f"[0:v]setpts={speed_ratio}*PTS[__timed];"
+                    f"{scale_filter}"
                 )
                 audio_map_args = ["-map", "1:a"]
 
@@ -258,11 +307,7 @@ class VideoService:
             orig_duration = target_duration
             speed_factor = 1.0
 
-            filter_complex = (
-                f"[0:v]scale=1920:1080:force_original_aspect_ratio=increase,"
-                f"crop=1920:1080,"
-                f"fps=30[v]"
-            )
+            filter_complex = cls.build_video_scale_filter("[0:v]", "[v]", target_width, target_height, fit_mode)
 
             cmd = [
                 ffmpeg_bin, "-y",
@@ -286,16 +331,15 @@ class VideoService:
             subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
         except subprocess.CalledProcessError as e:
             if media_type == "video" and has_audio:
-                # In case the source audio track has a corrupt/unsupported stream, fallback to narration only
+                # In case source audio track is corrupt, fallback to narration only
+                fallback_scale = cls.build_video_scale_filter("[__timed]", "[v]", target_width, target_height, fit_mode)
                 fallback_cmd = [
                     ffmpeg_bin, "-y",
                     "-i", str(m_path),
                     "-i", str(a_path),
                     "-filter_complex", (
-                        f"[0:v]setpts={speed_ratio}*PTS,"
-                        f"scale=1920:1080:force_original_aspect_ratio=increase,"
-                        f"crop=1920:1080,"
-                        f"fps=30[v]"
+                        f"[0:v]setpts={speed_ratio}*PTS[__timed];"
+                        f"{fallback_scale}"
                     ),
                     "-map", "[v]",
                     "-map", "1:a",
@@ -340,6 +384,9 @@ class VideoService:
             "target_duration": target_duration,
             "speed_factor": round(speed_factor, 3),
             "has_video_sound": has_audio if media_type == "video" else False,
+            "width": target_width,
+            "height": target_height,
+            "fit_mode": fit_mode,
         }
 
     @classmethod

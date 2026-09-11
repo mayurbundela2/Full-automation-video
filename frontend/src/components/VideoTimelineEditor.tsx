@@ -1,8 +1,9 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { 
   Film, Video, Play, Pause, RefreshCw, Download, FolderOpen, 
   CheckCircle2, AlertCircle, Sparkles, Clock, Gauge, Image, FileVideo, 
-  ChevronDown, ChevronUp, Layers, Scissors, Music, Volume2, Maximize2, Upload
+  ChevronDown, ChevronUp, Layers, Scissors, Music, Volume2, Maximize2, Upload,
+  Smartphone, Monitor, Square, Sliders
 } from 'lucide-react';
 import { Batch, Paragraph, ScanMediaResponse } from '../types';
 import { api } from '../api';
@@ -14,6 +15,8 @@ interface VideoTimelineEditorProps {
 
 export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch, onUpdated }) => {
   const [mediaFolder, setMediaFolder] = useState<string>(batch.media_folder || '');
+  const [aspectRatio, setAspectRatio] = useState<string>(batch.aspect_ratio || '16:9');
+  const [fitMode, setFitMode] = useState<string>(batch.fit_mode || 'crop');
   const [scanning, setScanning] = useState<boolean>(false);
   const [scanResult, setScanResult] = useState<ScanMediaResponse | null>(null);
   const [rendering, setRendering] = useState<boolean>(false);
@@ -28,6 +31,32 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const [audioSource, setAudioSource] = useState<'master' | 'tight'>(
     (batch.tight_mp4_path || batch.tight_audio?.duration) ? 'tight' : 'master'
   );
+
+  useEffect(() => {
+    if (batch.aspect_ratio && batch.aspect_ratio !== aspectRatio) {
+      setAspectRatio(batch.aspect_ratio);
+    }
+    if (batch.fit_mode && batch.fit_mode !== fitMode) {
+      setFitMode(batch.fit_mode);
+    }
+  }, [batch.aspect_ratio, batch.fit_mode]);
+
+  const handleUpdateConfig = async (newRatio?: string, newFit?: string) => {
+    const targetRatio = newRatio || aspectRatio;
+    const targetFit = newFit || fitMode;
+    if (newRatio) setAspectRatio(newRatio);
+    if (newFit) setFitMode(newFit);
+
+    try {
+      await api.updateBatchVideoConfig(batch.id, {
+        aspect_ratio: targetRatio,
+        fit_mode: targetFit,
+      });
+      onUpdated();
+    } catch (e) {
+      console.error('Failed to update batch video config', e);
+    }
+  };
   const [renderProgress, setRenderProgress] = useState<{
     status: string;
     percentage: number;
@@ -171,7 +200,13 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
     }, 350);
 
     try {
-      await api.renderBatchVideo(batch.id, { videoVolume, narrationVolume, audioSource });
+      await api.renderBatchVideo(batch.id, { 
+        videoVolume, 
+        narrationVolume, 
+        audioSource,
+        aspectRatio,
+        fitMode
+      });
       setRenderProgress({
         status: 'COMPLETED',
         percentage: 100,
@@ -187,6 +222,24 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
     } finally {
       clearInterval(interval);
       setRendering(false);
+    }
+  };
+
+  const getPlayerContainerClass = (ratio: string) => {
+    switch (ratio) {
+      case '9:16':
+        return 'w-full max-w-[340px] aspect-[9/16] max-h-[560px]';
+      case '1:1':
+        return 'w-full max-w-[460px] aspect-square';
+      case '4:5':
+        return 'w-full max-w-[400px] aspect-[4/5] max-h-[520px]';
+      case '4:3':
+        return 'w-full max-w-[560px] aspect-[4/3]';
+      case '21:9':
+        return 'w-full max-w-5xl aspect-[21/9]';
+      case '16:9':
+      default:
+        return 'w-full max-w-4xl aspect-video';
     }
   };
 
@@ -497,6 +550,71 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
           </div>
         </div>
 
+        {/* Aspect Ratio & Video Framing Toolbar */}
+        <div className="px-4 py-2.5 bg-[#0e1626] border-b border-slate-800 flex flex-wrap items-center justify-between gap-3">
+          {/* Aspect Ratio Selector Pills */}
+          <div className="flex flex-wrap items-center gap-1.5">
+            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center space-x-1 mr-1">
+              <Sliders className="w-3.5 h-3.5 text-purple-400" />
+              <span>Aspect Ratio:</span>
+            </span>
+
+            {[
+              { id: '16:9', label: '16:9 Landscape', res: '1920×1080', icon: Monitor },
+              { id: '9:16', label: '9:16 Shorts/Reels', res: '1080×1920', icon: Smartphone },
+              { id: '1:1', label: '1:1 Square', res: '1080×1080', icon: Square },
+              { id: '4:5', label: '4:5 Portrait', res: '1080×1350', icon: Smartphone },
+              { id: '4:3', label: '4:3 Classic', res: '1440×1080', icon: Monitor },
+              { id: '21:9', label: '21:9 Ultrawide', res: '2560×1080', icon: Monitor },
+            ].map((ratio) => {
+              const Icon = ratio.icon;
+              const isSelected = aspectRatio === ratio.id;
+              return (
+                <button
+                  key={ratio.id}
+                  type="button"
+                  onClick={() => handleUpdateConfig(ratio.id, undefined)}
+                  className={`flex items-center space-x-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                    isSelected
+                      ? 'bg-purple-600 text-white shadow-md shadow-purple-600/30 scale-105 font-bold'
+                      : 'bg-slate-900/80 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800'
+                  }`}
+                  title={`${ratio.label} (${ratio.res})`}
+                >
+                  <Icon className={`w-3 h-3 ${isSelected ? 'text-white' : 'text-slate-500'}`} />
+                  <span>{ratio.label}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Framing / Fit Mode */}
+          <div className="flex items-center space-x-2">
+            <span className="text-[11px] text-slate-400 font-medium">Fit Mode:</span>
+            <div className="flex items-center bg-slate-900 border border-slate-700/80 p-0.5 rounded-lg text-[11px]">
+              {[
+                { id: 'crop', label: 'Fill & Crop', tip: 'Crops edges to fill frame completely' },
+                { id: 'fit', label: 'Fit (Letterbox)', tip: 'Shows 100% of media with black bars' },
+                { id: 'blur_pad', label: '✨ Studio Blur', tip: 'Fills background with blurred replica of media' },
+              ].map((m) => (
+                <button
+                  key={m.id}
+                  type="button"
+                  onClick={() => handleUpdateConfig(undefined, m.id)}
+                  className={`px-2.5 py-1 rounded text-xs transition-all cursor-pointer ${
+                    fitMode === m.id
+                      ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold shadow-sm'
+                      : 'text-slate-400 hover:text-white'
+                  }`}
+                  title={m.tip}
+                >
+                  {m.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Real-time Render Progress Loading Bar */}
         {rendering && (
           <div className="p-4 bg-gradient-to-r from-indigo-950/80 via-slate-900 to-purple-950/80 border-b border-indigo-500/30 space-y-2.5 animate-fadeIn">
@@ -507,7 +625,7 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
                 </span>
                 <span className="font-bold text-white tracking-wide">
-                  RENDERING TIMELINE ({audioSource.toUpperCase()}):
+                  RENDERING TIMELINE ({audioSource.toUpperCase()} &bull; {aspectRatio}):
                 </span>
                 <span className="text-cyan-300 font-mono text-[11px] bg-slate-900/90 px-2.5 py-0.5 rounded border border-slate-700">
                   {renderProgress.current_step || 'Synchronizing video clips to narration...'}
@@ -544,9 +662,9 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
         {/* Video Canvas or Empty State */}
         <div className="p-4 flex flex-col items-center justify-center bg-black/40 min-h-[320px]">
           {activeVideoPath ? (
-            <div className="w-full max-w-4xl aspect-video bg-black rounded-xl overflow-hidden shadow-2xl border border-slate-800 relative">
+            <div className={`${getPlayerContainerClass(aspectRatio)} bg-black rounded-xl overflow-hidden shadow-2xl border border-slate-800 relative transition-all duration-300`}>
               <video
-                key={`${audioSource}-${videoTimestamp}`}
+                key={`${audioSource}-${aspectRatio}-${videoTimestamp}`}
                 ref={videoPlayerRef}
                 controls
                 className="w-full h-full object-contain"

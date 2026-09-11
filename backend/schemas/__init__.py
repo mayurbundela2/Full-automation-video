@@ -149,11 +149,14 @@ class ParseReferenceRequest(BaseModel):
     raw_text: str
     default_voice: Optional[str] = "Algenib"
     media_folder: Optional[str] = None
+    aspect_ratio: Optional[str] = None
+    fit_mode: Optional[str] = None
 
 
 class ParseReferenceResponse(BaseModel):
     detected_count: int
     paragraphs: List[Dict[str, Any]]
+    detected_aspect_ratio: Optional[str] = None
 
 
 class BatchResponse(BaseModel):
@@ -180,6 +183,13 @@ class BatchResponse(BaseModel):
     master_video_duration: Optional[float] = None
     tight_mp4_path: Optional[str] = None
     tight_video_duration: Optional[float] = None
+    aspect_ratio: Optional[str] = "16:9"
+    fit_mode: Optional[str] = "crop"
+
+
+class VideoConfigUpdateRequest(BaseModel):
+    aspect_ratio: Optional[str] = "16:9"
+    fit_mode: Optional[str] = "crop"
 
 
 # --- Video Media Schemas ---

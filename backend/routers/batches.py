@@ -11,7 +11,8 @@ from backend.models import Project, Batch, Paragraph, Generation, AppSetting
 from backend.schemas import (
     BatchCreate, BatchResponse, ParseReferenceRequest,
     ParseReferenceResponse, ParagraphResponse,
-    ScanMediaRequest, ScanMediaResponse, MediaMatchItem, AssignMediaRequest
+    ScanMediaRequest, ScanMediaResponse, MediaMatchItem, AssignMediaRequest,
+    VideoConfigUpdateRequest
 )
 from backend.services.video_service import VideoService
 from backend.services.reference_parser import ReferenceParser
@@ -216,7 +217,9 @@ def enrich_batch(batch: Batch, db: Session) -> BatchResponse:
         media_folder=batch.media_folder,
         master_video_path=master_mp4_resolved,
         master_video_duration=batch.master_video_duration,
-        tight_mp4_path=tight_mp4_resolved
+        tight_mp4_path=tight_mp4_resolved,
+        aspect_ratio=batch.aspect_ratio or "16:9",
+        fit_mode=batch.fit_mode or "crop"
     )
 
 
@@ -771,10 +774,12 @@ def parse_reference(batch_id: int, request_data: ParseReferenceRequest, db: Sess
 
     default_voice = request_data.default_voice or "Algenib"
     parsed_paragraphs = ReferenceParser.parse_batch_text(request_data.raw_text, default_voice)
+    detected_ar = ReferenceParser.detect_aspect_ratio(request_data.raw_text)
 
     return ParseReferenceResponse(
         detected_count=len(parsed_paragraphs),
-        paragraphs=parsed_paragraphs
+        paragraphs=parsed_paragraphs,
+        detected_aspect_ratio=detected_ar
     )
 
 
@@ -788,6 +793,12 @@ def import_reference_into_batch(batch_id: int, request_data: ParseReferenceReque
         raise HTTPException(status_code=404, detail="Batch not found")
 
     batch.raw_reference = request_data.raw_text
+    detected_ar = request_data.aspect_ratio or ReferenceParser.detect_aspect_ratio(request_data.raw_text)
+    if detected_ar:
+        batch.aspect_ratio = detected_ar
+    if request_data.fit_mode:
+        batch.fit_mode = request_data.fit_mode
+
     parsed_paragraphs = ReferenceParser.parse_batch_text(request_data.raw_text, request_data.default_voice or "Algenib")
 
     if not parsed_paragraphs:
@@ -1086,12 +1097,14 @@ def render_batch_video(
     video_volume: float = Query(1.0, description="Volume multiplier for video original audio (0.0 - 2.0)"),
     narration_volume: float = Query(1.0, description="Volume multiplier for voice narration (0.0 - 2.0)"),
     audio_source: str = Query("master", description="Audio source to sync: 'master' or 'tight'/'trim'"),
+    aspect_ratio: Optional[str] = Query(None, description="Target aspect ratio: '16:9', '9:16', '1:1', '4:5', '4:3', '21:9'"),
+    fit_mode: Optional[str] = Query(None, description="Video fit mode: 'crop', 'fit', or 'blur_pad'"),
     db: Session = Depends(get_db)
 ):
     """
     Renders synchronized video for each paragraph by adjusting speed to match audio
     (either master full narration or tight/trimmed silence audio),
-    then stitches all clips into a full 1080p MP4.
+    then stitches all clips into a full MP4 matching configured aspect ratio and fit mode.
     Preserves original video sound mixed with narration voice-over.
     Updates RENDER_PROGRESS with real-time percentage and step details.
     """
@@ -1101,6 +1114,16 @@ def render_batch_video(
 
     is_tight = audio_source.lower() in ("tight", "trim")
     version_title = "Tight Trimmed" if is_tight else "Master Full Narration"
+
+    # Resolve aspect ratio & fit mode
+    effective_ar = aspect_ratio or batch.aspect_ratio or "16:9"
+    effective_fit = fit_mode or batch.fit_mode or "crop"
+
+    batch.aspect_ratio = effective_ar
+    batch.fit_mode = effective_fit
+    db.commit()
+
+    target_w, target_h = VideoService.get_resolution_for_aspect_ratio(effective_ar)
 
     project = batch.project
     paragraphs = db.query(Paragraph).filter(Paragraph.batch_id == batch_id).order_by(Paragraph.paragraph_number.asc()).all()
@@ -1114,7 +1137,7 @@ def render_batch_video(
         "percentage": 5,
         "current_shot": 0,
         "total_shots": total_shots,
-        "current_step": f"Initializing {version_title} video render pipeline...",
+        "current_step": f"Initializing {effective_ar} ({target_w}x{target_h}) {version_title} video render pipeline...",
         "start_time": start_time,
         "error": None
     }
@@ -1139,7 +1162,7 @@ def render_batch_video(
             RENDER_PROGRESS[batch_id].update({
                 "percentage": start_pct,
                 "current_shot": idx,
-                "current_step": f"Processing shot {idx}/{total_shots}: syncing {media_name} to {version_title} audio..."
+                "current_step": f"Processing shot {idx}/{total_shots}: syncing {media_name} ({effective_ar}) to {version_title} audio..."
             })
 
             # Find latest completed audio
@@ -1173,6 +1196,9 @@ def render_batch_video(
                     target_duration=target_duration,
                     video_volume=video_volume,
                     narration_volume=narration_volume,
+                    target_width=target_w,
+                    target_height=target_h,
+                    fit_mode=effective_fit,
                     ffmpeg_path=ffmpeg_path
                 )
                 p.synced_video_path = sync_res["video_path"]
@@ -1182,11 +1208,13 @@ def render_batch_video(
                 shot_video_paths.append(sync_res["video_path"])
                 shot_results.append(sync_res)
             else:
-                # Fallback: create standard placeholder clip
+                # Fallback: create standard placeholder clip matching resolution
                 AudioConverter.create_timeline_mp4_from_audio(
                     input_audio_path=target_audio_path,
                     output_mp4_path=str(shot_out_mp4),
-                    ffmpeg_path=ffmpeg_path
+                    ffmpeg_path=ffmpeg_path,
+                    width=target_w,
+                    height=target_h
                 )
                 p.synced_video_path = str(shot_out_mp4)
                 shot_video_paths.append(str(shot_out_mp4))
@@ -1194,7 +1222,9 @@ def render_batch_video(
                     "video_path": str(shot_out_mp4),
                     "media_type": "generated_placeholder",
                     "target_duration": target_duration,
-                    "speed_factor": 1.0
+                    "speed_factor": 1.0,
+                    "width": target_w,
+                    "height": target_h
                 })
 
             done_pct = int(5 + (idx / (total_shots + 1)) * 82)
@@ -1208,7 +1238,7 @@ def render_batch_video(
         RENDER_PROGRESS[batch_id].update({
             "percentage": 90,
             "current_shot": total_shots,
-            "current_step": f"Stitching all {total_shots} clips into 1080p {version_title} video..."
+            "current_step": f"Stitching all {total_shots} clips into {effective_ar} ({target_w}x{target_h}) {version_title} video..."
         })
 
         master_filename = "full_timeline_tight.mp4" if is_tight else "full_timeline_master.mp4"
@@ -1231,13 +1261,16 @@ def render_batch_video(
             "status": "COMPLETED",
             "percentage": 100,
             "current_shot": total_shots,
-            "current_step": f"{version_title} video completed ({stitch_res.get('duration', 0):.1f}s). Ready to export!",
+            "current_step": f"{effective_ar} {version_title} video completed ({stitch_res.get('duration', 0):.1f}s). Ready to export!",
             "end_time": end_time
         })
 
         return {
             "status": "COMPLETED",
             "audio_source": "tight" if is_tight else "master",
+            "aspect_ratio": effective_ar,
+            "fit_mode": effective_fit,
+            "resolution": f"{target_w}x{target_h}",
             "master_video_path": stitch_res["master_video_path"],
             "master_video_duration": stitch_res["duration"],
             "total_shots": len(shot_results),
@@ -1252,6 +1285,24 @@ def render_batch_video(
             "end_time": time.time()
         })
         raise
+
+
+@router.patch("/api/batches/{batch_id}/video-config", response_model=BatchResponse)
+def update_batch_video_config(
+    batch_id: int,
+    config: VideoConfigUpdateRequest,
+    db: Session = Depends(get_db)
+):
+    batch = db.query(Batch).filter(Batch.id == batch_id).first()
+    if not batch:
+        raise HTTPException(status_code=404, detail="Batch not found")
+    if config.aspect_ratio:
+        batch.aspect_ratio = config.aspect_ratio
+    if config.fit_mode:
+        batch.fit_mode = config.fit_mode
+    db.commit()
+    db.refresh(batch)
+    return enrich_batch(batch, db)
 
 
 @router.get("/api/batches/{batch_id}/master-video")

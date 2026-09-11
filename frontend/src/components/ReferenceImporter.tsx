@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { FileDown, Sparkles, Check, X, AlertTriangle, ArrowRight, Eye, Lightbulb, Copy, FolderOpen, Film } from 'lucide-react';
+import { 
+  FileDown, Sparkles, Check, X, AlertTriangle, ArrowRight, Eye, 
+  Lightbulb, Copy, FolderOpen, Film, Smartphone, Monitor, Square, Sliders 
+} from 'lucide-react';
 import { api } from '../api';
 import { PromptHelpModal, AI_DIRECTOR_PROMPT } from './PromptHelpModal';
 
@@ -19,6 +22,9 @@ export const ReferenceImporter: React.FC<ReferenceImporterProps> = ({
   const [step, setStep] = useState<'paste' | 'preview'>('paste');
   const [rawText, setRawText] = useState('');
   const [mediaFolder, setMediaFolder] = useState('');
+  const [aspectRatio, setAspectRatio] = useState<string>('16:9');
+  const [fitMode, setFitMode] = useState<string>('crop');
+  const [detectedRatioBadge, setDetectedRatioBadge] = useState<string | null>(null);
   const [isBrowsing, setIsBrowsing] = useState(false);
   const [parsedData, setParsedData] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
@@ -83,8 +89,19 @@ Ek bas ek aur reel wala moment... phir raat ke do baj gaye. Uthne ka time subah 
     setLoading(true);
     setError(null);
     try {
-      const res = await api.parseReference(batchId, rawText, defaultVoice, mediaFolder.trim() || undefined);
+      const res = await api.parseReference(
+        batchId, 
+        rawText, 
+        defaultVoice, 
+        mediaFolder.trim() || undefined,
+        aspectRatio,
+        fitMode
+      );
       setParsedData(res.paragraphs);
+      if (res.detected_aspect_ratio) {
+        setAspectRatio(res.detected_aspect_ratio);
+        setDetectedRatioBadge(res.detected_aspect_ratio);
+      }
       setStep('preview');
     } catch (e: any) {
       setError(e.message || 'Failed to parse reference.');
@@ -97,7 +114,14 @@ Ek bas ek aur reel wala moment... phir raat ke do baj gaye. Uthne ka time subah 
     setLoading(true);
     setError(null);
     try {
-      await api.importReference(batchId, rawText, defaultVoice, mediaFolder.trim() || undefined);
+      await api.importReference(
+        batchId, 
+        rawText, 
+        defaultVoice, 
+        mediaFolder.trim() || undefined,
+        aspectRatio,
+        fitMode
+      );
       onImportSuccess();
       onClose();
     } catch (e: any) {
@@ -220,17 +244,94 @@ Ek bas ek aur reel wala moment... phir raat ke do baj gaye. Uthne ka time subah 
                     </button>
                   </div>
                 </div>
+
+                {/* Video Target Aspect Ratio & Framing Configuration */}
+                <div className="bg-[#0b101b] border border-slate-800 rounded-xl p-3 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-2">
+                      <Sliders className="w-4 h-4 text-purple-400" />
+                      <label className="text-xs font-semibold text-slate-200">
+                        Target Aspect Ratio & Resolution:
+                      </label>
+                    </div>
+                    {detectedRatioBadge && (
+                      <span className="text-[10px] font-mono text-purple-300 bg-purple-950/60 border border-purple-500/40 px-2 py-0.5 rounded-full">
+                        Auto-detected: {detectedRatioBadge}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Ratio Selector Buttons */}
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
+                    {[
+                      { id: '16:9', label: '16:9 Landscape', icon: Monitor, res: '1920×1080' },
+                      { id: '9:16', label: '9:16 Shorts/Reels', icon: Smartphone, res: '1080×1920' },
+                      { id: '1:1', label: '1:1 Square', icon: Square, res: '1080×1080' },
+                      { id: '4:5', label: '4:5 Portrait', icon: Smartphone, res: '1080×1350' },
+                      { id: '4:3', label: '4:3 Classic', icon: Monitor, res: '1440×1080' },
+                      { id: '21:9', label: '21:9 Ultrawide', icon: Monitor, res: '2560×1080' },
+                    ].map((item) => {
+                      const Icon = item.icon;
+                      const isSelected = aspectRatio === item.id;
+                      return (
+                        <button
+                          key={item.id}
+                          type="button"
+                          onClick={() => setAspectRatio(item.id)}
+                          className={`flex flex-col items-center justify-center p-2 rounded-xl border text-center transition-all cursor-pointer ${
+                            isSelected
+                              ? 'bg-purple-600/20 border-purple-500 text-white font-bold shadow-md shadow-purple-600/20'
+                              : 'bg-slate-900/60 border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700'
+                          }`}
+                        >
+                          <Icon className={`w-4 h-4 mb-1 ${isSelected ? 'text-purple-400' : 'text-slate-500'}`} />
+                          <span className="text-[11px] leading-tight">{item.label}</span>
+                          <span className="text-[9px] font-mono text-slate-500 mt-0.5">{item.res}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {/* Framing / Fit Mode */}
+                  <div className="pt-2 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2">
+                    <span className="text-[11px] text-slate-400 font-medium">Framing / Fit Mode:</span>
+                    <div className="flex items-center space-x-1 bg-slate-900/90 border border-slate-700/80 p-0.5 rounded-lg text-[11px]">
+                      {[
+                        { id: 'crop', label: 'Fill & Crop', desc: 'No black bars (zooms to fill)' },
+                        { id: 'fit', label: 'Fit (Letterbox)', desc: 'Show 100% of video with black bars' },
+                        { id: 'blur_pad', label: '✨ Studio Blur', desc: 'Blurred background fill' },
+                      ].map((fm) => (
+                        <button
+                          key={fm.id}
+                          type="button"
+                          onClick={() => setFitMode(fm.id)}
+                          className={`px-2 py-1 rounded text-xs transition-all cursor-pointer ${
+                            fitMode === fm.id
+                              ? 'bg-purple-600 text-white font-bold shadow-sm'
+                              : 'text-slate-400 hover:text-white'
+                          }`}
+                          title={fm.desc}
+                        >
+                          {fm.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             ) : (
             <div className="space-y-4">
-              <div className="flex items-center justify-between bg-blue-500/10 border border-blue-500/20 p-3 rounded-xl text-xs text-blue-300">
-                <span className="font-semibold">
-                  Detected {parsedData.length} Paragraph(s) ready for import
-                  {mediaFolder && <span className="ml-2 text-emerald-400 font-mono">(&bull; Folder: {mediaFolder})</span>}
-                </span>
+              <div className="flex flex-wrap items-center justify-between bg-blue-500/10 border border-blue-500/20 p-3 rounded-xl text-xs text-blue-300 gap-2">
+                <div className="flex flex-wrap items-center gap-2 font-semibold">
+                  <span>Detected {parsedData.length} Paragraph(s) ready for import</span>
+                  <span className="text-purple-400 bg-purple-950/60 px-2 py-0.5 rounded border border-purple-500/30 font-mono">
+                    Ratio: {aspectRatio} ({fitMode})
+                  </span>
+                  {mediaFolder && <span className="text-emerald-400 font-mono">(&bull; Folder: {mediaFolder})</span>}
+                </div>
                 <button
                   onClick={() => setStep('paste')}
-                  className="text-blue-400 hover:text-blue-200 font-medium underline"
+                  className="text-blue-400 hover:text-blue-200 font-medium underline cursor-pointer"
                 >
                   &larr; Back to Paste
                 </button>

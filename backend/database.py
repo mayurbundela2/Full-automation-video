@@ -58,6 +58,10 @@ def init_db():
                 cursor.execute("ALTER TABLE batches ADD COLUMN master_video_path VARCHAR(500)")
             if "master_video_duration" not in columns:
                 cursor.execute("ALTER TABLE batches ADD COLUMN master_video_duration FLOAT")
+            if "aspect_ratio" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN aspect_ratio VARCHAR(20) DEFAULT '16:9'")
+            if "fit_mode" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN fit_mode VARCHAR(20) DEFAULT 'crop'")
 
             cursor.execute("PRAGMA table_info(paragraphs)")
             p_cols = [row[1] for row in cursor.fetchall()]

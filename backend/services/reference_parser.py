@@ -8,6 +8,33 @@ class ReferenceParser:
     into structured paragraph units with metadata and clean transcripts.
     """
 
+    @classmethod
+    def detect_aspect_ratio(cls, text: str) -> Optional[str]:
+        """
+        Detects aspect ratio from script headers or production notes.
+        e.g. "Aspect Ratio: 9:16", "Format: 9:16 Shorts", "Ratio: 16:9", "Instagram Reel (9:16)", "Square (1:1)"
+        """
+        if not text:
+            return None
+        m = re.search(
+            r'(?:aspect[\s_-]*ratio|format|dimensions?|ratio|orientation)\s*[:=]\s*(?:vertical|portrait|shorts?|reels?|tiktok)?\s*\(?([0-9]+:[0-9]+)\)?',
+            text,
+            re.IGNORECASE
+        )
+        if m:
+            val = m.group(1).strip()
+            if val in ("16:9", "9:16", "1:1", "4:5", "4:3", "21:9"):
+                return val
+
+        if re.search(r'\b(?:youtube\s+shorts?|insta(?:gram)?\s+reels?|tiktok|vertical\s+video|9:16)\b', text, re.IGNORECASE):
+            return "9:16"
+        if re.search(r'\b(?:instagram\s+post|square\s+post|1:1\s+ratio|1:1\s+square)\b', text, re.IGNORECASE):
+            return "1:1"
+        if re.search(r'\b(?:youtube\s+video|horizontal\s+video|landscape\s+video|16:9)\b', text, re.IGNORECASE):
+            return "16:9"
+
+        return None
+
     PARAGRAPH_SPLIT_REGEX = re.compile(
         r'(?:^|\n)\s*(?:---\s*\n\s*)?'
         r'(?:'

@@ -39,6 +39,8 @@ class Batch(Base):
     media_folder = Column(String(500), nullable=True)
     master_video_path = Column(String(500), nullable=True)
     master_video_duration = Column(Float, nullable=True)
+    aspect_ratio = Column(String(20), default="16:9", nullable=True)
+    fit_mode = Column(String(20), default="crop", nullable=True)
     created_at = Column(DateTime(timezone=True), default=utc_now)
     updated_at = Column(DateTime(timezone=True), default=utc_now, onupdate=utc_now)
 

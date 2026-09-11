@@ -124,6 +124,8 @@ export interface Batch {
   master_video_duration?: number;
   tight_mp4_path?: string;
   tight_video_duration?: number;
+  aspect_ratio?: '16:9' | '9:16' | '1:1' | '4:5' | '4:3' | '21:9' | string;
+  fit_mode?: 'crop' | 'fit' | 'blur_pad' | string;
 }
 
 export interface MediaMatchItem {
