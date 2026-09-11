@@ -330,6 +330,164 @@ class VideoService:
         return filter_str, ass_file
 
     @classmethod
+    def build_timeline_animated_subtitles_ass(
+        cls,
+        shots: List[Dict[str, Any]],
+        target_width: int,
+        target_height: int,
+        temp_dir: Path,
+        position: str = "top",
+        animation_style: str = "slide_down",
+        font_family: str = "Impact",
+        font_color: str = "yellow"
+    ) -> Path:
+        """
+        Builds a single ASS script covering the entire timeline with animated subtitles for each shot.
+        Each shot dict contains: {'start': float, 'duration': float, 'text': str}.
+        """
+        is_vertical = target_height > target_width
+        is_top = (position or "top").lower() != "bottom"
+        if is_top:
+            margin_y = int(target_height * (0.032 if is_vertical else 0.022))
+            ass_alignment = 8  # Top Center
+            top_y = margin_y + 20
+        else:
+            margin_y = int(target_height * (0.06 if is_vertical else 0.045))
+            ass_alignment = 2  # Bottom Center
+            top_y = target_height - margin_y - 20
+
+        fontsize = max(30, int(min(target_width, target_height) * (0.056 if is_vertical else 0.050)))
+        font = font_family.strip() if font_family and font_family.strip() else "Impact"
+
+        col = (font_color or "yellow").lower()
+        if "white" in col:
+            primary_color = "&H00FFFFFF"
+        elif "cyan" in col:
+            primary_color = "&H00F0FF00"
+        else:
+            primary_color = "&H0000E8FF"
+
+        cx = target_width // 2
+        anim = (animation_style or "slide_down").lower().strip()
+
+        def fmt_time(sec: float) -> str:
+            h = int(sec // 3600)
+            m = int((sec % 3600) // 60)
+            s = sec % 60
+            return f"{h}:{m:02d}:{s:05.2f}"
+
+        ass_header = (
+            "[Script Info]\n"
+            "ScriptType: v4.00+\n"
+            f"PlayResX: {target_width}\n"
+            f"PlayResY: {target_height}\n\n"
+            "[V4+ Styles]\n"
+            "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
+            f"Style: VideoTitle,{font},{fontsize},{primary_color},&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,1,0,1,4,2,{ass_alignment},20,20,{margin_y},1\n\n"
+            "[Events]\n"
+            "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"
+        )
+
+        dialogues = []
+        for shot in shots:
+            raw_text = (shot.get("text") or "").strip()
+            if not raw_text:
+                continue
+            safe_text = raw_text.replace(r"\N", " ").replace("\n", " ").replace('"', '').strip()
+            t_start = float(shot.get("start", 0.0))
+            dur = max(0.5, float(shot.get("duration", 2.0)))
+            t_end = t_start + dur
+            fade_in_ms = int(min(0.35, dur * 0.25) * 1000)
+            fade_out_ms = int(min(0.25, dur * 0.20) * 1000)
+
+            if anim == "typewriter":
+                typing_dur = min(1.6, dur * 0.65)
+                n_chars = len(safe_text)
+                step = typing_dur / max(1, n_chars)
+                for i in range(1, n_chars + 1):
+                    c_start = t_start + (i - 1) * step
+                    c_end = t_start + (i * step if i < n_chars else dur)
+                    sub = safe_text[:i]
+                    dialogues.append(f"Dialogue: 0,{fmt_time(c_start)},{fmt_time(c_end)},VideoTitle,,0,0,0,{{\\pos({cx},{top_y})}},{sub}")
+            elif anim == "slide_left":
+                override = f"{{\\move({cx - 320},{top_y},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+                dialogues.append(f"Dialogue: 0,{fmt_time(t_start)},{fmt_time(t_end)},VideoTitle,,0,0,0,,{override}{safe_text}")
+            elif anim == "slide_right":
+                override = f"{{\\move({cx + 320},{top_y},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+                dialogues.append(f"Dialogue: 0,{fmt_time(t_start)},{fmt_time(t_end)},VideoTitle,,0,0,0,,{override}{safe_text}")
+            elif anim == "slide_up":
+                override = f"{{\\move({cx},{top_y + 45},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+                dialogues.append(f"Dialogue: 0,{fmt_time(t_start)},{fmt_time(t_end)},VideoTitle,,0,0,0,,{override}{safe_text}")
+            elif anim == "fade":
+                override = f"{{\\pos({cx},{top_y})\\fad({fade_in_ms},{fade_out_ms})}}"
+                dialogues.append(f"Dialogue: 0,{fmt_time(t_start)},{fmt_time(t_end)},VideoTitle,,0,0,0,,{override}{safe_text}")
+            else:  # slide_down
+                start_y = -35 if is_top else top_y - 45
+                override = f"{{\\move({cx},{start_y},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+                dialogues.append(f"Dialogue: 0,{fmt_time(t_start)},{fmt_time(t_end)},VideoTitle,,0,0,0,,{override}{safe_text}")
+
+        ass_content = ass_header + "\n".join(dialogues) + "\n"
+        ass_file = temp_dir / f"timeline_titles_{abs(hash(font + position + anim + str(len(shots)))) % 10000000}.ass"
+        ass_file.write_text(ass_content, encoding="utf-8")
+        return ass_file
+
+    @classmethod
+    def burn_text_overlay_on_video(
+        cls,
+        input_video_path: str,
+        output_video_path: str,
+        shots: List[Dict[str, Any]],
+        target_width: int,
+        target_height: int,
+        position: str = "top",
+        animation_style: str = "slide_down",
+        font_family: str = "Impact",
+        font_color: str = "yellow",
+        ffmpeg_path: str = "ffmpeg"
+    ) -> str:
+        """
+        Quickly burns animated text overlay onto an already-stitched master video in a fast single pass.
+        Avoids re-rendering all individual shots, finishing in seconds.
+        """
+        in_p = Path(input_video_path)
+        out_p = Path(output_video_path)
+        out_p.parent.mkdir(parents=True, exist_ok=True)
+        ffmpeg_bin = AudioConverter.resolve_ffmpeg(ffmpeg_path)
+
+        ass_file = cls.build_timeline_animated_subtitles_ass(
+            shots=shots,
+            target_width=target_width,
+            target_height=target_height,
+            temp_dir=out_p.parent,
+            position=position,
+            animation_style=animation_style,
+            font_family=font_family,
+            font_color=font_color
+        )
+
+        clean_ass_path = ass_file.resolve().as_posix().replace(":", r"\:")
+        cmd = [
+            ffmpeg_bin, "-y",
+            "-i", str(in_p),
+            "-vf", f"subtitles='{clean_ass_path}'",
+            "-c:v", "libx264",
+            "-preset", "veryfast",
+            "-pix_fmt", "yuv420p",
+            "-c:a", "copy",
+            str(out_p)
+        ]
+
+        try:
+            subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+            return str(out_p)
+        finally:
+            if ass_file.exists():
+                try:
+                    ass_file.unlink()
+                except Exception:
+                    pass
+
+    @classmethod
     def sync_media_to_audio(
         cls,
         media_path: str,

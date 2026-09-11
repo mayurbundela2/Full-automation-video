@@ -1272,6 +1272,8 @@ def render_batch_video(
         try:
             import shutil
             shutil.copyfile(str(master_video_path), str(legacy_video_path))
+            clean_backup = batch_dir / f"full_timeline_{'tight' if is_tight else 'master'}_{clean_ar}_clean.mp4"
+            shutil.copyfile(str(master_video_path), str(clean_backup))
         except Exception:
             pass
 
@@ -1312,6 +1314,181 @@ def render_batch_video(
             "end_time": time.time()
         })
         raise
+
+
+@router.post("/api/batches/{batch_id}/render-text-only")
+def render_batch_text_only(
+    batch_id: int,
+    audio_source: str = Query("master", description="Audio source: 'master' or 'tight'"),
+    aspect_ratio: Optional[str] = Query(None),
+    fit_mode: Optional[str] = Query(None),
+    text_animation_style: str = Query("slide_down"),
+    text_position: str = Query("top"),
+    font_family: str = Query("Impact"),
+    font_color: str = Query("yellow"),
+    db: Session = Depends(get_db)
+):
+    """
+    Lightning-fast text overlay render:
+    Takes the already-stitched master/tight video and burns the animated on-screen subtitles directly
+    onto it in a single quick pass (~2-5 seconds), without having to re-process individual clips!
+    """
+    batch = db.query(Batch).filter(Batch.id == batch_id).first()
+    if not batch:
+        raise HTTPException(status_code=404, detail="Batch not found")
+
+    is_tight = audio_source.lower() in ("tight", "trim")
+    version_title = "Tight Trimmed" if is_tight else "Master Full Narration"
+
+    effective_ar = aspect_ratio or batch.aspect_ratio or "16:9"
+    effective_fit = fit_mode or batch.fit_mode or "crop"
+    clean_ar = effective_ar.replace(":", "x")
+    target_w, target_h = VideoService.get_resolution_for_aspect_ratio(effective_ar)
+
+    output_dir_setting = db.query(AppSetting).filter(AppSetting.key == "OUTPUT_FOLDER").first()
+    output_base = output_dir_setting.value if output_dir_setting else settings.OUTPUT_FOLDER
+    ffmpeg_path_setting = db.query(AppSetting).filter(AppSetting.key == "FFMPEG_PATH").first()
+    ffmpeg_path = ffmpeg_path_setting.value if ffmpeg_path_setting else settings.FFMPEG_PATH
+
+    delivery = LocalDeliveryProvider(base_output_dir=output_base)
+    batch_dir = delivery.base_dir / sanitize_filename(batch.project.name) / f"Batch_{batch.batch_number:02d}"
+
+    # Determine base video input
+    clean_base_name = f"full_timeline_{'tight' if is_tight else 'master'}_{clean_ar}_clean.mp4"
+    clean_base_path = batch_dir / clean_base_name
+
+    ratio_filename = f"full_timeline_{'tight' if is_tight else 'master'}_{clean_ar}.mp4"
+    master_video_path = batch_dir / ratio_filename
+    legacy_filename = "full_timeline_tight.mp4" if is_tight else "full_timeline_master.mp4"
+    legacy_video_path = batch_dir / legacy_filename
+
+    # If clean base does not exist yet, look for master video and back it up as clean base
+    base_input = None
+    if clean_base_path.exists() and clean_base_path.stat().st_size > 1000:
+        base_input = str(clean_base_path)
+    elif master_video_path.exists() and master_video_path.stat().st_size > 1000:
+        import shutil
+        try:
+            shutil.copyfile(str(master_video_path), str(clean_base_path))
+        except Exception:
+            pass
+        base_input = str(master_video_path)
+    elif legacy_video_path.exists() and legacy_video_path.stat().st_size > 1000:
+        base_input = str(legacy_video_path)
+    else:
+        existing = batch.tight_mp4_path if is_tight else batch.master_video_path
+        if existing and os.path.exists(existing):
+            base_input = existing
+
+    if not base_input or not os.path.exists(base_input):
+        raise HTTPException(
+            status_code=400,
+            detail="No base video timeline found. Please click 'Sync & Stitch Video' once first to create the base video timeline."
+        )
+
+    paragraphs = db.query(Paragraph).filter(Paragraph.batch_id == batch_id).order_by(Paragraph.paragraph_number.asc()).all()
+    if not paragraphs:
+        raise HTTPException(status_code=400, detail="No paragraphs found in this batch.")
+
+    RENDER_PROGRESS[batch_id] = {
+        "status": "RENDERING",
+        "percentage": 10,
+        "current_shot": 0,
+        "total_shots": len(paragraphs),
+        "current_step": f"Generating animated subtitles ({effective_ar}, {font_family}, {font_color})...",
+        "start_time": time.time(),
+        "error": None
+    }
+
+    # Calculate timeline start times and durations for all shots
+    shots_timeline = []
+    current_time = 0.0
+
+    for p in paragraphs:
+        latest_gen = db.query(Generation).filter(Generation.paragraph_id == p.id, Generation.status == "COMPLETED").order_by(Generation.created_at.desc()).first()
+        shot_dur = 2.5
+        if latest_gen:
+            if is_tight and latest_gen.tight_duration:
+                shot_dur = latest_gen.tight_duration
+            elif latest_gen.duration:
+                shot_dur = latest_gen.duration
+
+        if p.on_screen_text and p.on_screen_text.strip():
+            shots_timeline.append({
+                "start": current_time,
+                "duration": shot_dur,
+                "text": p.on_screen_text.strip()
+            })
+        current_time += shot_dur
+
+    RENDER_PROGRESS[batch_id].update({
+        "percentage": 40,
+        "current_step": f"Burning {len(shots_timeline)} animated title cues directly onto {version_title} video..."
+    })
+
+    # Render directly to a temp output then rename to master_video_path
+    temp_burned = batch_dir / f"temp_burned_{int(time.time())}.mp4"
+    try:
+        VideoService.burn_text_overlay_on_video(
+            input_video_path=base_input,
+            output_video_path=str(temp_burned),
+            shots=shots_timeline,
+            target_width=target_w,
+            target_height=target_h,
+            position=text_position,
+            animation_style=text_animation_style,
+            font_family=font_family,
+            font_color=font_color,
+            ffmpeg_path=ffmpeg_path
+        )
+
+        import shutil
+        shutil.move(str(temp_burned), str(master_video_path))
+        try:
+            shutil.copyfile(str(master_video_path), str(legacy_video_path))
+        except Exception:
+            pass
+
+        info = VideoService.get_media_info(str(master_video_path), ffmpeg_path)
+        final_dur = info.get("duration", current_time)
+
+        if is_tight:
+            batch.tight_mp4_path = str(master_video_path)
+            batch.tight_video_duration = final_dur
+        else:
+            batch.master_video_path = str(master_video_path)
+            batch.master_video_duration = final_dur
+        db.commit()
+
+        RENDER_PROGRESS[batch_id].update({
+            "status": "COMPLETED",
+            "percentage": 100,
+            "current_step": f"On-screen text burned successfully! Ready to export.",
+            "end_time": time.time()
+        })
+
+        return {
+            "status": "COMPLETED",
+            "audio_source": audio_source,
+            "aspect_ratio": effective_ar,
+            "master_video_path": str(master_video_path),
+            "master_video_duration": final_dur,
+            "titles_burned": len(shots_timeline)
+        }
+    except Exception as e:
+        if temp_burned.exists():
+            try:
+                temp_burned.unlink()
+            except Exception:
+                pass
+        RENDER_PROGRESS[batch_id].update({
+            "status": "FAILED",
+            "percentage": 0,
+            "current_step": "Fast text rendering failed.",
+            "error": str(e),
+            "end_time": time.time()
+        })
+        raise HTTPException(status_code=500, detail=f"Failed to burn text overlay: {str(e)}")
 
 
 @router.patch("/api/batches/{batch_id}/video-config", response_model=BatchResponse)

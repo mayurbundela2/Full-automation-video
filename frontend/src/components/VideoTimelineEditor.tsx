@@ -28,6 +28,7 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const [scanning, setScanning] = useState<boolean>(false);
   const [scanResult, setScanResult] = useState<ScanMediaResponse | null>(null);
   const [rendering, setRendering] = useState<boolean>(false);
+  const [renderingTextOnly, setRenderingTextOnly] = useState<boolean>(false);
   const [renderError, setRenderError] = useState<string | null>(null);
   const [previewShot, setPreviewShot] = useState<Paragraph | null>(null);
   const [expandedShotId, setExpandedShotId] = useState<number | null>(null);
@@ -271,6 +272,59 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
     } finally {
       clearInterval(interval);
       setRendering(false);
+    }
+  };
+
+  const handleRenderTextOnly = async () => {
+    if (!activeVideoPath) {
+      setRenderError('Please render the base video timeline first with "SYNC & STITCH VIDEO".');
+      return;
+    }
+    setRenderingTextOnly(true);
+    setRenderError(null);
+    setRenderProgress({
+      status: 'RENDERING',
+      percentage: 20,
+      current_shot: 0,
+      total_shots: paragraphs.length,
+      current_step: `Burning animated on-screen text onto ${audioSource === 'tight' ? 'Tight' : 'Master'} video in fast pass...`,
+      elapsed_seconds: 0
+    });
+
+    const interval = setInterval(async () => {
+      try {
+        const prog = await api.getBatchRenderStatus(batch.id);
+        if (prog && prog.status !== 'IDLE') {
+          setRenderProgress(prog);
+        }
+      } catch {}
+    }, 300);
+
+    try {
+      await api.renderBatchTextOnly(batch.id, {
+        audioSource,
+        aspectRatio,
+        fitMode,
+        textAnimationStyle,
+        textPosition,
+        fontFamily,
+        fontColor
+      });
+      setRenderProgress({
+        status: 'COMPLETED',
+        percentage: 100,
+        current_shot: paragraphs.length,
+        total_shots: paragraphs.length,
+        current_step: `On-screen text burned directly into ${audioSource === 'tight' ? 'Tight' : 'Master'} video! Ready to export.`,
+        elapsed_seconds: 0
+      });
+      setVideoTimestamp(Date.now());
+      onUpdated();
+    } catch (e: any) {
+      setRenderError(e.message || 'Failed to burn text onto video');
+    } finally {
+      clearInterval(interval);
+      setRenderingTextOnly(false);
     }
   };
 
@@ -585,6 +639,22 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
               </span>
             </button>
 
+            {/* DEDICATED FAST TEXT RENDER BUTTON */}
+            {showOnScreenText && (
+              <button
+                type="button"
+                onClick={handleRenderTextOnly}
+                disabled={renderingTextOnly || rendering || !activeVideoPath}
+                className="flex items-center space-x-2 px-3.5 py-2 rounded-xl text-slate-950 text-xs font-black shadow-lg transition-all active:scale-95 disabled:opacity-40 cursor-pointer bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-300 hover:to-yellow-300 border border-amber-300 shadow-amber-500/20"
+                title="Fast 2-3 second pass: Burns animated text directly onto the video without re-rendering individual video clips!"
+              >
+                <Type className={`w-3.5 h-3.5 ${renderingTextOnly ? 'animate-spin' : ''}`} />
+                <span>
+                  {renderingTextOnly ? 'BURNING TEXT...' : '⚡ BURN TEXT TO VIDEO'}
+                </span>
+              </button>
+            )}
+
             {activeVideoPath && (
               <a
                 href={api.getMasterVideoUrl(batch.id, audioSource, aspectRatio, fitMode, videoTimestamp, true)}
@@ -791,11 +861,25 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
               <ListOrdered className="w-3.5 h-3.5 text-amber-400" />
               <span>PASTE BY SERIAL NO</span>
             </button>
+
+            {/* QUICK TEXT RENDER BUTTON IN TOOLBAR */}
+            {showOnScreenText && (
+              <button
+                type="button"
+                onClick={handleRenderTextOnly}
+                disabled={renderingTextOnly || rendering || !activeVideoPath}
+                className="flex items-center space-x-1.5 px-3 py-1 rounded-lg text-xs font-black transition-all cursor-pointer border shadow-md bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-300 hover:to-yellow-300 text-slate-950 border-amber-300 active:scale-95 disabled:opacity-40"
+                title="Super fast 2-3 second render: Burns text cues directly onto the video without waiting for video sync!"
+              >
+                <Sparkles className={`w-3.5 h-3.5 ${renderingTextOnly ? 'animate-spin' : ''}`} />
+                <span>{renderingTextOnly ? 'BURNING TEXT...' : '⚡ BURN TEXT TO VIDEO (FAST)'}</span>
+              </button>
+            )}
           </div>
         </div>
 
         {/* Real-time Render Progress Loading Bar */}
-        {rendering && (
+        {(rendering || renderingTextOnly) && (
           <div className="p-4 bg-gradient-to-r from-indigo-950/80 via-slate-900 to-purple-950/80 border-b border-indigo-500/30 space-y-2.5 animate-fadeIn">
             <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
               <div className="flex items-center space-x-2.5">

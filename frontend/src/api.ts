@@ -832,6 +832,40 @@ export const api = {
     throw new Error('Video rendering requires backend FFmpeg service');
   },
 
+  async renderBatchTextOnly(
+    batchId: number,
+    options?: {
+      audioSource?: 'master' | 'tight';
+      aspectRatio?: string;
+      fitMode?: string;
+      textAnimationStyle?: string;
+      textPosition?: string;
+      fontFamily?: string;
+      fontColor?: string;
+    }
+  ): Promise<{ status: string; master_video_path: string; master_video_duration: number; titles_burned: number }> {
+    if (await checkBackend()) {
+      const params = new URLSearchParams();
+      if (options?.audioSource) params.append('audio_source', options.audioSource);
+      if (options?.aspectRatio) params.append('aspect_ratio', options.aspectRatio);
+      if (options?.fitMode) params.append('fit_mode', options.fitMode);
+      if (options?.textAnimationStyle) params.append('text_animation_style', options.textAnimationStyle);
+      if (options?.textPosition) params.append('text_position', options.textPosition);
+      if (options?.fontFamily) params.append('font_family', options.fontFamily);
+      if (options?.fontColor) params.append('font_color', options.fontColor);
+      const query = params.toString() ? `?${params.toString()}` : '';
+      const res = await fetch(`${API_BASE}/batches/${batchId}/render-text-only${query}`, {
+        method: 'POST',
+      });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({ detail: 'Failed to render text overlay' }));
+        throw new Error(err.detail || 'Failed to render text overlay');
+      }
+      return res.json();
+    }
+    throw new Error('Video rendering requires backend FFmpeg service');
+  },
+
   async updateBatchVideoConfig(
     batchId: number,
     config: { aspectRatio?: string; fitMode?: string; aspect_ratio?: string; fit_mode?: string }
