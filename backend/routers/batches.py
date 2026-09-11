@@ -1103,6 +1103,8 @@ def render_batch_video(
     burn_on_screen_text: bool = Query(True, description="Whether to animate and burn on_screen_text into the video"),
     text_animation_style: str = Query("slide_down", description="Animation style: 'slide_down', 'slide_left', 'slide_right', 'typewriter', 'fade', 'slide_up'"),
     text_position: str = Query("top", description="Text position: 'top' or 'bottom'"),
+    font_family: str = Query("Impact", description="Font family: 'Impact', 'Arial Black', 'Montserrat'"),
+    font_color: str = Query("yellow", description="Font color: 'yellow', 'white', 'cyan'"),
     db: Session = Depends(get_db)
 ):
     """
@@ -1206,6 +1208,8 @@ def render_batch_video(
                     on_screen_text=p.on_screen_text if burn_on_screen_text else None,
                     text_animation_style=text_animation_style,
                     text_position=text_position,
+                    font_family=font_family,
+                    font_color=font_color,
                     ffmpeg_path=ffmpeg_path
                 )
                 p.synced_video_path = sync_res["video_path"]
@@ -1224,7 +1228,9 @@ def render_batch_video(
                     height=target_h,
                     on_screen_text=p.on_screen_text if burn_on_screen_text else None,
                     text_animation_style=text_animation_style,
-                    text_position=text_position
+                    text_position=text_position,
+                    font_family=font_family,
+                    font_color=font_color
                 )
                 p.synced_video_path = str(shot_out_mp4)
                 shot_video_paths.append(str(shot_out_mp4))

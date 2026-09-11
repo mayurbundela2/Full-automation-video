@@ -21,6 +21,8 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const [showOnScreenText, setShowOnScreenText] = useState<boolean>(true);
   const [textPosition, setTextPosition] = useState<'top' | 'bottom'>('top');
   const [textAnimationStyle, setTextAnimationStyle] = useState<'slide_down' | 'slide_left' | 'slide_right' | 'typewriter' | 'fade' | 'slide_up'>('slide_down');
+  const [fontFamily, setFontFamily] = useState<string>('Impact');
+  const [fontColor, setFontColor] = useState<string>('yellow');
   const [showBulkTextModal, setShowBulkTextModal] = useState<boolean>(false);
   const [currentPlaybackTime, setCurrentPlaybackTime] = useState<number>(0);
   const [scanning, setScanning] = useState<boolean>(false);
@@ -250,7 +252,9 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
         fitMode,
         burnOnScreenText: showOnScreenText,
         textAnimationStyle,
-        textPosition
+        textPosition,
+        fontFamily,
+        fontColor
       });
       setRenderProgress({
         status: 'COMPLETED',
@@ -720,6 +724,61 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                     BOTTOM
                   </button>
                 </div>
+
+                {/* Video Editor Font Selector */}
+                <div className="flex items-center space-x-1 bg-slate-900/90 border border-slate-800 rounded-lg p-0.5 text-xs">
+                  <span className="text-[10px] text-slate-400 px-1.5 font-mono uppercase">Font:</span>
+                  <select
+                    value={fontFamily}
+                    onChange={(e) => setFontFamily(e.target.value)}
+                    className="bg-transparent text-amber-300 font-bold text-xs focus:outline-none cursor-pointer pr-1 py-0.5"
+                  >
+                    <option value="Impact" className="bg-slate-900 text-slate-200">Impact (Editor Bold)</option>
+                    <option value="Anton" className="bg-slate-900 text-slate-200">Anton (Punchy Display)</option>
+                    <option value="Montserrat" className="bg-slate-900 text-slate-200">Montserrat (Heavy 900)</option>
+                  </select>
+                </div>
+
+                {/* Video Editor Color Selector */}
+                <div className="flex items-center space-x-1 bg-slate-900/90 border border-slate-800 rounded-lg p-0.5 text-xs">
+                  <span className="text-[10px] text-slate-400 px-1.5 font-mono uppercase">Color:</span>
+                  <button
+                    type="button"
+                    onClick={() => setFontColor('yellow')}
+                    className={`px-1.5 py-0.5 rounded text-[10px] font-black transition-all ${
+                      fontColor === 'yellow'
+                        ? 'bg-yellow-400 text-slate-950 shadow-sm'
+                        : 'text-yellow-400/70 hover:text-yellow-300'
+                    }`}
+                    title="Viral Creator Yellow (#FFE800)"
+                  >
+                    YELLOW
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setFontColor('white')}
+                    className={`px-1.5 py-0.5 rounded text-[10px] font-black transition-all ${
+                      fontColor === 'white'
+                        ? 'bg-white text-slate-950 shadow-sm'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                    title="Clean Editor White"
+                  >
+                    WHITE
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setFontColor('cyan')}
+                    className={`px-1.5 py-0.5 rounded text-[10px] font-black transition-all ${
+                      fontColor === 'cyan'
+                        ? 'bg-cyan-400 text-slate-950 shadow-sm'
+                        : 'text-cyan-400/70 hover:text-cyan-300'
+                    }`}
+                    title="Modern Tech Cyan"
+                  >
+                    CYAN
+                  </button>
+                </div>
               </>
             )}
 
@@ -792,25 +851,50 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                 src={api.getMasterVideoUrl(batch.id, audioSource, aspectRatio, fitMode, videoTimestamp)}
               />
 
-              {/* Real-time Animated On-Screen Text Overlay in Center Top / Bottom */}
+              {/* Real-time Animated On-Screen Text Overlay in Center Top / Bottom - Video Editor Typography */}
               {showOnScreenText && activeShotOnScreenText && (
                 <div 
-                  key={`${activeShotOnScreenText}-${textPosition}-${textAnimationStyle}`}
-                  className={`absolute left-1/2 -translate-x-1/2 z-20 pointer-events-none w-11/12 max-w-lg text-center transition-all duration-300 ${
-                    textPosition === 'top' ? 'top-6 sm:top-10' : 'bottom-6 sm:bottom-12'
+                  key={`${activeShotOnScreenText}-${textPosition}-${textAnimationStyle}-${fontFamily}-${fontColor}`}
+                  className={`absolute left-1/2 -translate-x-1/2 z-20 pointer-events-none w-11/12 max-w-2xl text-center transition-all duration-300 ${
+                    textPosition === 'top' ? 'top-2 sm:top-3.5' : 'bottom-4 sm:bottom-6'
                   }`}
                 >
-                  <div className={`inline-block px-4 py-2 sm:px-5 sm:py-2.5 bg-black/85 backdrop-blur-md rounded-xl border border-amber-500/40 shadow-2xl shadow-black/90 transform ${
+                  <div className={`inline-block px-2 py-0.5 bg-transparent border-0 shadow-none transform ${
                     textAnimationStyle === 'slide_left' ? 'anim-slide-left' :
                     textAnimationStyle === 'slide_right' ? 'anim-slide-right' :
                     textAnimationStyle === 'slide_down' ? 'anim-slide-down' :
                     textAnimationStyle === 'slide_up' ? 'anim-slide-up' :
                     textAnimationStyle === 'fade' ? 'anim-fade' : ''
                   }`}>
-                    <p className="text-xs sm:text-sm md:text-base font-black text-amber-300 tracking-wide uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] font-mono">
+                    <p 
+                      className={`text-sm sm:text-base md:text-xl lg:text-2xl uppercase tracking-wider select-none ${
+                        fontFamily === 'Anton' 
+                          ? "font-['Anton',_sans-serif]" 
+                          : fontFamily === 'Montserrat' 
+                            ? "font-['Montserrat',_sans-serif] font-black" 
+                            : "font-['Impact',_'Anton',_sans-serif]"
+                      } ${
+                        fontColor === 'white' 
+                          ? 'text-white' 
+                          : fontColor === 'cyan' 
+                            ? 'text-cyan-300' 
+                            : 'text-[#FFE800]'
+                      }`}
+                      style={{
+                        WebkitTextStroke: '2.5px #000000',
+                        paintOrder: 'stroke fill',
+                        filter: 'drop-shadow(0 3px 6px rgba(0,0,0,0.95)) drop-shadow(0 1px 2px rgba(0,0,0,1))'
+                      }}
+                    >
                       {displayedOnScreenText}
                       {textAnimationStyle === 'typewriter' && displayedOnScreenText.length < (activeShotOnScreenText?.length || 0) && (
-                        <span className="inline-block w-1.5 h-3.5 sm:h-4 bg-amber-400 ml-1 animate-pulse" />
+                        <span 
+                          className="inline-block w-1.5 h-4 sm:h-5 ml-1 align-middle animate-pulse"
+                          style={{
+                            backgroundColor: fontColor === 'white' ? '#FFFFFF' : fontColor === 'cyan' ? '#00F5FF' : '#FFE800',
+                            boxShadow: '0 0 4px #000000'
+                          }} 
+                        />
                       )}
                     </p>
                   </div>

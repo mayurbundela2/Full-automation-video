@@ -803,6 +803,8 @@ export const api = {
       burnOnScreenText?: boolean;
       textAnimationStyle?: string;
       textPosition?: string;
+      fontFamily?: string;
+      fontColor?: string;
     }
   ): Promise<{ status: string; master_video_path: string; duration: number }> {
     if (await checkBackend()) {
@@ -815,6 +817,8 @@ export const api = {
       if (options?.burnOnScreenText !== undefined) params.append('burn_on_screen_text', options.burnOnScreenText ? 'true' : 'false');
       if (options?.textAnimationStyle) params.append('text_animation_style', options.textAnimationStyle);
       if (options?.textPosition) params.append('text_position', options.textPosition);
+      if (options?.fontFamily) params.append('font_family', options.fontFamily);
+      if (options?.fontColor) params.append('font_color', options.fontColor);
       const query = params.toString() ? `?${params.toString()}` : '';
       const res = await fetch(`${API_BASE}/batches/${batchId}/render-video${query}`, {
         method: 'POST',

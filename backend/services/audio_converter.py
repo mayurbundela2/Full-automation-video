@@ -281,7 +281,9 @@ class AudioConverter:
         height: int = 1080,
         on_screen_text: Optional[str] = None,
         text_animation_style: str = "slide_down",
-        text_position: str = "top"
+        text_position: str = "top",
+        font_family: str = "Impact",
+        font_color: str = "yellow"
     ) -> Optional[str]:
         """
         Creates a clean timeline video with 320k AAC audio ready for CapCut and Premiere Pro import.
@@ -311,7 +313,9 @@ class AudioConverter:
                 input_label="",
                 output_label="",
                 position=text_position,
-                animation_style=text_animation_style
+                animation_style=text_animation_style,
+                font_family=font_family,
+                font_color=font_color
             )
             clean_filter = anim_filter.strip("[], ")
             if clean_filter and clean_filter != "null":

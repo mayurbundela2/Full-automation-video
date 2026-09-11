@@ -228,121 +228,106 @@ class VideoService:
         input_label: str = "[v]",
         output_label: str = "[vout]",
         position: str = "top",
-        animation_style: str = "slide_down"
+        animation_style: str = "slide_down",
+        font_family: str = "Impact",
+        font_color: str = "yellow"
     ) -> Tuple[str, Optional[Path]]:
         """
-        Creates an FFmpeg filter (drawtext or ASS subtitles) that animates on-screen text:
-        - Positions: 'top' (center top, default) or 'bottom' (center bottom)
-        - Animation Styles:
-          * 'slide_down': Enters from top dropping down to position (default for top)
-          * 'slide_left': Enters smoothly from left of screen to center
-          * 'slide_right': Enters smoothly from right of screen to center
-          * 'typewriter': Types out letter-by-letter in real-time
-          * 'fade': Pure cinematic fade-in and fade-out
-          * 'slide_up': Enters from below sliding up to position
+        Creates an FFmpeg filter using ASS subtitles for professional video editor styling:
+        - Bold display font (Impact / Arial Black)
+        - Crisp 4px black text stroke outline & drop shadow, without any dark background box
+        - Position pushed higher up towards top of video
+        - Real-time animations: slide_down, slide_left, slide_right, typewriter, fade, slide_up
         """
         clean_text = (text or "").strip()
         if not clean_text:
             return f"{input_label}null{output_label}", None
 
         is_vertical = target_height > target_width
-        fontsize = max(24, int(min(target_width, target_height) * (0.045 if is_vertical else 0.042)))
         dur = max(0.8, duration)
-        fade_in = min(0.35, dur * 0.25)
-        fade_out = min(0.35, dur * 0.25)
+        fade_in_ms = int(min(0.35, dur * 0.25) * 1000)
+        fade_out_ms = int(min(0.25, dur * 0.20) * 1000)
 
+        # Position higher up towards top of video: ~2.2% - 3.2% from top edge
         is_top = (position or "top").lower() != "bottom"
         if is_top:
-            margin_y = int(target_height * (0.09 if is_vertical else 0.07))
-            base_y = f"{margin_y}"
+            margin_y = int(target_height * (0.032 if is_vertical else 0.022))
             ass_alignment = 8  # Top Center
+            top_y = margin_y + 20
         else:
-            margin_y = int(target_height * (0.10 if is_vertical else 0.075))
-            base_y = f"(h-text_h-{margin_y})"
+            margin_y = int(target_height * (0.06 if is_vertical else 0.045))
             ass_alignment = 2  # Bottom Center
+            top_y = target_height - margin_y - 20
 
+        # Video editor typography (Impact / Anton / Montserrat / Arial Black)
+        fontsize = max(30, int(min(target_width, target_height) * (0.056 if is_vertical else 0.050)))
+        font = font_family.strip() if font_family and font_family.strip() else "Impact"
+
+        # Color: Vibrant Yellow (&H0000E8FF in BGR) or White (&H00FFFFFF)
+        col = (font_color or "yellow").lower()
+        if "white" in col:
+            primary_color = "&H00FFFFFF"
+        elif "cyan" in col:
+            primary_color = "&H00F0FF00"
+        else:
+            primary_color = "&H0000E8FF"  # Iconic video editor yellow
+
+        cx = target_width // 2
         anim = (animation_style or "slide_down").lower().strip()
+        ass_file = temp_dir / f"anim_title_{abs(hash(clean_text + anim + font + position)) % 10000000}.ass"
+
+        def fmt_time(sec: float) -> str:
+            h = int(sec // 3600)
+            m = int((sec % 3600) // 60)
+            s = sec % 60
+            return f"{h}:{m:02d}:{s:05.2f}"
+
+        ass_header = (
+            "[Script Info]\n"
+            "ScriptType: v4.00+\n"
+            f"PlayResX: {target_width}\n"
+            f"PlayResY: {target_height}\n\n"
+            "[V4+ Styles]\n"
+            "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
+            f"Style: VideoTitle,{font},{fontsize},{primary_color},&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,1,0,1,4,2,{ass_alignment},20,20,{margin_y},1\n\n"
+            "[Events]\n"
+            "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"
+        )
+
+        safe_text = clean_text.replace(r"\N", " ").replace("\n", " ").replace('"', '').strip()
 
         if anim == "typewriter":
-            # Real-time letter-by-letter typewriter via dynamic ASS subtitles
-            ass_file = temp_dir / f"anim_type_{abs(hash(clean_text)) % 10000000}.ass"
-            typing_dur = min(1.8, dur * 0.65)
-            n_chars = len(clean_text)
-
-            def format_ass_time(sec: float) -> str:
-                h = int(sec // 3600)
-                m = int((sec % 3600) // 60)
-                s = sec % 60
-                return f"{h}:{m:02d}:{s:05.2f}"
-
-            events = []
+            typing_dur = min(1.6, dur * 0.65)
+            n_chars = len(safe_text)
             step = typing_dur / max(1, n_chars)
+            events = []
             for i in range(1, n_chars + 1):
                 t_start = (i - 1) * step
                 t_end = i * step if i < n_chars else dur
-                sub_text = clean_text[:i].replace(r"\N", " ").replace("\n", " ")
-                events.append(f"Dialogue: 0,{format_ass_time(t_start)},{format_ass_time(t_end)},OnScreenStyle,,0,0,0,,{sub_text}")
-
-            ass_content = (
-                "[Script Info]\n"
-                "ScriptType: v4.00+\n"
-                f"PlayResX: {target_width}\n"
-                f"PlayResY: {target_height}\n\n"
-                "[V4+ Styles]\n"
-                "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
-                f"Style: OnScreenStyle,Arial,{fontsize},&H00FFFFFF,&H000000FF,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,3,14,0,{ass_alignment},40,40,{margin_y},1\n\n"
-                "[Events]\n"
-                "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"
-                + "\n".join(events) + "\n"
-            )
-            ass_file.write_text(ass_content, encoding="utf-8")
-            clean_ass_path = ass_file.resolve().as_posix().replace(":", r"\:")
-            filter_str = f"{input_label}subtitles='{clean_ass_path}'{output_label}"
-            return filter_str, ass_file
-
-        # Drawtext motion filters
-        txt_file = temp_dir / f"anim_text_{abs(hash(clean_text)) % 10000000}.txt"
-        txt_file.write_text(clean_text, encoding="utf-8")
-        clean_txt_path = txt_file.resolve().as_posix().replace(":", r"\:")
-
-        alpha_expr = f"if(lt(t,{fade_in:.2f}), t/{fade_in:.2f}, if(gt(t,{dur-fade_out:.2f}), ({dur:.2f}-t)/{fade_out:.2f}, 1))"
-
-        if anim == "slide_left":
-            # Smooth entrance from left side of screen
-            x_expr = f"((w-text_w)/2 - if(lt(t,{fade_in:.2f}), (w/2)*(1-t/{fade_in:.2f}), 0))"
-            y_expr = base_y
+                sub = safe_text[:i]
+                events.append(f"Dialogue: 0,{fmt_time(t_start)},{fmt_time(t_end)},VideoTitle,,0,0,0,{{\\pos({cx},{top_y})}},{sub}")
+            ass_content = ass_header + "\n".join(events) + "\n"
+        elif anim == "slide_left":
+            override = f"{{\\move({cx - 320},{top_y},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+            ass_content = ass_header + f"Dialogue: 0,0:00:00.00,{fmt_time(dur)},VideoTitle,,0,0,0,,{override}{safe_text}\n"
         elif anim == "slide_right":
-            # Smooth entrance from right side of screen
-            x_expr = f"((w-text_w)/2 + if(lt(t,{fade_in:.2f}), (w/2)*(1-t/{fade_in:.2f}), 0))"
-            y_expr = base_y
+            override = f"{{\\move({cx + 320},{top_y},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+            ass_content = ass_header + f"Dialogue: 0,0:00:00.00,{fmt_time(dur)},VideoTitle,,0,0,0,,{override}{safe_text}\n"
         elif anim == "slide_up":
-            # Slide upwards to position
-            y_offset = max(20, int(target_height * 0.04))
-            x_expr = "(w-text_w)/2"
-            y_expr = f"({base_y} + if(lt(t,{fade_in:.2f}), {y_offset}*(1-t/{fade_in:.2f}), 0))"
+            override = f"{{\\move({cx},{top_y + 45},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+            ass_content = ass_header + f"Dialogue: 0,0:00:00.00,{fmt_time(dur)},VideoTitle,,0,0,0,,{override}{safe_text}\n"
         elif anim == "fade":
-            # Pure cinematic fade
-            x_expr = "(w-text_w)/2"
-            y_expr = base_y
-        else:  # "slide_down"
-            # Slide downwards from top
-            y_offset = max(20, int(target_height * 0.04))
-            x_expr = "(w-text_w)/2"
-            y_expr = f"({base_y} - if(lt(t,{fade_in:.2f}), {y_offset}*(1-t/{fade_in:.2f}), 0))"
+            override = f"{{\\pos({cx},{top_y})\\fad({fade_in_ms},{fade_out_ms})}}"
+            ass_content = ass_header + f"Dialogue: 0,0:00:00.00,{fmt_time(dur)},VideoTitle,,0,0,0,,{override}{safe_text}\n"
+        else:  # slide_down
+            start_y = -35 if is_top else top_y - 45
+            override = f"{{\\move({cx},{start_y},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+            ass_content = ass_header + f"Dialogue: 0,0:00:00.00,{fmt_time(dur)},VideoTitle,,0,0,0,,{override}{safe_text}\n"
 
-        filter_str = (
-            f"{input_label}drawtext="
-            f"textfile='{clean_txt_path}':"
-            f"fontcolor=white:"
-            f"fontsize={fontsize}:"
-            f"borderw=2:bordercolor=black@0.8:"
-            f"box=1:boxcolor=black@0.65:boxborderw=16:"
-            f"x='{x_expr}':"
-            f"y='{y_expr}':"
-            f"alpha='{alpha_expr}'"
-            f"{output_label}"
-        )
-        return filter_str, txt_file
+        ass_file.write_text(ass_content, encoding="utf-8")
+        clean_ass_path = ass_file.resolve().as_posix().replace(":", r"\:")
+        filter_str = f"{input_label}subtitles='{clean_ass_path}'{output_label}"
+        return filter_str, ass_file
 
     @classmethod
     def sync_media_to_audio(
@@ -359,6 +344,8 @@ class VideoService:
         on_screen_text: Optional[str] = None,
         text_animation_style: str = "slide_down",
         text_position: str = "top",
+        font_family: str = "Impact",
+        font_color: str = "yellow",
         ffmpeg_path: str = "ffmpeg"
     ) -> Dict[str, Any]:
         """
@@ -366,7 +353,7 @@ class VideoService:
         - Video: Adjusts speed with setpts=(target_duration / orig_duration)*PTS.
         - Image: Loops static frame for target_duration.
         - Scales & fits video according to fit_mode ('crop', 'fit', or 'blur_pad').
-        - Overlays animated on_screen_text with selected style (slide_down, slide_left, slide_right, typewriter, fade, slide_up) and position (top or bottom).
+        - Overlays animated on_screen_text with selected style (slide_down, slide_left, slide_right, typewriter, fade, slide_up), font, color, and position (top or bottom).
         """
         m_path = Path(media_path)
         a_path = Path(audio_path)
@@ -402,7 +389,8 @@ class VideoService:
                     scale_filter = cls.build_video_scale_filter("[__timed]", "[__scaled]", target_width, target_height, fit_mode)
                     text_filter, temp_txt_file = cls.build_animated_text_filter(
                         on_screen_text, target_width, target_height, target_duration, out_v_path.parent, "[__scaled]", "[v]",
-                        position=text_position, animation_style=text_animation_style
+                        position=text_position, animation_style=text_animation_style,
+                        font_family=font_family, font_color=font_color
                     )
                     v_chain = f"[0:v]setpts={speed_ratio}*PTS[__timed];{scale_filter};{text_filter}"
                 else:
@@ -451,7 +439,8 @@ class VideoService:
                     scale_filter = cls.build_video_scale_filter("[0:v]", "[__scaled]", target_width, target_height, fit_mode)
                     text_filter, temp_txt_file = cls.build_animated_text_filter(
                         on_screen_text, target_width, target_height, target_duration, out_v_path.parent, "[__scaled]", "[v]",
-                        position=text_position, animation_style=text_animation_style
+                        position=text_position, animation_style=text_animation_style,
+                        font_family=font_family, font_color=font_color
                     )
                     filter_complex = f"{scale_filter};{text_filter}"
                 else:
