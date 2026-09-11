@@ -279,7 +279,9 @@ class AudioConverter:
         ffmpeg_path: str = "ffmpeg",
         width: int = 1920,
         height: int = 1080,
-        on_screen_text: Optional[str] = None
+        on_screen_text: Optional[str] = None,
+        text_animation_style: str = "slide_down",
+        text_position: str = "top"
     ) -> Optional[str]:
         """
         Creates a clean timeline video with 320k AAC audio ready for CapCut and Premiere Pro import.
@@ -297,30 +299,23 @@ class AudioConverter:
         vf_args = []
 
         if clean_text:
-            temp_txt = out_mp4.parent / f"ph_text_{abs(hash(clean_text)) % 1000000}.txt"
-            temp_txt.write_text(clean_text, encoding="utf-8")
-            clean_txt_path = temp_txt.resolve().as_posix().replace(":", r"\:")
-
-            is_vertical = h > w
-            fontsize = max(24, int(min(w, h) * (0.045 if is_vertical else 0.042)))
-            margin_b = int(h * (0.10 if is_vertical else 0.075))
-            y_offset = max(15, int(h * 0.02))
-
-            y_expr = f"(h-text_h-{margin_b} + if(lt(t,0.35), {y_offset}*(1-t/0.35), 0))"
-            alpha_expr = "if(lt(t,0.35), t/0.35, 1)"
-
-            drawtext_str = (
-                f"drawtext="
-                f"textfile='{clean_txt_path}':"
-                f"fontcolor=white:"
-                f"fontsize={fontsize}:"
-                f"borderw=2:bordercolor=black@0.8:"
-                f"box=1:boxcolor=black@0.65:boxborderw=16:"
-                f"x=(w-text_w)/2:"
-                f"y='{y_expr}':"
-                f"alpha='{alpha_expr}'"
+            from backend.services.video_service import VideoService
+            dur_info = cls.get_audio_info(str(in_audio))
+            dur = max(0.8, dur_info.get("duration", 3.0))
+            anim_filter, temp_txt = VideoService.build_animated_text_filter(
+                text=clean_text,
+                target_width=w,
+                target_height=h,
+                duration=dur,
+                temp_dir=out_mp4.parent,
+                input_label="",
+                output_label="",
+                position=text_position,
+                animation_style=text_animation_style
             )
-            vf_args = ["-vf", drawtext_str]
+            clean_filter = anim_filter.strip("[], ")
+            if clean_filter and clean_filter != "null":
+                vf_args = ["-vf", clean_filter]
 
         cmd_mp4 = [
             ffmpeg_bin, "-y",

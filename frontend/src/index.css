@@ -35,3 +35,49 @@
 .studio-glow {
   box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.2);
 }
+
+@keyframes slideInLeft {
+  0% { transform: translate(-80px, 0); opacity: 0; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  0% { transform: translate(80px, 0); opacity: 0; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
+@keyframes slideInDown {
+  0% { transform: translate(0, -40px); opacity: 0; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+  0% { transform: translate(0, 40px); opacity: 0; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.anim-slide-left {
+  animation: slideInLeft 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-slide-right {
+  animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-slide-down {
+  animation: slideInDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-slide-up {
+  animation: slideInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-fade {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+

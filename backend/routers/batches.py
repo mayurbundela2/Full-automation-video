@@ -1101,6 +1101,8 @@ def render_batch_video(
     aspect_ratio: Optional[str] = Query(None, description="Target aspect ratio: '16:9', '9:16', '1:1', '4:5', '4:3', '21:9'"),
     fit_mode: Optional[str] = Query(None, description="Video fit mode: 'crop', 'fit', or 'blur_pad'"),
     burn_on_screen_text: bool = Query(True, description="Whether to animate and burn on_screen_text into the video"),
+    text_animation_style: str = Query("slide_down", description="Animation style: 'slide_down', 'slide_left', 'slide_right', 'typewriter', 'fade', 'slide_up'"),
+    text_position: str = Query("top", description="Text position: 'top' or 'bottom'"),
     db: Session = Depends(get_db)
 ):
     """
@@ -1202,6 +1204,8 @@ def render_batch_video(
                     target_height=target_h,
                     fit_mode=effective_fit,
                     on_screen_text=p.on_screen_text if burn_on_screen_text else None,
+                    text_animation_style=text_animation_style,
+                    text_position=text_position,
                     ffmpeg_path=ffmpeg_path
                 )
                 p.synced_video_path = sync_res["video_path"]
@@ -1218,7 +1222,9 @@ def render_batch_video(
                     ffmpeg_path=ffmpeg_path,
                     width=target_w,
                     height=target_h,
-                    on_screen_text=p.on_screen_text if burn_on_screen_text else None
+                    on_screen_text=p.on_screen_text if burn_on_screen_text else None,
+                    text_animation_style=text_animation_style,
+                    text_position=text_position
                 )
                 p.synced_video_path = str(shot_out_mp4)
                 shot_video_paths.append(str(shot_out_mp4))

@@ -19,6 +19,8 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const [aspectRatio, setAspectRatio] = useState<string>(batch.aspect_ratio || '16:9');
   const [fitMode, setFitMode] = useState<string>(batch.fit_mode || 'crop');
   const [showOnScreenText, setShowOnScreenText] = useState<boolean>(true);
+  const [textPosition, setTextPosition] = useState<'top' | 'bottom'>('top');
+  const [textAnimationStyle, setTextAnimationStyle] = useState<'slide_down' | 'slide_left' | 'slide_right' | 'typewriter' | 'fade' | 'slide_up'>('slide_down');
   const [showBulkTextModal, setShowBulkTextModal] = useState<boolean>(false);
   const [currentPlaybackTime, setCurrentPlaybackTime] = useState<number>(0);
   const [scanning, setScanning] = useState<boolean>(false);
@@ -94,8 +96,8 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
     paragraphs.some(p => p.latest_generation?.tight_duration)
   );
 
-  // Find currently active paragraph's on-screen text based on playback time
-  const activeShotOnScreenText = useMemo(() => {
+  // Find currently active paragraph's on-screen text & elapsed time within shot
+  const activeShotDetails = useMemo(() => {
     if (!paragraphs.length) return null;
     let accumulated = 0;
     for (const p of paragraphs) {
@@ -103,12 +105,30 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
         ? (p.latest_generation?.tight_duration || p.latest_generation?.duration || 2.5)
         : (p.latest_generation?.duration || 2.5);
       if (currentPlaybackTime >= accumulated && currentPlaybackTime < accumulated + shotDur) {
-        return p.on_screen_text?.trim() || null;
+        return {
+          text: p.on_screen_text?.trim() || null,
+          shotElapsed: currentPlaybackTime - accumulated,
+          shotDur
+        };
       }
       accumulated += shotDur;
     }
     return null;
   }, [paragraphs, currentPlaybackTime, audioSource]);
+
+  const activeShotOnScreenText = activeShotDetails?.text || null;
+
+  // Real-time typewriter progress calculation
+  const displayedOnScreenText = useMemo(() => {
+    if (!activeShotDetails?.text) return '';
+    if (textAnimationStyle !== 'typewriter') return activeShotDetails.text;
+
+    const full = activeShotDetails.text;
+    const typingDur = Math.min(1.8, activeShotDetails.shotDur * 0.65);
+    const progress = Math.min(1, Math.max(0, activeShotDetails.shotElapsed / typingDur));
+    const charsToShow = Math.max(1, Math.ceil(progress * full.length));
+    return full.slice(0, charsToShow);
+  }, [activeShotDetails, textAnimationStyle]);
 
   const activeVideoPath = audioSource === 'tight'
     ? batch.tight_mp4_path
@@ -228,7 +248,9 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
         audioSource,
         aspectRatio,
         fitMode,
-        burnOnScreenText: showOnScreenText
+        burnOnScreenText: showOnScreenText,
+        textAnimationStyle,
+        textPosition
       });
       setRenderProgress({
         status: 'COMPLETED',
@@ -637,8 +659,8 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
             </div>
           </div>
 
-          {/* On-Screen Text Animation Toggle & Bulk Paste by Serial No */}
-          <div className="flex items-center space-x-2">
+          {/* On-Screen Text Animation Controls: Toggle, Style, Position, & Bulk Paste */}
+          <div className="flex flex-wrap items-center gap-2">
             <button
               type="button"
               onClick={() => setShowOnScreenText(!showOnScreenText)}
@@ -652,6 +674,54 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
               <Type className={`w-3.5 h-3.5 ${showOnScreenText ? 'text-amber-400' : 'text-slate-500'}`} />
               <span>TEXT ANIMATION: {showOnScreenText ? 'ON' : 'OFF'}</span>
             </button>
+
+            {showOnScreenText && (
+              <>
+                {/* Animation Style Selector */}
+                <div className="flex items-center space-x-1 bg-slate-900/90 border border-slate-800 rounded-lg p-0.5 text-xs">
+                  <span className="text-[10px] text-slate-400 px-1.5 font-mono uppercase">Style:</span>
+                  <select
+                    value={textAnimationStyle}
+                    onChange={(e: any) => setTextAnimationStyle(e.target.value)}
+                    className="bg-transparent text-amber-300 font-bold text-xs focus:outline-none cursor-pointer pr-2 py-0.5"
+                  >
+                    <option value="slide_down" className="bg-slate-900 text-slate-200">Slide Down (Top)</option>
+                    <option value="slide_left" className="bg-slate-900 text-slate-200">Slide Left ➔ Center</option>
+                    <option value="slide_right" className="bg-slate-900 text-slate-200">Slide Right ➔ Center</option>
+                    <option value="typewriter" className="bg-slate-900 text-slate-200">Typewriter ⌨️</option>
+                    <option value="fade" className="bg-slate-900 text-slate-200">Cinematic Fade</option>
+                    <option value="slide_up" className="bg-slate-900 text-slate-200">Slide Up</option>
+                  </select>
+                </div>
+
+                {/* Position Selector */}
+                <div className="flex items-center space-x-1 bg-slate-900/90 border border-slate-800 rounded-lg p-0.5 text-xs">
+                  <span className="text-[10px] text-slate-400 px-1.5 font-mono uppercase">Pos:</span>
+                  <button
+                    type="button"
+                    onClick={() => setTextPosition('top')}
+                    className={`px-2 py-0.5 rounded text-[11px] font-bold transition-all ${
+                      textPosition === 'top'
+                        ? 'bg-amber-500/30 text-amber-300 border border-amber-500/40'
+                        : 'text-slate-400 hover:text-slate-200'
+                    }`}
+                  >
+                    TOP
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setTextPosition('bottom')}
+                    className={`px-2 py-0.5 rounded text-[11px] font-bold transition-all ${
+                      textPosition === 'bottom'
+                        ? 'bg-amber-500/30 text-amber-300 border border-amber-500/40'
+                        : 'text-slate-400 hover:text-slate-200'
+                    }`}
+                  >
+                    BOTTOM
+                  </button>
+                </div>
+              </>
+            )}
 
             <button
               type="button"
@@ -722,15 +792,26 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                 src={api.getMasterVideoUrl(batch.id, audioSource, aspectRatio, fitMode, videoTimestamp)}
               />
 
-              {/* Real-time Animated On-Screen Text Overlay in Center Bottom */}
+              {/* Real-time Animated On-Screen Text Overlay in Center Top / Bottom */}
               {showOnScreenText && activeShotOnScreenText && (
                 <div 
-                  key={activeShotOnScreenText}
-                  className="absolute bottom-6 sm:bottom-12 left-1/2 -translate-x-1/2 z-20 pointer-events-none w-11/12 max-w-lg text-center animate-fadeIn transition-all duration-300"
+                  key={`${activeShotOnScreenText}-${textPosition}-${textAnimationStyle}`}
+                  className={`absolute left-1/2 -translate-x-1/2 z-20 pointer-events-none w-11/12 max-w-lg text-center transition-all duration-300 ${
+                    textPosition === 'top' ? 'top-6 sm:top-10' : 'bottom-6 sm:bottom-12'
+                  }`}
                 >
-                  <div className="inline-block px-4 py-2 sm:px-5 sm:py-2.5 bg-black/85 backdrop-blur-md rounded-xl border border-amber-500/40 shadow-2xl shadow-black/90 transform transition-all duration-300">
-                    <p className="text-xs sm:text-sm md:text-base font-black text-amber-300 tracking-wide uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
-                      {activeShotOnScreenText}
+                  <div className={`inline-block px-4 py-2 sm:px-5 sm:py-2.5 bg-black/85 backdrop-blur-md rounded-xl border border-amber-500/40 shadow-2xl shadow-black/90 transform ${
+                    textAnimationStyle === 'slide_left' ? 'anim-slide-left' :
+                    textAnimationStyle === 'slide_right' ? 'anim-slide-right' :
+                    textAnimationStyle === 'slide_down' ? 'anim-slide-down' :
+                    textAnimationStyle === 'slide_up' ? 'anim-slide-up' :
+                    textAnimationStyle === 'fade' ? 'anim-fade' : ''
+                  }`}>
+                    <p className="text-xs sm:text-sm md:text-base font-black text-amber-300 tracking-wide uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] font-mono">
+                      {displayedOnScreenText}
+                      {textAnimationStyle === 'typewriter' && displayedOnScreenText.length < (activeShotOnScreenText?.length || 0) && (
+                        <span className="inline-block w-1.5 h-3.5 sm:h-4 bg-amber-400 ml-1 animate-pulse" />
+                      )}
                     </p>
                   </div>
                 </div>
