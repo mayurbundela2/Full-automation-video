@@ -891,4 +891,23 @@ export const api = {
   getParagraphThumbnailUrl(paragraphId: number): string {
     return `${API_BASE}/paragraphs/${paragraphId}/thumbnail`;
   },
+
+  async bulkUpdateOnScreenText(
+    batchId: number,
+    data: { raw_text?: string; items?: { serial_number: number; text: string }[] }
+  ): Promise<{ status: string; updated_count: number; total_parsed: number; matches: any[] }> {
+    if (await checkBackend()) {
+      const res = await fetch(`${API_BASE}/batches/${batchId}/bulk-on-screen-text`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({ detail: 'Failed to bulk update on-screen text' }));
+        throw new Error(err.detail || 'Failed to bulk update on-screen text');
+      }
+      return res.json();
+    }
+    return { status: 'ok', updated_count: 0, total_parsed: 0, matches: [] };
+  },
 };

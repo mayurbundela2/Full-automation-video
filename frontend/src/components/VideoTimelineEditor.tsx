@@ -3,10 +3,11 @@ import {
   Film, Video, Play, Pause, RefreshCw, Download, FolderOpen, 
   CheckCircle2, AlertCircle, Sparkles, Clock, Gauge, Image, FileVideo, 
   ChevronDown, ChevronUp, Layers, Scissors, Music, Volume2, Maximize2, Upload,
-  Smartphone, Monitor, Square, Sliders, Type
+  Smartphone, Monitor, Square, Sliders, Type, ListOrdered
 } from 'lucide-react';
 import { Batch, Paragraph, ScanMediaResponse } from '../types';
 import { api } from '../api';
+import { BulkTextBySerialModal } from './BulkTextBySerialModal';
 
 interface VideoTimelineEditorProps {
   batch: Batch;
@@ -18,6 +19,7 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const [aspectRatio, setAspectRatio] = useState<string>(batch.aspect_ratio || '16:9');
   const [fitMode, setFitMode] = useState<string>(batch.fit_mode || 'crop');
   const [showOnScreenText, setShowOnScreenText] = useState<boolean>(true);
+  const [showBulkTextModal, setShowBulkTextModal] = useState<boolean>(false);
   const [currentPlaybackTime, setCurrentPlaybackTime] = useState<number>(0);
   const [scanning, setScanning] = useState<boolean>(false);
   const [scanResult, setScanResult] = useState<ScanMediaResponse | null>(null);
@@ -635,7 +637,7 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
             </div>
           </div>
 
-          {/* On-Screen Text Animation Toggle */}
+          {/* On-Screen Text Animation Toggle & Bulk Paste by Serial No */}
           <div className="flex items-center space-x-2">
             <button
               type="button"
@@ -649,6 +651,16 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
             >
               <Type className={`w-3.5 h-3.5 ${showOnScreenText ? 'text-amber-400' : 'text-slate-500'}`} />
               <span>TEXT ANIMATION: {showOnScreenText ? 'ON' : 'OFF'}</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setShowBulkTextModal(true)}
+              className="flex items-center space-x-1.5 px-3 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer border shadow-sm bg-slate-900/80 text-amber-300 border-amber-500/30 hover:bg-amber-500/20 hover:border-amber-500/50"
+              title="Bulk extract and assign on-screen text by serial number (e.g. 1. text, 2. text)"
+            >
+              <ListOrdered className="w-3.5 h-3.5 text-amber-400" />
+              <span>PASTE BY SERIAL NO</span>
             </button>
           </div>
         </div>
@@ -1069,6 +1081,15 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
           </div>
         </div>
       )}
+
+      {/* Bulk Paste On-Screen Text by Serial Number Modal */}
+      <BulkTextBySerialModal
+        batchId={batch.id}
+        paragraphs={paragraphs}
+        isOpen={showBulkTextModal}
+        onClose={() => setShowBulkTextModal(false)}
+        onSuccess={() => onUpdated()}
+      />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import subprocess
 import time
+import re
 from pathlib import Path
 import os
 from typing import List, Dict, Any, Optional, Tuple
@@ -12,7 +13,7 @@ from backend.schemas import (
     BatchCreate, BatchResponse, ParseReferenceRequest,
     ParseReferenceResponse, ParagraphResponse,
     ScanMediaRequest, ScanMediaResponse, MediaMatchItem, AssignMediaRequest,
-    VideoConfigUpdateRequest
+    VideoConfigUpdateRequest, BulkOnScreenTextInput
 )
 from backend.services.video_service import VideoService
 from backend.services.reference_parser import ReferenceParser
@@ -1469,3 +1470,95 @@ def get_paragraph_thumbnail(para_id: int, db: Session = Depends(get_db)):
     media_type = "image/png" if ext == ".png" else "image/jpeg"
     from fastapi import Response
     return Response(content=content, media_type=media_type)
+
+
+def parse_numbered_text_list(raw_text: str) -> Dict[int, str]:
+    """
+    Parses a numbered list into a dictionary of {serial_number: text}.
+    Handles any common format:
+    - 1. text
+    - 1: text
+    - 1 - text
+    - 1) text
+    - Shot 1: text
+    - Paragraph 1: text
+    - Part 1: text
+    - S.No 1: text
+    - [1] text
+    - 1\ttext (tab-separated e.g. from Excel / Sheets)
+    """
+    results: Dict[int, str] = {}
+    lines = (raw_text or "").strip().split("\n")
+    current_num = None
+
+    line_pattern = re.compile(
+        r'^\s*(?:(?:Shot|Paragraph|Part|Scene|Item|S\.?\s*No\.?|Sr\.?\s*No\.?|No\.?)\s*)?'
+        r'\[?(\d+)\]?\s*[:.)\t—–-]\s*(.*)$',
+        re.IGNORECASE
+    )
+
+    for line in lines:
+        line_clean = line.strip()
+        if not line_clean:
+            continue
+        m = line_pattern.match(line_clean)
+        if m:
+            num = int(m.group(1))
+            val = m.group(2).strip().strip('"\'')
+            results[num] = val
+            current_num = num
+        elif current_num is not None and not line_clean.startswith(('---', '===', '###')):
+            # Append multi-line continuation
+            results[current_num] += " " + line_clean.strip('"\'')
+
+    return results
+
+
+@router.post("/api/batches/{batch_id}/bulk-on-screen-text")
+def bulk_update_on_screen_text(
+    batch_id: int,
+    data: BulkOnScreenTextInput,
+    db: Session = Depends(get_db)
+):
+    """
+    Directly extracts and assigns on-screen text to paragraphs/shots by serial number.
+    Accepts either raw pasted numbered text or structured items list.
+    """
+    batch = db.query(Batch).filter(Batch.id == batch_id).first()
+    if not batch:
+        raise HTTPException(status_code=404, detail="Batch not found")
+
+    serial_to_text: Dict[int, str] = {}
+    if data.items:
+        for item in data.items:
+            serial_to_text[item.serial_number] = item.text.strip()
+    elif data.raw_text:
+        serial_to_text = parse_numbered_text_list(data.raw_text)
+
+    if not serial_to_text:
+        raise HTTPException(status_code=400, detail="No valid numbered items found in input.")
+
+    paragraphs = db.query(Paragraph).filter(Paragraph.batch_id == batch_id).all()
+    para_by_number = {p.paragraph_number: p for p in paragraphs}
+
+    updated_count = 0
+    matched_results = []
+    for s_no, text in serial_to_text.items():
+        if s_no in para_by_number:
+            p = para_by_number[s_no]
+            p.on_screen_text = text
+            updated_count += 1
+            matched_results.append({
+                "paragraph_id": p.id,
+                "paragraph_number": p.paragraph_number,
+                "on_screen_text": text
+            })
+
+    db.commit()
+    return {
+        "status": "ok",
+        "updated_count": updated_count,
+        "total_parsed": len(serial_to_text),
+        "matches": matched_results
+    }
+

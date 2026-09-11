@@ -219,6 +219,16 @@ class AssignMediaRequest(BaseModel):
     file_path: str
 
 
+class BulkOnScreenTextItem(BaseModel):
+    serial_number: int
+    text: str
+
+
+class BulkOnScreenTextInput(BaseModel):
+    raw_text: Optional[str] = None
+    items: Optional[List[BulkOnScreenTextItem]] = None
+
+
 # --- Generation Schemas ---
 class PromptPreviewResponse(BaseModel):
     paragraph_id: int
