@@ -178,6 +178,8 @@ class BatchResponse(BaseModel):
     media_folder: Optional[str] = None
     master_video_path: Optional[str] = None
     master_video_duration: Optional[float] = None
+    tight_mp4_path: Optional[str] = None
+    tight_video_duration: Optional[float] = None
 
 
 # --- Video Media Schemas ---

@@ -25,6 +25,9 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const [videoTimestamp, setVideoTimestamp] = useState<number>(Date.now());
   const [videoVolume, setVideoVolume] = useState<number>(1.0);
   const [narrationVolume, setNarrationVolume] = useState<number>(1.0);
+  const [audioSource, setAudioSource] = useState<'master' | 'tight'>(
+    (batch.tight_mp4_path || batch.tight_audio?.duration) ? 'tight' : 'master'
+  );
   const [renderProgress, setRenderProgress] = useState<{
     status: string;
     percentage: number;
@@ -50,6 +53,19 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const hasAudio = paragraphs.some(p => p.audio_path || p.latest_generation);
   const matchedMediaCount = paragraphs.filter(p => p.media_path).length;
   const syncedVideoCount = paragraphs.filter(p => p.synced_video_path).length;
+
+  const hasTightAudio = !!(
+    batch.tight_audio?.duration || 
+    paragraphs.some(p => p.latest_generation?.tight_duration)
+  );
+
+  const activeVideoPath = audioSource === 'tight'
+    ? (batch.tight_mp4_path || batch.tight_audio?.mp4_path)
+    : batch.master_video_path;
+
+  const activeVideoDuration = audioSource === 'tight'
+    ? (batch.tight_video_duration || batch.tight_audio?.duration)
+    : batch.master_video_duration;
 
   const handleBrowseFolder = async () => {
     setIsBrowsing(true);
@@ -141,7 +157,7 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
       percentage: 5,
       current_shot: 0,
       total_shots: paragraphs.length,
-      current_step: 'Preparing video assets and timeline...',
+      current_step: `Preparing video assets for ${audioSource === 'tight' ? 'Tight / Trimmed' : 'Master'} timeline...`,
       elapsed_seconds: 0
     });
 
@@ -155,19 +171,19 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
     }, 350);
 
     try {
-      await api.renderBatchVideo(batch.id, { videoVolume, narrationVolume });
+      await api.renderBatchVideo(batch.id, { videoVolume, narrationVolume, audioSource });
       setRenderProgress({
         status: 'COMPLETED',
         percentage: 100,
         current_shot: paragraphs.length,
         total_shots: paragraphs.length,
-        current_step: 'Master timeline video rendered and ready!',
+        current_step: `${audioSource === 'tight' ? 'Tight' : 'Master'} timeline video rendered and ready!`,
         elapsed_seconds: 0
       });
       setVideoTimestamp(Date.now());
       onUpdated();
     } catch (e: any) {
-      setRenderError(e.message || 'Failed to render master video timeline');
+      setRenderError(e.message || `Failed to render ${audioSource} video timeline`);
     } finally {
       clearInterval(interval);
       setRendering(false);
@@ -304,6 +320,12 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                 <strong className="text-purple-400">{formatDuration(batch.master_video_duration)}</strong>
               </span>
             )}
+            {batch.tight_audio?.duration && (
+              <span className="flex items-center space-x-1">
+                <span className="text-slate-400">Tight Duration:</span>
+                <strong className="text-amber-400">{formatDuration(batch.tight_audio.duration)}</strong>
+              </span>
+            )}
           </div>
 
           {scanResult && (
@@ -323,15 +345,62 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
 
       {/* Master Video Player & Render Bar */}
       <div className="bg-[#0c121e] border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
-        <div className="p-4 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3 bg-[#101827]">
-          <div className="flex items-center space-x-2">
-            <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-xs font-bold text-white tracking-wider">MASTER TIMELINE VIDEO</span>
-            {batch.master_video_path && (
-              <span className="text-[11px] font-mono text-emerald-400 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-500/30">
-                READY ({formatDuration(batch.master_video_duration)})
+        <div className="p-4 border-b border-slate-800 flex flex-col xl:flex-row xl:items-center justify-between gap-4 bg-[#101827]">
+          {/* Left: Title & Audio Source Selector */}
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="flex items-center space-x-2">
+              <div className={`w-3 h-3 rounded-full ${activeVideoPath ? 'bg-emerald-500 animate-pulse' : 'bg-amber-500'}`} />
+              <span className="text-xs font-bold text-white tracking-wider uppercase">
+                {audioSource === 'tight' ? '⚡ Tight Video Timeline' : '🌿 Master Video Timeline'}
               </span>
-            )}
+              {activeVideoPath && (
+                <span className="text-[11px] font-mono text-emerald-400 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-500/30">
+                  READY ({formatDuration(activeVideoDuration)})
+                </span>
+              )}
+            </div>
+
+            {/* AUDIO SOURCE SELECTOR (Full Master vs Tight / Silence-Trimmed) */}
+            <div className="flex items-center bg-slate-900/95 border border-slate-700/80 p-1 rounded-xl shadow-inner text-xs">
+              <button
+                type="button"
+                onClick={() => setAudioSource('master')}
+                className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
+                  audioSource === 'master'
+                    ? 'bg-blue-600 text-white font-bold shadow-md'
+                    : 'text-slate-400 hover:text-white hover:bg-slate-800/60'
+                }`}
+                title="Synchronize video using full narration audio"
+              >
+                <span>🌿 Full Narration</span>
+                {batch.master_video_duration && (
+                  <span className="text-[10px] font-mono opacity-80">({formatDuration(batch.master_video_duration)})</span>
+                )}
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setAudioSource('tight')}
+                className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer ${
+                  audioSource === 'tight'
+                    ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-black shadow-md'
+                    : 'text-slate-400 hover:text-amber-300 hover:bg-slate-800/60'
+                }`}
+                title="Synchronize video using tight silence-trimmed audio (Zero Dead-Air)"
+              >
+                <Scissors className="w-3.5 h-3.5" />
+                <span>⚡ Tight / Trimmed</span>
+                {batch.tight_audio?.duration ? (
+                  <span className="text-[10px] font-mono opacity-90 font-bold">
+                    ({formatDuration(batch.tight_audio.duration)})
+                  </span>
+                ) : hasTightAudio ? (
+                  <span className="text-[9px] px-1 rounded bg-amber-400/20 text-amber-300 border border-amber-500/30">
+                    READY
+                  </span>
+                ) : null}
+              </button>
+            </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-2.5">
@@ -400,25 +469,29 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
             <button
               onClick={handleRenderMasterVideo}
               disabled={rendering || matchedMediaCount === 0}
-              className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 disabled:opacity-50 text-white text-xs font-bold shadow-lg shadow-indigo-600/20 transition-all active:scale-95"
+              className={`flex items-center space-x-2 px-4 py-2 rounded-xl text-white text-xs font-bold shadow-lg transition-all active:scale-95 disabled:opacity-50 cursor-pointer ${
+                audioSource === 'tight'
+                  ? 'bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 shadow-amber-600/20'
+                  : 'bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 shadow-indigo-600/20'
+              }`}
             >
               <Sparkles className={`w-3.5 h-3.5 ${rendering ? 'animate-spin text-amber-300' : ''}`} />
               <span>
                 {rendering
-                  ? `RENDERING... ${renderProgress.percentage}%`
-                  : 'RENDER & STITCH FULL VIDEO'}
+                  ? `RENDERING ${audioSource.toUpperCase()}... ${renderProgress.percentage}%`
+                  : `SYNC & STITCH ${audioSource === 'tight' ? 'TIGHT' : 'FULL'} VIDEO`}
               </span>
             </button>
 
-            {batch.master_video_path && (
+            {activeVideoPath && (
               <a
-                href={api.getMasterVideoUrl(batch.id)}
-                download={`batch_${batch.id}_master.mp4`}
-                className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow transition-all active:scale-95"
-                title="Export Master Video MP4"
+                href={api.getMasterVideoUrl(batch.id, audioSource)}
+                download={`batch_${batch.id}_${audioSource}.mp4`}
+                className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow transition-all active:scale-95 cursor-pointer"
+                title={`Export ${audioSource === 'tight' ? 'Tight / Trimmed' : 'Master'} Video MP4`}
               >
                 <Download className="w-3.5 h-3.5" />
-                <span>EXPORT MP4</span>
+                <span>EXPORT {audioSource.toUpperCase()} MP4</span>
               </a>
             )}
           </div>
@@ -434,7 +507,7 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
                 </span>
                 <span className="font-bold text-white tracking-wide">
-                  RENDERING TIMELINE:
+                  RENDERING TIMELINE ({audioSource.toUpperCase()}):
                 </span>
                 <span className="text-cyan-300 font-mono text-[11px] bg-slate-900/90 px-2.5 py-0.5 rounded border border-slate-700">
                   {renderProgress.current_step || 'Synchronizing video clips to narration...'}
@@ -470,14 +543,14 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
 
         {/* Video Canvas or Empty State */}
         <div className="p-4 flex flex-col items-center justify-center bg-black/40 min-h-[320px]">
-          {batch.master_video_path ? (
+          {activeVideoPath ? (
             <div className="w-full max-w-4xl aspect-video bg-black rounded-xl overflow-hidden shadow-2xl border border-slate-800 relative">
               <video
-                key={`master-${videoTimestamp}`}
+                key={`${audioSource}-${videoTimestamp}`}
                 ref={videoPlayerRef}
                 controls
                 className="w-full h-full object-contain"
-                src={`${api.getMasterVideoUrl(batch.id)}?t=${videoTimestamp}`}
+                src={`${api.getMasterVideoUrl(batch.id, audioSource)}?t=${videoTimestamp}`}
               />
             </div>
           ) : (
@@ -486,11 +559,13 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                 <Video className="w-7 h-7" />
               </div>
               <div className="space-y-1">
-                <h3 className="text-sm font-bold text-white">Master Video Not Yet Rendered</h3>
+                <h3 className="text-sm font-bold text-white">
+                  {audioSource === 'tight' ? 'Tight / Trimmed Video Not Yet Rendered' : 'Master Video Not Yet Rendered'}
+                </h3>
                 <p className="text-xs text-slate-400">
                   {matchedMediaCount === 0 
                     ? 'Enter your media assets folder above and click "Scan & Match Assets" to link your clips.'
-                    : `All ${matchedMediaCount} media assets are matched! Click "Render & Stitch Full Video" to compile the video.`
+                    : `All ${matchedMediaCount} media assets are matched! Click "Sync & Stitch ${audioSource === 'tight' ? 'Tight' : 'Full'} Video" to compile.`
                   }
                 </p>
               </div>
@@ -498,10 +573,14 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                 <button
                   onClick={handleRenderMasterVideo}
                   disabled={rendering}
-                  className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold shadow-lg transition-all"
+                  className={`inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl text-white text-xs font-bold shadow-lg transition-all cursor-pointer ${
+                    audioSource === 'tight'
+                      ? 'bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 shadow-amber-600/20'
+                      : 'bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 shadow-indigo-600/20'
+                  }`}
                 >
                   <Sparkles className="w-4 h-4" />
-                  <span>Generate Full Video Timeline Now</span>
+                  <span>Generate {audioSource === 'tight' ? 'Tight' : 'Full'} Video Timeline Now</span>
                 </button>
               )}
             </div>
@@ -527,7 +606,19 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
           {paragraphs.map((para) => {
             const hasMedia = !!para.media_path;
             const isImage = para.media_type === 'image' || (para.media_path && /\.(jpe?g|png|webp)$/i.test(para.media_path));
-            const speedInfo = formatSpeedBadge(para.speed_factor);
+            
+            // Effective audio duration based on selected audio source
+            const shotAudioDuration = audioSource === 'tight'
+              ? (para.latest_generation?.tight_duration || para.latest_generation?.duration || (para.audio_path ? 10 : undefined))
+              : (para.latest_generation?.duration || (para.audio_path ? 10 : undefined));
+
+            // Calculate effective speed factor
+            let effectiveSpeedFactor = para.speed_factor;
+            if (audioSource === 'tight' && para.original_media_duration && shotAudioDuration && shotAudioDuration > 0) {
+              effectiveSpeedFactor = para.original_media_duration / shotAudioDuration;
+            }
+
+            const speedInfo = formatSpeedBadge(effectiveSpeedFactor);
             const isExpanded = expandedShotId === para.id;
 
             return (
@@ -612,10 +703,15 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
 
                 {/* Timing & Durations Strip */}
                 <div className="px-3 py-2 bg-[#090e18] border-y border-slate-800/80 flex items-center justify-between text-[11px] font-mono">
-                  <div className="flex items-center space-x-1 text-slate-400">
+                  <div className="flex items-center space-x-1.5 text-slate-400">
                     <Clock className="w-3 h-3 text-blue-400" />
                     <span>Audio:</span>
-                    <strong className="text-white">{formatDuration(para.latest_generation?.duration || (para.audio_path ? 10 : undefined))}</strong>
+                    <strong className="text-white">{formatDuration(shotAudioDuration)}</strong>
+                    {audioSource === 'tight' && para.latest_generation?.tight_duration && (
+                      <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                        ⚡ TIGHT
+                      </span>
+                    )}
                   </div>
                   {para.original_media_duration && (
                     <div className="flex items-center space-x-1 text-slate-400">

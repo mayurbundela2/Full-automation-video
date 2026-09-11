@@ -41,6 +41,8 @@ export interface Generation {
   wav_path?: string;
   mp3_path?: string;
   metadata_path?: string;
+  tight_duration?: number;
+  tight_wav_path?: string;
   status: string;
   error_message?: string;
   created_at: string;
@@ -120,6 +122,8 @@ export interface Batch {
   media_folder?: string;
   master_video_path?: string;
   master_video_duration?: number;
+  tight_mp4_path?: string;
+  tight_video_duration?: number;
 }
 
 export interface MediaMatchItem {

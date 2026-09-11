@@ -52,11 +52,22 @@ def enrich_paragraph(
     gen_dict = None
     if latest_gen:
         waveform_data = WaveformService.extract_peaks_from_wav(latest_gen.wav_path) if latest_gen.wav_path else None
+        tight_duration = None
+        tight_wav = None
+        if latest_gen.wav_path:
+            p_tight = Path(latest_gen.wav_path).parent / "narration_tight.wav"
+            if p_tight.exists():
+                tight_wav = str(p_tight)
+                tight_info = WaveformService.extract_peaks_from_wav(tight_wav)
+                tight_duration = tight_info.get("duration")
+
         gen_dict = {
             "id": latest_gen.id,
             "voice": latest_gen.voice,
             "model": latest_gen.model,
             "duration": latest_gen.duration,
+            "tight_duration": tight_duration,
+            "tight_wav_path": tight_wav,
             "wav_path": latest_gen.wav_path,
             "mp3_path": latest_gen.mp3_path,
             "metadata_path": latest_gen.metadata_path,
@@ -181,7 +192,8 @@ def enrich_batch(batch: Batch, db: Session) -> BatchResponse:
         tight_audio=tight_info,
         media_folder=batch.media_folder,
         master_video_path=batch.master_video_path,
-        master_video_duration=batch.master_video_duration
+        master_video_duration=batch.master_video_duration,
+        tight_mp4_path=batch.tight_mp4_path
     )
 
 
@@ -1050,17 +1062,22 @@ def render_batch_video(
     batch_id: int,
     video_volume: float = Query(1.0, description="Volume multiplier for video original audio (0.0 - 2.0)"),
     narration_volume: float = Query(1.0, description="Volume multiplier for voice narration (0.0 - 2.0)"),
+    audio_source: str = Query("master", description="Audio source to sync: 'master' or 'tight'/'trim'"),
     db: Session = Depends(get_db)
 ):
     """
-    Renders synchronized video for each paragraph by adjusting speed to match audio,
-    then stitches all clips into a full master 1080p MP4.
+    Renders synchronized video for each paragraph by adjusting speed to match audio
+    (either master full narration or tight/trimmed silence audio),
+    then stitches all clips into a full 1080p MP4.
     Preserves original video sound mixed with narration voice-over.
     Updates RENDER_PROGRESS with real-time percentage and step details.
     """
     batch = db.query(Batch).filter(Batch.id == batch_id).first()
     if not batch:
         raise HTTPException(status_code=404, detail="Batch not found")
+
+    is_tight = audio_source.lower() in ("tight", "trim")
+    version_title = "Tight Trimmed" if is_tight else "Master Full Narration"
 
     project = batch.project
     paragraphs = db.query(Paragraph).filter(Paragraph.batch_id == batch_id).order_by(Paragraph.paragraph_number.asc()).all()
@@ -1074,7 +1091,7 @@ def render_batch_video(
         "percentage": 5,
         "current_shot": 0,
         "total_shots": total_shots,
-        "current_step": "Initializing video render pipeline...",
+        "current_step": f"Initializing {version_title} video render pipeline...",
         "start_time": start_time,
         "error": None
     }
@@ -1099,7 +1116,7 @@ def render_batch_video(
             RENDER_PROGRESS[batch_id].update({
                 "percentage": start_pct,
                 "current_shot": idx,
-                "current_step": f"Processing shot {idx}/{total_shots}: syncing {media_name} to audio..."
+                "current_step": f"Processing shot {idx}/{total_shots}: syncing {media_name} to {version_title} audio..."
             })
 
             # Find latest completed audio
@@ -1112,7 +1129,17 @@ def render_batch_video(
 
             target_audio_path = latest_gen.wav_path
             target_duration = latest_gen.duration or AudioConverter.get_audio_info(target_audio_path)["duration"]
-            shot_out_mp4 = video_dir / f"shot_{p.paragraph_number:02d}_synced.mp4"
+
+            # If user requested tight/trimmed version, check for narration_tight.wav
+            if is_tight:
+                p_tight = Path(latest_gen.wav_path).parent / "narration_tight.wav"
+                if p_tight.exists() and p_tight.stat().st_size > 1000:
+                    target_audio_path = str(p_tight)
+                    tight_info = AudioConverter.get_audio_info(target_audio_path)
+                    target_duration = tight_info.get("duration", target_duration)
+
+            shot_prefix = "shot_tight" if is_tight else "shot"
+            shot_out_mp4 = video_dir / f"{shot_prefix}_{p.paragraph_number:02d}_synced.mp4"
 
             # If user provided a media file for this paragraph
             if p.media_path and os.path.exists(p.media_path):
@@ -1151,25 +1178,29 @@ def render_batch_video(
             RENDER_PROGRESS[batch_id].update({
                 "percentage": done_pct,
                 "current_shot": idx,
-                "current_step": f"Shot {idx}/{total_shots} synchronized ({target_duration:.1f}s)."
+                "current_step": f"Shot {idx}/{total_shots} synchronized to {version_title} ({target_duration:.1f}s)."
             })
 
         # Stitch all shot videos into master video
         RENDER_PROGRESS[batch_id].update({
             "percentage": 90,
             "current_shot": total_shots,
-            "current_step": f"Stitching all {total_shots} synchronized clips into 1080p master video..."
+            "current_step": f"Stitching all {total_shots} clips into 1080p {version_title} video..."
         })
 
-        master_video_path = batch_dir / "full_timeline_master.mp4"
+        master_filename = "full_timeline_tight.mp4" if is_tight else "full_timeline_master.mp4"
+        master_video_path = batch_dir / master_filename
         stitch_res = VideoService.stitch_batch_videos(
             shot_video_paths=shot_video_paths,
             output_master_path=str(master_video_path),
             ffmpeg_path=ffmpeg_path
         )
 
-        batch.master_video_path = stitch_res["master_video_path"]
-        batch.master_video_duration = stitch_res["duration"]
+        if is_tight:
+            batch.tight_mp4_path = stitch_res["master_video_path"]
+        else:
+            batch.master_video_path = stitch_res["master_video_path"]
+            batch.master_video_duration = stitch_res["duration"]
         db.commit()
 
         end_time = time.time()
@@ -1177,14 +1208,15 @@ def render_batch_video(
             "status": "COMPLETED",
             "percentage": 100,
             "current_shot": total_shots,
-            "current_step": f"Master video completed ({stitch_res.get('duration', 0):.1f}s). Ready to export!",
+            "current_step": f"{version_title} video completed ({stitch_res.get('duration', 0):.1f}s). Ready to export!",
             "end_time": end_time
         })
 
         return {
             "status": "COMPLETED",
-            "master_video_path": batch.master_video_path,
-            "master_video_duration": batch.master_video_duration,
+            "audio_source": "tight" if is_tight else "master",
+            "master_video_path": stitch_res["master_video_path"],
+            "master_video_duration": stitch_res["duration"],
             "total_shots": len(shot_results),
             "shots": shot_results
         }
@@ -1192,7 +1224,7 @@ def render_batch_video(
         RENDER_PROGRESS[batch_id].update({
             "status": "FAILED",
             "percentage": 0,
-            "current_step": "Video rendering failed.",
+            "current_step": f"{version_title} video rendering failed.",
             "error": str(e),
             "end_time": time.time()
         })
@@ -1200,15 +1232,50 @@ def render_batch_video(
 
 
 @router.get("/api/batches/{batch_id}/master-video")
-def get_batch_master_video(batch_id: int, download: bool = False, db: Session = Depends(get_db)):
+def get_batch_master_video(
+    batch_id: int, 
+    source: str = Query("master", description="Video source: 'master' or 'tight'"),
+    download: bool = False, 
+    db: Session = Depends(get_db)
+):
     batch = db.query(Batch).filter(Batch.id == batch_id).first()
-    if not batch or not batch.master_video_path or not os.path.exists(batch.master_video_path):
-        raise HTTPException(status_code=404, detail="Master video has not been rendered yet.")
+    if not batch:
+        raise HTTPException(status_code=404, detail="Batch not found")
 
-    filename = f"batch_{batch.batch_number}_master_video.mp4"
+    output_dir_setting = db.query(AppSetting).filter(AppSetting.key == "OUTPUT_FOLDER").first()
+    output_base = output_dir_setting.value if output_dir_setting else settings.OUTPUT_FOLDER
+    delivery = LocalDeliveryProvider(base_output_dir=output_base)
+    batch_dir = delivery.base_dir / sanitize_filename(batch.project.name) / f"Batch_{batch.batch_number:02d}"
+
+    is_tight = source.lower() in ("tight", "trim")
+    target_video_path = None
+
+    if is_tight:
+        candidates = [
+            batch.tight_mp4_path,
+            str(batch_dir / "full_timeline_tight.mp4"),
+            str(batch_dir / "full_batch_tight.mp4"),
+            batch.master_video_path,
+        ]
+    else:
+        candidates = [
+            batch.master_video_path,
+            str(batch_dir / "full_timeline_master.mp4"),
+            batch.tight_mp4_path,
+        ]
+
+    for c in candidates:
+        if c and os.path.exists(c) and os.path.getsize(c) > 1000:
+            target_video_path = c
+            break
+
+    if not target_video_path or not os.path.exists(target_video_path):
+        raise HTTPException(status_code=404, detail=f"{'Tight' if is_tight else 'Master'} video has not been rendered yet.")
+
+    filename = f"batch_{batch.batch_number}_{'tight' if is_tight else 'master'}_video.mp4"
     disposition = "attachment" if download else "inline"
 
-    with open(batch.master_video_path, "rb") as f:
+    with open(target_video_path, "rb") as f:
         content = f.read()
 
     from fastapi import Response

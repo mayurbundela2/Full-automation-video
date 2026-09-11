@@ -770,12 +770,13 @@ export const api = {
 
   async renderBatchVideo(
     batchId: number,
-    options?: { videoVolume?: number; narrationVolume?: number }
+    options?: { videoVolume?: number; narrationVolume?: number; audioSource?: 'master' | 'tight' }
   ): Promise<{ status: string; master_video_path: string; duration: number }> {
     if (await checkBackend()) {
       const params = new URLSearchParams();
       if (options?.videoVolume !== undefined) params.append('video_volume', options.videoVolume.toString());
       if (options?.narrationVolume !== undefined) params.append('narration_volume', options.narrationVolume.toString());
+      if (options?.audioSource) params.append('audio_source', options.audioSource);
       const query = params.toString() ? `?${params.toString()}` : '';
       const res = await fetch(`${API_BASE}/batches/${batchId}/render-video${query}`, {
         method: 'POST',
@@ -814,8 +815,8 @@ export const api = {
     };
   },
 
-  getMasterVideoUrl(batchId: number): string {
-    return `${API_BASE}/batches/${batchId}/master-video`;
+  getMasterVideoUrl(batchId: number, source: 'master' | 'tight' = 'master'): string {
+    return `${API_BASE}/batches/${batchId}/master-video?source=${source}`;
   },
 
   getParagraphVideoUrl(paragraphId: number): string {
