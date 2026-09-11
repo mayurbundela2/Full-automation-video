@@ -1241,16 +1241,27 @@ def render_batch_video(
             "current_step": f"Stitching all {total_shots} clips into {effective_ar} ({target_w}x{target_h}) {version_title} video..."
         })
 
-        master_filename = "full_timeline_tight.mp4" if is_tight else "full_timeline_master.mp4"
-        master_video_path = batch_dir / master_filename
+        clean_ar = effective_ar.replace(":", "x")
+        ratio_filename = f"full_timeline_{'tight' if is_tight else 'master'}_{clean_ar}.mp4"
+        legacy_filename = "full_timeline_tight.mp4" if is_tight else "full_timeline_master.mp4"
+        master_video_path = batch_dir / ratio_filename
+        legacy_video_path = batch_dir / legacy_filename
+
         stitch_res = VideoService.stitch_batch_videos(
             shot_video_paths=shot_video_paths,
             output_master_path=str(master_video_path),
             ffmpeg_path=ffmpeg_path
         )
 
+        try:
+            import shutil
+            shutil.copyfile(str(master_video_path), str(legacy_video_path))
+        except Exception:
+            pass
+
         if is_tight:
             batch.tight_mp4_path = stitch_res["master_video_path"]
+            batch.tight_video_duration = stitch_res["duration"]
         else:
             batch.master_video_path = stitch_res["master_video_path"]
             batch.master_video_duration = stitch_res["duration"]
@@ -1309,6 +1320,8 @@ def update_batch_video_config(
 def get_batch_master_video(
     batch_id: int, 
     source: str = Query("master", description="Video source: 'master' or 'tight'"),
+    aspect_ratio: Optional[str] = Query(None, description="Target aspect ratio: '16:9', '9:16', '1:1', '4:5', '4:3', '21:9'"),
+    fit_mode: Optional[str] = Query(None, description="Framing fit mode: 'crop', 'fit', or 'blur_pad'"),
     download: bool = False, 
     db: Session = Depends(get_db)
 ):
@@ -1323,31 +1336,78 @@ def get_batch_master_video(
 
     clean_source = source.split("?")[0].split("&")[0].strip().lower()
     is_tight = clean_source in ("tight", "trim")
+
+    target_ar = aspect_ratio or batch.aspect_ratio or "16:9"
+    target_fit = fit_mode or batch.fit_mode or "crop"
+    clean_ar = target_ar.replace(":", "x")
+    target_w, target_h = VideoService.get_resolution_for_aspect_ratio(target_ar)
+
+    ffmpeg_path_setting = db.query(AppSetting).filter(AppSetting.key == "FFMPEG_PATH").first()
+    ffmpeg_path = ffmpeg_path_setting.value if ffmpeg_path_setting else settings.FFMPEG_PATH
+    ffmpeg_bin = AudioConverter.resolve_ffmpeg(ffmpeg_path)
+
+    # Ratio-specific target filename
+    ratio_specific_name = f"full_timeline_{'tight' if is_tight else 'master'}_{clean_ar}.mp4"
+    ratio_specific_path = batch_dir / ratio_specific_name
+
     target_video_path = None
 
-    if is_tight:
-        candidates = [
-            str(batch_dir / "full_timeline_tight.mp4"),
-            batch.tight_mp4_path,
-            str(batch_dir / "full_batch_tight.mp4"),
-        ]
-    else:
-        candidates = [
-            str(batch_dir / "full_timeline_master.mp4"),
-            batch.master_video_path,
-            str(batch_dir / "final_video_1080p.mp4"),
-            str(batch_dir / "full_batch_final.mp4"),
-        ]
+    # 1. Check if ratio-specific file exists and matches target resolution
+    if ratio_specific_path.exists() and ratio_specific_path.stat().st_size > 1000:
+        try:
+            info = VideoService.get_media_info(str(ratio_specific_path), ffmpeg_bin)
+            if info.get("width") == target_w and info.get("height") == target_h:
+                target_video_path = str(ratio_specific_path)
+        except Exception:
+            pass
 
-    for c in candidates:
-        if c and os.path.exists(c) and os.path.getsize(c) > 1000:
-            target_video_path = c
-            break
+    # 2. If not already matching, look for any rendered base video to inspect or fast reformat
+    if not target_video_path:
+        base_candidates = []
+        if is_tight:
+            base_candidates = [
+                str(batch_dir / "full_timeline_tight.mp4"),
+                batch.tight_mp4_path,
+                str(batch_dir / "full_batch_tight.mp4"),
+            ]
+        else:
+            base_candidates = [
+                str(batch_dir / "full_timeline_master.mp4"),
+                batch.master_video_path,
+                str(batch_dir / "final_video_1080p.mp4"),
+                str(batch_dir / "full_batch_final.mp4"),
+            ]
+
+        base_video = None
+        for c in base_candidates:
+            if c and os.path.exists(c) and os.path.getsize(c) > 1000:
+                base_video = c
+                break
+
+        if base_video:
+            try:
+                base_info = VideoService.get_media_info(base_video, ffmpeg_bin)
+                # If base video already has target dimensions, use it directly
+                if base_info.get("width") == target_w and base_info.get("height") == target_h:
+                    target_video_path = base_video
+                else:
+                    # Automatically reformat base video into the requested aspect ratio in seconds!
+                    VideoService.reformat_video_aspect_ratio(
+                        input_video_path=base_video,
+                        output_video_path=str(ratio_specific_path),
+                        target_width=target_w,
+                        target_height=target_h,
+                        fit_mode=target_fit,
+                        ffmpeg_path=ffmpeg_path
+                    )
+                    target_video_path = str(ratio_specific_path)
+            except Exception:
+                target_video_path = base_video
 
     if not target_video_path or not os.path.exists(target_video_path):
         raise HTTPException(status_code=404, detail=f"{'Tight' if is_tight else 'Master'} video has not been rendered yet.")
 
-    filename = f"batch_{batch.batch_number}_{'tight' if is_tight else 'master'}_video.mp4"
+    filename = f"batch_{batch.batch_number}_{'tight' if is_tight else 'master'}_{clean_ar}.mp4"
     disposition = "attachment" if download else "inline"
 
     with open(target_video_path, "rb") as f:

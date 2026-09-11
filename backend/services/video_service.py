@@ -462,3 +462,43 @@ class VideoService:
             "duration": info["duration"],
             "shots_count": len(valid_paths),
         }
+
+    @classmethod
+    def reformat_video_aspect_ratio(
+        cls,
+        input_video_path: str,
+        output_video_path: str,
+        target_width: int,
+        target_height: int,
+        fit_mode: str = "crop",
+        ffmpeg_path: str = "ffmpeg"
+    ) -> str:
+        """
+        Fast converter that reformats an existing master/timeline video into another aspect ratio
+        (e.g., 16:9 -> 9:16 Shorts/Reels) using hardware/ultrafast FFmpeg filters without needing
+        to re-render all individual paragraph shots from scratch.
+        """
+        in_p = Path(input_video_path)
+        out_p = Path(output_video_path)
+        out_p.parent.mkdir(parents=True, exist_ok=True)
+
+        if not in_p.exists():
+            raise FileNotFoundError(f"Input video not found: {input_video_path}")
+
+        ffmpeg_bin = AudioConverter.resolve_ffmpeg(ffmpeg_path)
+        scale_filter = cls.build_video_scale_filter("[0:v]", "[v]", target_width, target_height, fit_mode)
+
+        cmd = [
+            ffmpeg_bin, "-y",
+            "-i", str(in_p),
+            "-filter_complex", scale_filter,
+            "-map", "[v]",
+            "-map", "0:a?",
+            "-c:v", "libx264",
+            "-pix_fmt", "yuv420p",
+            "-preset", "ultrafast",
+            "-c:a", "copy",
+            str(out_p)
+        ]
+        subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+        return str(out_p)

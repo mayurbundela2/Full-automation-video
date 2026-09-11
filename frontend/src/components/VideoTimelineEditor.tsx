@@ -47,6 +47,8 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
     if (newRatio) setAspectRatio(newRatio);
     if (newFit) setFitMode(newFit);
 
+    setVideoTimestamp(Date.now());
+
     try {
       await api.updateBatchVideoConfig(batch.id, {
         aspect_ratio: targetRatio,
@@ -538,13 +540,13 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
 
             {activeVideoPath && (
               <a
-                href={api.getMasterVideoUrl(batch.id, audioSource)}
-                download={`batch_${batch.id}_${audioSource}.mp4`}
+                href={api.getMasterVideoUrl(batch.id, audioSource, aspectRatio, fitMode, undefined, true)}
+                download={`batch_${batch.id}_${audioSource}_${aspectRatio.replace(':', 'x')}.mp4`}
                 className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow transition-all active:scale-95 cursor-pointer"
-                title={`Export ${audioSource === 'tight' ? 'Tight / Trimmed' : 'Master'} Video MP4`}
+                title={`Export ${aspectRatio} (${audioSource === 'tight' ? 'Tight / Trimmed' : 'Master'}) Video MP4`}
               >
                 <Download className="w-3.5 h-3.5" />
-                <span>EXPORT {audioSource.toUpperCase()} MP4</span>
+                <span>EXPORT {aspectRatio} {audioSource.toUpperCase()} MP4</span>
               </a>
             )}
           </div>
@@ -668,7 +670,7 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                 ref={videoPlayerRef}
                 controls
                 className="w-full h-full object-contain"
-                src={api.getMasterVideoUrl(batch.id, audioSource, videoTimestamp)}
+                src={api.getMasterVideoUrl(batch.id, audioSource, aspectRatio, fitMode, videoTimestamp)}
               />
             </div>
           ) : (

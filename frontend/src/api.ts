@@ -824,15 +824,15 @@ export const api = {
 
   async updateBatchVideoConfig(
     batchId: number,
-    config: { aspectRatio?: string; fitMode?: string }
+    config: { aspectRatio?: string; fitMode?: string; aspect_ratio?: string; fit_mode?: string }
   ): Promise<Batch> {
     if (await checkBackend()) {
       const res = await fetch(`${API_BASE}/batches/${batchId}/video-config`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          aspect_ratio: config.aspectRatio,
-          fit_mode: config.fitMode,
+          aspect_ratio: config.aspect_ratio || config.aspectRatio,
+          fit_mode: config.fit_mode || config.fitMode,
         }),
       });
       if (res.ok) return res.json();
@@ -865,9 +865,21 @@ export const api = {
     };
   },
 
-  getMasterVideoUrl(batchId: number, source: 'master' | 'tight' = 'master', timestamp?: number): string {
-    const t = timestamp ? `&t=${timestamp}` : '';
-    return `${API_BASE}/batches/${batchId}/master-video?source=${source}${t}`;
+  getMasterVideoUrl(
+    batchId: number, 
+    source: 'master' | 'tight' = 'master', 
+    aspectRatio?: string,
+    fitMode?: string,
+    timestamp?: number,
+    download?: boolean
+  ): string {
+    const params = new URLSearchParams();
+    params.append('source', source);
+    if (aspectRatio) params.append('aspect_ratio', aspectRatio);
+    if (fitMode) params.append('fit_mode', fitMode);
+    if (download) params.append('download', 'true');
+    if (timestamp) params.append('t', timestamp.toString());
+    return `${API_BASE}/batches/${batchId}/master-video?${params.toString()}`;
   },
 
   getParagraphVideoUrl(paragraphId: number): string {
