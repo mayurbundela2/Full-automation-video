@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
   Mic, Play, RefreshCw, Scissors, Sparkles, Merge, 
-  Trash2, ChevronDown, ChevronUp, AlertCircle, FileText, CheckCircle2 
+  Trash2, ChevronDown, ChevronUp, AlertCircle, FileText, CheckCircle2, Type 
 } from 'lucide-react';
 import { Paragraph, VoiceItem } from '../types';
 import { LimitIndicator } from './LimitIndicator';
@@ -255,6 +255,21 @@ export const ParagraphCard: React.FC<ParagraphCardProps> = ({
                 onChange={(e) => handleFieldChange('sample_context', e.target.value)}
                 placeholder="Emotional delivery context..."
                 className="w-full bg-[#131E33] border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-blue-500 truncate"
+              />
+            </div>
+
+            {/* On-Screen Text (Video Animation Caption) */}
+            <div className="md:col-span-2 space-y-1">
+              <label className="text-[11px] font-semibold text-amber-400 uppercase tracking-wider flex items-center space-x-1.5">
+                <Type className="w-3.5 h-3.5 text-amber-400" />
+                <span>On-Screen Text (Video Animation Caption)</span>
+              </label>
+              <input
+                type="text"
+                value={paragraph.on_screen_text || ''}
+                onChange={(e) => handleFieldChange('on_screen_text', e.target.value)}
+                placeholder="e.g. AAJ TUMNE KYA KHAYA? (Smoothly animated at video bottom center)"
+                className="w-full bg-[#131E33] border border-amber-500/30 rounded-lg px-2.5 py-1.5 text-xs text-amber-200 focus:outline-none focus:border-amber-500 font-mono placeholder:text-amber-500/40"
               />
             </div>
           </div>

@@ -930,17 +930,33 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                     </div>
                   )}
 
-                  {/* On-screen text cue */}
-                  {para.on_screen_text && (
-                    <div className="bg-slate-900/90 border border-slate-800 rounded-lg p-2">
-                      <span className="text-[10px] text-amber-400 font-bold uppercase tracking-wider block">
-                        On-Screen Text:
+                  {/* On-screen text cue & live editor */}
+                  <div className="bg-slate-900/90 border border-slate-800/80 rounded-lg p-2 space-y-1">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] text-amber-400 font-bold uppercase tracking-wider flex items-center space-x-1">
+                        <Type className="w-3 h-3 text-amber-400" />
+                        <span>On-Screen Text:</span>
                       </span>
-                      <p className="text-[11px] text-amber-200 font-mono line-clamp-2">
-                        "{para.on_screen_text}"
-                      </p>
                     </div>
-                  )}
+                    <input
+                      type="text"
+                      defaultValue={para.on_screen_text || ''}
+                      onBlur={async (e) => {
+                        const val = e.target.value;
+                        if (val !== (para.on_screen_text || '')) {
+                          para.on_screen_text = val;
+                          try {
+                            await api.updateParagraph(para.id, { on_screen_text: val });
+                            onUpdated();
+                          } catch (err) {
+                            console.error('Failed to update on_screen_text:', err);
+                          }
+                        }
+                      }}
+                      placeholder="Add on-screen text to animate..."
+                      className="w-full bg-slate-950/80 border border-slate-800 focus:border-amber-500 rounded px-2 py-1 text-[11px] text-amber-200 font-mono focus:outline-none placeholder:text-slate-600 transition-colors"
+                    />
+                  </div>
 
                   {/* Video Prompt */}
                   {para.video_prompt && (
