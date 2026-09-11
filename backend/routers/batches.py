@@ -1158,6 +1158,14 @@ def render_batch_video(
     video_dir = batch_dir / "video_timeline"
     video_dir.mkdir(parents=True, exist_ok=True)
 
+    # Clean up any leftover temporary files from previous renders
+    for pattern in ["temp_*.*", "*.ass", "quick_*.*"]:
+        for temp_f in batch_dir.glob(pattern):
+            try:
+                temp_f.unlink()
+            except Exception:
+                pass
+
     shot_video_paths = []
     shot_results = []
 
@@ -1216,31 +1224,37 @@ def render_batch_video(
                 p.thumbnail_path = sync_res["thumbnail_path"]
                 p.speed_factor = sync_res["speed_factor"]
                 p.original_media_duration = sync_res["original_duration"]
-                shot_video_paths.append(sync_res["video_path"])
-                shot_results.append(sync_res)
+                shot_video_paths.append(str(shot_out_mp4))
+                shot_results.append({
+                    "paragraph_id": p.id,
+                    "paragraph_number": p.paragraph_number,
+                    "video_path": str(shot_out_mp4),
+                    "duration": sync_res.get("duration", target_duration),
+                    "media_type": sync_res.get("media_type", "video"),
+                    "speed_factor": sync_res.get("speed_factor", 1.0)
+                })
             else:
-                # Fallback: create standard placeholder clip matching resolution
-                AudioConverter.create_timeline_mp4_from_audio(
-                    input_audio_path=target_audio_path,
-                    output_mp4_path=str(shot_out_mp4),
-                    ffmpeg_path=ffmpeg_path,
+                # No custom media, generate clean color placeholder
+                bg_color = "black" if idx % 2 == 0 else "#0f172a"
+                sync_res = VideoService.generate_placeholder_video(
+                    output_path=str(shot_out_mp4),
+                    duration=target_duration,
+                    audio_path=target_audio_path,
+                    text=f"Paragraph #{p.paragraph_number}",
                     width=target_w,
                     height=target_h,
-                    on_screen_text=None,  # Keep placeholder clean
-                    text_animation_style=text_animation_style,
-                    text_position=text_position,
-                    font_family=font_family,
-                    font_color=font_color
+                    bg_color=bg_color,
+                    ffmpeg_path=ffmpeg_path
                 )
                 p.synced_video_path = str(shot_out_mp4)
                 shot_video_paths.append(str(shot_out_mp4))
                 shot_results.append({
+                    "paragraph_id": p.id,
+                    "paragraph_number": p.paragraph_number,
                     "video_path": str(shot_out_mp4),
-                    "media_type": "generated_placeholder",
-                    "target_duration": target_duration,
-                    "speed_factor": 1.0,
-                    "width": target_w,
-                    "height": target_h
+                    "duration": target_duration,
+                    "media_type": "placeholder",
+                    "speed_factor": 1.0
                 })
 
             done_pct = int(5 + (idx / (total_shots + 1)) * 82)
@@ -1259,10 +1273,8 @@ def render_batch_video(
 
         clean_ar = effective_ar.replace(":", "x")
         ratio_filename = f"full_timeline_{'tight' if is_tight else 'master'}_{clean_ar}.mp4"
-        legacy_filename = "full_timeline_tight.mp4" if is_tight else "full_timeline_master.mp4"
         clean_backup_filename = f"full_timeline_{'tight' if is_tight else 'master'}_{clean_ar}_clean.mp4"
         master_video_path = batch_dir / ratio_filename
-        legacy_video_path = batch_dir / legacy_filename
         clean_backup_path = batch_dir / clean_backup_filename
 
         stitch_res = VideoService.stitch_batch_videos(
@@ -1275,7 +1287,6 @@ def render_batch_video(
         try:
             # Preserve pristine, clean video without text so subtitles can be re-burned dynamically anytime
             shutil.copyfile(str(master_video_path), str(clean_backup_path))
-            shutil.copyfile(str(master_video_path), str(legacy_video_path))
         except Exception:
             pass
 
@@ -1317,11 +1328,8 @@ def render_batch_video(
                         ffmpeg_path=ffmpeg_path
                     )
                     with open(temp_burned, "rb") as src, open(master_video_path, "wb") as dst:
-                        dst.write(src.read())
-                    try:
-                        shutil.copyfile(str(master_video_path), str(legacy_video_path))
-                    except Exception:
-                        pass
+                        while chunk := src.read(1024 * 1024):
+                            dst.write(chunk)
                 finally:
                     if temp_burned.exists():
                         try:
@@ -1404,6 +1412,14 @@ def render_batch_text_only(
 
     delivery = LocalDeliveryProvider(base_output_dir=output_base)
     batch_dir = delivery.base_dir / sanitize_filename(batch.project.name) / f"Batch_{batch.batch_number:02d}"
+
+    # Clean up any leftover temporary files from previous renders
+    for pattern in ["temp_*.*", "*.ass", "quick_*.*"]:
+        for temp_f in batch_dir.glob(pattern):
+            try:
+                temp_f.unlink()
+            except Exception:
+                pass
 
     # Determine base video input
     clean_base_name = f"full_timeline_{'tight' if is_tight else 'master'}_{clean_ar}_clean.mp4"
@@ -1496,14 +1512,10 @@ def render_batch_text_only(
             ffmpeg_path=ffmpeg_path
         )
 
-        # Robust byte write avoids Windows file locking errors
+        # Chunked byte write to avoid memory spikes and Windows file locking errors
         with open(temp_burned, "rb") as src, open(master_video_path, "wb") as dst:
-            dst.write(src.read())
-        try:
-            with open(temp_burned, "rb") as src, open(legacy_video_path, "wb") as dst:
-                dst.write(src.read())
-        except Exception:
-            pass
+            while chunk := src.read(1024 * 1024):
+                dst.write(chunk)
 
         info = VideoService.get_media_info(str(master_video_path), ffmpeg_path)
         final_dur = info.get("duration", current_time)
@@ -1532,11 +1544,6 @@ def render_batch_text_only(
             "titles_burned": len(shots_timeline)
         }
     except Exception as e:
-        if temp_burned.exists():
-            try:
-                temp_burned.unlink()
-            except Exception:
-                pass
         RENDER_PROGRESS[batch_id].update({
             "status": "FAILED",
             "percentage": 0,
@@ -1545,6 +1552,79 @@ def render_batch_text_only(
             "end_time": time.time()
         })
         raise HTTPException(status_code=500, detail=f"Failed to burn text overlay: {str(e)}")
+    finally:
+        if temp_burned.exists():
+            try:
+                temp_burned.unlink()
+            except Exception:
+                pass
+
+
+@router.post("/api/batches/{batch_id}/clean-video-cache")
+def clean_batch_video_cache(
+    batch_id: int,
+    db: Session = Depends(get_db)
+):
+    """
+    Cleans temporary render files (temp_*.mp4, *.ass, quick_*.mp4) and redundant duplicate video files
+    to free up disk space and system memory.
+    """
+    batch = db.query(Batch).filter(Batch.id == batch_id).first()
+    if not batch:
+        raise HTTPException(status_code=404, detail="Batch not found")
+
+    output_dir_setting = db.query(AppSetting).filter(AppSetting.key == "OUTPUT_FOLDER").first()
+    output_base = output_dir_setting.value if output_dir_setting else settings.OUTPUT_FOLDER
+    delivery = LocalDeliveryProvider(base_output_dir=output_base)
+    batch_dir = delivery.base_dir / sanitize_filename(batch.project.name) / f"Batch_{batch.batch_number:02d}"
+
+    if not batch_dir.exists():
+        return {"status": "ok", "cleaned_files": 0, "reclaimed_mb": 0.0}
+
+    cleaned_count = 0
+    reclaimed_bytes = 0
+
+    # 1. Clean temporary files
+    for pattern in ["temp_*.*", "*.ass", "quick_*.*"]:
+        for f in batch_dir.glob(pattern):
+            try:
+                f_size = f.stat().st_size
+                f.unlink()
+                cleaned_count += 1
+                reclaimed_bytes += f_size
+            except Exception:
+                pass
+
+    # 2. Clean duplicate legacy files if ratio-specific files exist with identical size
+    legacy_tight = batch_dir / "full_timeline_tight.mp4"
+    ratio_tight_16x9 = batch_dir / "full_timeline_tight_16x9.mp4"
+    if legacy_tight.exists() and ratio_tight_16x9.exists():
+        try:
+            if legacy_tight.stat().st_size == ratio_tight_16x9.stat().st_size:
+                f_size = legacy_tight.stat().st_size
+                legacy_tight.unlink()
+                cleaned_count += 1
+                reclaimed_bytes += f_size
+        except Exception:
+            pass
+
+    legacy_master = batch_dir / "full_timeline_master.mp4"
+    ratio_master_16x9 = batch_dir / "full_timeline_master_16x9.mp4"
+    if legacy_master.exists() and ratio_master_16x9.exists():
+        try:
+            if legacy_master.stat().st_size == ratio_master_16x9.stat().st_size:
+                f_size = legacy_master.stat().st_size
+                legacy_master.unlink()
+                cleaned_count += 1
+                reclaimed_bytes += f_size
+        except Exception:
+            pass
+
+    return {
+        "status": "ok",
+        "cleaned_files": cleaned_count,
+        "reclaimed_mb": round(reclaimed_bytes / (1024 * 1024), 2)
+    }
 
 
 @router.patch("/api/batches/{batch_id}/video-config", response_model=BatchResponse)

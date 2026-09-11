@@ -952,4 +952,16 @@ export const api = {
     }
     return { status: 'ok', updated_count: 0, total_parsed: 0, matches: [] };
   },
+
+  async cleanBatchVideoCache(batchId: number): Promise<{ status: string; cleaned_files: number; reclaimed_mb: number }> {
+    if (await checkBackend()) {
+      const res = await fetch(`${API_BASE}/batches/${batchId}/clean-video-cache`, {
+        method: 'POST',
+      });
+      if (res.ok) return await res.json();
+      const err = await res.json().catch(() => ({ detail: 'Failed to clean video cache' }));
+      throw new Error(err.detail || 'Failed to clean video cache');
+    }
+    return { status: 'ok', cleaned_files: 0, reclaimed_mb: 0 };
+  },
 };

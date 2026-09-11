@@ -3,7 +3,7 @@ import {
   Film, Video, Play, Pause, RefreshCw, Download, FolderOpen, 
   CheckCircle2, AlertCircle, Sparkles, Clock, Gauge, Image, FileVideo, 
   ChevronDown, ChevronUp, Layers, Scissors, Music, Volume2, Maximize2, Upload,
-  Smartphone, Monitor, Square, Sliders, Type, ListOrdered
+  Smartphone, Monitor, Square, Sliders, Type, ListOrdered, Trash2
 } from 'lucide-react';
 import { Batch, Paragraph, ScanMediaResponse } from '../types';
 import { api } from '../api';
@@ -37,6 +37,8 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const [videoTimestamp, setVideoTimestamp] = useState<number>(Date.now());
   const [videoVolume, setVideoVolume] = useState<number>(1.0);
   const [narrationVolume, setNarrationVolume] = useState<number>(1.0);
+  const [cleaningCache, setCleaningCache] = useState<boolean>(false);
+  const [cacheCleanMessage, setCacheCleanMessage] = useState<string | null>(null);
   const [audioSource, setAudioSource] = useState<'master' | 'tight'>(
     (batch.tight_mp4_path || batch.tight_audio?.duration) ? 'tight' : 'master'
   );
@@ -325,6 +327,25 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
     } finally {
       clearInterval(interval);
       setRenderingTextOnly(false);
+    }
+  };
+
+  const handleCleanCache = async () => {
+    try {
+      setCleaningCache(true);
+      const res = await api.cleanBatchVideoCache(batch.id);
+      if (res.reclaimed_mb > 0 || res.cleaned_files > 0) {
+        setCacheCleanMessage(`Freed ${res.reclaimed_mb} MB (${res.cleaned_files} temp/duplicate files cleaned)`);
+      } else {
+        setCacheCleanMessage('Disk is clean! No leftover temp or duplicate files found.');
+      }
+      setTimeout(() => setCacheCleanMessage(null), 6000);
+      onUpdated();
+    } catch (err: any) {
+      setCacheCleanMessage(`Failed to clean cache: ${err.message}`);
+      setTimeout(() => setCacheCleanMessage(null), 6000);
+    } finally {
+      setCleaningCache(false);
     }
   };
 
@@ -666,6 +687,18 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                 <span>EXPORT {aspectRatio} {audioSource.toUpperCase()} MP4</span>
               </a>
             )}
+
+            {/* CLEAN CACHE / FREE MEMORY & DISK BUTTON */}
+            <button
+              type="button"
+              onClick={handleCleanCache}
+              disabled={cleaningCache || rendering || renderingTextOnly}
+              className="flex items-center space-x-1.5 px-3 py-2 rounded-xl bg-slate-800/90 hover:bg-rose-950/60 hover:text-rose-300 hover:border-rose-700/80 text-slate-400 border border-slate-700/80 text-xs font-semibold shadow transition-all active:scale-95 disabled:opacity-40 cursor-pointer"
+              title="Delete temporary render files, leftover subtitle scripts, and redundant duplicate video files to free up disk space and memory"
+            >
+              <Trash2 className={`w-3.5 h-3.5 ${cleaningCache ? 'animate-spin text-rose-400' : 'text-slate-400'}`} />
+              <span>{cleaningCache ? 'CLEANING...' : 'CLEAN CACHE'}</span>
+            </button>
           </div>
         </div>
 
@@ -919,6 +952,22 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                 style={{ width: `${Math.max(4, Math.min(100, renderProgress.percentage))}%` }}
               />
             </div>
+          </div>
+        )}
+
+        {/* Cache Clean Feedback Banner */}
+        {cacheCleanMessage && (
+          <div className="mx-4 my-2 p-2.5 bg-emerald-950/70 border border-emerald-500/40 rounded-xl flex items-center justify-between text-xs text-emerald-300 shadow-lg animate-fadeIn">
+            <div className="flex items-center space-x-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span className="font-medium">{cacheCleanMessage}</span>
+            </div>
+            <button
+              onClick={() => setCacheCleanMessage(null)}
+              className="text-emerald-400 hover:text-white px-2 py-0.5 rounded cursor-pointer text-xs"
+            >
+              ✕
+            </button>
           </div>
         )}
 

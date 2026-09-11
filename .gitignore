@@ -68,3 +68,8 @@ htmlcov/
 ai_studio_profile/
 video_timeline/
 *full_timeline_master.mp4
+outputs/
+*.mp4
+*.ass
+temp_*
+
