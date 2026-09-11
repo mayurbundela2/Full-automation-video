@@ -1205,7 +1205,7 @@ def render_batch_video(
                     target_width=target_w,
                     target_height=target_h,
                     fit_mode=effective_fit,
-                    on_screen_text=p.on_screen_text if burn_on_screen_text else None,
+                    on_screen_text=None,  # Keep base shots 100% clean so subtitles can be changed dynamically
                     text_animation_style=text_animation_style,
                     text_position=text_position,
                     font_family=font_family,
@@ -1219,14 +1219,14 @@ def render_batch_video(
                 shot_video_paths.append(sync_res["video_path"])
                 shot_results.append(sync_res)
             else:
-                # Fallback: create standard placeholder clip matching resolution with on-screen text
+                # Fallback: create standard placeholder clip matching resolution
                 AudioConverter.create_timeline_mp4_from_audio(
                     input_audio_path=target_audio_path,
                     output_mp4_path=str(shot_out_mp4),
                     ffmpeg_path=ffmpeg_path,
                     width=target_w,
                     height=target_h,
-                    on_screen_text=p.on_screen_text if burn_on_screen_text else None,
+                    on_screen_text=None,  # Keep placeholder clean
                     text_animation_style=text_animation_style,
                     text_position=text_position,
                     font_family=font_family,
@@ -1252,16 +1252,18 @@ def render_batch_video(
 
         # Stitch all shot videos into master video
         RENDER_PROGRESS[batch_id].update({
-            "percentage": 90,
+            "percentage": 88,
             "current_shot": total_shots,
-            "current_step": f"Stitching all {total_shots} clips into {effective_ar} ({target_w}x{target_h}) {version_title} video..."
+            "current_step": f"Stitching all {total_shots} clean clips into {effective_ar} ({target_w}x{target_h}) {version_title} video..."
         })
 
         clean_ar = effective_ar.replace(":", "x")
         ratio_filename = f"full_timeline_{'tight' if is_tight else 'master'}_{clean_ar}.mp4"
         legacy_filename = "full_timeline_tight.mp4" if is_tight else "full_timeline_master.mp4"
+        clean_backup_filename = f"full_timeline_{'tight' if is_tight else 'master'}_{clean_ar}_clean.mp4"
         master_video_path = batch_dir / ratio_filename
         legacy_video_path = batch_dir / legacy_filename
+        clean_backup_path = batch_dir / clean_backup_filename
 
         stitch_res = VideoService.stitch_batch_videos(
             shot_video_paths=shot_video_paths,
@@ -1269,13 +1271,63 @@ def render_batch_video(
             ffmpeg_path=ffmpeg_path
         )
 
+        import shutil
         try:
-            import shutil
+            # Preserve pristine, clean video without text so subtitles can be re-burned dynamically anytime
+            shutil.copyfile(str(master_video_path), str(clean_backup_path))
             shutil.copyfile(str(master_video_path), str(legacy_video_path))
-            clean_backup = batch_dir / f"full_timeline_{'tight' if is_tight else 'master'}_{clean_ar}_clean.mp4"
-            shutil.copyfile(str(master_video_path), str(clean_backup))
         except Exception:
             pass
+
+        # If user has text animation enabled, burn it on top of the clean video
+        if burn_on_screen_text:
+            RENDER_PROGRESS[batch_id].update({
+                "percentage": 94,
+                "current_step": f"Applying animated on-screen titles ({font_family} / {font_color})..."
+            })
+            shots_timeline = []
+            curr_t = 0.0
+            for p in paragraphs:
+                latest_gen = db.query(Generation).filter(Generation.paragraph_id == p.id, Generation.status == "COMPLETED").order_by(Generation.created_at.desc()).first()
+                s_dur = 2.5
+                if latest_gen:
+                    s_dur = latest_gen.duration or 2.5
+                    if is_tight and latest_gen.wav_path:
+                        p_t = Path(latest_gen.wav_path).parent / "narration_tight.wav"
+                        if p_t.exists() and p_t.stat().st_size > 1000:
+                            t_inf = AudioConverter.get_audio_info(str(p_t))
+                            s_dur = t_inf.get("duration", s_dur)
+                if p.on_screen_text and p.on_screen_text.strip():
+                    shots_timeline.append({"start": curr_t, "duration": s_dur, "text": p.on_screen_text.strip()})
+                curr_t += s_dur
+
+            if shots_timeline:
+                temp_burned = batch_dir / f"temp_init_burn_{int(time.time())}.mp4"
+                try:
+                    VideoService.burn_text_overlay_on_video(
+                        input_video_path=str(clean_backup_path),
+                        output_video_path=str(temp_burned),
+                        shots=shots_timeline,
+                        target_width=target_w,
+                        target_height=target_h,
+                        position=text_position,
+                        animation_style=text_animation_style,
+                        font_family=font_family,
+                        font_color=font_color,
+                        ffmpeg_path=ffmpeg_path
+                    )
+                    with open(temp_burned, "rb") as src, open(master_video_path, "wb") as dst:
+                        dst.write(src.read())
+                    try:
+                        shutil.copyfile(str(master_video_path), str(legacy_video_path))
+                    except Exception:
+                        pass
+                finally:
+                    if temp_burned.exists():
+                        try:
+                            temp_burned.unlink()
+                        except Exception:
+                            pass
 
         if is_tight:
             batch.tight_mp4_path = stitch_res["master_video_path"]
@@ -1408,10 +1460,12 @@ def render_batch_text_only(
         latest_gen = db.query(Generation).filter(Generation.paragraph_id == p.id, Generation.status == "COMPLETED").order_by(Generation.created_at.desc()).first()
         shot_dur = 2.5
         if latest_gen:
-            if is_tight and latest_gen.tight_duration:
-                shot_dur = latest_gen.tight_duration
-            elif latest_gen.duration:
-                shot_dur = latest_gen.duration
+            shot_dur = latest_gen.duration or 2.5
+            if is_tight and latest_gen.wav_path:
+                p_tight = Path(latest_gen.wav_path).parent / "narration_tight.wav"
+                if p_tight.exists() and p_tight.stat().st_size > 1000:
+                    tight_info = AudioConverter.get_audio_info(str(p_tight))
+                    shot_dur = tight_info.get("duration", shot_dur)
 
         if p.on_screen_text and p.on_screen_text.strip():
             shots_timeline.append({
@@ -1426,7 +1480,7 @@ def render_batch_text_only(
         "current_step": f"Burning {len(shots_timeline)} animated title cues directly onto {version_title} video..."
     })
 
-    # Render directly to a temp output then rename to master_video_path
+    # Render directly to a temp output then stream copy to master_video_path
     temp_burned = batch_dir / f"temp_burned_{int(time.time())}.mp4"
     try:
         VideoService.burn_text_overlay_on_video(
@@ -1442,10 +1496,12 @@ def render_batch_text_only(
             ffmpeg_path=ffmpeg_path
         )
 
-        import shutil
-        shutil.move(str(temp_burned), str(master_video_path))
+        # Robust byte write avoids Windows file locking errors
+        with open(temp_burned, "rb") as src, open(master_video_path, "wb") as dst:
+            dst.write(src.read())
         try:
-            shutil.copyfile(str(master_video_path), str(legacy_video_path))
+            with open(temp_burned, "rb") as src, open(legacy_video_path, "wb") as dst:
+                dst.write(src.read())
         except Exception:
             pass
 
