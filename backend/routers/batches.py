@@ -1099,6 +1099,7 @@ def render_batch_video(
     audio_source: str = Query("master", description="Audio source to sync: 'master' or 'tight'/'trim'"),
     aspect_ratio: Optional[str] = Query(None, description="Target aspect ratio: '16:9', '9:16', '1:1', '4:5', '4:3', '21:9'"),
     fit_mode: Optional[str] = Query(None, description="Video fit mode: 'crop', 'fit', or 'blur_pad'"),
+    burn_on_screen_text: bool = Query(True, description="Whether to animate and burn on_screen_text into the video"),
     db: Session = Depends(get_db)
 ):
     """
@@ -1199,6 +1200,7 @@ def render_batch_video(
                     target_width=target_w,
                     target_height=target_h,
                     fit_mode=effective_fit,
+                    on_screen_text=p.on_screen_text if burn_on_screen_text else None,
                     ffmpeg_path=ffmpeg_path
                 )
                 p.synced_video_path = sync_res["video_path"]
@@ -1208,13 +1210,14 @@ def render_batch_video(
                 shot_video_paths.append(sync_res["video_path"])
                 shot_results.append(sync_res)
             else:
-                # Fallback: create standard placeholder clip matching resolution
+                # Fallback: create standard placeholder clip matching resolution with on-screen text
                 AudioConverter.create_timeline_mp4_from_audio(
                     input_audio_path=target_audio_path,
                     output_mp4_path=str(shot_out_mp4),
                     ffmpeg_path=ffmpeg_path,
                     width=target_w,
-                    height=target_h
+                    height=target_h,
+                    on_screen_text=p.on_screen_text if burn_on_screen_text else None
                 )
                 p.synced_video_path = str(shot_out_mp4)
                 shot_video_paths.append(str(shot_out_mp4))

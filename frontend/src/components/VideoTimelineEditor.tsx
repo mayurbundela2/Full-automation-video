@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { 
   Film, Video, Play, Pause, RefreshCw, Download, FolderOpen, 
   CheckCircle2, AlertCircle, Sparkles, Clock, Gauge, Image, FileVideo, 
   ChevronDown, ChevronUp, Layers, Scissors, Music, Volume2, Maximize2, Upload,
-  Smartphone, Monitor, Square, Sliders
+  Smartphone, Monitor, Square, Sliders, Type
 } from 'lucide-react';
 import { Batch, Paragraph, ScanMediaResponse } from '../types';
 import { api } from '../api';
@@ -17,6 +17,8 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const [mediaFolder, setMediaFolder] = useState<string>(batch.media_folder || '');
   const [aspectRatio, setAspectRatio] = useState<string>(batch.aspect_ratio || '16:9');
   const [fitMode, setFitMode] = useState<string>(batch.fit_mode || 'crop');
+  const [showOnScreenText, setShowOnScreenText] = useState<boolean>(true);
+  const [currentPlaybackTime, setCurrentPlaybackTime] = useState<number>(0);
   const [scanning, setScanning] = useState<boolean>(false);
   const [scanResult, setScanResult] = useState<ScanMediaResponse | null>(null);
   const [rendering, setRendering] = useState<boolean>(false);
@@ -89,6 +91,22 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
     batch.tight_audio?.duration || 
     paragraphs.some(p => p.latest_generation?.tight_duration)
   );
+
+  // Find currently active paragraph's on-screen text based on playback time
+  const activeShotOnScreenText = useMemo(() => {
+    if (!paragraphs.length) return null;
+    let accumulated = 0;
+    for (const p of paragraphs) {
+      const shotDur = audioSource === 'tight'
+        ? (p.latest_generation?.tight_duration || p.latest_generation?.duration || 2.5)
+        : (p.latest_generation?.duration || 2.5);
+      if (currentPlaybackTime >= accumulated && currentPlaybackTime < accumulated + shotDur) {
+        return p.on_screen_text?.trim() || null;
+      }
+      accumulated += shotDur;
+    }
+    return null;
+  }, [paragraphs, currentPlaybackTime, audioSource]);
 
   const activeVideoPath = audioSource === 'tight'
     ? batch.tight_mp4_path
@@ -207,7 +225,8 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
         narrationVolume, 
         audioSource,
         aspectRatio,
-        fitMode
+        fitMode,
+        burnOnScreenText: showOnScreenText
       });
       setRenderProgress({
         status: 'COMPLETED',
@@ -615,6 +634,23 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
               ))}
             </div>
           </div>
+
+          {/* On-Screen Text Animation Toggle */}
+          <div className="flex items-center space-x-2">
+            <button
+              type="button"
+              onClick={() => setShowOnScreenText(!showOnScreenText)}
+              className={`flex items-center space-x-1.5 px-3 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer border shadow-sm ${
+                showOnScreenText
+                  ? 'bg-amber-500/20 text-amber-300 border-amber-500/40 shadow-amber-500/10'
+                  : 'bg-slate-900/80 text-slate-500 border-slate-800 hover:text-slate-300'
+              }`}
+              title={showOnScreenText ? "On-Screen Text animation is enabled" : "On-Screen Text animation is disabled"}
+            >
+              <Type className={`w-3.5 h-3.5 ${showOnScreenText ? 'text-amber-400' : 'text-slate-500'}`} />
+              <span>TEXT ANIMATION: {showOnScreenText ? 'ON' : 'OFF'}</span>
+            </button>
+          </div>
         </div>
 
         {/* Real-time Render Progress Loading Bar */}
@@ -669,9 +705,24 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                 key={`${audioSource}-${aspectRatio}-${videoTimestamp}`}
                 ref={videoPlayerRef}
                 controls
+                onTimeUpdate={(e) => setCurrentPlaybackTime(e.currentTarget.currentTime)}
                 className="w-full h-full object-contain"
                 src={api.getMasterVideoUrl(batch.id, audioSource, aspectRatio, fitMode, videoTimestamp)}
               />
+
+              {/* Real-time Animated On-Screen Text Overlay in Center Bottom */}
+              {showOnScreenText && activeShotOnScreenText && (
+                <div 
+                  key={activeShotOnScreenText}
+                  className="absolute bottom-6 sm:bottom-12 left-1/2 -translate-x-1/2 z-20 pointer-events-none w-11/12 max-w-lg text-center animate-fadeIn transition-all duration-300"
+                >
+                  <div className="inline-block px-4 py-2 sm:px-5 sm:py-2.5 bg-black/85 backdrop-blur-md rounded-xl border border-amber-500/40 shadow-2xl shadow-black/90 transform transition-all duration-300">
+                    <p className="text-xs sm:text-sm md:text-base font-black text-amber-300 tracking-wide uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+                      {activeShotOnScreenText}
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
           ) : (
             <div className="text-center py-12 px-4 space-y-4 max-w-md">

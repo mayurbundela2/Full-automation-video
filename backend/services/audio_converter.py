@@ -278,7 +278,8 @@ class AudioConverter:
         output_mp4_path: str,
         ffmpeg_path: str = "ffmpeg",
         width: int = 1920,
-        height: int = 1080
+        height: int = 1080,
+        on_screen_text: Optional[str] = None
     ) -> Optional[str]:
         """
         Creates a clean timeline video with 320k AAC audio ready for CapCut and Premiere Pro import.
@@ -291,11 +292,42 @@ class AudioConverter:
         h = height if height % 2 == 0 else height + 1
         ffmpeg_bin = cls.resolve_ffmpeg(ffmpeg_path)
 
+        clean_text = (on_screen_text or "").strip()
+        temp_txt = None
+        vf_args = []
+
+        if clean_text:
+            temp_txt = out_mp4.parent / f"ph_text_{abs(hash(clean_text)) % 1000000}.txt"
+            temp_txt.write_text(clean_text, encoding="utf-8")
+            clean_txt_path = temp_txt.resolve().as_posix().replace(":", r"\:")
+
+            is_vertical = h > w
+            fontsize = max(24, int(min(w, h) * (0.045 if is_vertical else 0.042)))
+            margin_b = int(h * (0.10 if is_vertical else 0.075))
+            y_offset = max(15, int(h * 0.02))
+
+            y_expr = f"(h-text_h-{margin_b} + if(lt(t,0.35), {y_offset}*(1-t/0.35), 0))"
+            alpha_expr = "if(lt(t,0.35), t/0.35, 1)"
+
+            drawtext_str = (
+                f"drawtext="
+                f"textfile='{clean_txt_path}':"
+                f"fontcolor=white:"
+                f"fontsize={fontsize}:"
+                f"borderw=2:bordercolor=black@0.8:"
+                f"box=1:boxcolor=black@0.65:boxborderw=16:"
+                f"x=(w-text_w)/2:"
+                f"y='{y_expr}':"
+                f"alpha='{alpha_expr}'"
+            )
+            vf_args = ["-vf", drawtext_str]
+
         cmd_mp4 = [
             ffmpeg_bin, "-y",
             "-threads", "0",
             "-f", "lavfi", "-i", f"color=c=0x0c121e:s={w}x{h}:r=30",
             "-i", str(in_audio),
+            *vf_args,
             "-c:v", "libx264", "-preset", "ultrafast", "-tune", "stillimage", "-pix_fmt", "yuv420p",
             "-c:a", "aac", "-b:a", "320k",
             "-shortest",
@@ -314,6 +346,12 @@ class AudioConverter:
                 except Exception:
                     pass
             return None
+        finally:
+            if temp_txt and temp_txt.exists():
+                try:
+                    temp_txt.unlink()
+                except Exception:
+                    pass
 
         info = cls.get_audio_info(str(out_wav_path))
         return {

@@ -218,6 +218,61 @@ class VideoService:
             )
 
     @classmethod
+    def build_animated_text_filter(
+        cls,
+        text: str,
+        target_width: int,
+        target_height: int,
+        duration: float,
+        temp_dir: Path,
+        input_label: str = "[v]",
+        output_label: str = "[vout]"
+    ) -> Tuple[str, Optional[Path]]:
+        """
+        Creates an FFmpeg drawtext filter that smoothly animates on-screen text:
+        - Positioned in the bottom center of the video canvas
+        - Slide-up entrance animation (+25px -> 0px) over 0.35s
+        - Fade-in alpha (0.0 -> 1.0) over 0.35s
+        - Clean dark rounded banner box backdrop (black@0.65) and black outline for maximum legibility
+        - Fade-out alpha over 0.35s before the shot ends
+        - Safe bottom margin calculated for 16:9 vs 9:16 Shorts
+        """
+        clean_text = (text or "").strip()
+        if not clean_text:
+            return f"{input_label}null{output_label}", None
+
+        # Write text to temporary UTF-8 text file to eliminate shell escaping issues
+        txt_file = temp_dir / f"anim_text_{abs(hash(clean_text)) % 10000000}.txt"
+        txt_file.write_text(clean_text, encoding="utf-8")
+        clean_txt_path = txt_file.resolve().as_posix().replace(":", r"\:")
+
+        is_vertical = target_height > target_width
+        fontsize = max(24, int(min(target_width, target_height) * (0.045 if is_vertical else 0.042)))
+        margin_b = int(target_height * (0.10 if is_vertical else 0.075))
+        y_offset = max(15, int(target_height * 0.02))
+
+        dur = max(0.8, duration)
+        fade_in = min(0.35, dur * 0.25)
+        fade_out = min(0.35, dur * 0.25)
+
+        y_expr = f"(h-text_h-{margin_b} + if(lt(t,{fade_in:.2f}), {y_offset}*(1-t/{fade_in:.2f}), 0))"
+        alpha_expr = f"if(lt(t,{fade_in:.2f}), t/{fade_in:.2f}, if(gt(t,{dur-fade_out:.2f}), ({dur:.2f}-t)/{fade_out:.2f}, 1))"
+
+        filter_str = (
+            f"{input_label}drawtext="
+            f"textfile='{clean_txt_path}':"
+            f"fontcolor=white:"
+            f"fontsize={fontsize}:"
+            f"borderw=2:bordercolor=black@0.8:"
+            f"box=1:boxcolor=black@0.65:boxborderw=16:"
+            f"x=(w-text_w)/2:"
+            f"y='{y_expr}':"
+            f"alpha='{alpha_expr}'"
+            f"{output_label}"
+        )
+        return filter_str, txt_file
+
+    @classmethod
     def sync_media_to_audio(
         cls,
         media_path: str,
@@ -229,6 +284,7 @@ class VideoService:
         target_width: int = 1920,
         target_height: int = 1080,
         fit_mode: str = "crop",
+        on_screen_text: Optional[str] = None,
         ffmpeg_path: str = "ffmpeg"
     ) -> Dict[str, Any]:
         """
@@ -236,6 +292,7 @@ class VideoService:
         - Video: Adjusts speed with setpts=(target_duration / orig_duration)*PTS.
         - Image: Loops static frame for target_duration.
         - Scales & fits video according to fit_mode ('crop', 'fit', or 'blur_pad').
+        - Overlays animated on_screen_text centered at the bottom if provided.
         """
         m_path = Path(media_path)
         a_path = Path(audio_path)
@@ -258,91 +315,50 @@ class VideoService:
         media_type = media_info["media_type"]
         has_audio = media_info.get("has_audio", False)
 
-        if media_type == "video":
-            orig_duration = max(0.1, media_info["duration"])
-            speed_factor = target_duration / orig_duration
-            speed_ratio = round(speed_factor, 6)
-
-            scale_filter = cls.build_video_scale_filter("[__timed]", "[v]", target_width, target_height, fit_mode)
-
-            if has_audio:
-                tempo = 1.0 / speed_factor if speed_factor > 0 else 1.0
-                atempo_filter = cls.build_atempo_filter(tempo)
-                v_vol = round(max(0.0, min(2.0, video_volume)), 2)
-                n_vol = round(max(0.0, min(2.0, narration_volume)), 2)
-
-                filter_complex = (
-                    f"[0:v]setpts={speed_ratio}*PTS[__timed];"
-                    f"{scale_filter};"
-                    f"[0:a]{atempo_filter},aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=stereo,volume={v_vol}[va];"
-                    f"[1:a]aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=stereo,volume={n_vol}[na];"
-                    f"[va][na]amix=inputs=2:duration=longest:dropout_transition=0:normalize=0[a]"
-                )
-                audio_map_args = ["-map", "[a]"]
-            else:
-                # Silent video / visual-only clip
-                filter_complex = (
-                    f"[0:v]setpts={speed_ratio}*PTS[__timed];"
-                    f"{scale_filter}"
-                )
-                audio_map_args = ["-map", "1:a"]
-
-            cmd = [
-                ffmpeg_bin, "-y",
-                "-i", str(m_path),
-                "-i", str(a_path),
-                "-filter_complex", filter_complex,
-                "-map", "[v]",
-                *audio_map_args,
-                "-c:v", "libx264",
-                "-pix_fmt", "yuv420p",
-                "-preset", "fast",
-                "-c:a", "aac",
-                "-b:a", "320k",
-                "-t", str(target_duration),
-                str(out_v_path)
-            ]
-        else:
-            # Static image hold-frame
-            orig_duration = target_duration
-            speed_factor = 1.0
-
-            filter_complex = cls.build_video_scale_filter("[0:v]", "[v]", target_width, target_height, fit_mode)
-
-            cmd = [
-                ffmpeg_bin, "-y",
-                "-loop", "1",
-                "-t", str(target_duration),
-                "-i", str(m_path),
-                "-i", str(a_path),
-                "-filter_complex", filter_complex,
-                "-map", "[v]",
-                "-map", "1:a",
-                "-c:v", "libx264",
-                "-pix_fmt", "yuv420p",
-                "-preset", "fast",
-                "-c:a", "aac",
-                "-b:a", "320k",
-                "-shortest",
-                str(out_v_path)
-            ]
+        has_text = bool(on_screen_text and on_screen_text.strip())
+        temp_txt_file = None
 
         try:
-            subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
-        except subprocess.CalledProcessError as e:
-            if media_type == "video" and has_audio:
-                # In case source audio track is corrupt, fallback to narration only
-                fallback_scale = cls.build_video_scale_filter("[__timed]", "[v]", target_width, target_height, fit_mode)
-                fallback_cmd = [
+            if media_type == "video":
+                orig_duration = max(0.1, media_info["duration"])
+                speed_factor = target_duration / orig_duration
+                speed_ratio = round(speed_factor, 6)
+
+                if has_text:
+                    scale_filter = cls.build_video_scale_filter("[__timed]", "[__scaled]", target_width, target_height, fit_mode)
+                    text_filter, temp_txt_file = cls.build_animated_text_filter(
+                        on_screen_text, target_width, target_height, target_duration, out_v_path.parent, "[__scaled]", "[v]"
+                    )
+                    v_chain = f"[0:v]setpts={speed_ratio}*PTS[__timed];{scale_filter};{text_filter}"
+                else:
+                    scale_filter = cls.build_video_scale_filter("[__timed]", "[v]", target_width, target_height, fit_mode)
+                    v_chain = f"[0:v]setpts={speed_ratio}*PTS[__timed];{scale_filter}"
+
+                if has_audio:
+                    tempo = 1.0 / speed_factor if speed_factor > 0 else 1.0
+                    atempo_filter = cls.build_atempo_filter(tempo)
+                    v_vol = round(max(0.0, min(2.0, video_volume)), 2)
+                    n_vol = round(max(0.0, min(2.0, narration_volume)), 2)
+
+                    filter_complex = (
+                        f"{v_chain};"
+                        f"[0:a]{atempo_filter},aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=stereo,volume={v_vol}[va];"
+                        f"[1:a]aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=stereo,volume={n_vol}[na];"
+                        f"[va][na]amix=inputs=2:duration=longest:dropout_transition=0:normalize=0[a]"
+                    )
+                    audio_map_args = ["-map", "[a]"]
+                else:
+                    # Silent video / visual-only clip
+                    filter_complex = v_chain
+                    audio_map_args = ["-map", "1:a"]
+
+                cmd = [
                     ffmpeg_bin, "-y",
                     "-i", str(m_path),
                     "-i", str(a_path),
-                    "-filter_complex", (
-                        f"[0:v]setpts={speed_ratio}*PTS[__timed];"
-                        f"{fallback_scale}"
-                    ),
+                    "-filter_complex", filter_complex,
                     "-map", "[v]",
-                    "-map", "1:a",
+                    *audio_map_args,
                     "-c:v", "libx264",
                     "-pix_fmt", "yuv420p",
                     "-preset", "fast",
@@ -351,14 +367,72 @@ class VideoService:
                     "-t", str(target_duration),
                     str(out_v_path)
                 ]
-                try:
-                    subprocess.run(fallback_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
-                except subprocess.CalledProcessError:
+            else:
+                # Static image hold-frame
+                orig_duration = target_duration
+                speed_factor = 1.0
+
+                if has_text:
+                    scale_filter = cls.build_video_scale_filter("[0:v]", "[__scaled]", target_width, target_height, fit_mode)
+                    text_filter, temp_txt_file = cls.build_animated_text_filter(
+                        on_screen_text, target_width, target_height, target_duration, out_v_path.parent, "[__scaled]", "[v]"
+                    )
+                    filter_complex = f"{scale_filter};{text_filter}"
+                else:
+                    filter_complex = cls.build_video_scale_filter("[0:v]", "[v]", target_width, target_height, fit_mode)
+
+                cmd = [
+                    ffmpeg_bin, "-y",
+                    "-loop", "1",
+                    "-t", str(target_duration),
+                    "-i", str(m_path),
+                    "-i", str(a_path),
+                    "-filter_complex", filter_complex,
+                    "-map", "[v]",
+                    "-map", "1:a",
+                    "-c:v", "libx264",
+                    "-pix_fmt", "yuv420p",
+                    "-preset", "fast",
+                    "-c:a", "aac",
+                    "-b:a", "320k",
+                    "-shortest",
+                    str(out_v_path)
+                ]
+
+            try:
+                subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+            except subprocess.CalledProcessError as e:
+                if media_type == "video" and has_audio:
+                    # Fallback to narration audio only if source audio corrupt
+                    fallback_cmd = [
+                        ffmpeg_bin, "-y",
+                        "-i", str(m_path),
+                        "-i", str(a_path),
+                        "-filter_complex", v_chain,
+                        "-map", "[v]",
+                        "-map", "1:a",
+                        "-c:v", "libx264",
+                        "-pix_fmt", "yuv420p",
+                        "-preset", "fast",
+                        "-c:a", "aac",
+                        "-b:a", "320k",
+                        "-t", str(target_duration),
+                        str(out_v_path)
+                    ]
+                    try:
+                        subprocess.run(fallback_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+                    except subprocess.CalledProcessError:
+                        err = e.stderr.decode("utf-8", errors="replace")
+                        raise RuntimeError(f"FFmpeg video sync failed: {err}")
+                else:
                     err = e.stderr.decode("utf-8", errors="replace")
                     raise RuntimeError(f"FFmpeg video sync failed: {err}")
-            else:
-                err = e.stderr.decode("utf-8", errors="replace")
-                raise RuntimeError(f"FFmpeg video sync failed: {err}")
+        finally:
+            if temp_txt_file and temp_txt_file.exists():
+                try:
+                    temp_txt_file.unlink()
+                except Exception:
+                    pass
 
         # Extract representative thumbnail (at 0.3s or 0s)
         thumb_path = out_v_path.parent / f"{out_v_path.stem}_thumb.jpg"

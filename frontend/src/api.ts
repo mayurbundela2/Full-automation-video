@@ -800,6 +800,7 @@ export const api = {
       audioSource?: 'master' | 'tight';
       aspectRatio?: string;
       fitMode?: string;
+      burnOnScreenText?: boolean;
     }
   ): Promise<{ status: string; master_video_path: string; duration: number }> {
     if (await checkBackend()) {
@@ -809,6 +810,7 @@ export const api = {
       if (options?.audioSource) params.append('audio_source', options.audioSource);
       if (options?.aspectRatio) params.append('aspect_ratio', options.aspectRatio);
       if (options?.fitMode) params.append('fit_mode', options.fitMode);
+      if (options?.burnOnScreenText !== undefined) params.append('burn_on_screen_text', options.burnOnScreenText ? 'true' : 'false');
       const query = params.toString() ? `?${params.toString()}` : '';
       const res = await fetch(`${API_BASE}/batches/${batchId}/render-video${query}`, {
         method: 'POST',
