@@ -815,8 +815,9 @@ export const api = {
     };
   },
 
-  getMasterVideoUrl(batchId: number, source: 'master' | 'tight' = 'master'): string {
-    return `${API_BASE}/batches/${batchId}/master-video?source=${source}`;
+  getMasterVideoUrl(batchId: number, source: 'master' | 'tight' = 'master', timestamp?: number): string {
+    const t = timestamp ? `&t=${timestamp}` : '';
+    return `${API_BASE}/batches/${batchId}/master-video?source=${source}${t}`;
   },
 
   getParagraphVideoUrl(paragraphId: number): string {

@@ -60,7 +60,7 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   );
 
   const activeVideoPath = audioSource === 'tight'
-    ? (batch.tight_mp4_path || batch.tight_audio?.mp4_path)
+    ? batch.tight_mp4_path
     : batch.master_video_path;
 
   const activeVideoDuration = audioSource === 'tight'
@@ -550,7 +550,7 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                 ref={videoPlayerRef}
                 controls
                 className="w-full h-full object-contain"
-                src={`${api.getMasterVideoUrl(batch.id, audioSource)}?t=${videoTimestamp}`}
+                src={api.getMasterVideoUrl(batch.id, audioSource, videoTimestamp)}
               />
             </div>
           ) : (

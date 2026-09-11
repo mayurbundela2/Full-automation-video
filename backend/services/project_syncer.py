@@ -111,7 +111,7 @@ class ProjectSyncer:
         # 1. Master video
         for video_filename in ["full_timeline_master.mp4", "final_video_1080p.mp4", "full_batch_final.mp4"]:
             candidate = batch_dir / video_filename
-            if candidate.exists() and not batch.master_video_path:
+            if candidate.exists():
                 batch.master_video_path = str(candidate.resolve())
                 break
 
@@ -126,13 +126,16 @@ class ProjectSyncer:
         # 3. Tight audio & video
         tight_wav = batch_dir / "full_batch_tight.wav"
         tight_mp3 = batch_dir / "full_batch_tight.mp3"
-        tight_mp4 = batch_dir / "full_batch_tight.mp4"
         if tight_wav.exists() and not batch.tight_wav_path:
             batch.tight_wav_path = str(tight_wav.resolve())
         if tight_mp3.exists() and not batch.tight_mp3_path:
             batch.tight_mp3_path = str(tight_mp3.resolve())
-        if tight_mp4.exists() and not batch.tight_mp4_path:
-            batch.tight_mp4_path = str(tight_mp4.resolve())
+
+        for tight_vid_name in ["full_timeline_tight.mp4", "full_batch_tight.mp4"]:
+            tight_candidate = batch_dir / tight_vid_name
+            if tight_candidate.exists():
+                batch.tight_mp4_path = str(tight_candidate.resolve())
+                break
 
         # 4. Media folder scan
         media_dir = batch_dir / "media"

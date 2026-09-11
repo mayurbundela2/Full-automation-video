@@ -173,6 +173,29 @@ def enrich_batch(batch: Batch, db: Session) -> BatchResponse:
             "waveform": tight_wf
         }
 
+    output_dir_setting = app_settings.get("OUTPUT_FOLDER")
+    output_base = output_dir_setting if output_dir_setting else settings.OUTPUT_FOLDER
+    delivery = LocalDeliveryProvider(base_output_dir=output_base)
+    batch_dir = delivery.base_dir / sanitize_filename(batch.project.name) / f"Batch_{batch.batch_number:02d}"
+
+    # Resolve tight video timeline path if present on disk
+    tight_timeline = batch_dir / "full_timeline_tight.mp4"
+    if tight_timeline.exists():
+        tight_mp4_resolved = str(tight_timeline.resolve())
+    elif batch.tight_mp4_path and "full_timeline_tight" in batch.tight_mp4_path and os.path.exists(batch.tight_mp4_path):
+        tight_mp4_resolved = batch.tight_mp4_path
+    else:
+        tight_mp4_resolved = None
+
+    # Resolve master video timeline path if present on disk
+    master_timeline = batch_dir / "full_timeline_master.mp4"
+    if master_timeline.exists():
+        master_mp4_resolved = str(master_timeline.resolve())
+    elif batch.master_video_path and os.path.exists(batch.master_video_path):
+        master_mp4_resolved = batch.master_video_path
+    else:
+        master_mp4_resolved = None
+
     return BatchResponse(
         id=batch.id,
         project_id=batch.project_id,
@@ -191,9 +214,9 @@ def enrich_batch(batch: Batch, db: Session) -> BatchResponse:
         combined_audio=combined_info,
         tight_audio=tight_info,
         media_folder=batch.media_folder,
-        master_video_path=batch.master_video_path,
+        master_video_path=master_mp4_resolved,
         master_video_duration=batch.master_video_duration,
-        tight_mp4_path=batch.tight_mp4_path
+        tight_mp4_path=tight_mp4_resolved
     )
 
 
@@ -1247,21 +1270,22 @@ def get_batch_master_video(
     delivery = LocalDeliveryProvider(base_output_dir=output_base)
     batch_dir = delivery.base_dir / sanitize_filename(batch.project.name) / f"Batch_{batch.batch_number:02d}"
 
-    is_tight = source.lower() in ("tight", "trim")
+    clean_source = source.split("?")[0].split("&")[0].strip().lower()
+    is_tight = clean_source in ("tight", "trim")
     target_video_path = None
 
     if is_tight:
         candidates = [
-            batch.tight_mp4_path,
             str(batch_dir / "full_timeline_tight.mp4"),
+            batch.tight_mp4_path,
             str(batch_dir / "full_batch_tight.mp4"),
-            batch.master_video_path,
         ]
     else:
         candidates = [
-            batch.master_video_path,
             str(batch_dir / "full_timeline_master.mp4"),
-            batch.tight_mp4_path,
+            batch.master_video_path,
+            str(batch_dir / "final_video_1080p.mp4"),
+            str(batch_dir / "full_batch_final.mp4"),
         ]
 
     for c in candidates:
