@@ -694,7 +694,7 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
               onClick={handleCleanCache}
               disabled={cleaningCache || rendering || renderingTextOnly}
               className="flex items-center space-x-1.5 px-3 py-2 rounded-xl bg-slate-800/90 hover:bg-rose-950/60 hover:text-rose-300 hover:border-rose-700/80 text-slate-400 border border-slate-700/80 text-xs font-semibold shadow transition-all active:scale-95 disabled:opacity-40 cursor-pointer"
-              title="Delete temporary render files, leftover subtitle scripts, and redundant duplicate video files to free up disk space and memory"
+              title="Delete previous video timeline generated videos and temporary files to free memory & disk space (paragraph videos are completely safe and never touched)"
             >
               <Trash2 className={`w-3.5 h-3.5 ${cleaningCache ? 'animate-spin text-rose-400' : 'text-slate-400'}`} />
               <span>{cleaningCache ? 'CLEANING...' : 'CLEAN CACHE'}</span>

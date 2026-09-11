@@ -1290,6 +1290,15 @@ def render_batch_video(
         except Exception:
             pass
 
+        # When creating a new video timeline, delete previous timeline generated videos so they don't leak memory.
+        # NEVER delete paragraph shot videos in video_timeline/!
+        for old_timeline in batch_dir.glob("full_timeline_*.mp4"):
+            if old_timeline.name not in (ratio_filename, clean_backup_filename):
+                try:
+                    old_timeline.unlink()
+                except Exception:
+                    pass
+
         # If user has text animation enabled, burn it on top of the clean video
         if burn_on_screen_text:
             RENDER_PROGRESS[batch_id].update({
@@ -1619,6 +1628,25 @@ def clean_batch_video_cache(
                 reclaimed_bytes += f_size
         except Exception:
             pass
+
+    # 3. Clean old previous timeline videos that do not match the currently active aspect ratio
+    # ONLY clean previous full timeline videos (NEVER delete paragraph videos in video_timeline/)
+    active_ar = (batch.aspect_ratio or "16:9").replace(":", "x")
+    active_tight = f"full_timeline_tight_{active_ar}.mp4"
+    active_tight_clean = f"full_timeline_tight_{active_ar}_clean.mp4"
+    active_master = f"full_timeline_master_{active_ar}.mp4"
+    active_master_clean = f"full_timeline_master_{active_ar}_clean.mp4"
+    keep_files = {active_tight, active_tight_clean, active_master, active_master_clean}
+
+    for old_vid in batch_dir.glob("full_timeline_*.mp4"):
+        if old_vid.name not in keep_files:
+            try:
+                f_size = old_vid.stat().st_size
+                old_vid.unlink()
+                cleaned_count += 1
+                reclaimed_bytes += f_size
+            except Exception:
+                pass
 
     return {
         "status": "ok",
