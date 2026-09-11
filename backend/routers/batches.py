@@ -1437,6 +1437,9 @@ def get_batch_master_video(
             "Content-Disposition": f"{disposition}; filename=\"{filename}\"",
             "Accept-Ranges": "bytes",
             "Content-Length": str(len(content)),
+            "Cache-Control": "no-cache, no-store, must-revalidate",
+            "Pragma": "no-cache",
+            "Expires": "0",
         }
     )
 
@@ -1461,6 +1464,9 @@ def get_paragraph_video(para_id: int, download: bool = False, db: Session = Depe
             "Content-Disposition": f"{disposition}; filename=\"{filename}\"",
             "Accept-Ranges": "bytes",
             "Content-Length": str(len(content)),
+            "Cache-Control": "no-cache, no-store, must-revalidate",
+            "Pragma": "no-cache",
+            "Expires": "0",
         }
     )
 

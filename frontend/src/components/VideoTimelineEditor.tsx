@@ -587,7 +587,7 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
 
             {activeVideoPath && (
               <a
-                href={api.getMasterVideoUrl(batch.id, audioSource, aspectRatio, fitMode, undefined, true)}
+                href={api.getMasterVideoUrl(batch.id, audioSource, aspectRatio, fitMode, videoTimestamp, true)}
                 download={`batch_${batch.id}_${audioSource}_${aspectRatio.replace(':', 'x')}.mp4`}
                 className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow transition-all active:scale-95 cursor-pointer"
                 title={`Export ${aspectRatio} (${audioSource === 'tight' ? 'Tight / Trimmed' : 'Master'}) Video MP4`}
