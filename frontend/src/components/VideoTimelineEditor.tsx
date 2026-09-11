@@ -38,6 +38,7 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const [videoVolume, setVideoVolume] = useState<number>(1.0);
   const [narrationVolume, setNarrationVolume] = useState<number>(1.0);
   const [cleaningCache, setCleaningCache] = useState<boolean>(false);
+  const [showCleanModal, setShowCleanModal] = useState<boolean>(false);
   const [cacheCleanMessage, setCacheCleanMessage] = useState<string | null>(null);
   const [audioSource, setAudioSource] = useState<'master' | 'tight'>(
     (batch.tight_mp4_path || batch.tight_audio?.duration) ? 'tight' : 'master'
@@ -135,13 +136,13 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
     return full.slice(0, charsToShow);
   }, [activeShotDetails, textAnimationStyle]);
 
-  const activeVideoPath = audioSource === 'tight'
-    ? batch.tight_mp4_path
-    : batch.master_video_path;
+  const activeVideoPath = (audioSource === 'tight' ? batch.tight_mp4_path : batch.master_video_path)
+    || batch.tight_mp4_path
+    || batch.master_video_path;
 
   const activeVideoDuration = audioSource === 'tight'
     ? (batch.tight_video_duration || batch.tight_audio?.duration)
-    : batch.master_video_duration;
+    : (batch.master_video_duration || batch.tight_video_duration);
 
   const handleBrowseFolder = async () => {
     setIsBrowsing(true);
@@ -691,13 +692,13 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
             {/* CLEAN CACHE / FREE MEMORY & DISK BUTTON */}
             <button
               type="button"
-              onClick={handleCleanCache}
+              onClick={() => setShowCleanModal(true)}
               disabled={cleaningCache || rendering || renderingTextOnly}
               className="flex items-center space-x-1.5 px-3 py-2 rounded-xl bg-slate-800/90 hover:bg-rose-950/60 hover:text-rose-300 hover:border-rose-700/80 text-slate-400 border border-slate-700/80 text-xs font-semibold shadow transition-all active:scale-95 disabled:opacity-40 cursor-pointer"
-              title="Delete previous video timeline generated videos and temporary files to free memory & disk space (paragraph videos are completely safe and never touched)"
+              title="Delete older unused video timeline versions to free memory & disk space (current active video and paragraph clips are completely safe and never touched)"
             >
               <Trash2 className={`w-3.5 h-3.5 ${cleaningCache ? 'animate-spin text-rose-400' : 'text-slate-400'}`} />
-              <span>{cleaningCache ? 'CLEANING...' : 'CLEAN CACHE'}</span>
+              <span>{cleaningCache ? 'CLEANING...' : 'CLEAN OLD VIDEOS'}</span>
             </button>
           </div>
         </div>
@@ -968,6 +969,52 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
             >
               ✕
             </button>
+          </div>
+        )}
+
+        {/* Clean Confirmation Modal */}
+        {showCleanModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm p-4 animate-fadeIn">
+            <div className="bg-slate-900 border border-slate-700 rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4 text-left">
+              <div className="flex items-center space-x-3">
+                <div className="p-2.5 rounded-xl bg-rose-500/20 text-rose-400 border border-rose-500/30">
+                  <Trash2 className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-white">Clean Old Timeline Videos?</h3>
+                  <p className="text-xs text-slate-400">Free up disk space safely</p>
+                </div>
+              </div>
+
+              <div className="text-xs text-slate-300 leading-relaxed bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 space-y-2">
+                <p>This will delete leftover temporary files and older unused video timeline renders to reclaim disk space.</p>
+                <div className="pt-1 text-emerald-400 font-semibold space-y-1">
+                  <div>✓ The 1 video you are currently working on will stay safe</div>
+                  <div>✓ All paragraph video clips and audio are 100% preserved</div>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-end space-x-2.5 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setShowCleanModal(false)}
+                  className="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 transition-all cursor-pointer"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowCleanModal(false);
+                    handleCleanCache();
+                  }}
+                  disabled={cleaningCache}
+                  className="px-4 py-2 rounded-xl text-xs font-bold bg-rose-600 hover:bg-rose-500 text-white shadow-lg shadow-rose-600/30 transition-all cursor-pointer"
+                >
+                  {cleaningCache ? 'Cleaning...' : 'Yes, Clean Disk Space'}
+                </button>
+              </div>
+            </div>
           </div>
         )}
 

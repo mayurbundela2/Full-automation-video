@@ -181,22 +181,41 @@ def enrich_batch(batch: Batch, db: Session) -> BatchResponse:
     batch_dir = delivery.base_dir / sanitize_filename(batch.project.name) / f"Batch_{batch.batch_number:02d}"
 
     # Resolve tight video timeline path if present on disk
-    tight_timeline = batch_dir / "full_timeline_tight.mp4"
-    if tight_timeline.exists():
-        tight_mp4_resolved = str(tight_timeline.resolve())
-    elif batch.tight_mp4_path and "full_timeline_tight" in batch.tight_mp4_path and os.path.exists(batch.tight_mp4_path):
+    active_clean_ar = (batch.aspect_ratio or "16:9").replace(":", "x")
+    tight_candidates = [
+        batch_dir / f"full_timeline_tight_{active_clean_ar}.mp4",
+        batch_dir / "full_timeline_tight.mp4",
+        batch_dir / "full_timeline_tight_16x9.mp4",
+    ] + [f for f in batch_dir.glob("full_timeline_tight_*.mp4") if "_clean" not in f.name]
+
+    tight_mp4_resolved = None
+    for cand in tight_candidates:
+        if cand and os.path.exists(str(cand)) and os.path.getsize(str(cand)) > 1000:
+            tight_mp4_resolved = str(Path(cand).resolve())
+            break
+    if not tight_mp4_resolved and batch.tight_mp4_path and os.path.exists(batch.tight_mp4_path):
         tight_mp4_resolved = batch.tight_mp4_path
-    else:
-        tight_mp4_resolved = None
 
     # Resolve master video timeline path if present on disk
-    master_timeline = batch_dir / "full_timeline_master.mp4"
-    if master_timeline.exists():
-        master_mp4_resolved = str(master_timeline.resolve())
-    elif batch.master_video_path and os.path.exists(batch.master_video_path):
+    master_candidates = [
+        batch_dir / f"full_timeline_master_{active_clean_ar}.mp4",
+        batch_dir / "full_timeline_master.mp4",
+        batch_dir / "full_timeline_master_16x9.mp4",
+    ] + [f for f in batch_dir.glob("full_timeline_master_*.mp4") if "_clean" not in f.name]
+
+    master_mp4_resolved = None
+    for cand in master_candidates:
+        if cand and os.path.exists(str(cand)) and os.path.getsize(str(cand)) > 1000:
+            master_mp4_resolved = str(Path(cand).resolve())
+            break
+    if not master_mp4_resolved and batch.master_video_path and os.path.exists(batch.master_video_path):
         master_mp4_resolved = batch.master_video_path
-    else:
-        master_mp4_resolved = None
+
+    # Cross-source fallback: if user rendered one version, both should show the video
+    if not master_mp4_resolved and tight_mp4_resolved:
+        master_mp4_resolved = tight_mp4_resolved
+    if not tight_mp4_resolved and master_mp4_resolved:
+        tight_mp4_resolved = master_mp4_resolved
 
     return BatchResponse(
         id=batch.id,
@@ -1290,15 +1309,6 @@ def render_batch_video(
         except Exception:
             pass
 
-        # When creating a new video timeline, delete previous timeline generated videos so they don't leak memory.
-        # NEVER delete paragraph shot videos in video_timeline/!
-        for old_timeline in batch_dir.glob("full_timeline_*.mp4"):
-            if old_timeline.name not in (ratio_filename, clean_backup_filename):
-                try:
-                    old_timeline.unlink()
-                except Exception:
-                    pass
-
         # If user has text animation enabled, burn it on top of the clean video
         if burn_on_screen_text:
             RENDER_PROGRESS[batch_id].update({
@@ -1720,20 +1730,21 @@ def get_batch_master_video(
 
     # 2. If not already matching, look for any rendered base video to inspect or fast reformat
     if not target_video_path:
-        base_candidates = []
-        if is_tight:
-            base_candidates = [
-                str(batch_dir / "full_timeline_tight.mp4"),
-                batch.tight_mp4_path,
-                str(batch_dir / "full_batch_tight.mp4"),
-            ]
-        else:
-            base_candidates = [
-                str(batch_dir / "full_timeline_master.mp4"),
-                batch.master_video_path,
-                str(batch_dir / "final_video_1080p.mp4"),
-                str(batch_dir / "full_batch_final.mp4"),
-            ]
+        base_candidates = [
+            str(ratio_specific_path),
+            str(batch_dir / f"full_timeline_{'tight' if is_tight else 'master'}_{clean_ar}.mp4"),
+            str(batch_dir / f"full_timeline_{'master' if is_tight else 'tight'}_{clean_ar}.mp4"),
+            str(batch_dir / f"full_timeline_{'tight' if is_tight else 'master'}_16x9.mp4"),
+            str(batch_dir / f"full_timeline_{'master' if is_tight else 'tight'}_16x9.mp4"),
+            str(batch_dir / f"full_timeline_{'tight' if is_tight else 'master'}.mp4"),
+            str(batch_dir / f"full_timeline_{'master' if is_tight else 'tight'}.mp4"),
+            batch.tight_mp4_path,
+            batch.master_video_path,
+        ] + [str(p) for p in batch_dir.glob("full_timeline_*.mp4")] + [
+            str(batch_dir / "final_video_1080p.mp4"),
+            str(batch_dir / "full_batch_final.mp4"),
+            str(batch_dir / "full_batch_tight.mp4")
+        ]
 
         base_video = None
         for c in base_candidates:
