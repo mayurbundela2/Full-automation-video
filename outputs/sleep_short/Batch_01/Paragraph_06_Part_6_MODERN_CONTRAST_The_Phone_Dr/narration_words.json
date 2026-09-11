@@ -1,0 +1,83 @@
+{
+  "total_words": 11,
+  "total_duration": 2.72,
+  "words": [
+    {
+      "index": 1,
+      "word": "Fir",
+      "start": 0.275,
+      "end": 0.422,
+      "duration": 0.147
+    },
+    {
+      "index": 2,
+      "word": "bhi",
+      "start": 0.438,
+      "end": 0.585,
+      "duration": 0.147
+    },
+    {
+      "index": 3,
+      "word": "aadhi",
+      "start": 0.601,
+      "end": 0.846,
+      "duration": 0.245
+    },
+    {
+      "index": 4,
+      "word": "raat",
+      "start": 0.873,
+      "end": 1.069,
+      "duration": 0.196
+    },
+    {
+      "index": 5,
+      "word": "ko",
+      "start": 1.091,
+      "end": 1.189,
+      "duration": 0.098
+    },
+    {
+      "index": 6,
+      "word": "phone",
+      "start": 1.2,
+      "end": 1.444,
+      "duration": 0.245
+    },
+    {
+      "index": 7,
+      "word": "muh",
+      "start": 1.471,
+      "end": 1.618,
+      "duration": 0.147
+    },
+    {
+      "index": 8,
+      "word": "par",
+      "start": 1.635,
+      "end": 1.781,
+      "duration": 0.147
+    },
+    {
+      "index": 9,
+      "word": "gira",
+      "start": 1.798,
+      "end": 1.994,
+      "duration": 0.196
+    },
+    {
+      "index": 10,
+      "word": "rahe",
+      "start": 2.015,
+      "end": 2.211,
+      "duration": 0.196
+    },
+    {
+      "index": 11,
+      "word": "ho.",
+      "start": 2.233,
+      "end": 2.38,
+      "duration": 0.147
+    }
+  ]
+}

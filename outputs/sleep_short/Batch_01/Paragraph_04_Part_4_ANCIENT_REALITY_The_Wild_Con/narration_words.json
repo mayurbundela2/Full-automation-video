@@ -1,0 +1,90 @@
+{
+  "total_words": 12,
+  "total_duration": 7.44,
+  "words": [
+    {
+      "index": 1,
+      "word": "Baahar",
+      "start": 0.779,
+      "end": 1.216,
+      "duration": 0.437
+    },
+    {
+      "index": 2,
+      "word": "sher-tendua",
+      "start": 1.265,
+      "end": 2.066,
+      "duration": 0.801
+    },
+    {
+      "index": 3,
+      "word": "ghoom",
+      "start": 2.323,
+      "end": 2.687,
+      "duration": 0.364
+    },
+    {
+      "index": 4,
+      "word": "rahe",
+      "start": 2.728,
+      "end": 3.019,
+      "duration": 0.291
+    },
+    {
+      "index": 5,
+      "word": "the...",
+      "start": 3.051,
+      "end": 3.488,
+      "duration": 0.437
+    },
+    {
+      "index": 6,
+      "word": "fir",
+      "start": 4.448,
+      "end": 4.567,
+      "duration": 0.119
+    },
+    {
+      "index": 7,
+      "word": "bhi",
+      "start": 4.581,
+      "end": 4.7,
+      "duration": 0.119
+    },
+    {
+      "index": 8,
+      "word": "wo",
+      "start": 4.713,
+      "end": 4.793,
+      "duration": 0.08
+    },
+    {
+      "index": 9,
+      "word": "aath-nau",
+      "start": 4.801,
+      "end": 5.12,
+      "duration": 0.318
+    },
+    {
+      "index": 10,
+      "word": "ghante",
+      "start": 5.332,
+      "end": 6.021,
+      "duration": 0.689
+    },
+    {
+      "index": 11,
+      "word": "sote",
+      "start": 6.098,
+      "end": 6.557,
+      "duration": 0.46
+    },
+    {
+      "index": 12,
+      "word": "the.",
+      "start": 6.608,
+      "end": 7.068,
+      "duration": 0.46
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "total_words": 16,
+  "total_duration": 7.32,
+  "words": [
+    {
+      "index": 1,
+      "word": "Purwazon",
+      "start": 0.265,
+      "end": 0.739,
+      "duration": 0.474
+    },
+    {
+      "index": 2,
+      "word": "ne",
+      "start": 0.791,
+      "end": 0.91,
+      "duration": 0.118
+    },
+    {
+      "index": 3,
+      "word": "sher",
+      "start": 0.923,
+      "end": 1.16,
+      "duration": 0.237
+    },
+    {
+      "index": 4,
+      "word": "ke",
+      "start": 1.186,
+      "end": 1.305,
+      "duration": 0.118
+    },
+    {
+      "index": 5,
+      "word": "saamne",
+      "start": 1.318,
+      "end": 1.673,
+      "duration": 0.355
+    },
+    {
+      "index": 6,
+      "word": "sona",
+      "start": 1.712,
+      "end": 1.949,
+      "duration": 0.237
+    },
+    {
+      "index": 7,
+      "word": "seekha.",
+      "start": 1.976,
+      "end": 2.39,
+      "duration": 0.415
+    },
+    {
+      "index": 8,
+      "word": "Tum",
+      "start": 2.436,
+      "end": 2.614,
+      "duration": 0.178
+    },
+    {
+      "index": 9,
+      "word": "ek",
+      "start": 2.634,
+      "end": 2.752,
+      "duration": 0.118
+    },
+    {
+      "index": 10,
+      "word": "screen",
+      "start": 2.765,
+      "end": 3.121,
+      "duration": 0.355
+    },
+    {
+      "index": 11,
+      "word": "ke",
+      "start": 4.577,
+      "end": 4.746,
+      "duration": 0.169
+    },
+    {
+      "index": 12,
+      "word": "aage",
+      "start": 4.765,
+      "end": 5.104,
+      "duration": 0.339
+    },
+    {
+      "index": 13,
+      "word": "surrender",
+      "start": 5.141,
+      "end": 5.903,
+      "duration": 0.762
+    },
+    {
+      "index": 14,
+      "word": "kar",
+      "start": 5.988,
+      "end": 6.242,
+      "duration": 0.254
+    },
+    {
+      "index": 15,
+      "word": "rahe",
+      "start": 6.27,
+      "end": 6.608,
+      "duration": 0.339
+    },
+    {
+      "index": 16,
+      "word": "ho?",
+      "start": 6.646,
+      "end": 6.9,
+      "duration": 0.254
+    }
+  ]
+}

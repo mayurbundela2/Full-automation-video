@@ -1,0 +1,97 @@
+{
+  "total_words": 13,
+  "total_duration": 6.08,
+  "words": [
+    {
+      "index": 1,
+      "word": "Insaan",
+      "start": 0.366,
+      "end": 0.777,
+      "duration": 0.411
+    },
+    {
+      "index": 2,
+      "word": "ne",
+      "start": 0.823,
+      "end": 0.96,
+      "duration": 0.137
+    },
+    {
+      "index": 3,
+      "word": "neend",
+      "start": 0.975,
+      "end": 1.318,
+      "duration": 0.343
+    },
+    {
+      "index": 4,
+      "word": "kaise",
+      "start": 1.356,
+      "end": 1.699,
+      "duration": 0.343
+    },
+    {
+      "index": 5,
+      "word": "shuru",
+      "start": 1.737,
+      "end": 2.079,
+      "duration": 0.343
+    },
+    {
+      "index": 6,
+      "word": "ki...",
+      "start": 2.117,
+      "end": 2.46,
+      "duration": 0.343
+    },
+    {
+      "index": 7,
+      "word": "aur",
+      "start": 2.498,
+      "end": 2.704,
+      "duration": 0.206
+    },
+    {
+      "index": 8,
+      "word": "aath",
+      "start": 2.726,
+      "end": 3.001,
+      "duration": 0.274
+    },
+    {
+      "index": 9,
+      "word": "ghante",
+      "start": 3.371,
+      "end": 3.693,
+      "duration": 0.322
+    },
+    {
+      "index": 10,
+      "word": "ka",
+      "start": 3.97,
+      "end": 4.183,
+      "duration": 0.213
+    },
+    {
+      "index": 11,
+      "word": "myth",
+      "start": 4.206,
+      "end": 4.632,
+      "duration": 0.425
+    },
+    {
+      "index": 12,
+      "word": "kya",
+      "start": 4.679,
+      "end": 4.998,
+      "duration": 0.319
+    },
+    {
+      "index": 13,
+      "word": "hai...",
+      "start": 5.033,
+      "end": 5.671,
+      "duration": 0.638
+    }
+  ]
+}

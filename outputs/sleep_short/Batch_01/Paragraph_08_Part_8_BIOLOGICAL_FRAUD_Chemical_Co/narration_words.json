@@ -1,0 +1,41 @@
+{
+  "total_words": 5,
+  "total_duration": 3.56,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.0,
+      "end": 0.108,
+      "duration": 0.108
+    },
+    {
+      "index": 2,
+      "word": "melatonin",
+      "start": 0.284,
+      "end": 0.798,
+      "duration": 0.514
+    },
+    {
+      "index": 3,
+      "word": "pachaas",
+      "start": 0.855,
+      "end": 1.256,
+      "duration": 0.4
+    },
+    {
+      "index": 4,
+      "word": "percent",
+      "start": 1.714,
+      "end": 2.444,
+      "duration": 0.73
+    },
+    {
+      "index": 5,
+      "word": "crash.",
+      "start": 2.525,
+      "end": 3.151,
+      "duration": 0.626
+    }
+  ]
+}

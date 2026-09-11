@@ -1,0 +1,90 @@
+{
+  "total_words": 12,
+  "total_duration": 5.48,
+  "words": [
+    {
+      "index": 1,
+      "word": "\"Bas",
+      "start": 0.298,
+      "end": 0.545,
+      "duration": 0.247
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.573,
+      "end": 0.696,
+      "duration": 0.124
+    },
+    {
+      "index": 3,
+      "word": "aakhri",
+      "start": 0.71,
+      "end": 1.081,
+      "duration": 0.371
+    },
+    {
+      "index": 4,
+      "word": "reel",
+      "start": 1.122,
+      "end": 1.37,
+      "duration": 0.247
+    },
+    {
+      "index": 5,
+      "word": "dekh",
+      "start": 1.397,
+      "end": 1.645,
+      "duration": 0.247
+    },
+    {
+      "index": 6,
+      "word": "leta",
+      "start": 1.672,
+      "end": 1.919,
+      "duration": 0.247
+    },
+    {
+      "index": 7,
+      "word": "hoon\"",
+      "start": 1.947,
+      "end": 2.256,
+      "duration": 0.309
+    },
+    {
+      "index": 8,
+      "word": "bolke",
+      "start": 2.29,
+      "end": 2.6,
+      "duration": 0.309
+    },
+    {
+      "index": 9,
+      "word": "teen",
+      "start": 3.258,
+      "end": 3.459,
+      "duration": 0.201
+    },
+    {
+      "index": 10,
+      "word": "baj",
+      "start": 3.482,
+      "end": 3.633,
+      "duration": 0.151
+    },
+    {
+      "index": 11,
+      "word": "gaye",
+      "start": 3.649,
+      "end": 3.851,
+      "duration": 0.201
+    },
+    {
+      "index": 12,
+      "word": "na?",
+      "start": 4.322,
+      "end": 5.08,
+      "duration": 0.758
+    }
+  ]
+}

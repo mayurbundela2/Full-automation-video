@@ -1,0 +1,62 @@
+{
+  "total_words": 8,
+  "total_duration": 3.96,
+  "words": [
+    {
+      "index": 1,
+      "word": "Poori",
+      "start": 0.392,
+      "end": 0.633,
+      "duration": 0.241
+    },
+    {
+      "index": 2,
+      "word": "kahani...",
+      "start": 0.66,
+      "end": 1.095,
+      "duration": 0.435
+    },
+    {
+      "index": 3,
+      "word": "description",
+      "start": 1.541,
+      "end": 2.036,
+      "duration": 0.495
+    },
+    {
+      "index": 4,
+      "word": "mein",
+      "start": 2.091,
+      "end": 2.27,
+      "duration": 0.18
+    },
+    {
+      "index": 5,
+      "word": "link.",
+      "start": 2.29,
+      "end": 2.515,
+      "duration": 0.225
+    },
+    {
+      "index": 6,
+      "word": "Abhi",
+      "start": 2.54,
+      "end": 2.72,
+      "duration": 0.18
+    },
+    {
+      "index": 7,
+      "word": "click",
+      "start": 3.03,
+      "end": 3.34,
+      "duration": 0.31
+    },
+    {
+      "index": 8,
+      "word": "karo.",
+      "start": 3.374,
+      "end": 3.684,
+      "duration": 0.31
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "total_words": 13,
+  "total_duration": 6.88,
+  "words": [
+    {
+      "index": 1,
+      "word": "Teen",
+      "start": 0.283,
+      "end": 0.524,
+      "duration": 0.241
+    },
+    {
+      "index": 2,
+      "word": "lakh",
+      "start": 0.551,
+      "end": 0.792,
+      "duration": 0.241
+    },
+    {
+      "index": 3,
+      "word": "saal",
+      "start": 0.819,
+      "end": 1.06,
+      "duration": 0.241
+    },
+    {
+      "index": 4,
+      "word": "pehle",
+      "start": 1.087,
+      "end": 1.389,
+      "duration": 0.301
+    },
+    {
+      "index": 5,
+      "word": "humare",
+      "start": 1.422,
+      "end": 1.784,
+      "duration": 0.362
+    },
+    {
+      "index": 6,
+      "word": "purwazon",
+      "start": 2.326,
+      "end": 2.901,
+      "duration": 0.575
+    },
+    {
+      "index": 7,
+      "word": "ke",
+      "start": 2.965,
+      "end": 3.109,
+      "duration": 0.144
+    },
+    {
+      "index": 8,
+      "word": "paas",
+      "start": 3.125,
+      "end": 3.412,
+      "duration": 0.287
+    },
+    {
+      "index": 9,
+      "word": "na",
+      "start": 3.444,
+      "end": 3.588,
+      "duration": 0.144
+    },
+    {
+      "index": 10,
+      "word": "ghar",
+      "start": 3.604,
+      "end": 3.891,
+      "duration": 0.287
+    },
+    {
+      "index": 11,
+      "word": "tha,",
+      "start": 4.238,
+      "end": 4.457,
+      "duration": 0.219
+    },
+    {
+      "index": 12,
+      "word": "na",
+      "start": 4.482,
+      "end": 4.591,
+      "duration": 0.11
+    },
+    {
+      "index": 13,
+      "word": "security.",
+      "start": 4.604,
+      "end": 5.097,
+      "duration": 0.494
+    }
+  ]
+}

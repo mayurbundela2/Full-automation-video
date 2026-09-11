@@ -1,0 +1,90 @@
+{
+  "total_words": 12,
+  "total_duration": 6.32,
+  "words": [
+    {
+      "index": 1,
+      "word": "Jab",
+      "start": 0.327,
+      "end": 0.522,
+      "duration": 0.195
+    },
+    {
+      "index": 2,
+      "word": "sooge",
+      "start": 0.543,
+      "end": 0.868,
+      "duration": 0.325
+    },
+    {
+      "index": 3,
+      "word": "nahi...",
+      "start": 0.904,
+      "end": 1.359,
+      "duration": 0.455
+    },
+    {
+      "index": 4,
+      "word": "toh",
+      "start": 1.409,
+      "end": 1.604,
+      "duration": 0.195
+    },
+    {
+      "index": 5,
+      "word": "dimaag",
+      "start": 2.213,
+      "end": 2.508,
+      "duration": 0.295
+    },
+    {
+      "index": 6,
+      "word": "ka",
+      "start": 2.541,
+      "end": 2.639,
+      "duration": 0.098
+    },
+    {
+      "index": 7,
+      "word": "cleaning",
+      "start": 2.65,
+      "end": 3.043,
+      "duration": 0.393
+    },
+    {
+      "index": 8,
+      "word": "system",
+      "start": 3.253,
+      "end": 3.61,
+      "duration": 0.357
+    },
+    {
+      "index": 9,
+      "word": "kachra",
+      "start": 3.649,
+      "end": 4.006,
+      "duration": 0.357
+    },
+    {
+      "index": 10,
+      "word": "kaise",
+      "start": 4.046,
+      "end": 4.343,
+      "duration": 0.297
+    },
+    {
+      "index": 11,
+      "word": "saaf",
+      "start": 4.376,
+      "end": 4.614,
+      "duration": 0.238
+    },
+    {
+      "index": 12,
+      "word": "karega?",
+      "start": 4.792,
+      "end": 5.811,
+      "duration": 1.019
+    }
+  ]
+}

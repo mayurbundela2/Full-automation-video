@@ -1,0 +1,90 @@
+{
+  "total_words": 12,
+  "total_duration": 4.04,
+  "words": [
+    {
+      "index": 1,
+      "word": "\"Chaar",
+      "start": 0.298,
+      "end": 0.632,
+      "duration": 0.334
+    },
+    {
+      "index": 2,
+      "word": "ghante",
+      "start": 0.669,
+      "end": 1.002,
+      "duration": 0.334
+    },
+    {
+      "index": 3,
+      "word": "so",
+      "start": 1.039,
+      "end": 1.15,
+      "duration": 0.111
+    },
+    {
+      "index": 4,
+      "word": "ke",
+      "start": 1.163,
+      "end": 1.274,
+      "duration": 0.111
+    },
+    {
+      "index": 5,
+      "word": "kaam",
+      "start": 1.286,
+      "end": 1.509,
+      "duration": 0.222
+    },
+    {
+      "index": 6,
+      "word": "chala",
+      "start": 1.533,
+      "end": 1.811,
+      "duration": 0.278
+    },
+    {
+      "index": 7,
+      "word": "leta",
+      "start": 1.842,
+      "end": 2.064,
+      "duration": 0.222
+    },
+    {
+      "index": 8,
+      "word": "hoon",
+      "start": 2.089,
+      "end": 2.312,
+      "duration": 0.222
+    },
+    {
+      "index": 9,
+      "word": "bro\"",
+      "start": 2.336,
+      "end": 2.559,
+      "duration": 0.222
+    },
+    {
+      "index": 10,
+      "word": "bolna",
+      "start": 2.583,
+      "end": 2.861,
+      "duration": 0.278
+    },
+    {
+      "index": 11,
+      "word": "band",
+      "start": 2.892,
+      "end": 3.114,
+      "duration": 0.222
+    },
+    {
+      "index": 12,
+      "word": "karo!",
+      "start": 3.139,
+      "end": 3.417,
+      "duration": 0.278
+    }
+  ]
+}

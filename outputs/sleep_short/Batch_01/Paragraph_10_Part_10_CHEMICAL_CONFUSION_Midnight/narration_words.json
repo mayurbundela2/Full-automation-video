@@ -1,0 +1,97 @@
+{
+  "total_words": 13,
+  "total_duration": 5.76,
+  "words": [
+    {
+      "index": 1,
+      "word": "Isiliye",
+      "start": 0.232,
+      "end": 0.801,
+      "duration": 0.569
+    },
+    {
+      "index": 2,
+      "word": "raat",
+      "start": 0.864,
+      "end": 1.19,
+      "duration": 0.325
+    },
+    {
+      "index": 3,
+      "word": "ke",
+      "start": 1.226,
+      "end": 1.388,
+      "duration": 0.163
+    },
+    {
+      "index": 4,
+      "word": "do",
+      "start": 1.406,
+      "end": 1.569,
+      "duration": 0.163
+    },
+    {
+      "index": 5,
+      "word": "baje",
+      "start": 1.587,
+      "end": 1.912,
+      "duration": 0.325
+    },
+    {
+      "index": 6,
+      "word": "achanak",
+      "start": 1.949,
+      "end": 2.518,
+      "duration": 0.569
+    },
+    {
+      "index": 7,
+      "word": "Kurkure",
+      "start": 2.581,
+      "end": 3.15,
+      "duration": 0.569
+    },
+    {
+      "index": 8,
+      "word": "aur",
+      "start": 3.213,
+      "end": 3.457,
+      "duration": 0.244
+    },
+    {
+      "index": 9,
+      "word": "Maggi",
+      "start": 3.484,
+      "end": 3.891,
+      "duration": 0.407
+    },
+    {
+      "index": 10,
+      "word": "ki",
+      "start": 3.936,
+      "end": 4.099,
+      "duration": 0.163
+    },
+    {
+      "index": 11,
+      "word": "craving",
+      "start": 4.117,
+      "end": 4.686,
+      "duration": 0.569
+    },
+    {
+      "index": 12,
+      "word": "hoti",
+      "start": 4.749,
+      "end": 5.074,
+      "duration": 0.325
+    },
+    {
+      "index": 13,
+      "word": "hai!",
+      "start": 5.111,
+      "end": 5.436,
+      "duration": 0.325
+    }
+  ]
+}

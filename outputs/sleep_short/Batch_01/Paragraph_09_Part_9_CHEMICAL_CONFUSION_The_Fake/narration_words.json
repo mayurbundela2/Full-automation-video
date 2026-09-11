@@ -1,0 +1,90 @@
+{
+  "total_words": 12,
+  "total_duration": 4.88,
+  "words": [
+    {
+      "index": 1,
+      "word": "Dimaag",
+      "start": 0.332,
+      "end": 0.707,
+      "duration": 0.375
+    },
+    {
+      "index": 2,
+      "word": "ko",
+      "start": 0.749,
+      "end": 0.874,
+      "duration": 0.125
+    },
+    {
+      "index": 3,
+      "word": "lagta",
+      "start": 0.888,
+      "end": 1.2,
+      "duration": 0.313
+    },
+    {
+      "index": 4,
+      "word": "hai",
+      "start": 1.235,
+      "end": 1.423,
+      "duration": 0.188
+    },
+    {
+      "index": 5,
+      "word": "din",
+      "start": 1.443,
+      "end": 1.631,
+      "duration": 0.188
+    },
+    {
+      "index": 6,
+      "word": "hai,",
+      "start": 1.652,
+      "end": 1.902,
+      "duration": 0.25
+    },
+    {
+      "index": 7,
+      "word": "toh",
+      "start": 1.93,
+      "end": 2.117,
+      "duration": 0.188
+    },
+    {
+      "index": 8,
+      "word": "Ghrelin",
+      "start": 2.351,
+      "end": 2.851,
+      "duration": 0.5
+    },
+    {
+      "index": 9,
+      "word": "hormone",
+      "start": 2.907,
+      "end": 3.407,
+      "duration": 0.5
+    },
+    {
+      "index": 10,
+      "word": "badh",
+      "start": 3.463,
+      "end": 3.749,
+      "duration": 0.286
+    },
+    {
+      "index": 11,
+      "word": "jaata",
+      "start": 3.78,
+      "end": 4.138,
+      "duration": 0.357
+    },
+    {
+      "index": 12,
+      "word": "hai...",
+      "start": 4.178,
+      "end": 4.606,
+      "duration": 0.429
+    }
+  ]
+}

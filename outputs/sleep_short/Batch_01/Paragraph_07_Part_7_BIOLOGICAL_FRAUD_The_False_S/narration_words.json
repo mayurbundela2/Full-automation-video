@@ -1,0 +1,97 @@
+{
+  "total_words": 13,
+  "total_duration": 3.92,
+  "words": [
+    {
+      "index": 1,
+      "word": "Phone",
+      "start": 0.256,
+      "end": 0.494,
+      "duration": 0.238
+    },
+    {
+      "index": 2,
+      "word": "ki",
+      "start": 0.521,
+      "end": 0.616,
+      "duration": 0.095
+    },
+    {
+      "index": 3,
+      "word": "blue",
+      "start": 0.627,
+      "end": 0.817,
+      "duration": 0.191
+    },
+    {
+      "index": 4,
+      "word": "light",
+      "start": 0.838,
+      "end": 1.077,
+      "duration": 0.238
+    },
+    {
+      "index": 5,
+      "word": "dimaag",
+      "start": 1.103,
+      "end": 1.389,
+      "duration": 0.286
+    },
+    {
+      "index": 6,
+      "word": "ko",
+      "start": 1.421,
+      "end": 1.516,
+      "duration": 0.095
+    },
+    {
+      "index": 7,
+      "word": "bolti",
+      "start": 1.527,
+      "end": 1.765,
+      "duration": 0.238
+    },
+    {
+      "index": 8,
+      "word": "hai...",
+      "start": 1.791,
+      "end": 2.077,
+      "duration": 0.286
+    },
+    {
+      "index": 9,
+      "word": "\"Sunrise",
+      "start": 2.109,
+      "end": 2.49,
+      "duration": 0.381
+    },
+    {
+      "index": 10,
+      "word": "ho",
+      "start": 2.533,
+      "end": 2.628,
+      "duration": 0.095
+    },
+    {
+      "index": 11,
+      "word": "gaya,",
+      "start": 2.638,
+      "end": 2.877,
+      "duration": 0.238
+    },
+    {
+      "index": 12,
+      "word": "uth",
+      "start": 2.903,
+      "end": 3.046,
+      "duration": 0.143
+    },
+    {
+      "index": 13,
+      "word": "jao!\"",
+      "start": 3.254,
+      "end": 3.612,
+      "duration": 0.358
+    }
+  ]
+}

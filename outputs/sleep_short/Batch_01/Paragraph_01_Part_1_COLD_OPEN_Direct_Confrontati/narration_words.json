@@ -1,0 +1,62 @@
+{
+  "total_words": 8,
+  "total_duration": 2.92,
+  "words": [
+    {
+      "index": 1,
+      "word": "Sach",
+      "start": 0.283,
+      "end": 0.424,
+      "duration": 0.141
+    },
+    {
+      "index": 2,
+      "word": "batao...",
+      "start": 0.439,
+      "end": 0.721,
+      "duration": 0.281
+    },
+    {
+      "index": 3,
+      "word": "kal",
+      "start": 0.752,
+      "end": 0.857,
+      "duration": 0.105
+    },
+    {
+      "index": 4,
+      "word": "raat",
+      "start": 1.435,
+      "end": 1.633,
+      "duration": 0.198
+    },
+    {
+      "index": 5,
+      "word": "kitne",
+      "start": 1.655,
+      "end": 1.903,
+      "duration": 0.248
+    },
+    {
+      "index": 6,
+      "word": "baje",
+      "start": 1.93,
+      "end": 2.129,
+      "duration": 0.198
+    },
+    {
+      "index": 7,
+      "word": "soye",
+      "start": 2.151,
+      "end": 2.349,
+      "duration": 0.198
+    },
+    {
+      "index": 8,
+      "word": "the?",
+      "start": 2.371,
+      "end": 2.569,
+      "duration": 0.198
+    }
+  ]
+}
