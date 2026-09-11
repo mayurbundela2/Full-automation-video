@@ -1,6 +1,7 @@
 import json
 import re
 import shutil
+import time
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 from sqlalchemy.orm import Session
@@ -18,8 +19,16 @@ class ProjectSyncer:
     discovered and loaded into the UI.
     """
 
+    _last_sync_time: float = 0.0
+    _SYNC_COOLDOWN_SECONDS: float = 20.0
+
     @classmethod
-    def sync_outputs(cls, db: Session, base_output_dir: str = "outputs") -> Dict[str, Any]:
+    def sync_outputs(cls, db: Session, base_output_dir: str = "outputs", force: bool = False) -> Dict[str, Any]:
+        now = time.time()
+        if not force and (now - cls._last_sync_time < cls._SYNC_COOLDOWN_SECONDS):
+            return {"synced_projects": 0, "total_projects": db.query(Project).count(), "cached": True}
+
+        cls._last_sync_time = now
         base_dir = Path(base_output_dir)
         if not base_dir.exists() or not base_dir.is_dir():
             return {"synced_projects": 0, "total_projects": db.query(Project).count()}
@@ -177,6 +186,10 @@ class ProjectSyncer:
 
         if not target_para and len(existing_paras) == 1 and not existing_paras[0].transcript:
             target_para = existing_paras[0]
+
+        if target_para and target_para.status == "COMPLETED" and target_para.generation_id:
+            # Paragraph already synced and attached to generation, skip redundant disk file re-checks
+            return
 
         if not target_para:
             target_para = Paragraph(

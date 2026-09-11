@@ -11,11 +11,20 @@ class WaveformService:
     for rich, smooth client-side waveform rendering.
     """
 
+    _peaks_cache: Dict[tuple, Dict[str, Any]] = {}
+
     @classmethod
     def extract_peaks_from_wav(cls, wav_path: str, num_peaks: int = 120) -> Dict[str, Any]:
         """
         Reads WAV file and returns normalized peak amplitudes [0.05 to 1.0] and duration.
+        Caches results by (path, mtime, size, num_peaks) to eliminate repetitive disk reads.
         """
+        if not wav_path:
+            return {
+                "peaks": [0.1] * num_peaks,
+                "duration": 0.0
+            }
+
         p = Path(wav_path)
         if not p.exists():
             return {
@@ -24,6 +33,10 @@ class WaveformService:
             }
 
         try:
+            stat = p.stat()
+            cache_key = (str(p.resolve()), stat.st_mtime, stat.st_size, num_peaks)
+            if cache_key in cls._peaks_cache:
+                return cls._peaks_cache[cache_key]
             with wave.open(str(p), "rb") as wf:
                 channels = wf.getnchannels()
                 sample_width = wf.getsampwidth()
@@ -73,12 +86,14 @@ class WaveformService:
                 # Normalize and apply subtle non-linear boost for visual aesthetics
                 norm_peaks = [round(max(0.08, float((p / max_val) ** 0.8)), 3) for p in peaks]
 
-                return {
+                result = {
                     "peaks": norm_peaks,
                     "duration": duration,
                     "sample_rate": framerate,
                     "channels": channels
                 }
+                cls._peaks_cache[cache_key] = result
+                return result
         except Exception:
             # Safe fallback if waveform parsing encounters any exception
             return {

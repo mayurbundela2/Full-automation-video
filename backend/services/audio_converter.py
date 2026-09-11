@@ -92,6 +92,7 @@ class AudioConverter:
         cmd = [
             resolved_bin,
             "-y",  # overwrite output
+            "-threads", "0",
             "-i", str(w_path),
             "-codec:a", "libmp3lame",
             "-b:a", bitrate,
@@ -235,6 +236,7 @@ class AudioConverter:
         )
         cmd_trim = [
             ffmpeg_bin, "-y",
+            "-threads", "0",
             "-i", str(in_path),
             "-af", filter_str,
             str(out_wav_path)
@@ -287,9 +289,10 @@ class AudioConverter:
 
         cmd_mp4 = [
             ffmpeg_bin, "-y",
+            "-threads", "0",
             "-f", "lavfi", "-i", "color=c=0x0c121e:s=1920x1080:r=30",
             "-i", str(in_audio),
-            "-c:v", "libx264", "-tune", "stillimage", "-pix_fmt", "yuv420p",
+            "-c:v", "libx264", "-preset", "ultrafast", "-tune", "stillimage", "-pix_fmt", "yuv420p",
             "-c:a", "aac", "-b:a", "320k",
             "-shortest",
             str(out_mp4)

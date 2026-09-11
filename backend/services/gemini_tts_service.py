@@ -99,8 +99,9 @@ class GeminiTTSService:
             if fm not in models_to_try:
                 models_to_try.append(fm)
 
-        # Start from current active working key index and cycle through keys
+        # Start from current active working key index and advance so concurrent requests select distinct keys
         start_idx = cls._current_active_key_index % total_keys
+        cls._current_active_key_index = (cls._current_active_key_index + 1) % total_keys
 
         for step in range(total_keys):
             key_index = (start_idx + step) % total_keys

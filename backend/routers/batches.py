@@ -2,7 +2,7 @@ import subprocess
 import time
 from pathlib import Path
 import os
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Tuple
 from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks, File, UploadFile, Query
 from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
@@ -28,16 +28,27 @@ from backend.config.settings import settings
 router = APIRouter(tags=["Batches"])
 
 
-def enrich_paragraph(para: Paragraph, db: Session) -> ParagraphResponse:
-    # Fetch limit thresholds
-    max_c = int(db.query(AppSetting).filter(AppSetting.key == "MAX_TTS_CHARACTERS").first().value if db.query(AppSetting).filter(AppSetting.key == "MAX_TTS_CHARACTERS").first() else settings.MAX_TTS_CHARACTERS)
-    max_w = int(db.query(AppSetting).filter(AppSetting.key == "MAX_TTS_WORDS").first().value if db.query(AppSetting).filter(AppSetting.key == "MAX_TTS_WORDS").first() else settings.MAX_TTS_WORDS)
-    threshold = float(db.query(AppSetting).filter(AppSetting.key == "NEAR_LIMIT_THRESHOLD").first().value if db.query(AppSetting).filter(AppSetting.key == "NEAR_LIMIT_THRESHOLD").first() else settings.NEAR_LIMIT_THRESHOLD)
+def enrich_paragraph(
+    para: Paragraph, 
+    db: Session, 
+    settings_tuple: Optional[Tuple[int, int, float]] = None,
+    preloaded_gen: Optional[Generation] = None
+) -> ParagraphResponse:
+    # Fetch limit thresholds (or use pre-loaded tuple from enrich_batch)
+    if settings_tuple:
+        max_c, max_w, threshold = settings_tuple
+    else:
+        app_settings = {s.key: s.value for s in db.query(AppSetting).all()}
+        max_c = int(app_settings.get("MAX_TTS_CHARACTERS", settings.MAX_TTS_CHARACTERS))
+        max_w = int(app_settings.get("MAX_TTS_WORDS", settings.MAX_TTS_WORDS))
+        threshold = float(app_settings.get("NEAR_LIMIT_THRESHOLD", settings.NEAR_LIMIT_THRESHOLD))
 
     metrics = TextSplitter.check_limit_status(para.transcript, max_c, max_w, threshold)
     
-    # Latest generation info
-    latest_gen = db.query(Generation).filter(Generation.paragraph_id == para.id).order_by(Generation.created_at.desc()).first()
+    # Latest generation info (use preloaded if supplied)
+    latest_gen = preloaded_gen if preloaded_gen is not None else (
+        db.query(Generation).filter(Generation.paragraph_id == para.id).order_by(Generation.created_at.desc()).first()
+    )
     gen_dict = None
     if latest_gen:
         waveform_data = WaveformService.extract_peaks_from_wav(latest_gen.wav_path) if latest_gen.wav_path else None
@@ -98,7 +109,26 @@ def enrich_paragraph(para: Paragraph, db: Session) -> ParagraphResponse:
 
 
 def enrich_batch(batch: Batch, db: Session) -> BatchResponse:
-    paragraphs = [enrich_paragraph(p, db) for p in batch.paragraphs]
+    # 1. Preload settings in a single SQL query
+    app_settings = {s.key: s.value for s in db.query(AppSetting).all()}
+    max_c = int(app_settings.get("MAX_TTS_CHARACTERS", settings.MAX_TTS_CHARACTERS))
+    max_w = int(app_settings.get("MAX_TTS_WORDS", settings.MAX_TTS_WORDS))
+    threshold = float(app_settings.get("NEAR_LIMIT_THRESHOLD", settings.NEAR_LIMIT_THRESHOLD))
+    settings_tuple = (max_c, max_w, threshold)
+
+    # 2. Preload all latest generations in a single SQL query
+    para_ids = [p.id for p in batch.paragraphs]
+    latest_gen_map = {}
+    if para_ids:
+        gens = db.query(Generation).filter(Generation.paragraph_id.in_(para_ids)).order_by(Generation.created_at.asc()).all()
+        for g in gens:
+            latest_gen_map[g.paragraph_id] = g
+
+    # 3. Enrich all paragraphs using preloaded memory mappings
+    paragraphs = [
+        enrich_paragraph(p, db, settings_tuple=settings_tuple, preloaded_gen=latest_gen_map.get(p.id)) 
+        for p in batch.paragraphs
+    ]
     total_words = sum(p.word_count for p in paragraphs)
     total_characters = sum(p.character_count for p in paragraphs)
     ready_count = sum(

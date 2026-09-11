@@ -11,6 +11,7 @@ import { ScriptWordCheckerModal } from '../components/ScriptWordCheckerModal';
 import { GenerationProgress } from '../components/GenerationProgress';
 import { VideoTimelineEditor } from '../components/VideoTimelineEditor';
 import { DataExporterModal } from '../components/DataExporterModal';
+import { UniversalLoadingModal, LoadingModalState } from '../components/UniversalLoadingModal';
 import { NativeExporter } from '../services/nativeExporter';
 import { api } from '../api';
 
@@ -45,6 +46,19 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
     current: 0,
     total: 0,
     message: '',
+  });
+
+  // Universal loading modal with progress, percentage & ETA
+  const [loadingModal, setLoadingModal] = useState<LoadingModalState>({
+    isOpen: false,
+    title: '',
+    subtitle: '',
+    currentStep: '',
+    progress: 0,
+    currentCount: 0,
+    totalCount: 0,
+    status: 'idle',
+    startTime: Date.now(),
   });
 
   const [masterAudioUrl, setMasterAudioUrl] = useState<string>('');
@@ -127,10 +141,10 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
   }, [project.id]);
 
   useEffect(() => {
-    if (selectedBatchId && !loading) {
+    if (selectedBatchId && !loading && currentBatch?.id !== selectedBatchId) {
       fetchCurrentBatch();
     }
-  }, [selectedBatchId]);
+  }, [selectedBatchId, loading]);
 
   useEffect(() => {
     let active = true;
@@ -222,26 +236,70 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
     }
 
     setGeneratingAll(true);
+    setLoadingModal({
+      isOpen: true,
+      title: 'Batch Voice Synthesis',
+      subtitle: `Generating ${readyParas.length} paragraph(s) with multi-key acceleration`,
+      currentStep: `Preparing ${readyParas.length} paragraph(s)...`,
+      progress: 0,
+      currentCount: 0,
+      totalCount: readyParas.length,
+      status: 'running',
+      startTime: Date.now(),
+    });
+
     setProgressState({
       status: 'running',
       current: 0,
       total: readyParas.length,
-      message: `Starting sequential generation of ${readyParas.length} ungenerated paragraph(s)...`,
+      message: `Starting generation of ${readyParas.length} ungenerated paragraph(s)...`,
     });
 
     try {
-      for (let i = 0; i < readyParas.length; i++) {
-        const para = readyParas[i];
-        setProgressState({
-          status: 'running',
-          current: i + 1,
-          total: readyParas.length,
-          message: `Generating Paragraph ${para.paragraph_number} (${i + 1}/${readyParas.length})...`,
-        });
+      // Run with concurrent worker pool over available API keys to cut generation time in half
+      const CONCURRENCY = 2;
+      let completedCount = 0;
+      let currentIndex = 0;
 
-        await api.generateParagraph(para.id);
-        await fetchCurrentBatch();
-      }
+      const runWorker = async () => {
+        while (currentIndex < readyParas.length) {
+          const idx = currentIndex++;
+          const para = readyParas[idx];
+          const previewSnippet = (para.transcript || '').slice(0, 65);
+
+          setLoadingModal((prev) => ({
+            ...prev,
+            currentStep: `[Para #${para.paragraph_number}] "${previewSnippet}..."`,
+          }));
+
+          try {
+            await api.generateParagraph(para.id);
+          } catch (paraErr: any) {
+            console.error(`Error generating paragraph #${para.paragraph_number}:`, paraErr);
+          }
+
+          completedCount++;
+          const pct = Math.round((completedCount / readyParas.length) * 85);
+
+          setProgressState({
+            status: 'running',
+            current: completedCount,
+            total: readyParas.length,
+            message: `Generated Paragraph #${para.paragraph_number} (${completedCount}/${readyParas.length})...`,
+          });
+
+          setLoadingModal((prev) => ({
+            ...prev,
+            currentCount: completedCount,
+            progress: pct,
+            currentStep: `Completed Paragraph #${para.paragraph_number} (${completedCount}/${readyParas.length})`,
+          }));
+        }
+      };
+
+      const workerCount = Math.min(CONCURRENCY, readyParas.length);
+      const workers = Array.from({ length: workerCount }, () => runWorker());
+      await Promise.all(workers);
 
       // Auto-combine full narration & generate tight audio + subtitles
       setProgressState({
@@ -251,12 +309,25 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
         message: 'Assembling full batch narration track & subtitles...',
       });
 
+      setLoadingModal((prev) => ({
+        ...prev,
+        progress: 90,
+        currentStep: 'Assembling master narration & tightening pauses...',
+      }));
+
       try {
         await api.rebuildAllBatchAudio(selectedBatchId, silenceThreshold);
-        await fetchCurrentBatch();
       } catch (combErr) {
         console.warn('Auto-combine note:', combErr);
       }
+
+      setLoadingModal((prev) => ({
+        ...prev,
+        progress: 100,
+        currentCount: readyParas.length,
+        status: 'completed',
+        currentStep: `Successfully generated ${readyParas.length} paragraph(s) & assembled full narration!`,
+      }));
 
       setProgressState({
         status: 'completed',
@@ -265,6 +336,11 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
         message: `Successfully generated ${readyParas.length} paragraph(s) & assembled full narration!`,
       });
     } catch (e: any) {
+      setLoadingModal((prev) => ({
+        ...prev,
+        status: 'error',
+        errorMessage: e.message || 'Generation stopped with an error',
+      }));
       setProgressState({
         status: 'error',
         current: progressState.current,
@@ -291,13 +367,45 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
   const handleTightenBatchAudio = async () => {
     if (!selectedBatchId) return;
     setTightening(true);
+    setLoadingModal({
+      isOpen: true,
+      title: 'Trimming Pauses & Tightening Audio',
+      subtitle: `Eliminating dead air (${silenceThreshold === 0.12 ? '0.12s Ultra' : silenceThreshold === 0.18 ? '0.18s Punchy' : '0.28s Natural'})`,
+      currentStep: 'Detecting silence and cutting dead space with multi-core FFmpeg...',
+      progress: 25,
+      status: 'running',
+      startTime: Date.now(),
+    });
+
+    const timer = setInterval(() => {
+      setLoadingModal((prev) => {
+        if (prev.status !== 'running' || prev.progress >= 85) return prev;
+        return { ...prev, progress: Math.min(85, prev.progress + 18) };
+      });
+    }, 700);
+
     try {
       await api.tightenBatchAudio(selectedBatchId, silenceThreshold);
+      clearInterval(timer);
       setAudioCacheKey(Date.now());
       await fetchCurrentBatch();
+
+      setLoadingModal((prev) => ({
+        ...prev,
+        progress: 100,
+        status: 'completed',
+        currentStep: 'Audio tightened successfully! Dead air removed.',
+      }));
     } catch (e: any) {
+      clearInterval(timer);
+      setLoadingModal((prev) => ({
+        ...prev,
+        status: 'error',
+        errorMessage: e.message || 'Failed to trim pauses',
+      }));
       alert(e.message || 'Failed to trim pauses');
     } finally {
+      clearInterval(timer);
       setTightening(false);
     }
   };
@@ -305,13 +413,45 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
   const handleRebuildAll = async () => {
     if (!selectedBatchId) return;
     setRebuilding(true);
+    setLoadingModal({
+      isOpen: true,
+      title: 'Rebuilding Full Narration',
+      subtitle: 'Multi-core concatenation & pause trimming',
+      currentStep: 'Combining paragraph tracks and aligning timestamps...',
+      progress: 20,
+      status: 'running',
+      startTime: Date.now(),
+    });
+
+    const timer = setInterval(() => {
+      setLoadingModal((prev) => {
+        if (prev.status !== 'running' || prev.progress >= 85) return prev;
+        return { ...prev, progress: Math.min(85, prev.progress + 15) };
+      });
+    }, 800);
+
     try {
       await api.rebuildAllBatchAudio(selectedBatchId, silenceThreshold);
+      clearInterval(timer);
       setAudioCacheKey(Date.now());
       await fetchCurrentBatch();
+
+      setLoadingModal((prev) => ({
+        ...prev,
+        progress: 100,
+        status: 'completed',
+        currentStep: 'Full master narration & tight timeline rebuilt successfully!',
+      }));
     } catch (e: any) {
+      clearInterval(timer);
+      setLoadingModal((prev) => ({
+        ...prev,
+        status: 'error',
+        errorMessage: e.message || 'Failed to rebuild narration',
+      }));
       alert(e.message || 'Failed to rebuild narration');
     } finally {
+      clearInterval(timer);
       setRebuilding(false);
     }
   };
@@ -529,15 +669,28 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
               </button>
 
               {currentBatch.completed_count > 0 && (
-                <button
-                  onClick={handleRebuildAll}
-                  disabled={rebuilding}
-                  className="flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-indigo-600/30 hover:bg-indigo-600/50 active:scale-95 text-indigo-200 text-xs font-bold border border-indigo-500/40 transition-all shadow"
-                  title="Rebuild full combined narration and tight timelines"
-                >
-                  <RefreshCw className={`w-4 h-4 text-indigo-400 ${rebuilding ? 'animate-spin' : ''}`} />
-                  <span>{rebuilding ? 'REBUILDING FULL NARRATION...' : 'REBUILD FULL NARRATION'}</span>
-                </button>
+                <div className="flex items-center space-x-2">
+                  <select
+                    value={silenceThreshold}
+                    onChange={(e) => setSilenceThreshold(parseFloat(e.target.value))}
+                    className="bg-slate-900/90 border border-indigo-500/40 rounded-xl px-2.5 py-2 text-xs text-indigo-300 font-mono focus:outline-none focus:border-indigo-400 font-bold shadow cursor-pointer"
+                    title="Select pause trimming aggressiveness"
+                  >
+                    <option value={0.12}>🔥 Ultra-Tight (0.12s)</option>
+                    <option value={0.18}>⚡ Clean & Punchy (0.18s)</option>
+                    <option value={0.28}>🌿 Natural (0.28s)</option>
+                  </select>
+
+                  <button
+                    onClick={handleRebuildAll}
+                    disabled={rebuilding}
+                    className="flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-indigo-600/30 hover:bg-indigo-600/50 active:scale-95 text-indigo-200 text-xs font-bold border border-indigo-500/40 transition-all shadow"
+                    title="Rebuild full combined narration and tight timelines"
+                  >
+                    <RefreshCw className={`w-4 h-4 text-indigo-400 ${rebuilding ? 'animate-spin' : ''}`} />
+                    <span>{rebuilding ? 'REBUILDING FULL NARRATION...' : 'REBUILD FULL NARRATION'}</span>
+                  </button>
+                </div>
               )}
             </div>
           </div>
@@ -686,8 +839,8 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
                               <h3 className="font-extrabold text-sm text-white tracking-wide">
                                 TIGHT TIMELINE
                               </h3>
-                              <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-mono text-[10px] border border-emerald-500/30">
-                                0.18s CUT
+                              <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-mono text-[10px] border border-emerald-500/30 font-bold">
+                                {silenceThreshold === 0.12 ? '🔥 0.12s ULTRA' : silenceThreshold === 0.18 ? '⚡ 0.18s PUNCHY' : '🌿 0.28s NATURAL'}
                               </span>
                             </div>
                             <p className="text-[11px] text-slate-300 font-mono">
@@ -699,15 +852,28 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
                         </div>
 
                         {currentBatch.tight_audio && (
-                          <button
-                            onClick={handleTightenBatchAudio}
-                            disabled={tightening}
-                            className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-600/30 hover:bg-emerald-600/50 text-emerald-300 border border-emerald-500/40 text-xs font-semibold transition-all active:scale-95"
-                            title="Re-run pause trimming"
-                          >
-                            <RefreshCw className={`w-3.5 h-3.5 ${tightening ? 'animate-spin' : ''}`} />
-                            <span>{tightening ? 'Trimming...' : 'Re-trim'}</span>
-                          </button>
+                          <div className="flex items-center space-x-2">
+                            <select
+                              value={silenceThreshold}
+                              onChange={(e) => setSilenceThreshold(parseFloat(e.target.value))}
+                              className="bg-slate-900/90 border border-emerald-500/40 rounded-xl px-2.5 py-1.5 text-xs text-emerald-300 font-mono focus:outline-none focus:border-emerald-400 font-bold shadow cursor-pointer"
+                              title="Select pause trimming aggressiveness"
+                            >
+                              <option value={0.12}>🔥 Ultra-Tight (0.12s)</option>
+                              <option value={0.18}>⚡ Clean & Punchy (0.18s)</option>
+                              <option value={0.28}>🌿 Natural (0.28s)</option>
+                            </select>
+
+                            <button
+                              onClick={handleTightenBatchAudio}
+                              disabled={tightening}
+                              className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-600/30 hover:bg-emerald-600/50 text-emerald-300 border border-emerald-500/40 text-xs font-semibold transition-all active:scale-95"
+                              title="Re-run pause trimming"
+                            >
+                              <RefreshCw className={`w-3.5 h-3.5 ${tightening ? 'animate-spin' : ''}`} />
+                              <span>{tightening ? 'Trimming...' : 'Re-trim'}</span>
+                            </button>
+                          </div>
                         )}
                       </div>
 
@@ -720,14 +886,27 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
                           src={tightAudioUrl || `${api.getBatchTightAudioUrl(currentBatch.id, 'wav')}&t=${audioCacheKey}`}
                         />
                       ) : (
-                        <button
-                          onClick={handleTightenBatchAudio}
-                          disabled={tightening}
-                          className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-[0.99] text-white text-xs font-bold transition-all shadow flex items-center justify-center space-x-2"
-                        >
-                          <Zap className="w-4 h-4" />
-                          <span>{tightening ? 'Trimming Silences...' : 'Trim Pauses & Generate Timeline'}</span>
-                        </button>
+                        <div className="flex items-center space-x-2">
+                          <select
+                            value={silenceThreshold}
+                            onChange={(e) => setSilenceThreshold(parseFloat(e.target.value))}
+                            className="bg-slate-900/90 border border-emerald-500/40 rounded-xl px-3 py-3 text-xs text-emerald-300 font-mono focus:outline-none focus:border-emerald-400 font-bold shadow cursor-pointer"
+                            title="Select pause trimming aggressiveness"
+                          >
+                            <option value={0.12}>🔥 Ultra-Tight (0.12s)</option>
+                            <option value={0.18}>⚡ Clean & Punchy (0.18s)</option>
+                            <option value={0.28}>🌿 Natural (0.28s)</option>
+                          </select>
+
+                          <button
+                            onClick={handleTightenBatchAudio}
+                            disabled={tightening}
+                            className="flex-1 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-[0.99] text-white text-xs font-bold transition-all shadow flex items-center justify-center space-x-2"
+                          >
+                            <Zap className="w-4 h-4" />
+                            <span>{tightening ? 'Trimming Silences...' : 'Trim Pauses & Generate Timeline'}</span>
+                          </button>
+                        </div>
                       )}
                     </div>
 
@@ -1003,6 +1182,13 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
         isOpen={showDataExporter}
         onClose={() => setShowDataExporter(false)}
         initialScript={currentBatch?.raw_reference || ''}
+      />
+
+      {/* Universal Loading Modal with Progress Bar, Percentage & ETA */}
+      <UniversalLoadingModal
+        state={loadingModal}
+        onClose={() => setLoadingModal((prev) => ({ ...prev, isOpen: false }))}
+        onMinimize={() => setLoadingModal((prev) => ({ ...prev, isOpen: false }))}
       />
     </div>
   );

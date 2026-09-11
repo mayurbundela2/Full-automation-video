@@ -13,19 +13,19 @@ router = APIRouter(prefix="/api/projects", tags=["Projects"])
 @router.post("/sync-outputs")
 def sync_outputs(db: Session = Depends(get_db)) -> Dict[str, Any]:
     """Scans and synchronizes outputs folder with the SQLite database."""
-    return ProjectSyncer.sync_outputs(db)
+    return ProjectSyncer.sync_outputs(db, force=True)
 
 
 @router.get("", response_model=List[ProjectResponse])
 def list_projects(db: Session = Depends(get_db)):
-    # Automatically discover any newly added project folders in outputs/
+    # Automatically discover any newly added project folders in outputs/ (debounced for instant dashboard load)
     try:
-        ProjectSyncer.sync_outputs(db)
+        ProjectSyncer.sync_outputs(db, force=False)
     except Exception as e:
         # Non-blocking fallback if directory scan encounters transient permission issue
         pass
 
-    projects = db.query(Project).order_by(Project.updated_at.desc()).all()
+    projects = db.query(Project).filter(~Project.name.like("E2E%")).order_by(Project.updated_at.desc()).all()
     results = []
     for p in projects:
         batch_ids = [b.id for b in p.batches]

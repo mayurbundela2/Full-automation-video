@@ -100,98 +100,106 @@ def mock_generate_speech(prompt, transcript, voice="Algenib", model="gemini-3.1-
 def test_full_end_to_end_pipeline(mock_speech, tmp_path):
     import time
     unique_name = f"E2E Cannabis Doc {int(time.time() * 1000)}"
-    # 1. Create Project
-    proj_res = client.post("/api/projects", json={
-        "name": unique_name,
-        "description": "Full documentary voiceover batch"
-    })
-    assert proj_res.status_code == 200
-    proj_data = proj_res.json()
-    proj_id = proj_data["id"]
-    assert proj_data["name"] == unique_name
+    proj_id = None
+    try:
+        # 1. Create Project
+        proj_res = client.post("/api/projects", json={
+            "name": unique_name,
+            "description": "Full documentary voiceover batch"
+        })
+        assert proj_res.status_code == 200
+        proj_data = proj_res.json()
+        proj_id = proj_data["id"]
+        assert proj_data["name"] == unique_name
 
-    # 2. Create Batch
-    batch_res = client.post(f"/api/projects/{proj_id}/batches", json={
-        "name": "Batch 01",
-        "batch_number": 1
-    })
-    assert batch_res.status_code == 200
-    batch_data = batch_res.json()
-    batch_id = batch_data["id"]
+        # 2. Create Batch
+        batch_res = client.post(f"/api/projects/{proj_id}/batches", json={
+            "name": "Batch 01",
+            "batch_number": 1
+        })
+        assert batch_res.status_code == 200
+        batch_data = batch_res.json()
+        batch_id = batch_data["id"]
 
-    # 3. Parse Reference (Preview without committing)
-    parse_res = client.post(f"/api/batches/{batch_id}/parse-reference", json={
-        "raw_text": SAMPLE_4_PARAGRAPH_BATCH,
-        "default_voice": "Algenib"
-    })
-    assert parse_res.status_code == 200
-    parse_data = parse_res.json()
-    assert parse_data["detected_count"] == 4
+        # 3. Parse Reference (Preview without committing)
+        parse_res = client.post(f"/api/batches/{batch_id}/parse-reference", json={
+            "raw_text": SAMPLE_4_PARAGRAPH_BATCH,
+            "default_voice": "Algenib"
+        })
+        assert parse_res.status_code == 200
+        parse_data = parse_res.json()
+        assert parse_data["detected_count"] == 4
 
-    # 4. Import Reference into Batch
-    import_res = client.post(f"/api/batches/{batch_id}/import-reference", json={
-        "raw_text": SAMPLE_4_PARAGRAPH_BATCH,
-        "default_voice": "Algenib"
-    })
-    assert import_res.status_code == 200
-    imported_batch = import_res.json()
-    assert len(imported_batch["paragraphs"]) == 4
+        # 4. Import Reference into Batch
+        import_res = client.post(f"/api/batches/{batch_id}/import-reference", json={
+            "raw_text": SAMPLE_4_PARAGRAPH_BATCH,
+            "default_voice": "Algenib"
+        })
+        assert import_res.status_code == 200
+        imported_batch = import_res.json()
+        assert len(imported_batch["paragraphs"]) == 4
 
-    # Verify Paragraph 1 metadata
-    p1 = imported_batch["paragraphs"][0]
-    assert p1["paragraph_number"] == 1
-    assert p1["voice"] == "Algenib"
-    assert "Ek sawaal..." in p1["transcript"]
-    assert p1["word_count"] > 0
-    assert p1["character_count"] > 0
-    assert p1["limit_status"] == "SAFE"
+        # Verify Paragraph 1 metadata
+        p1 = imported_batch["paragraphs"][0]
+        assert p1["paragraph_number"] == 1
+        assert p1["voice"] == "Algenib"
+        assert "Ek sawaal..." in p1["transcript"]
+        assert p1["word_count"] > 0
+        assert p1["character_count"] > 0
+        assert p1["limit_status"] == "SAFE"
 
-    # 5. Test Prompt Preview
-    prompt_res = client.post(f"/api/paragraphs/{p1['id']}/preview-prompt")
-    assert prompt_res.status_code == 200
-    prompt_data = prompt_res.json()
-    assert "Generate a natural spoken narration." in prompt_data["prompt"]
-    assert "SCENE:" in prompt_data["prompt"]
-    assert "TRANSCRIPT:" in prompt_data["prompt"]
-    assert "Ek sawaal..." in prompt_data["prompt"]
+        # 5. Test Prompt Preview
+        prompt_res = client.post(f"/api/paragraphs/{p1['id']}/preview-prompt")
+        assert prompt_res.status_code == 200
+        prompt_data = prompt_res.json()
+        assert "Generate a natural spoken narration." in prompt_data["prompt"]
+        assert "SCENE:" in prompt_data["prompt"]
+        assert "TRANSCRIPT:" in prompt_data["prompt"]
+        assert "Ek sawaal..." in prompt_data["prompt"]
 
-    # 6. Generate Single Paragraph Audio (Demo mode synthesizer fallback in test)
-    gen_res = client.post(f"/api/paragraphs/{p1['id']}/generate")
-    assert gen_res.status_code == 200
-    gen_data = gen_res.json()
-    assert gen_data["status"] == "COMPLETED"
-    assert gen_data["duration"] > 0
-    assert os.path.exists(gen_data["wav_path"])
-    assert "waveform" in gen_data
-    assert len(gen_data["waveform"]["peaks"]) > 0
+        # 6. Generate Single Paragraph Audio (Demo mode synthesizer fallback in test)
+        gen_res = client.post(f"/api/paragraphs/{p1['id']}/generate")
+        assert gen_res.status_code == 200
+        gen_data = gen_res.json()
+        assert gen_data["status"] == "COMPLETED"
+        assert gen_data["duration"] > 0
+        assert os.path.exists(gen_data["wav_path"])
+        assert "waveform" in gen_data
+        assert len(gen_data["waveform"]["peaks"]) > 0
 
-    # 7. Generate All Ready Paragraphs in Batch
-    batch_gen_res = client.post(f"/api/batches/{batch_id}/generate-ready")
-    assert batch_gen_res.status_code == 200
-    batch_gen_data = batch_gen_res.json()
-    assert batch_gen_data["generated_count"] >= 3
+        # 7. Generate All Ready Paragraphs in Batch
+        batch_gen_res = client.post(f"/api/batches/{batch_id}/generate-ready")
+        assert batch_gen_res.status_code == 200
+        batch_gen_data = batch_gen_res.json()
+        assert batch_gen_data["generated_count"] >= 3
 
-    # 8. Check Generation History
-    hist_res = client.get("/api/generations")
-    assert hist_res.status_code == 200
-    history = hist_res.json()
-    assert len(history) >= 4
+        # 8. Check Generation History
+        hist_res = client.get("/api/generations")
+        assert hist_res.status_code == 200
+        history = hist_res.json()
+        assert len(history) >= 4
 
-    # 9. Verify Audio Stream Endpoint
-    latest_gen_id = history[0]["id"]
-    audio_stream_res = client.get(f"/api/generations/{latest_gen_id}/audio?format=wav")
-    assert audio_stream_res.status_code == 200
-    assert audio_stream_res.headers["content-type"] == "audio/wav"
-    assert len(audio_stream_res.content) > 100
+        # 9. Verify Audio Stream Endpoint
+        latest_gen_id = history[0]["id"]
+        audio_stream_res = client.get(f"/api/generations/{latest_gen_id}/audio?format=wav")
+        assert audio_stream_res.status_code == 200
+        assert audio_stream_res.headers["content-type"] == "audio/wav"
+        assert len(audio_stream_res.content) > 100
 
-    # 10. Test Split Feature on an Over-Limit Paragraph
-    # Create an artificially long paragraph
-    long_para_res = client.post(f"/api/paragraphs/{imported_batch['paragraphs'][3]['id']}/split-manual", json={
-        "part_a_transcript": "[excited] Aaj duniya phir se wahi mudh rahi hai jahan se yeh kahani shuru hui thi.",
-        "part_b_transcript": "[amazed] Yeh ek aisi kranti hai jise koi rok nahi sakta."
-    })
-    assert long_para_res.status_code == 200
+        # 10. Test Split Feature on an Over-Limit Paragraph
+        # Create an artificially long paragraph
+        long_para_res = client.post(f"/api/paragraphs/{imported_batch['paragraphs'][3]['id']}/split-manual", json={
+            "part_a_transcript": "[excited] Aaj duniya phir se wahi mudh rahi hai jahan se yeh kahani shuru hui thi.",
+            "part_b_transcript": "[amazed] Yeh ek aisi kranti hai jise koi rok nahi sakta."
+        })
+        assert long_para_res.status_code == 200
 
-    # Verify updated batch has 5 paragraphs now
-    refreshed_batch_res = client.get(f"/api/batches/{batch_id}")
-    assert len(refreshed_batch_res.json()["paragraphs"]) == 5
+        # Verify updated batch has 5 paragraphs now
+        refreshed_batch_res = client.get(f"/api/batches/{batch_id}")
+        assert len(refreshed_batch_res.json()["paragraphs"]) == 5
+    finally:
+        if proj_id:
+            try:
+                client.delete(f"/api/projects/{proj_id}")
+            except Exception:
+                pass
