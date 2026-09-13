@@ -23,6 +23,8 @@ class AudioConverter:
                 return ffmpeg_path
 
         candidates = [
+            "/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg",
+            "/usr/local/opt/ffmpeg-full/bin/ffmpeg",
             "ffmpeg",
             "ffmpeg.exe",
             "/opt/homebrew/bin/ffmpeg",

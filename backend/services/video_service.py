@@ -478,7 +478,10 @@ class VideoService:
         ]
 
         try:
-            subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+            res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            if res.returncode != 0:
+                err_snippet = res.stderr[-500:] if res.stderr else "Unknown error"
+                raise RuntimeError(f"FFmpeg subtitle burn failed (code {res.returncode}): {err_snippet.strip()}")
             return str(out_p)
         finally:
             if ass_file.exists():
