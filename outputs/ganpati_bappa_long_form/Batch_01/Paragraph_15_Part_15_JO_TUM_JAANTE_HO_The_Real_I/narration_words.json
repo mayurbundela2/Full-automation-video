@@ -1,0 +1,181 @@
+{
+  "total_words": 25,
+  "total_duration": 9.6,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 0.321,
+      "end": 0.644,
+      "duration": 0.323
+    },
+    {
+      "index": 2,
+      "word": "jis",
+      "start": 0.68,
+      "end": 0.873,
+      "duration": 0.194
+    },
+    {
+      "index": 3,
+      "word": "cheez",
+      "start": 0.895,
+      "end": 1.218,
+      "duration": 0.323
+    },
+    {
+      "index": 4,
+      "word": "ki",
+      "start": 1.254,
+      "end": 1.383,
+      "duration": 0.129
+    },
+    {
+      "index": 5,
+      "word": "baat",
+      "start": 1.397,
+      "end": 1.656,
+      "duration": 0.258
+    },
+    {
+      "index": 6,
+      "word": "hum",
+      "start": 1.684,
+      "end": 1.878,
+      "duration": 0.194
+    },
+    {
+      "index": 7,
+      "word": "aaj",
+      "start": 1.899,
+      "end": 2.093,
+      "duration": 0.194
+    },
+    {
+      "index": 8,
+      "word": "karenge",
+      "start": 2.115,
+      "end": 2.567,
+      "duration": 0.452
+    },
+    {
+      "index": 9,
+      "word": "—",
+      "start": 3.004,
+      "end": 3.064,
+      "duration": 0.06
+    },
+    {
+      "index": 10,
+      "word": "wo",
+      "start": 3.065,
+      "end": 3.174,
+      "duration": 0.109
+    },
+    {
+      "index": 11,
+      "word": "alag",
+      "start": 3.186,
+      "end": 3.404,
+      "duration": 0.218
+    },
+    {
+      "index": 12,
+      "word": "hai.",
+      "start": 3.428,
+      "end": 3.647,
+      "duration": 0.218
+    },
+    {
+      "index": 13,
+      "word": "Wo",
+      "start": 4.458,
+      "end": 4.589,
+      "duration": 0.131
+    },
+    {
+      "index": 14,
+      "word": "hai",
+      "start": 4.603,
+      "end": 4.799,
+      "duration": 0.196
+    },
+    {
+      "index": 15,
+      "word": "—",
+      "start": 4.821,
+      "end": 4.886,
+      "duration": 0.065
+    },
+    {
+      "index": 16,
+      "word": "ye",
+      "start": 4.894,
+      "end": 5.024,
+      "duration": 0.131
+    },
+    {
+      "index": 17,
+      "word": "puja,",
+      "start": 5.039,
+      "end": 5.366,
+      "duration": 0.327
+    },
+    {
+      "index": 18,
+      "word": "sadkon",
+      "start": 5.402,
+      "end": 5.794,
+      "duration": 0.392
+    },
+    {
+      "index": 19,
+      "word": "ka",
+      "start": 5.838,
+      "end": 5.968,
+      "duration": 0.131
+    },
+    {
+      "index": 20,
+      "word": "sabse",
+      "start": 6.374,
+      "end": 6.806,
+      "duration": 0.432
+    },
+    {
+      "index": 21,
+      "word": "bada",
+      "start": 6.854,
+      "end": 7.2,
+      "duration": 0.346
+    },
+    {
+      "index": 22,
+      "word": "public",
+      "start": 7.238,
+      "end": 7.756,
+      "duration": 0.518
+    },
+    {
+      "index": 23,
+      "word": "utsav",
+      "start": 7.814,
+      "end": 8.246,
+      "duration": 0.432
+    },
+    {
+      "index": 24,
+      "word": "kaise",
+      "start": 8.294,
+      "end": 8.726,
+      "duration": 0.432
+    },
+    {
+      "index": 25,
+      "word": "bani.",
+      "start": 8.774,
+      "end": 9.206,
+      "duration": 0.432
+    }
+  ]
+}

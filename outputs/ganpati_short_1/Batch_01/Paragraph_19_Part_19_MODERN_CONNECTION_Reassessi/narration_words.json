@@ -1,0 +1,62 @@
+{
+  "total_words": 8,
+  "total_duration": 3.48,
+  "words": [
+    {
+      "index": 1,
+      "word": "Toh",
+      "start": 0.478,
+      "end": 0.626,
+      "duration": 0.148
+    },
+    {
+      "index": 2,
+      "word": "is",
+      "start": 0.642,
+      "end": 0.741,
+      "duration": 0.099
+    },
+    {
+      "index": 3,
+      "word": "baar",
+      "start": 1.028,
+      "end": 1.267,
+      "duration": 0.239
+    },
+    {
+      "index": 4,
+      "word": "apne",
+      "start": 1.294,
+      "end": 1.534,
+      "duration": 0.239
+    },
+    {
+      "index": 5,
+      "word": "mohalle",
+      "start": 1.56,
+      "end": 1.979,
+      "duration": 0.419
+    },
+    {
+      "index": 6,
+      "word": "ka",
+      "start": 2.026,
+      "end": 2.145,
+      "duration": 0.12
+    },
+    {
+      "index": 7,
+      "word": "pandal",
+      "start": 2.159,
+      "end": 2.518,
+      "duration": 0.359
+    },
+    {
+      "index": 8,
+      "word": "dekho...",
+      "start": 2.558,
+      "end": 3.037,
+      "duration": 0.479
+    }
+  ]
+}

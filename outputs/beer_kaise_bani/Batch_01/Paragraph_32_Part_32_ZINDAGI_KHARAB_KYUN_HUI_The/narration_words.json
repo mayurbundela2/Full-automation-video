@@ -1,0 +1,160 @@
+{
+  "total_words": 22,
+  "total_duration": 10.56,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 0.303,
+      "end": 0.522,
+      "duration": 0.219
+    },
+    {
+      "index": 2,
+      "word": "core",
+      "start": 0.546,
+      "end": 0.722,
+      "duration": 0.175
+    },
+    {
+      "index": 3,
+      "word": "observation",
+      "start": 0.914,
+      "end": 1.459,
+      "duration": 0.545
+    },
+    {
+      "index": 4,
+      "word": "solid",
+      "start": 1.52,
+      "end": 1.768,
+      "duration": 0.248
+    },
+    {
+      "index": 5,
+      "word": "hai",
+      "start": 1.795,
+      "end": 1.944,
+      "duration": 0.149
+    },
+    {
+      "index": 6,
+      "word": "—",
+      "start": 1.96,
+      "end": 2.02,
+      "duration": 0.06
+    },
+    {
+      "index": 7,
+      "word": "kai",
+      "start": 2.015,
+      "end": 2.164,
+      "duration": 0.149
+    },
+    {
+      "index": 8,
+      "word": "early",
+      "start": 2.181,
+      "end": 2.428,
+      "duration": 0.248
+    },
+    {
+      "index": 9,
+      "word": "farming",
+      "start": 2.818,
+      "end": 2.915,
+      "duration": 0.097
+    },
+    {
+      "index": 10,
+      "word": "populations",
+      "start": 3.126,
+      "end": 3.696,
+      "duration": 0.57
+    },
+    {
+      "index": 11,
+      "word": "ke",
+      "start": 3.759,
+      "end": 3.863,
+      "duration": 0.104
+    },
+    {
+      "index": 12,
+      "word": "liye,",
+      "start": 3.874,
+      "end": 4.133,
+      "duration": 0.259
+    },
+    {
+      "index": 13,
+      "word": "immediate",
+      "start": 4.162,
+      "end": 4.629,
+      "duration": 0.466
+    },
+    {
+      "index": 14,
+      "word": "nutrition,",
+      "start": 4.68,
+      "end": 5.198,
+      "duration": 0.518
+    },
+    {
+      "index": 15,
+      "word": "disease,",
+      "start": 5.482,
+      "end": 5.901,
+      "duration": 0.419
+    },
+    {
+      "index": 16,
+      "word": "aur",
+      "start": 5.947,
+      "end": 6.104,
+      "duration": 0.157
+    },
+    {
+      "index": 17,
+      "word": "physical",
+      "start": 6.122,
+      "end": 6.54,
+      "duration": 0.419
+    },
+    {
+      "index": 18,
+      "word": "health",
+      "start": 6.824,
+      "end": 7.151,
+      "duration": 0.327
+    },
+    {
+      "index": 19,
+      "word": "measurably",
+      "start": 7.187,
+      "end": 7.732,
+      "duration": 0.545
+    },
+    {
+      "index": 20,
+      "word": "worse",
+      "start": 7.793,
+      "end": 8.065,
+      "duration": 0.272
+    },
+    {
+      "index": 21,
+      "word": "ho",
+      "start": 8.095,
+      "end": 8.204,
+      "duration": 0.109
+    },
+    {
+      "index": 22,
+      "word": "gaye.",
+      "start": 8.216,
+      "end": 8.489,
+      "duration": 0.272
+    }
+  ]
+}

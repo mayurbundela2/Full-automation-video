@@ -1,0 +1,90 @@
+{
+  "total_words": 12,
+  "total_duration": 5.96,
+  "words": [
+    {
+      "index": 1,
+      "word": "Insaan",
+      "start": 0.292,
+      "end": 0.59,
+      "duration": 0.298
+    },
+    {
+      "index": 2,
+      "word": "pehle",
+      "start": 0.623,
+      "end": 0.871,
+      "duration": 0.248
+    },
+    {
+      "index": 3,
+      "word": "hunter-gatherer",
+      "start": 0.898,
+      "end": 1.643,
+      "duration": 0.744
+    },
+    {
+      "index": 4,
+      "word": "tha.",
+      "start": 1.726,
+      "end": 1.924,
+      "duration": 0.198
+    },
+    {
+      "index": 5,
+      "word": "Ghoomta",
+      "start": 1.946,
+      "end": 2.293,
+      "duration": 0.347
+    },
+    {
+      "index": 6,
+      "word": "tha,",
+      "start": 2.719,
+      "end": 2.959,
+      "duration": 0.24
+    },
+    {
+      "index": 7,
+      "word": "shikaar",
+      "start": 2.986,
+      "end": 3.407,
+      "duration": 0.421
+    },
+    {
+      "index": 8,
+      "word": "karta",
+      "start": 3.454,
+      "end": 3.754,
+      "duration": 0.301
+    },
+    {
+      "index": 9,
+      "word": "tha,",
+      "start": 3.788,
+      "end": 4.028,
+      "duration": 0.24
+    },
+    {
+      "index": 10,
+      "word": "phal",
+      "start": 4.055,
+      "end": 4.295,
+      "duration": 0.24
+    },
+    {
+      "index": 11,
+      "word": "todta",
+      "start": 4.322,
+      "end": 4.623,
+      "duration": 0.301
+    },
+    {
+      "index": 12,
+      "word": "tha.",
+      "start": 4.882,
+      "end": 5.526,
+      "duration": 0.644
+    }
+  ]
+}

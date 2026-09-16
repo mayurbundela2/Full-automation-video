@@ -1,0 +1,139 @@
+{
+  "total_words": 19,
+  "total_duration": 8.08,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.289,
+      "end": 0.39,
+      "duration": 0.101
+    },
+    {
+      "index": 2,
+      "word": "dono",
+      "start": 0.401,
+      "end": 0.603,
+      "duration": 0.202
+    },
+    {
+      "index": 3,
+      "word": "baatein",
+      "start": 0.625,
+      "end": 0.978,
+      "duration": 0.353
+    },
+    {
+      "index": 4,
+      "word": "ek",
+      "start": 1.017,
+      "end": 1.118,
+      "duration": 0.101
+    },
+    {
+      "index": 5,
+      "word": "doosre",
+      "start": 1.129,
+      "end": 1.431,
+      "duration": 0.302
+    },
+    {
+      "index": 6,
+      "word": "ko",
+      "start": 1.624,
+      "end": 1.745,
+      "duration": 0.121
+    },
+    {
+      "index": 7,
+      "word": "cancel",
+      "start": 1.758,
+      "end": 2.121,
+      "duration": 0.362
+    },
+    {
+      "index": 8,
+      "word": "nahi",
+      "start": 2.161,
+      "end": 2.402,
+      "duration": 0.242
+    },
+    {
+      "index": 9,
+      "word": "karti.",
+      "start": 2.429,
+      "end": 2.792,
+      "duration": 0.362
+    },
+    {
+      "index": 10,
+      "word": "Faith",
+      "start": 2.832,
+      "end": 3.134,
+      "duration": 0.302
+    },
+    {
+      "index": 11,
+      "word": "apni",
+      "start": 3.168,
+      "end": 3.409,
+      "duration": 0.242
+    },
+    {
+      "index": 12,
+      "word": "jagah",
+      "start": 4.003,
+      "end": 4.295,
+      "duration": 0.292
+    },
+    {
+      "index": 13,
+      "word": "sach",
+      "start": 4.328,
+      "end": 4.561,
+      "duration": 0.234
+    },
+    {
+      "index": 14,
+      "word": "hai.",
+      "start": 4.587,
+      "end": 4.821,
+      "duration": 0.234
+    },
+    {
+      "index": 15,
+      "word": "History",
+      "start": 4.847,
+      "end": 5.256,
+      "duration": 0.409
+    },
+    {
+      "index": 16,
+      "word": "apni",
+      "start": 5.301,
+      "end": 5.535,
+      "duration": 0.234
+    },
+    {
+      "index": 17,
+      "word": "jagah",
+      "start": 6.059,
+      "end": 6.272,
+      "duration": 0.212
+    },
+    {
+      "index": 18,
+      "word": "sach",
+      "start": 6.295,
+      "end": 6.465,
+      "duration": 0.17
+    },
+    {
+      "index": 19,
+      "word": "hai.",
+      "start": 6.892,
+      "end": 7.689,
+      "duration": 0.797
+    }
+  ]
+}

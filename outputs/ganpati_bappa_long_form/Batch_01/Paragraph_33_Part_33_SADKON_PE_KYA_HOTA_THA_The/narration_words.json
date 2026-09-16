@@ -1,0 +1,188 @@
+{
+  "total_words": 26,
+  "total_duration": 8.48,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.336,
+      "end": 0.45,
+      "duration": 0.114
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.462,
+      "end": 0.576,
+      "duration": 0.114
+    },
+    {
+      "index": 3,
+      "word": "meeting",
+      "start": 0.588,
+      "end": 0.986,
+      "duration": 0.398
+    },
+    {
+      "index": 4,
+      "word": "ground",
+      "start": 1.03,
+      "end": 1.371,
+      "duration": 0.341
+    },
+    {
+      "index": 5,
+      "word": "ban",
+      "start": 1.409,
+      "end": 1.579,
+      "duration": 0.17
+    },
+    {
+      "index": 6,
+      "word": "gaya",
+      "start": 1.598,
+      "end": 1.825,
+      "duration": 0.227
+    },
+    {
+      "index": 7,
+      "word": "—",
+      "start": 1.85,
+      "end": 1.91,
+      "duration": 0.06
+    },
+    {
+      "index": 8,
+      "word": "alag",
+      "start": 1.914,
+      "end": 2.141,
+      "duration": 0.227
+    },
+    {
+      "index": 9,
+      "word": "alag",
+      "start": 2.739,
+      "end": 2.966,
+      "duration": 0.227
+    },
+    {
+      "index": 10,
+      "word": "communities",
+      "start": 2.992,
+      "end": 3.617,
+      "duration": 0.625
+    },
+    {
+      "index": 11,
+      "word": "ke",
+      "start": 3.686,
+      "end": 3.8,
+      "duration": 0.114
+    },
+    {
+      "index": 12,
+      "word": "logo",
+      "start": 3.813,
+      "end": 4.04,
+      "duration": 0.227
+    },
+    {
+      "index": 13,
+      "word": "ke",
+      "start": 4.065,
+      "end": 4.179,
+      "duration": 0.114
+    },
+    {
+      "index": 14,
+      "word": "liye",
+      "start": 4.191,
+      "end": 4.419,
+      "duration": 0.227
+    },
+    {
+      "index": 15,
+      "word": "ek",
+      "start": 4.444,
+      "end": 4.558,
+      "duration": 0.114
+    },
+    {
+      "index": 16,
+      "word": "jagah,",
+      "start": 4.57,
+      "end": 4.911,
+      "duration": 0.341
+    },
+    {
+      "index": 17,
+      "word": "jahan",
+      "start": 4.949,
+      "end": 5.233,
+      "duration": 0.284
+    },
+    {
+      "index": 18,
+      "word": "wo",
+      "start": 5.737,
+      "end": 5.878,
+      "duration": 0.141
+    },
+    {
+      "index": 19,
+      "word": "ek",
+      "start": 5.894,
+      "end": 6.035,
+      "duration": 0.141
+    },
+    {
+      "index": 20,
+      "word": "doosre",
+      "start": 6.051,
+      "end": 6.475,
+      "duration": 0.424
+    },
+    {
+      "index": 21,
+      "word": "ke",
+      "start": 6.522,
+      "end": 6.663,
+      "duration": 0.141
+    },
+    {
+      "index": 22,
+      "word": "saamne",
+      "start": 6.679,
+      "end": 7.103,
+      "duration": 0.424
+    },
+    {
+      "index": 23,
+      "word": "bhi",
+      "start": 7.15,
+      "end": 7.362,
+      "duration": 0.212
+    },
+    {
+      "index": 24,
+      "word": "aa",
+      "start": 7.386,
+      "end": 7.527,
+      "duration": 0.141
+    },
+    {
+      "index": 25,
+      "word": "rahe",
+      "start": 7.543,
+      "end": 7.826,
+      "duration": 0.283
+    },
+    {
+      "index": 26,
+      "word": "the.",
+      "start": 7.857,
+      "end": 8.14,
+      "duration": 0.283
+    }
+  ]
+}

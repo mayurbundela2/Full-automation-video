@@ -1,0 +1,160 @@
+{
+  "total_words": 22,
+  "total_duration": 9.48,
+  "words": [
+    {
+      "index": 1,
+      "word": "Farq",
+      "start": 0.273,
+      "end": 0.522,
+      "duration": 0.249
+    },
+    {
+      "index": 2,
+      "word": "sirf",
+      "start": 0.549,
+      "end": 0.798,
+      "duration": 0.249
+    },
+    {
+      "index": 3,
+      "word": "itna",
+      "start": 0.825,
+      "end": 1.074,
+      "duration": 0.249
+    },
+    {
+      "index": 4,
+      "word": "tha",
+      "start": 1.102,
+      "end": 1.288,
+      "duration": 0.186
+    },
+    {
+      "index": 5,
+      "word": "—",
+      "start": 1.309,
+      "end": 1.371,
+      "duration": 0.062
+    },
+    {
+      "index": 6,
+      "word": "uske",
+      "start": 1.378,
+      "end": 1.626,
+      "duration": 0.249
+    },
+    {
+      "index": 7,
+      "word": "aas-paas",
+      "start": 2.172,
+      "end": 2.688,
+      "duration": 0.516
+    },
+    {
+      "index": 8,
+      "word": "abhi",
+      "start": 2.746,
+      "end": 3.004,
+      "duration": 0.258
+    },
+    {
+      "index": 9,
+      "word": "civilization",
+      "start": 3.032,
+      "end": 3.807,
+      "duration": 0.774
+    },
+    {
+      "index": 10,
+      "word": "naam",
+      "start": 3.893,
+      "end": 4.151,
+      "duration": 0.258
+    },
+    {
+      "index": 11,
+      "word": "ki",
+      "start": 4.18,
+      "end": 4.309,
+      "duration": 0.129
+    },
+    {
+      "index": 12,
+      "word": "cheez",
+      "start": 4.323,
+      "end": 4.646,
+      "duration": 0.323
+    },
+    {
+      "index": 13,
+      "word": "thi",
+      "start": 4.682,
+      "end": 4.875,
+      "duration": 0.194
+    },
+    {
+      "index": 14,
+      "word": "hi",
+      "start": 4.897,
+      "end": 5.026,
+      "duration": 0.129
+    },
+    {
+      "index": 15,
+      "word": "nahi.",
+      "start": 5.04,
+      "end": 5.363,
+      "duration": 0.323
+    },
+    {
+      "index": 16,
+      "word": "Na",
+      "start": 5.399,
+      "end": 5.528,
+      "duration": 0.129
+    },
+    {
+      "index": 17,
+      "word": "roads.",
+      "start": 6.112,
+      "end": 6.369,
+      "duration": 0.257
+    },
+    {
+      "index": 18,
+      "word": "Na",
+      "start": 6.397,
+      "end": 6.483,
+      "duration": 0.086
+    },
+    {
+      "index": 19,
+      "word": "cities.",
+      "start": 6.492,
+      "end": 6.792,
+      "duration": 0.299
+    },
+    {
+      "index": 20,
+      "word": "Na",
+      "start": 7.127,
+      "end": 7.231,
+      "duration": 0.104
+    },
+    {
+      "index": 21,
+      "word": "permanent",
+      "start": 7.242,
+      "end": 7.709,
+      "duration": 0.467
+    },
+    {
+      "index": 22,
+      "word": "ghar.",
+      "start": 8.145,
+      "end": 8.995,
+      "duration": 0.85
+    }
+  ]
+}

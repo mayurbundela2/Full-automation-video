@@ -1,0 +1,111 @@
+{
+  "total_words": 15,
+  "total_duration": 7.6,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.347,
+      "end": 0.504,
+      "duration": 0.157
+    },
+    {
+      "index": 2,
+      "word": "sirf",
+      "start": 0.521,
+      "end": 0.731,
+      "duration": 0.209
+    },
+    {
+      "index": 3,
+      "word": "height",
+      "start": 0.754,
+      "end": 1.068,
+      "duration": 0.314
+    },
+    {
+      "index": 4,
+      "word": "nahi.",
+      "start": 1.102,
+      "end": 1.364,
+      "duration": 0.262
+    },
+    {
+      "index": 5,
+      "word": "Daant",
+      "start": 1.822,
+      "end": 1.98,
+      "duration": 0.158
+    },
+    {
+      "index": 6,
+      "word": "analyze",
+      "start": 1.997,
+      "end": 2.218,
+      "duration": 0.221
+    },
+    {
+      "index": 7,
+      "word": "kiye.",
+      "start": 2.242,
+      "end": 2.4,
+      "duration": 0.158
+    },
+    {
+      "index": 8,
+      "word": "Hunter-gatherer",
+      "start": 2.418,
+      "end": 2.89,
+      "duration": 0.473
+    },
+    {
+      "index": 9,
+      "word": "daur",
+      "start": 3.544,
+      "end": 3.725,
+      "duration": 0.181
+    },
+    {
+      "index": 10,
+      "word": "mein",
+      "start": 3.745,
+      "end": 3.926,
+      "duration": 0.181
+    },
+    {
+      "index": 11,
+      "word": "—",
+      "start": 3.946,
+      "end": 4.006,
+      "duration": 0.06
+    },
+    {
+      "index": 12,
+      "word": "cavities",
+      "start": 3.996,
+      "end": 4.358,
+      "duration": 0.362
+    },
+    {
+      "index": 13,
+      "word": "kam,",
+      "start": 4.398,
+      "end": 4.579,
+      "duration": 0.181
+    },
+    {
+      "index": 14,
+      "word": "enamel",
+      "start": 4.599,
+      "end": 4.87,
+      "duration": 0.271
+    },
+    {
+      "index": 15,
+      "word": "strong.",
+      "start": 5.176,
+      "end": 5.91,
+      "duration": 0.734
+    }
+  ]
+}

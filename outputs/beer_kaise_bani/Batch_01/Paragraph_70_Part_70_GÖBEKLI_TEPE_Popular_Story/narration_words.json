@@ -1,0 +1,118 @@
+{
+  "total_words": 16,
+  "total_duration": 5.84,
+  "words": [
+    {
+      "index": 1,
+      "word": "Iska",
+      "start": 0.309,
+      "end": 0.539,
+      "duration": 0.23
+    },
+    {
+      "index": 2,
+      "word": "matlab",
+      "start": 0.564,
+      "end": 0.908,
+      "duration": 0.344
+    },
+    {
+      "index": 3,
+      "word": "hai",
+      "start": 0.947,
+      "end": 1.119,
+      "duration": 0.172
+    },
+    {
+      "index": 4,
+      "word": "ki",
+      "start": 1.138,
+      "end": 1.253,
+      "duration": 0.115
+    },
+    {
+      "index": 5,
+      "word": "ek",
+      "start": 1.265,
+      "end": 1.38,
+      "duration": 0.115
+    },
+    {
+      "index": 6,
+      "word": "popular",
+      "start": 1.554,
+      "end": 1.988,
+      "duration": 0.434
+    },
+    {
+      "index": 7,
+      "word": "story",
+      "start": 2.036,
+      "end": 2.345,
+      "duration": 0.31
+    },
+    {
+      "index": 8,
+      "word": "ka",
+      "start": 2.38,
+      "end": 2.504,
+      "duration": 0.124
+    },
+    {
+      "index": 9,
+      "word": "ek",
+      "start": 2.517,
+      "end": 2.641,
+      "duration": 0.124
+    },
+    {
+      "index": 10,
+      "word": "popular",
+      "start": 2.822,
+      "end": 3.17,
+      "duration": 0.348
+    },
+    {
+      "index": 11,
+      "word": "part",
+      "start": 3.209,
+      "end": 3.407,
+      "duration": 0.199
+    },
+    {
+      "index": 12,
+      "word": "ab",
+      "start": 3.43,
+      "end": 3.529,
+      "duration": 0.099
+    },
+    {
+      "index": 13,
+      "word": "utna",
+      "start": 3.54,
+      "end": 3.739,
+      "duration": 0.199
+    },
+    {
+      "index": 14,
+      "word": "strong",
+      "start": 3.933,
+      "end": 4.478,
+      "duration": 0.545
+    },
+    {
+      "index": 15,
+      "word": "nahi",
+      "start": 4.539,
+      "end": 4.903,
+      "duration": 0.364
+    },
+    {
+      "index": 16,
+      "word": "raha.",
+      "start": 4.943,
+      "end": 5.397,
+      "duration": 0.454
+    }
+  ]
+}

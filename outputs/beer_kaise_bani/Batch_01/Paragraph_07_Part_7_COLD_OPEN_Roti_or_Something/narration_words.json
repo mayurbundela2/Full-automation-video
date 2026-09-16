@@ -1,0 +1,111 @@
+{
+  "total_words": 15,
+  "total_duration": 5.52,
+  "words": [
+    {
+      "index": 1,
+      "word": "kya",
+      "start": 0.297,
+      "end": 0.48,
+      "duration": 0.183
+    },
+    {
+      "index": 2,
+      "word": "humne",
+      "start": 0.5,
+      "end": 0.804,
+      "duration": 0.304
+    },
+    {
+      "index": 3,
+      "word": "kheti",
+      "start": 0.838,
+      "end": 1.142,
+      "duration": 0.304
+    },
+    {
+      "index": 4,
+      "word": "roti",
+      "start": 1.176,
+      "end": 1.419,
+      "duration": 0.243
+    },
+    {
+      "index": 5,
+      "word": "ke",
+      "start": 1.446,
+      "end": 1.568,
+      "duration": 0.122
+    },
+    {
+      "index": 6,
+      "word": "liye",
+      "start": 1.581,
+      "end": 1.825,
+      "duration": 0.243
+    },
+    {
+      "index": 7,
+      "word": "nahi,",
+      "start": 1.852,
+      "end": 2.156,
+      "duration": 0.304
+    },
+    {
+      "index": 8,
+      "word": "kisi",
+      "start": 2.19,
+      "end": 2.433,
+      "duration": 0.243
+    },
+    {
+      "index": 9,
+      "word": "aur",
+      "start": 2.46,
+      "end": 2.643,
+      "duration": 0.183
+    },
+    {
+      "index": 10,
+      "word": "cheez",
+      "start": 3.215,
+      "end": 3.523,
+      "duration": 0.308
+    },
+    {
+      "index": 11,
+      "word": "ke",
+      "start": 3.731,
+      "end": 3.875,
+      "duration": 0.144
+    },
+    {
+      "index": 12,
+      "word": "liye",
+      "start": 3.891,
+      "end": 4.18,
+      "duration": 0.288
+    },
+    {
+      "index": 13,
+      "word": "shuru",
+      "start": 4.212,
+      "end": 4.572,
+      "duration": 0.361
+    },
+    {
+      "index": 14,
+      "word": "ki",
+      "start": 4.612,
+      "end": 4.757,
+      "duration": 0.144
+    },
+    {
+      "index": 15,
+      "word": "thi?",
+      "start": 4.773,
+      "end": 5.061,
+      "duration": 0.288
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "total_words": 13,
+  "total_duration": 5.32,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.271,
+      "end": 0.36,
+      "duration": 0.089
+    },
+    {
+      "index": 2,
+      "word": "kahani",
+      "start": 0.37,
+      "end": 0.638,
+      "duration": 0.268
+    },
+    {
+      "index": 3,
+      "word": "ek",
+      "start": 0.668,
+      "end": 0.757,
+      "duration": 0.089
+    },
+    {
+      "index": 4,
+      "word": "clean,",
+      "start": 0.767,
+      "end": 1.035,
+      "duration": 0.268
+    },
+    {
+      "index": 5,
+      "word": "sensible",
+      "start": 1.298,
+      "end": 1.701,
+      "duration": 0.403
+    },
+    {
+      "index": 6,
+      "word": "progression",
+      "start": 1.745,
+      "end": 2.299,
+      "duration": 0.554
+    },
+    {
+      "index": 7,
+      "word": "jaisi",
+      "start": 2.361,
+      "end": 2.612,
+      "duration": 0.252
+    },
+    {
+      "index": 8,
+      "word": "lagti",
+      "start": 2.64,
+      "end": 2.892,
+      "duration": 0.252
+    },
+    {
+      "index": 9,
+      "word": "hai.",
+      "start": 2.92,
+      "end": 3.121,
+      "duration": 0.201
+    },
+    {
+      "index": 10,
+      "word": "Insaan",
+      "start": 3.143,
+      "end": 3.445,
+      "duration": 0.302
+    },
+    {
+      "index": 11,
+      "word": "smart",
+      "start": 4.121,
+      "end": 4.611,
+      "duration": 0.489
+    },
+    {
+      "index": 12,
+      "word": "tha",
+      "start": 4.665,
+      "end": 4.959,
+      "duration": 0.294
+    },
+    {
+      "index": 13,
+      "word": "—",
+      "start": 4.991,
+      "end": 5.089,
+      "duration": 0.098
+    }
+  ]
+}

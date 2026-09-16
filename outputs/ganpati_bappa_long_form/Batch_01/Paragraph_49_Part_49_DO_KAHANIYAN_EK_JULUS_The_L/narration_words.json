@@ -1,0 +1,41 @@
+{
+  "total_words": 5,
+  "total_duration": 3.6,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.27,
+      "end": 0.531,
+      "duration": 0.261
+    },
+    {
+      "index": 2,
+      "word": "phir",
+      "start": 0.56,
+      "end": 0.908,
+      "duration": 0.348
+    },
+    {
+      "index": 3,
+      "word": "—",
+      "start": 0.946,
+      "end": 1.033,
+      "duration": 0.087
+    },
+    {
+      "index": 4,
+      "word": "ek",
+      "start": 1.777,
+      "end": 1.982,
+      "duration": 0.205
+    },
+    {
+      "index": 5,
+      "word": "tradition.",
+      "start": 2.004,
+      "end": 3.028,
+      "duration": 1.024
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "total_words": 23,
+  "total_duration": 10.52,
+  "words": [
+    {
+      "index": 1,
+      "word": "Pehle",
+      "start": 0.507,
+      "end": 0.825,
+      "duration": 0.318
+    },
+    {
+      "index": 2,
+      "word": "wahi",
+      "start": 0.86,
+      "end": 1.114,
+      "duration": 0.254
+    },
+    {
+      "index": 3,
+      "word": "kahani,",
+      "start": 1.143,
+      "end": 1.587,
+      "duration": 0.445
+    },
+    {
+      "index": 4,
+      "word": "jo",
+      "start": 1.637,
+      "end": 1.764,
+      "duration": 0.127
+    },
+    {
+      "index": 5,
+      "word": "tumne",
+      "start": 2.229,
+      "end": 2.528,
+      "duration": 0.299
+    },
+    {
+      "index": 6,
+      "word": "bachpan",
+      "start": 2.562,
+      "end": 2.981,
+      "duration": 0.419
+    },
+    {
+      "index": 7,
+      "word": "se",
+      "start": 3.028,
+      "end": 3.147,
+      "duration": 0.12
+    },
+    {
+      "index": 8,
+      "word": "suni",
+      "start": 3.161,
+      "end": 3.4,
+      "duration": 0.24
+    },
+    {
+      "index": 9,
+      "word": "hai.",
+      "start": 3.427,
+      "end": 3.666,
+      "duration": 0.24
+    },
+    {
+      "index": 10,
+      "word": "Hindu",
+      "start": 4.444,
+      "end": 4.742,
+      "duration": 0.298
+    },
+    {
+      "index": 11,
+      "word": "parampara",
+      "start": 4.776,
+      "end": 5.313,
+      "duration": 0.537
+    },
+    {
+      "index": 12,
+      "word": "ke",
+      "start": 5.372,
+      "end": 5.492,
+      "duration": 0.119
+    },
+    {
+      "index": 13,
+      "word": "anusar,",
+      "start": 5.505,
+      "end": 5.923,
+      "duration": 0.418
+    },
+    {
+      "index": 14,
+      "word": "Devi",
+      "start": 6.209,
+      "end": 6.449,
+      "duration": 0.24
+    },
+    {
+      "index": 15,
+      "word": "Parvati",
+      "start": 6.476,
+      "end": 6.896,
+      "duration": 0.42
+    },
+    {
+      "index": 16,
+      "word": "ne",
+      "start": 6.943,
+      "end": 7.063,
+      "duration": 0.12
+    },
+    {
+      "index": 17,
+      "word": "apne",
+      "start": 7.076,
+      "end": 7.316,
+      "duration": 0.24
+    },
+    {
+      "index": 18,
+      "word": "snaan",
+      "start": 7.343,
+      "end": 7.643,
+      "duration": 0.3
+    },
+    {
+      "index": 19,
+      "word": "ke",
+      "start": 7.676,
+      "end": 7.796,
+      "duration": 0.12
+    },
+    {
+      "index": 20,
+      "word": "waqt",
+      "start": 7.81,
+      "end": 8.05,
+      "duration": 0.24
+    },
+    {
+      "index": 21,
+      "word": "akela",
+      "start": 8.077,
+      "end": 8.377,
+      "duration": 0.3
+    },
+    {
+      "index": 22,
+      "word": "mehsoos",
+      "start": 8.41,
+      "end": 8.83,
+      "duration": 0.42
+    },
+    {
+      "index": 23,
+      "word": "kiya...",
+      "start": 9.048,
+      "end": 10.031,
+      "duration": 0.983
+    }
+  ]
+}

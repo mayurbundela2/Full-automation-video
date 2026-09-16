@@ -1,0 +1,55 @@
+{
+  "total_words": 7,
+  "total_duration": 3.24,
+  "words": [
+    {
+      "index": 1,
+      "word": "Azadi",
+      "start": 0.314,
+      "end": 0.713,
+      "duration": 0.399
+    },
+    {
+      "index": 2,
+      "word": "ki",
+      "start": 0.757,
+      "end": 0.916,
+      "duration": 0.159
+    },
+    {
+      "index": 3,
+      "word": "ladai",
+      "start": 0.934,
+      "end": 1.333,
+      "duration": 0.399
+    },
+    {
+      "index": 4,
+      "word": "ke",
+      "start": 1.377,
+      "end": 1.536,
+      "duration": 0.159
+    },
+    {
+      "index": 5,
+      "word": "liye",
+      "start": 1.554,
+      "end": 1.873,
+      "duration": 0.319
+    },
+    {
+      "index": 6,
+      "word": "taiyar",
+      "start": 1.909,
+      "end": 2.387,
+      "duration": 0.478
+    },
+    {
+      "index": 7,
+      "word": "kiya.",
+      "start": 2.44,
+      "end": 2.839,
+      "duration": 0.399
+    }
+  ]
+}

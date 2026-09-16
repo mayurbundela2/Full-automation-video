@@ -1,0 +1,174 @@
+{
+  "total_words": 24,
+  "total_duration": 8.92,
+  "words": [
+    {
+      "index": 1,
+      "word": "Zyada",
+      "start": 0.239,
+      "end": 0.53,
+      "duration": 0.291
+    },
+    {
+      "index": 2,
+      "word": "extensive",
+      "start": 0.563,
+      "end": 1.087,
+      "duration": 0.525
+    },
+    {
+      "index": 3,
+      "word": "analysis",
+      "start": 1.146,
+      "end": 1.612,
+      "duration": 0.466
+    },
+    {
+      "index": 4,
+      "word": "ne",
+      "start": 1.664,
+      "end": 1.78,
+      "duration": 0.117
+    },
+    {
+      "index": 5,
+      "word": "suggest",
+      "start": 1.793,
+      "end": 2.201,
+      "duration": 0.408
+    },
+    {
+      "index": 6,
+      "word": "kiya",
+      "start": 2.246,
+      "end": 2.48,
+      "duration": 0.233
+    },
+    {
+      "index": 7,
+      "word": "ki",
+      "start": 2.505,
+      "end": 2.622,
+      "duration": 0.117
+    },
+    {
+      "index": 8,
+      "word": "wo",
+      "start": 2.635,
+      "end": 2.752,
+      "duration": 0.117
+    },
+    {
+      "index": 9,
+      "word": "troughs",
+      "start": 2.765,
+      "end": 3.172,
+      "duration": 0.408
+    },
+    {
+      "index": 10,
+      "word": "actually",
+      "start": 3.218,
+      "end": 3.684,
+      "duration": 0.466
+    },
+    {
+      "index": 11,
+      "word": "shayad",
+      "start": 3.736,
+      "end": 4.086,
+      "duration": 0.35
+    },
+    {
+      "index": 12,
+      "word": "porridge",
+      "start": 4.124,
+      "end": 4.591,
+      "duration": 0.466
+    },
+    {
+      "index": 13,
+      "word": "—",
+      "start": 4.642,
+      "end": 4.702,
+      "duration": 0.06
+    },
+    {
+      "index": 14,
+      "word": "dalia",
+      "start": 4.707,
+      "end": 4.999,
+      "duration": 0.291
+    },
+    {
+      "index": 15,
+      "word": "—",
+      "start": 5.331,
+      "end": 5.391,
+      "duration": 0.06
+    },
+    {
+      "index": 16,
+      "word": "cook",
+      "start": 5.375,
+      "end": 5.533,
+      "duration": 0.158
+    },
+    {
+      "index": 17,
+      "word": "karne",
+      "start": 5.551,
+      "end": 5.749,
+      "duration": 0.198
+    },
+    {
+      "index": 18,
+      "word": "ke",
+      "start": 6.155,
+      "end": 6.246,
+      "duration": 0.091
+    },
+    {
+      "index": 19,
+      "word": "liye",
+      "start": 6.256,
+      "end": 6.437,
+      "duration": 0.181
+    },
+    {
+      "index": 20,
+      "word": "zyada",
+      "start": 6.457,
+      "end": 6.684,
+      "duration": 0.227
+    },
+    {
+      "index": 21,
+      "word": "use",
+      "start": 6.89,
+      "end": 7.246,
+      "duration": 0.356
+    },
+    {
+      "index": 22,
+      "word": "ho",
+      "start": 7.285,
+      "end": 7.522,
+      "duration": 0.237
+    },
+    {
+      "index": 23,
+      "word": "rahe",
+      "start": 7.549,
+      "end": 8.023,
+      "duration": 0.474
+    },
+    {
+      "index": 24,
+      "word": "the.",
+      "start": 8.076,
+      "end": 8.55,
+      "duration": 0.474
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "total_words": 21,
+  "total_duration": 8.12,
+  "words": [
+    {
+      "index": 1,
+      "word": "Atharahvi",
+      "start": 0.273,
+      "end": 0.75,
+      "duration": 0.477
+    },
+    {
+      "index": 2,
+      "word": "sadi",
+      "start": 0.803,
+      "end": 1.015,
+      "duration": 0.212
+    },
+    {
+      "index": 3,
+      "word": "mein,",
+      "start": 1.039,
+      "end": 1.304,
+      "duration": 0.265
+    },
+    {
+      "index": 4,
+      "word": "Pune",
+      "start": 1.738,
+      "end": 1.972,
+      "duration": 0.234
+    },
+    {
+      "index": 5,
+      "word": "ke",
+      "start": 1.998,
+      "end": 2.115,
+      "duration": 0.117
+    },
+    {
+      "index": 6,
+      "word": "Peshwa",
+      "start": 2.128,
+      "end": 2.48,
+      "duration": 0.351
+    },
+    {
+      "index": 7,
+      "word": "—",
+      "start": 2.519,
+      "end": 2.579,
+      "duration": 0.06
+    },
+    {
+      "index": 8,
+      "word": "jo",
+      "start": 2.584,
+      "end": 2.701,
+      "duration": 0.117
+    },
+    {
+      "index": 9,
+      "word": "khud",
+      "start": 2.97,
+      "end": 3.217,
+      "duration": 0.247
+    },
+    {
+      "index": 10,
+      "word": "Ganesh",
+      "start": 3.244,
+      "end": 3.614,
+      "duration": 0.37
+    },
+    {
+      "index": 11,
+      "word": "ke",
+      "start": 3.655,
+      "end": 3.779,
+      "duration": 0.123
+    },
+    {
+      "index": 12,
+      "word": "bhakt",
+      "start": 3.792,
+      "end": 4.101,
+      "duration": 0.308
+    },
+    {
+      "index": 13,
+      "word": "the",
+      "start": 4.135,
+      "end": 4.32,
+      "duration": 0.185
+    },
+    {
+      "index": 14,
+      "word": "—",
+      "start": 4.34,
+      "end": 4.402,
+      "duration": 0.062
+    },
+    {
+      "index": 15,
+      "word": "ke",
+      "start": 4.409,
+      "end": 4.532,
+      "duration": 0.123
+    },
+    {
+      "index": 16,
+      "word": "daur",
+      "start": 4.864,
+      "end": 5.165,
+      "duration": 0.301
+    },
+    {
+      "index": 17,
+      "word": "mein",
+      "start": 5.198,
+      "end": 5.499,
+      "duration": 0.301
+    },
+    {
+      "index": 18,
+      "word": "Ganeshotsav",
+      "start": 5.533,
+      "end": 6.36,
+      "duration": 0.828
+    },
+    {
+      "index": 19,
+      "word": "ko",
+      "start": 6.452,
+      "end": 6.603,
+      "duration": 0.15
+    },
+    {
+      "index": 20,
+      "word": "rajashray",
+      "start": 6.62,
+      "end": 7.297,
+      "duration": 0.677
+    },
+    {
+      "index": 21,
+      "word": "mila.",
+      "start": 7.372,
+      "end": 7.748,
+      "duration": 0.376
+    }
+  ]
+}

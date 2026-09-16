@@ -1,0 +1,188 @@
+{
+  "total_words": 26,
+  "total_duration": 9.24,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aaj",
+      "start": 0.214,
+      "end": 0.406,
+      "duration": 0.192
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.427,
+      "end": 0.555,
+      "duration": 0.128
+    },
+    {
+      "index": 3,
+      "word": "celebration",
+      "start": 0.569,
+      "end": 1.273,
+      "duration": 0.703
+    },
+    {
+      "index": 4,
+      "word": "Maharashtra",
+      "start": 1.351,
+      "end": 2.054,
+      "duration": 0.703
+    },
+    {
+      "index": 5,
+      "word": "se",
+      "start": 2.132,
+      "end": 2.26,
+      "duration": 0.128
+    },
+    {
+      "index": 6,
+      "word": "bahar",
+      "start": 2.274,
+      "end": 2.594,
+      "duration": 0.32
+    },
+    {
+      "index": 7,
+      "word": "bhi",
+      "start": 2.63,
+      "end": 2.822,
+      "duration": 0.192
+    },
+    {
+      "index": 8,
+      "word": "bahut",
+      "start": 2.843,
+      "end": 3.163,
+      "duration": 0.32
+    },
+    {
+      "index": 9,
+      "word": "bade",
+      "start": 3.198,
+      "end": 3.454,
+      "duration": 0.256
+    },
+    {
+      "index": 10,
+      "word": "scale",
+      "start": 3.482,
+      "end": 3.802,
+      "duration": 0.32
+    },
+    {
+      "index": 11,
+      "word": "par",
+      "start": 3.838,
+      "end": 4.029,
+      "duration": 0.192
+    },
+    {
+      "index": 12,
+      "word": "hota",
+      "start": 4.051,
+      "end": 4.306,
+      "duration": 0.256
+    },
+    {
+      "index": 13,
+      "word": "hai",
+      "start": 4.335,
+      "end": 4.527,
+      "duration": 0.192
+    },
+    {
+      "index": 14,
+      "word": "—",
+      "start": 4.783,
+      "end": 4.85,
+      "duration": 0.067
+    },
+    {
+      "index": 15,
+      "word": "India",
+      "start": 4.857,
+      "end": 5.193,
+      "duration": 0.335
+    },
+    {
+      "index": 16,
+      "word": "ke",
+      "start": 5.23,
+      "end": 5.364,
+      "duration": 0.134
+    },
+    {
+      "index": 17,
+      "word": "kai",
+      "start": 5.379,
+      "end": 5.58,
+      "duration": 0.201
+    },
+    {
+      "index": 18,
+      "word": "states",
+      "start": 5.602,
+      "end": 6.005,
+      "duration": 0.402
+    },
+    {
+      "index": 19,
+      "word": "se",
+      "start": 6.049,
+      "end": 6.184,
+      "duration": 0.134
+    },
+    {
+      "index": 20,
+      "word": "lekar",
+      "start": 6.198,
+      "end": 6.534,
+      "duration": 0.335
+    },
+    {
+      "index": 21,
+      "word": "duniya",
+      "start": 6.571,
+      "end": 6.973,
+      "duration": 0.402
+    },
+    {
+      "index": 22,
+      "word": "bhar",
+      "start": 7.018,
+      "end": 7.286,
+      "duration": 0.268
+    },
+    {
+      "index": 23,
+      "word": "ke",
+      "start": 7.316,
+      "end": 7.45,
+      "duration": 0.134
+    },
+    {
+      "index": 24,
+      "word": "Hindu",
+      "start": 7.465,
+      "end": 7.8,
+      "duration": 0.335
+    },
+    {
+      "index": 25,
+      "word": "communities",
+      "start": 7.837,
+      "end": 8.575,
+      "duration": 0.738
+    },
+    {
+      "index": 26,
+      "word": "tak.",
+      "start": 8.657,
+      "end": 8.925,
+      "duration": 0.268
+    }
+  ]
+}

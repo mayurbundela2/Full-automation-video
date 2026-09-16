@@ -1,0 +1,34 @@
+{
+  "total_words": 4,
+  "total_duration": 1.92,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.265,
+      "end": 0.408,
+      "duration": 0.143
+    },
+    {
+      "index": 2,
+      "word": "tha",
+      "start": 0.423,
+      "end": 0.637,
+      "duration": 0.214
+    },
+    {
+      "index": 3,
+      "word": "hi",
+      "start": 0.832,
+      "end": 1.031,
+      "duration": 0.199
+    },
+    {
+      "index": 4,
+      "word": "nahi.",
+      "start": 1.053,
+      "end": 1.551,
+      "duration": 0.498
+    }
+  ]
+}

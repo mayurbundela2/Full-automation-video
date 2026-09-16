@@ -1,0 +1,90 @@
+{
+  "total_words": 12,
+  "total_duration": 4.84,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.324,
+      "end": 0.499,
+      "duration": 0.175
+    },
+    {
+      "index": 2,
+      "word": "shayad",
+      "start": 0.518,
+      "end": 0.869,
+      "duration": 0.35
+    },
+    {
+      "index": 3,
+      "word": "isi",
+      "start": 0.907,
+      "end": 1.082,
+      "duration": 0.175
+    },
+    {
+      "index": 4,
+      "word": "liye,",
+      "start": 1.102,
+      "end": 1.394,
+      "duration": 0.292
+    },
+    {
+      "index": 5,
+      "word": "aaj",
+      "start": 1.842,
+      "end": 2.062,
+      "duration": 0.22
+    },
+    {
+      "index": 6,
+      "word": "ka",
+      "start": 2.086,
+      "end": 2.232,
+      "duration": 0.146
+    },
+    {
+      "index": 7,
+      "word": "Ganpati",
+      "start": 2.249,
+      "end": 2.761,
+      "duration": 0.512
+    },
+    {
+      "index": 8,
+      "word": "sirf",
+      "start": 2.818,
+      "end": 3.111,
+      "duration": 0.293
+    },
+    {
+      "index": 9,
+      "word": "ek",
+      "start": 3.144,
+      "end": 3.29,
+      "duration": 0.146
+    },
+    {
+      "index": 10,
+      "word": "puja",
+      "start": 3.306,
+      "end": 3.599,
+      "duration": 0.293
+    },
+    {
+      "index": 11,
+      "word": "nahi",
+      "start": 3.632,
+      "end": 3.924,
+      "duration": 0.293
+    },
+    {
+      "index": 12,
+      "word": "lagta.",
+      "start": 3.957,
+      "end": 4.396,
+      "duration": 0.439
+    }
+  ]
+}

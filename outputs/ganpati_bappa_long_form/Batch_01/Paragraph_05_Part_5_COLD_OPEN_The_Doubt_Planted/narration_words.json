@@ -1,0 +1,125 @@
+{
+  "total_words": 17,
+  "total_duration": 7.88,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.388,
+      "end": 0.508,
+      "duration": 0.12
+    },
+    {
+      "index": 2,
+      "word": "scale",
+      "start": 0.521,
+      "end": 0.821,
+      "duration": 0.3
+    },
+    {
+      "index": 3,
+      "word": "itna",
+      "start": 0.854,
+      "end": 1.094,
+      "duration": 0.24
+    },
+    {
+      "index": 4,
+      "word": "normal",
+      "start": 1.121,
+      "end": 1.48,
+      "duration": 0.36
+    },
+    {
+      "index": 5,
+      "word": "lagta",
+      "start": 1.52,
+      "end": 1.82,
+      "duration": 0.3
+    },
+    {
+      "index": 6,
+      "word": "hai",
+      "start": 1.853,
+      "end": 2.033,
+      "duration": 0.18
+    },
+    {
+      "index": 7,
+      "word": "ki",
+      "start": 2.053,
+      "end": 2.173,
+      "duration": 0.12
+    },
+    {
+      "index": 8,
+      "word": "tumne",
+      "start": 2.186,
+      "end": 2.486,
+      "duration": 0.3
+    },
+    {
+      "index": 9,
+      "word": "kabhi",
+      "start": 2.519,
+      "end": 2.819,
+      "duration": 0.3
+    },
+    {
+      "index": 10,
+      "word": "socha",
+      "start": 3.247,
+      "end": 3.53,
+      "duration": 0.284
+    },
+    {
+      "index": 11,
+      "word": "nahi",
+      "start": 3.562,
+      "end": 3.789,
+      "duration": 0.227
+    },
+    {
+      "index": 12,
+      "word": "hoga...",
+      "start": 3.814,
+      "end": 4.211,
+      "duration": 0.397
+    },
+    {
+      "index": 13,
+      "word": "Ye",
+      "start": 4.255,
+      "end": 4.368,
+      "duration": 0.113
+    },
+    {
+      "index": 14,
+      "word": "hamesha",
+      "start": 4.381,
+      "end": 4.778,
+      "duration": 0.397
+    },
+    {
+      "index": 15,
+      "word": "se",
+      "start": 5.649,
+      "end": 5.729,
+      "duration": 0.08
+    },
+    {
+      "index": 16,
+      "word": "aisa",
+      "start": 5.737,
+      "end": 5.896,
+      "duration": 0.159
+    },
+    {
+      "index": 17,
+      "word": "tha?",
+      "start": 6.434,
+      "end": 7.402,
+      "duration": 0.968
+    }
+  ]
+}

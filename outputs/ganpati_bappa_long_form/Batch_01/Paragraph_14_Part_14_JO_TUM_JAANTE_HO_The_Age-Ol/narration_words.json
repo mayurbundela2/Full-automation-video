@@ -1,0 +1,76 @@
+{
+  "total_words": 10,
+  "total_duration": 4.16,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.245,
+      "end": 0.361,
+      "duration": 0.116
+    },
+    {
+      "index": 2,
+      "word": "Ganesh",
+      "start": 0.373,
+      "end": 0.72,
+      "duration": 0.347
+    },
+    {
+      "index": 3,
+      "word": "ke",
+      "start": 0.758,
+      "end": 0.874,
+      "duration": 0.116
+    },
+    {
+      "index": 4,
+      "word": "janam",
+      "start": 0.887,
+      "end": 1.176,
+      "duration": 0.289
+    },
+    {
+      "index": 5,
+      "word": "ki",
+      "start": 1.208,
+      "end": 1.323,
+      "duration": 0.116
+    },
+    {
+      "index": 6,
+      "word": "kahani",
+      "start": 1.336,
+      "end": 1.683,
+      "duration": 0.347
+    },
+    {
+      "index": 7,
+      "word": "hai",
+      "start": 1.721,
+      "end": 1.894,
+      "duration": 0.173
+    },
+    {
+      "index": 8,
+      "word": "—",
+      "start": 1.914,
+      "end": 1.974,
+      "duration": 0.06
+    },
+    {
+      "index": 9,
+      "word": "sadiyon",
+      "start": 1.978,
+      "end": 2.382,
+      "duration": 0.404
+    },
+    {
+      "index": 10,
+      "word": "purani.",
+      "start": 2.91,
+      "end": 3.815,
+      "duration": 0.905
+    }
+  ]
+}

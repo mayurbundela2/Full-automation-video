@@ -1,0 +1,125 @@
+{
+  "total_words": 17,
+  "total_duration": 6.44,
+  "words": [
+    {
+      "index": 1,
+      "word": "Sirf",
+      "start": 0.292,
+      "end": 0.508,
+      "duration": 0.216
+    },
+    {
+      "index": 2,
+      "word": "khaane",
+      "start": 0.532,
+      "end": 0.857,
+      "duration": 0.324
+    },
+    {
+      "index": 3,
+      "word": "ke",
+      "start": 0.893,
+      "end": 1.001,
+      "duration": 0.108
+    },
+    {
+      "index": 4,
+      "word": "liye?",
+      "start": 1.013,
+      "end": 1.284,
+      "duration": 0.27
+    },
+    {
+      "index": 5,
+      "word": "Wo",
+      "start": 1.314,
+      "end": 1.422,
+      "duration": 0.108
+    },
+    {
+      "index": 6,
+      "word": "toh",
+      "start": 1.434,
+      "end": 1.596,
+      "duration": 0.162
+    },
+    {
+      "index": 7,
+      "word": "humein",
+      "start": 2.326,
+      "end": 2.646,
+      "duration": 0.32
+    },
+    {
+      "index": 8,
+      "word": "already",
+      "start": 2.681,
+      "end": 3.054,
+      "duration": 0.373
+    },
+    {
+      "index": 9,
+      "word": "mil",
+      "start": 3.096,
+      "end": 3.256,
+      "duration": 0.16
+    },
+    {
+      "index": 10,
+      "word": "raha",
+      "start": 3.273,
+      "end": 3.486,
+      "duration": 0.213
+    },
+    {
+      "index": 11,
+      "word": "tha.",
+      "start": 3.51,
+      "end": 3.723,
+      "duration": 0.213
+    },
+    {
+      "index": 12,
+      "word": "Iska",
+      "start": 4.64,
+      "end": 4.863,
+      "duration": 0.223
+    },
+    {
+      "index": 13,
+      "word": "jawab",
+      "start": 4.887,
+      "end": 5.166,
+      "duration": 0.278
+    },
+    {
+      "index": 14,
+      "word": "kya",
+      "start": 5.197,
+      "end": 5.364,
+      "duration": 0.167
+    },
+    {
+      "index": 15,
+      "word": "ho",
+      "start": 5.382,
+      "end": 5.494,
+      "duration": 0.111
+    },
+    {
+      "index": 16,
+      "word": "sakta",
+      "start": 5.506,
+      "end": 5.785,
+      "duration": 0.278
+    },
+    {
+      "index": 17,
+      "word": "hai?",
+      "start": 5.816,
+      "end": 6.038,
+      "duration": 0.223
+    }
+  ]
+}

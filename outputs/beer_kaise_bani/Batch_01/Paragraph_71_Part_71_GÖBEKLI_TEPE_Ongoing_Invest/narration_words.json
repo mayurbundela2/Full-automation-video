@@ -1,0 +1,139 @@
+{
+  "total_words": 19,
+  "total_duration": 8.76,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.281,
+      "end": 0.434,
+      "duration": 0.153
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.451,
+      "end": 0.552,
+      "duration": 0.102
+    },
+    {
+      "index": 3,
+      "word": "honesty",
+      "start": 0.564,
+      "end": 0.92,
+      "duration": 0.356
+    },
+    {
+      "index": 4,
+      "word": "important",
+      "start": 0.96,
+      "end": 1.418,
+      "duration": 0.458
+    },
+    {
+      "index": 5,
+      "word": "hai",
+      "start": 1.469,
+      "end": 1.621,
+      "duration": 0.153
+    },
+    {
+      "index": 6,
+      "word": "—",
+      "start": 1.638,
+      "end": 1.698,
+      "duration": 0.06
+    },
+    {
+      "index": 7,
+      "word": "kyunki",
+      "start": 1.695,
+      "end": 2.0,
+      "duration": 0.305
+    },
+    {
+      "index": 8,
+      "word": "asli",
+      "start": 2.427,
+      "end": 2.647,
+      "duration": 0.22
+    },
+    {
+      "index": 9,
+      "word": "picture",
+      "start": 2.672,
+      "end": 3.057,
+      "duration": 0.386
+    },
+    {
+      "index": 10,
+      "word": "ek",
+      "start": 3.1,
+      "end": 3.21,
+      "duration": 0.11
+    },
+    {
+      "index": 11,
+      "word": "clean",
+      "start": 3.223,
+      "end": 3.498,
+      "duration": 0.275
+    },
+    {
+      "index": 12,
+      "word": "single",
+      "start": 3.529,
+      "end": 3.859,
+      "duration": 0.331
+    },
+    {
+      "index": 13,
+      "word": "answer",
+      "start": 4.091,
+      "end": 4.444,
+      "duration": 0.353
+    },
+    {
+      "index": 14,
+      "word": "nahi,",
+      "start": 4.484,
+      "end": 4.778,
+      "duration": 0.295
+    },
+    {
+      "index": 15,
+      "word": "ek",
+      "start": 4.811,
+      "end": 4.929,
+      "duration": 0.118
+    },
+    {
+      "index": 16,
+      "word": "ongoing",
+      "start": 4.942,
+      "end": 5.354,
+      "duration": 0.412
+    },
+    {
+      "index": 17,
+      "word": "archaeological",
+      "start": 5.63,
+      "end": 6.762,
+      "duration": 1.132
+    },
+    {
+      "index": 18,
+      "word": "investigation",
+      "start": 6.888,
+      "end": 7.939,
+      "duration": 1.051
+    },
+    {
+      "index": 19,
+      "word": "hai.",
+      "start": 8.056,
+      "end": 8.379,
+      "duration": 0.323
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "total_words": 7,
+  "total_duration": 3.64,
+  "words": [
+    {
+      "index": 1,
+      "word": "Phir",
+      "start": 0.337,
+      "end": 0.53,
+      "duration": 0.193
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.733,
+      "end": 0.849,
+      "duration": 0.116
+    },
+    {
+      "index": 3,
+      "word": "aadmi",
+      "start": 0.862,
+      "end": 1.152,
+      "duration": 0.29
+    },
+    {
+      "index": 4,
+      "word": "ne",
+      "start": 1.184,
+      "end": 1.3,
+      "duration": 0.116
+    },
+    {
+      "index": 5,
+      "word": "isse",
+      "start": 1.312,
+      "end": 1.544,
+      "duration": 0.232
+    },
+    {
+      "index": 6,
+      "word": "badal",
+      "start": 1.57,
+      "end": 1.86,
+      "duration": 0.29
+    },
+    {
+      "index": 7,
+      "word": "diya.",
+      "start": 2.14,
+      "end": 2.377,
+      "duration": 0.237
+    }
+  ]
+}

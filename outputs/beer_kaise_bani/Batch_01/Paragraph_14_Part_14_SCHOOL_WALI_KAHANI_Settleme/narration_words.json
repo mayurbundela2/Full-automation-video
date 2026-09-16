@@ -1,0 +1,76 @@
+{
+  "total_words": 10,
+  "total_duration": 4.6,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ek",
+      "start": 0.288,
+      "end": 0.42,
+      "duration": 0.132
+    },
+    {
+      "index": 2,
+      "word": "jagah",
+      "start": 0.434,
+      "end": 0.763,
+      "duration": 0.329
+    },
+    {
+      "index": 3,
+      "word": "settle",
+      "start": 0.799,
+      "end": 1.194,
+      "duration": 0.395
+    },
+    {
+      "index": 4,
+      "word": "hua.",
+      "start": 1.238,
+      "end": 1.501,
+      "duration": 0.263
+    },
+    {
+      "index": 5,
+      "word": "Aur",
+      "start": 1.97,
+      "end": 2.169,
+      "duration": 0.199
+    },
+    {
+      "index": 6,
+      "word": "wahin",
+      "start": 2.191,
+      "end": 2.522,
+      "duration": 0.331
+    },
+    {
+      "index": 7,
+      "word": "se",
+      "start": 2.559,
+      "end": 2.691,
+      "duration": 0.133
+    },
+    {
+      "index": 8,
+      "word": "civilization",
+      "start": 2.706,
+      "end": 3.501,
+      "duration": 0.795
+    },
+    {
+      "index": 9,
+      "word": "shuru",
+      "start": 3.589,
+      "end": 3.921,
+      "duration": 0.331
+    },
+    {
+      "index": 10,
+      "word": "hui.",
+      "start": 3.958,
+      "end": 4.223,
+      "duration": 0.265
+    }
+  ]
+}

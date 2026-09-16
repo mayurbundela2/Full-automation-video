@@ -1,0 +1,55 @@
+{
+  "total_words": 7,
+  "total_duration": 2.68,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.286,
+      "end": 0.425,
+      "duration": 0.139
+    },
+    {
+      "index": 2,
+      "word": "hazaron",
+      "start": 0.44,
+      "end": 0.925,
+      "duration": 0.485
+    },
+    {
+      "index": 3,
+      "word": "saal",
+      "start": 0.979,
+      "end": 1.256,
+      "duration": 0.277
+    },
+    {
+      "index": 4,
+      "word": "se",
+      "start": 1.287,
+      "end": 1.425,
+      "duration": 0.139
+    },
+    {
+      "index": 5,
+      "word": "chal",
+      "start": 1.44,
+      "end": 1.718,
+      "duration": 0.277
+    },
+    {
+      "index": 6,
+      "word": "raha",
+      "start": 1.748,
+      "end": 2.025,
+      "duration": 0.277
+    },
+    {
+      "index": 7,
+      "word": "hai?",
+      "start": 2.056,
+      "end": 2.333,
+      "duration": 0.277
+    }
+  ]
+}

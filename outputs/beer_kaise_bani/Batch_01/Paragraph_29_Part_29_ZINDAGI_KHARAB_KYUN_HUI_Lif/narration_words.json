@@ -1,0 +1,139 @@
+{
+  "total_words": 19,
+  "total_duration": 8.92,
+  "words": [
+    {
+      "index": 1,
+      "word": "Life",
+      "start": 0.32,
+      "end": 0.514,
+      "duration": 0.194
+    },
+    {
+      "index": 2,
+      "word": "expectancy",
+      "start": 0.536,
+      "end": 1.021,
+      "duration": 0.485
+    },
+    {
+      "index": 3,
+      "word": "Illinois",
+      "start": 1.075,
+      "end": 1.463,
+      "duration": 0.388
+    },
+    {
+      "index": 4,
+      "word": "ke",
+      "start": 1.985,
+      "end": 2.098,
+      "duration": 0.113
+    },
+    {
+      "index": 5,
+      "word": "burial",
+      "start": 2.111,
+      "end": 2.45,
+      "duration": 0.339
+    },
+    {
+      "index": 6,
+      "word": "mounds",
+      "start": 2.488,
+      "end": 2.827,
+      "duration": 0.339
+    },
+    {
+      "index": 7,
+      "word": "mein",
+      "start": 2.865,
+      "end": 3.091,
+      "duration": 0.226
+    },
+    {
+      "index": 8,
+      "word": "—",
+      "start": 3.116,
+      "end": 3.176,
+      "duration": 0.06
+    },
+    {
+      "index": 9,
+      "word": "farming",
+      "start": 3.179,
+      "end": 3.575,
+      "duration": 0.396
+    },
+    {
+      "index": 10,
+      "word": "shuru",
+      "start": 4.045,
+      "end": 4.33,
+      "duration": 0.285
+    },
+    {
+      "index": 11,
+      "word": "hone",
+      "start": 4.362,
+      "end": 4.59,
+      "duration": 0.228
+    },
+    {
+      "index": 12,
+      "word": "ke",
+      "start": 4.615,
+      "end": 4.729,
+      "duration": 0.114
+    },
+    {
+      "index": 13,
+      "word": "baad",
+      "start": 4.742,
+      "end": 4.969,
+      "duration": 0.228
+    },
+    {
+      "index": 14,
+      "word": "giri,",
+      "start": 4.995,
+      "end": 5.28,
+      "duration": 0.285
+    },
+    {
+      "index": 15,
+      "word": "chhabees",
+      "start": 5.311,
+      "end": 5.767,
+      "duration": 0.456
+    },
+    {
+      "index": 16,
+      "word": "saal",
+      "start": 6.377,
+      "end": 6.593,
+      "duration": 0.216
+    },
+    {
+      "index": 17,
+      "word": "se",
+      "start": 6.617,
+      "end": 6.725,
+      "duration": 0.108
+    },
+    {
+      "index": 18,
+      "word": "unnees",
+      "start": 6.737,
+      "end": 7.062,
+      "duration": 0.324
+    },
+    {
+      "index": 19,
+      "word": "saal.",
+      "start": 7.098,
+      "end": 7.368,
+      "duration": 0.27
+    }
+  ]
+}

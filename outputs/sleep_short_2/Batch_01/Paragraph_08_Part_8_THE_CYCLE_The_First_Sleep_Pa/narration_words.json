@@ -1,0 +1,97 @@
+{
+  "total_words": 13,
+  "total_duration": 6.6,
+  "words": [
+    {
+      "index": 1,
+      "word": "Suraj",
+      "start": 0.817,
+      "end": 1.12,
+      "duration": 0.303
+    },
+    {
+      "index": 2,
+      "word": "doobne",
+      "start": 1.153,
+      "end": 1.516,
+      "duration": 0.363
+    },
+    {
+      "index": 3,
+      "word": "ke",
+      "start": 1.557,
+      "end": 1.678,
+      "duration": 0.121
+    },
+    {
+      "index": 4,
+      "word": "teen",
+      "start": 1.691,
+      "end": 1.933,
+      "duration": 0.242
+    },
+    {
+      "index": 5,
+      "word": "ghante",
+      "start": 2.142,
+      "end": 2.524,
+      "duration": 0.382
+    },
+    {
+      "index": 6,
+      "word": "baad",
+      "start": 2.566,
+      "end": 2.821,
+      "duration": 0.255
+    },
+    {
+      "index": 7,
+      "word": "so",
+      "start": 2.849,
+      "end": 2.976,
+      "duration": 0.127
+    },
+    {
+      "index": 8,
+      "word": "jaate...",
+      "start": 2.99,
+      "end": 3.499,
+      "duration": 0.509
+    },
+    {
+      "index": 9,
+      "word": "chaar",
+      "start": 4.372,
+      "end": 4.701,
+      "duration": 0.329
+    },
+    {
+      "index": 10,
+      "word": "ghante",
+      "start": 4.738,
+      "end": 5.133,
+      "duration": 0.395
+    },
+    {
+      "index": 11,
+      "word": "ki",
+      "start": 5.177,
+      "end": 5.309,
+      "duration": 0.132
+    },
+    {
+      "index": 12,
+      "word": "gehri",
+      "start": 5.323,
+      "end": 5.652,
+      "duration": 0.329
+    },
+    {
+      "index": 13,
+      "word": "neend.",
+      "start": 5.689,
+      "end": 6.084,
+      "duration": 0.395
+    }
+  ]
+}

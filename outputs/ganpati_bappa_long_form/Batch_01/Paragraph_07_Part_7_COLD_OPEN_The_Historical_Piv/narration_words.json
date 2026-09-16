@@ -1,0 +1,195 @@
+{
+  "total_words": 27,
+  "total_duration": 11.4,
+  "words": [
+    {
+      "index": 1,
+      "word": "Uski",
+      "start": 0.265,
+      "end": 0.53,
+      "duration": 0.265
+    },
+    {
+      "index": 2,
+      "word": "modern",
+      "start": 0.559,
+      "end": 0.956,
+      "duration": 0.397
+    },
+    {
+      "index": 3,
+      "word": "history",
+      "start": 1.0,
+      "end": 1.463,
+      "duration": 0.463
+    },
+    {
+      "index": 4,
+      "word": "sirf",
+      "start": 1.515,
+      "end": 1.779,
+      "duration": 0.265
+    },
+    {
+      "index": 5,
+      "word": "lagbhag",
+      "start": 1.809,
+      "end": 2.272,
+      "duration": 0.463
+    },
+    {
+      "index": 6,
+      "word": "ek",
+      "start": 2.323,
+      "end": 2.456,
+      "duration": 0.132
+    },
+    {
+      "index": 7,
+      "word": "sau",
+      "start": 2.47,
+      "end": 2.669,
+      "duration": 0.198
+    },
+    {
+      "index": 8,
+      "word": "tees",
+      "start": 2.691,
+      "end": 2.956,
+      "duration": 0.265
+    },
+    {
+      "index": 9,
+      "word": "saal",
+      "start": 2.985,
+      "end": 3.25,
+      "duration": 0.265
+    },
+    {
+      "index": 10,
+      "word": "purani",
+      "start": 3.478,
+      "end": 3.79,
+      "duration": 0.312
+    },
+    {
+      "index": 11,
+      "word": "hai.",
+      "start": 3.825,
+      "end": 4.033,
+      "duration": 0.208
+    },
+    {
+      "index": 12,
+      "word": "Toh",
+      "start": 4.056,
+      "end": 4.212,
+      "duration": 0.156
+    },
+    {
+      "index": 13,
+      "word": "chalo",
+      "start": 4.229,
+      "end": 4.489,
+      "duration": 0.26
+    },
+    {
+      "index": 14,
+      "word": "samajhte",
+      "start": 4.92,
+      "end": 5.438,
+      "duration": 0.518
+    },
+    {
+      "index": 15,
+      "word": "hain",
+      "start": 5.496,
+      "end": 5.755,
+      "duration": 0.259
+    },
+    {
+      "index": 16,
+      "word": "—",
+      "start": 5.784,
+      "end": 5.849,
+      "duration": 0.065
+    },
+    {
+      "index": 17,
+      "word": "ek",
+      "start": 5.856,
+      "end": 5.986,
+      "duration": 0.13
+    },
+    {
+      "index": 18,
+      "word": "purani",
+      "start": 6.177,
+      "end": 6.464,
+      "duration": 0.287
+    },
+    {
+      "index": 19,
+      "word": "aastha,",
+      "start": 6.678,
+      "end": 7.143,
+      "duration": 0.465
+    },
+    {
+      "index": 20,
+      "word": "ek",
+      "start": 7.195,
+      "end": 7.328,
+      "duration": 0.133
+    },
+    {
+      "index": 21,
+      "word": "naye,",
+      "start": 7.343,
+      "end": 7.675,
+      "duration": 0.332
+    },
+    {
+      "index": 22,
+      "word": "mass",
+      "start": 7.907,
+      "end": 8.16,
+      "duration": 0.253
+    },
+    {
+      "index": 23,
+      "word": "public",
+      "start": 8.189,
+      "end": 8.569,
+      "duration": 0.38
+    },
+    {
+      "index": 24,
+      "word": "movement",
+      "start": 8.611,
+      "end": 9.118,
+      "duration": 0.507
+    },
+    {
+      "index": 25,
+      "word": "mein",
+      "start": 9.174,
+      "end": 9.428,
+      "duration": 0.253
+    },
+    {
+      "index": 26,
+      "word": "kaise",
+      "start": 9.456,
+      "end": 9.772,
+      "duration": 0.317
+    },
+    {
+      "index": 27,
+      "word": "badli.",
+      "start": 9.808,
+      "end": 10.188,
+      "duration": 0.38
+    }
+  ]
+}

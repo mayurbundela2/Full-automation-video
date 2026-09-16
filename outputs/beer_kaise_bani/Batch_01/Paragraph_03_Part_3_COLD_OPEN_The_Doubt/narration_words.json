@@ -1,0 +1,139 @@
+{
+  "total_words": 19,
+  "total_duration": 7.16,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.152,
+      "end": 0.269,
+      "duration": 0.117
+    },
+    {
+      "index": 2,
+      "word": "kahani",
+      "start": 0.282,
+      "end": 0.634,
+      "duration": 0.352
+    },
+    {
+      "index": 3,
+      "word": "itni",
+      "start": 0.673,
+      "end": 0.908,
+      "duration": 0.235
+    },
+    {
+      "index": 4,
+      "word": "normal",
+      "start": 0.934,
+      "end": 1.286,
+      "duration": 0.352
+    },
+    {
+      "index": 5,
+      "word": "lagti",
+      "start": 1.325,
+      "end": 1.618,
+      "duration": 0.293
+    },
+    {
+      "index": 6,
+      "word": "hai",
+      "start": 1.65,
+      "end": 1.826,
+      "duration": 0.176
+    },
+    {
+      "index": 7,
+      "word": "ki",
+      "start": 1.846,
+      "end": 1.963,
+      "duration": 0.117
+    },
+    {
+      "index": 8,
+      "word": "tumne",
+      "start": 1.976,
+      "end": 2.269,
+      "duration": 0.293
+    },
+    {
+      "index": 9,
+      "word": "kabhi",
+      "start": 2.87,
+      "end": 3.133,
+      "duration": 0.263
+    },
+    {
+      "index": 10,
+      "word": "socha",
+      "start": 3.162,
+      "end": 3.425,
+      "duration": 0.263
+    },
+    {
+      "index": 11,
+      "word": "nahi",
+      "start": 3.454,
+      "end": 3.664,
+      "duration": 0.21
+    },
+    {
+      "index": 12,
+      "word": "hoga",
+      "start": 3.687,
+      "end": 3.898,
+      "duration": 0.21
+    },
+    {
+      "index": 13,
+      "word": "—",
+      "start": 3.921,
+      "end": 3.981,
+      "duration": 0.06
+    },
+    {
+      "index": 14,
+      "word": "ye",
+      "start": 3.979,
+      "end": 4.084,
+      "duration": 0.105
+    },
+    {
+      "index": 15,
+      "word": "galat",
+      "start": 4.096,
+      "end": 4.359,
+      "duration": 0.263
+    },
+    {
+      "index": 16,
+      "word": "bhi",
+      "start": 4.949,
+      "end": 5.046,
+      "duration": 0.097
+    },
+    {
+      "index": 17,
+      "word": "ho",
+      "start": 5.057,
+      "end": 5.122,
+      "duration": 0.065
+    },
+    {
+      "index": 18,
+      "word": "sakti",
+      "start": 5.129,
+      "end": 5.291,
+      "duration": 0.162
+    },
+    {
+      "index": 19,
+      "word": "hai.",
+      "start": 5.838,
+      "end": 6.806,
+      "duration": 0.968
+    }
+  ]
+}

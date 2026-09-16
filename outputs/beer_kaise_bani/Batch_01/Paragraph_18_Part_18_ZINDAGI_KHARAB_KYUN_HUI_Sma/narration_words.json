@@ -1,0 +1,118 @@
+{
+  "total_words": 16,
+  "total_duration": 7.44,
+  "words": [
+    {
+      "index": 1,
+      "word": "Agar",
+      "start": 0.269,
+      "end": 0.545,
+      "duration": 0.276
+    },
+    {
+      "index": 2,
+      "word": "hunter-gatherer",
+      "start": 0.575,
+      "end": 1.609,
+      "duration": 1.033
+    },
+    {
+      "index": 3,
+      "word": "se",
+      "start": 1.723,
+      "end": 1.861,
+      "duration": 0.138
+    },
+    {
+      "index": 4,
+      "word": "farmer",
+      "start": 1.877,
+      "end": 2.29,
+      "duration": 0.413
+    },
+    {
+      "index": 5,
+      "word": "banna",
+      "start": 2.336,
+      "end": 2.68,
+      "duration": 0.344
+    },
+    {
+      "index": 6,
+      "word": "itna",
+      "start": 2.719,
+      "end": 2.994,
+      "duration": 0.276
+    },
+    {
+      "index": 7,
+      "word": "smart",
+      "start": 3.025,
+      "end": 3.369,
+      "duration": 0.344
+    },
+    {
+      "index": 8,
+      "word": "faisla",
+      "start": 3.408,
+      "end": 3.821,
+      "duration": 0.413
+    },
+    {
+      "index": 9,
+      "word": "tha,",
+      "start": 3.867,
+      "end": 4.143,
+      "duration": 0.276
+    },
+    {
+      "index": 10,
+      "word": "toh",
+      "start": 4.173,
+      "end": 4.38,
+      "duration": 0.207
+    },
+    {
+      "index": 11,
+      "word": "kuch",
+      "start": 4.403,
+      "end": 4.678,
+      "duration": 0.276
+    },
+    {
+      "index": 12,
+      "word": "aur",
+      "start": 4.956,
+      "end": 5.174,
+      "duration": 0.217
+    },
+    {
+      "index": 13,
+      "word": "cheezein",
+      "start": 5.198,
+      "end": 5.778,
+      "duration": 0.58
+    },
+    {
+      "index": 14,
+      "word": "explain",
+      "start": 5.842,
+      "end": 6.35,
+      "duration": 0.507
+    },
+    {
+      "index": 15,
+      "word": "nahi",
+      "start": 6.406,
+      "end": 6.696,
+      "duration": 0.29
+    },
+    {
+      "index": 16,
+      "word": "hoti.",
+      "start": 6.728,
+      "end": 7.091,
+      "duration": 0.362
+    }
+  ]
+}

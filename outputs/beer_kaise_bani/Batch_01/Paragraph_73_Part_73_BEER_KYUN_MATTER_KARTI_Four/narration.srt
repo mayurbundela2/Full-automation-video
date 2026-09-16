@@ -1,0 +1,12 @@
+1
+00:00:00,285 --> 00:00:01,494
+Yahan char possibilities hain
+
+2
+00:00:01,514 --> 00:00:02,686
+— ye "reasons" nahi
+
+3
+00:00:02,706 --> 00:00:03,870
+hain, "hypotheses" hain.
+

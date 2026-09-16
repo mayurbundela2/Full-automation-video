@@ -1,0 +1,90 @@
+{
+  "total_words": 12,
+  "total_duration": 4.92,
+  "words": [
+    {
+      "index": 1,
+      "word": "Pune",
+      "start": 0.297,
+      "end": 0.539,
+      "duration": 0.242
+    },
+    {
+      "index": 2,
+      "word": "mein",
+      "start": 0.566,
+      "end": 0.807,
+      "duration": 0.242
+    },
+    {
+      "index": 3,
+      "word": "Bhau",
+      "start": 1.142,
+      "end": 1.405,
+      "duration": 0.263
+    },
+    {
+      "index": 4,
+      "word": "Rangari",
+      "start": 1.435,
+      "end": 1.895,
+      "duration": 0.461
+    },
+    {
+      "index": 5,
+      "word": "naam",
+      "start": 1.946,
+      "end": 2.21,
+      "duration": 0.263
+    },
+    {
+      "index": 6,
+      "word": "ke",
+      "start": 2.239,
+      "end": 2.371,
+      "duration": 0.132
+    },
+    {
+      "index": 7,
+      "word": "ek",
+      "start": 2.385,
+      "end": 2.517,
+      "duration": 0.132
+    },
+    {
+      "index": 8,
+      "word": "vaidya",
+      "start": 2.531,
+      "end": 2.926,
+      "duration": 0.395
+    },
+    {
+      "index": 9,
+      "word": "aur",
+      "start": 2.97,
+      "end": 3.168,
+      "duration": 0.197
+    },
+    {
+      "index": 10,
+      "word": "freedom",
+      "start": 3.19,
+      "end": 3.65,
+      "duration": 0.461
+    },
+    {
+      "index": 11,
+      "word": "fighter",
+      "start": 3.701,
+      "end": 4.162,
+      "duration": 0.461
+    },
+    {
+      "index": 12,
+      "word": "ne...",
+      "start": 4.213,
+      "end": 4.542,
+      "duration": 0.329
+    }
+  ]
+}

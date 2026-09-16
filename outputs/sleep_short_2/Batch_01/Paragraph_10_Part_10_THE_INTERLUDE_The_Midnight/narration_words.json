@@ -1,0 +1,83 @@
+{
+  "total_words": 11,
+  "total_duration": 7.6,
+  "words": [
+    {
+      "index": 1,
+      "word": "1-2",
+      "start": 0.312,
+      "end": 0.538,
+      "duration": 0.226
+    },
+    {
+      "index": 2,
+      "word": "ghante",
+      "start": 0.563,
+      "end": 1.014,
+      "duration": 0.451
+    },
+    {
+      "index": 3,
+      "word": "awake",
+      "start": 1.064,
+      "end": 1.44,
+      "duration": 0.376
+    },
+    {
+      "index": 4,
+      "word": "rehte",
+      "start": 1.482,
+      "end": 1.858,
+      "duration": 0.376
+    },
+    {
+      "index": 5,
+      "word": "—",
+      "start": 2.372,
+      "end": 2.443,
+      "duration": 0.071
+    },
+    {
+      "index": 6,
+      "word": "chatting,",
+      "start": 2.451,
+      "end": 3.088,
+      "duration": 0.637
+    },
+    {
+      "index": 7,
+      "word": "praying,",
+      "start": 3.658,
+      "end": 4.179,
+      "duration": 0.521
+    },
+    {
+      "index": 8,
+      "word": "sex,",
+      "start": 4.237,
+      "end": 4.498,
+      "duration": 0.261
+    },
+    {
+      "index": 9,
+      "word": "dreams",
+      "start": 4.83,
+      "end": 5.294,
+      "duration": 0.464
+    },
+    {
+      "index": 10,
+      "word": "pe",
+      "start": 5.346,
+      "end": 5.501,
+      "duration": 0.155
+    },
+    {
+      "index": 11,
+      "word": "sochte.",
+      "start": 6.037,
+      "end": 7.068,
+      "duration": 1.031
+    }
+  ]
+}

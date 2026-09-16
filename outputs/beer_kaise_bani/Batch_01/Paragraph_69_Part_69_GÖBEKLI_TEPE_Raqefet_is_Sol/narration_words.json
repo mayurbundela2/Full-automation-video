@@ -1,0 +1,174 @@
+{
+  "total_words": 24,
+  "total_duration": 8.0,
+  "words": [
+    {
+      "index": 1,
+      "word": "Iska",
+      "start": 0.216,
+      "end": 0.436,
+      "duration": 0.22
+    },
+    {
+      "index": 2,
+      "word": "matlab",
+      "start": 0.461,
+      "end": 0.791,
+      "duration": 0.331
+    },
+    {
+      "index": 3,
+      "word": "ye",
+      "start": 0.828,
+      "end": 0.938,
+      "duration": 0.11
+    },
+    {
+      "index": 4,
+      "word": "nahi",
+      "start": 0.951,
+      "end": 1.171,
+      "duration": 0.22
+    },
+    {
+      "index": 5,
+      "word": "ki",
+      "start": 1.195,
+      "end": 1.306,
+      "duration": 0.11
+    },
+    {
+      "index": 6,
+      "word": "beer",
+      "start": 1.318,
+      "end": 1.538,
+      "duration": 0.22
+    },
+    {
+      "index": 7,
+      "word": "hypothesis",
+      "start": 1.563,
+      "end": 2.114,
+      "duration": 0.551
+    },
+    {
+      "index": 8,
+      "word": "khud",
+      "start": 2.175,
+      "end": 2.395,
+      "duration": 0.22
+    },
+    {
+      "index": 9,
+      "word": "galat",
+      "start": 2.42,
+      "end": 2.695,
+      "duration": 0.275
+    },
+    {
+      "index": 10,
+      "word": "hai",
+      "start": 2.726,
+      "end": 2.891,
+      "duration": 0.165
+    },
+    {
+      "index": 11,
+      "word": "—",
+      "start": 2.909,
+      "end": 2.969,
+      "duration": 0.06
+    },
+    {
+      "index": 12,
+      "word": "Raqefet",
+      "start": 2.971,
+      "end": 3.356,
+      "duration": 0.386
+    },
+    {
+      "index": 13,
+      "word": "ka",
+      "start": 3.656,
+      "end": 3.779,
+      "duration": 0.123
+    },
+    {
+      "index": 14,
+      "word": "evidence",
+      "start": 3.793,
+      "end": 4.287,
+      "duration": 0.493
+    },
+    {
+      "index": 15,
+      "word": "solid",
+      "start": 4.341,
+      "end": 4.65,
+      "duration": 0.308
+    },
+    {
+      "index": 16,
+      "word": "hai,",
+      "start": 4.684,
+      "end": 4.931,
+      "duration": 0.247
+    },
+    {
+      "index": 17,
+      "word": "aur",
+      "start": 4.958,
+      "end": 5.143,
+      "duration": 0.185
+    },
+    {
+      "index": 18,
+      "word": "wahi",
+      "start": 5.164,
+      "end": 5.411,
+      "duration": 0.247
+    },
+    {
+      "index": 19,
+      "word": "asli",
+      "start": 5.684,
+      "end": 5.999,
+      "duration": 0.315
+    },
+    {
+      "index": 20,
+      "word": "anchor",
+      "start": 6.034,
+      "end": 6.505,
+      "duration": 0.472
+    },
+    {
+      "index": 21,
+      "word": "hai",
+      "start": 6.558,
+      "end": 6.794,
+      "duration": 0.236
+    },
+    {
+      "index": 22,
+      "word": "is",
+      "start": 6.82,
+      "end": 6.977,
+      "duration": 0.157
+    },
+    {
+      "index": 23,
+      "word": "story",
+      "start": 6.995,
+      "end": 7.388,
+      "duration": 0.393
+    },
+    {
+      "index": 24,
+      "word": "ka.",
+      "start": 7.432,
+      "end": 7.668,
+      "duration": 0.236
+    }
+  ]
+}

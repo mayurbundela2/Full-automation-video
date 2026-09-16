@@ -1,0 +1,125 @@
+{
+  "total_words": 17,
+  "total_duration": 7.2,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 0.351,
+      "end": 0.657,
+      "duration": 0.306
+    },
+    {
+      "index": 2,
+      "word": "atharah",
+      "start": 0.691,
+      "end": 1.119,
+      "duration": 0.428
+    },
+    {
+      "index": 3,
+      "word": "sau",
+      "start": 1.166,
+      "end": 1.35,
+      "duration": 0.183
+    },
+    {
+      "index": 4,
+      "word": "nabbe",
+      "start": 1.37,
+      "end": 1.676,
+      "duration": 0.306
+    },
+    {
+      "index": 5,
+      "word": "ke",
+      "start": 1.71,
+      "end": 1.832,
+      "duration": 0.122
+    },
+    {
+      "index": 6,
+      "word": "daur",
+      "start": 1.846,
+      "end": 2.09,
+      "duration": 0.245
+    },
+    {
+      "index": 7,
+      "word": "mein",
+      "start": 2.117,
+      "end": 2.362,
+      "duration": 0.245
+    },
+    {
+      "index": 8,
+      "word": "is",
+      "start": 2.389,
+      "end": 2.511,
+      "duration": 0.122
+    },
+    {
+      "index": 9,
+      "word": "celebration",
+      "start": 2.994,
+      "end": 3.544,
+      "duration": 0.55
+    },
+    {
+      "index": 10,
+      "word": "ko",
+      "start": 3.605,
+      "end": 3.705,
+      "duration": 0.1
+    },
+    {
+      "index": 11,
+      "word": "ek",
+      "start": 3.716,
+      "end": 3.816,
+      "duration": 0.1
+    },
+    {
+      "index": 12,
+      "word": "naya,",
+      "start": 3.827,
+      "end": 4.077,
+      "duration": 0.25
+    },
+    {
+      "index": 13,
+      "word": "organized,",
+      "start": 4.105,
+      "end": 4.604,
+      "duration": 0.5
+    },
+    {
+      "index": 14,
+      "word": "public",
+      "start": 4.869,
+      "end": 5.236,
+      "duration": 0.367
+    },
+    {
+      "index": 15,
+      "word": "roop",
+      "start": 5.276,
+      "end": 5.521,
+      "duration": 0.244
+    },
+    {
+      "index": 16,
+      "word": "milne",
+      "start": 5.708,
+      "end": 6.199,
+      "duration": 0.491
+    },
+    {
+      "index": 17,
+      "word": "laga.",
+      "start": 6.254,
+      "end": 6.745,
+      "duration": 0.491
+    }
+  ]
+}

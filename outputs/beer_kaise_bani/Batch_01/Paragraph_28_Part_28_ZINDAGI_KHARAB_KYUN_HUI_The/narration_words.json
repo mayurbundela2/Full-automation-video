@@ -1,0 +1,132 @@
+{
+  "total_words": 18,
+  "total_duration": 9.04,
+  "words": [
+    {
+      "index": 1,
+      "word": "Farmer",
+      "start": 0.254,
+      "end": 0.627,
+      "duration": 0.373
+    },
+    {
+      "index": 2,
+      "word": "daur",
+      "start": 0.668,
+      "end": 0.916,
+      "duration": 0.248
+    },
+    {
+      "index": 3,
+      "word": "mein",
+      "start": 0.944,
+      "end": 1.192,
+      "duration": 0.248
+    },
+    {
+      "index": 4,
+      "word": "—",
+      "start": 1.22,
+      "end": 1.282,
+      "duration": 0.062
+    },
+    {
+      "index": 5,
+      "word": "cavities",
+      "start": 1.676,
+      "end": 2.149,
+      "duration": 0.473
+    },
+    {
+      "index": 6,
+      "word": "badh",
+      "start": 2.202,
+      "end": 2.438,
+      "duration": 0.237
+    },
+    {
+      "index": 7,
+      "word": "gaye",
+      "start": 2.465,
+      "end": 2.701,
+      "duration": 0.237
+    },
+    {
+      "index": 8,
+      "word": "lagbhag",
+      "start": 2.727,
+      "end": 3.141,
+      "duration": 0.414
+    },
+    {
+      "index": 9,
+      "word": "pachaas",
+      "start": 3.187,
+      "end": 3.601,
+      "duration": 0.414
+    },
+    {
+      "index": 10,
+      "word": "percent,",
+      "start": 3.647,
+      "end": 4.12,
+      "duration": 0.473
+    },
+    {
+      "index": 11,
+      "word": "malnutrition",
+      "start": 4.67,
+      "end": 5.326,
+      "duration": 0.656
+    },
+    {
+      "index": 12,
+      "word": "ke",
+      "start": 5.399,
+      "end": 5.508,
+      "duration": 0.109
+    },
+    {
+      "index": 13,
+      "word": "signs,",
+      "start": 5.52,
+      "end": 5.848,
+      "duration": 0.328
+    },
+    {
+      "index": 14,
+      "word": "iron",
+      "start": 5.884,
+      "end": 6.103,
+      "duration": 0.219
+    },
+    {
+      "index": 15,
+      "word": "deficiency",
+      "start": 6.495,
+      "end": 7.275,
+      "duration": 0.78
+    },
+    {
+      "index": 16,
+      "word": "chaar",
+      "start": 7.362,
+      "end": 7.752,
+      "duration": 0.39
+    },
+    {
+      "index": 17,
+      "word": "guna",
+      "start": 7.796,
+      "end": 8.108,
+      "duration": 0.312
+    },
+    {
+      "index": 18,
+      "word": "zyada.",
+      "start": 8.143,
+      "end": 8.611,
+      "duration": 0.468
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "total_words": 9,
+  "total_duration": 5.12,
+  "words": [
+    {
+      "index": 1,
+      "word": "Kya",
+      "start": 0.276,
+      "end": 0.435,
+      "duration": 0.159
+    },
+    {
+      "index": 2,
+      "word": "humne",
+      "start": 0.453,
+      "end": 0.718,
+      "duration": 0.265
+    },
+    {
+      "index": 3,
+      "word": "pehle",
+      "start": 0.747,
+      "end": 1.013,
+      "duration": 0.265
+    },
+    {
+      "index": 4,
+      "word": "roti",
+      "start": 1.202,
+      "end": 1.536,
+      "duration": 0.334
+    },
+    {
+      "index": 5,
+      "word": "banayi",
+      "start": 1.573,
+      "end": 2.074,
+      "duration": 0.501
+    },
+    {
+      "index": 6,
+      "word": "thi…",
+      "start": 2.13,
+      "end": 2.463,
+      "duration": 0.334
+    },
+    {
+      "index": 7,
+      "word": "ya",
+      "start": 2.501,
+      "end": 2.667,
+      "duration": 0.167
+    },
+    {
+      "index": 8,
+      "word": "pehle",
+      "start": 3.205,
+      "end": 3.45,
+      "duration": 0.245
+    },
+    {
+      "index": 9,
+      "word": "beer?",
+      "start": 3.704,
+      "end": 4.697,
+      "duration": 0.993
+    }
+  ]
+}

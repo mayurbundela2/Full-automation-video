@@ -1,0 +1,97 @@
+{
+  "total_words": 13,
+  "total_duration": 7.4,
+  "words": [
+    {
+      "index": 1,
+      "word": "Gusse",
+      "start": 0.259,
+      "end": 0.551,
+      "duration": 0.292
+    },
+    {
+      "index": 2,
+      "word": "mein",
+      "start": 0.584,
+      "end": 0.818,
+      "duration": 0.234
+    },
+    {
+      "index": 3,
+      "word": "Shiv",
+      "start": 0.844,
+      "end": 1.077,
+      "duration": 0.234
+    },
+    {
+      "index": 4,
+      "word": "ne",
+      "start": 1.103,
+      "end": 1.22,
+      "duration": 0.117
+    },
+    {
+      "index": 5,
+      "word": "unka",
+      "start": 1.233,
+      "end": 1.467,
+      "duration": 0.234
+    },
+    {
+      "index": 6,
+      "word": "sar",
+      "start": 1.772,
+      "end": 1.912,
+      "duration": 0.14
+    },
+    {
+      "index": 7,
+      "word": "kaat",
+      "start": 1.928,
+      "end": 2.115,
+      "duration": 0.187
+    },
+    {
+      "index": 8,
+      "word": "diya.",
+      "start": 2.135,
+      "end": 2.369,
+      "duration": 0.234
+    },
+    {
+      "index": 9,
+      "word": "Parvati",
+      "start": 2.575,
+      "end": 2.987,
+      "duration": 0.412
+    },
+    {
+      "index": 10,
+      "word": "ke",
+      "start": 3.032,
+      "end": 3.15,
+      "duration": 0.118
+    },
+    {
+      "index": 11,
+      "word": "dukh",
+      "start": 5.271,
+      "end": 5.675,
+      "duration": 0.404
+    },
+    {
+      "index": 12,
+      "word": "ko",
+      "start": 5.72,
+      "end": 5.922,
+      "duration": 0.202
+    },
+    {
+      "index": 13,
+      "word": "dekhkar...",
+      "start": 5.944,
+      "end": 6.955,
+      "duration": 1.01
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "total_words": 27,
+  "total_duration": 8.29,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aaj",
+      "start": 0.267,
+      "end": 0.444,
+      "duration": 0.177
+    },
+    {
+      "index": 2,
+      "word": "jab",
+      "start": 0.464,
+      "end": 0.641,
+      "duration": 0.177
+    },
+    {
+      "index": 3,
+      "word": "tum",
+      "start": 0.661,
+      "end": 0.838,
+      "duration": 0.177
+    },
+    {
+      "index": 4,
+      "word": "Mumbai",
+      "start": 0.858,
+      "end": 1.213,
+      "duration": 0.355
+    },
+    {
+      "index": 5,
+      "word": "ke",
+      "start": 1.252,
+      "end": 1.37,
+      "duration": 0.118
+    },
+    {
+      "index": 6,
+      "word": "Lalbaugcha",
+      "start": 1.383,
+      "end": 1.974,
+      "duration": 0.591
+    },
+    {
+      "index": 7,
+      "word": "Raja",
+      "start": 2.04,
+      "end": 2.276,
+      "duration": 0.236
+    },
+    {
+      "index": 8,
+      "word": "ke",
+      "start": 2.303,
+      "end": 2.421,
+      "duration": 0.118
+    },
+    {
+      "index": 9,
+      "word": "saamne",
+      "start": 2.434,
+      "end": 2.788,
+      "duration": 0.355
+    },
+    {
+      "index": 10,
+      "word": "ghanton",
+      "start": 2.828,
+      "end": 3.241,
+      "duration": 0.414
+    },
+    {
+      "index": 11,
+      "word": "line",
+      "start": 3.287,
+      "end": 3.524,
+      "duration": 0.236
+    },
+    {
+      "index": 12,
+      "word": "mein",
+      "start": 3.55,
+      "end": 3.786,
+      "duration": 0.236
+    },
+    {
+      "index": 13,
+      "word": "khade",
+      "start": 3.813,
+      "end": 4.108,
+      "duration": 0.295
+    },
+    {
+      "index": 14,
+      "word": "logo",
+      "start": 4.141,
+      "end": 4.377,
+      "duration": 0.236
+    },
+    {
+      "index": 15,
+      "word": "ko",
+      "start": 4.404,
+      "end": 4.522,
+      "duration": 0.118
+    },
+    {
+      "index": 16,
+      "word": "dekhte",
+      "start": 4.535,
+      "end": 4.89,
+      "duration": 0.355
+    },
+    {
+      "index": 17,
+      "word": "ho,",
+      "start": 4.929,
+      "end": 5.106,
+      "duration": 0.177
+    },
+    {
+      "index": 18,
+      "word": "ya",
+      "start": 5.526,
+      "end": 5.654,
+      "duration": 0.128
+    },
+    {
+      "index": 19,
+      "word": "apne",
+      "start": 5.668,
+      "end": 5.923,
+      "duration": 0.255
+    },
+    {
+      "index": 20,
+      "word": "mohalle",
+      "start": 5.951,
+      "end": 6.398,
+      "duration": 0.446
+    },
+    {
+      "index": 21,
+      "word": "ke",
+      "start": 6.447,
+      "end": 6.575,
+      "duration": 0.128
+    },
+    {
+      "index": 22,
+      "word": "pandal",
+      "start": 6.589,
+      "end": 6.972,
+      "duration": 0.383
+    },
+    {
+      "index": 23,
+      "word": "mein",
+      "start": 7.014,
+      "end": 7.269,
+      "duration": 0.255
+    },
+    {
+      "index": 24,
+      "word": "hazaron",
+      "start": 7.298,
+      "end": 7.744,
+      "duration": 0.446
+    },
+    {
+      "index": 25,
+      "word": "logo",
+      "start": 7.794,
+      "end": 8.049,
+      "duration": 0.255
+    },
+    {
+      "index": 26,
+      "word": "ko",
+      "start": 8.077,
+      "end": 8.205,
+      "duration": 0.128
+    },
+    {
+      "index": 27,
+      "word": "—",
+      "start": 8.219,
+      "end": 8.283,
+      "duration": 0.064
+    }
+  ]
+}

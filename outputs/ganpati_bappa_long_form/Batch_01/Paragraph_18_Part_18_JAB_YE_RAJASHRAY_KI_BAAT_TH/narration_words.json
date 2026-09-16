@@ -1,0 +1,153 @@
+{
+  "total_words": 21,
+  "total_duration": 9.64,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 0.285,
+      "end": 0.604,
+      "duration": 0.319
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.64,
+      "end": 0.767,
+      "duration": 0.128
+    },
+    {
+      "index": 3,
+      "word": "baad",
+      "start": 0.782,
+      "end": 1.037,
+      "duration": 0.255
+    },
+    {
+      "index": 4,
+      "word": "wale",
+      "start": 1.066,
+      "end": 1.321,
+      "duration": 0.255
+    },
+    {
+      "index": 5,
+      "word": "mass",
+      "start": 1.349,
+      "end": 1.605,
+      "duration": 0.255
+    },
+    {
+      "index": 6,
+      "word": "public",
+      "start": 1.633,
+      "end": 2.016,
+      "duration": 0.383
+    },
+    {
+      "index": 7,
+      "word": "movement",
+      "start": 2.059,
+      "end": 2.57,
+      "duration": 0.511
+    },
+    {
+      "index": 8,
+      "word": "jaisa",
+      "start": 2.627,
+      "end": 2.946,
+      "duration": 0.319
+    },
+    {
+      "index": 9,
+      "word": "nahi",
+      "start": 2.981,
+      "end": 3.237,
+      "duration": 0.255
+    },
+    {
+      "index": 10,
+      "word": "tha",
+      "start": 3.265,
+      "end": 3.457,
+      "duration": 0.192
+    },
+    {
+      "index": 11,
+      "word": "—",
+      "start": 3.883,
+      "end": 3.943,
+      "duration": 0.06
+    },
+    {
+      "index": 12,
+      "word": "Ye",
+      "start": 3.947,
+      "end": 4.062,
+      "duration": 0.115
+    },
+    {
+      "index": 13,
+      "word": "ek",
+      "start": 4.075,
+      "end": 4.19,
+      "duration": 0.115
+    },
+    {
+      "index": 14,
+      "word": "royal,",
+      "start": 4.203,
+      "end": 4.548,
+      "duration": 0.345
+    },
+    {
+      "index": 15,
+      "word": "state-patronised",
+      "start": 4.586,
+      "end": 5.507,
+      "duration": 0.92
+    },
+    {
+      "index": 16,
+      "word": "celebration",
+      "start": 5.609,
+      "end": 6.242,
+      "duration": 0.633
+    },
+    {
+      "index": 17,
+      "word": "tha,",
+      "start": 6.312,
+      "end": 6.542,
+      "duration": 0.23
+    },
+    {
+      "index": 18,
+      "word": "grassroots",
+      "start": 6.568,
+      "end": 7.143,
+      "duration": 0.575
+    },
+    {
+      "index": 19,
+      "word": "public",
+      "start": 7.654,
+      "end": 8.2,
+      "duration": 0.546
+    },
+    {
+      "index": 20,
+      "word": "julus",
+      "start": 8.261,
+      "end": 8.716,
+      "duration": 0.455
+    },
+    {
+      "index": 21,
+      "word": "nahi.",
+      "start": 8.766,
+      "end": 9.221,
+      "duration": 0.455
+    }
+  ]
+}

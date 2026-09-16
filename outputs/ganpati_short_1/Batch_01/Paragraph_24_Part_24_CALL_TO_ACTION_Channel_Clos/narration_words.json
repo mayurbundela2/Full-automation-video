@@ -1,0 +1,34 @@
+{
+  "total_words": 4,
+  "total_duration": 1.48,
+  "words": [
+    {
+      "index": 1,
+      "word": "Channel",
+      "start": 0.274,
+      "end": 0.583,
+      "duration": 0.309
+    },
+    {
+      "index": 2,
+      "word": "follow",
+      "start": 0.617,
+      "end": 0.882,
+      "duration": 0.265
+    },
+    {
+      "index": 3,
+      "word": "kar",
+      "start": 0.912,
+      "end": 1.044,
+      "duration": 0.132
+    },
+    {
+      "index": 4,
+      "word": "lo.",
+      "start": 1.059,
+      "end": 1.191,
+      "duration": 0.132
+    }
+  ]
+}

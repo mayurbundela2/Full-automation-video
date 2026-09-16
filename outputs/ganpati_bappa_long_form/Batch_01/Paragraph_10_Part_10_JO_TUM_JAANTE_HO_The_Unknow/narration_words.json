@@ -1,0 +1,146 @@
+{
+  "total_words": 20,
+  "total_duration": 7.56,
+  "words": [
+    {
+      "index": 1,
+      "word": "Jab",
+      "start": 0.293,
+      "end": 0.519,
+      "duration": 0.226
+    },
+    {
+      "index": 2,
+      "word": "Shiv",
+      "start": 0.545,
+      "end": 0.847,
+      "duration": 0.302
+    },
+    {
+      "index": 3,
+      "word": "wapas",
+      "start": 0.88,
+      "end": 1.258,
+      "duration": 0.377
+    },
+    {
+      "index": 4,
+      "word": "aaye,",
+      "start": 1.3,
+      "end": 1.677,
+      "duration": 0.377
+    },
+    {
+      "index": 5,
+      "word": "bete",
+      "start": 1.997,
+      "end": 2.299,
+      "duration": 0.302
+    },
+    {
+      "index": 6,
+      "word": "ne",
+      "start": 2.333,
+      "end": 2.484,
+      "duration": 0.151
+    },
+    {
+      "index": 7,
+      "word": "unhe",
+      "start": 2.501,
+      "end": 2.803,
+      "duration": 0.302
+    },
+    {
+      "index": 8,
+      "word": "rokne",
+      "start": 2.837,
+      "end": 3.214,
+      "duration": 0.378
+    },
+    {
+      "index": 9,
+      "word": "ki",
+      "start": 3.256,
+      "end": 3.408,
+      "duration": 0.151
+    },
+    {
+      "index": 10,
+      "word": "koshish",
+      "start": 3.424,
+      "end": 3.953,
+      "duration": 0.529
+    },
+    {
+      "index": 11,
+      "word": "ki",
+      "start": 4.012,
+      "end": 4.163,
+      "duration": 0.151
+    },
+    {
+      "index": 12,
+      "word": "—",
+      "start": 4.574,
+      "end": 4.651,
+      "duration": 0.077
+    },
+    {
+      "index": 13,
+      "word": "bina",
+      "start": 4.659,
+      "end": 4.967,
+      "duration": 0.307
+    },
+    {
+      "index": 14,
+      "word": "jaane",
+      "start": 5.001,
+      "end": 5.385,
+      "duration": 0.384
+    },
+    {
+      "index": 15,
+      "word": "ki",
+      "start": 5.428,
+      "end": 5.581,
+      "duration": 0.154
+    },
+    {
+      "index": 16,
+      "word": "wo",
+      "start": 5.598,
+      "end": 5.752,
+      "duration": 0.154
+    },
+    {
+      "index": 17,
+      "word": "khud",
+      "start": 5.769,
+      "end": 6.076,
+      "duration": 0.307
+    },
+    {
+      "index": 18,
+      "word": "unke",
+      "start": 6.11,
+      "end": 6.418,
+      "duration": 0.307
+    },
+    {
+      "index": 19,
+      "word": "pita",
+      "start": 6.452,
+      "end": 6.759,
+      "duration": 0.307
+    },
+    {
+      "index": 20,
+      "word": "hain.",
+      "start": 6.793,
+      "end": 7.177,
+      "duration": 0.384
+    }
+  ]
+}

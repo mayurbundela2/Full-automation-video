@@ -1,0 +1,132 @@
+{
+  "total_words": 18,
+  "total_duration": 8.76,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.294,
+      "end": 0.474,
+      "duration": 0.18
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.494,
+      "end": 0.614,
+      "duration": 0.12
+    },
+    {
+      "index": 3,
+      "word": "pattern",
+      "start": 0.627,
+      "end": 1.047,
+      "duration": 0.42
+    },
+    {
+      "index": 4,
+      "word": "itna",
+      "start": 1.093,
+      "end": 1.333,
+      "duration": 0.24
+    },
+    {
+      "index": 5,
+      "word": "deliberate",
+      "start": 1.36,
+      "end": 1.959,
+      "duration": 0.6
+    },
+    {
+      "index": 6,
+      "word": "tha,",
+      "start": 2.026,
+      "end": 2.266,
+      "duration": 0.24
+    },
+    {
+      "index": 7,
+      "word": "itna",
+      "start": 2.293,
+      "end": 2.532,
+      "duration": 0.24
+    },
+    {
+      "index": 8,
+      "word": "systematic",
+      "start": 2.851,
+      "end": 3.505,
+      "duration": 0.654
+    },
+    {
+      "index": 9,
+      "word": "tha,",
+      "start": 3.578,
+      "end": 3.839,
+      "duration": 0.262
+    },
+    {
+      "index": 10,
+      "word": "ki",
+      "start": 3.868,
+      "end": 3.999,
+      "duration": 0.131
+    },
+    {
+      "index": 11,
+      "word": "archaeologists",
+      "start": 4.014,
+      "end": 4.929,
+      "duration": 0.916
+    },
+    {
+      "index": 12,
+      "word": "ise",
+      "start": 5.031,
+      "end": 5.227,
+      "duration": 0.196
+    },
+    {
+      "index": 13,
+      "word": "\"extensive",
+      "start": 5.249,
+      "end": 5.903,
+      "duration": 0.654
+    },
+    {
+      "index": 14,
+      "word": "beer-brewing",
+      "start": 5.975,
+      "end": 6.76,
+      "duration": 0.785
+    },
+    {
+      "index": 15,
+      "word": "operation\"",
+      "start": 6.847,
+      "end": 7.501,
+      "duration": 0.654
+    },
+    {
+      "index": 16,
+      "word": "bol",
+      "start": 7.574,
+      "end": 7.77,
+      "duration": 0.196
+    },
+    {
+      "index": 17,
+      "word": "rahe",
+      "start": 7.792,
+      "end": 8.054,
+      "duration": 0.262
+    },
+    {
+      "index": 18,
+      "word": "hain.",
+      "start": 8.083,
+      "end": 8.41,
+      "duration": 0.327
+    }
+  ]
+}

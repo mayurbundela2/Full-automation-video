@@ -1,0 +1,55 @@
+{
+  "total_words": 7,
+  "total_duration": 3.52,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ye",
+      "start": 0.316,
+      "end": 0.489,
+      "duration": 0.173
+    },
+    {
+      "index": 2,
+      "word": "azadi",
+      "start": 0.508,
+      "end": 0.94,
+      "duration": 0.432
+    },
+    {
+      "index": 3,
+      "word": "ki",
+      "start": 0.988,
+      "end": 1.161,
+      "duration": 0.173
+    },
+    {
+      "index": 4,
+      "word": "ladai",
+      "start": 1.18,
+      "end": 1.612,
+      "duration": 0.432
+    },
+    {
+      "index": 5,
+      "word": "ka",
+      "start": 1.66,
+      "end": 1.833,
+      "duration": 0.173
+    },
+    {
+      "index": 6,
+      "word": "hathiyar",
+      "start": 1.852,
+      "end": 2.543,
+      "duration": 0.691
+    },
+    {
+      "index": 7,
+      "word": "tha...",
+      "start": 2.62,
+      "end": 3.138,
+      "duration": 0.518
+    }
+  ]
+}

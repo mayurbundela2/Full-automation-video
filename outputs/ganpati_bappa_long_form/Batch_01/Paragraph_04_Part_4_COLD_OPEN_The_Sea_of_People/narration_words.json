@@ -1,0 +1,90 @@
+{
+  "total_words": 12,
+  "total_duration": 6.76,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.338,
+      "end": 0.581,
+      "duration": 0.243
+    },
+    {
+      "index": 2,
+      "word": "akhir",
+      "start": 0.608,
+      "end": 1.014,
+      "duration": 0.405
+    },
+    {
+      "index": 3,
+      "word": "mein",
+      "start": 1.059,
+      "end": 1.383,
+      "duration": 0.324
+    },
+    {
+      "index": 4,
+      "word": "—",
+      "start": 1.655,
+      "end": 1.748,
+      "duration": 0.093
+    },
+    {
+      "index": 5,
+      "word": "ek",
+      "start": 1.758,
+      "end": 1.943,
+      "duration": 0.185
+    },
+    {
+      "index": 6,
+      "word": "julus,",
+      "start": 1.964,
+      "end": 2.519,
+      "duration": 0.555
+    },
+    {
+      "index": 7,
+      "word": "jisme",
+      "start": 2.581,
+      "end": 3.043,
+      "duration": 0.463
+    },
+    {
+      "index": 8,
+      "word": "hazaron",
+      "start": 3.095,
+      "end": 3.743,
+      "duration": 0.648
+    },
+    {
+      "index": 9,
+      "word": "log",
+      "start": 3.815,
+      "end": 4.092,
+      "duration": 0.278
+    },
+    {
+      "index": 10,
+      "word": "ek",
+      "start": 4.123,
+      "end": 4.308,
+      "duration": 0.185
+    },
+    {
+      "index": 11,
+      "word": "saath",
+      "start": 4.329,
+      "end": 4.792,
+      "duration": 0.463
+    },
+    {
+      "index": 12,
+      "word": "chalenge.",
+      "start": 4.997,
+      "end": 6.258,
+      "duration": 1.261
+    }
+  ]
+}

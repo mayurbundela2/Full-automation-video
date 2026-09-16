@@ -1,0 +1,111 @@
+{
+  "total_words": 15,
+  "total_duration": 5.48,
+  "words": [
+    {
+      "index": 1,
+      "word": "Wahan",
+      "start": 0.278,
+      "end": 0.584,
+      "duration": 0.306
+    },
+    {
+      "index": 2,
+      "word": "bade",
+      "start": 0.618,
+      "end": 0.864,
+      "duration": 0.245
+    },
+    {
+      "index": 3,
+      "word": "limestone",
+      "start": 0.891,
+      "end": 1.442,
+      "duration": 0.552
+    },
+    {
+      "index": 4,
+      "word": "troughs",
+      "start": 1.504,
+      "end": 1.933,
+      "duration": 0.429
+    },
+    {
+      "index": 5,
+      "word": "mile",
+      "start": 1.98,
+      "end": 2.225,
+      "duration": 0.245
+    },
+    {
+      "index": 6,
+      "word": "—",
+      "start": 2.253,
+      "end": 2.314,
+      "duration": 0.061
+    },
+    {
+      "index": 7,
+      "word": "ek",
+      "start": 2.321,
+      "end": 2.443,
+      "duration": 0.123
+    },
+    {
+      "index": 8,
+      "word": "sau",
+      "start": 2.708,
+      "end": 2.916,
+      "duration": 0.208
+    },
+    {
+      "index": 9,
+      "word": "saath",
+      "start": 2.939,
+      "end": 3.286,
+      "duration": 0.347
+    },
+    {
+      "index": 10,
+      "word": "litre",
+      "start": 3.324,
+      "end": 3.671,
+      "duration": 0.347
+    },
+    {
+      "index": 11,
+      "word": "tak",
+      "start": 3.709,
+      "end": 3.917,
+      "duration": 0.208
+    },
+    {
+      "index": 12,
+      "word": "hold",
+      "start": 3.941,
+      "end": 4.218,
+      "duration": 0.277
+    },
+    {
+      "index": 13,
+      "word": "kar",
+      "start": 4.249,
+      "end": 4.457,
+      "duration": 0.208
+    },
+    {
+      "index": 14,
+      "word": "sakte",
+      "start": 4.48,
+      "end": 4.826,
+      "duration": 0.347
+    },
+    {
+      "index": 15,
+      "word": "the.",
+      "start": 4.865,
+      "end": 5.142,
+      "duration": 0.277
+    }
+  ]
+}

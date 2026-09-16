@@ -1,0 +1,83 @@
+{
+  "total_words": 11,
+  "total_duration": 5.12,
+  "words": [
+    {
+      "index": 1,
+      "word": "Mumbai",
+      "start": 0.252,
+      "end": 0.584,
+      "duration": 0.332
+    },
+    {
+      "index": 2,
+      "word": "jaise",
+      "start": 0.621,
+      "end": 0.898,
+      "duration": 0.277
+    },
+    {
+      "index": 3,
+      "word": "shehron",
+      "start": 0.928,
+      "end": 1.316,
+      "duration": 0.387
+    },
+    {
+      "index": 4,
+      "word": "mein,",
+      "start": 1.359,
+      "end": 1.635,
+      "duration": 0.277
+    },
+    {
+      "index": 5,
+      "word": "ek",
+      "start": 2.078,
+      "end": 2.225,
+      "duration": 0.147
+    },
+    {
+      "index": 6,
+      "word": "murti",
+      "start": 2.242,
+      "end": 2.61,
+      "duration": 0.369
+    },
+    {
+      "index": 7,
+      "word": "ke",
+      "start": 2.651,
+      "end": 2.799,
+      "duration": 0.147
+    },
+    {
+      "index": 8,
+      "word": "saamne",
+      "start": 2.815,
+      "end": 3.257,
+      "duration": 0.442
+    },
+    {
+      "index": 9,
+      "word": "ghanton",
+      "start": 3.307,
+      "end": 3.823,
+      "duration": 0.516
+    },
+    {
+      "index": 10,
+      "word": "line",
+      "start": 3.88,
+      "end": 4.175,
+      "duration": 0.295
+    },
+    {
+      "index": 11,
+      "word": "lagegi.",
+      "start": 4.208,
+      "end": 4.724,
+      "duration": 0.516
+    }
+  ]
+}

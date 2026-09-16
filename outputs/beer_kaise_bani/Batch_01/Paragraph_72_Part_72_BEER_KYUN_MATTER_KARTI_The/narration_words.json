@@ -1,0 +1,160 @@
+{
+  "total_words": 22,
+  "total_duration": 8.52,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ab",
+      "start": 0.307,
+      "end": 0.431,
+      "duration": 0.124
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.445,
+      "end": 0.569,
+      "duration": 0.124
+    },
+    {
+      "index": 3,
+      "word": "sawaal",
+      "start": 0.583,
+      "end": 0.955,
+      "duration": 0.372
+    },
+    {
+      "index": 4,
+      "word": "—",
+      "start": 0.996,
+      "end": 1.058,
+      "duration": 0.062
+    },
+    {
+      "index": 5,
+      "word": "beer",
+      "start": 1.662,
+      "end": 1.924,
+      "duration": 0.262
+    },
+    {
+      "index": 6,
+      "word": "itni",
+      "start": 1.953,
+      "end": 2.215,
+      "duration": 0.262
+    },
+    {
+      "index": 7,
+      "word": "important",
+      "start": 2.244,
+      "end": 2.833,
+      "duration": 0.589
+    },
+    {
+      "index": 8,
+      "word": "kyun",
+      "start": 2.898,
+      "end": 3.16,
+      "duration": 0.262
+    },
+    {
+      "index": 9,
+      "word": "ho",
+      "start": 3.189,
+      "end": 3.32,
+      "duration": 0.131
+    },
+    {
+      "index": 10,
+      "word": "sakti",
+      "start": 3.335,
+      "end": 3.662,
+      "duration": 0.327
+    },
+    {
+      "index": 11,
+      "word": "thi?",
+      "start": 3.698,
+      "end": 3.96,
+      "duration": 0.262
+    },
+    {
+      "index": 12,
+      "word": "Log",
+      "start": 4.527,
+      "end": 4.737,
+      "duration": 0.21
+    },
+    {
+      "index": 13,
+      "word": "farming",
+      "start": 4.761,
+      "end": 5.252,
+      "duration": 0.491
+    },
+    {
+      "index": 14,
+      "word": "ki",
+      "start": 5.307,
+      "end": 5.447,
+      "duration": 0.14
+    },
+    {
+      "index": 15,
+      "word": "mehnat",
+      "start": 5.462,
+      "end": 5.883,
+      "duration": 0.421
+    },
+    {
+      "index": 16,
+      "word": "sirf",
+      "start": 5.93,
+      "end": 6.211,
+      "duration": 0.281
+    },
+    {
+      "index": 17,
+      "word": "ek",
+      "start": 6.242,
+      "end": 6.382,
+      "duration": 0.14
+    },
+    {
+      "index": 18,
+      "word": "drink",
+      "start": 6.398,
+      "end": 6.749,
+      "duration": 0.351
+    },
+    {
+      "index": 19,
+      "word": "ke",
+      "start": 6.788,
+      "end": 6.928,
+      "duration": 0.14
+    },
+    {
+      "index": 20,
+      "word": "liye",
+      "start": 6.944,
+      "end": 7.224,
+      "duration": 0.281
+    },
+    {
+      "index": 21,
+      "word": "kyun",
+      "start": 7.255,
+      "end": 7.536,
+      "duration": 0.281
+    },
+    {
+      "index": 22,
+      "word": "karte?",
+      "start": 7.567,
+      "end": 7.988,
+      "duration": 0.421
+    }
+  ]
+}

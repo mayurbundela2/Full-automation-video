@@ -1,0 +1,139 @@
+{
+  "total_words": 19,
+  "total_duration": 7.84,
+  "words": [
+    {
+      "index": 1,
+      "word": "Religious",
+      "start": 0.278,
+      "end": 0.824,
+      "duration": 0.546
+    },
+    {
+      "index": 2,
+      "word": "gatherings,",
+      "start": 0.885,
+      "end": 1.552,
+      "duration": 0.667
+    },
+    {
+      "index": 3,
+      "word": "meanwhile,",
+      "start": 1.626,
+      "end": 2.233,
+      "duration": 0.607
+    },
+    {
+      "index": 4,
+      "word": "ek",
+      "start": 2.301,
+      "end": 2.422,
+      "duration": 0.121
+    },
+    {
+      "index": 5,
+      "word": "aisa",
+      "start": 2.435,
+      "end": 2.678,
+      "duration": 0.243
+    },
+    {
+      "index": 6,
+      "word": "public",
+      "start": 2.705,
+      "end": 3.069,
+      "duration": 0.364
+    },
+    {
+      "index": 7,
+      "word": "space",
+      "start": 3.11,
+      "end": 3.413,
+      "duration": 0.303
+    },
+    {
+      "index": 8,
+      "word": "provide",
+      "start": 3.447,
+      "end": 3.872,
+      "duration": 0.425
+    },
+    {
+      "index": 9,
+      "word": "kar",
+      "start": 3.919,
+      "end": 4.101,
+      "duration": 0.182
+    },
+    {
+      "index": 10,
+      "word": "sakti",
+      "start": 4.121,
+      "end": 4.424,
+      "duration": 0.303
+    },
+    {
+      "index": 11,
+      "word": "thi",
+      "start": 4.458,
+      "end": 4.64,
+      "duration": 0.182
+    },
+    {
+      "index": 12,
+      "word": "jahan",
+      "start": 4.66,
+      "end": 4.964,
+      "duration": 0.303
+    },
+    {
+      "index": 13,
+      "word": "log",
+      "start": 4.997,
+      "end": 5.179,
+      "duration": 0.182
+    },
+    {
+      "index": 14,
+      "word": "relatively",
+      "start": 5.2,
+      "end": 5.806,
+      "duration": 0.607
+    },
+    {
+      "index": 15,
+      "word": "openly",
+      "start": 5.874,
+      "end": 6.238,
+      "duration": 0.364
+    },
+    {
+      "index": 16,
+      "word": "ikattha",
+      "start": 6.278,
+      "end": 6.703,
+      "duration": 0.425
+    },
+    {
+      "index": 17,
+      "word": "ho",
+      "start": 6.75,
+      "end": 6.872,
+      "duration": 0.121
+    },
+    {
+      "index": 18,
+      "word": "sakte",
+      "start": 6.885,
+      "end": 7.189,
+      "duration": 0.303
+    },
+    {
+      "index": 19,
+      "word": "the.",
+      "start": 7.222,
+      "end": 7.465,
+      "duration": 0.243
+    }
+  ]
+}

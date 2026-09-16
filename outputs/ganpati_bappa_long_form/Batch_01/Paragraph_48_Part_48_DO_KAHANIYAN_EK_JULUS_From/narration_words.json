@@ -1,0 +1,69 @@
+{
+  "total_words": 9,
+  "total_duration": 3.8,
+  "words": [
+    {
+      "index": 1,
+      "word": "Wo",
+      "start": 0.356,
+      "end": 0.466,
+      "duration": 0.11
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.479,
+      "end": 0.589,
+      "duration": 0.11
+    },
+    {
+      "index": 3,
+      "word": "community",
+      "start": 0.601,
+      "end": 1.098,
+      "duration": 0.497
+    },
+    {
+      "index": 4,
+      "word": "ban",
+      "start": 1.153,
+      "end": 1.318,
+      "duration": 0.166
+    },
+    {
+      "index": 5,
+      "word": "gayi.",
+      "start": 1.337,
+      "end": 1.613,
+      "duration": 0.276
+    },
+    {
+      "index": 6,
+      "word": "Ek",
+      "start": 1.643,
+      "end": 1.754,
+      "duration": 0.11
+    },
+    {
+      "index": 7,
+      "word": "movement",
+      "start": 2.256,
+      "end": 2.788,
+      "duration": 0.532
+    },
+    {
+      "index": 8,
+      "word": "ban",
+      "start": 2.847,
+      "end": 3.046,
+      "duration": 0.199
+    },
+    {
+      "index": 9,
+      "word": "gayi.",
+      "start": 3.069,
+      "end": 3.401,
+      "duration": 0.332
+    }
+  ]
+}

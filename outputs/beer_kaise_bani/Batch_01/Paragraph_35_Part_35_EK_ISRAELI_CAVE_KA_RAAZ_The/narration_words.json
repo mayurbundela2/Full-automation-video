@@ -1,0 +1,83 @@
+{
+  "total_words": 11,
+  "total_duration": 5.44,
+  "words": [
+    {
+      "index": 1,
+      "word": "Iska",
+      "start": 0.369,
+      "end": 0.611,
+      "duration": 0.242
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.638,
+      "end": 0.759,
+      "duration": 0.121
+    },
+    {
+      "index": 3,
+      "word": "possible",
+      "start": 0.772,
+      "end": 1.257,
+      "duration": 0.484
+    },
+    {
+      "index": 4,
+      "word": "jawab",
+      "start": 1.31,
+      "end": 1.613,
+      "duration": 0.303
+    },
+    {
+      "index": 5,
+      "word": "shayad",
+      "start": 1.647,
+      "end": 2.01,
+      "duration": 0.363
+    },
+    {
+      "index": 6,
+      "word": "Israel",
+      "start": 2.431,
+      "end": 2.776,
+      "duration": 0.345
+    },
+    {
+      "index": 7,
+      "word": "ke",
+      "start": 2.814,
+      "end": 2.929,
+      "duration": 0.115
+    },
+    {
+      "index": 8,
+      "word": "ek",
+      "start": 3.109,
+      "end": 3.225,
+      "duration": 0.116
+    },
+    {
+      "index": 9,
+      "word": "cave",
+      "start": 3.238,
+      "end": 3.47,
+      "duration": 0.232
+    },
+    {
+      "index": 10,
+      "word": "mein",
+      "start": 3.495,
+      "end": 3.727,
+      "duration": 0.232
+    },
+    {
+      "index": 11,
+      "word": "mila.",
+      "start": 3.753,
+      "end": 4.043,
+      "duration": 0.29
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "total_words": 11,
+  "total_duration": 4.96,
+  "words": [
+    {
+      "index": 1,
+      "word": "Kya",
+      "start": 0.476,
+      "end": 0.668,
+      "duration": 0.192
+    },
+    {
+      "index": 2,
+      "word": "beer",
+      "start": 0.69,
+      "end": 0.946,
+      "duration": 0.257
+    },
+    {
+      "index": 3,
+      "word": "ne",
+      "start": 0.975,
+      "end": 1.103,
+      "duration": 0.128
+    },
+    {
+      "index": 4,
+      "word": "agriculture",
+      "start": 1.117,
+      "end": 1.823,
+      "duration": 0.705
+    },
+    {
+      "index": 5,
+      "word": "ko",
+      "start": 1.901,
+      "end": 2.029,
+      "duration": 0.128
+    },
+    {
+      "index": 6,
+      "word": "janam",
+      "start": 2.043,
+      "end": 2.364,
+      "duration": 0.321
+    },
+    {
+      "index": 7,
+      "word": "diya?",
+      "start": 2.4,
+      "end": 2.72,
+      "duration": 0.321
+    },
+    {
+      "index": 8,
+      "word": "Hum",
+      "start": 3.423,
+      "end": 3.618,
+      "duration": 0.195
+    },
+    {
+      "index": 9,
+      "word": "sure",
+      "start": 3.64,
+      "end": 3.901,
+      "duration": 0.261
+    },
+    {
+      "index": 10,
+      "word": "nahi",
+      "start": 3.93,
+      "end": 4.19,
+      "duration": 0.261
+    },
+    {
+      "index": 11,
+      "word": "hain.",
+      "start": 4.219,
+      "end": 4.545,
+      "duration": 0.326
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "total_words": 15,
+  "total_duration": 6.92,
+  "words": [
+    {
+      "index": 1,
+      "word": "Toh",
+      "start": 0.294,
+      "end": 0.491,
+      "duration": 0.197
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.513,
+      "end": 0.644,
+      "duration": 0.131
+    },
+    {
+      "index": 3,
+      "word": "exciting",
+      "start": 0.659,
+      "end": 1.184,
+      "duration": 0.525
+    },
+    {
+      "index": 4,
+      "word": "theory",
+      "start": 1.242,
+      "end": 1.636,
+      "duration": 0.394
+    },
+    {
+      "index": 5,
+      "word": "bani",
+      "start": 1.679,
+      "end": 1.942,
+      "duration": 0.262
+    },
+    {
+      "index": 6,
+      "word": "—",
+      "start": 2.238,
+      "end": 2.307,
+      "duration": 0.069
+    },
+    {
+      "index": 7,
+      "word": "ye",
+      "start": 2.314,
+      "end": 2.452,
+      "duration": 0.137
+    },
+    {
+      "index": 8,
+      "word": "monumental",
+      "start": 2.467,
+      "end": 3.153,
+      "duration": 0.687
+    },
+    {
+      "index": 9,
+      "word": "construction",
+      "start": 3.23,
+      "end": 4.054,
+      "duration": 0.824
+    },
+    {
+      "index": 10,
+      "word": "shayad",
+      "start": 4.145,
+      "end": 4.557,
+      "duration": 0.412
+    },
+    {
+      "index": 11,
+      "word": "beer",
+      "start": 4.603,
+      "end": 4.877,
+      "duration": 0.275
+    },
+    {
+      "index": 12,
+      "word": "feasts",
+      "start": 4.908,
+      "end": 5.32,
+      "duration": 0.412
+    },
+    {
+      "index": 13,
+      "word": "se",
+      "start": 5.366,
+      "end": 5.503,
+      "duration": 0.137
+    },
+    {
+      "index": 14,
+      "word": "motivated",
+      "start": 5.518,
+      "end": 6.136,
+      "duration": 0.618
+    },
+    {
+      "index": 15,
+      "word": "tha.",
+      "start": 6.205,
+      "end": 6.479,
+      "duration": 0.275
+    }
+  ]
+}

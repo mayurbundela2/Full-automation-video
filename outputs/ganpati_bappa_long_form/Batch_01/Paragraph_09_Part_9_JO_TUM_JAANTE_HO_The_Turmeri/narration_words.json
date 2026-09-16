@@ -1,0 +1,132 @@
+{
+  "total_words": 18,
+  "total_duration": 6.4,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.244,
+      "end": 0.424,
+      "duration": 0.18
+    },
+    {
+      "index": 2,
+      "word": "haldi",
+      "start": 0.444,
+      "end": 0.744,
+      "duration": 0.3
+    },
+    {
+      "index": 3,
+      "word": "ke",
+      "start": 0.777,
+      "end": 0.897,
+      "duration": 0.12
+    },
+    {
+      "index": 4,
+      "word": "lep",
+      "start": 0.911,
+      "end": 1.091,
+      "duration": 0.18
+    },
+    {
+      "index": 5,
+      "word": "se",
+      "start": 1.111,
+      "end": 1.231,
+      "duration": 0.12
+    },
+    {
+      "index": 6,
+      "word": "ek",
+      "start": 1.244,
+      "end": 1.364,
+      "duration": 0.12
+    },
+    {
+      "index": 7,
+      "word": "bete",
+      "start": 1.377,
+      "end": 1.617,
+      "duration": 0.24
+    },
+    {
+      "index": 8,
+      "word": "ka",
+      "start": 2.013,
+      "end": 2.148,
+      "duration": 0.135
+    },
+    {
+      "index": 9,
+      "word": "roop",
+      "start": 2.163,
+      "end": 2.433,
+      "duration": 0.27
+    },
+    {
+      "index": 10,
+      "word": "banaya",
+      "start": 2.463,
+      "end": 2.867,
+      "duration": 0.405
+    },
+    {
+      "index": 11,
+      "word": "—",
+      "start": 2.912,
+      "end": 2.98,
+      "duration": 0.067
+    },
+    {
+      "index": 12,
+      "word": "use",
+      "start": 2.987,
+      "end": 3.19,
+      "duration": 0.202
+    },
+    {
+      "index": 13,
+      "word": "apna",
+      "start": 3.212,
+      "end": 3.482,
+      "duration": 0.27
+    },
+    {
+      "index": 14,
+      "word": "pehra",
+      "start": 3.916,
+      "end": 4.225,
+      "duration": 0.309
+    },
+    {
+      "index": 15,
+      "word": "dene",
+      "start": 4.259,
+      "end": 4.506,
+      "duration": 0.247
+    },
+    {
+      "index": 16,
+      "word": "ke",
+      "start": 4.534,
+      "end": 4.657,
+      "duration": 0.124
+    },
+    {
+      "index": 17,
+      "word": "liye",
+      "start": 4.976,
+      "end": 5.44,
+      "duration": 0.464
+    },
+    {
+      "index": 18,
+      "word": "kaha.",
+      "start": 5.492,
+      "end": 6.072,
+      "duration": 0.581
+    }
+  ]
+}

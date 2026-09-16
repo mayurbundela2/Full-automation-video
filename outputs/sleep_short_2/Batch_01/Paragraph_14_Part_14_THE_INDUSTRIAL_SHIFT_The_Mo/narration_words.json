@@ -1,0 +1,62 @@
+{
+  "total_words": 8,
+  "total_duration": 5.36,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.368,
+      "end": 0.531,
+      "duration": 0.163
+    },
+    {
+      "index": 2,
+      "word": "humein",
+      "start": 0.549,
+      "end": 0.875,
+      "duration": 0.326
+    },
+    {
+      "index": 3,
+      "word": "bola",
+      "start": 0.912,
+      "end": 1.129,
+      "duration": 0.217
+    },
+    {
+      "index": 4,
+      "word": "gaya...",
+      "start": 1.153,
+      "end": 1.534,
+      "duration": 0.381
+    },
+    {
+      "index": 5,
+      "word": "aath",
+      "start": 2.306,
+      "end": 2.527,
+      "duration": 0.221
+    },
+    {
+      "index": 6,
+      "word": "ghante",
+      "start": 2.552,
+      "end": 2.884,
+      "duration": 0.332
+    },
+    {
+      "index": 7,
+      "word": "ek",
+      "start": 2.92,
+      "end": 3.031,
+      "duration": 0.111
+    },
+    {
+      "index": 8,
+      "word": "saath.",
+      "start": 3.043,
+      "end": 3.375,
+      "duration": 0.332
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "total_words": 3,
+  "total_duration": 1.52,
+  "words": [
+    {
+      "index": 1,
+      "word": "Sach",
+      "start": 0.275,
+      "end": 0.537,
+      "duration": 0.262
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.566,
+      "end": 0.696,
+      "duration": 0.131
+    },
+    {
+      "index": 3,
+      "word": "hai...",
+      "start": 0.711,
+      "end": 1.103,
+      "duration": 0.392
+    }
+  ]
+}

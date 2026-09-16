@@ -1,0 +1,111 @@
+{
+  "total_words": 15,
+  "total_duration": 6.12,
+  "words": [
+    {
+      "index": 1,
+      "word": "Initial",
+      "start": 0.314,
+      "end": 0.689,
+      "duration": 0.375
+    },
+    {
+      "index": 2,
+      "word": "chemical",
+      "start": 0.731,
+      "end": 1.16,
+      "duration": 0.429
+    },
+    {
+      "index": 3,
+      "word": "testing",
+      "start": 1.208,
+      "end": 1.583,
+      "duration": 0.375
+    },
+    {
+      "index": 4,
+      "word": "mein",
+      "start": 1.625,
+      "end": 1.839,
+      "duration": 0.214
+    },
+    {
+      "index": 5,
+      "word": "calcium",
+      "start": 2.024,
+      "end": 2.419,
+      "duration": 0.395
+    },
+    {
+      "index": 6,
+      "word": "oxalate",
+      "start": 2.463,
+      "end": 2.859,
+      "duration": 0.395
+    },
+    {
+      "index": 7,
+      "word": "mila",
+      "start": 2.903,
+      "end": 3.129,
+      "duration": 0.226
+    },
+    {
+      "index": 8,
+      "word": "—",
+      "start": 3.154,
+      "end": 3.214,
+      "duration": 0.06
+    },
+    {
+      "index": 9,
+      "word": "jo",
+      "start": 3.216,
+      "end": 3.329,
+      "duration": 0.113
+    },
+    {
+      "index": 10,
+      "word": "fermentation",
+      "start": 3.533,
+      "end": 4.246,
+      "duration": 0.713
+    },
+    {
+      "index": 11,
+      "word": "ka",
+      "start": 4.325,
+      "end": 4.444,
+      "duration": 0.119
+    },
+    {
+      "index": 12,
+      "word": "byproduct",
+      "start": 4.457,
+      "end": 4.992,
+      "duration": 0.535
+    },
+    {
+      "index": 13,
+      "word": "ho",
+      "start": 5.051,
+      "end": 5.17,
+      "duration": 0.119
+    },
+    {
+      "index": 14,
+      "word": "sakta",
+      "start": 5.183,
+      "end": 5.48,
+      "duration": 0.297
+    },
+    {
+      "index": 15,
+      "word": "hai.",
+      "start": 5.513,
+      "end": 5.751,
+      "duration": 0.238
+    }
+  ]
+}

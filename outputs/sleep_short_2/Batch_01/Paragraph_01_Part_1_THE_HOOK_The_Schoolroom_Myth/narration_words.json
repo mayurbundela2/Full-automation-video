@@ -1,0 +1,62 @@
+{
+  "total_words": 8,
+  "total_duration": 3.56,
+  "words": [
+    {
+      "index": 1,
+      "word": "Sach",
+      "start": 0.314,
+      "end": 0.52,
+      "duration": 0.206
+    },
+    {
+      "index": 2,
+      "word": "batao...",
+      "start": 0.543,
+      "end": 0.956,
+      "duration": 0.413
+    },
+    {
+      "index": 3,
+      "word": "school",
+      "start": 1.421,
+      "end": 1.749,
+      "duration": 0.328
+    },
+    {
+      "index": 4,
+      "word": "mein",
+      "start": 1.785,
+      "end": 2.004,
+      "duration": 0.219
+    },
+    {
+      "index": 5,
+      "word": "tumhe",
+      "start": 2.028,
+      "end": 2.302,
+      "duration": 0.273
+    },
+    {
+      "index": 6,
+      "word": "kya",
+      "start": 2.332,
+      "end": 2.496,
+      "duration": 0.164
+    },
+    {
+      "index": 7,
+      "word": "sikhaya",
+      "start": 2.514,
+      "end": 2.897,
+      "duration": 0.383
+    },
+    {
+      "index": 8,
+      "word": "gaya?",
+      "start": 2.939,
+      "end": 3.213,
+      "duration": 0.273
+    }
+  ]
+}

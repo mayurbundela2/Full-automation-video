@@ -1,0 +1,83 @@
+{
+  "total_words": 11,
+  "total_duration": 4.44,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ganesh",
+      "start": 0.471,
+      "end": 0.873,
+      "duration": 0.402
+    },
+    {
+      "index": 2,
+      "word": "Chaturthi",
+      "start": 0.917,
+      "end": 1.52,
+      "duration": 0.603
+    },
+    {
+      "index": 3,
+      "word": "zyada",
+      "start": 1.587,
+      "end": 1.922,
+      "duration": 0.335
+    },
+    {
+      "index": 4,
+      "word": "tar",
+      "start": 1.959,
+      "end": 2.16,
+      "duration": 0.201
+    },
+    {
+      "index": 5,
+      "word": "ek",
+      "start": 2.183,
+      "end": 2.317,
+      "duration": 0.134
+    },
+    {
+      "index": 6,
+      "word": "ghar",
+      "start": 2.331,
+      "end": 2.599,
+      "duration": 0.268
+    },
+    {
+      "index": 7,
+      "word": "ke",
+      "start": 2.629,
+      "end": 2.763,
+      "duration": 0.134
+    },
+    {
+      "index": 8,
+      "word": "andar",
+      "start": 2.778,
+      "end": 3.113,
+      "duration": 0.335
+    },
+    {
+      "index": 9,
+      "word": "ka",
+      "start": 3.15,
+      "end": 3.284,
+      "duration": 0.134
+    },
+    {
+      "index": 10,
+      "word": "tyohar",
+      "start": 3.299,
+      "end": 3.701,
+      "duration": 0.402
+    },
+    {
+      "index": 11,
+      "word": "tha.",
+      "start": 3.745,
+      "end": 4.013,
+      "duration": 0.268
+    }
+  ]
+}

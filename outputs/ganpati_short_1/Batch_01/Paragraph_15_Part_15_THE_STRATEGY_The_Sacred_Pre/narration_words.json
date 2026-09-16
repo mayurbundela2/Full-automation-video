@@ -1,0 +1,62 @@
+{
+  "total_words": 8,
+  "total_duration": 3.32,
+  "words": [
+    {
+      "index": 1,
+      "word": "Toh",
+      "start": 0.283,
+      "end": 0.468,
+      "duration": 0.185
+    },
+    {
+      "index": 2,
+      "word": "Tilak",
+      "start": 0.489,
+      "end": 0.798,
+      "duration": 0.309
+    },
+    {
+      "index": 3,
+      "word": "ne",
+      "start": 0.832,
+      "end": 0.956,
+      "duration": 0.124
+    },
+    {
+      "index": 4,
+      "word": "Ganpati",
+      "start": 0.97,
+      "end": 1.402,
+      "duration": 0.433
+    },
+    {
+      "index": 5,
+      "word": "puja",
+      "start": 1.45,
+      "end": 1.697,
+      "duration": 0.247
+    },
+    {
+      "index": 6,
+      "word": "ko",
+      "start": 1.725,
+      "end": 1.848,
+      "duration": 0.124
+    },
+    {
+      "index": 7,
+      "word": "bahana",
+      "start": 1.862,
+      "end": 2.233,
+      "duration": 0.371
+    },
+    {
+      "index": 8,
+      "word": "banaya...",
+      "start": 2.274,
+      "end": 2.83,
+      "duration": 0.556
+    }
+  ]
+}

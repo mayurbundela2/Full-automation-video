@@ -1,0 +1,153 @@
+{
+  "total_words": 21,
+  "total_duration": 9.4,
+  "words": [
+    {
+      "index": 1,
+      "word": "Doosri",
+      "start": 0.284,
+      "end": 0.519,
+      "duration": 0.235
+    },
+    {
+      "index": 2,
+      "word": "—",
+      "start": 0.545,
+      "end": 0.605,
+      "duration": 0.06
+    },
+    {
+      "index": 3,
+      "word": "safety.",
+      "start": 0.588,
+      "end": 0.863,
+      "duration": 0.274
+    },
+    {
+      "index": 4,
+      "word": "Us",
+      "start": 1.169,
+      "end": 1.258,
+      "duration": 0.089
+    },
+    {
+      "index": 5,
+      "word": "waqt",
+      "start": 1.268,
+      "end": 1.447,
+      "duration": 0.179
+    },
+    {
+      "index": 6,
+      "word": "ka",
+      "start": 1.467,
+      "end": 1.557,
+      "duration": 0.089
+    },
+    {
+      "index": 7,
+      "word": "paani",
+      "start": 1.567,
+      "end": 1.79,
+      "duration": 0.224
+    },
+    {
+      "index": 8,
+      "word": "aksar",
+      "start": 2.072,
+      "end": 2.393,
+      "duration": 0.321
+    },
+    {
+      "index": 9,
+      "word": "contaminated",
+      "start": 2.428,
+      "end": 3.198,
+      "duration": 0.77
+    },
+    {
+      "index": 10,
+      "word": "hota",
+      "start": 3.284,
+      "end": 3.54,
+      "duration": 0.257
+    },
+    {
+      "index": 11,
+      "word": "tha.",
+      "start": 3.569,
+      "end": 3.826,
+      "duration": 0.257
+    },
+    {
+      "index": 12,
+      "word": "Fermentation",
+      "start": 3.854,
+      "end": 4.624,
+      "duration": 0.77
+    },
+    {
+      "index": 13,
+      "word": "ka",
+      "start": 4.709,
+      "end": 4.838,
+      "duration": 0.128
+    },
+    {
+      "index": 14,
+      "word": "process",
+      "start": 5.15,
+      "end": 5.541,
+      "duration": 0.391
+    },
+    {
+      "index": 15,
+      "word": "kai",
+      "start": 5.585,
+      "end": 5.752,
+      "duration": 0.168
+    },
+    {
+      "index": 16,
+      "word": "harmful",
+      "start": 5.771,
+      "end": 6.162,
+      "duration": 0.391
+    },
+    {
+      "index": 17,
+      "word": "pathogens",
+      "start": 6.205,
+      "end": 6.708,
+      "duration": 0.503
+    },
+    {
+      "index": 18,
+      "word": "ko",
+      "start": 6.943,
+      "end": 7.2,
+      "duration": 0.257
+    },
+    {
+      "index": 19,
+      "word": "maar",
+      "start": 7.229,
+      "end": 7.744,
+      "duration": 0.515
+    },
+    {
+      "index": 20,
+      "word": "sakta",
+      "start": 7.801,
+      "end": 8.444,
+      "duration": 0.643
+    },
+    {
+      "index": 21,
+      "word": "tha.",
+      "start": 8.516,
+      "end": 9.031,
+      "duration": 0.515
+    }
+  ]
+}

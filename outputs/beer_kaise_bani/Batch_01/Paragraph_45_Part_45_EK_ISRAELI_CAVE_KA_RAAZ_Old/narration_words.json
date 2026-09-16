@@ -1,0 +1,125 @@
+{
+  "total_words": 17,
+  "total_duration": 7.8,
+  "words": [
+    {
+      "index": 1,
+      "word": "ye",
+      "start": 0.311,
+      "end": 0.443,
+      "duration": 0.132
+    },
+    {
+      "index": 2,
+      "word": "beer",
+      "start": 0.458,
+      "end": 0.723,
+      "duration": 0.265
+    },
+    {
+      "index": 3,
+      "word": "production",
+      "start": 0.752,
+      "end": 1.413,
+      "duration": 0.662
+    },
+    {
+      "index": 4,
+      "word": "ke",
+      "start": 1.487,
+      "end": 1.619,
+      "duration": 0.132
+    },
+    {
+      "index": 5,
+      "word": "sabse",
+      "start": 1.634,
+      "end": 1.965,
+      "duration": 0.331
+    },
+    {
+      "index": 6,
+      "word": "purane",
+      "start": 2.002,
+      "end": 2.398,
+      "duration": 0.397
+    },
+    {
+      "index": 7,
+      "word": "known",
+      "start": 2.442,
+      "end": 2.773,
+      "duration": 0.331
+    },
+    {
+      "index": 8,
+      "word": "archaeological",
+      "start": 2.81,
+      "end": 3.736,
+      "duration": 0.926
+    },
+    {
+      "index": 9,
+      "word": "evidence",
+      "start": 3.839,
+      "end": 4.368,
+      "duration": 0.529
+    },
+    {
+      "index": 10,
+      "word": "mein",
+      "start": 4.427,
+      "end": 4.692,
+      "duration": 0.265
+    },
+    {
+      "index": 11,
+      "word": "se",
+      "start": 4.721,
+      "end": 4.853,
+      "duration": 0.132
+    },
+    {
+      "index": 12,
+      "word": "ek",
+      "start": 4.868,
+      "end": 5.0,
+      "duration": 0.132
+    },
+    {
+      "index": 13,
+      "word": "hai.",
+      "start": 5.015,
+      "end": 5.28,
+      "duration": 0.265
+    },
+    {
+      "index": 14,
+      "word": "Terah",
+      "start": 5.511,
+      "end": 5.635,
+      "duration": 0.124
+    },
+    {
+      "index": 15,
+      "word": "hazaar",
+      "start": 5.824,
+      "end": 6.389,
+      "duration": 0.565
+    },
+    {
+      "index": 16,
+      "word": "saal",
+      "start": 6.451,
+      "end": 6.828,
+      "duration": 0.376
+    },
+    {
+      "index": 17,
+      "word": "pehle.",
+      "start": 6.87,
+      "end": 7.434,
+      "duration": 0.565
+    }
+  ]
+}

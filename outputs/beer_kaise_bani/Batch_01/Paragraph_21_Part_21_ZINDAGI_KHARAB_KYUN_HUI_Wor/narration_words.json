@@ -1,0 +1,125 @@
+{
+  "total_words": 17,
+  "total_duration": 8.64,
+  "words": [
+    {
+      "index": 1,
+      "word": "Uska",
+      "start": 0.294,
+      "end": 0.566,
+      "duration": 0.272
+    },
+    {
+      "index": 2,
+      "word": "title",
+      "start": 0.597,
+      "end": 0.937,
+      "duration": 0.341
+    },
+    {
+      "index": 3,
+      "word": "tha",
+      "start": 0.975,
+      "end": 1.179,
+      "duration": 0.204
+    },
+    {
+      "index": 4,
+      "word": "—",
+      "start": 1.419,
+      "end": 1.497,
+      "duration": 0.078
+    },
+    {
+      "index": 5,
+      "word": "\"The",
+      "start": 1.505,
+      "end": 1.816,
+      "duration": 0.311
+    },
+    {
+      "index": 6,
+      "word": "Worst",
+      "start": 1.851,
+      "end": 2.239,
+      "duration": 0.388
+    },
+    {
+      "index": 7,
+      "word": "Mistake",
+      "start": 2.282,
+      "end": 2.826,
+      "duration": 0.544
+    },
+    {
+      "index": 8,
+      "word": "in",
+      "start": 2.886,
+      "end": 3.042,
+      "duration": 0.155
+    },
+    {
+      "index": 9,
+      "word": "the",
+      "start": 3.059,
+      "end": 3.292,
+      "duration": 0.233
+    },
+    {
+      "index": 10,
+      "word": "History",
+      "start": 3.318,
+      "end": 3.862,
+      "duration": 0.544
+    },
+    {
+      "index": 11,
+      "word": "of",
+      "start": 3.922,
+      "end": 4.077,
+      "duration": 0.155
+    },
+    {
+      "index": 12,
+      "word": "the",
+      "start": 4.095,
+      "end": 4.328,
+      "duration": 0.233
+    },
+    {
+      "index": 13,
+      "word": "Human",
+      "start": 4.354,
+      "end": 4.742,
+      "duration": 0.388
+    },
+    {
+      "index": 14,
+      "word": "Race.\"",
+      "start": 4.785,
+      "end": 5.251,
+      "duration": 0.466
+    },
+    {
+      "index": 15,
+      "word": "Kheti.",
+      "start": 5.659,
+      "end": 6.015,
+      "duration": 0.356
+    },
+    {
+      "index": 16,
+      "word": "Worst",
+      "start": 6.055,
+      "end": 6.352,
+      "duration": 0.297
+    },
+    {
+      "index": 17,
+      "word": "mistake.",
+      "start": 6.957,
+      "end": 8.173,
+      "duration": 1.216
+    }
+  ]
+}

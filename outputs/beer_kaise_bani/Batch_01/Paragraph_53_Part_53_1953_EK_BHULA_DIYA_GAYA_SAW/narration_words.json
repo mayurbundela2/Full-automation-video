@@ -1,0 +1,146 @@
+{
+  "total_words": 20,
+  "total_duration": 9.84,
+  "words": [
+    {
+      "index": 1,
+      "word": "Uska",
+      "start": 0.282,
+      "end": 0.527,
+      "duration": 0.245
+    },
+    {
+      "index": 2,
+      "word": "title",
+      "start": 0.554,
+      "end": 0.861,
+      "duration": 0.306
+    },
+    {
+      "index": 3,
+      "word": "tha,",
+      "start": 1.053,
+      "end": 1.211,
+      "duration": 0.158
+    },
+    {
+      "index": 4,
+      "word": "literally",
+      "start": 1.228,
+      "end": 1.583,
+      "duration": 0.355
+    },
+    {
+      "index": 5,
+      "word": "—",
+      "start": 2.09,
+      "end": 2.151,
+      "duration": 0.061
+    },
+    {
+      "index": 6,
+      "word": "\"Did",
+      "start": 2.158,
+      "end": 2.401,
+      "duration": 0.243
+    },
+    {
+      "index": 7,
+      "word": "Man",
+      "start": 2.428,
+      "end": 2.61,
+      "duration": 0.182
+    },
+    {
+      "index": 8,
+      "word": "Once",
+      "start": 2.631,
+      "end": 2.874,
+      "duration": 0.243
+    },
+    {
+      "index": 9,
+      "word": "Live",
+      "start": 3.286,
+      "end": 3.599,
+      "duration": 0.313
+    },
+    {
+      "index": 10,
+      "word": "By",
+      "start": 3.634,
+      "end": 3.79,
+      "duration": 0.157
+    },
+    {
+      "index": 11,
+      "word": "Beer",
+      "start": 3.808,
+      "end": 4.121,
+      "duration": 0.313
+    },
+    {
+      "index": 12,
+      "word": "Alone?\"",
+      "start": 4.156,
+      "end": 4.704,
+      "duration": 0.548
+    },
+    {
+      "index": 13,
+      "word": "Kya",
+      "start": 4.765,
+      "end": 4.999,
+      "duration": 0.235
+    },
+    {
+      "index": 14,
+      "word": "insaan",
+      "start": 5.025,
+      "end": 5.495,
+      "duration": 0.47
+    },
+    {
+      "index": 15,
+      "word": "kabhi",
+      "start": 5.547,
+      "end": 5.939,
+      "duration": 0.391
+    },
+    {
+      "index": 16,
+      "word": "sirf",
+      "start": 5.982,
+      "end": 6.295,
+      "duration": 0.313
+    },
+    {
+      "index": 17,
+      "word": "beer",
+      "start": 7.005,
+      "end": 7.593,
+      "duration": 0.588
+    },
+    {
+      "index": 18,
+      "word": "pe",
+      "start": 7.658,
+      "end": 7.952,
+      "duration": 0.294
+    },
+    {
+      "index": 19,
+      "word": "zinda",
+      "start": 7.985,
+      "end": 8.719,
+      "duration": 0.735
+    },
+    {
+      "index": 20,
+      "word": "tha?",
+      "start": 8.801,
+      "end": 9.389,
+      "duration": 0.588
+    }
+  ]
+}

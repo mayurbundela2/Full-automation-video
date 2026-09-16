@@ -1,0 +1,132 @@
+{
+  "total_words": 18,
+  "total_duration": 6.04,
+  "words": [
+    {
+      "index": 1,
+      "word": "Hum",
+      "start": 0.256,
+      "end": 0.404,
+      "duration": 0.148
+    },
+    {
+      "index": 2,
+      "word": "school",
+      "start": 0.42,
+      "end": 0.715,
+      "duration": 0.295
+    },
+    {
+      "index": 3,
+      "word": "mein",
+      "start": 0.748,
+      "end": 0.945,
+      "duration": 0.197
+    },
+    {
+      "index": 4,
+      "word": "seekhte",
+      "start": 0.967,
+      "end": 1.311,
+      "duration": 0.344
+    },
+    {
+      "index": 5,
+      "word": "hain",
+      "start": 1.349,
+      "end": 1.546,
+      "duration": 0.197
+    },
+    {
+      "index": 6,
+      "word": "—",
+      "start": 1.762,
+      "end": 1.824,
+      "duration": 0.062
+    },
+    {
+      "index": 7,
+      "word": "insaan",
+      "start": 1.831,
+      "end": 2.201,
+      "duration": 0.371
+    },
+    {
+      "index": 8,
+      "word": "ne",
+      "start": 2.243,
+      "end": 2.366,
+      "duration": 0.124
+    },
+    {
+      "index": 9,
+      "word": "farming",
+      "start": 2.38,
+      "end": 2.812,
+      "duration": 0.433
+    },
+    {
+      "index": 10,
+      "word": "isliye",
+      "start": 2.86,
+      "end": 3.231,
+      "duration": 0.371
+    },
+    {
+      "index": 11,
+      "word": "shuru",
+      "start": 3.272,
+      "end": 3.581,
+      "duration": 0.309
+    },
+    {
+      "index": 12,
+      "word": "ki",
+      "start": 3.616,
+      "end": 3.739,
+      "duration": 0.124
+    },
+    {
+      "index": 13,
+      "word": "thi",
+      "start": 3.753,
+      "end": 3.938,
+      "duration": 0.185
+    },
+    {
+      "index": 14,
+      "word": "kyunki",
+      "start": 3.959,
+      "end": 4.33,
+      "duration": 0.371
+    },
+    {
+      "index": 15,
+      "word": "use",
+      "start": 4.371,
+      "end": 4.556,
+      "duration": 0.185
+    },
+    {
+      "index": 16,
+      "word": "khaana",
+      "start": 4.577,
+      "end": 4.948,
+      "duration": 0.371
+    },
+    {
+      "index": 17,
+      "word": "chahiye",
+      "start": 4.989,
+      "end": 5.421,
+      "duration": 0.433
+    },
+    {
+      "index": 18,
+      "word": "tha.",
+      "start": 5.469,
+      "end": 5.717,
+      "duration": 0.247
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "total_words": 24,
+  "total_duration": 8.56,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ab",
+      "start": 0.299,
+      "end": 0.413,
+      "duration": 0.114
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.426,
+      "end": 0.54,
+      "duration": 0.114
+    },
+    {
+      "index": 3,
+      "word": "aur",
+      "start": 0.553,
+      "end": 0.724,
+      "duration": 0.171
+    },
+    {
+      "index": 4,
+      "word": "famous",
+      "start": 0.743,
+      "end": 1.086,
+      "duration": 0.343
+    },
+    {
+      "index": 5,
+      "word": "site",
+      "start": 1.124,
+      "end": 1.353,
+      "duration": 0.229
+    },
+    {
+      "index": 6,
+      "word": "is",
+      "start": 1.378,
+      "end": 1.493,
+      "duration": 0.114
+    },
+    {
+      "index": 7,
+      "word": "baare",
+      "start": 1.505,
+      "end": 1.791,
+      "duration": 0.286
+    },
+    {
+      "index": 8,
+      "word": "mein",
+      "start": 1.823,
+      "end": 2.051,
+      "duration": 0.229
+    },
+    {
+      "index": 9,
+      "word": "aksar",
+      "start": 2.077,
+      "end": 2.362,
+      "duration": 0.286
+    },
+    {
+      "index": 10,
+      "word": "mention",
+      "start": 2.394,
+      "end": 2.794,
+      "duration": 0.4
+    },
+    {
+      "index": 11,
+      "word": "hota",
+      "start": 2.839,
+      "end": 3.067,
+      "duration": 0.229
+    },
+    {
+      "index": 12,
+      "word": "hai",
+      "start": 3.093,
+      "end": 3.264,
+      "duration": 0.171
+    },
+    {
+      "index": 13,
+      "word": "—",
+      "start": 3.75,
+      "end": 3.81,
+      "duration": 0.06
+    },
+    {
+      "index": 14,
+      "word": "Turkey",
+      "start": 3.803,
+      "end": 4.092,
+      "duration": 0.289
+    },
+    {
+      "index": 15,
+      "word": "ka",
+      "start": 4.124,
+      "end": 4.22,
+      "duration": 0.096
+    },
+    {
+      "index": 16,
+      "word": "Göbekli",
+      "start": 4.231,
+      "end": 4.568,
+      "duration": 0.337
+    },
+    {
+      "index": 17,
+      "word": "Tepe.",
+      "start": 4.605,
+      "end": 4.846,
+      "duration": 0.24
+    },
+    {
+      "index": 18,
+      "word": "Gyarah",
+      "start": 4.872,
+      "end": 5.161,
+      "duration": 0.289
+    },
+    {
+      "index": 19,
+      "word": "hazaar",
+      "start": 5.666,
+      "end": 6.102,
+      "duration": 0.436
+    },
+    {
+      "index": 20,
+      "word": "se",
+      "start": 6.151,
+      "end": 6.296,
+      "duration": 0.145
+    },
+    {
+      "index": 21,
+      "word": "baarah",
+      "start": 6.312,
+      "end": 6.748,
+      "duration": 0.436
+    },
+    {
+      "index": 22,
+      "word": "hazaar",
+      "start": 6.797,
+      "end": 7.233,
+      "duration": 0.436
+    },
+    {
+      "index": 23,
+      "word": "saal",
+      "start": 7.281,
+      "end": 7.572,
+      "duration": 0.291
+    },
+    {
+      "index": 24,
+      "word": "purana.",
+      "start": 7.605,
+      "end": 8.113,
+      "duration": 0.509
+    }
+  ]
+}

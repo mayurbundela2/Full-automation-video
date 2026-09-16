@@ -1,0 +1,209 @@
+{
+  "total_words": 29,
+  "total_duration": 13.12,
+  "words": [
+    {
+      "index": 1,
+      "word": "Tum",
+      "start": 0.304,
+      "end": 0.466,
+      "duration": 0.162
+    },
+    {
+      "index": 2,
+      "word": "do",
+      "start": 0.484,
+      "end": 0.592,
+      "duration": 0.108
+    },
+    {
+      "index": 3,
+      "word": "cheezein",
+      "start": 0.604,
+      "end": 1.035,
+      "duration": 0.431
+    },
+    {
+      "index": 4,
+      "word": "ek",
+      "start": 1.083,
+      "end": 1.191,
+      "duration": 0.108
+    },
+    {
+      "index": 5,
+      "word": "saath",
+      "start": 1.203,
+      "end": 1.472,
+      "duration": 0.27
+    },
+    {
+      "index": 6,
+      "word": "dekh",
+      "start": 1.502,
+      "end": 1.718,
+      "duration": 0.216
+    },
+    {
+      "index": 7,
+      "word": "rahe",
+      "start": 1.742,
+      "end": 1.957,
+      "duration": 0.216
+    },
+    {
+      "index": 8,
+      "word": "ho.",
+      "start": 1.981,
+      "end": 2.143,
+      "duration": 0.162
+    },
+    {
+      "index": 9,
+      "word": "Ek",
+      "start": 2.161,
+      "end": 2.269,
+      "duration": 0.108
+    },
+    {
+      "index": 10,
+      "word": "—",
+      "start": 2.281,
+      "end": 2.341,
+      "duration": 0.06
+    },
+    {
+      "index": 11,
+      "word": "sadiyon",
+      "start": 2.341,
+      "end": 2.718,
+      "duration": 0.377
+    },
+    {
+      "index": 12,
+      "word": "purani",
+      "start": 3.499,
+      "end": 3.757,
+      "duration": 0.258
+    },
+    {
+      "index": 13,
+      "word": "devotion.",
+      "start": 4.238,
+      "end": 4.792,
+      "duration": 0.554
+    },
+    {
+      "index": 14,
+      "word": "Aur",
+      "start": 4.854,
+      "end": 5.038,
+      "duration": 0.185
+    },
+    {
+      "index": 15,
+      "word": "do",
+      "start": 5.059,
+      "end": 5.182,
+      "duration": 0.123
+    },
+    {
+      "index": 16,
+      "word": "—",
+      "start": 5.196,
+      "end": 5.257,
+      "duration": 0.062
+    },
+    {
+      "index": 17,
+      "word": "ek",
+      "start": 5.264,
+      "end": 5.387,
+      "duration": 0.123
+    },
+    {
+      "index": 18,
+      "word": "bahut",
+      "start": 5.401,
+      "end": 5.709,
+      "duration": 0.308
+    },
+    {
+      "index": 19,
+      "word": "specific",
+      "start": 6.526,
+      "end": 6.934,
+      "duration": 0.408
+    },
+    {
+      "index": 20,
+      "word": "historical",
+      "start": 7.637,
+      "end": 8.207,
+      "duration": 0.57
+    },
+    {
+      "index": 21,
+      "word": "transformation,",
+      "start": 8.27,
+      "end": 9.125,
+      "duration": 0.855
+    },
+    {
+      "index": 22,
+      "word": "jo",
+      "start": 9.22,
+      "end": 9.334,
+      "duration": 0.114
+    },
+    {
+      "index": 23,
+      "word": "atharah",
+      "start": 9.346,
+      "end": 9.745,
+      "duration": 0.399
+    },
+    {
+      "index": 24,
+      "word": "sau",
+      "start": 9.79,
+      "end": 9.96,
+      "duration": 0.171
+    },
+    {
+      "index": 25,
+      "word": "nabbe",
+      "start": 9.979,
+      "end": 10.264,
+      "duration": 0.285
+    },
+    {
+      "index": 26,
+      "word": "ke",
+      "start": 10.77,
+      "end": 11.026,
+      "duration": 0.256
+    },
+    {
+      "index": 27,
+      "word": "daur",
+      "start": 11.054,
+      "end": 11.566,
+      "duration": 0.511
+    },
+    {
+      "index": 28,
+      "word": "mein",
+      "start": 11.622,
+      "end": 12.134,
+      "duration": 0.511
+    },
+    {
+      "index": 29,
+      "word": "hua.",
+      "start": 12.191,
+      "end": 12.702,
+      "duration": 0.511
+    }
+  ]
+}

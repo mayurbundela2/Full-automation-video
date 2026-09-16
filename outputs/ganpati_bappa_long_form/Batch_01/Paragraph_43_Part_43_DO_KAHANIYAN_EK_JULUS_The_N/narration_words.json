@@ -1,0 +1,90 @@
+{
+  "total_words": 12,
+  "total_duration": 5.08,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ek",
+      "start": 0.479,
+      "end": 0.598,
+      "duration": 0.119
+    },
+    {
+      "index": 2,
+      "word": "desh",
+      "start": 0.612,
+      "end": 0.85,
+      "duration": 0.239
+    },
+    {
+      "index": 3,
+      "word": "ko",
+      "start": 0.877,
+      "end": 0.996,
+      "duration": 0.119
+    },
+    {
+      "index": 4,
+      "word": "ikattha",
+      "start": 1.009,
+      "end": 1.427,
+      "duration": 0.418
+    },
+    {
+      "index": 5,
+      "word": "hone",
+      "start": 1.474,
+      "end": 1.712,
+      "duration": 0.239
+    },
+    {
+      "index": 6,
+      "word": "ke",
+      "start": 1.739,
+      "end": 1.858,
+      "duration": 0.119
+    },
+    {
+      "index": 7,
+      "word": "liye",
+      "start": 1.871,
+      "end": 2.11,
+      "duration": 0.239
+    },
+    {
+      "index": 8,
+      "word": "ek",
+      "start": 2.137,
+      "end": 2.256,
+      "duration": 0.119
+    },
+    {
+      "index": 9,
+      "word": "public",
+      "start": 2.269,
+      "end": 2.627,
+      "duration": 0.358
+    },
+    {
+      "index": 10,
+      "word": "space",
+      "start": 3.002,
+      "end": 3.452,
+      "duration": 0.45
+    },
+    {
+      "index": 11,
+      "word": "chahiye",
+      "start": 3.502,
+      "end": 4.131,
+      "duration": 0.63
+    },
+    {
+      "index": 12,
+      "word": "tha.",
+      "start": 4.201,
+      "end": 4.561,
+      "duration": 0.36
+    }
+  ]
+}

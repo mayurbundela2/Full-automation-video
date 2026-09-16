@@ -1,0 +1,83 @@
+{
+  "total_words": 11,
+  "total_duration": 5.64,
+  "words": [
+    {
+      "index": 1,
+      "word": "Yahan",
+      "start": 0.285,
+      "end": 0.464,
+      "duration": 0.179
+    },
+    {
+      "index": 2,
+      "word": "char",
+      "start": 0.484,
+      "end": 0.627,
+      "duration": 0.143
+    },
+    {
+      "index": 3,
+      "word": "possibilities",
+      "start": 0.803,
+      "end": 1.292,
+      "duration": 0.489
+    },
+    {
+      "index": 4,
+      "word": "hain",
+      "start": 1.347,
+      "end": 1.497,
+      "duration": 0.151
+    },
+    {
+      "index": 5,
+      "word": "—",
+      "start": 1.514,
+      "end": 1.574,
+      "duration": 0.06
+    },
+    {
+      "index": 6,
+      "word": "ye",
+      "start": 1.556,
+      "end": 1.631,
+      "duration": 0.075
+    },
+    {
+      "index": 7,
+      "word": "\"reasons\"",
+      "start": 1.64,
+      "end": 1.978,
+      "duration": 0.339
+    },
+    {
+      "index": 8,
+      "word": "nahi",
+      "start": 2.49,
+      "end": 2.685,
+      "duration": 0.195
+    },
+    {
+      "index": 9,
+      "word": "hain,",
+      "start": 2.706,
+      "end": 2.95,
+      "duration": 0.244
+    },
+    {
+      "index": 10,
+      "word": "\"hypotheses\"",
+      "start": 2.977,
+      "end": 3.561,
+      "duration": 0.584
+    },
+    {
+      "index": 11,
+      "word": "hain.",
+      "start": 3.626,
+      "end": 3.87,
+      "duration": 0.244
+    }
+  ]
+}

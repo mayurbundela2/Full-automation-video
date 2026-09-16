@@ -1,0 +1,48 @@
+{
+  "total_words": 6,
+  "total_duration": 3.16,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.316,
+      "end": 0.506,
+      "duration": 0.19
+    },
+    {
+      "index": 2,
+      "word": "nationalist",
+      "start": 0.527,
+      "end": 1.224,
+      "duration": 0.697
+    },
+    {
+      "index": 3,
+      "word": "feeling",
+      "start": 1.301,
+      "end": 1.745,
+      "duration": 0.443
+    },
+    {
+      "index": 4,
+      "word": "ko",
+      "start": 1.794,
+      "end": 1.921,
+      "duration": 0.127
+    },
+    {
+      "index": 5,
+      "word": "mazboot",
+      "start": 1.935,
+      "end": 2.378,
+      "duration": 0.443
+    },
+    {
+      "index": 6,
+      "word": "karna.",
+      "start": 2.428,
+      "end": 2.808,
+      "duration": 0.38
+    }
+  ]
+}

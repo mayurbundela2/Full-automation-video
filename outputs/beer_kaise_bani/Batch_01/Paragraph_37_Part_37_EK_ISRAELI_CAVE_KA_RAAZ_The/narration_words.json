@@ -1,0 +1,160 @@
+{
+  "total_words": 22,
+  "total_duration": 10.49,
+  "words": [
+    {
+      "index": 1,
+      "word": "Natufians",
+      "start": 0.256,
+      "end": 0.569,
+      "duration": 0.313
+    },
+    {
+      "index": 2,
+      "word": "ek",
+      "start": 0.603,
+      "end": 0.673,
+      "duration": 0.069
+    },
+    {
+      "index": 3,
+      "word": "semi-nomadic",
+      "start": 0.681,
+      "end": 1.098,
+      "duration": 0.417
+    },
+    {
+      "index": 4,
+      "word": "hunter-gatherer",
+      "start": 1.302,
+      "end": 2.054,
+      "duration": 0.752
+    },
+    {
+      "index": 5,
+      "word": "group",
+      "start": 2.138,
+      "end": 2.388,
+      "duration": 0.251
+    },
+    {
+      "index": 6,
+      "word": "the,",
+      "start": 2.575,
+      "end": 2.77,
+      "duration": 0.195
+    },
+    {
+      "index": 7,
+      "word": "jo",
+      "start": 2.791,
+      "end": 2.889,
+      "duration": 0.097
+    },
+    {
+      "index": 8,
+      "word": "lagbhag",
+      "start": 2.899,
+      "end": 3.24,
+      "duration": 0.341
+    },
+    {
+      "index": 9,
+      "word": "pandrah",
+      "start": 3.278,
+      "end": 3.619,
+      "duration": 0.341
+    },
+    {
+      "index": 10,
+      "word": "hazaar",
+      "start": 3.657,
+      "end": 3.949,
+      "duration": 0.292
+    },
+    {
+      "index": 11,
+      "word": "se",
+      "start": 4.26,
+      "end": 4.38,
+      "duration": 0.12
+    },
+    {
+      "index": 12,
+      "word": "gyarah",
+      "start": 4.393,
+      "end": 4.752,
+      "duration": 0.359
+    },
+    {
+      "index": 13,
+      "word": "hazaar",
+      "start": 4.792,
+      "end": 5.151,
+      "duration": 0.359
+    },
+    {
+      "index": 14,
+      "word": "paanch",
+      "start": 5.191,
+      "end": 5.55,
+      "duration": 0.359
+    },
+    {
+      "index": 15,
+      "word": "sau",
+      "start": 5.59,
+      "end": 5.769,
+      "duration": 0.179
+    },
+    {
+      "index": 16,
+      "word": "saal",
+      "start": 5.789,
+      "end": 6.028,
+      "duration": 0.239
+    },
+    {
+      "index": 17,
+      "word": "pehle",
+      "start": 6.055,
+      "end": 6.354,
+      "duration": 0.299
+    },
+    {
+      "index": 18,
+      "word": "Eastern",
+      "start": 6.387,
+      "end": 6.806,
+      "duration": 0.419
+    },
+    {
+      "index": 19,
+      "word": "Mediterranean",
+      "start": 6.853,
+      "end": 7.63,
+      "duration": 0.778
+    },
+    {
+      "index": 20,
+      "word": "mein",
+      "start": 7.717,
+      "end": 7.956,
+      "duration": 0.239
+    },
+    {
+      "index": 21,
+      "word": "rehte",
+      "start": 7.983,
+      "end": 8.282,
+      "duration": 0.299
+    },
+    {
+      "index": 22,
+      "word": "the.",
+      "start": 8.515,
+      "end": 10.137,
+      "duration": 1.622
+    }
+  ]
+}

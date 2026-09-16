@@ -1,0 +1,97 @@
+{
+  "total_words": 13,
+  "total_duration": 6.12,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aisi",
+      "start": 0.296,
+      "end": 0.521,
+      "duration": 0.225
+    },
+    {
+      "index": 2,
+      "word": "chhupi",
+      "start": 0.546,
+      "end": 0.883,
+      "duration": 0.337
+    },
+    {
+      "index": 3,
+      "word": "history",
+      "start": 0.92,
+      "end": 1.313,
+      "duration": 0.393
+    },
+    {
+      "index": 4,
+      "word": "aur",
+      "start": 1.357,
+      "end": 1.526,
+      "duration": 0.169
+    },
+    {
+      "index": 5,
+      "word": "real",
+      "start": 1.544,
+      "end": 1.769,
+      "duration": 0.225
+    },
+    {
+      "index": 6,
+      "word": "stories,",
+      "start": 2.017,
+      "end": 2.399,
+      "duration": 0.382
+    },
+    {
+      "index": 7,
+      "word": "jo",
+      "start": 2.441,
+      "end": 2.537,
+      "duration": 0.095
+    },
+    {
+      "index": 8,
+      "word": "humare",
+      "start": 2.547,
+      "end": 2.834,
+      "duration": 0.286
+    },
+    {
+      "index": 9,
+      "word": "tyoharon",
+      "start": 2.866,
+      "end": 3.248,
+      "duration": 0.382
+    },
+    {
+      "index": 10,
+      "word": "ke",
+      "start": 3.467,
+      "end": 3.673,
+      "duration": 0.206
+    },
+    {
+      "index": 11,
+      "word": "peeche",
+      "start": 3.696,
+      "end": 4.314,
+      "duration": 0.618
+    },
+    {
+      "index": 12,
+      "word": "zinda",
+      "start": 4.383,
+      "end": 4.898,
+      "duration": 0.515
+    },
+    {
+      "index": 13,
+      "word": "hain...",
+      "start": 4.955,
+      "end": 5.677,
+      "duration": 0.721
+    }
+  ]
+}

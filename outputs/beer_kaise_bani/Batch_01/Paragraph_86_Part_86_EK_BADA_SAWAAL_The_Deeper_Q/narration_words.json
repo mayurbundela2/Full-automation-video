@@ -1,0 +1,272 @@
+{
+  "total_words": 38,
+  "total_duration": 12.2,
+  "words": [
+    {
+      "index": 1,
+      "word": "Kyunki",
+      "start": 0.0,
+      "end": 0.105,
+      "duration": 0.105
+    },
+    {
+      "index": 2,
+      "word": "asli",
+      "start": 0.322,
+      "end": 0.426,
+      "duration": 0.104
+    },
+    {
+      "index": 3,
+      "word": "sawaal",
+      "start": 0.438,
+      "end": 0.594,
+      "duration": 0.156
+    },
+    {
+      "index": 4,
+      "word": "jo",
+      "start": 0.763,
+      "end": 0.884,
+      "duration": 0.121
+    },
+    {
+      "index": 5,
+      "word": "ye",
+      "start": 0.898,
+      "end": 1.019,
+      "duration": 0.121
+    },
+    {
+      "index": 6,
+      "word": "evidence",
+      "start": 1.032,
+      "end": 1.517,
+      "duration": 0.485
+    },
+    {
+      "index": 7,
+      "word": "khada",
+      "start": 1.571,
+      "end": 1.874,
+      "duration": 0.303
+    },
+    {
+      "index": 8,
+      "word": "karta",
+      "start": 1.907,
+      "end": 2.21,
+      "duration": 0.303
+    },
+    {
+      "index": 9,
+      "word": "hai",
+      "start": 2.244,
+      "end": 2.426,
+      "duration": 0.182
+    },
+    {
+      "index": 10,
+      "word": "wo",
+      "start": 2.446,
+      "end": 2.567,
+      "duration": 0.121
+    },
+    {
+      "index": 11,
+      "word": "ye",
+      "start": 2.581,
+      "end": 2.702,
+      "duration": 0.121
+    },
+    {
+      "index": 12,
+      "word": "nahi",
+      "start": 2.715,
+      "end": 2.958,
+      "duration": 0.242
+    },
+    {
+      "index": 13,
+      "word": "hai",
+      "start": 2.984,
+      "end": 3.166,
+      "duration": 0.182
+    },
+    {
+      "index": 14,
+      "word": "ki",
+      "start": 3.186,
+      "end": 3.308,
+      "duration": 0.121
+    },
+    {
+      "index": 15,
+      "word": "\"beer",
+      "start": 3.321,
+      "end": 3.624,
+      "duration": 0.303
+    },
+    {
+      "index": 16,
+      "word": "ne",
+      "start": 3.658,
+      "end": 3.779,
+      "duration": 0.121
+    },
+    {
+      "index": 17,
+      "word": "kya",
+      "start": 3.792,
+      "end": 3.974,
+      "duration": 0.182
+    },
+    {
+      "index": 18,
+      "word": "kiya\"",
+      "start": 3.994,
+      "end": 4.297,
+      "duration": 0.303
+    },
+    {
+      "index": 19,
+      "word": "—",
+      "start": 4.331,
+      "end": 4.391,
+      "duration": 0.061
+    },
+    {
+      "index": 20,
+      "word": "asli",
+      "start": 4.398,
+      "end": 4.641,
+      "duration": 0.242
+    },
+    {
+      "index": 21,
+      "word": "sawaal",
+      "start": 4.667,
+      "end": 5.031,
+      "duration": 0.364
+    },
+    {
+      "index": 22,
+      "word": "ye",
+      "start": 5.071,
+      "end": 5.193,
+      "duration": 0.121
+    },
+    {
+      "index": 23,
+      "word": "hai",
+      "start": 5.896,
+      "end": 6.053,
+      "duration": 0.157
+    },
+    {
+      "index": 24,
+      "word": "ki",
+      "start": 6.07,
+      "end": 6.175,
+      "duration": 0.105
+    },
+    {
+      "index": 25,
+      "word": "—",
+      "start": 6.187,
+      "end": 6.247,
+      "duration": 0.06
+    },
+    {
+      "index": 26,
+      "word": "kya",
+      "start": 6.245,
+      "end": 6.402,
+      "duration": 0.157
+    },
+    {
+      "index": 27,
+      "word": "together",
+      "start": 6.419,
+      "end": 6.838,
+      "duration": 0.419
+    },
+    {
+      "index": 28,
+      "word": "aane",
+      "start": 6.884,
+      "end": 7.094,
+      "duration": 0.209
+    },
+    {
+      "index": 29,
+      "word": "ki",
+      "start": 7.117,
+      "end": 7.222,
+      "duration": 0.105
+    },
+    {
+      "index": 30,
+      "word": "humari",
+      "start": 7.233,
+      "end": 7.547,
+      "duration": 0.314
+    },
+    {
+      "index": 31,
+      "word": "zaroorat",
+      "start": 7.762,
+      "end": 7.946,
+      "duration": 0.184
+    },
+    {
+      "index": 32,
+      "word": "ne",
+      "start": 8.21,
+      "end": 8.346,
+      "duration": 0.136
+    },
+    {
+      "index": 33,
+      "word": "uga",
+      "start": 8.361,
+      "end": 8.564,
+      "duration": 0.204
+    },
+    {
+      "index": 34,
+      "word": "ne",
+      "start": 8.587,
+      "end": 8.723,
+      "duration": 0.136
+    },
+    {
+      "index": 35,
+      "word": "ki",
+      "start": 8.738,
+      "end": 8.874,
+      "duration": 0.136
+    },
+    {
+      "index": 36,
+      "word": "zaroorat",
+      "start": 8.889,
+      "end": 9.431,
+      "duration": 0.543
+    },
+    {
+      "index": 37,
+      "word": "paida",
+      "start": 9.492,
+      "end": 9.831,
+      "duration": 0.339
+    },
+    {
+      "index": 38,
+      "word": "ki?",
+      "start": 9.869,
+      "end": 10.072,
+      "duration": 0.204
+    }
+  ]
+}

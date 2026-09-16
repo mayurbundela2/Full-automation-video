@@ -1,0 +1,118 @@
+{
+  "total_words": 16,
+  "total_duration": 6.4,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ganeshotsav",
+      "start": 0.281,
+      "end": 0.919,
+      "duration": 0.638
+    },
+    {
+      "index": 2,
+      "word": "ka",
+      "start": 0.99,
+      "end": 1.106,
+      "duration": 0.116
+    },
+    {
+      "index": 3,
+      "word": "ek",
+      "start": 1.119,
+      "end": 1.234,
+      "duration": 0.116
+    },
+    {
+      "index": 4,
+      "word": "bada",
+      "start": 1.247,
+      "end": 1.479,
+      "duration": 0.232
+    },
+    {
+      "index": 5,
+      "word": "hissa",
+      "start": 1.505,
+      "end": 1.795,
+      "duration": 0.29
+    },
+    {
+      "index": 6,
+      "word": "gharon",
+      "start": 1.827,
+      "end": 2.175,
+      "duration": 0.348
+    },
+    {
+      "index": 7,
+      "word": "aur",
+      "start": 2.214,
+      "end": 2.388,
+      "duration": 0.174
+    },
+    {
+      "index": 8,
+      "word": "local",
+      "start": 2.761,
+      "end": 3.099,
+      "duration": 0.338
+    },
+    {
+      "index": 9,
+      "word": "communities",
+      "start": 3.136,
+      "end": 3.88,
+      "duration": 0.743
+    },
+    {
+      "index": 10,
+      "word": "ke",
+      "start": 3.962,
+      "end": 4.098,
+      "duration": 0.135
+    },
+    {
+      "index": 11,
+      "word": "level",
+      "start": 4.113,
+      "end": 4.451,
+      "duration": 0.338
+    },
+    {
+      "index": 12,
+      "word": "par",
+      "start": 4.488,
+      "end": 4.691,
+      "duration": 0.203
+    },
+    {
+      "index": 13,
+      "word": "hi",
+      "start": 4.713,
+      "end": 4.849,
+      "duration": 0.135
+    },
+    {
+      "index": 14,
+      "word": "manaya",
+      "start": 4.864,
+      "end": 5.269,
+      "duration": 0.405
+    },
+    {
+      "index": 15,
+      "word": "jaata",
+      "start": 5.314,
+      "end": 5.652,
+      "duration": 0.338
+    },
+    {
+      "index": 16,
+      "word": "raha.",
+      "start": 5.69,
+      "end": 6.027,
+      "duration": 0.338
+    }
+  ]
+}

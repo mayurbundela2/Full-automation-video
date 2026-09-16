@@ -1,0 +1,118 @@
+{
+  "total_words": 16,
+  "total_duration": 6.72,
+  "words": [
+    {
+      "index": 1,
+      "word": "Kya",
+      "start": 0.375,
+      "end": 0.562,
+      "duration": 0.187
+    },
+    {
+      "index": 2,
+      "word": "feasting",
+      "start": 0.582,
+      "end": 1.08,
+      "duration": 0.497
+    },
+    {
+      "index": 3,
+      "word": "ne",
+      "start": 1.135,
+      "end": 1.259,
+      "duration": 0.124
+    },
+    {
+      "index": 4,
+      "word": "civilization",
+      "start": 1.273,
+      "end": 2.019,
+      "duration": 0.746
+    },
+    {
+      "index": 5,
+      "word": "ki",
+      "start": 2.102,
+      "end": 2.227,
+      "duration": 0.124
+    },
+    {
+      "index": 6,
+      "word": "neev",
+      "start": 2.24,
+      "end": 2.489,
+      "duration": 0.249
+    },
+    {
+      "index": 7,
+      "word": "rakhne",
+      "start": 2.517,
+      "end": 2.89,
+      "duration": 0.373
+    },
+    {
+      "index": 8,
+      "word": "mein",
+      "start": 2.931,
+      "end": 3.18,
+      "duration": 0.249
+    },
+    {
+      "index": 9,
+      "word": "role",
+      "start": 3.208,
+      "end": 3.457,
+      "duration": 0.249
+    },
+    {
+      "index": 10,
+      "word": "play",
+      "start": 3.484,
+      "end": 3.733,
+      "duration": 0.249
+    },
+    {
+      "index": 11,
+      "word": "kiya?",
+      "start": 3.761,
+      "end": 4.071,
+      "duration": 0.311
+    },
+    {
+      "index": 12,
+      "word": "Ye",
+      "start": 4.796,
+      "end": 4.956,
+      "duration": 0.16
+    },
+    {
+      "index": 13,
+      "word": "ek",
+      "start": 4.974,
+      "end": 5.134,
+      "duration": 0.16
+    },
+    {
+      "index": 14,
+      "word": "open",
+      "start": 5.152,
+      "end": 5.472,
+      "duration": 0.32
+    },
+    {
+      "index": 15,
+      "word": "sawaal",
+      "start": 5.508,
+      "end": 5.988,
+      "duration": 0.48
+    },
+    {
+      "index": 16,
+      "word": "hai.",
+      "start": 6.041,
+      "end": 6.361,
+      "duration": 0.32
+    }
+  ]
+}

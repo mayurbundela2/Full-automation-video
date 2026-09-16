@@ -1,0 +1,90 @@
+{
+  "total_words": 12,
+  "total_duration": 4.4,
+  "words": [
+    {
+      "index": 1,
+      "word": "Greece",
+      "start": 0.291,
+      "end": 0.542,
+      "duration": 0.251
+    },
+    {
+      "index": 2,
+      "word": "aur",
+      "start": 0.57,
+      "end": 0.695,
+      "duration": 0.125
+    },
+    {
+      "index": 3,
+      "word": "Turkey",
+      "start": 0.709,
+      "end": 0.96,
+      "duration": 0.251
+    },
+    {
+      "index": 4,
+      "word": "ke",
+      "start": 0.988,
+      "end": 1.072,
+      "duration": 0.084
+    },
+    {
+      "index": 5,
+      "word": "jo",
+      "start": 1.081,
+      "end": 1.164,
+      "duration": 0.084
+    },
+    {
+      "index": 6,
+      "word": "skeletons",
+      "start": 1.174,
+      "end": 1.55,
+      "duration": 0.376
+    },
+    {
+      "index": 7,
+      "word": "mile",
+      "start": 1.592,
+      "end": 1.759,
+      "duration": 0.167
+    },
+    {
+      "index": 8,
+      "word": "—",
+      "start": 1.778,
+      "end": 1.838,
+      "duration": 0.06
+    },
+    {
+      "index": 9,
+      "word": "hunter-gatherer",
+      "start": 1.824,
+      "end": 2.451,
+      "duration": 0.627
+    },
+    {
+      "index": 10,
+      "word": "daur",
+      "start": 2.9,
+      "end": 3.505,
+      "duration": 0.605
+    },
+    {
+      "index": 11,
+      "word": "ke",
+      "start": 3.573,
+      "end": 3.875,
+      "duration": 0.303
+    },
+    {
+      "index": 12,
+      "word": "—",
+      "start": 3.909,
+      "end": 4.06,
+      "duration": 0.151
+    }
+  ]
+}

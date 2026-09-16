@@ -1,0 +1,118 @@
+{
+  "total_words": 16,
+  "total_duration": 6.64,
+  "words": [
+    {
+      "index": 1,
+      "word": "Aur",
+      "start": 0.0,
+      "end": 0.081,
+      "duration": 0.081
+    },
+    {
+      "index": 2,
+      "word": "shayad",
+      "start": 0.384,
+      "end": 0.691,
+      "duration": 0.307
+    },
+    {
+      "index": 3,
+      "word": "—",
+      "start": 0.725,
+      "end": 0.785,
+      "duration": 0.06
+    },
+    {
+      "index": 4,
+      "word": "shayad",
+      "start": 0.781,
+      "end": 1.088,
+      "duration": 0.307
+    },
+    {
+      "index": 5,
+      "word": "—",
+      "start": 1.407,
+      "end": 1.476,
+      "duration": 0.069
+    },
+    {
+      "index": 6,
+      "word": "us",
+      "start": 1.484,
+      "end": 1.622,
+      "duration": 0.138
+    },
+    {
+      "index": 7,
+      "word": "wajah",
+      "start": 1.637,
+      "end": 1.983,
+      "duration": 0.345
+    },
+    {
+      "index": 8,
+      "word": "ki",
+      "start": 2.021,
+      "end": 2.159,
+      "duration": 0.138
+    },
+    {
+      "index": 9,
+      "word": "search",
+      "start": 2.175,
+      "end": 2.589,
+      "duration": 0.414
+    },
+    {
+      "index": 10,
+      "word": "mein",
+      "start": 2.635,
+      "end": 2.911,
+      "duration": 0.276
+    },
+    {
+      "index": 11,
+      "word": "humne",
+      "start": 2.942,
+      "end": 3.288,
+      "duration": 0.345
+    },
+    {
+      "index": 12,
+      "word": "apni",
+      "start": 3.326,
+      "end": 3.602,
+      "duration": 0.276
+    },
+    {
+      "index": 13,
+      "word": "poori",
+      "start": 3.911,
+      "end": 4.418,
+      "duration": 0.507
+    },
+    {
+      "index": 14,
+      "word": "duniya",
+      "start": 4.474,
+      "end": 5.082,
+      "duration": 0.608
+    },
+    {
+      "index": 15,
+      "word": "badal",
+      "start": 5.149,
+      "end": 5.656,
+      "duration": 0.507
+    },
+    {
+      "index": 16,
+      "word": "daali.",
+      "start": 5.712,
+      "end": 6.32,
+      "duration": 0.608
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "total_words": 16,
+  "total_duration": 7.4,
+  "words": [
+    {
+      "index": 1,
+      "word": "Height",
+      "start": 0.314,
+      "end": 0.6,
+      "duration": 0.286
+    },
+    {
+      "index": 2,
+      "word": "gir",
+      "start": 0.631,
+      "end": 0.774,
+      "duration": 0.143
+    },
+    {
+      "index": 3,
+      "word": "gayi.",
+      "start": 0.79,
+      "end": 1.028,
+      "duration": 0.238
+    },
+    {
+      "index": 4,
+      "word": "Paanch",
+      "start": 1.055,
+      "end": 1.34,
+      "duration": 0.286
+    },
+    {
+      "index": 5,
+      "word": "foot",
+      "start": 2.041,
+      "end": 2.254,
+      "duration": 0.213
+    },
+    {
+      "index": 6,
+      "word": "teen",
+      "start": 2.278,
+      "end": 2.491,
+      "duration": 0.213
+    },
+    {
+      "index": 7,
+      "word": "inch",
+      "start": 2.514,
+      "end": 2.727,
+      "duration": 0.213
+    },
+    {
+      "index": 8,
+      "word": "tak.",
+      "start": 2.903,
+      "end": 3.129,
+      "duration": 0.226
+    },
+    {
+      "index": 9,
+      "word": "Chhe",
+      "start": 3.154,
+      "end": 3.381,
+      "duration": 0.226
+    },
+    {
+      "index": 10,
+      "word": "inch",
+      "start": 3.406,
+      "end": 3.632,
+      "duration": 0.226
+    },
+    {
+      "index": 11,
+      "word": "ka",
+      "start": 4.305,
+      "end": 4.413,
+      "duration": 0.108
+    },
+    {
+      "index": 12,
+      "word": "drop,",
+      "start": 4.425,
+      "end": 4.695,
+      "duration": 0.27
+    },
+    {
+      "index": 13,
+      "word": "ek",
+      "start": 4.725,
+      "end": 4.833,
+      "duration": 0.108
+    },
+    {
+      "index": 14,
+      "word": "hi",
+      "start": 4.845,
+      "end": 4.953,
+      "duration": 0.108
+    },
+    {
+      "index": 15,
+      "word": "region",
+      "start": 4.966,
+      "end": 5.29,
+      "duration": 0.324
+    },
+    {
+      "index": 16,
+      "word": "mein,",
+      "start": 5.326,
+      "end": 5.596,
+      "duration": 0.27
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "total_words": 14,
+  "total_duration": 5.88,
+  "words": [
+    {
+      "index": 1,
+      "word": "Poetry",
+      "start": 0.273,
+      "end": 0.585,
+      "duration": 0.312
+    },
+    {
+      "index": 2,
+      "word": "recitals",
+      "start": 0.619,
+      "end": 1.035,
+      "duration": 0.415
+    },
+    {
+      "index": 3,
+      "word": "hote",
+      "start": 1.081,
+      "end": 1.289,
+      "duration": 0.208
+    },
+    {
+      "index": 4,
+      "word": "the,",
+      "start": 1.312,
+      "end": 1.519,
+      "duration": 0.208
+    },
+    {
+      "index": 5,
+      "word": "plays",
+      "start": 1.542,
+      "end": 1.802,
+      "duration": 0.26
+    },
+    {
+      "index": 6,
+      "word": "perform",
+      "start": 2.087,
+      "end": 2.418,
+      "duration": 0.331
+    },
+    {
+      "index": 7,
+      "word": "hote",
+      "start": 2.455,
+      "end": 2.644,
+      "duration": 0.189
+    },
+    {
+      "index": 8,
+      "word": "the,",
+      "start": 2.666,
+      "end": 2.855,
+      "duration": 0.189
+    },
+    {
+      "index": 9,
+      "word": "sangeet",
+      "start": 2.876,
+      "end": 3.207,
+      "duration": 0.331
+    },
+    {
+      "index": 10,
+      "word": "aur",
+      "start": 3.4,
+      "end": 3.681,
+      "duration": 0.281
+    },
+    {
+      "index": 11,
+      "word": "folk",
+      "start": 3.712,
+      "end": 4.086,
+      "duration": 0.374
+    },
+    {
+      "index": 12,
+      "word": "dance",
+      "start": 4.127,
+      "end": 4.595,
+      "duration": 0.468
+    },
+    {
+      "index": 13,
+      "word": "hote",
+      "start": 4.647,
+      "end": 5.021,
+      "duration": 0.374
+    },
+    {
+      "index": 14,
+      "word": "the.",
+      "start": 5.062,
+      "end": 5.436,
+      "duration": 0.374
+    }
+  ]
+}

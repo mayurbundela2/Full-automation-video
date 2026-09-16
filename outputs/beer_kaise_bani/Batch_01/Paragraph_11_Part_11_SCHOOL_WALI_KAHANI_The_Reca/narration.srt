@@ -1,0 +1,16 @@
+1
+00:00:00,278 --> 00:00:01,583
+Pehle wahi standard story
+
+2
+00:00:01,603 --> 00:00:02,426
+recap kar lein jo
+
+3
+00:00:02,446 --> 00:00:03,751
+humein bachpan se sikhayi
+
+4
+00:00:03,771 --> 00:00:04,042
+gayi.
+

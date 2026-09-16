@@ -1,0 +1,181 @@
+{
+  "total_words": 25,
+  "total_duration": 10.52,
+  "words": [
+    {
+      "index": 1,
+      "word": "Iske",
+      "start": 0.288,
+      "end": 0.522,
+      "duration": 0.234
+    },
+    {
+      "index": 2,
+      "word": "peeche",
+      "start": 0.548,
+      "end": 0.899,
+      "duration": 0.351
+    },
+    {
+      "index": 3,
+      "word": "ek",
+      "start": 0.938,
+      "end": 1.055,
+      "duration": 0.117
+    },
+    {
+      "index": 4,
+      "word": "bada",
+      "start": 1.068,
+      "end": 1.302,
+      "duration": 0.234
+    },
+    {
+      "index": 5,
+      "word": "social",
+      "start": 1.328,
+      "end": 1.678,
+      "duration": 0.351
+    },
+    {
+      "index": 6,
+      "word": "aur",
+      "start": 1.717,
+      "end": 1.893,
+      "duration": 0.175
+    },
+    {
+      "index": 7,
+      "word": "political",
+      "start": 1.912,
+      "end": 2.439,
+      "duration": 0.526
+    },
+    {
+      "index": 8,
+      "word": "purpose",
+      "start": 2.706,
+      "end": 3.117,
+      "duration": 0.411
+    },
+    {
+      "index": 9,
+      "word": "bhi",
+      "start": 3.163,
+      "end": 3.339,
+      "duration": 0.176
+    },
+    {
+      "index": 10,
+      "word": "tha",
+      "start": 3.359,
+      "end": 3.535,
+      "duration": 0.176
+    },
+    {
+      "index": 11,
+      "word": "—",
+      "start": 3.554,
+      "end": 3.614,
+      "duration": 0.06
+    },
+    {
+      "index": 12,
+      "word": "Alag-alag",
+      "start": 3.62,
+      "end": 4.148,
+      "duration": 0.529
+    },
+    {
+      "index": 13,
+      "word": "caste",
+      "start": 4.615,
+      "end": 4.688,
+      "duration": 0.073
+    },
+    {
+      "index": 14,
+      "word": "aur",
+      "start": 4.854,
+      "end": 5.002,
+      "duration": 0.148
+    },
+    {
+      "index": 15,
+      "word": "social",
+      "start": 5.019,
+      "end": 5.315,
+      "duration": 0.296
+    },
+    {
+      "index": 16,
+      "word": "groups",
+      "start": 5.499,
+      "end": 5.812,
+      "duration": 0.313
+    },
+    {
+      "index": 17,
+      "word": "ke",
+      "start": 5.847,
+      "end": 5.951,
+      "duration": 0.104
+    },
+    {
+      "index": 18,
+      "word": "logo",
+      "start": 5.963,
+      "end": 6.172,
+      "duration": 0.209
+    },
+    {
+      "index": 19,
+      "word": "ko",
+      "start": 6.195,
+      "end": 6.299,
+      "duration": 0.104
+    },
+    {
+      "index": 20,
+      "word": "ek",
+      "start": 6.311,
+      "end": 6.415,
+      "duration": 0.104
+    },
+    {
+      "index": 21,
+      "word": "common",
+      "start": 6.427,
+      "end": 6.74,
+      "duration": 0.313
+    },
+    {
+      "index": 22,
+      "word": "public",
+      "start": 6.775,
+      "end": 7.088,
+      "duration": 0.313
+    },
+    {
+      "index": 23,
+      "word": "platform",
+      "start": 7.123,
+      "end": 7.541,
+      "duration": 0.418
+    },
+    {
+      "index": 24,
+      "word": "par",
+      "start": 7.77,
+      "end": 7.862,
+      "duration": 0.092
+    },
+    {
+      "index": 25,
+      "word": "lana...",
+      "start": 7.872,
+      "end": 8.087,
+      "duration": 0.215
+    }
+  ]
+}

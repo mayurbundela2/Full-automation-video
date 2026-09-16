@@ -1,0 +1,125 @@
+{
+  "total_words": 17,
+  "total_duration": 6.88,
+  "words": [
+    {
+      "index": 1,
+      "word": "Shiv",
+      "start": 0.255,
+      "end": 0.546,
+      "duration": 0.291
+    },
+    {
+      "index": 2,
+      "word": "ne",
+      "start": 0.579,
+      "end": 0.725,
+      "duration": 0.146
+    },
+    {
+      "index": 3,
+      "word": "pehle",
+      "start": 0.741,
+      "end": 1.105,
+      "duration": 0.364
+    },
+    {
+      "index": 4,
+      "word": "mile",
+      "start": 1.146,
+      "end": 1.437,
+      "duration": 0.291
+    },
+    {
+      "index": 5,
+      "word": "jaanwar",
+      "start": 1.469,
+      "end": 1.98,
+      "duration": 0.51
+    },
+    {
+      "index": 6,
+      "word": "ka",
+      "start": 2.036,
+      "end": 2.182,
+      "duration": 0.146
+    },
+    {
+      "index": 7,
+      "word": "sar",
+      "start": 2.198,
+      "end": 2.417,
+      "duration": 0.219
+    },
+    {
+      "index": 8,
+      "word": "—",
+      "start": 2.441,
+      "end": 2.514,
+      "duration": 0.073
+    },
+    {
+      "index": 9,
+      "word": "ek",
+      "start": 3.049,
+      "end": 3.172,
+      "duration": 0.123
+    },
+    {
+      "index": 10,
+      "word": "haathi",
+      "start": 3.185,
+      "end": 3.554,
+      "duration": 0.368
+    },
+    {
+      "index": 11,
+      "word": "ka",
+      "start": 3.595,
+      "end": 3.717,
+      "duration": 0.123
+    },
+    {
+      "index": 12,
+      "word": "—",
+      "start": 3.731,
+      "end": 3.792,
+      "duration": 0.061
+    },
+    {
+      "index": 13,
+      "word": "laga",
+      "start": 3.799,
+      "end": 4.045,
+      "duration": 0.246
+    },
+    {
+      "index": 14,
+      "word": "kar",
+      "start": 4.612,
+      "end": 4.888,
+      "duration": 0.276
+    },
+    {
+      "index": 15,
+      "word": "unhe",
+      "start": 4.919,
+      "end": 5.288,
+      "duration": 0.368
+    },
+    {
+      "index": 16,
+      "word": "zinda",
+      "start": 5.328,
+      "end": 5.789,
+      "duration": 0.461
+    },
+    {
+      "index": 17,
+      "word": "kiya.",
+      "start": 5.84,
+      "end": 6.301,
+      "duration": 0.461
+    }
+  ]
+}

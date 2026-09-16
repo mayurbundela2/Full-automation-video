@@ -1,0 +1,118 @@
+{
+  "total_words": 16,
+  "total_duration": 6.36,
+  "words": [
+    {
+      "index": 1,
+      "word": "un",
+      "start": 0.297,
+      "end": 0.397,
+      "duration": 0.1
+    },
+    {
+      "index": 2,
+      "word": "logo",
+      "start": 0.408,
+      "end": 0.608,
+      "duration": 0.2
+    },
+    {
+      "index": 3,
+      "word": "ki",
+      "start": 0.63,
+      "end": 0.73,
+      "duration": 0.1
+    },
+    {
+      "index": 4,
+      "word": "average",
+      "start": 0.741,
+      "end": 1.091,
+      "duration": 0.35
+    },
+    {
+      "index": 5,
+      "word": "height",
+      "start": 1.13,
+      "end": 1.43,
+      "duration": 0.3
+    },
+    {
+      "index": 6,
+      "word": "thi",
+      "start": 1.464,
+      "end": 1.613,
+      "duration": 0.15
+    },
+    {
+      "index": 7,
+      "word": "lagbhag",
+      "start": 1.63,
+      "end": 1.98,
+      "duration": 0.35
+    },
+    {
+      "index": 8,
+      "word": "paanch",
+      "start": 2.181,
+      "end": 2.495,
+      "duration": 0.314
+    },
+    {
+      "index": 9,
+      "word": "foot",
+      "start": 2.53,
+      "end": 2.739,
+      "duration": 0.209
+    },
+    {
+      "index": 10,
+      "word": "nau",
+      "start": 2.959,
+      "end": 3.123,
+      "duration": 0.164
+    },
+    {
+      "index": 11,
+      "word": "inch.",
+      "start": 3.141,
+      "end": 3.413,
+      "duration": 0.273
+    },
+    {
+      "index": 12,
+      "word": "Farming",
+      "start": 3.444,
+      "end": 3.826,
+      "duration": 0.382
+    },
+    {
+      "index": 13,
+      "word": "shuru",
+      "start": 3.868,
+      "end": 4.141,
+      "duration": 0.273
+    },
+    {
+      "index": 14,
+      "word": "hone",
+      "start": 4.513,
+      "end": 4.969,
+      "duration": 0.456
+    },
+    {
+      "index": 15,
+      "word": "ke",
+      "start": 5.02,
+      "end": 5.247,
+      "duration": 0.228
+    },
+    {
+      "index": 16,
+      "word": "baad?",
+      "start": 5.273,
+      "end": 5.843,
+      "duration": 0.57
+    }
+  ]
+}

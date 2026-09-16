@@ -1,0 +1,90 @@
+{
+  "total_words": 12,
+  "total_duration": 5.4,
+  "words": [
+    {
+      "index": 1,
+      "word": "Phir",
+      "start": 0.255,
+      "end": 0.487,
+      "duration": 0.232
+    },
+    {
+      "index": 2,
+      "word": "lagbhag",
+      "start": 0.513,
+      "end": 0.92,
+      "duration": 0.407
+    },
+    {
+      "index": 3,
+      "word": "dus",
+      "start": 0.965,
+      "end": 1.139,
+      "duration": 0.174
+    },
+    {
+      "index": 4,
+      "word": "hazaar",
+      "start": 1.158,
+      "end": 1.507,
+      "duration": 0.348
+    },
+    {
+      "index": 5,
+      "word": "saal",
+      "start": 1.546,
+      "end": 1.778,
+      "duration": 0.232
+    },
+    {
+      "index": 6,
+      "word": "pehle,",
+      "start": 1.804,
+      "end": 2.152,
+      "duration": 0.348
+    },
+    {
+      "index": 7,
+      "word": "usne",
+      "start": 2.191,
+      "end": 2.423,
+      "duration": 0.232
+    },
+    {
+      "index": 8,
+      "word": "kheti",
+      "start": 2.843,
+      "end": 3.084,
+      "duration": 0.241
+    },
+    {
+      "index": 9,
+      "word": "seekhi.",
+      "start": 3.111,
+      "end": 3.449,
+      "duration": 0.338
+    },
+    {
+      "index": 10,
+      "word": "Farming",
+      "start": 3.487,
+      "end": 3.824,
+      "duration": 0.338
+    },
+    {
+      "index": 11,
+      "word": "shuru",
+      "start": 4.303,
+      "end": 4.748,
+      "duration": 0.445
+    },
+    {
+      "index": 12,
+      "word": "ki.",
+      "start": 4.797,
+      "end": 5.064,
+      "duration": 0.267
+    }
+  ]
+}

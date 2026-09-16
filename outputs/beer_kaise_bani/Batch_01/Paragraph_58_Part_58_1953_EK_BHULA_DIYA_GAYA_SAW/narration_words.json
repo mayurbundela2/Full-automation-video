@@ -1,0 +1,167 @@
+{
+  "total_words": 23,
+  "total_duration": 8.88,
+  "words": [
+    {
+      "index": 1,
+      "word": "Lekin",
+      "start": 0.283,
+      "end": 0.586,
+      "duration": 0.303
+    },
+    {
+      "index": 2,
+      "word": "ye",
+      "start": 0.62,
+      "end": 0.741,
+      "duration": 0.121
+    },
+    {
+      "index": 3,
+      "word": "sawaal",
+      "start": 0.755,
+      "end": 1.119,
+      "duration": 0.364
+    },
+    {
+      "index": 4,
+      "word": "khatam",
+      "start": 1.159,
+      "end": 1.523,
+      "duration": 0.364
+    },
+    {
+      "index": 5,
+      "word": "nahi",
+      "start": 1.564,
+      "end": 1.806,
+      "duration": 0.243
+    },
+    {
+      "index": 6,
+      "word": "hua.",
+      "start": 1.833,
+      "end": 2.076,
+      "duration": 0.243
+    },
+    {
+      "index": 7,
+      "word": "Aur",
+      "start": 2.103,
+      "end": 2.285,
+      "duration": 0.182
+    },
+    {
+      "index": 8,
+      "word": "Raqefet",
+      "start": 2.507,
+      "end": 2.961,
+      "duration": 0.454
+    },
+    {
+      "index": 9,
+      "word": "Cave",
+      "start": 3.011,
+      "end": 3.27,
+      "duration": 0.259
+    },
+    {
+      "index": 10,
+      "word": "ke",
+      "start": 3.299,
+      "end": 3.429,
+      "duration": 0.13
+    },
+    {
+      "index": 11,
+      "word": "evidence",
+      "start": 3.443,
+      "end": 3.962,
+      "duration": 0.519
+    },
+    {
+      "index": 12,
+      "word": "ne,",
+      "start": 4.019,
+      "end": 4.214,
+      "duration": 0.194
+    },
+    {
+      "index": 13,
+      "word": "do",
+      "start": 4.235,
+      "end": 4.365,
+      "duration": 0.13
+    },
+    {
+      "index": 14,
+      "word": "hazaar",
+      "start": 4.379,
+      "end": 4.768,
+      "duration": 0.389
+    },
+    {
+      "index": 15,
+      "word": "atharah",
+      "start": 4.812,
+      "end": 5.265,
+      "duration": 0.454
+    },
+    {
+      "index": 16,
+      "word": "mein,",
+      "start": 5.316,
+      "end": 5.64,
+      "duration": 0.324
+    },
+    {
+      "index": 17,
+      "word": "ise",
+      "start": 5.676,
+      "end": 5.87,
+      "duration": 0.194
+    },
+    {
+      "index": 18,
+      "word": "dobara",
+      "start": 5.892,
+      "end": 6.281,
+      "duration": 0.389
+    },
+    {
+      "index": 19,
+      "word": "serious",
+      "start": 6.607,
+      "end": 7.119,
+      "duration": 0.512
+    },
+    {
+      "index": 20,
+      "word": "debate",
+      "start": 7.176,
+      "end": 7.616,
+      "duration": 0.439
+    },
+    {
+      "index": 21,
+      "word": "mein",
+      "start": 7.664,
+      "end": 7.957,
+      "duration": 0.293
+    },
+    {
+      "index": 22,
+      "word": "la",
+      "start": 7.99,
+      "end": 8.136,
+      "duration": 0.146
+    },
+    {
+      "index": 23,
+      "word": "diya.",
+      "start": 8.152,
+      "end": 8.518,
+      "duration": 0.366
+    }
+  ]
+}

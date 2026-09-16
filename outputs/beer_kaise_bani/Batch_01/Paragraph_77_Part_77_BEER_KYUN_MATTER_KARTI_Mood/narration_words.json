@@ -1,0 +1,139 @@
+{
+  "total_words": 19,
+  "total_duration": 8.2,
+  "words": [
+    {
+      "index": 1,
+      "word": "Teesri",
+      "start": 0.304,
+      "end": 0.65,
+      "duration": 0.346
+    },
+    {
+      "index": 2,
+      "word": "—",
+      "start": 0.689,
+      "end": 0.749,
+      "duration": 0.06
+    },
+    {
+      "index": 3,
+      "word": "mood",
+      "start": 1.184,
+      "end": 1.399,
+      "duration": 0.215
+    },
+    {
+      "index": 4,
+      "word": "aur",
+      "start": 1.423,
+      "end": 1.584,
+      "duration": 0.161
+    },
+    {
+      "index": 5,
+      "word": "social",
+      "start": 1.602,
+      "end": 1.925,
+      "duration": 0.323
+    },
+    {
+      "index": 6,
+      "word": "bonding.",
+      "start": 1.961,
+      "end": 2.391,
+      "duration": 0.43
+    },
+    {
+      "index": 7,
+      "word": "Alcohol",
+      "start": 2.439,
+      "end": 2.815,
+      "duration": 0.376
+    },
+    {
+      "index": 8,
+      "word": "ka",
+      "start": 3.156,
+      "end": 3.286,
+      "duration": 0.13
+    },
+    {
+      "index": 9,
+      "word": "effect",
+      "start": 3.301,
+      "end": 3.692,
+      "duration": 0.391
+    },
+    {
+      "index": 10,
+      "word": "logo",
+      "start": 3.736,
+      "end": 3.997,
+      "duration": 0.261
+    },
+    {
+      "index": 11,
+      "word": "ko",
+      "start": 4.026,
+      "end": 4.156,
+      "duration": 0.13
+    },
+    {
+      "index": 12,
+      "word": "relaxed",
+      "start": 4.17,
+      "end": 4.627,
+      "duration": 0.457
+    },
+    {
+      "index": 13,
+      "word": "karta",
+      "start": 4.678,
+      "end": 5.004,
+      "duration": 0.326
+    },
+    {
+      "index": 14,
+      "word": "hai,",
+      "start": 5.04,
+      "end": 5.301,
+      "duration": 0.261
+    },
+    {
+      "index": 15,
+      "word": "group",
+      "start": 5.33,
+      "end": 5.656,
+      "duration": 0.326
+    },
+    {
+      "index": 16,
+      "word": "mein",
+      "start": 5.692,
+      "end": 5.953,
+      "duration": 0.261
+    },
+    {
+      "index": 17,
+      "word": "bond",
+      "start": 6.242,
+      "end": 6.625,
+      "duration": 0.383
+    },
+    {
+      "index": 18,
+      "word": "karta",
+      "start": 6.667,
+      "end": 7.146,
+      "duration": 0.478
+    },
+    {
+      "index": 19,
+      "word": "hai.",
+      "start": 7.199,
+      "end": 7.581,
+      "duration": 0.383
+    }
+  ]
+}

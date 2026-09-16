@@ -1,0 +1,41 @@
+{
+  "total_words": 5,
+  "total_duration": 2.56,
+  "words": [
+    {
+      "index": 1,
+      "word": "Atharah",
+      "start": 0.305,
+      "end": 0.701,
+      "duration": 0.396
+    },
+    {
+      "index": 2,
+      "word": "sau",
+      "start": 0.745,
+      "end": 0.915,
+      "duration": 0.17
+    },
+    {
+      "index": 3,
+      "word": "tiryaanve",
+      "start": 0.934,
+      "end": 1.443,
+      "duration": 0.509
+    },
+    {
+      "index": 4,
+      "word": "se",
+      "start": 1.499,
+      "end": 1.613,
+      "duration": 0.113
+    },
+    {
+      "index": 5,
+      "word": "pehle...",
+      "start": 1.625,
+      "end": 2.078,
+      "duration": 0.453
+    }
+  ]
+}

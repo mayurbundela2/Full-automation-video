@@ -1,0 +1,27 @@
+{
+  "total_words": 3,
+  "total_duration": 1.92,
+  "words": [
+    {
+      "index": 1,
+      "word": "Castes",
+      "start": 0.256,
+      "end": 0.686,
+      "duration": 0.43
+    },
+    {
+      "index": 2,
+      "word": "ko",
+      "start": 0.734,
+      "end": 0.877,
+      "duration": 0.143
+    },
+    {
+      "index": 3,
+      "word": "jodkar...",
+      "start": 0.893,
+      "end": 1.537,
+      "duration": 0.645
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "total_words": 16,
+  "total_duration": 6.36,
+  "words": [
+    {
+      "index": 1,
+      "word": "Ganesh",
+      "start": 0.159,
+      "end": 0.588,
+      "duration": 0.429
+    },
+    {
+      "index": 2,
+      "word": "ki",
+      "start": 0.635,
+      "end": 0.778,
+      "duration": 0.143
+    },
+    {
+      "index": 3,
+      "word": "murti",
+      "start": 0.794,
+      "end": 1.151,
+      "duration": 0.357
+    },
+    {
+      "index": 4,
+      "word": "ke",
+      "start": 1.191,
+      "end": 1.334,
+      "duration": 0.143
+    },
+    {
+      "index": 5,
+      "word": "saamne",
+      "start": 1.35,
+      "end": 1.778,
+      "duration": 0.429
+    },
+    {
+      "index": 6,
+      "word": "log",
+      "start": 1.826,
+      "end": 2.04,
+      "duration": 0.214
+    },
+    {
+      "index": 7,
+      "word": "pehle",
+      "start": 2.297,
+      "end": 2.622,
+      "duration": 0.325
+    },
+    {
+      "index": 8,
+      "word": "bhi",
+      "start": 2.658,
+      "end": 2.853,
+      "duration": 0.195
+    },
+    {
+      "index": 9,
+      "word": "ikattha",
+      "start": 2.875,
+      "end": 3.33,
+      "duration": 0.455
+    },
+    {
+      "index": 10,
+      "word": "hote",
+      "start": 3.38,
+      "end": 3.64,
+      "duration": 0.26
+    },
+    {
+      "index": 11,
+      "word": "the.",
+      "start": 3.669,
+      "end": 3.929,
+      "duration": 0.26
+    },
+    {
+      "index": 12,
+      "word": "Farq",
+      "start": 4.483,
+      "end": 4.825,
+      "duration": 0.342
+    },
+    {
+      "index": 13,
+      "word": "bas",
+      "start": 4.863,
+      "end": 5.119,
+      "duration": 0.257
+    },
+    {
+      "index": 14,
+      "word": "itna",
+      "start": 5.148,
+      "end": 5.49,
+      "duration": 0.342
+    },
+    {
+      "index": 15,
+      "word": "tha",
+      "start": 5.528,
+      "end": 5.784,
+      "duration": 0.257
+    },
+    {
+      "index": 16,
+      "word": "—",
+      "start": 5.813,
+      "end": 5.898,
+      "duration": 0.086
+    }
+  ]
+}

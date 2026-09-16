@@ -1,0 +1,83 @@
+{
+  "total_words": 11,
+  "total_duration": 7.6,
+  "words": [
+    {
+      "index": 1,
+      "word": "population",
+      "start": 0.306,
+      "end": 0.999,
+      "duration": 0.693
+    },
+    {
+      "index": 2,
+      "word": "growth,",
+      "start": 1.076,
+      "end": 1.561,
+      "duration": 0.485
+    },
+    {
+      "index": 3,
+      "word": "food",
+      "start": 1.615,
+      "end": 1.893,
+      "duration": 0.277
+    },
+    {
+      "index": 4,
+      "word": "storage,",
+      "start": 1.923,
+      "end": 2.478,
+      "duration": 0.555
+    },
+    {
+      "index": 5,
+      "word": "specialization,",
+      "start": 2.54,
+      "end": 3.579,
+      "duration": 1.04
+    },
+    {
+      "index": 6,
+      "word": "complex",
+      "start": 3.973,
+      "end": 4.434,
+      "duration": 0.461
+    },
+    {
+      "index": 7,
+      "word": "societies.",
+      "start": 4.485,
+      "end": 5.143,
+      "duration": 0.658
+    },
+    {
+      "index": 8,
+      "word": "Ye",
+      "start": 5.216,
+      "end": 5.347,
+      "duration": 0.132
+    },
+    {
+      "index": 9,
+      "word": "zero-sum",
+      "start": 5.812,
+      "end": 6.487,
+      "duration": 0.675
+    },
+    {
+      "index": 10,
+      "word": "nahi",
+      "start": 6.562,
+      "end": 6.9,
+      "duration": 0.338
+    },
+    {
+      "index": 11,
+      "word": "tha.",
+      "start": 6.938,
+      "end": 7.275,
+      "duration": 0.338
+    }
+  ]
+}

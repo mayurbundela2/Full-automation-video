@@ -1,0 +1,160 @@
+{
+  "total_words": 22,
+  "total_duration": 9.68,
+  "words": [
+    {
+      "index": 1,
+      "word": "Unnees",
+      "start": 0.291,
+      "end": 0.59,
+      "duration": 0.299
+    },
+    {
+      "index": 2,
+      "word": "sau",
+      "start": 0.623,
+      "end": 0.772,
+      "duration": 0.149
+    },
+    {
+      "index": 3,
+      "word": "tirpan",
+      "start": 0.789,
+      "end": 1.088,
+      "duration": 0.299
+    },
+    {
+      "index": 4,
+      "word": "mein",
+      "start": 1.121,
+      "end": 1.32,
+      "duration": 0.199
+    },
+    {
+      "index": 5,
+      "word": "—",
+      "start": 1.652,
+      "end": 1.713,
+      "duration": 0.061
+    },
+    {
+      "index": 6,
+      "word": "saath",
+      "start": 1.72,
+      "end": 2.025,
+      "duration": 0.305
+    },
+    {
+      "index": 7,
+      "word": "saal",
+      "start": 2.059,
+      "end": 2.303,
+      "duration": 0.244
+    },
+    {
+      "index": 8,
+      "word": "pehle",
+      "start": 2.33,
+      "end": 2.635,
+      "duration": 0.305
+    },
+    {
+      "index": 9,
+      "word": "—",
+      "start": 2.669,
+      "end": 2.73,
+      "duration": 0.061
+    },
+    {
+      "index": 10,
+      "word": "University",
+      "start": 2.736,
+      "end": 3.346,
+      "duration": 0.61
+    },
+    {
+      "index": 11,
+      "word": "of",
+      "start": 3.414,
+      "end": 3.536,
+      "duration": 0.122
+    },
+    {
+      "index": 12,
+      "word": "Chicago",
+      "start": 3.549,
+      "end": 3.976,
+      "duration": 0.427
+    },
+    {
+      "index": 13,
+      "word": "ke",
+      "start": 4.024,
+      "end": 4.146,
+      "duration": 0.122
+    },
+    {
+      "index": 14,
+      "word": "archaeologist",
+      "start": 4.159,
+      "end": 4.952,
+      "duration": 0.793
+    },
+    {
+      "index": 15,
+      "word": "Robert",
+      "start": 5.04,
+      "end": 5.406,
+      "duration": 0.366
+    },
+    {
+      "index": 16,
+      "word": "Braidwood",
+      "start": 5.632,
+      "end": 6.16,
+      "duration": 0.528
+    },
+    {
+      "index": 17,
+      "word": "ne",
+      "start": 6.219,
+      "end": 6.336,
+      "duration": 0.117
+    },
+    {
+      "index": 18,
+      "word": "ek",
+      "start": 6.349,
+      "end": 6.466,
+      "duration": 0.117
+    },
+    {
+      "index": 19,
+      "word": "academic",
+      "start": 6.479,
+      "end": 6.949,
+      "duration": 0.469
+    },
+    {
+      "index": 20,
+      "word": "symposium",
+      "start": 7.151,
+      "end": 7.895,
+      "duration": 0.744
+    },
+    {
+      "index": 21,
+      "word": "organize",
+      "start": 7.978,
+      "end": 8.64,
+      "duration": 0.662
+    },
+    {
+      "index": 22,
+      "word": "kiya.",
+      "start": 8.713,
+      "end": 9.127,
+      "duration": 0.414
+    }
+  ]
+}

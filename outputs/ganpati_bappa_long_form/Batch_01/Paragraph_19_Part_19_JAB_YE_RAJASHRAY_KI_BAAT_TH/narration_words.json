@@ -1,0 +1,90 @@
+{
+  "total_words": 12,
+  "total_duration": 4.96,
+  "words": [
+    {
+      "index": 1,
+      "word": "Peshwa",
+      "start": 0.282,
+      "end": 0.618,
+      "duration": 0.336
+    },
+    {
+      "index": 2,
+      "word": "raj",
+      "start": 0.655,
+      "end": 0.823,
+      "duration": 0.168
+    },
+    {
+      "index": 3,
+      "word": "khatam",
+      "start": 0.842,
+      "end": 1.177,
+      "duration": 0.336
+    },
+    {
+      "index": 4,
+      "word": "hone",
+      "start": 1.215,
+      "end": 1.438,
+      "duration": 0.224
+    },
+    {
+      "index": 5,
+      "word": "ke",
+      "start": 1.463,
+      "end": 1.575,
+      "duration": 0.112
+    },
+    {
+      "index": 6,
+      "word": "baad,",
+      "start": 1.588,
+      "end": 1.867,
+      "duration": 0.28
+    },
+    {
+      "index": 7,
+      "word": "usse",
+      "start": 1.898,
+      "end": 2.122,
+      "duration": 0.224
+    },
+    {
+      "index": 8,
+      "word": "wahi",
+      "start": 2.593,
+      "end": 2.875,
+      "duration": 0.282
+    },
+    {
+      "index": 9,
+      "word": "state",
+      "start": 2.906,
+      "end": 3.258,
+      "duration": 0.352
+    },
+    {
+      "index": 10,
+      "word": "patronage",
+      "start": 3.297,
+      "end": 3.931,
+      "duration": 0.634
+    },
+    {
+      "index": 11,
+      "word": "nahi",
+      "start": 4.002,
+      "end": 4.283,
+      "duration": 0.282
+    },
+    {
+      "index": 12,
+      "word": "mila.",
+      "start": 4.315,
+      "end": 4.667,
+      "duration": 0.352
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "total_words": 27,
+  "total_duration": 12.08,
+  "words": [
+    {
+      "index": 1,
+      "word": "Toh",
+      "start": 0.336,
+      "end": 0.428,
+      "duration": 0.092
+    },
+    {
+      "index": 2,
+      "word": "ab",
+      "start": 0.438,
+      "end": 0.5,
+      "duration": 0.061
+    },
+    {
+      "index": 3,
+      "word": "humein",
+      "start": 0.506,
+      "end": 0.691,
+      "duration": 0.184
+    },
+    {
+      "index": 4,
+      "word": "ek",
+      "start": 1.128,
+      "end": 1.211,
+      "duration": 0.083
+    },
+    {
+      "index": 5,
+      "word": "honest",
+      "start": 1.22,
+      "end": 1.467,
+      "duration": 0.248
+    },
+    {
+      "index": 6,
+      "word": "sentence",
+      "start": 1.495,
+      "end": 1.825,
+      "duration": 0.33
+    },
+    {
+      "index": 7,
+      "word": "bolna",
+      "start": 2.076,
+      "end": 2.333,
+      "duration": 0.257
+    },
+    {
+      "index": 8,
+      "word": "chahiye.",
+      "start": 2.361,
+      "end": 2.772,
+      "duration": 0.411
+    },
+    {
+      "index": 9,
+      "word": "\"Beer",
+      "start": 2.818,
+      "end": 3.074,
+      "duration": 0.257
+    },
+    {
+      "index": 10,
+      "word": "ne",
+      "start": 3.103,
+      "end": 3.205,
+      "duration": 0.103
+    },
+    {
+      "index": 11,
+      "word": "kheti",
+      "start": 3.217,
+      "end": 3.473,
+      "duration": 0.257
+    },
+    {
+      "index": 12,
+      "word": "karwayi\"",
+      "start": 3.88,
+      "end": 4.29,
+      "duration": 0.41
+    },
+    {
+      "index": 13,
+      "word": "—",
+      "start": 4.336,
+      "end": 4.396,
+      "duration": 0.06
+    },
+    {
+      "index": 14,
+      "word": "ye",
+      "start": 4.393,
+      "end": 4.495,
+      "duration": 0.103
+    },
+    {
+      "index": 15,
+      "word": "statement",
+      "start": 4.507,
+      "end": 4.968,
+      "duration": 0.461
+    },
+    {
+      "index": 16,
+      "word": "galat",
+      "start": 5.019,
+      "end": 5.276,
+      "duration": 0.256
+    },
+    {
+      "index": 17,
+      "word": "hai,",
+      "start": 5.304,
+      "end": 5.509,
+      "duration": 0.205
+    },
+    {
+      "index": 18,
+      "word": "oversimplified",
+      "start": 5.97,
+      "end": 6.667,
+      "duration": 0.697
+    },
+    {
+      "index": 19,
+      "word": "hai.",
+      "start": 6.745,
+      "end": 6.944,
+      "duration": 0.199
+    },
+    {
+      "index": 20,
+      "word": "Koi",
+      "start": 6.966,
+      "end": 7.115,
+      "duration": 0.149
+    },
+    {
+      "index": 21,
+      "word": "bhi",
+      "start": 7.623,
+      "end": 7.731,
+      "duration": 0.108
+    },
+    {
+      "index": 22,
+      "word": "serious",
+      "start": 7.743,
+      "end": 7.996,
+      "duration": 0.253
+    },
+    {
+      "index": 23,
+      "word": "archaeologist",
+      "start": 8.024,
+      "end": 8.493,
+      "duration": 0.469
+    },
+    {
+      "index": 24,
+      "word": "ye",
+      "start": 8.842,
+      "end": 8.927,
+      "duration": 0.085
+    },
+    {
+      "index": 25,
+      "word": "claim",
+      "start": 9.107,
+      "end": 9.806,
+      "duration": 0.699
+    },
+    {
+      "index": 26,
+      "word": "nahi",
+      "start": 9.884,
+      "end": 10.443,
+      "duration": 0.559
+    },
+    {
+      "index": 27,
+      "word": "karta.",
+      "start": 10.505,
+      "end": 11.344,
+      "duration": 0.839
+    }
+  ]
+}
