@@ -13,7 +13,7 @@ from backend.schemas import (
     BatchCreate, BatchResponse, ParseReferenceRequest,
     ParseReferenceResponse, ParagraphResponse,
     ScanMediaRequest, ScanMediaResponse, MediaMatchItem, AssignMediaRequest,
-    VideoConfigUpdateRequest, BulkOnScreenTextInput
+    VideoConfigUpdateRequest, BulkMotionTransitionRequest, BulkOnScreenTextInput
 )
 from backend.services.video_service import VideoService
 from backend.services.reference_parser import ReferenceParser
@@ -106,6 +106,8 @@ def enrich_paragraph(
         speed_factor=para.speed_factor,
         synced_video_path=para.synced_video_path,
         thumbnail_path=para.thumbnail_path,
+        photo_motion=para.photo_motion or "zoom_in",
+        photo_transition=para.photo_transition or "fade_in_out",
         transcript=para.transcript,
         custom_prompt=para.custom_prompt,
         word_count=para.word_count,
@@ -239,7 +241,15 @@ def enrich_batch(batch: Batch, db: Session) -> BatchResponse:
         master_video_duration=batch.master_video_duration,
         tight_mp4_path=tight_mp4_resolved,
         aspect_ratio=batch.aspect_ratio or "16:9",
-        fit_mode=batch.fit_mode or "crop"
+        fit_mode=batch.fit_mode or "crop",
+        photo_motion=batch.photo_motion or "zoom_in",
+        photo_transition=batch.photo_transition or "fade_in_out",
+        logo_path=batch.logo_path,
+        logo_position=batch.logo_position or "top_right",
+        logo_scale=batch.logo_scale if batch.logo_scale is not None else 12.0,
+        logo_opacity=batch.logo_opacity if batch.logo_opacity is not None else 0.85,
+        logo_enabled=bool(batch.logo_enabled),
+        logo_url=f"/api/batches/{batch.id}/logo" if (batch.logo_path and os.path.exists(batch.logo_path)) else None
     )
 
 
@@ -282,7 +292,7 @@ def combine_batch_audio_files(batch_id: int, db: Session) -> Dict[str, Any]:
         wav_file_paths=wav_paths,
         output_wav_path=combined_wav,
         output_mp3_path=combined_mp3,
-        silence_gap_seconds=0.20,
+        silence_gap_seconds=0.0,
         ffmpeg_path=ffmpeg_path,
         bitrate=bitrate
     )
@@ -311,7 +321,7 @@ def combine_batch_audio_files(batch_id: int, db: Session) -> Dict[str, Any]:
         output_base_dir=batch_dir,
         prefix="full_batch_narration",
         full_wav_path=combined_wav,
-        silence_gap_seconds=0.4,
+        silence_gap_seconds=0.0,
         words_per_caption=4
     )
 
@@ -362,7 +372,7 @@ def tighten_batch_audio_files(batch_id: int, db: Session, silence_threshold: flo
     paragraphs = db.query(Paragraph).filter(Paragraph.batch_id == batch_id).order_by(Paragraph.paragraph_number.asc(), Paragraph.id.asc()).all()
     paras_tight_meta = []
     tight_wav_paths = []
-    inter_para_tight_gap = 0.06
+    inter_para_tight_gap = 0.0
 
     for p in paragraphs:
         latest_gen = db.query(Generation).filter(Generation.paragraph_id == p.id, Generation.status == "COMPLETED").order_by(Generation.created_at.desc()).first()
@@ -1119,6 +1129,8 @@ def render_batch_video(
     audio_source: str = Query("master", description="Audio source to sync: 'master' or 'tight'/'trim'"),
     aspect_ratio: Optional[str] = Query(None, description="Target aspect ratio: '16:9', '9:16', '1:1', '4:5', '4:3', '21:9'"),
     fit_mode: Optional[str] = Query(None, description="Video fit mode: 'crop', 'fit', or 'blur_pad'"),
+    photo_motion: Optional[str] = Query(None, description="Photo motion: 'zoom_in', 'zoom_out', 'pan_left', 'pan_right', 'zoom_pan', 'none'"),
+    photo_transition: Optional[str] = Query(None, description="Photo transition: 'fade_in_out', 'fade_in', 'fade_out', 'zoom_pop', 'none'"),
     burn_on_screen_text: bool = Query(True, description="Whether to animate and burn on_screen_text into the video"),
     text_animation_style: str = Query("slide_down", description="Animation style: 'slide_down', 'slide_left', 'slide_right', 'typewriter', 'fade', 'slide_up'"),
     text_position: str = Query("top", description="Text position: 'top' or 'bottom'"),
@@ -1140,12 +1152,16 @@ def render_batch_video(
     is_tight = audio_source.lower() in ("tight", "trim")
     version_title = "Tight Trimmed" if is_tight else "Master Full Narration"
 
-    # Resolve aspect ratio & fit mode
+    # Resolve aspect ratio & fit mode & photo animations
     effective_ar = aspect_ratio or batch.aspect_ratio or "16:9"
     effective_fit = fit_mode or batch.fit_mode or "crop"
+    effective_motion = photo_motion or batch.photo_motion or "zoom_in"
+    effective_trans = photo_transition or batch.photo_transition or "fade_in_out"
 
     batch.aspect_ratio = effective_ar
     batch.fit_mode = effective_fit
+    batch.photo_motion = effective_motion
+    batch.photo_transition = effective_trans
     db.commit()
 
     target_w, target_h = VideoService.get_resolution_for_aspect_ratio(effective_ar)
@@ -1232,6 +1248,8 @@ def render_batch_video(
                     target_width=target_w,
                     target_height=target_h,
                     fit_mode=effective_fit,
+                    photo_motion=p.photo_motion or effective_motion,
+                    photo_transition=p.photo_transition or effective_trans,
                     on_screen_text=None,  # Keep base shots 100% clean so subtitles can be changed dynamically
                     text_animation_style=text_animation_style,
                     text_position=text_position,
@@ -1331,7 +1349,7 @@ def render_batch_video(
                     shots_timeline.append({"start": curr_t, "duration": s_dur, "text": p.on_screen_text.strip()})
                 curr_t += s_dur
 
-            if shots_timeline:
+            if shots_timeline or batch.logo_enabled:
                 temp_burned = batch_dir / f"temp_init_burn_{int(time.time())}.mp4"
                 try:
                     VideoService.burn_text_overlay_on_video(
@@ -1344,6 +1362,11 @@ def render_batch_video(
                         animation_style=text_animation_style,
                         font_family=font_family,
                         font_color=font_color,
+                        logo_path=batch.logo_path,
+                        logo_position=batch.logo_position or "top_right",
+                        logo_scale=batch.logo_scale if batch.logo_scale is not None else 12.0,
+                        logo_opacity=batch.logo_opacity if batch.logo_opacity is not None else 0.85,
+                        logo_enabled=bool(batch.logo_enabled),
                         ffmpeg_path=ffmpeg_path
                     )
                     with open(temp_burned, "rb") as src, open(master_video_path, "wb") as dst:
@@ -1528,6 +1551,11 @@ def render_batch_text_only(
             animation_style=text_animation_style,
             font_family=font_family,
             font_color=font_color,
+            logo_path=batch.logo_path,
+            logo_position=batch.logo_position or "top_right",
+            logo_scale=batch.logo_scale if batch.logo_scale is not None else 12.0,
+            logo_opacity=batch.logo_opacity if batch.logo_opacity is not None else 0.85,
+            logo_enabled=bool(batch.logo_enabled),
             ffmpeg_path=ffmpeg_path
         )
 
@@ -1678,9 +1706,122 @@ def update_batch_video_config(
         batch.aspect_ratio = config.aspect_ratio
     if config.fit_mode:
         batch.fit_mode = config.fit_mode
+    if config.photo_motion is not None:
+        batch.photo_motion = config.photo_motion
+    if config.photo_transition is not None:
+        batch.photo_transition = config.photo_transition
+    if config.logo_path is not None:
+        batch.logo_path = config.logo_path
+    if config.logo_position is not None:
+        batch.logo_position = config.logo_position
+    if config.logo_scale is not None:
+        batch.logo_scale = config.logo_scale
+    if config.logo_opacity is not None:
+        batch.logo_opacity = config.logo_opacity
+    if config.logo_enabled is not None:
+        batch.logo_enabled = config.logo_enabled
     db.commit()
     db.refresh(batch)
     return enrich_batch(batch, db)
+
+
+@router.post("/api/batches/{batch_id}/apply-motion-transition-to-all", response_model=BatchResponse)
+def apply_motion_transition_to_all(
+    batch_id: int,
+    data: BulkMotionTransitionRequest,
+    db: Session = Depends(get_db)
+):
+    """
+    Applies the specified photo motion and/or in-out transition to all paragraph shots
+    in the batch simultaneously, updating the batch defaults and each shot.
+    """
+    batch = db.query(Batch).filter(Batch.id == batch_id).first()
+    if not batch:
+        raise HTTPException(status_code=404, detail="Batch not found")
+
+    if data.photo_motion is not None:
+        batch.photo_motion = data.photo_motion
+        for para in batch.paragraphs:
+            para.photo_motion = data.photo_motion
+
+    if data.photo_transition is not None:
+        batch.photo_transition = data.photo_transition
+        for para in batch.paragraphs:
+            para.photo_transition = data.photo_transition
+
+    db.commit()
+    db.refresh(batch)
+    return enrich_batch(batch, db)
+
+
+
+@router.post("/api/batches/{batch_id}/upload-logo")
+async def upload_batch_logo(
+    batch_id: int,
+    file: UploadFile = File(...),
+    db: Session = Depends(get_db)
+):
+    """
+    Uploads a custom watermark logo image (.png, .jpg, .webp, .svg) for the batch.
+    """
+    batch = db.query(Batch).filter(Batch.id == batch_id).first()
+    if not batch:
+        raise HTTPException(status_code=404, detail="Batch not found")
+
+    output_dir_setting = db.query(AppSetting).filter(AppSetting.key == "OUTPUT_FOLDER").first()
+    output_base = output_dir_setting.value if output_dir_setting else settings.OUTPUT_FOLDER
+    delivery = LocalDeliveryProvider(base_output_dir=output_base)
+    batch_dir = delivery.base_dir / sanitize_filename(batch.project.name) / f"Batch_{batch.batch_number:02d}"
+    batch_dir.mkdir(parents=True, exist_ok=True)
+
+    ext = Path(file.filename).suffix.lower() if file.filename else ".png"
+    if ext not in (".png", ".jpg", ".jpeg", ".webp", ".svg", ".bmp"):
+        ext = ".png"
+
+    dest_file = batch_dir / f"logo_{int(time.time())}{ext}"
+    with open(dest_file, "wb") as f:
+        while chunk := await file.read(1024 * 1024):
+            f.write(chunk)
+
+    batch.logo_path = str(dest_file)
+    batch.logo_enabled = True
+    db.commit()
+    db.refresh(batch)
+
+    return {
+        "status": "ok",
+        "logo_path": str(dest_file),
+        "logo_url": f"/api/batches/{batch.id}/logo?t={int(time.time())}"
+    }
+
+
+@router.get("/api/batches/{batch_id}/logo")
+def get_batch_logo(
+    batch_id: int,
+    db: Session = Depends(get_db)
+):
+    """
+    Serves the uploaded logo file for live editor preview and download.
+    """
+    batch = db.query(Batch).filter(Batch.id == batch_id).first()
+    if not batch or not batch.logo_path or not os.path.exists(batch.logo_path):
+        raise HTTPException(status_code=404, detail="Logo file not found")
+
+    ext = Path(batch.logo_path).suffix.lower()
+    media_type = "image/png"
+    if ext in (".jpg", ".jpeg"):
+        media_type = "image/jpeg"
+    elif ext == ".webp":
+        media_type = "image/webp"
+    elif ext == ".svg":
+        media_type = "image/svg+xml"
+
+    return FileResponse(
+        path=batch.logo_path,
+        media_type=media_type,
+        filename=Path(batch.logo_path).name,
+        headers={"Cache-Control": "public, max-age=3600"}
+    )
 
 
 @router.get("/api/batches/{batch_id}/master-video")
@@ -1778,17 +1919,13 @@ def get_batch_master_video(
     filename = f"batch_{batch.batch_number}_{'tight' if is_tight else 'master'}_{clean_ar}.mp4"
     disposition = "attachment" if download else "inline"
 
-    with open(target_video_path, "rb") as f:
-        content = f.read()
-
-    from fastapi import Response
-    return Response(
-        content=content,
+    return FileResponse(
+        path=target_video_path,
         media_type="video/mp4",
+        filename=filename,
+        content_disposition_type="attachment" if download else "inline",
         headers={
-            "Content-Disposition": f"{disposition}; filename=\"{filename}\"",
             "Accept-Ranges": "bytes",
-            "Content-Length": str(len(content)),
             "Cache-Control": "no-cache, no-store, must-revalidate",
             "Pragma": "no-cache",
             "Expires": "0",
@@ -1799,23 +1936,27 @@ def get_batch_master_video(
 @router.get("/api/paragraphs/{para_id}/video")
 def get_paragraph_video(para_id: int, download: bool = False, db: Session = Depends(get_db)):
     p = db.query(Paragraph).filter(Paragraph.id == para_id).first()
-    if not p or not p.synced_video_path or not os.path.exists(p.synced_video_path):
-        raise HTTPException(status_code=404, detail="Synchronized video for this paragraph not found.")
+    if not p:
+        raise HTTPException(status_code=404, detail="Paragraph not found.")
 
-    filename = f"paragraph_{p.paragraph_number}_synced.mp4"
-    disposition = "attachment" if download else "inline"
+    target_video = None
+    if p.synced_video_path and os.path.exists(p.synced_video_path):
+        target_video = p.synced_video_path
+    elif p.media_path and os.path.exists(p.media_path) and (p.media_type != "image" or not p.media_path.lower().endswith(('.jpg', '.jpeg', '.png', '.webp'))):
+        target_video = p.media_path
 
-    with open(p.synced_video_path, "rb") as f:
-        content = f.read()
+    if not target_video:
+        raise HTTPException(status_code=404, detail="Video file for this paragraph not found.")
 
-    from fastapi import Response
-    return Response(
-        content=content,
+    filename = f"paragraph_{p.paragraph_number}_{Path(target_video).name}"
+
+    return FileResponse(
+        path=target_video,
         media_type="video/mp4",
+        filename=filename,
+        content_disposition_type="attachment" if download else "inline",
         headers={
-            "Content-Disposition": f"{disposition}; filename=\"{filename}\"",
             "Accept-Ranges": "bytes",
-            "Content-Length": str(len(content)),
             "Cache-Control": "no-cache, no-store, must-revalidate",
             "Pragma": "no-cache",
             "Expires": "0",

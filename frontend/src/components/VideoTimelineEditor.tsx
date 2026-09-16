@@ -3,11 +3,14 @@ import {
   Film, Video, Play, Pause, RefreshCw, Download, FolderOpen, 
   CheckCircle2, AlertCircle, Sparkles, Clock, Gauge, Image, FileVideo, 
   ChevronDown, ChevronUp, Layers, Scissors, Music, Volume2, Maximize2, Upload,
-  Smartphone, Monitor, Square, Sliders, Type, ListOrdered, Trash2
+  Smartphone, Monitor, Square, Sliders, Type, ListOrdered, Trash2, Stamp
 } from 'lucide-react';
 import { Batch, Paragraph, ScanMediaResponse } from '../types';
 import { api } from '../api';
 import { BulkTextBySerialModal } from './BulkTextBySerialModal';
+import { LiveEditorPlayer } from './LiveEditorPlayer';
+import { InteractiveTimelineTrack } from './InteractiveTimelineTrack';
+import { ClipInspectorPanel } from './ClipInspectorPanel';
 
 interface VideoTimelineEditorProps {
   batch: Batch;
@@ -18,6 +21,8 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const [mediaFolder, setMediaFolder] = useState<string>(batch.media_folder || '');
   const [aspectRatio, setAspectRatio] = useState<string>(batch.aspect_ratio || '16:9');
   const [fitMode, setFitMode] = useState<string>(batch.fit_mode || 'crop');
+  const [photoMotion, setPhotoMotion] = useState<string>(batch.photo_motion || 'zoom_in');
+  const [photoTransition, setPhotoTransition] = useState<string>(batch.photo_transition || 'fade_in_out');
   const [showOnScreenText, setShowOnScreenText] = useState<boolean>(true);
   const [textPosition, setTextPosition] = useState<'top' | 'bottom'>('top');
   const [textAnimationStyle, setTextAnimationStyle] = useState<'slide_down' | 'slide_left' | 'slide_right' | 'typewriter' | 'fade' | 'slide_up'>('slide_down');
@@ -25,6 +30,21 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const [fontColor, setFontColor] = useState<string>('yellow');
   const [showBulkTextModal, setShowBulkTextModal] = useState<boolean>(false);
   const [currentPlaybackTime, setCurrentPlaybackTime] = useState<number>(0);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [selectedParagraphId, setSelectedParagraphId] = useState<number | null>(
+    batch.paragraphs?.[0]?.id || null
+  );
+  const [logoEnabled, setLogoEnabled] = useState<boolean>(batch.logo_enabled || false);
+  const [logoPosition, setLogoPosition] = useState<string>(batch.logo_position || 'top_right');
+  const [logoScale, setLogoScale] = useState<number>(batch.logo_scale !== undefined ? batch.logo_scale : 12.0);
+  const [logoOpacity, setLogoOpacity] = useState<number>(batch.logo_opacity !== undefined ? batch.logo_opacity : 0.85);
+  const [logoUrl, setLogoUrl] = useState<string | null>(
+    batch.logo_url || (batch.logo_path ? api.getBatchLogoUrl(batch.id) : null)
+  );
+  const [uploadingLogo, setUploadingLogo] = useState<boolean>(false);
+  const [exporting, setExporting] = useState<boolean>(false);
+  const logoInputRef = useRef<HTMLInputElement | null>(null);
+
   const [scanning, setScanning] = useState<boolean>(false);
   const [scanResult, setScanResult] = useState<ScanMediaResponse | null>(null);
   const [rendering, setRendering] = useState<boolean>(false);
@@ -51,13 +71,39 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
     if (batch.fit_mode && batch.fit_mode !== fitMode) {
       setFitMode(batch.fit_mode);
     }
-  }, [batch.aspect_ratio, batch.fit_mode]);
+    if (batch.photo_motion && batch.photo_motion !== photoMotion) {
+      setPhotoMotion(batch.photo_motion);
+    }
+    if (batch.photo_transition && batch.photo_transition !== photoTransition) {
+      setPhotoTransition(batch.photo_transition);
+    }
+    if (batch.logo_enabled !== undefined && batch.logo_enabled !== logoEnabled) {
+      setLogoEnabled(batch.logo_enabled);
+    }
+    if (batch.logo_position && batch.logo_position !== logoPosition) {
+      setLogoPosition(batch.logo_position);
+    }
+    if (batch.logo_scale !== undefined && batch.logo_scale !== logoScale) {
+      setLogoScale(batch.logo_scale);
+    }
+    if (batch.logo_opacity !== undefined && batch.logo_opacity !== logoOpacity) {
+      setLogoOpacity(batch.logo_opacity);
+    }
+    if (batch.logo_url && batch.logo_url !== logoUrl) {
+      setLogoUrl(batch.logo_url);
+    }
+  }, [batch.aspect_ratio, batch.fit_mode, batch.photo_motion, batch.photo_transition, batch.logo_enabled, batch.logo_position, batch.logo_scale, batch.logo_opacity, batch.logo_url]);
 
-  const handleUpdateConfig = async (newRatio?: string, newFit?: string) => {
+  const handleUpdateConfig = async (newRatio?: string, newFit?: string, newMotion?: string, newTrans?: string) => {
     const targetRatio = newRatio || aspectRatio;
     const targetFit = newFit || fitMode;
+    const targetMotion = newMotion !== undefined ? newMotion : photoMotion;
+    const targetTrans = newTrans !== undefined ? newTrans : photoTransition;
+
     if (newRatio) setAspectRatio(newRatio);
     if (newFit) setFitMode(newFit);
+    if (newMotion !== undefined) setPhotoMotion(newMotion);
+    if (newTrans !== undefined) setPhotoTransition(newTrans);
 
     setVideoTimestamp(Date.now());
 
@@ -65,12 +111,51 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
       await api.updateBatchVideoConfig(batch.id, {
         aspect_ratio: targetRatio,
         fit_mode: targetFit,
+        photo_motion: targetMotion,
+        photo_transition: targetTrans,
       });
       onUpdated();
     } catch (e) {
       console.error('Failed to update batch video config', e);
     }
   };
+
+  const [isBulkApplyingMotion, setIsBulkApplyingMotion] = useState<boolean>(false);
+  const [isBulkApplyingTransition, setIsBulkApplyingTransition] = useState<boolean>(false);
+  const [bulkApplyMessage, setBulkApplyMessage] = useState<string | null>(null);
+
+  const handleApplyMotionToAll = async (motionToApply?: string) => {
+    const motion = motionToApply || photoMotion;
+    setIsBulkApplyingMotion(true);
+    setPhotoMotion(motion);
+    try {
+      await api.applyMotionTransitionToAll(batch.id, { photo_motion: motion });
+      setBulkApplyMessage(`⚡ Bulk applied motion "${motion.replace('_', ' ')}" to ALL ${paragraphs.length} shots!`);
+      setTimeout(() => setBulkApplyMessage(null), 4000);
+      onUpdated();
+    } catch (e) {
+      console.error('Failed to bulk apply motion', e);
+    } finally {
+      setIsBulkApplyingMotion(false);
+    }
+  };
+
+  const handleApplyTransitionToAll = async (transitionToApply?: string) => {
+    const transition = transitionToApply || photoTransition;
+    setIsBulkApplyingTransition(true);
+    setPhotoTransition(transition);
+    try {
+      await api.applyMotionTransitionToAll(batch.id, { photo_transition: transition });
+      setBulkApplyMessage(`⚡ Bulk applied cut transition "${transition.replace('_', ' ')}" to ALL ${paragraphs.length} shots!`);
+      setTimeout(() => setBulkApplyMessage(null), 4000);
+      onUpdated();
+    } catch (e) {
+      console.error('Failed to bulk apply transition', e);
+    } finally {
+      setIsBulkApplyingTransition(false);
+    }
+  };
+
   const [renderProgress, setRenderProgress] = useState<{
     status: string;
     percentage: number;
@@ -135,6 +220,17 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
     const charsToShow = Math.max(1, Math.ceil(progress * full.length));
     return full.slice(0, charsToShow);
   }, [activeShotDetails, textAnimationStyle]);
+
+  const selectedParagraph = useMemo(() => {
+    if (!paragraphs.length) return null;
+    return paragraphs.find(p => p.id === selectedParagraphId) || paragraphs[0] || null;
+  }, [paragraphs, selectedParagraphId]);
+
+  useEffect(() => {
+    if (paragraphs.length && !selectedParagraphId) {
+      setSelectedParagraphId(paragraphs[0].id);
+    }
+  }, [paragraphs, selectedParagraphId]);
 
   const activeVideoPath = (audioSource === 'tight' ? batch.tight_mp4_path : batch.master_video_path)
     || batch.tight_mp4_path
@@ -254,6 +350,8 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
         audioSource,
         aspectRatio,
         fitMode,
+        photoMotion,
+        photoTransition,
         burnOnScreenText: showOnScreenText,
         textAnimationStyle,
         textPosition,
@@ -270,11 +368,112 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
       });
       setVideoTimestamp(Date.now());
       onUpdated();
+      return true;
     } catch (e: any) {
       setRenderError(e.message || `Failed to render ${audioSource} video timeline`);
+      return false;
     } finally {
       clearInterval(interval);
       setRendering(false);
+    }
+  };
+
+  const handleDownloadVideo = () => {
+    const downloadUrl = api.getMasterVideoUrl(batch.id, audioSource, aspectRatio, fitMode, videoTimestamp, true);
+    const filename = `batch_${batch.batch_number || batch.id}_${audioSource}_${aspectRatio.replace(':', 'x')}.mp4`;
+
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.setAttribute('download', filename);
+    link.setAttribute('target', '_blank');
+    document.body.appendChild(link);
+    link.click();
+    setTimeout(() => {
+      if (document.body.contains(link)) {
+        document.body.removeChild(link);
+      }
+    }, 2000);
+  };
+
+  const handleExportAndDownload = async () => {
+    setExporting(true);
+    setRenderError(null);
+    try {
+      if (!activeVideoPath) {
+        const ok = await handleRenderMasterVideo();
+        if (ok) {
+          setTimeout(() => {
+            handleDownloadVideo();
+          }, 800);
+        }
+      } else {
+        handleDownloadVideo();
+      }
+    } catch (err: any) {
+      setRenderError(`Export failed: ${err.message || err}`);
+    } finally {
+      setExporting(false);
+    }
+  };
+
+  const handleLogoUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (!files || files.length === 0) return;
+    const file = files[0];
+    setUploadingLogo(true);
+    setRenderError(null);
+    try {
+      const res = await api.uploadBatchLogo(batch.id, file);
+      setLogoUrl(res.logo_url);
+      setLogoEnabled(true);
+      await api.updateBatchVideoConfig(batch.id, {
+        logo_enabled: true,
+        logo_path: res.logo_path,
+        logo_position: logoPosition,
+        logo_scale: logoScale,
+        logo_opacity: logoOpacity
+      });
+      onUpdated();
+    } catch (err: any) {
+      setRenderError(err.message || 'Failed to upload logo image');
+    } finally {
+      setUploadingLogo(false);
+      if (e.target) e.target.value = '';
+    }
+  };
+
+  const handleUpdateLogoConfig = async (
+    enabled?: boolean,
+    position?: string,
+    scale?: number,
+    opacity?: number,
+    clearLogo?: boolean
+  ) => {
+    const newEnabled = enabled !== undefined ? enabled : logoEnabled;
+    const newPos = position || logoPosition;
+    const newScale = scale !== undefined ? scale : logoScale;
+    const newOpacity = opacity !== undefined ? opacity : logoOpacity;
+
+    if (enabled !== undefined) setLogoEnabled(enabled);
+    if (position) setLogoPosition(position);
+    if (scale !== undefined) setLogoScale(scale);
+    if (opacity !== undefined) setLogoOpacity(opacity);
+    if (clearLogo) {
+      setLogoUrl(null);
+      setLogoEnabled(false);
+    }
+
+    try {
+      await api.updateBatchVideoConfig(batch.id, {
+        logo_enabled: clearLogo ? false : newEnabled,
+        logo_position: newPos,
+        logo_scale: newScale,
+        logo_opacity: newOpacity,
+        logo_path: clearLogo ? '' : undefined
+      });
+      onUpdated();
+    } catch (err) {
+      console.error('Failed to update logo config', err);
     }
   };
 
@@ -677,17 +876,27 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
               </button>
             )}
 
-            {activeVideoPath && (
-              <a
-                href={api.getMasterVideoUrl(batch.id, audioSource, aspectRatio, fitMode, videoTimestamp, true)}
-                download={`batch_${batch.id}_${audioSource}_${aspectRatio.replace(':', 'x')}.mp4`}
-                className="flex items-center space-x-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow transition-all active:scale-95 cursor-pointer"
-                title={`Export ${aspectRatio} (${audioSource === 'tight' ? 'Tight / Trimmed' : 'Master'}) Video MP4`}
-              >
-                <Download className="w-3.5 h-3.5" />
-                <span>EXPORT {aspectRatio} {audioSource.toUpperCase()} MP4</span>
-              </a>
-            )}
+            {/* BULLETPROOF EXPORT & DOWNLOAD BUTTON */}
+            <button
+              type="button"
+              onClick={handleExportAndDownload}
+              disabled={rendering || exporting || matchedMediaCount === 0}
+              className={`flex items-center space-x-2 px-4 py-2 rounded-xl text-xs font-bold shadow-lg transition-all active:scale-95 disabled:opacity-50 cursor-pointer ${
+                activeVideoPath
+                  ? 'bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-500 hover:from-emerald-500 hover:to-teal-500 text-white shadow-emerald-600/30 font-black'
+                  : 'bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-indigo-500 text-white shadow-blue-600/30'
+              }`}
+              title={activeVideoPath ? `Download ${aspectRatio} MP4 directly` : `Render and automatically download ${aspectRatio} MP4`}
+            >
+              <Download className={`w-3.5 h-3.5 ${exporting ? 'animate-bounce' : ''}`} />
+              <span>
+                {exporting
+                  ? 'PREPARING EXPORT...'
+                  : activeVideoPath
+                    ? `EXPORT ${aspectRatio} MP4`
+                    : `RENDER & EXPORT ${aspectRatio} MP4`}
+              </span>
+            </button>
 
             {/* CLEAN CACHE / FREE MEMORY & DISK BUTTON */}
             <button
@@ -912,6 +1121,241 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
           </div>
         </div>
 
+        {/* Photo Motion & Transition Studio Toolbar (Keyframing Zoom & Pan, In/Out Transitions) */}
+        <div className="px-4 py-2.5 bg-[#0a101d] border-b border-slate-800/90 flex flex-wrap items-center justify-between gap-3 text-xs">
+          <div className="flex flex-wrap items-center gap-3">
+            {/* Photo Motion (Ken Burns Keyframe) */}
+            <div className="flex items-center space-x-2">
+              <span className="text-[11px] font-bold text-pink-400 uppercase tracking-wider flex items-center space-x-1">
+                <Image className="w-3.5 h-3.5 text-pink-400" />
+                <span>Photo Motion:</span>
+              </span>
+              <div className="flex items-center bg-slate-900 border border-slate-700/80 p-0.5 rounded-lg text-[11px]">
+                {[
+                  { id: 'zoom_in', label: '🔍 Zoom In', tip: 'Cinematic slow push in (1.0x ➔ 1.20x)' },
+                  { id: 'zoom_out', label: '🔎 Zoom Out', tip: 'Slow reveal out (1.20x ➔ 1.0x)' },
+                  { id: 'pan_left', label: '⬅️ Pan Left', tip: 'Smooth horizontal glide right to left' },
+                  { id: 'pan_right', label: '➡️ Pan Right', tip: 'Smooth horizontal glide left to right' },
+                  { id: 'zoom_pan', label: '↗️ Zoom + Pan', tip: 'Dynamic diagonal zoom and drift' },
+                  { id: 'none', label: '⏹️ Static', tip: 'Hold frame without motion' },
+                ].map((m) => (
+                  <button
+                    key={m.id}
+                    type="button"
+                    onClick={() => handleUpdateConfig(undefined, undefined, m.id, undefined)}
+                    className={`px-2.5 py-1 rounded text-xs transition-all cursor-pointer ${
+                      photoMotion === m.id
+                        ? 'bg-gradient-to-r from-pink-600 to-rose-600 text-white font-bold shadow-sm'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                    title={m.tip}
+                  >
+                    {m.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Apply Motion to All Shots Button */}
+              <button
+                type="button"
+                onClick={() => handleApplyMotionToAll()}
+                disabled={isBulkApplyingMotion}
+                className="flex items-center space-x-1 px-2.5 py-1 rounded-lg bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 border border-pink-500/40 text-xs font-bold transition-all active:scale-95 cursor-pointer shadow-sm disabled:opacity-50"
+                title={`Apply current motion (${photoMotion.replace('_', ' ')}) to all ${paragraphs.length} shots across the entire timeline`}
+              >
+                <Sparkles className={`w-3 h-3 ${isBulkApplyingMotion ? 'animate-spin' : ''}`} />
+                <span>{isBulkApplyingMotion ? 'APPLYING...' : '⚡ APPLY TO ALL'}</span>
+              </button>
+            </div>
+
+            {/* In & Out Transitions */}
+            <div className="flex items-center space-x-2">
+              <span className="text-[11px] font-bold text-cyan-400 uppercase tracking-wider flex items-center space-x-1">
+                <Scissors className="w-3.5 h-3.5 text-cyan-400" />
+                <span>In/Out Cut:</span>
+              </span>
+              <div className="flex items-center bg-slate-900 border border-slate-700/80 p-0.5 rounded-lg text-[11px]">
+                {[
+                  { id: 'fade_in_out', label: '🌓 Fade In/Out', tip: 'Smooth soft dissolve / fade in from black & fade out' },
+                  { id: 'fade_in', label: '🌘 Fade In', tip: 'Fade in from black at start of shot' },
+                  { id: 'fade_out', label: '🌒 Fade Out', tip: 'Fade out to black at end of shot' },
+                  { id: 'zoom_pop', label: '💥 Zoom Pop', tip: 'Dynamic scale snap at clip entrance' },
+                  { id: 'none', label: '✂️ Cut (None)', tip: 'Hard cut transition' },
+                ].map((t) => (
+                  <button
+                    key={t.id}
+                    type="button"
+                    onClick={() => handleUpdateConfig(undefined, undefined, undefined, t.id)}
+                    className={`px-2.5 py-1 rounded text-xs transition-all cursor-pointer ${
+                      photoTransition === t.id
+                        ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold shadow-sm'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                    title={t.tip}
+                  >
+                    {t.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Apply Transition to All Shots Button */}
+              <button
+                type="button"
+                onClick={() => handleApplyTransitionToAll()}
+                disabled={isBulkApplyingTransition}
+                className="flex items-center space-x-1 px-2.5 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 text-xs font-bold transition-all active:scale-95 cursor-pointer shadow-sm disabled:opacity-50"
+                title={`Apply current transition (${photoTransition.replace('_', ' ')}) to all ${paragraphs.length} shots across the entire timeline`}
+              >
+                <Scissors className={`w-3 h-3 ${isBulkApplyingTransition ? 'animate-spin' : ''}`} />
+                <span>{isBulkApplyingTransition ? 'APPLYING...' : '⚡ APPLY TO ALL'}</span>
+              </button>
+            </div>
+          </div>
+
+          <div className="text-[10px] font-mono text-slate-400 hidden xl:flex items-center space-x-1">
+            <Sparkles className="w-3 h-3 text-amber-400" />
+            <span>Keyframed Ken Burns + smooth in/out dissolves applied to photo shots</span>
+          </div>
+        </div>
+
+        {/* Bulk Apply Notification Banner */}
+        {bulkApplyMessage && (
+          <div className="mx-4 my-2 p-2.5 bg-gradient-to-r from-pink-950/80 to-indigo-950/80 border border-pink-500/40 rounded-xl flex items-center justify-between text-xs text-pink-200 shadow-lg animate-fadeIn">
+            <div className="flex items-center space-x-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span className="font-bold">{bulkApplyMessage}</span>
+            </div>
+            <button
+              onClick={() => setBulkApplyMessage(null)}
+              className="text-slate-400 hover:text-white px-2 py-0.5 rounded cursor-pointer text-xs"
+            >
+              ✕
+            </button>
+          </div>
+        )}
+
+
+        {/* Live Watermark & Logo Studio Toolbar */}
+        <div className="px-4 py-2.5 bg-[#090e1a] border-b border-slate-800/90 flex flex-wrap items-center justify-between gap-3 text-xs">
+          <input
+            type="file"
+            accept="image/*"
+            ref={logoInputRef}
+            onChange={handleLogoUpload}
+            className="hidden"
+          />
+
+          <div className="flex flex-wrap items-center gap-3">
+            {/* Logo Toggle */}
+            <button
+              type="button"
+              onClick={() => handleUpdateLogoConfig(!logoEnabled)}
+              className={`flex items-center space-x-1.5 px-3 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer border shadow-sm ${
+                logoEnabled
+                  ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 shadow-emerald-500/10'
+                  : 'bg-slate-900/80 text-slate-500 border-slate-800 hover:text-slate-300'
+              }`}
+              title={logoEnabled ? "Watermark Logo is active" : "Enable watermark logo on video"}
+            >
+              <Stamp className={`w-3.5 h-3.5 ${logoEnabled ? 'text-emerald-400' : 'text-slate-500'}`} />
+              <span>LOGO WATERMARK: {logoEnabled ? 'ON' : 'OFF'}</span>
+            </button>
+
+            {/* Upload Logo Button */}
+            <button
+              type="button"
+              onClick={() => logoInputRef.current?.click()}
+              disabled={uploadingLogo}
+              className="flex items-center space-x-1.5 px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-semibold transition-all cursor-pointer shadow-sm active:scale-95"
+              title="Upload custom PNG / JPG / SVG logo image"
+            >
+              <Upload className={`w-3.5 h-3.5 text-blue-400 ${uploadingLogo ? 'animate-spin' : ''}`} />
+              <span>{uploadingLogo ? 'UPLOADING...' : logoUrl ? 'CHANGE LOGO' : 'UPLOAD LOGO'}</span>
+            </button>
+
+            {/* Current Logo Thumbnail Preview */}
+            {logoUrl && (
+              <div className="flex items-center space-x-1.5 bg-slate-900/90 border border-slate-800 rounded-lg px-2 py-0.5">
+                <img
+                  src={logoUrl}
+                  alt="Logo"
+                  className="w-5 h-5 object-contain rounded"
+                />
+                <button
+                  type="button"
+                  onClick={() => handleUpdateLogoConfig(false, undefined, undefined, undefined, true)}
+                  className="text-slate-400 hover:text-rose-400 text-[10px] ml-1"
+                  title="Remove logo"
+                >
+                  ✕
+                </button>
+              </div>
+            )}
+
+            {logoEnabled && (
+              <>
+                {/* Logo Position Selector */}
+                <div className="flex items-center space-x-1 bg-slate-900/90 border border-slate-800 rounded-lg p-0.5 text-xs">
+                  <span className="text-[10px] text-slate-400 px-1 font-mono uppercase">Pos:</span>
+                  {[
+                    { id: 'top_right', label: 'Top-R' },
+                    { id: 'top_left', label: 'Top-L' },
+                    { id: 'bottom_right', label: 'Btm-R' },
+                    { id: 'bottom_left', label: 'Btm-L' },
+                    { id: 'center', label: 'Center' },
+                  ].map((p) => (
+                    <button
+                      key={p.id}
+                      type="button"
+                      onClick={() => handleUpdateLogoConfig(undefined, p.id)}
+                      className={`px-2 py-0.5 rounded text-[11px] font-bold transition-all ${
+                        logoPosition === p.id
+                          ? 'bg-emerald-500/30 text-emerald-300 border border-emerald-500/40'
+                          : 'text-slate-400 hover:text-slate-200'
+                      }`}
+                    >
+                      {p.label}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Logo Scale Slider */}
+                <div className="flex items-center space-x-2 bg-slate-900/90 border border-slate-800 rounded-lg px-2.5 py-1 text-xs">
+                  <span className="text-[10px] text-slate-400 font-mono uppercase">Size: {logoScale}%</span>
+                  <input
+                    type="range"
+                    min="5"
+                    max="30"
+                    step="1"
+                    value={logoScale}
+                    onChange={(e) => handleUpdateLogoConfig(undefined, undefined, parseFloat(e.target.value))}
+                    className="w-16 sm:w-20 accent-emerald-500 cursor-pointer"
+                  />
+                </div>
+
+                {/* Logo Opacity Slider */}
+                <div className="flex items-center space-x-2 bg-slate-900/90 border border-slate-800 rounded-lg px-2.5 py-1 text-xs">
+                  <span className="text-[10px] text-slate-400 font-mono uppercase">Opacity: {Math.round(logoOpacity * 100)}%</span>
+                  <input
+                    type="range"
+                    min="0.10"
+                    max="1.0"
+                    step="0.05"
+                    value={logoOpacity}
+                    onChange={(e) => handleUpdateLogoConfig(undefined, undefined, undefined, parseFloat(e.target.value))}
+                    className="w-16 sm:w-20 accent-emerald-500 cursor-pointer"
+                  />
+                </div>
+              </>
+            )}
+          </div>
+
+          <div className="text-[10px] font-mono text-slate-400 hidden xl:flex items-center space-x-1">
+            <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+            <span>Watermark logo renders live in editor & burns into exported MP4</span>
+          </div>
+        </div>
+
         {/* Real-time Render Progress Loading Bar */}
         {(rendering || renderingTextOnly) && (
           <div className="p-4 bg-gradient-to-r from-indigo-950/80 via-slate-900 to-purple-950/80 border-b border-indigo-500/30 space-y-2.5 animate-fadeIn">
@@ -1018,101 +1462,70 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
           </div>
         )}
 
-        {/* Video Canvas or Empty State */}
-        <div className="p-4 flex flex-col items-center justify-center bg-black/40 min-h-[320px]">
-          {activeVideoPath ? (
-            <div className={`${getPlayerContainerClass(aspectRatio)} bg-black rounded-xl overflow-hidden shadow-2xl border border-slate-800 relative transition-all duration-300`}>
-              <video
-                key={`${audioSource}-${aspectRatio}-${videoTimestamp}`}
-                ref={videoPlayerRef}
-                controls
-                onTimeUpdate={(e) => setCurrentPlaybackTime(e.currentTarget.currentTime)}
-                className="w-full h-full object-contain"
-                src={api.getMasterVideoUrl(batch.id, audioSource, aspectRatio, fitMode, videoTimestamp)}
-              />
+        {/* Live Interactive Video Editor Player */}
+        <div className="p-4 flex flex-col items-center justify-center bg-black/40">
+          <LiveEditorPlayer
+            batch={batch}
+            paragraphs={paragraphs}
+            audioSource={audioSource}
+            aspectRatio={aspectRatio}
+            fitMode={fitMode}
+            photoMotion={photoMotion}
+            photoTransition={photoTransition}
+            showOnScreenText={showOnScreenText}
+            textPosition={textPosition}
+            textAnimationStyle={textAnimationStyle}
+            fontFamily={fontFamily}
+            fontColor={fontColor}
+            currentTime={currentPlaybackTime}
+            isPlaying={isPlaying}
+            onTimeUpdate={setCurrentPlaybackTime}
+            onTogglePlay={() => setIsPlaying(!isPlaying)}
+            onSeek={(t) => setCurrentPlaybackTime(t)}
+            selectedParagraphId={selectedParagraphId}
+            onSelectParagraph={setSelectedParagraphId}
+            videoVolume={videoVolume}
+            narrationVolume={narrationVolume}
+            logoUrl={logoUrl}
+            logoEnabled={logoEnabled}
+            logoPosition={logoPosition}
+            logoScale={logoScale}
+            logoOpacity={logoOpacity}
+          />
+        </div>
 
-              {/* Real-time Animated On-Screen Text Overlay in Center Top / Bottom - Video Editor Typography */}
-              {showOnScreenText && activeShotOnScreenText && (
-                <div 
-                  key={`${activeShotOnScreenText}-${textPosition}-${textAnimationStyle}-${fontFamily}-${fontColor}`}
-                  className={`absolute left-1/2 -translate-x-1/2 z-20 pointer-events-none w-11/12 max-w-2xl text-center transition-all duration-300 ${
-                    textPosition === 'top' ? 'top-2 sm:top-3.5' : 'bottom-4 sm:bottom-6'
-                  }`}
-                >
-                  <div className={`inline-block px-2 py-0.5 bg-transparent border-0 shadow-none transform ${
-                    textAnimationStyle === 'slide_left' ? 'anim-slide-left' :
-                    textAnimationStyle === 'slide_right' ? 'anim-slide-right' :
-                    textAnimationStyle === 'slide_down' ? 'anim-slide-down' :
-                    textAnimationStyle === 'slide_up' ? 'anim-slide-up' :
-                    textAnimationStyle === 'fade' ? 'anim-fade' : ''
-                  }`}>
-                    <p 
-                      className={`text-sm sm:text-base md:text-xl lg:text-2xl uppercase tracking-wider select-none ${
-                        fontFamily === 'Anton' 
-                          ? "font-['Anton',_sans-serif]" 
-                          : fontFamily === 'Montserrat' 
-                            ? "font-['Montserrat',_sans-serif] font-black" 
-                            : "font-['Impact',_'Anton',_sans-serif]"
-                      } ${
-                        fontColor === 'white' 
-                          ? 'text-white' 
-                          : fontColor === 'cyan' 
-                            ? 'text-cyan-300' 
-                            : 'text-[#FFE800]'
-                      }`}
-                      style={{
-                        WebkitTextStroke: '2.5px #000000',
-                        paintOrder: 'stroke fill',
-                        filter: 'drop-shadow(0 3px 6px rgba(0,0,0,0.95)) drop-shadow(0 1px 2px rgba(0,0,0,1))'
-                      }}
-                    >
-                      {displayedOnScreenText}
-                      {textAnimationStyle === 'typewriter' && displayedOnScreenText.length < (activeShotOnScreenText?.length || 0) && (
-                        <span 
-                          className="inline-block w-1.5 h-4 sm:h-5 ml-1 align-middle animate-pulse"
-                          style={{
-                            backgroundColor: fontColor === 'white' ? '#FFFFFF' : fontColor === 'cyan' ? '#00F5FF' : '#FFE800',
-                            boxShadow: '0 0 4px #000000'
-                          }} 
-                        />
-                      )}
-                    </p>
-                  </div>
-                </div>
-              )}
-            </div>
-          ) : (
-            <div className="text-center py-12 px-4 space-y-4 max-w-md">
-              <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 mx-auto flex items-center justify-center">
-                <Video className="w-7 h-7" />
-              </div>
-              <div className="space-y-1">
-                <h3 className="text-sm font-bold text-white">
-                  {audioSource === 'tight' ? 'Tight / Trimmed Video Not Yet Rendered' : 'Master Video Not Yet Rendered'}
-                </h3>
-                <p className="text-xs text-slate-400">
-                  {matchedMediaCount === 0 
-                    ? 'Enter your media assets folder above and click "Scan & Match Assets" to link your clips.'
-                    : `All ${matchedMediaCount} media assets are matched! Click "Sync & Stitch ${audioSource === 'tight' ? 'Tight' : 'Full'} Video" to compile.`
-                  }
-                </p>
-              </div>
-              {matchedMediaCount > 0 && (
-                <button
-                  onClick={handleRenderMasterVideo}
-                  disabled={rendering}
-                  className={`inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl text-white text-xs font-bold shadow-lg transition-all cursor-pointer ${
-                    audioSource === 'tight'
-                      ? 'bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 shadow-amber-600/20'
-                      : 'bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 shadow-indigo-600/20'
-                  }`}
-                >
-                  <Sparkles className="w-4 h-4" />
-                  <span>Generate {audioSource === 'tight' ? 'Tight' : 'Full'} Video Timeline Now</span>
-                </button>
-              )}
-            </div>
-          )}
+        {/* Interactive Multi-Track Timeline (Ruler, Scrubbable Playhead, Shots, Audio, Subtitles) */}
+        <div className="border-t border-slate-800/90">
+          <InteractiveTimelineTrack
+            batch={batch}
+            paragraphs={paragraphs}
+            audioSource={audioSource}
+            currentTime={currentPlaybackTime}
+            onSeek={(t) => setCurrentPlaybackTime(t)}
+            selectedParagraphId={selectedParagraphId}
+            onSelectParagraph={(id) => setSelectedParagraphId(id)}
+            photoMotion={photoMotion}
+            photoTransition={photoTransition}
+          />
+        </div>
+
+        {/* Live Clip Inspector for Selected Shot */}
+        <div className="border-t border-slate-800/90">
+          <ClipInspectorPanel
+            batchId={batch.id}
+            paragraph={selectedParagraph}
+            globalPhotoMotion={photoMotion}
+            globalPhotoTransition={photoTransition}
+            onUpdateParagraph={(updated) => {
+              const idx = paragraphs.findIndex(p => p.id === updated.id);
+              if (idx !== -1) {
+                paragraphs[idx] = { ...paragraphs[idx], ...updated };
+              }
+              onUpdated();
+            }}
+            onPreviewShot={(p) => setPreviewShot(p)}
+            onBatchUpdated={onUpdated}
+          />
         </div>
       </div>
 
@@ -1219,13 +1632,43 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                     </div>
                   )}
 
-                  {/* Speed Badge pill over video */}
+                  {/* Badges over preview */}
                   {hasMedia && (
-                    <div className="absolute top-2 right-2">
-                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-mono font-bold border backdrop-blur-md shadow ${speedInfo.color}`}>
-                        {speedInfo.label}
-                      </span>
-                    </div>
+                    <>
+                      {isImage ? (
+                        <>
+                          <div className="absolute top-2 left-2">
+                            <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold border border-pink-500/40 bg-pink-950/80 text-pink-300 backdrop-blur-md shadow flex items-center space-x-1">
+                              <Sparkles className="w-2.5 h-2.5 text-pink-400" />
+                              <span>
+                                {(para.photo_motion || photoMotion) === 'zoom_in' ? 'ZOOM IN' :
+                                 (para.photo_motion || photoMotion) === 'zoom_out' ? 'ZOOM OUT' :
+                                 (para.photo_motion || photoMotion) === 'pan_left' ? 'PAN LEFT' :
+                                 (para.photo_motion || photoMotion) === 'pan_right' ? 'PAN RIGHT' :
+                                 (para.photo_motion || photoMotion) === 'zoom_pan' ? 'ZOOM & PAN' : 'STATIC'}
+                              </span>
+                            </span>
+                          </div>
+                          <div className="absolute top-2 right-2">
+                            <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold border border-cyan-500/40 bg-cyan-950/80 text-cyan-300 backdrop-blur-md shadow flex items-center space-x-1">
+                              <Scissors className="w-2.5 h-2.5 text-cyan-400" />
+                              <span>
+                                {(para.photo_transition || photoTransition) === 'fade_in_out' ? 'FADE IN/OUT' :
+                                 (para.photo_transition || photoTransition) === 'fade_in' ? 'FADE IN' :
+                                 (para.photo_transition || photoTransition) === 'fade_out' ? 'FADE OUT' :
+                                 (para.photo_transition || photoTransition) === 'zoom_pop' ? 'ZOOM POP' : 'CUT'}
+                              </span>
+                            </span>
+                          </div>
+                        </>
+                      ) : (
+                        <div className="absolute top-2 right-2">
+                          <span className={`px-2 py-0.5 rounded-full text-[10px] font-mono font-bold border backdrop-blur-md shadow ${speedInfo.color}`}>
+                            {speedInfo.label}
+                          </span>
+                        </div>
+                      )}
+                    </>
                   )}
                 </div>
 

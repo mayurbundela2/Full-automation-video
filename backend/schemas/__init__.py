@@ -92,6 +92,8 @@ class ParagraphBase(BaseModel):
     speed_factor: Optional[float] = None
     synced_video_path: Optional[str] = None
     thumbnail_path: Optional[str] = None
+    photo_motion: Optional[str] = "zoom_in"
+    photo_transition: Optional[str] = "fade_in_out"
 
 
 class ParagraphCreate(ParagraphBase):
@@ -113,6 +115,8 @@ class ParagraphUpdate(BaseModel):
     additional_notes: Optional[str] = None
     transcript: Optional[str] = None
     custom_prompt: Optional[str] = None
+    photo_motion: Optional[str] = None
+    photo_transition: Optional[str] = None
     status: Optional[str] = None
 
 
@@ -151,6 +155,8 @@ class ParseReferenceRequest(BaseModel):
     media_folder: Optional[str] = None
     aspect_ratio: Optional[str] = None
     fit_mode: Optional[str] = None
+    photo_motion: Optional[str] = None
+    photo_transition: Optional[str] = None
 
 
 class ParseReferenceResponse(BaseModel):
@@ -185,11 +191,32 @@ class BatchResponse(BaseModel):
     tight_video_duration: Optional[float] = None
     aspect_ratio: Optional[str] = "16:9"
     fit_mode: Optional[str] = "crop"
+    photo_motion: Optional[str] = "zoom_in"
+    photo_transition: Optional[str] = "fade_in_out"
+    logo_path: Optional[str] = None
+    logo_position: Optional[str] = "top_right"
+    logo_scale: Optional[float] = 12.0
+    logo_opacity: Optional[float] = 0.85
+    logo_enabled: Optional[bool] = False
+    logo_url: Optional[str] = None
 
 
 class VideoConfigUpdateRequest(BaseModel):
     aspect_ratio: Optional[str] = "16:9"
     fit_mode: Optional[str] = "crop"
+    photo_motion: Optional[str] = "zoom_in"
+    photo_transition: Optional[str] = "fade_in_out"
+    logo_path: Optional[str] = None
+    logo_position: Optional[str] = None
+    logo_scale: Optional[float] = None
+    logo_opacity: Optional[float] = None
+    logo_enabled: Optional[bool] = None
+
+
+class BulkMotionTransitionRequest(BaseModel):
+    photo_motion: Optional[str] = None
+    photo_transition: Optional[str] = None
+
 
 
 # --- Video Media Schemas ---

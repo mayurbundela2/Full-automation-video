@@ -41,6 +41,13 @@ class Batch(Base):
     master_video_duration = Column(Float, nullable=True)
     aspect_ratio = Column(String(20), default="16:9", nullable=True)
     fit_mode = Column(String(20), default="crop", nullable=True)
+    photo_motion = Column(String(50), default="zoom_in", nullable=True)
+    photo_transition = Column(String(50), default="fade_in_out", nullable=True)
+    logo_path = Column(String(500), nullable=True)
+    logo_position = Column(String(50), default="top_right", nullable=True)
+    logo_scale = Column(Float, default=12.0, nullable=True)
+    logo_opacity = Column(Float, default=0.85, nullable=True)
+    logo_enabled = Column(Boolean, default=False, nullable=True)
     created_at = Column(DateTime(timezone=True), default=utc_now)
     updated_at = Column(DateTime(timezone=True), default=utc_now, onupdate=utc_now)
 
@@ -83,6 +90,8 @@ class Paragraph(Base):
     speed_factor = Column(Float, nullable=True)
     synced_video_path = Column(String(500), nullable=True)
     thumbnail_path = Column(String(500), nullable=True)
+    photo_motion = Column(String(50), default="zoom_in", nullable=True)
+    photo_transition = Column(String(50), default="fade_in_out", nullable=True)
     
     # Spoken transcript
     transcript = Column(Text, nullable=False, default="")

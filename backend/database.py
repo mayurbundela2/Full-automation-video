@@ -62,6 +62,20 @@ def init_db():
                 cursor.execute("ALTER TABLE batches ADD COLUMN aspect_ratio VARCHAR(20) DEFAULT '16:9'")
             if "fit_mode" not in columns:
                 cursor.execute("ALTER TABLE batches ADD COLUMN fit_mode VARCHAR(20) DEFAULT 'crop'")
+            if "photo_motion" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN photo_motion VARCHAR(50) DEFAULT 'zoom_in'")
+            if "photo_transition" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN photo_transition VARCHAR(50) DEFAULT 'fade_in_out'")
+            if "logo_path" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN logo_path VARCHAR(500)")
+            if "logo_position" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN logo_position VARCHAR(50) DEFAULT 'top_right'")
+            if "logo_scale" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN logo_scale FLOAT DEFAULT 12.0")
+            if "logo_opacity" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN logo_opacity FLOAT DEFAULT 0.85")
+            if "logo_enabled" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN logo_enabled BOOLEAN DEFAULT 0")
 
             cursor.execute("PRAGMA table_info(paragraphs)")
             p_cols = [row[1] for row in cursor.fetchall()]
@@ -78,6 +92,8 @@ def init_db():
                 ("speed_factor", "FLOAT"),
                 ("synced_video_path", "VARCHAR(500)"),
                 ("thumbnail_path", "VARCHAR(500)"),
+                ("photo_motion", "VARCHAR(50) DEFAULT 'zoom_in'"),
+                ("photo_transition", "VARCHAR(50) DEFAULT 'fade_in_out'"),
             ]
             for col_name, col_type in new_p_cols:
                 if col_name not in p_cols:

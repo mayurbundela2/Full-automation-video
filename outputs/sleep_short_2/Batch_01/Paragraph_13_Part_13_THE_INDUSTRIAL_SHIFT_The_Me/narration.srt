@@ -1,8 +1,0 @@
-1
-00:00:00,224 --> 00:00:02,142
-Phir electricity aayi. Factory
-
-2
-00:00:02,162 --> 00:00:02,864
-shift aayi.
-

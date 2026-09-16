@@ -154,3 +154,24 @@ def select_system_folder(title: str = "Select Video / Media Folder"):
 @system_router.get("/health")
 def health_check():
     return {"status": "healthy", "service": "Gemini TTS Generator", "version": "1.0.0"}
+
+
+@system_router.post("/shutdown")
+def shutdown_server():
+    """
+    Cleanly shuts down the FastAPI / Uvicorn server and exits the application process.
+    """
+    import threading
+    import time
+    import os
+
+    def _delayed_exit():
+        time.sleep(0.6)
+        # Flush stdout/stderr and terminate process
+        sys.stdout.flush()
+        sys.stderr.flush()
+        os._exit(0)
+
+    threading.Thread(target=_delayed_exit, daemon=True).start()
+    return {"status": "ok", "message": "Server is shutting down..."}
+

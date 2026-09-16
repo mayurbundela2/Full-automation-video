@@ -218,6 +218,82 @@ class VideoService:
             )
 
     @classmethod
+    def build_photo_motion_filter(
+        cls,
+        input_label: str,
+        output_label: str,
+        target_width: int,
+        target_height: int,
+        duration: float,
+        motion: str = "zoom_in",
+        transition: str = "fade_in_out",
+        fit_mode: str = "crop",
+        fps: int = 30
+    ) -> str:
+        """
+        Builds professional video editor photo animations:
+        - Ken Burns keyframing: zoom_in (1.0x -> 1.20x), zoom_out (1.20x -> 1.0x), pan_left, pan_right, zoom_pan, or none
+        - In/Out transitions: fade_in_out, fade_in, fade_out, zoom_pop, or none
+        Uses 2x pre-scaling to guarantee smooth, jitter-free interpolation across any aspect ratio.
+        """
+        w = target_width if target_width % 2 == 0 else target_width + 1
+        h = target_height if target_height % 2 == 0 else target_height + 1
+        dur = max(0.4, float(duration))
+        import math
+        # Guarantee zoompan generates enough frames so the image never terminates before audio ends
+        total_frames = max(1, int(math.ceil(dur * fps)) + 5)
+        m = (motion or "zoom_in").lower().strip()
+        t = (transition or "fade_in_out").lower().strip()
+
+        # Step 1: Base motion / scaling
+        if m in ("none", "static"):
+            if fit_mode == "fit":
+                base_chain = f"{input_label}scale={w}:{h}:force_original_aspect_ratio=decrease,pad={w}:{h}:(ow-iw)/2:(oh-ih)/2:color=black,fps={fps}"
+            elif fit_mode in ("blur_pad", "blur", "blurred"):
+                base_chain = (
+                    f"{input_label}split=2[__pbgin][__pfg];"
+                    f"[__pbgin]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},boxblur=25:5[__pbg];"
+                    f"[__pfg]scale={w}:{h}:force_original_aspect_ratio=decrease[__pfgsc];"
+                    f"[__pbg][__pfgsc]overlay=(W-w)/2:(H-h)/2,fps={fps}"
+                )
+            else:
+                base_chain = f"{input_label}scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},fps={fps}"
+        else:
+            zoom_step = round(0.20 / max(1, total_frames), 6)
+            pan_step = round((w * 2 - (w * 2) / 1.20) / max(1, total_frames), 4)
+
+            if m == "zoom_out":
+                zp = f"zoompan=z='if(lte(on,1),1.20,max(1.0,zoom-{zoom_step}))':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={total_frames}:s={w}x{h}:fps={fps}"
+            elif m == "pan_left":
+                zp = f"zoompan=z=1.20:x='if(lte(on,1),iw-iw/zoom,max(0,x-{pan_step}))':y='ih/2-(ih/zoom/2)':d={total_frames}:s={w}x{h}:fps={fps}"
+            elif m == "pan_right":
+                zp = f"zoompan=z=1.20:x='if(lte(on,1),0,min(iw-iw/zoom,x+{pan_step}))':y='ih/2-(ih/zoom/2)':d={total_frames}:s={w}x{h}:fps={fps}"
+            elif m == "zoom_pan":
+                zp = f"zoompan=z='min(zoom+{zoom_step},1.20)':x='min(iw-iw/zoom,x+{pan_step*0.5})':y='ih/2-(ih/zoom/2)':d={total_frames}:s={w}x{h}:fps={fps}"
+            else:  # default "zoom_in"
+                zp = f"zoompan=z='min(zoom+{zoom_step},1.20)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={total_frames}:s={w}x{h}:fps={fps}"
+
+            base_chain = f"{input_label}scale={w*2}:{h*2}:force_original_aspect_ratio=increase,crop={w*2}:{h*2},{zp}"
+
+        # Step 2: Transitions (subtle 0.10s dissolve so image stays visible until audio completes)
+        fade_d = round(min(0.12, max(0.06, dur * 0.05)), 3)
+        fade_out_start = round(max(0.0, dur - fade_d), 3)
+
+        if t in ("fade_in_out", "fade", "dissolve"):
+            trans_chain = f",fade=t=in:st=0:d={fade_d},fade=t=out:st={fade_out_start}:d={fade_d}"
+        elif t == "fade_in":
+            trans_chain = f",fade=t=in:st=0:d={fade_d}"
+        elif t == "fade_out":
+            trans_chain = f",fade=t=out:st={fade_out_start}:d={fade_d}"
+        elif t == "zoom_pop":
+            trans_chain = f",fade=t=in:st=0:d={round(fade_d * 0.8, 3)}"
+        else:
+            trans_chain = ""
+
+
+        return f"{base_chain}{trans_chain}{output_label}"
+
+    @classmethod
     def build_animated_text_filter(
         cls,
         text: str,
@@ -432,6 +508,49 @@ class VideoService:
         return ass_file
 
     @classmethod
+    def build_logo_overlay_filter(
+        cls,
+        logo_path: str,
+        target_width: int,
+        target_height: int,
+        input_label: str = "[v]",
+        output_label: str = "[vout]",
+        position: str = "top_right",
+        scale_pct: float = 12.0,
+        opacity: float = 0.85
+    ) -> str:
+        """
+        Builds an FFmpeg filter snippet to overlay a logo/watermark onto video.
+        """
+        l_path = Path(logo_path)
+        if not l_path.exists():
+            return f"{input_label}null{output_label}"
+
+        clean_logo = l_path.resolve().as_posix().replace(":", r"\:")
+        lw = max(32, int(target_width * (max(3.0, min(50.0, scale_pct)) / 100.0)))
+        if lw % 2 != 0:
+            lw += 1
+        op = round(max(0.05, min(1.0, opacity)), 2)
+        margin = max(12, int(target_width * 0.025))
+
+        pos = (position or "top_right").lower().strip()
+        if pos == "top_left":
+            overlay_coords = f"x={margin}:y={margin}"
+        elif pos == "bottom_left":
+            overlay_coords = f"x={margin}:y=H-h-{margin}"
+        elif pos == "bottom_right":
+            overlay_coords = f"x=W-w-{margin}:y=H-h-{margin}"
+        elif pos == "center":
+            overlay_coords = f"x=(W-w)/2:y=(H-h)/2"
+        else:  # top_right
+            overlay_coords = f"x=W-w-{margin}:y={margin}"
+
+        return (
+            f"movie='{clean_logo}',scale={lw}:-1,format=rgba,colorchannelmixer=aa={op}[__logo];"
+            f"{input_label}[__logo]overlay={overlay_coords}{output_label}"
+        )
+
+    @classmethod
     def burn_text_overlay_on_video(
         cls,
         input_video_path: str,
@@ -443,10 +562,15 @@ class VideoService:
         animation_style: str = "slide_down",
         font_family: str = "Impact",
         font_color: str = "yellow",
+        logo_path: Optional[str] = None,
+        logo_position: str = "top_right",
+        logo_scale: float = 12.0,
+        logo_opacity: float = 0.85,
+        logo_enabled: bool = False,
         ffmpeg_path: str = "ffmpeg"
     ) -> str:
         """
-        Quickly burns animated text overlay onto an already-stitched master video in a fast single pass.
+        Burns animated text overlay and/or logo watermark onto an already-stitched master video in a fast single pass.
         Avoids re-rendering all individual shots, finishing in seconds.
         """
         in_p = Path(input_video_path)
@@ -454,37 +578,95 @@ class VideoService:
         out_p.parent.mkdir(parents=True, exist_ok=True)
         ffmpeg_bin = AudioConverter.resolve_ffmpeg(ffmpeg_path)
 
-        ass_file = cls.build_timeline_animated_subtitles_ass(
-            shots=shots,
-            target_width=target_width,
-            target_height=target_height,
-            temp_dir=out_p.parent,
-            position=position,
-            animation_style=animation_style,
-            font_family=font_family,
-            font_color=font_color
-        )
+        has_subtitles = bool(shots and any(s.get("text") and s["text"].strip() for s in shots))
+        ass_file = None
+        if has_subtitles:
+            ass_file = cls.build_timeline_animated_subtitles_ass(
+                shots=shots,
+                target_width=target_width,
+                target_height=target_height,
+                temp_dir=out_p.parent,
+                position=position,
+                animation_style=animation_style,
+                font_family=font_family,
+                font_color=font_color
+            )
 
-        clean_ass_path = ass_file.resolve().as_posix().replace(":", r"\:")
-        cmd = [
-            ffmpeg_bin, "-y",
-            "-i", str(in_p),
-            "-vf", f"subtitles='{clean_ass_path}'",
-            "-c:v", "libx264",
-            "-preset", "veryfast",
-            "-pix_fmt", "yuv420p",
-            "-c:a", "copy",
-            str(out_p)
-        ]
+        has_logo = bool(logo_enabled and logo_path and Path(logo_path).exists())
+
+        if has_logo:
+            logo_p = Path(logo_path)
+            lw = max(32, int(target_width * (max(3.0, min(50.0, logo_scale)) / 100.0)))
+            if lw % 2 != 0:
+                lw += 1
+            op = round(max(0.05, min(1.0, logo_opacity)), 2)
+            margin = max(12, int(target_width * 0.025))
+
+            pos = (logo_position or "top_right").lower().strip()
+            if pos == "top_left":
+                overlay_coords = f"{margin}:{margin}"
+            elif pos == "bottom_left":
+                overlay_coords = f"{margin}:H-h-{margin}"
+            elif pos == "bottom_right":
+                overlay_coords = f"W-w-{margin}:H-h-{margin}"
+            elif pos == "center":
+                overlay_coords = f"(W-w)/2:(H-h)/2"
+            else:  # top_right
+                overlay_coords = f"W-w-{margin}:{margin}"
+
+            logo_filter = f"[1:v]scale={lw}:-1,format=rgba,colorchannelmixer=aa={op}[__logo]"
+
+            if ass_file:
+                clean_ass_path = ass_file.resolve().as_posix().replace(":", r"\:")
+                filter_complex = (
+                    f"{logo_filter};"
+                    f"[0:v]subtitles='{clean_ass_path}'[__subbed];"
+                    f"[__subbed][__logo]overlay={overlay_coords}[vout]"
+                )
+            else:
+                filter_complex = (
+                    f"{logo_filter};"
+                    f"[0:v][__logo]overlay={overlay_coords}[vout]"
+                )
+
+            cmd = [
+                ffmpeg_bin, "-y",
+                "-i", str(in_p),
+                "-i", str(logo_p),
+                "-filter_complex", filter_complex,
+                "-map", "[vout]",
+                "-map", "0:a?",
+                "-c:v", "libx264",
+                "-preset", "veryfast",
+                "-pix_fmt", "yuv420p",
+                "-c:a", "copy",
+                str(out_p)
+            ]
+        elif ass_file:
+            clean_ass_path = ass_file.resolve().as_posix().replace(":", r"\:")
+            cmd = [
+                ffmpeg_bin, "-y",
+                "-i", str(in_p),
+                "-vf", f"subtitles='{clean_ass_path}'",
+                "-c:v", "libx264",
+                "-preset", "veryfast",
+                "-pix_fmt", "yuv420p",
+                "-c:a", "copy",
+                str(out_p)
+            ]
+        else:
+            # Neither subtitles nor logo; copy video directly
+            shutil.copy2(str(in_p), str(out_p))
+            return str(out_p)
 
         try:
             res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
             if res.returncode != 0:
                 err_snippet = res.stderr[-500:] if res.stderr else "Unknown error"
-                raise RuntimeError(f"FFmpeg subtitle burn failed (code {res.returncode}): {err_snippet.strip()}")
+                raise RuntimeError(f"FFmpeg render pass failed (code {res.returncode}): {err_snippet.strip()}")
             return str(out_p)
         finally:
-            if ass_file.exists():
+            if ass_file and ass_file.exists():
                 try:
                     ass_file.unlink()
                 except Exception:
@@ -502,6 +684,8 @@ class VideoService:
         target_width: int = 1920,
         target_height: int = 1080,
         fit_mode: str = "crop",
+        photo_motion: str = "zoom_in",
+        photo_transition: str = "fade_in_out",
         on_screen_text: Optional[str] = None,
         text_animation_style: str = "slide_down",
         text_position: str = "top",
@@ -512,7 +696,7 @@ class VideoService:
         """
         Synchronizes media (video or image) to exact audio duration and configured aspect ratio/fit mode.
         - Video: Adjusts speed with setpts=(target_duration / orig_duration)*PTS.
-        - Image: Loops static frame for target_duration.
+        - Image: Keyframed Ken Burns motion (zoom_in, zoom_out, pan_left, pan_right, zoom_pan) and in/out transitions.
         - Scales & fits video according to fit_mode ('crop', 'fit', or 'blur_pad').
         - Overlays animated on_screen_text with selected style (slide_down, slide_left, slide_right, typewriter, fade, slide_up), font, color, and position (top or bottom).
         """
@@ -592,25 +776,36 @@ class VideoService:
                     str(out_v_path)
                 ]
             else:
-                # Static image hold-frame
+                # Static image hold-frame: lock to exact audio duration so image stays until audio finishes
+                exact_info = AudioConverter.get_audio_info(str(a_path))
+                if exact_info and exact_info.get("duration"):
+                    target_duration = max(0.2, round(float(exact_info["duration"]), 3))
+
                 orig_duration = target_duration
                 speed_factor = 1.0
 
                 if has_text:
-                    scale_filter = cls.build_video_scale_filter("[0:v]", "[__scaled]", target_width, target_height, fit_mode)
+                    photo_filter = cls.build_photo_motion_filter(
+                        "[0:v]", "[__scaled]", target_width, target_height,
+                        target_duration, motion=photo_motion, transition=photo_transition,
+                        fit_mode=fit_mode
+                    )
                     text_filter, temp_txt_file = cls.build_animated_text_filter(
                         on_screen_text, target_width, target_height, target_duration, out_v_path.parent, "[__scaled]", "[v]",
                         position=text_position, animation_style=text_animation_style,
                         font_family=font_family, font_color=font_color
                     )
-                    filter_complex = f"{scale_filter};{text_filter}"
+                    filter_complex = f"{photo_filter};{text_filter}"
                 else:
-                    filter_complex = cls.build_video_scale_filter("[0:v]", "[v]", target_width, target_height, fit_mode)
+                    filter_complex = cls.build_photo_motion_filter(
+                        "[0:v]", "[v]", target_width, target_height,
+                        target_duration, motion=photo_motion, transition=photo_transition,
+                        fit_mode=fit_mode
+                    )
 
                 cmd = [
                     ffmpeg_bin, "-y",
                     "-loop", "1",
-                    "-t", str(target_duration),
                     "-i", str(m_path),
                     "-i", str(a_path),
                     "-filter_complex", filter_complex,
@@ -621,7 +816,7 @@ class VideoService:
                     "-preset", "fast",
                     "-c:a", "aac",
                     "-b:a", "320k",
-                    "-shortest",
+                    "-t", str(target_duration),
                     str(out_v_path)
                 ]
 
@@ -687,6 +882,8 @@ class VideoService:
             "width": target_width,
             "height": target_height,
             "fit_mode": fit_mode,
+            "photo_motion": photo_motion if media_type != "video" else None,
+            "photo_transition": photo_transition if media_type != "video" else None,
         }
 
     @classmethod

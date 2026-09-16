@@ -77,6 +77,8 @@ export interface Paragraph {
   speed_factor?: number;
   synced_video_path?: string;
   thumbnail_path?: string;
+  photo_motion?: 'zoom_in' | 'zoom_out' | 'pan_left' | 'pan_right' | 'zoom_pan' | 'none' | string;
+  photo_transition?: 'fade_in_out' | 'fade_in' | 'fade_out' | 'zoom_pop' | 'none' | string;
   transcript: string;
   custom_prompt?: string;
   word_count: number;
@@ -126,6 +128,14 @@ export interface Batch {
   tight_video_duration?: number;
   aspect_ratio?: '16:9' | '9:16' | '1:1' | '4:5' | '4:3' | '21:9' | string;
   fit_mode?: 'crop' | 'fit' | 'blur_pad' | string;
+  photo_motion?: 'zoom_in' | 'zoom_out' | 'pan_left' | 'pan_right' | 'zoom_pan' | 'none' | string;
+  photo_transition?: 'fade_in_out' | 'fade_in' | 'fade_out' | 'zoom_pop' | 'none' | string;
+  logo_path?: string;
+  logo_position?: 'top_right' | 'top_left' | 'bottom_right' | 'bottom_left' | 'center' | string;
+  logo_scale?: number;
+  logo_opacity?: number;
+  logo_enabled?: boolean;
+  logo_url?: string;
 }
 
 export interface MediaMatchItem {

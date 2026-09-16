@@ -358,7 +358,7 @@ class SubtitleService:
         output_base_dir: Path,
         prefix: str = "full_batch_narration",
         full_wav_path: Optional[str] = None,
-        silence_gap_seconds: float = 0.4,
+        silence_gap_seconds: float = 0.0,
         words_per_caption: int = 4
     ) -> Dict[str, Any]:
         """

@@ -114,6 +114,19 @@ export const api = {
     return { status: 'NOT_SUPPORTED', folder_path: null };
   },
 
+  async shutdownServer(): Promise<{ status: string; message: string }> {
+    if (await checkBackend()) {
+      try {
+        const res = await fetch(`${API_BASE}/shutdown`, { method: 'POST' });
+        if (res.ok) return res.json();
+      } catch (e) {
+        // Fetch error often occurs as server shuts down immediately
+        return { status: 'ok', message: 'Server shutdown initiated.' };
+      }
+    }
+    return { status: 'ok', message: 'Server shutdown initiated.' };
+  },
+
   // Projects
   async syncOutputs(): Promise<{ synced_projects: number; total_projects: number }> {
     if (await checkBackend()) {
@@ -800,6 +813,8 @@ export const api = {
       audioSource?: 'master' | 'tight';
       aspectRatio?: string;
       fitMode?: string;
+      photoMotion?: string;
+      photoTransition?: string;
       burnOnScreenText?: boolean;
       textAnimationStyle?: string;
       textPosition?: string;
@@ -814,6 +829,8 @@ export const api = {
       if (options?.audioSource) params.append('audio_source', options.audioSource);
       if (options?.aspectRatio) params.append('aspect_ratio', options.aspectRatio);
       if (options?.fitMode) params.append('fit_mode', options.fitMode);
+      if (options?.photoMotion) params.append('photo_motion', options.photoMotion);
+      if (options?.photoTransition) params.append('photo_transition', options.photoTransition);
       if (options?.burnOnScreenText !== undefined) params.append('burn_on_screen_text', options.burnOnScreenText ? 'true' : 'false');
       if (options?.textAnimationStyle) params.append('text_animation_style', options.textAnimationStyle);
       if (options?.textPosition) params.append('text_position', options.textPosition);
@@ -868,7 +885,26 @@ export const api = {
 
   async updateBatchVideoConfig(
     batchId: number,
-    config: { aspectRatio?: string; fitMode?: string; aspect_ratio?: string; fit_mode?: string }
+    config: {
+      aspectRatio?: string;
+      fitMode?: string;
+      photoMotion?: string;
+      photoTransition?: string;
+      aspect_ratio?: string;
+      fit_mode?: string;
+      photo_motion?: string;
+      photo_transition?: string;
+      logoPath?: string | null;
+      logoPosition?: string;
+      logoScale?: number;
+      logoOpacity?: number;
+      logoEnabled?: boolean;
+      logo_path?: string | null;
+      logo_position?: string;
+      logo_scale?: number;
+      logo_opacity?: number;
+      logo_enabled?: boolean;
+    }
   ): Promise<Batch> {
     if (await checkBackend()) {
       const res = await fetch(`${API_BASE}/batches/${batchId}/video-config`, {
@@ -877,11 +913,60 @@ export const api = {
         body: JSON.stringify({
           aspect_ratio: config.aspect_ratio || config.aspectRatio,
           fit_mode: config.fit_mode || config.fitMode,
+          photo_motion: config.photo_motion || config.photoMotion,
+          photo_transition: config.photo_transition || config.photoTransition,
+          logo_path: config.logo_path !== undefined ? config.logo_path : config.logoPath,
+          logo_position: config.logo_position || config.logoPosition,
+          logo_scale: config.logo_scale !== undefined ? config.logo_scale : config.logoScale,
+          logo_opacity: config.logo_opacity !== undefined ? config.logo_opacity : config.logoOpacity,
+          logo_enabled: config.logo_enabled !== undefined ? config.logo_enabled : config.logoEnabled,
         }),
       });
       if (res.ok) return res.json();
     }
     throw new Error('Failed to update video configuration');
+  },
+
+  async applyMotionTransitionToAll(
+    batchId: number,
+    data: {
+      photo_motion?: string;
+      photo_transition?: string;
+      photoMotion?: string;
+      photoTransition?: string;
+    }
+  ): Promise<Batch> {
+    if (await checkBackend()) {
+      const res = await fetch(`${API_BASE}/batches/${batchId}/apply-motion-transition-to-all`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          photo_motion: data.photo_motion || data.photoMotion,
+          photo_transition: data.photo_transition || data.photoTransition,
+        }),
+      });
+      if (res.ok) return res.json();
+    }
+    throw new Error('Failed to bulk apply motion and transitions');
+  },
+
+  getBatchLogoUrl(batchId: number, timestamp?: number): string {
+    return `${API_BASE}/batches/${batchId}/logo${timestamp ? `?t=${timestamp}` : ''}`;
+  },
+
+  async uploadBatchLogo(batchId: number, file: File): Promise<{ status: string; logo_path: string; logo_url: string }> {
+    if (await checkBackend()) {
+      const formData = new FormData();
+      formData.append('file', file);
+      const res = await fetch(`${API_BASE}/batches/${batchId}/upload-logo`, {
+        method: 'POST',
+        body: formData,
+      });
+      if (res.ok) return await res.json();
+      const err = await res.json().catch(() => ({ detail: 'Failed to upload logo' }));
+      throw new Error(err.detail || 'Failed to upload logo');
+    }
+    throw new Error('Logo upload requires backend service');
   },
 
   async getBatchRenderStatus(batchId: number): Promise<{

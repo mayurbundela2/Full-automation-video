@@ -69,5 +69,7 @@ ai_studio_profile/
 *.ass
 temp_*
 scratch/
+outputs/
+data/
 
 
