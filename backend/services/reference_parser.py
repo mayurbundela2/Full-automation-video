@@ -35,6 +35,28 @@ class ReferenceParser:
 
         return None
 
+    KNOWN_VOICES = [
+        "Algenib", "Aoede", "Charon", "Fenrir", "Kore",
+        "Puck", "Sulafat", "Schedar", "Vega", "Zephyr"
+    ]
+
+    @classmethod
+    def clean_voice_name(cls, raw_voice: Optional[str]) -> str:
+        if not raw_voice:
+            return "Algenib"
+        s = raw_voice.strip()
+        first_match = None
+        min_pos = 999999
+        for kv in cls.KNOWN_VOICES:
+            m = re.search(rf'\b{kv}\b', s, re.IGNORECASE)
+            if m and m.start() < min_pos:
+                min_pos = m.start()
+                first_match = kv
+        if first_match:
+            return first_match
+        cleaned = re.split(r'[\(\[\-–—&/,:\s]', s)[0].strip()
+        return cleaned if cleaned else "Algenib"
+
     PARAGRAPH_SPLIT_REGEX = re.compile(
         r'(?:^|\n)\s*(?:---\s*\n\s*)?'
         r'(?:'
@@ -408,7 +430,7 @@ class ReferenceParser:
             "style": metadata["style"] or "Newscaster",
             "pace": metadata["pace"] or "Natural",
             "accent": metadata["accent"] or "Neutral",
-            "voice": metadata["voice"] or default_voice,
+            "voice": cls.clean_voice_name(metadata.get("voice")) or default_voice,
             "director_notes": metadata["director_notes"] or None,
             "additional_notes": metadata["additional_notes"] or None,
             "on_screen_text": metadata.get("on_screen_text") or None,

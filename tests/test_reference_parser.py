@@ -181,3 +181,21 @@ def test_voiceover_and_narration_headers_and_shots():
     assert paragraphs[1]["paragraph_number"] == 2
     assert "Notes lene ki zaroorat nahi hai" in paragraphs[1]["transcript"]
 
+
+def test_voice_name_sanitization():
+    raw = """
+#### Part 1: HOOK (Paragraph 1)
+* Voice: Algenib (Speaker A)
+Formatted Script to Copy-Paste:
+[serious] Hello world
+
+#### Part 2: STORY (Paragraph 2)
+* Voice: Aoede (Speaker B) & Algenib
+Formatted Script to Copy-Paste:
+[warm] Another beat
+"""
+    paragraphs = ReferenceParser.parse_batch_text(raw)
+    assert len(paragraphs) == 2
+    assert paragraphs[0]["voice"] == "Algenib"
+    assert paragraphs[1]["voice"] == "Aoede"
+

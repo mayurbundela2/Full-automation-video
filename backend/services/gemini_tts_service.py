@@ -17,11 +17,45 @@ class GeminiTTSService:
     _last_key_use_time: Dict[str, float] = {}
     MIN_INTERVAL_PER_KEY: float = 20.5  # 3 RPM = 1 request every 20s
 
+    KNOWN_VOICES = [
+        "Algenib", "Aoede", "Charon", "Fenrir", "Kore",
+        "Puck", "Sulafat", "Schedar", "Vega", "Zephyr"
+    ]
+
     FALLBACK_MODELS = [
         "gemini-3.1-flash-tts-preview",
-        "gemini-2.5-flash-preview-tts",
-        "gemini-2.5-flash"
+        "gemini-2.5-flash-preview-tts"
     ]
+
+    @classmethod
+    def clean_voice_name(cls, raw_voice: Optional[str]) -> str:
+        """
+        Sanitizes voice names from references such as:
+        - 'Algenib (Speaker A)' -> 'Algenib'
+        - 'Aoede (Speaker B)' -> 'Aoede'
+        - 'Puck & Kore' -> 'Puck'
+        - 'Voice: Charon' -> 'Charon'
+        Ensures Google Gemini TTS API receives only the exact recognized voice identifier.
+        """
+        if not raw_voice:
+            return "Algenib"
+        s = raw_voice.strip()
+
+        # Check for first recognized voice name mentioned
+        first_match = None
+        min_pos = 999999
+        for kv in cls.KNOWN_VOICES:
+            m = re.search(rf'\b{kv}\b', s, re.IGNORECASE)
+            if m and m.start() < min_pos:
+                min_pos = m.start()
+                first_match = kv
+
+        if first_match:
+            return first_match
+
+        # Strip parentheticals, brackets, and role suffixes
+        cleaned = re.split(r'[\(\[\-–—&/,:\s]', s)[0].strip()
+        return cleaned if cleaned else "Algenib"
 
     @classmethod
     def get_api_key_pool(cls, explicit_key: Optional[str] = None) -> list[str]:
@@ -89,7 +123,7 @@ class GeminiTTSService:
                 "is_demo": True
             }
 
-        voice_clean = voice.strip() if voice else "Algenib"
+        voice_clean = cls.clean_voice_name(voice)
         last_error = None
         total_keys = len(key_pool)
 
