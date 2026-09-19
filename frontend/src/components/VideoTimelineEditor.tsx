@@ -232,7 +232,7 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
         : (p.latest_generation?.duration || 2.5);
       if (currentPlaybackTime >= accumulated && currentPlaybackTime < accumulated + shotDur) {
         return {
-          text: p.on_screen_text?.trim() || p.transcript?.replace(/\[.*?\]/g, '').trim() || null,
+          text: p.on_screen_text?.trim() || null,
           shotElapsed: currentPlaybackTime - accumulated,
           shotDur
         };

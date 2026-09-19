@@ -576,9 +576,8 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
     if (activePara.on_screen_text && activePara.on_screen_text.trim()) {
       return activePara.on_screen_text.trim();
     }
-    // Fallback to spoken transcript without bracketed stage notes
-    return (activePara.transcript || '').replace(/\[.*?\]/g, '').trim();
-  }, [activePara?.on_screen_text, activePara?.transcript]);
+    return '';
+  }, [activePara?.on_screen_text]);
 
   const displayedText = useMemo(() => {
     if (!targetText) return '';
