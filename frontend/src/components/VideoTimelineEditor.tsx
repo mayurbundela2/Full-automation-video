@@ -1265,11 +1265,11 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
         {/* Photo Motion & Transition Studio Toolbar (Keyframing Zoom & Pan, In/Out Transitions) */}
         <div className="px-4 py-2.5 bg-[#0a101d] border-b border-slate-800/90 flex flex-wrap items-center justify-between gap-3 text-xs">
           <div className="flex flex-wrap items-center gap-3">
-            {/* Photo Motion (Ken Burns Keyframe) */}
+            {/* Dynamic Photo Motion - Applied to Images only */}
             <div className="flex items-center space-x-2">
               <span className="text-[11px] font-bold text-pink-400 uppercase tracking-wider flex items-center space-x-1">
                 <Image className="w-3.5 h-3.5 text-pink-400" />
-                <span>Photo Motion:</span>
+                <span>Photo Motion (Images Only):</span>
               </span>
               <div className="flex items-center bg-slate-900 border border-slate-700/80 p-0.5 rounded-lg text-[11px]">
                 {[
@@ -1296,24 +1296,24 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                 ))}
               </div>
 
-              {/* Apply Motion to All Shots Button */}
+              {/* Apply Motion to All Photo Shots Button */}
               <button
                 type="button"
                 onClick={() => handleApplyMotionToAll()}
                 disabled={isBulkApplyingMotion}
                 className="flex items-center space-x-1 px-2.5 py-1 rounded-lg bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 border border-pink-500/40 text-xs font-bold transition-all active:scale-95 cursor-pointer shadow-sm disabled:opacity-50"
-                title={`Apply current motion (${photoMotion.replace('_', ' ')}) to all ${paragraphs.length} shots across the entire timeline`}
+                title={`Apply current motion (${photoMotion.replace('_', ' ')}) to all photo shots in this batch`}
               >
                 <Sparkles className={`w-3 h-3 ${isBulkApplyingMotion ? 'animate-spin' : ''}`} />
-                <span>{isBulkApplyingMotion ? 'APPLYING...' : '⚡ APPLY TO ALL'}</span>
+                <span>{isBulkApplyingMotion ? 'APPLYING...' : '⚡ APPLY TO ALL PHOTOS'}</span>
               </button>
             </div>
 
-            {/* In & Out Transitions */}
+            {/* In & Out Transitions - Applied to Images only */}
             <div className="flex items-center space-x-2">
               <span className="text-[11px] font-bold text-cyan-400 uppercase tracking-wider flex items-center space-x-1">
                 <Scissors className="w-3.5 h-3.5 text-cyan-400" />
-                <span>In/Out Cut:</span>
+                <span>In/Out Cut (Images Only):</span>
               </span>
               <div className="flex items-center bg-slate-900 border border-slate-700/80 p-0.5 rounded-lg text-[11px]">
                 {[
@@ -1339,16 +1339,16 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                 ))}
               </div>
 
-              {/* Apply Transition to All Shots Button */}
+              {/* Apply Transition to All Photo Shots Button */}
               <button
                 type="button"
                 onClick={() => handleApplyTransitionToAll()}
                 disabled={isBulkApplyingTransition}
                 className="flex items-center space-x-1 px-2.5 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 text-xs font-bold transition-all active:scale-95 cursor-pointer shadow-sm disabled:opacity-50"
-                title={`Apply current transition (${photoTransition.replace('_', ' ')}) to all ${paragraphs.length} shots across the entire timeline`}
+                title={`Apply current transition (${photoTransition.replace('_', ' ')}) to all photo shots in this batch`}
               >
                 <Scissors className={`w-3 h-3 ${isBulkApplyingTransition ? 'animate-spin' : ''}`} />
-                <span>{isBulkApplyingTransition ? 'APPLYING...' : '⚡ APPLY TO ALL'}</span>
+                <span>{isBulkApplyingTransition ? 'APPLYING...' : '⚡ APPLY TO ALL PHOTOS'}</span>
               </button>
             </div>
           </div>

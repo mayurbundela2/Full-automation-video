@@ -161,95 +161,111 @@ export const ClipInspectorPanel: React.FC<ClipInspectorPanelProps> = ({
         </div>
       </div>
 
-      {/* Center: Live Photo Motion & Transition Controls */}
+      {/* Center: Live Photo Motion & Transition Controls for Images, or Video Info for Videos */}
       <div className="flex flex-wrap items-center gap-4 flex-1">
-        {/* Photo Motion Selector */}
-        {isImage && (
-          <div className="space-y-1">
-            <div className="flex items-center justify-between space-x-2">
-              <div className="flex items-center space-x-1 text-[11px] text-pink-400 font-bold uppercase tracking-wider">
-                <Sparkles className="w-3 h-3" />
-                <span>Clip Motion:</span>
-              </div>
-              <button
-                type="button"
-                onClick={() => handleApplyMotionToAll()}
-                disabled={isApplyingMotionToAll}
-                className="flex items-center space-x-1 px-1.5 py-0.5 rounded bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 border border-pink-500/40 text-[10px] font-bold transition-all active:scale-95 cursor-pointer"
-                title={`Bulk apply "${currentMotion.replace('_', ' ')}" to ALL photo shots in this video`}
-              >
-                <span>{isApplyingMotionToAll ? 'APPLYING...' : '⚡ Apply to All'}</span>
-              </button>
-            </div>
-
-            <div className="flex flex-wrap items-center bg-slate-900 border border-slate-700/80 p-0.5 rounded-xl gap-0.5 text-[11px]">
-              {[
-                { id: 'zoom_in', label: '🔍 Zoom In', tip: 'Cinematic push in (1.0x ➔ 1.20x)' },
-                { id: 'zoom_out', label: '🔎 Zoom Out', tip: 'Cinematic reveal out (1.20x ➔ 1.0x)' },
-                { id: 'pan_left', label: '⬅️ Pan Left', tip: 'Smooth horizontal glide right to left' },
-                { id: 'pan_right', label: '➡️ Pan Right', tip: 'Smooth horizontal glide left to right' },
-                { id: 'zoom_pan', label: '↗️ Zoom+Pan', tip: 'Dynamic diagonal drift' },
-                { id: 'none', label: '⏹️ Static', tip: 'Hold frame' },
-              ].map((m) => (
+        {isImage ? (
+          <>
+            {/* Photo Motion Selector */}
+            <div className="space-y-1">
+              <div className="flex items-center justify-between space-x-2">
+                <div className="flex items-center space-x-1 text-[11px] text-pink-400 font-bold uppercase tracking-wider">
+                  <Sparkles className="w-3 h-3" />
+                  <span>Photo Motion (Images Only):</span>
+                </div>
                 <button
-                  key={m.id}
                   type="button"
-                  onClick={() => handleSetMotion(m.id)}
-                  className={`px-2 py-1 rounded-lg transition-all cursor-pointer ${
-                    currentMotion === m.id
-                      ? 'bg-pink-600 text-white font-bold shadow-sm'
-                      : 'text-slate-400 hover:text-white'
-                  }`}
-                  title={m.tip}
+                  onClick={() => handleApplyMotionToAll()}
+                  disabled={isApplyingMotionToAll}
+                  className="flex items-center space-x-1 px-1.5 py-0.5 rounded bg-pink-500/20 hover:bg-pink-500/30 text-pink-300 border border-pink-500/40 text-[10px] font-bold transition-all active:scale-95 cursor-pointer"
+                  title={`Bulk apply "${currentMotion.replace('_', ' ')}" to ALL photo shots in this video`}
                 >
-                  {m.label}
+                  <span>{isApplyingMotionToAll ? 'APPLYING...' : '⚡ Apply to All Photos'}</span>
                 </button>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* In/Out Transition Selector */}
-        {isImage && (
-          <div className="space-y-1">
-            <div className="flex items-center justify-between space-x-2">
-              <div className="flex items-center space-x-1 text-[11px] text-cyan-400 font-bold uppercase tracking-wider">
-                <Scissors className="w-3 h-3" />
-                <span>In/Out Cut:</span>
               </div>
-              <button
-                type="button"
-                onClick={() => handleApplyTransitionToAll()}
-                disabled={isApplyingTransitionToAll}
-                className="flex items-center space-x-1 px-1.5 py-0.5 rounded bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 text-[10px] font-bold transition-all active:scale-95 cursor-pointer"
-                title={`Bulk apply "${currentTransition.replace('_', ' ')}" transition to ALL photo shots in this video`}
-              >
-                <span>{isApplyingTransitionToAll ? 'APPLYING...' : '⚡ Apply to All'}</span>
-              </button>
+
+              <div className="flex flex-wrap items-center bg-slate-900 border border-slate-700/80 p-0.5 rounded-xl gap-0.5 text-[11px]">
+                {[
+                  { id: 'zoom_in', label: '🔍 Zoom In', tip: 'Cinematic push in (1.0x ➔ 1.20x)' },
+                  { id: 'zoom_out', label: '🔎 Zoom Out', tip: 'Cinematic reveal out (1.20x ➔ 1.0x)' },
+                  { id: 'pan_left', label: '⬅️ Pan Left', tip: 'Smooth horizontal glide right to left' },
+                  { id: 'pan_right', label: '➡️ Pan Right', tip: 'Smooth horizontal glide left to right' },
+                  { id: 'zoom_pan', label: '↗️ Zoom+Pan', tip: 'Dynamic diagonal drift' },
+                  { id: 'none', label: '⏹️ Static', tip: 'Hold frame' },
+                ].map((m) => (
+                  <button
+                    key={m.id}
+                    type="button"
+                    onClick={() => handleSetMotion(m.id)}
+                    className={`px-2 py-1 rounded-lg transition-all cursor-pointer ${
+                      currentMotion === m.id
+                        ? 'bg-pink-600 text-white font-bold shadow-sm'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                    title={m.tip}
+                  >
+                    {m.label}
+                  </button>
+                ))}
+              </div>
             </div>
 
-            <div className="flex flex-wrap items-center bg-slate-900 border border-slate-700/80 p-0.5 rounded-xl gap-0.5 text-[11px]">
-              {[
-                { id: 'fade_in_out', label: '🌓 Fade In/Out' },
-                { id: 'fade_in', label: '🌘 Fade In' },
-                { id: 'fade_out', label: '🌒 Fade Out' },
-                { id: 'zoom_pop', label: '💥 Pop' },
-                { id: 'none', label: '✂️ Cut' },
-              ].map((t) => (
+            {/* In/Out Transition Selector */}
+            <div className="space-y-1">
+              <div className="flex items-center justify-between space-x-2">
+                <div className="flex items-center space-x-1 text-[11px] text-cyan-400 font-bold uppercase tracking-wider">
+                  <Scissors className="w-3 h-3" />
+                  <span>Photo Cut (Images Only):</span>
+                </div>
                 <button
-                  key={t.id}
                   type="button"
-                  onClick={() => handleSetTransition(t.id)}
-                  className={`px-2 py-1 rounded-lg transition-all cursor-pointer ${
-                    currentTransition === t.id
-                      ? 'bg-cyan-600 text-white font-bold shadow-sm'
-                      : 'text-slate-400 hover:text-white'
-                  }`}
+                  onClick={() => handleApplyTransitionToAll()}
+                  disabled={isApplyingTransitionToAll}
+                  className="flex items-center space-x-1 px-1.5 py-0.5 rounded bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 text-[10px] font-bold transition-all active:scale-95 cursor-pointer"
+                  title={`Bulk apply "${currentTransition.replace('_', ' ')}" transition to ALL photo shots in this video`}
                 >
-                  {t.label}
+                  <span>{isApplyingTransitionToAll ? 'APPLYING...' : '⚡ Apply to All Photos'}</span>
                 </button>
-              ))}
+              </div>
+
+              <div className="flex flex-wrap items-center bg-slate-900 border border-slate-700/80 p-0.5 rounded-xl gap-0.5 text-[11px]">
+                {[
+                  { id: 'fade_in_out', label: '🌓 Fade In/Out' },
+                  { id: 'fade_in', label: '🌘 Fade In' },
+                  { id: 'fade_out', label: '🌒 Fade Out' },
+                  { id: 'zoom_pop', label: '💥 Pop' },
+                  { id: 'none', label: '✂️ Cut' },
+                ].map((t) => (
+                  <button
+                    key={t.id}
+                    type="button"
+                    onClick={() => handleSetTransition(t.id)}
+                    className={`px-2 py-1 rounded-lg transition-all cursor-pointer ${
+                      currentTransition === t.id
+                        ? 'bg-cyan-600 text-white font-bold shadow-sm'
+                        : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    {t.label}
+                  </button>
+                ))}
+              </div>
             </div>
+          </>
+        ) : (
+          /* Video Clip: Clear badge explaining natural playback & no synthetic photo motion */
+          <div className="flex items-center space-x-3 bg-slate-900/90 border border-blue-500/30 px-3.5 py-2 rounded-xl text-[11px]">
+            <div className="flex items-center space-x-1.5 text-blue-400 font-bold">
+              <VideoIcon className="w-4 h-4 text-blue-400 shrink-0" />
+              <span>Native Video Clip</span>
+            </div>
+            <span className="text-slate-400 border-l border-slate-700 pl-3">
+              Real video playback active • Synthetic photo motion animation is bypassed for video files
+            </span>
+            {paragraph.original_media_duration && (
+              <span className="text-cyan-300 font-mono bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-500/30">
+                Duration: {paragraph.original_media_duration.toFixed(1)}s
+              </span>
+            )}
           </div>
         )}
 
