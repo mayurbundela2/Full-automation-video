@@ -386,7 +386,7 @@ class VideoService:
                 t_start = (i - 1) * step
                 t_end = i * step if i < n_chars else dur
                 sub = safe_text[:i]
-                events.append(f"Dialogue: 0,{fmt_time(t_start)},{fmt_time(t_end)},VideoTitle,,0,0,0,{{\\an5\\fs{shot_fontsize}\\pos({cx},{cy})}},{sub}")
+                events.append(f"Dialogue: 0,{fmt_time(t_start)},{fmt_time(t_end)},VideoTitle,,0,0,0,,{{\\an5\\fs{shot_fontsize}\\pos({cx},{cy})}}{sub}")
             ass_content = ass_header + "\n".join(events) + "\n"
         elif anim == "slide_left":
             start_x = max(0, cx - int(target_width * 0.25))
@@ -503,7 +503,7 @@ class VideoService:
                     c_start = t_start + (i - 1) * step
                     c_end = t_start + (i * step if i < n_chars else dur)
                     sub = safe_text[:i]
-                    dialogues.append(f"Dialogue: 0,{fmt_time(c_start)},{fmt_time(c_end)},VideoTitle,,0,0,0,{{\\an5\\fs{shot_fontsize}\\pos({cx},{cy})}},{sub}")
+                    dialogues.append(f"Dialogue: 0,{fmt_time(c_start)},{fmt_time(c_end)},VideoTitle,,0,0,0,,{{\\an5\\fs{shot_fontsize}\\pos({cx},{cy})}}{sub}")
             elif anim == "slide_left":
                 start_x = max(0, cx - int(target_width * 0.25))
                 override = f"{{\\an5\\fs{shot_fontsize}\\move({start_x},{cy},{cx},{cy},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
@@ -598,8 +598,8 @@ class VideoService:
         Burns animated text overlay and/or logo watermark onto an already-stitched master video in a fast single pass.
         Avoids re-rendering all individual shots, finishing in seconds.
         """
-        in_p = Path(input_video_path)
-        out_p = Path(output_video_path)
+        in_p = Path(input_video_path).resolve()
+        out_p = Path(output_video_path).resolve()
         out_p.parent.mkdir(parents=True, exist_ok=True)
         ffmpeg_bin = AudioConverter.resolve_ffmpeg(ffmpeg_path)
 
@@ -623,7 +623,7 @@ class VideoService:
         has_logo = bool(logo_enabled and logo_path and Path(logo_path).exists())
 
         if has_logo:
-            logo_p = Path(logo_path)
+            logo_p = Path(logo_path).resolve()
             lw = max(32, int(target_width * (max(3.0, min(50.0, logo_scale)) / 100.0)))
             if lw % 2 != 0:
                 lw += 1
@@ -741,9 +741,9 @@ class VideoService:
         - Scales & fits video according to fit_mode ('crop', 'fit', or 'blur_pad').
         - Overlays animated on_screen_text with selected style (slide_down, slide_left, slide_right, typewriter, fade, slide_up), font, color, position, coordinates, and scale.
         """
-        m_path = Path(media_path)
-        a_path = Path(audio_path)
-        out_v_path = Path(output_video_path)
+        m_path = Path(media_path).resolve()
+        a_path = Path(audio_path).resolve()
+        out_v_path = Path(output_video_path).resolve()
         out_v_path.parent.mkdir(parents=True, exist_ok=True)
 
         if not m_path.exists():
@@ -939,11 +939,11 @@ class VideoService:
         """
         Concatenates all synchronized shot videos in chronological order into a master 1080p MP4.
         """
-        valid_paths = [p for p in shot_video_paths if p and Path(p).exists() and Path(p).stat().st_size > 1000]
+        valid_paths = [Path(p).resolve() for p in shot_video_paths if p and Path(p).exists() and Path(p).stat().st_size > 1000]
         if not valid_paths:
             raise ValueError("No valid shot video files found to stitch.")
 
-        out_path = Path(output_master_path)
+        out_path = Path(output_master_path).resolve()
         out_path.parent.mkdir(parents=True, exist_ok=True)
         concat_list_file = out_path.parent / "concat_video_list.txt"
 
@@ -1004,6 +1004,74 @@ class VideoService:
         }
 
     @classmethod
+    def generate_placeholder_video(
+        cls,
+        output_path: str,
+        duration: float,
+        audio_path: Optional[str] = None,
+        text: Optional[str] = None,
+        width: int = 1920,
+        height: int = 1080,
+        bg_color: str = "#0f172a",
+        ffmpeg_path: str = "ffmpeg"
+    ) -> Dict[str, Any]:
+        """
+        Generates a clean solid-color video clip with audio for paragraphs that don't have custom media.
+        """
+        out_p = Path(output_path).resolve()
+        out_p.parent.mkdir(parents=True, exist_ok=True)
+        ffmpeg_bin = AudioConverter.resolve_ffmpeg(ffmpeg_path)
+        w = width if width % 2 == 0 else width + 1
+        h = height if height % 2 == 0 else height + 1
+        dur = max(0.2, round(float(duration), 3))
+
+        color = bg_color if bg_color.startswith("#") or bg_color in ("black", "white", "gray", "blue", "red") else "#0f172a"
+        if color.startswith("#"):
+            color = f"0x{color[1:]}"
+
+        audio_args = []
+        if audio_path and Path(audio_path).exists():
+            a_p = Path(audio_path).resolve()
+            audio_args = ["-i", str(a_p), "-c:a", "aac", "-b:a", "320k", "-map", "1:a"]
+        else:
+            audio_args = ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-c:a", "aac", "-b:a", "192k", "-map", "1:a"]
+
+        cmd = [
+            ffmpeg_bin, "-y",
+            "-f", "lavfi", "-i", f"color=c={color}:s={w}x{h}:d={dur}:r=30",
+            *audio_args,
+            "-map", "0:v",
+            "-c:v", "libx264",
+            "-pix_fmt", "yuv420p",
+            "-preset", "veryfast",
+            "-t", str(dur),
+            str(out_p)
+        ]
+        subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True, cwd=str(out_p.parent))
+
+        thumb_path = out_p.parent / f"{out_p.stem}_thumb.jpg"
+        thumb_cmd = [
+            ffmpeg_bin, "-y",
+            "-ss", "0",
+            "-i", str(out_p),
+            "-vframes", "1",
+            "-q:v", "2",
+            str(thumb_path)
+        ]
+        try:
+            subprocess.run(thumb_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+        except Exception:
+            pass
+
+        return {
+            "video_path": str(out_p),
+            "thumbnail_path": str(thumb_path) if thumb_path.exists() else None,
+            "duration": dur,
+            "media_type": "placeholder",
+            "speed_factor": 1.0,
+        }
+
+    @classmethod
     def reformat_video_aspect_ratio(
         cls,
         input_video_path: str,
@@ -1018,8 +1086,8 @@ class VideoService:
         (e.g., 16:9 -> 9:16 Shorts/Reels) using hardware/ultrafast FFmpeg filters without needing
         to re-render all individual paragraph shots from scratch.
         """
-        in_p = Path(input_video_path)
-        out_p = Path(output_video_path)
+        in_p = Path(input_video_path).resolve()
+        out_p = Path(output_video_path).resolve()
         out_p.parent.mkdir(parents=True, exist_ok=True)
 
         if not in_p.exists():
@@ -1040,5 +1108,5 @@ class VideoService:
             "-c:a", "copy",
             str(out_p)
         ]
-        subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+        subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True, cwd=str(out_p.parent))
         return str(out_p)

@@ -203,3 +203,77 @@ def test_custom_text_coordinates_and_scaling(tmp_path):
     assert "162" in content  # 1080 * 0.15 = 162
 
 
+def test_video_sync_and_burn_with_relative_paths(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    ffmpeg_bin = AudioConverter.resolve_ffmpeg()
+    import subprocess
+
+    # 1. Create a 2s source video
+    src_video = Path("test_vid.mp4")
+    subprocess.run([
+        ffmpeg_bin, "-y",
+        "-f", "lavfi", "-i", "testsrc=duration=2:size=720x1280:rate=30",
+        "-c:v", "libx264", "-pix_fmt", "yuv420p",
+        str(src_video)
+    ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+    # 2. Create a 3s narration audio
+    pcm = AudioConverter.generate_demo_wav(duration_seconds=3.0, sample_rate=24000)
+    audio_path = Path("test_audio.wav")
+    AudioConverter.save_wav_master(pcm, str(audio_path), sample_rate=24000, channels=1)
+
+    # 3. Synchronize using relative paths
+    out_rel = Path("subfolder/synced.mp4")
+    res = VideoService.sync_media_to_audio(
+        media_path=str(src_video),
+        audio_path=str(audio_path),
+        output_video_path=str(out_rel),
+        target_duration=3.0,
+        ffmpeg_path=ffmpeg_bin
+    )
+    assert Path(res["video_path"]).exists()
+
+    # 4. Burn subtitles with typewriter animation using relative paths
+    burned_rel = Path("subfolder/burned.mp4")
+    shots = [
+        {"start": 0.0, "duration": 3.0, "text": "DYNAMIC TYPEWRITER TEST", "text_x": 50, "text_y": 20, "text_scale": 110}
+    ]
+    burn_res = VideoService.burn_text_overlay_on_video(
+        input_video_path=str(out_rel),
+        output_video_path=str(burned_rel),
+        shots=shots,
+        target_width=720,
+        target_height=1280,
+        position="top",
+        animation_style="typewriter",
+        font_family="Impact",
+        font_color="yellow",
+        ffmpeg_path=ffmpeg_bin
+    )
+    assert Path(burn_res).exists()
+    assert Path(burn_res).stat().st_size > 1000
+
+
+def test_generate_placeholder_video(tmp_path):
+    ffmpeg_bin = AudioConverter.resolve_ffmpeg()
+    pcm = AudioConverter.generate_demo_wav(duration_seconds=2.0, sample_rate=24000)
+    audio_path = tmp_path / "audio.wav"
+    AudioConverter.save_wav_master(pcm, str(audio_path), sample_rate=24000, channels=1)
+
+    out_placeholder = tmp_path / "placeholder.mp4"
+    res = VideoService.generate_placeholder_video(
+        output_path=str(out_placeholder),
+        duration=2.0,
+        audio_path=str(audio_path),
+        width=1080,
+        height=1920,
+        bg_color="#1e293b",
+        ffmpeg_path=ffmpeg_bin
+    )
+
+    assert os.path.exists(res["video_path"])
+    assert res["media_type"] == "placeholder"
+    assert os.path.exists(res["thumbnail_path"])
+
+
+

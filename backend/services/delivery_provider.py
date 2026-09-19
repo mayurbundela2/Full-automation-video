@@ -49,7 +49,7 @@ class LocalDeliveryProvider(OutputDeliveryProvider):
     """
 
     def __init__(self, base_output_dir: str = "outputs"):
-        self.base_dir = Path(base_output_dir)
+        self.base_dir = Path(base_output_dir).resolve()
         self.base_dir.mkdir(parents=True, exist_ok=True)
 
     def get_paragraph_dir(

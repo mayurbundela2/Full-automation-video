@@ -1374,11 +1374,15 @@ def render_batch_video(
                         if p_t.exists() and p_t.stat().st_size > 1000:
                             t_inf = AudioConverter.get_audio_info(str(p_t))
                             s_dur = t_inf.get("duration", s_dur)
-                if p.on_screen_text and p.on_screen_text.strip():
+                text_to_show = (p.on_screen_text or "").strip()
+                if not text_to_show and p.transcript:
+                    text_to_show = re.sub(r'\[.*?\]', '', p.transcript).strip()
+
+                if text_to_show:
                     shots_timeline.append({
                         "start": curr_t,
                         "duration": s_dur,
-                        "text": p.on_screen_text.strip(),
+                        "text": text_to_show,
                         "text_x": p.text_x,
                         "text_y": p.text_y,
                         "text_scale": p.text_scale
@@ -1584,11 +1588,15 @@ def render_batch_text_only(
                     tight_info = AudioConverter.get_audio_info(str(p_tight))
                     shot_dur = tight_info.get("duration", shot_dur)
 
-        if p.on_screen_text and p.on_screen_text.strip():
+        text_to_show = (p.on_screen_text or "").strip()
+        if not text_to_show and p.transcript:
+            text_to_show = re.sub(r'\[.*?\]', '', p.transcript).strip()
+
+        if text_to_show:
             shots_timeline.append({
                 "start": current_time,
                 "duration": shot_dur,
-                "text": p.on_screen_text.strip(),
+                "text": text_to_show,
                 "text_x": p.text_x,
                 "text_y": p.text_y,
                 "text_scale": p.text_scale

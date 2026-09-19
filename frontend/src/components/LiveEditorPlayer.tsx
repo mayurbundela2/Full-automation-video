@@ -280,7 +280,7 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
   };
 
   const handleCommitEdit = () => {
-    if (activePara && editTextValue.trim() !== targetText) {
+    if (activePara) {
       onUpdateParagraphText?.(activePara.id, editTextValue.trim());
     }
     setIsEditingText(false);
@@ -758,6 +758,12 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
                         vid.currentTime = Math.max(0, activeProgress.tInShot);
                       }
                       if (isPlaying) {
+                        vid.play().catch(() => {});
+                      }
+                    }}
+                    onCanPlay={(e) => {
+                      const vid = e.currentTarget;
+                      if (isPlaying && vid.paused) {
                         vid.play().catch(() => {});
                       }
                     }}
