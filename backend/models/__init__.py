@@ -48,6 +48,14 @@ class Batch(Base):
     logo_scale = Column(Float, default=12.0, nullable=True)
     logo_opacity = Column(Float, default=0.85, nullable=True)
     logo_enabled = Column(Boolean, default=False, nullable=True)
+    text_x = Column(Float, default=50.0, nullable=True)
+    text_y = Column(Float, default=12.0, nullable=True)
+    text_scale = Column(Float, default=100.0, nullable=True)
+    font_family = Column(String(100), default="Impact", nullable=True)
+    font_color = Column(String(50), default="yellow", nullable=True)
+    text_animation_style = Column(String(50), default="slide_down", nullable=True)
+    text_position = Column(String(50), default="top", nullable=True)
+    show_on_screen_text = Column(Boolean, default=True, nullable=True)
     created_at = Column(DateTime(timezone=True), default=utc_now)
     updated_at = Column(DateTime(timezone=True), default=utc_now, onupdate=utc_now)
 
@@ -77,6 +85,9 @@ class Paragraph(Base):
 
     # Video Shot production metadata
     on_screen_text = Column(Text, nullable=True)
+    text_x = Column(Float, nullable=True)
+    text_y = Column(Float, nullable=True)
+    text_scale = Column(Float, nullable=True)
     video_prompt = Column(Text, nullable=True)
     scene_progression = Column(Text, nullable=True)
     overall_mood = Column(Text, nullable=True)

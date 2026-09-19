@@ -81,6 +81,9 @@ class ParagraphBase(BaseModel):
 
     # Video Shot & Media fields
     on_screen_text: Optional[str] = None
+    text_x: Optional[float] = None
+    text_y: Optional[float] = None
+    text_scale: Optional[float] = None
     video_prompt: Optional[str] = None
     scene_progression: Optional[str] = None
     overall_mood: Optional[str] = None
@@ -113,6 +116,10 @@ class ParagraphUpdate(BaseModel):
     voice: Optional[str] = None
     director_notes: Optional[str] = None
     additional_notes: Optional[str] = None
+    on_screen_text: Optional[str] = None
+    text_x: Optional[float] = None
+    text_y: Optional[float] = None
+    text_scale: Optional[float] = None
     transcript: Optional[str] = None
     custom_prompt: Optional[str] = None
     photo_motion: Optional[str] = None
@@ -199,6 +206,14 @@ class BatchResponse(BaseModel):
     logo_opacity: Optional[float] = 0.85
     logo_enabled: Optional[bool] = False
     logo_url: Optional[str] = None
+    text_x: Optional[float] = 50.0
+    text_y: Optional[float] = 12.0
+    text_scale: Optional[float] = 100.0
+    font_family: Optional[str] = "Impact"
+    font_color: Optional[str] = "yellow"
+    text_animation_style: Optional[str] = "slide_down"
+    text_position: Optional[str] = "top"
+    show_on_screen_text: Optional[bool] = True
 
 
 class VideoConfigUpdateRequest(BaseModel):
@@ -211,6 +226,14 @@ class VideoConfigUpdateRequest(BaseModel):
     logo_scale: Optional[float] = None
     logo_opacity: Optional[float] = None
     logo_enabled: Optional[bool] = None
+    text_x: Optional[float] = None
+    text_y: Optional[float] = None
+    text_scale: Optional[float] = None
+    font_family: Optional[str] = None
+    font_color: Optional[str] = None
+    text_animation_style: Optional[str] = None
+    text_position: Optional[str] = None
+    show_on_screen_text: Optional[bool] = None
 
 
 class BulkMotionTransitionRequest(BaseModel):

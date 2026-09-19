@@ -23,11 +23,22 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const [fitMode, setFitMode] = useState<string>(batch.fit_mode || 'crop');
   const [photoMotion, setPhotoMotion] = useState<string>(batch.photo_motion || 'zoom_in');
   const [photoTransition, setPhotoTransition] = useState<string>(batch.photo_transition || 'fade_in_out');
-  const [showOnScreenText, setShowOnScreenText] = useState<boolean>(true);
-  const [textPosition, setTextPosition] = useState<'top' | 'bottom'>('top');
-  const [textAnimationStyle, setTextAnimationStyle] = useState<'slide_down' | 'slide_left' | 'slide_right' | 'typewriter' | 'fade' | 'slide_up'>('slide_down');
-  const [fontFamily, setFontFamily] = useState<string>('Impact');
-  const [fontColor, setFontColor] = useState<string>('yellow');
+  const [showOnScreenText, setShowOnScreenText] = useState<boolean>(
+    batch.show_on_screen_text !== undefined ? batch.show_on_screen_text : true
+  );
+  const [textPosition, setTextPosition] = useState<'top' | 'bottom'>(
+    (batch.text_position as any) || 'top'
+  );
+  const [textX, setTextX] = useState<number>(batch.text_x !== undefined ? batch.text_x : 50);
+  const [textY, setTextY] = useState<number>(
+    batch.text_y !== undefined ? batch.text_y : (batch.text_position === 'bottom' ? 88 : 10)
+  );
+  const [textScale, setTextScale] = useState<number>(batch.text_scale !== undefined ? batch.text_scale : 100);
+  const [textAnimationStyle, setTextAnimationStyle] = useState<'slide_down' | 'slide_left' | 'slide_right' | 'typewriter' | 'fade' | 'slide_up'>(
+    (batch.text_animation_style as any) || 'slide_down'
+  );
+  const [fontFamily, setFontFamily] = useState<string>(batch.font_family || 'Impact');
+  const [fontColor, setFontColor] = useState<string>(batch.font_color || 'yellow');
   const [showBulkTextModal, setShowBulkTextModal] = useState<boolean>(false);
   const [currentPlaybackTime, setCurrentPlaybackTime] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -92,7 +103,31 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
     if (batch.logo_url && batch.logo_url !== logoUrl) {
       setLogoUrl(batch.logo_url);
     }
-  }, [batch.aspect_ratio, batch.fit_mode, batch.photo_motion, batch.photo_transition, batch.logo_enabled, batch.logo_position, batch.logo_scale, batch.logo_opacity, batch.logo_url]);
+    if (batch.text_x !== undefined && batch.text_x !== textX) {
+      setTextX(batch.text_x);
+    }
+    if (batch.text_y !== undefined && batch.text_y !== textY) {
+      setTextY(batch.text_y);
+    }
+    if (batch.text_scale !== undefined && batch.text_scale !== textScale) {
+      setTextScale(batch.text_scale);
+    }
+    if (batch.font_family && batch.font_family !== fontFamily) {
+      setFontFamily(batch.font_family);
+    }
+    if (batch.font_color && batch.font_color !== fontColor) {
+      setFontColor(batch.font_color);
+    }
+    if (batch.text_animation_style && batch.text_animation_style !== textAnimationStyle) {
+      setTextAnimationStyle(batch.text_animation_style as any);
+    }
+    if (batch.text_position && batch.text_position !== textPosition) {
+      setTextPosition(batch.text_position as any);
+    }
+    if (batch.show_on_screen_text !== undefined && batch.show_on_screen_text !== showOnScreenText) {
+      setShowOnScreenText(batch.show_on_screen_text);
+    }
+  }, [batch.aspect_ratio, batch.fit_mode, batch.photo_motion, batch.photo_transition, batch.logo_enabled, batch.logo_position, batch.logo_scale, batch.logo_opacity, batch.logo_url, batch.text_x, batch.text_y, batch.text_scale, batch.font_family, batch.font_color, batch.text_animation_style, batch.text_position, batch.show_on_screen_text]);
 
   const handleUpdateConfig = async (newRatio?: string, newFit?: string, newMotion?: string, newTrans?: string) => {
     const targetRatio = newRatio || aspectRatio;
@@ -356,7 +391,10 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
         textAnimationStyle,
         textPosition,
         fontFamily,
-        fontColor
+        fontColor,
+        textX,
+        textY,
+        textScale
       });
       setRenderProgress({
         status: 'COMPLETED',
@@ -510,7 +548,10 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
         textAnimationStyle,
         textPosition,
         fontFamily,
-        fontColor
+        fontColor,
+        textX,
+        textY,
+        textScale
       });
       setRenderProgress({
         status: 'COMPLETED',
@@ -1016,9 +1057,14 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                   <span className="text-[10px] text-slate-400 px-1.5 font-mono uppercase">Pos:</span>
                   <button
                     type="button"
-                    onClick={() => setTextPosition('top')}
-                    className={`px-2 py-0.5 rounded text-[11px] font-bold transition-all ${
-                      textPosition === 'top'
+                    onClick={() => {
+                      setTextPosition('top');
+                      setTextX(50);
+                      setTextY(10);
+                      api.updateBatchVideoConfig(batch.id, { textPosition: 'top', textX: 50, textY: 10 }).catch(() => {});
+                    }}
+                    className={`px-2 py-0.5 rounded text-[11px] font-bold transition-all cursor-pointer ${
+                      textPosition === 'top' && Math.abs(textY - 10) < 5
                         ? 'bg-amber-500/30 text-amber-300 border border-amber-500/40'
                         : 'text-slate-400 hover:text-slate-200'
                     }`}
@@ -1027,14 +1073,65 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                   </button>
                   <button
                     type="button"
-                    onClick={() => setTextPosition('bottom')}
-                    className={`px-2 py-0.5 rounded text-[11px] font-bold transition-all ${
-                      textPosition === 'bottom'
+                    onClick={() => {
+                      setTextPosition('top');
+                      setTextX(50);
+                      setTextY(50);
+                      api.updateBatchVideoConfig(batch.id, { textPosition: 'top', textX: 50, textY: 50 }).catch(() => {});
+                    }}
+                    className={`px-2 py-0.5 rounded text-[11px] font-bold transition-all cursor-pointer ${
+                      Math.abs(textY - 50) < 5
+                        ? 'bg-amber-500/30 text-amber-300 border border-amber-500/40'
+                        : 'text-slate-400 hover:text-slate-200'
+                    }`}
+                  >
+                    CENTER
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setTextPosition('bottom');
+                      setTextX(50);
+                      setTextY(88);
+                      api.updateBatchVideoConfig(batch.id, { textPosition: 'bottom', textX: 50, textY: 88 }).catch(() => {});
+                    }}
+                    className={`px-2 py-0.5 rounded text-[11px] font-bold transition-all cursor-pointer ${
+                      textPosition === 'bottom' && Math.abs(textY - 88) < 5
                         ? 'bg-amber-500/30 text-amber-300 border border-amber-500/40'
                         : 'text-slate-400 hover:text-slate-200'
                     }`}
                   >
                     BOTTOM
+                  </button>
+                </div>
+
+                {/* Font Size Scaling */}
+                <div className="flex items-center space-x-1 bg-slate-900/90 border border-slate-800 rounded-lg p-0.5 text-xs">
+                  <span className="text-[10px] text-slate-400 px-1.5 font-mono uppercase">Size:</span>
+                  <button
+                    type="button"
+                    title="Decrease font size"
+                    onClick={() => {
+                      const s = Math.max(50, textScale - 10);
+                      setTextScale(s);
+                      api.updateBatchVideoConfig(batch.id, { textScale: s }).catch(() => {});
+                    }}
+                    className="px-1.5 py-0.5 rounded hover:bg-slate-800 text-slate-300 font-bold cursor-pointer"
+                  >
+                    -
+                  </button>
+                  <span className="font-bold text-amber-300 min-w-[36px] text-center font-mono">{textScale}%</span>
+                  <button
+                    type="button"
+                    title="Increase font size"
+                    onClick={() => {
+                      const s = Math.min(250, textScale + 10);
+                      setTextScale(s);
+                      api.updateBatchVideoConfig(batch.id, { textScale: s }).catch(() => {});
+                    }}
+                    className="px-1.5 py-0.5 rounded hover:bg-slate-800 text-slate-300 font-bold cursor-pointer"
+                  >
+                    +
                   </button>
                 </div>
 
@@ -1493,6 +1590,33 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
             logoOpacity={logoOpacity}
             masterVideoPath={activeVideoPath}
             videoTimestamp={videoTimestamp}
+            textX={textX}
+            textY={textY}
+            textScale={textScale}
+            onUpdateTextPosition={async (x, y, scale) => {
+              setTextX(x);
+              setTextY(y);
+              if (scale !== undefined) setTextScale(scale);
+              try {
+                await api.updateBatchVideoConfig(batch.id, {
+                  textX: x,
+                  textY: y,
+                  textScale: scale ?? textScale,
+                });
+              } catch (e) {
+                console.error('Failed to save text position:', e);
+              }
+            }}
+            onUpdateParagraphText={async (paraId, newText) => {
+              try {
+                await api.updateParagraph(paraId, { on_screen_text: newText });
+                const p = paragraphs.find((p) => p.id === paraId);
+                if (p) p.on_screen_text = newText;
+                onUpdated();
+              } catch (e) {
+                console.error('Failed to save paragraph on-screen text:', e);
+              }
+            }}
           />
         </div>
 

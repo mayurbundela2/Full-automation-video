@@ -79,6 +79,9 @@ export interface Paragraph {
   thumbnail_path?: string;
   photo_motion?: 'zoom_in' | 'zoom_out' | 'pan_left' | 'pan_right' | 'zoom_pan' | 'none' | string;
   photo_transition?: 'fade_in_out' | 'fade_in' | 'fade_out' | 'zoom_pop' | 'none' | string;
+  text_x?: number;
+  text_y?: number;
+  text_scale?: number;
   transcript: string;
   custom_prompt?: string;
   word_count: number;
@@ -136,6 +139,14 @@ export interface Batch {
   logo_opacity?: number;
   logo_enabled?: boolean;
   logo_url?: string;
+  text_x?: number;
+  text_y?: number;
+  text_scale?: number;
+  font_family?: string;
+  font_color?: string;
+  text_animation_style?: string;
+  text_position?: 'top' | 'bottom' | string;
+  show_on_screen_text?: boolean;
 }
 
 export interface MediaMatchItem {

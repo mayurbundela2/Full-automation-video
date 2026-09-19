@@ -820,6 +820,9 @@ export const api = {
       textPosition?: string;
       fontFamily?: string;
       fontColor?: string;
+      textX?: number;
+      textY?: number;
+      textScale?: number;
     }
   ): Promise<{ status: string; master_video_path: string; duration: number }> {
     if (await checkBackend()) {
@@ -836,6 +839,9 @@ export const api = {
       if (options?.textPosition) params.append('text_position', options.textPosition);
       if (options?.fontFamily) params.append('font_family', options.fontFamily);
       if (options?.fontColor) params.append('font_color', options.fontColor);
+      if (options?.textX !== undefined) params.append('text_x', options.textX.toString());
+      if (options?.textY !== undefined) params.append('text_y', options.textY.toString());
+      if (options?.textScale !== undefined) params.append('text_scale', options.textScale.toString());
       const query = params.toString() ? `?${params.toString()}` : '';
       const res = await fetch(`${API_BASE}/batches/${batchId}/render-video${query}`, {
         method: 'POST',
@@ -859,6 +865,9 @@ export const api = {
       textPosition?: string;
       fontFamily?: string;
       fontColor?: string;
+      textX?: number;
+      textY?: number;
+      textScale?: number;
     }
   ): Promise<{ status: string; master_video_path: string; master_video_duration: number; titles_burned: number }> {
     if (await checkBackend()) {
@@ -870,6 +879,9 @@ export const api = {
       if (options?.textPosition) params.append('text_position', options.textPosition);
       if (options?.fontFamily) params.append('font_family', options.fontFamily);
       if (options?.fontColor) params.append('font_color', options.fontColor);
+      if (options?.textX !== undefined) params.append('text_x', options.textX.toString());
+      if (options?.textY !== undefined) params.append('text_y', options.textY.toString());
+      if (options?.textScale !== undefined) params.append('text_scale', options.textScale.toString());
       const query = params.toString() ? `?${params.toString()}` : '';
       const res = await fetch(`${API_BASE}/batches/${batchId}/render-text-only${query}`, {
         method: 'POST',
@@ -904,6 +916,22 @@ export const api = {
       logo_scale?: number;
       logo_opacity?: number;
       logo_enabled?: boolean;
+      textX?: number;
+      textY?: number;
+      textScale?: number;
+      text_x?: number;
+      text_y?: number;
+      text_scale?: number;
+      fontFamily?: string;
+      font_family?: string;
+      fontColor?: string;
+      font_color?: string;
+      textAnimationStyle?: string;
+      text_animation_style?: string;
+      textPosition?: string;
+      text_position?: string;
+      showOnScreenText?: boolean;
+      show_on_screen_text?: boolean;
     }
   ): Promise<Batch> {
     if (await checkBackend()) {
@@ -920,6 +948,14 @@ export const api = {
           logo_scale: config.logo_scale !== undefined ? config.logo_scale : config.logoScale,
           logo_opacity: config.logo_opacity !== undefined ? config.logo_opacity : config.logoOpacity,
           logo_enabled: config.logo_enabled !== undefined ? config.logo_enabled : config.logoEnabled,
+          text_x: config.text_x !== undefined ? config.text_x : config.textX,
+          text_y: config.text_y !== undefined ? config.text_y : config.textY,
+          text_scale: config.text_scale !== undefined ? config.text_scale : config.textScale,
+          font_family: config.font_family || config.fontFamily,
+          font_color: config.font_color || config.fontColor,
+          text_animation_style: config.text_animation_style || config.textAnimationStyle,
+          text_position: config.text_position || config.textPosition,
+          show_on_screen_text: config.show_on_screen_text !== undefined ? config.show_on_screen_text : config.showOnScreenText,
         }),
       });
       if (res.ok) return res.json();

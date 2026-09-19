@@ -117,6 +117,9 @@ def enrich_paragraph(
         limit_metrics=metrics,
         raw_reference=para.raw_reference,
         parent_paragraph_id=para.parent_paragraph_id,
+        text_x=para.text_x if para.text_x is not None else 50.0,
+        text_y=para.text_y if para.text_y is not None else 12.0,
+        text_scale=para.text_scale if para.text_scale is not None else 100.0,
         created_at=para.created_at,
         updated_at=para.updated_at,
         latest_generation=gen_dict
@@ -188,8 +191,8 @@ def enrich_batch(batch: Batch, db: Session) -> BatchResponse:
         batch_dir / f"full_timeline_tight_{active_clean_ar}.mp4",
         batch_dir / "full_timeline_tight.mp4",
         batch_dir / "full_timeline_tight_16x9.mp4",
-    ] + [f for f in batch_dir.glob("full_timeline_tight_*.mp4") if "_clean" not in f.name]
-
+        batch_dir / "full_timeline_tight_9x16.mp4",
+    ]
     tight_mp4_resolved = None
     for cand in tight_candidates:
         if cand and os.path.exists(str(cand)) and os.path.getsize(str(cand)) > 1000:
@@ -203,8 +206,8 @@ def enrich_batch(batch: Batch, db: Session) -> BatchResponse:
         batch_dir / f"full_timeline_master_{active_clean_ar}.mp4",
         batch_dir / "full_timeline_master.mp4",
         batch_dir / "full_timeline_master_16x9.mp4",
-    ] + [f for f in batch_dir.glob("full_timeline_master_*.mp4") if "_clean" not in f.name]
-
+        batch_dir / "full_timeline_master_9x16.mp4",
+    ]
     master_mp4_resolved = None
     for cand in master_candidates:
         if cand and os.path.exists(str(cand)) and os.path.getsize(str(cand)) > 1000:
@@ -249,7 +252,15 @@ def enrich_batch(batch: Batch, db: Session) -> BatchResponse:
         logo_scale=batch.logo_scale if batch.logo_scale is not None else 12.0,
         logo_opacity=batch.logo_opacity if batch.logo_opacity is not None else 0.85,
         logo_enabled=bool(batch.logo_enabled),
-        logo_url=f"/api/batches/{batch.id}/logo" if (batch.logo_path and os.path.exists(batch.logo_path)) else None
+        logo_url=f"/api/batches/{batch.id}/logo" if (batch.logo_path and os.path.exists(batch.logo_path)) else None,
+        text_x=batch.text_x if batch.text_x is not None else 50.0,
+        text_y=batch.text_y if batch.text_y is not None else 12.0,
+        text_scale=batch.text_scale if batch.text_scale is not None else 100.0,
+        font_family=batch.font_family or "Impact",
+        font_color=batch.font_color or "yellow",
+        text_animation_style=batch.text_animation_style or "slide_down",
+        text_position=batch.text_position or "top",
+        show_on_screen_text=bool(batch.show_on_screen_text if batch.show_on_screen_text is not None else True)
     )
 
 
@@ -1136,6 +1147,9 @@ def render_batch_video(
     text_position: str = Query("top", description="Text position: 'top' or 'bottom'"),
     font_family: str = Query("Impact", description="Font family: 'Impact', 'Arial Black', 'Montserrat'"),
     font_color: str = Query("yellow", description="Font color: 'yellow', 'white', 'cyan'"),
+    text_x: Optional[float] = Query(None, description="Horizontal anchor (0-100%)"),
+    text_y: Optional[float] = Query(None, description="Vertical anchor (0-100%)"),
+    text_scale: Optional[float] = Query(None, description="Text scale multiplier (50-250%)"),
     db: Session = Depends(get_db)
 ):
     """
@@ -1152,7 +1166,7 @@ def render_batch_video(
     is_tight = audio_source.lower() in ("tight", "trim")
     version_title = "Tight Trimmed" if is_tight else "Master Full Narration"
 
-    # Resolve aspect ratio & fit mode & photo animations
+    # Resolve aspect ratio & fit mode & photo animations & text layout
     effective_ar = aspect_ratio or batch.aspect_ratio or "16:9"
     effective_fit = fit_mode or batch.fit_mode or "crop"
     effective_motion = photo_motion or batch.photo_motion or "zoom_in"
@@ -1162,6 +1176,21 @@ def render_batch_video(
     batch.fit_mode = effective_fit
     batch.photo_motion = effective_motion
     batch.photo_transition = effective_trans
+    if text_x is not None:
+        batch.text_x = text_x
+    if text_y is not None:
+        batch.text_y = text_y
+    if text_scale is not None:
+        batch.text_scale = text_scale
+    if font_family:
+        batch.font_family = font_family
+    if font_color:
+        batch.font_color = font_color
+    if text_animation_style:
+        batch.text_animation_style = text_animation_style
+    if text_position:
+        batch.text_position = text_position
+    batch.show_on_screen_text = burn_on_screen_text
     db.commit()
 
     target_w, target_h = VideoService.get_resolution_for_aspect_ratio(effective_ar)
@@ -1346,7 +1375,14 @@ def render_batch_video(
                             t_inf = AudioConverter.get_audio_info(str(p_t))
                             s_dur = t_inf.get("duration", s_dur)
                 if p.on_screen_text and p.on_screen_text.strip():
-                    shots_timeline.append({"start": curr_t, "duration": s_dur, "text": p.on_screen_text.strip()})
+                    shots_timeline.append({
+                        "start": curr_t,
+                        "duration": s_dur,
+                        "text": p.on_screen_text.strip(),
+                        "text_x": p.text_x,
+                        "text_y": p.text_y,
+                        "text_scale": p.text_scale
+                    })
                 curr_t += s_dur
 
             if shots_timeline or batch.logo_enabled:
@@ -1362,6 +1398,9 @@ def render_batch_video(
                         animation_style=text_animation_style,
                         font_family=font_family,
                         font_color=font_color,
+                        text_x=batch.text_x,
+                        text_y=batch.text_y,
+                        text_scale=batch.text_scale,
                         logo_path=batch.logo_path,
                         logo_position=batch.logo_position or "top_right",
                         logo_scale=batch.logo_scale if batch.logo_scale is not None else 12.0,
@@ -1428,6 +1467,9 @@ def render_batch_text_only(
     text_position: str = Query("top"),
     font_family: str = Query("Impact"),
     font_color: str = Query("yellow"),
+    text_x: Optional[float] = Query(None, description="Horizontal text anchor (0-100%)"),
+    text_y: Optional[float] = Query(None, description="Vertical text anchor (0-100%)"),
+    text_scale: Optional[float] = Query(None, description="Text font scale (50-250%)"),
     db: Session = Depends(get_db)
 ):
     """
@@ -1446,6 +1488,23 @@ def render_batch_text_only(
     effective_fit = fit_mode or batch.fit_mode or "crop"
     clean_ar = effective_ar.replace(":", "x")
     target_w, target_h = VideoService.get_resolution_for_aspect_ratio(effective_ar)
+
+    if text_x is not None:
+        batch.text_x = text_x
+    if text_y is not None:
+        batch.text_y = text_y
+    if text_scale is not None:
+        batch.text_scale = text_scale
+    if font_family:
+        batch.font_family = font_family
+    if font_color:
+        batch.font_color = font_color
+    if text_animation_style:
+        batch.text_animation_style = text_animation_style
+    if text_position:
+        batch.text_position = text_position
+    batch.show_on_screen_text = True
+    db.commit()
 
     output_dir_setting = db.query(AppSetting).filter(AppSetting.key == "OUTPUT_FOLDER").first()
     output_base = output_dir_setting.value if output_dir_setting else settings.OUTPUT_FOLDER
@@ -1469,14 +1528,14 @@ def render_batch_text_only(
 
     ratio_filename = f"full_timeline_{'tight' if is_tight else 'master'}_{clean_ar}.mp4"
     master_video_path = batch_dir / ratio_filename
-    legacy_filename = "full_timeline_tight.mp4" if is_tight else "full_timeline_master.mp4"
-    legacy_video_path = batch_dir / legacy_filename
+    legacy_video_path = batch_dir / f"full_timeline_{'tight' if is_tight else 'master'}.mp4"
 
     # If clean base does not exist yet, look for master video and back it up as clean base
     base_input = None
     if clean_base_path.exists() and clean_base_path.stat().st_size > 1000:
         base_input = str(clean_base_path)
     elif master_video_path.exists() and master_video_path.stat().st_size > 1000:
+        # Back up current video to clean base if not existing
         import shutil
         try:
             shutil.copyfile(str(master_video_path), str(clean_base_path))
@@ -1529,7 +1588,10 @@ def render_batch_text_only(
             shots_timeline.append({
                 "start": current_time,
                 "duration": shot_dur,
-                "text": p.on_screen_text.strip()
+                "text": p.on_screen_text.strip(),
+                "text_x": p.text_x,
+                "text_y": p.text_y,
+                "text_scale": p.text_scale
             })
         current_time += shot_dur
 
@@ -1551,6 +1613,9 @@ def render_batch_text_only(
             animation_style=text_animation_style,
             font_family=font_family,
             font_color=font_color,
+            text_x=batch.text_x,
+            text_y=batch.text_y,
+            text_scale=batch.text_scale,
             logo_path=batch.logo_path,
             logo_position=batch.logo_position or "top_right",
             logo_scale=batch.logo_scale if batch.logo_scale is not None else 12.0,
@@ -1720,6 +1785,22 @@ def update_batch_video_config(
         batch.logo_opacity = config.logo_opacity
     if config.logo_enabled is not None:
         batch.logo_enabled = config.logo_enabled
+    if config.text_x is not None:
+        batch.text_x = config.text_x
+    if config.text_y is not None:
+        batch.text_y = config.text_y
+    if config.text_scale is not None:
+        batch.text_scale = config.text_scale
+    if config.font_family is not None:
+        batch.font_family = config.font_family
+    if config.font_color is not None:
+        batch.font_color = config.font_color
+    if config.text_animation_style is not None:
+        batch.text_animation_style = config.text_animation_style
+    if config.text_position is not None:
+        batch.text_position = config.text_position
+    if config.show_on_screen_text is not None:
+        batch.show_on_screen_text = config.show_on_screen_text
     db.commit()
     db.refresh(batch)
     return enrich_batch(batch, db)

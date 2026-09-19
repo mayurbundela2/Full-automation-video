@@ -2,7 +2,8 @@ import React, { useRef, useEffect, useMemo, useState } from 'react';
 import { 
   Play, Pause, RotateCcw, Volume2, VolumeX, Maximize2, 
   Sparkles, Scissors, Image as ImageIcon, Video as VideoIcon, 
-  ChevronLeft, ChevronRight, Sliders, Film
+  ChevronLeft, ChevronRight, Sliders, Film,
+  Move, Pencil, Check, X, GripHorizontal
 } from 'lucide-react';
 import { Batch, Paragraph } from '../types';
 import { api } from '../api';
@@ -36,6 +37,11 @@ interface LiveEditorPlayerProps {
   logoOpacity?: number;
   masterVideoPath?: string | null;
   videoTimestamp?: number;
+  textX?: number;
+  textY?: number;
+  textScale?: number;
+  onUpdateTextPosition?: (x: number, y: number, scale?: number) => void;
+  onUpdateParagraphText?: (paragraphId: number, text: string) => void;
 }
 
 export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
@@ -67,6 +73,11 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
   logoOpacity = 0.85,
   masterVideoPath,
   videoTimestamp,
+  textX,
+  textY,
+  textScale,
+  onUpdateTextPosition,
+  onUpdateParagraphText,
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -137,6 +148,143 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
   const activePara = activeShotInfo?.paragraph || null;
   const isImageMedia = !activePara?.media_path || activePara.media_type === 'image' || /\.(jpe?g|png|webp|bmp)$/i.test(activePara.media_path || '');
   const hasVideoSource = !!(activePara?.media_path && !isImageMedia);
+
+  const viewportRef = useRef<HTMLDivElement | null>(null);
+
+  // Position & scale state
+  const [localTextX, setLocalTextX] = useState<number>(
+    activePara?.text_x ?? textX ?? batch.text_x ?? 50
+  );
+  const [localTextY, setLocalTextY] = useState<number>(
+    activePara?.text_y ?? textY ?? batch.text_y ?? (textPosition === 'bottom' ? 88 : 10)
+  );
+  const [localTextScale, setLocalTextScale] = useState<number>(
+    activePara?.text_scale ?? textScale ?? batch.text_scale ?? 100
+  );
+
+  const [isDragging, setIsDragging] = useState<boolean>(false);
+  const [isResizing, setIsResizing] = useState<boolean>(false);
+  const [isSnappedX, setIsSnappedX] = useState<boolean>(false);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [isEditingText, setIsEditingText] = useState<boolean>(false);
+  const [editTextValue, setEditTextValue] = useState<string>('');
+
+  useEffect(() => {
+    if (!isDragging && !isResizing) {
+      if (activePara?.text_x !== undefined) setLocalTextX(activePara.text_x);
+      else if (textX !== undefined) setLocalTextX(textX);
+      else if (batch.text_x !== undefined) setLocalTextX(batch.text_x);
+      else setLocalTextX(50);
+
+      if (activePara?.text_y !== undefined) setLocalTextY(activePara.text_y);
+      else if (textY !== undefined) setLocalTextY(textY);
+      else if (batch.text_y !== undefined) setLocalTextY(batch.text_y);
+      else setLocalTextY(textPosition === 'bottom' ? 88 : 10);
+
+      if (activePara?.text_scale !== undefined) setLocalTextScale(activePara.text_scale);
+      else if (textScale !== undefined) setLocalTextScale(textScale);
+      else if (batch.text_scale !== undefined) setLocalTextScale(batch.text_scale);
+      else setLocalTextScale(100);
+    }
+  }, [activePara?.id, activePara?.text_x, activePara?.text_y, activePara?.text_scale, textX, textY, textScale, textPosition, batch.text_x, batch.text_y, batch.text_scale]);
+
+  const dragStartRef = useRef<{ startX: number; startY: number; initX: number; initY: number } | null>(null);
+  const resizeStartRef = useRef<{ startX: number; startY: number; initScale: number } | null>(null);
+
+  const handleMouseDownDrag = (e: React.MouseEvent) => {
+    if (isEditingText || previewMode === 'rendered') return;
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(true);
+    dragStartRef.current = {
+      startX: e.clientX,
+      startY: e.clientY,
+      initX: localTextX,
+      initY: localTextY,
+    };
+  };
+
+  const handleMouseDownResize = (e: React.MouseEvent) => {
+    if (previewMode === 'rendered') return;
+    e.preventDefault();
+    e.stopPropagation();
+    setIsResizing(true);
+    resizeStartRef.current = {
+      startX: e.clientX,
+      startY: e.clientY,
+      initScale: localTextScale,
+    };
+  };
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (isDragging && dragStartRef.current && viewportRef.current) {
+        const rect = viewportRef.current.getBoundingClientRect();
+        const dxPct = ((e.clientX - dragStartRef.current.startX) / rect.width) * 100;
+        const dyPct = ((e.clientY - dragStartRef.current.startY) / rect.height) * 100;
+
+        let newX = Math.round((dragStartRef.current.initX + dxPct) * 10) / 10;
+        let newY = Math.round((dragStartRef.current.initY + dyPct) * 10) / 10;
+
+        newX = Math.max(5, Math.min(95, newX));
+        newY = Math.max(5, Math.min(95, newY));
+
+        if (Math.abs(newX - 50) < 2.5) {
+          newX = 50;
+          setIsSnappedX(true);
+        } else {
+          setIsSnappedX(false);
+        }
+
+        setLocalTextX(newX);
+        setLocalTextY(newY);
+      } else if (isResizing && resizeStartRef.current && viewportRef.current) {
+        const dx = e.clientX - resizeStartRef.current.startX;
+        const dy = e.clientY - resizeStartRef.current.startY;
+        const delta = (dx + dy) * 0.4;
+        let newScale = Math.round(resizeStartRef.current.initScale + delta);
+        newScale = Math.max(50, Math.min(250, newScale));
+        setLocalTextScale(newScale);
+      }
+    };
+
+    const handleMouseUp = () => {
+      if (isDragging) {
+        setIsDragging(false);
+        setIsSnappedX(false);
+        dragStartRef.current = null;
+        onUpdateTextPosition?.(localTextX, localTextY, localTextScale);
+      }
+      if (isResizing) {
+        setIsResizing(false);
+        resizeStartRef.current = null;
+        onUpdateTextPosition?.(localTextX, localTextY, localTextScale);
+      }
+    };
+
+    if (isDragging || isResizing) {
+      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('mouseup', handleMouseUp);
+      return () => {
+        window.removeEventListener('mousemove', handleMouseMove);
+        window.removeEventListener('mouseup', handleMouseUp);
+      };
+    }
+  }, [isDragging, isResizing, localTextX, localTextY, localTextScale, onUpdateTextPosition]);
+
+  const handleDoubleClick = (e: React.MouseEvent) => {
+    if (previewMode === 'rendered') return;
+    e.stopPropagation();
+    setIsEditingText(true);
+    setEditTextValue(targetText);
+  };
+
+  const handleCommitEdit = () => {
+    if (activePara && editTextValue.trim() !== targetText) {
+      onUpdateParagraphText?.(activePara.id, editTextValue.trim());
+    }
+    setIsEditingText(false);
+  };
 
   // Audio source URL for composition mode
   const audioUrl = useMemo(() => {
@@ -514,6 +662,7 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
       <div className="w-full flex items-center justify-center p-2 sm:p-4 bg-gradient-to-b from-[#050811] to-[#0a101d] overflow-hidden min-h-[360px]">
         {/* Main Viewport Container */}
         <div 
+          ref={viewportRef}
           style={containerAspectStyle}
           className="relative bg-black flex items-center justify-center overflow-hidden shadow-2xl rounded-xl border border-slate-800/80 transition-all duration-300"
         >
@@ -619,53 +768,196 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
                 </div>
               )}
 
-              {/* Live Animated On-Screen Text Title Overlay */}
+              {/* Center Snapping Visual Guide Line */}
+              {isSnappedX && isDragging && (
+                <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-0.5 border-l-2 border-dashed border-amber-400/80 pointer-events-none z-25 shadow-[0_0_8px_rgba(251,191,36,0.6)]" />
+              )}
+
+              {/* Interactive On-Screen Text Title Overlay */}
               {showOnScreenText && Boolean(targetText) && (
                 <div 
-                  key={`txt-${activePara?.id}-${textPosition}-${textAnimationStyle}`}
-                  className={`absolute left-1/2 -translate-x-1/2 z-20 pointer-events-none w-11/12 max-w-2xl text-center transition-all duration-200 ${
-                    textPosition === 'top' ? 'top-3 sm:top-5' : 'bottom-5 sm:bottom-7'
+                  key={`txt-box-${activePara?.id}`}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => { if (!isDragging && !isResizing) setIsHovered(false); }}
+                  onDoubleClick={handleDoubleClick}
+                  className={`absolute z-20 select-none ${
+                    isDragging ? 'cursor-grabbing' : 'cursor-grab'
                   }`}
+                  style={{
+                    left: `${localTextX}%`,
+                    top: `${localTextY}%`,
+                    transform: 'translate(-50%, -50%)',
+                    width: 'max-content',
+                    maxWidth: '92%',
+                    touchAction: 'none'
+                  }}
                 >
-                  <div className={`inline-block px-3 py-1 bg-transparent transform ${
-                    textAnimationStyle === 'slide_left' ? 'anim-slide-left' :
-                    textAnimationStyle === 'slide_right' ? 'anim-slide-right' :
-                    textAnimationStyle === 'slide_down' ? 'anim-slide-down' :
-                    textAnimationStyle === 'slide_up' ? 'anim-slide-up' :
-                    textAnimationStyle === 'fade' ? 'anim-fade' : ''
-                  }`}>
-                    <p 
-                      className={`text-base sm:text-xl md:text-2xl lg:text-3xl uppercase tracking-wider select-none ${
-                        fontFamily === 'Anton' 
-                          ? "font-['Anton',_sans-serif]" 
-                          : fontFamily === 'Montserrat' 
-                            ? "font-['Montserrat',_sans-serif] font-black" 
-                            : "font-['Impact',_'Anton',_sans-serif]"
-                      } ${
-                        fontColor === 'white' 
-                          ? 'text-white' 
-                          : fontColor === 'cyan' 
-                            ? 'text-cyan-300' 
-                            : 'text-[#FFE800]'
-                      }`}
-                      style={{
-                        WebkitTextStroke: '2.5px #000000',
-                        paintOrder: 'stroke fill',
-                        filter: 'drop-shadow(0 3px 6px rgba(0,0,0,0.95)) drop-shadow(0 1px 2px rgba(0,0,0,1))'
-                      }}
+                  {/* Floating Action / Coordinate Pill Toolbar on hover/drag */}
+                  {(isHovered || isDragging || isResizing) && !isEditingText && previewMode !== 'rendered' && (
+                    <div 
+                      className="absolute -top-10 left-1/2 -translate-x-1/2 flex items-center space-x-1 bg-black/90 backdrop-blur-md px-2.5 py-1 rounded-full border border-amber-500/50 shadow-2xl text-[10px] font-mono text-amber-200 pointer-events-auto z-40 whitespace-nowrap"
+                      onClick={(e) => e.stopPropagation()}
                     >
-                      {displayedText}
-                      {textAnimationStyle === 'typewriter' && displayedText.length < targetText.length && (
-                        <span 
-                          className="inline-block w-2 h-5 sm:h-6 ml-1 align-middle animate-pulse"
+                      <span className="flex items-center space-x-0.5 text-amber-400 font-bold">
+                        <Move className="w-2.5 h-2.5" />
+                        <span>{Math.round(localTextX)}%, {Math.round(localTextY)}%</span>
+                      </span>
+                      <span className="text-slate-600">&bull;</span>
+                      <button 
+                        type="button"
+                        title="Decrease size"
+                        onClick={() => {
+                          const s = Math.max(50, localTextScale - 10);
+                          setLocalTextScale(s);
+                          onUpdateTextPosition?.(localTextX, localTextY, s);
+                        }}
+                        className="px-1 py-0.5 rounded hover:bg-slate-800 text-slate-300 font-bold cursor-pointer"
+                      >
+                        -
+                      </button>
+                      <span className="font-bold text-cyan-300">{localTextScale}%</span>
+                      <button 
+                        type="button"
+                        title="Increase size"
+                        onClick={() => {
+                          const s = Math.min(250, localTextScale + 10);
+                          setLocalTextScale(s);
+                          onUpdateTextPosition?.(localTextX, localTextY, s);
+                        }}
+                        className="px-1 py-0.5 rounded hover:bg-slate-800 text-slate-300 font-bold cursor-pointer"
+                      >
+                        +
+                      </button>
+                      <span className="text-slate-600">&bull;</span>
+                      <button
+                        type="button"
+                        title="Edit text in place (double-click also works)"
+                        onClick={() => {
+                          setIsEditingText(true);
+                          setEditTextValue(targetText);
+                        }}
+                        className="p-1 rounded hover:bg-amber-500/20 text-amber-300 flex items-center cursor-pointer"
+                      >
+                        <Pencil className="w-2.5 h-2.5" />
+                      </button>
+                      <button
+                        type="button"
+                        title="Reset to center"
+                        onClick={() => {
+                          setLocalTextX(50);
+                          setLocalTextY(textPosition === 'bottom' ? 88 : 10);
+                          setLocalTextScale(100);
+                          onUpdateTextPosition?.(50, textPosition === 'bottom' ? 88 : 10, 100);
+                        }}
+                        className="p-1 rounded hover:bg-slate-800 text-slate-400 hover:text-white cursor-pointer"
+                      >
+                        <RotateCcw className="w-2.5 h-2.5" />
+                      </button>
+                    </div>
+                  )}
+
+                  {/* Inline Text Editor Mode */}
+                  {isEditingText ? (
+                    <div 
+                      className="flex flex-col items-center gap-1.5 p-2 bg-black/95 border-2 border-amber-400 rounded-xl shadow-2xl z-30 pointer-events-auto"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <textarea
+                        autoFocus
+                        rows={2}
+                        value={editTextValue}
+                        onChange={(e) => setEditTextValue(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' && !e.shiftKey) {
+                            e.preventDefault();
+                            handleCommitEdit();
+                          } else if (e.key === 'Escape') {
+                            setIsEditingText(false);
+                          }
+                        }}
+                        className="w-72 sm:w-96 text-center uppercase tracking-wider bg-transparent text-amber-300 font-bold focus:outline-none resize-none text-base sm:text-lg border-b border-amber-500/40 pb-1"
+                        placeholder="Type on-screen text..."
+                      />
+                      <div className="flex items-center space-x-2">
+                        <button
+                          type="button"
+                          onClick={handleCommitEdit}
+                          className="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-emerald-600 hover:bg-emerald-500 text-white flex items-center space-x-1 cursor-pointer shadow"
+                        >
+                          <Check className="w-3 h-3" />
+                          <span>Apply</span>
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setIsEditingText(false)}
+                          className="px-2 py-0.5 rounded-md text-[11px] font-medium bg-slate-800 hover:bg-slate-700 text-slate-300 cursor-pointer"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    /* Displayed Draggable Text Container */
+                    <div 
+                      onMouseDown={handleMouseDownDrag}
+                      className={`relative px-4 py-2 rounded-xl transition-all ${
+                        (isHovered || isDragging || isResizing) && previewMode !== 'rendered'
+                          ? 'ring-2 ring-amber-400/80 ring-dashed bg-black/25 backdrop-blur-[1px]'
+                          : 'bg-transparent'
+                      }`}
+                    >
+                      <div className={`inline-block bg-transparent transform ${
+                        textAnimationStyle === 'slide_left' ? 'anim-slide-left' :
+                        textAnimationStyle === 'slide_right' ? 'anim-slide-right' :
+                        textAnimationStyle === 'slide_down' ? 'anim-slide-down' :
+                        textAnimationStyle === 'slide_up' ? 'anim-slide-up' :
+                        textAnimationStyle === 'fade' ? 'anim-fade' : ''
+                      }`}>
+                        <p 
+                          className={`uppercase tracking-wider select-none text-center ${
+                            fontFamily === 'Anton' 
+                              ? "font-['Anton',_sans-serif]" 
+                              : fontFamily === 'Montserrat' 
+                                ? "font-['Montserrat',_sans-serif] font-black" 
+                                : "font-['Impact',_'Anton',_sans-serif]"
+                          } ${
+                            fontColor === 'white' 
+                              ? 'text-white' 
+                              : fontColor === 'cyan' 
+                                ? 'text-cyan-300' 
+                                : 'text-[#FFE800]'
+                          }`}
                           style={{
-                            backgroundColor: fontColor === 'white' ? '#FFFFFF' : fontColor === 'cyan' ? '#00F5FF' : '#FFE800',
-                            boxShadow: '0 0 6px #000000'
-                          }} 
+                            fontSize: `calc(clamp(15px, 2.2vw, 28px) * (${localTextScale} / 100))`,
+                            lineHeight: 1.15,
+                            WebkitTextStroke: '2.5px #000000',
+                            paintOrder: 'stroke fill',
+                            filter: 'drop-shadow(0 3px 6px rgba(0,0,0,0.95)) drop-shadow(0 1px 2px rgba(0,0,0,1))'
+                          }}
+                        >
+                          {displayedText}
+                          {textAnimationStyle === 'typewriter' && displayedText.length < targetText.length && (
+                            <span 
+                              className="inline-block w-2 h-5 sm:h-6 ml-1 align-middle animate-pulse"
+                              style={{
+                                backgroundColor: fontColor === 'white' ? '#FFFFFF' : fontColor === 'cyan' ? '#00F5FF' : '#FFE800',
+                                boxShadow: '0 0 6px #000000'
+                              }} 
+                            />
+                          )}
+                        </p>
+                      </div>
+
+                      {/* Corner Resize Handle */}
+                      {(isHovered || isDragging || isResizing) && previewMode !== 'rendered' && (
+                        <div 
+                          onMouseDown={handleMouseDownResize}
+                          title="Drag to scale font size"
+                          className="absolute -bottom-1.5 -right-1.5 w-4 h-4 bg-amber-400 hover:bg-amber-300 rounded-full border-2 border-black shadow-lg cursor-nwse-resize z-30 flex items-center justify-center transition-transform hover:scale-125"
                         />
                       )}
-                    </p>
-                  </div>
+                    </div>
+                  )}
                 </div>
               )}
 

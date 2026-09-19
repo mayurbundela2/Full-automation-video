@@ -163,3 +163,43 @@ def test_video_with_audio_preserved_and_mixed(tmp_path):
     assert out_info["has_audio"] is True
     assert 4.3 <= out_info["duration"] <= 4.7
 
+
+def test_custom_text_coordinates_and_scaling(tmp_path):
+    shots = [
+        {"start": 0.0, "duration": 2.5, "text": "CUSTOM SHOT ONE", "text_x": 30.0, "text_y": 75.0, "text_scale": 150.0},
+        {"start": 2.5, "duration": 3.0, "text": "FALLBACK SHOT TWO"}
+    ]
+
+    ass_path = VideoService.build_timeline_animated_subtitles_ass(
+        shots=shots,
+        target_width=1920,
+        target_height=1080,
+        temp_dir=tmp_path,
+        position="top",
+        animation_style="slide_down",
+        font_family="Impact",
+        font_color="yellow",
+        text_x=50.0,
+        text_y=15.0,
+        text_scale=100.0
+    )
+
+    assert os.path.exists(ass_path)
+    content = ass_path.read_text(encoding="utf-8")
+
+    # Verify PlayRes and alignment
+    assert "PlayResX: 1920" in content
+    assert "PlayResY: 1080" in content
+    assert r"\an5" in content
+
+    # Shot 1 has x=30% (576px), y=75% (810px), scale=150%
+    assert "CUSTOM SHOT ONE" in content
+    assert "576" in content  # 1920 * 0.30 = 576
+    assert "810" in content  # 1080 * 0.75 = 810
+
+    # Shot 2 falls back to global x=50% (960px), y=15% (162px), scale=100%
+    assert "FALLBACK SHOT TWO" in content
+    assert "960" in content  # 1920 * 0.50 = 960
+    assert "162" in content  # 1080 * 0.15 = 162
+
+

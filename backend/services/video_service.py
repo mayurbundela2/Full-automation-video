@@ -306,13 +306,17 @@ class VideoService:
         position: str = "top",
         animation_style: str = "slide_down",
         font_family: str = "Impact",
-        font_color: str = "yellow"
+        font_color: str = "yellow",
+        text_x: Optional[float] = None,
+        text_y: Optional[float] = None,
+        text_scale: Optional[float] = None
     ) -> Tuple[str, Optional[Path]]:
         """
         Creates an FFmpeg filter using ASS subtitles for professional video editor styling:
-        - Bold display font (Impact / Arial Black)
+        - Bold display font (Impact / Arial Black / Montserrat)
         - Crisp 4px black text stroke outline & drop shadow, without any dark background box
-        - Position pushed higher up towards top of video
+        - Supports free-form drag-and-drop coordinates (text_x, text_y in percentage 0-100)
+        - Supports dynamic size scaling (text_scale in percentage 50-250)
         - Real-time animations: slide_down, slide_left, slide_right, typewriter, fade, slide_up
         """
         clean_text = (text or "").strip()
@@ -324,22 +328,24 @@ class VideoService:
         fade_in_ms = int(min(0.35, dur * 0.25) * 1000)
         fade_out_ms = int(min(0.25, dur * 0.20) * 1000)
 
-        # Position higher up towards top of video: ~2.2% - 3.2% from top edge
-        is_top = (position or "top").lower() != "bottom"
-        if is_top:
-            margin_y = int(target_height * (0.032 if is_vertical else 0.022))
-            ass_alignment = 8  # Top Center
-            top_y = margin_y + 20
+        # Coordinate resolution: free-form drag/drop percentages (0-100%) or top/bottom presets
+        x_pct = float(text_x) if text_x is not None else 50.0
+        if text_y is not None:
+            y_pct = float(text_y)
         else:
-            margin_y = int(target_height * (0.06 if is_vertical else 0.045))
-            ass_alignment = 2  # Bottom Center
-            top_y = target_height - margin_y - 20
+            is_top = (position or "top").lower() != "bottom"
+            y_pct = (6.0 if is_vertical else 7.5) if is_top else (90.0 if is_vertical else 88.0)
 
-        # Video editor typography (Impact / Anton / Montserrat / Arial Black)
-        fontsize = max(30, int(min(target_width, target_height) * (0.056 if is_vertical else 0.050)))
+        cx = int(round(target_width * (max(2.0, min(98.0, x_pct)) / 100.0)))
+        cy = int(round(target_height * (max(2.0, min(98.0, y_pct)) / 100.0)))
+
+        # Dynamic font scaling
+        scale_factor = (max(40.0, min(300.0, float(text_scale))) / 100.0) if text_scale is not None else 1.0
+        base_fontsize = max(26, int(min(target_width, target_height) * (0.056 if is_vertical else 0.050)))
+        shot_fontsize = max(16, int(round(base_fontsize * scale_factor)))
         font = font_family.strip() if font_family and font_family.strip() else "Impact"
 
-        # Color: Vibrant Yellow (&H0000E8FF in BGR) or White (&H00FFFFFF)
+        # Color: Vibrant Yellow (&H0000E8FF in BGR) or White (&H00FFFFFF) or Cyan (&H00F0FF00)
         col = (font_color or "yellow").lower()
         if "white" in col:
             primary_color = "&H00FFFFFF"
@@ -348,9 +354,8 @@ class VideoService:
         else:
             primary_color = "&H0000E8FF"  # Iconic video editor yellow
 
-        cx = target_width // 2
         anim = (animation_style or "slide_down").lower().strip()
-        ass_file = temp_dir / f"anim_title_{abs(hash(clean_text + anim + font + position)) % 10000000}.ass"
+        ass_file = temp_dir / f"anim_title_{abs(hash(clean_text + anim + font + str(x_pct) + str(y_pct) + str(shot_fontsize))) % 10000000}.ass"
 
         def fmt_time(sec: float) -> str:
             h = int(sec // 3600)
@@ -365,7 +370,7 @@ class VideoService:
             f"PlayResY: {target_height}\n\n"
             "[V4+ Styles]\n"
             "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
-            f"Style: VideoTitle,{font},{fontsize},{primary_color},&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,1,0,1,4,2,{ass_alignment},20,20,{margin_y},1\n\n"
+            f"Style: VideoTitle,{font},{shot_fontsize},{primary_color},&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,1,0,1,4,2,5,20,20,20,1\n\n"
             "[Events]\n"
             "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"
         )
@@ -381,23 +386,26 @@ class VideoService:
                 t_start = (i - 1) * step
                 t_end = i * step if i < n_chars else dur
                 sub = safe_text[:i]
-                events.append(f"Dialogue: 0,{fmt_time(t_start)},{fmt_time(t_end)},VideoTitle,,0,0,0,{{\\pos({cx},{top_y})}},{sub}")
+                events.append(f"Dialogue: 0,{fmt_time(t_start)},{fmt_time(t_end)},VideoTitle,,0,0,0,{{\\an5\\fs{shot_fontsize}\\pos({cx},{cy})}},{sub}")
             ass_content = ass_header + "\n".join(events) + "\n"
         elif anim == "slide_left":
-            override = f"{{\\move({cx - 320},{top_y},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+            start_x = max(0, cx - int(target_width * 0.25))
+            override = f"{{\\an5\\fs{shot_fontsize}\\move({start_x},{cy},{cx},{cy},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
             ass_content = ass_header + f"Dialogue: 0,0:00:00.00,{fmt_time(dur)},VideoTitle,,0,0,0,,{override}{safe_text}\n"
         elif anim == "slide_right":
-            override = f"{{\\move({cx + 320},{top_y},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+            start_x = min(target_width, cx + int(target_width * 0.25))
+            override = f"{{\\an5\\fs{shot_fontsize}\\move({start_x},{cy},{cx},{cy},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
             ass_content = ass_header + f"Dialogue: 0,0:00:00.00,{fmt_time(dur)},VideoTitle,,0,0,0,,{override}{safe_text}\n"
         elif anim == "slide_up":
-            override = f"{{\\move({cx},{top_y + 45},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+            start_y = min(target_height, cy + int(target_height * 0.08))
+            override = f"{{\\an5\\fs{shot_fontsize}\\move({cx},{start_y},{cx},{cy},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
             ass_content = ass_header + f"Dialogue: 0,0:00:00.00,{fmt_time(dur)},VideoTitle,,0,0,0,,{override}{safe_text}\n"
         elif anim == "fade":
-            override = f"{{\\pos({cx},{top_y})\\fad({fade_in_ms},{fade_out_ms})}}"
+            override = f"{{\\an5\\fs{shot_fontsize}\\pos({cx},{cy})\\fad({fade_in_ms},{fade_out_ms})}}"
             ass_content = ass_header + f"Dialogue: 0,0:00:00.00,{fmt_time(dur)},VideoTitle,,0,0,0,,{override}{safe_text}\n"
         else:  # slide_down
-            start_y = -35 if is_top else top_y - 45
-            override = f"{{\\move({cx},{start_y},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+            start_y = max(0, cy - int(target_height * 0.08))
+            override = f"{{\\an5\\fs{shot_fontsize}\\move({cx},{start_y},{cx},{cy},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
             ass_content = ass_header + f"Dialogue: 0,0:00:00.00,{fmt_time(dur)},VideoTitle,,0,0,0,,{override}{safe_text}\n"
 
         ass_file.write_text(ass_content, encoding="utf-8")
@@ -415,25 +423,19 @@ class VideoService:
         position: str = "top",
         animation_style: str = "slide_down",
         font_family: str = "Impact",
-        font_color: str = "yellow"
+        font_color: str = "yellow",
+        text_x: Optional[float] = None,
+        text_y: Optional[float] = None,
+        text_scale: Optional[float] = None
     ) -> Path:
         """
         Builds a single ASS script covering the entire timeline with animated subtitles for each shot.
-        Each shot dict contains: {'start': float, 'duration': float, 'text': str}.
+        Supports free-form drag-and-drop positioning (text_x, text_y) and dynamic sizing (text_scale)
+        both globally and on a per-shot basis.
         """
         is_vertical = target_height > target_width
-        is_top = (position or "top").lower() != "bottom"
-        if is_top:
-            margin_y = int(target_height * (0.032 if is_vertical else 0.022))
-            ass_alignment = 8  # Top Center
-            top_y = margin_y + 20
-        else:
-            margin_y = int(target_height * (0.06 if is_vertical else 0.045))
-            ass_alignment = 2  # Bottom Center
-            top_y = target_height - margin_y - 20
-
-        fontsize = max(30, int(min(target_width, target_height) * (0.056 if is_vertical else 0.050)))
         font = font_family.strip() if font_family and font_family.strip() else "Impact"
+        base_fontsize = max(26, int(min(target_width, target_height) * (0.056 if is_vertical else 0.050)))
 
         col = (font_color or "yellow").lower()
         if "white" in col:
@@ -443,7 +445,6 @@ class VideoService:
         else:
             primary_color = "&H0000E8FF"
 
-        cx = target_width // 2
         anim = (animation_style or "slide_down").lower().strip()
 
         def fmt_time(sec: float) -> str:
@@ -459,7 +460,7 @@ class VideoService:
             f"PlayResY: {target_height}\n\n"
             "[V4+ Styles]\n"
             "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
-            f"Style: VideoTitle,{font},{fontsize},{primary_color},&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,1,0,1,4,2,{ass_alignment},20,20,{margin_y},1\n\n"
+            f"Style: VideoTitle,{font},{base_fontsize},{primary_color},&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,1,0,1,4,2,5,20,20,20,1\n\n"
             "[Events]\n"
             "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"
         )
@@ -476,6 +477,24 @@ class VideoService:
             fade_in_ms = int(min(0.35, dur * 0.25) * 1000)
             fade_out_ms = int(min(0.25, dur * 0.20) * 1000)
 
+            # Per-shot coordinates with fallback to batch settings
+            s_x = shot.get("text_x") if shot.get("text_x") is not None else text_x
+            s_y = shot.get("text_y") if shot.get("text_y") is not None else text_y
+            s_scale = shot.get("text_scale") if shot.get("text_scale") is not None else text_scale
+
+            x_pct = float(s_x) if s_x is not None else 50.0
+            if s_y is not None:
+                y_pct = float(s_y)
+            else:
+                is_top = (position or "top").lower() != "bottom"
+                y_pct = (6.0 if is_vertical else 7.5) if is_top else (90.0 if is_vertical else 88.0)
+
+            cx = int(round(target_width * (max(2.0, min(98.0, x_pct)) / 100.0)))
+            cy = int(round(target_height * (max(2.0, min(98.0, y_pct)) / 100.0)))
+
+            scale_factor = (max(40.0, min(300.0, float(s_scale))) / 100.0) if s_scale is not None else 1.0
+            shot_fontsize = max(16, int(round(base_fontsize * scale_factor)))
+
             if anim == "typewriter":
                 typing_dur = min(1.6, dur * 0.65)
                 n_chars = len(safe_text)
@@ -484,26 +503,29 @@ class VideoService:
                     c_start = t_start + (i - 1) * step
                     c_end = t_start + (i * step if i < n_chars else dur)
                     sub = safe_text[:i]
-                    dialogues.append(f"Dialogue: 0,{fmt_time(c_start)},{fmt_time(c_end)},VideoTitle,,0,0,0,{{\\pos({cx},{top_y})}},{sub}")
+                    dialogues.append(f"Dialogue: 0,{fmt_time(c_start)},{fmt_time(c_end)},VideoTitle,,0,0,0,{{\\an5\\fs{shot_fontsize}\\pos({cx},{cy})}},{sub}")
             elif anim == "slide_left":
-                override = f"{{\\move({cx - 320},{top_y},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+                start_x = max(0, cx - int(target_width * 0.25))
+                override = f"{{\\an5\\fs{shot_fontsize}\\move({start_x},{cy},{cx},{cy},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
                 dialogues.append(f"Dialogue: 0,{fmt_time(t_start)},{fmt_time(t_end)},VideoTitle,,0,0,0,,{override}{safe_text}")
             elif anim == "slide_right":
-                override = f"{{\\move({cx + 320},{top_y},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+                start_x = min(target_width, cx + int(target_width * 0.25))
+                override = f"{{\\an5\\fs{shot_fontsize}\\move({start_x},{cy},{cx},{cy},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
                 dialogues.append(f"Dialogue: 0,{fmt_time(t_start)},{fmt_time(t_end)},VideoTitle,,0,0,0,,{override}{safe_text}")
             elif anim == "slide_up":
-                override = f"{{\\move({cx},{top_y + 45},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+                start_y = min(target_height, cy + int(target_height * 0.08))
+                override = f"{{\\an5\\fs{shot_fontsize}\\move({cx},{start_y},{cx},{cy},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
                 dialogues.append(f"Dialogue: 0,{fmt_time(t_start)},{fmt_time(t_end)},VideoTitle,,0,0,0,,{override}{safe_text}")
             elif anim == "fade":
-                override = f"{{\\pos({cx},{top_y})\\fad({fade_in_ms},{fade_out_ms})}}"
+                override = f"{{\\an5\\fs{shot_fontsize}\\pos({cx},{cy})\\fad({fade_in_ms},{fade_out_ms})}}"
                 dialogues.append(f"Dialogue: 0,{fmt_time(t_start)},{fmt_time(t_end)},VideoTitle,,0,0,0,,{override}{safe_text}")
             else:  # slide_down
-                start_y = -35 if is_top else top_y - 45
-                override = f"{{\\move({cx},{start_y},{cx},{top_y},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
+                start_y = max(0, cy - int(target_height * 0.08))
+                override = f"{{\\an5\\fs{shot_fontsize}\\move({cx},{start_y},{cx},{cy},0,{fade_in_ms})\\fad({fade_in_ms},{fade_out_ms})}}"
                 dialogues.append(f"Dialogue: 0,{fmt_time(t_start)},{fmt_time(t_end)},VideoTitle,,0,0,0,,{override}{safe_text}")
 
         ass_content = ass_header + "\n".join(dialogues) + "\n"
-        ass_file = temp_dir / f"timeline_titles_{abs(hash(font + position + anim + str(len(shots)))) % 10000000}.ass"
+        ass_file = temp_dir / f"timeline_titles_{abs(hash(font + position + anim + str(text_x) + str(text_y) + str(text_scale) + str(len(shots)))) % 10000000}.ass"
         ass_file.write_text(ass_content, encoding="utf-8")
         return ass_file
 
@@ -562,6 +584,9 @@ class VideoService:
         animation_style: str = "slide_down",
         font_family: str = "Impact",
         font_color: str = "yellow",
+        text_x: Optional[float] = None,
+        text_y: Optional[float] = None,
+        text_scale: Optional[float] = None,
         logo_path: Optional[str] = None,
         logo_position: str = "top_right",
         logo_scale: float = 12.0,
@@ -589,7 +614,10 @@ class VideoService:
                 position=position,
                 animation_style=animation_style,
                 font_family=font_family,
-                font_color=font_color
+                font_color=font_color,
+                text_x=text_x,
+                text_y=text_y,
+                text_scale=text_scale
             )
 
         has_logo = bool(logo_enabled and logo_path and Path(logo_path).exists())
@@ -701,6 +729,9 @@ class VideoService:
         text_position: str = "top",
         font_family: str = "Impact",
         font_color: str = "yellow",
+        text_x: Optional[float] = None,
+        text_y: Optional[float] = None,
+        text_scale: Optional[float] = None,
         ffmpeg_path: str = "ffmpeg"
     ) -> Dict[str, Any]:
         """
@@ -708,7 +739,7 @@ class VideoService:
         - Video: Adjusts speed with setpts=(target_duration / orig_duration)*PTS.
         - Image: Keyframed Ken Burns motion (zoom_in, zoom_out, pan_left, pan_right, zoom_pan) and in/out transitions.
         - Scales & fits video according to fit_mode ('crop', 'fit', or 'blur_pad').
-        - Overlays animated on_screen_text with selected style (slide_down, slide_left, slide_right, typewriter, fade, slide_up), font, color, and position (top or bottom).
+        - Overlays animated on_screen_text with selected style (slide_down, slide_left, slide_right, typewriter, fade, slide_up), font, color, position, coordinates, and scale.
         """
         m_path = Path(media_path)
         a_path = Path(audio_path)
@@ -745,7 +776,8 @@ class VideoService:
                     text_filter, temp_txt_file = cls.build_animated_text_filter(
                         on_screen_text, target_width, target_height, target_duration, out_v_path.parent, "[__scaled]", "[v]",
                         position=text_position, animation_style=text_animation_style,
-                        font_family=font_family, font_color=font_color
+                        font_family=font_family, font_color=font_color,
+                        text_x=text_x, text_y=text_y, text_scale=text_scale
                     )
                     v_chain = f"[0:v]setpts={speed_ratio}*PTS[__timed];{scale_filter};{text_filter}"
                 else:
@@ -803,7 +835,8 @@ class VideoService:
                     text_filter, temp_txt_file = cls.build_animated_text_filter(
                         on_screen_text, target_width, target_height, target_duration, out_v_path.parent, "[__scaled]", "[v]",
                         position=text_position, animation_style=text_animation_style,
-                        font_family=font_family, font_color=font_color
+                        font_family=font_family, font_color=font_color,
+                        text_x=text_x, text_y=text_y, text_scale=text_scale
                     )
                     filter_complex = f"{photo_filter};{text_filter}"
                 else:

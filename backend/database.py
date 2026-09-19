@@ -76,11 +76,30 @@ def init_db():
                 cursor.execute("ALTER TABLE batches ADD COLUMN logo_opacity FLOAT DEFAULT 0.85")
             if "logo_enabled" not in columns:
                 cursor.execute("ALTER TABLE batches ADD COLUMN logo_enabled BOOLEAN DEFAULT 0")
+            if "text_x" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN text_x FLOAT DEFAULT 50.0")
+            if "text_y" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN text_y FLOAT DEFAULT 12.0")
+            if "text_scale" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN text_scale FLOAT DEFAULT 100.0")
+            if "font_family" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN font_family VARCHAR(100) DEFAULT 'Impact'")
+            if "font_color" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN font_color VARCHAR(50) DEFAULT 'yellow'")
+            if "text_animation_style" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN text_animation_style VARCHAR(50) DEFAULT 'slide_down'")
+            if "text_position" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN text_position VARCHAR(50) DEFAULT 'top'")
+            if "show_on_screen_text" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN show_on_screen_text BOOLEAN DEFAULT 1")
 
             cursor.execute("PRAGMA table_info(paragraphs)")
             p_cols = [row[1] for row in cursor.fetchall()]
             new_p_cols = [
                 ("on_screen_text", "TEXT"),
+                ("text_x", "FLOAT"),
+                ("text_y", "FLOAT"),
+                ("text_scale", "FLOAT"),
                 ("video_prompt", "TEXT"),
                 ("scene_progression", "TEXT"),
                 ("overall_mood", "TEXT"),
