@@ -401,7 +401,7 @@ class VideoService:
             ass_content = ass_header + f"Dialogue: 0,0:00:00.00,{fmt_time(dur)},VideoTitle,,0,0,0,,{override}{safe_text}\n"
 
         ass_file.write_text(ass_content, encoding="utf-8")
-        clean_ass_path = ass_file.resolve().as_posix().replace(":", r"\:")
+        clean_ass_path = ass_file.name
         filter_str = f"{input_label}subtitles='{clean_ass_path}'{output_label}"
         return filter_str, ass_file
 
@@ -617,7 +617,7 @@ class VideoService:
             logo_filter = f"[1:v]scale={lw}:-1,format=rgba,colorchannelmixer=aa={op}[__logo]"
 
             if ass_file:
-                clean_ass_path = ass_file.resolve().as_posix().replace(":", r"\:")
+                clean_ass_path = ass_file.name
                 filter_complex = (
                     f"{logo_filter};"
                     f"[0:v]subtitles='{clean_ass_path}'[__subbed];"
@@ -643,11 +643,13 @@ class VideoService:
                 str(out_p)
             ]
         elif ass_file:
-            clean_ass_path = ass_file.resolve().as_posix().replace(":", r"\:")
+            clean_ass_path = ass_file.name
             cmd = [
                 ffmpeg_bin, "-y",
                 "-i", str(in_p),
                 "-vf", f"subtitles='{clean_ass_path}'",
+                "-map", "0:v",
+                "-map", "0:a?",
                 "-c:v", "libx264",
                 "-preset", "veryfast",
                 "-pix_fmt", "yuv420p",
@@ -660,7 +662,15 @@ class VideoService:
             return str(out_p)
 
         try:
-            res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, cwd=str(out_p.parent))
+            if res.returncode != 0:
+                # If stream copy of audio failed, retry with aac audio re-encode
+                fallback_cmd = list(cmd)
+                if "-c:a" in fallback_cmd:
+                    ca_idx = fallback_cmd.index("-c:a")
+                    fallback_cmd[ca_idx + 1] = "aac"
+                    res = subprocess.run(fallback_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, cwd=str(out_p.parent))
+
             if res.returncode != 0:
                 err_snippet = res.stderr[-500:] if res.stderr else "Unknown error"
                 raise RuntimeError(f"FFmpeg render pass failed (code {res.returncode}): {err_snippet.strip()}")
@@ -821,7 +831,7 @@ class VideoService:
                 ]
 
             try:
-                subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+                subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True, cwd=str(out_v_path.parent))
             except subprocess.CalledProcessError as e:
                 if media_type == "video" and has_audio:
                     # Fallback to narration audio only if source audio corrupt
@@ -841,7 +851,7 @@ class VideoService:
                         str(out_v_path)
                     ]
                     try:
-                        subprocess.run(fallback_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+                        subprocess.run(fallback_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True, cwd=str(out_v_path.parent))
                     except subprocess.CalledProcessError:
                         err = e.stderr.decode("utf-8", errors="replace")
                         raise RuntimeError(f"FFmpeg video sync failed: {err}")

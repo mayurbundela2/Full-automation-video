@@ -1926,9 +1926,7 @@ def get_batch_master_video(
         content_disposition_type="attachment" if download else "inline",
         headers={
             "Accept-Ranges": "bytes",
-            "Cache-Control": "no-cache, no-store, must-revalidate",
-            "Pragma": "no-cache",
-            "Expires": "0",
+            "Cache-Control": "public, max-age=60",
         }
     )
 
@@ -1950,16 +1948,18 @@ def get_paragraph_video(para_id: int, download: bool = False, db: Session = Depe
 
     filename = f"paragraph_{p.paragraph_number}_{Path(target_video).name}"
 
+    import mimetypes
+    guessed_type, _ = mimetypes.guess_type(target_video)
+    video_mime = guessed_type or "video/mp4"
+
     return FileResponse(
         path=target_video,
-        media_type="video/mp4",
+        media_type=video_mime,
         filename=filename,
         content_disposition_type="attachment" if download else "inline",
         headers={
             "Accept-Ranges": "bytes",
-            "Cache-Control": "no-cache, no-store, must-revalidate",
-            "Pragma": "no-cache",
-            "Expires": "0",
+            "Cache-Control": "public, max-age=120",
         }
     )
 

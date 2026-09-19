@@ -1491,6 +1491,8 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
             logoPosition={logoPosition}
             logoScale={logoScale}
             logoOpacity={logoOpacity}
+            masterVideoPath={activeVideoPath}
+            videoTimestamp={videoTimestamp}
           />
         </div>
 

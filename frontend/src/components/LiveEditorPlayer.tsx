@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useMemo, useState } from 'react';
 import { 
   Play, Pause, RotateCcw, Volume2, VolumeX, Maximize2, 
   Sparkles, Scissors, Image as ImageIcon, Video as VideoIcon, 
-  ChevronLeft, ChevronRight, Sliders
+  ChevronLeft, ChevronRight, Sliders, Film
 } from 'lucide-react';
 import { Batch, Paragraph } from '../types';
 import { api } from '../api';
@@ -34,6 +34,8 @@ interface LiveEditorPlayerProps {
   logoPosition?: string;
   logoScale?: number;
   logoOpacity?: number;
+  masterVideoPath?: string | null;
+  videoTimestamp?: number;
 }
 
 export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
@@ -63,13 +65,24 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
   logoPosition = 'top_right',
   logoScale = 12.0,
   logoOpacity = 0.85,
+  masterVideoPath,
+  videoTimestamp,
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const masterVideoRef = useRef<HTMLVideoElement | null>(null);
   const animationFrameRef = useRef<number | null>(null);
   const [isMuted, setIsMuted] = useState<boolean>(false);
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
+  
+  const hasMasterVideo = Boolean(masterVideoPath);
+  const [previewMode, setPreviewMode] = useState<'composition' | 'rendered'>('composition');
+
+  const masterVideoUrl = useMemo(() => {
+    if (!hasMasterVideo) return null;
+    return api.getMasterVideoUrl(batch.id, audioSource, videoTimestamp);
+  }, [batch.id, audioSource, videoTimestamp, hasMasterVideo]);
 
   // Calculate timeline start offsets and durations for each shot
   const timelineSchedule = useMemo(() => {
@@ -125,7 +138,7 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
   const isImageMedia = !activePara?.media_path || activePara.media_type === 'image' || /\.(jpe?g|png|webp|bmp)$/i.test(activePara.media_path || '');
   const hasVideoSource = !!(activePara?.media_path && !isImageMedia);
 
-  // Audio source URL
+  // Audio source URL for composition mode
   const audioUrl = useMemo(() => {
     if (audioSource === 'tight' && batch.tight_audio?.wav_path) {
       return api.getBatchTightAudioUrl(batch.id);
@@ -136,7 +149,88 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
     return null;
   }, [batch.id, audioSource, batch.tight_audio, batch.combined_audio]);
 
-  // Real-time animation loop when playing
+  // Dynamic volume synchronization
+  useEffect(() => {
+    const vVol = isMuted ? 0 : Math.min(1, Math.max(0, videoVolume));
+    const nVol = isMuted ? 0 : Math.min(1, Math.max(0, narrationVolume));
+    if (audioRef.current) {
+      audioRef.current.volume = nVol;
+    }
+    if (videoRef.current) {
+      videoRef.current.volume = vVol;
+    }
+    if (masterVideoRef.current) {
+      masterVideoRef.current.volume = vVol;
+    }
+  }, [isMuted, videoVolume, narrationVolume]);
+
+  // Seamless video clip playback on shot boundary transitions
+  useEffect(() => {
+    if (previewMode !== 'composition' || !hasVideoSource || !videoRef.current) return;
+    const vid = videoRef.current;
+    vid.volume = isMuted ? 0 : Math.min(1, Math.max(0, videoVolume));
+
+    const syncAndPlay = () => {
+      try {
+        if (Math.abs(vid.currentTime - activeProgress.tInShot) > 0.12) {
+          vid.currentTime = Math.max(0, activeProgress.tInShot);
+        }
+        if (isPlaying) {
+          const p = vid.play();
+          if (p && typeof p.catch === 'function') {
+            p.catch(() => {});
+          }
+        } else {
+          vid.pause();
+        }
+      } catch (e) {
+        // Ignore transient seek errors during media mounting
+      }
+    };
+
+    if (vid.readyState >= 1) {
+      syncAndPlay();
+    } else {
+      vid.addEventListener('loadedmetadata', syncAndPlay, { once: true });
+      return () => {
+        vid.removeEventListener('loadedmetadata', syncAndPlay);
+      };
+    }
+  }, [activePara?.id, isPlaying, hasVideoSource, previewMode]);
+
+  // Master video playback synchronization when in Rendered mode
+  useEffect(() => {
+    if (previewMode !== 'rendered' || !masterVideoRef.current) return;
+    const mVid = masterVideoRef.current;
+    mVid.volume = isMuted ? 0 : Math.min(1, Math.max(0, videoVolume));
+
+    const syncAndPlay = () => {
+      try {
+        if (Math.abs(mVid.currentTime - currentTime) > 0.15) {
+          mVid.currentTime = Math.max(0, Math.min(totalDuration, currentTime));
+        }
+        if (isPlaying) {
+          const p = mVid.play();
+          if (p && typeof p.catch === 'function') {
+            p.catch(() => {});
+          }
+        } else {
+          mVid.pause();
+        }
+      } catch (e) {}
+    };
+
+    if (mVid.readyState >= 1) {
+      syncAndPlay();
+    } else {
+      mVid.addEventListener('loadedmetadata', syncAndPlay, { once: true });
+      return () => {
+        mVid.removeEventListener('loadedmetadata', syncAndPlay);
+      };
+    }
+  }, [previewMode, isPlaying]);
+
+  // Main real-time playback animation frame loop
   useEffect(() => {
     if (!isPlaying) {
       if (animationFrameRef.current) {
@@ -149,24 +243,37 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
       if (videoRef.current && !videoRef.current.paused) {
         videoRef.current.pause();
       }
+      if (masterVideoRef.current && !masterVideoRef.current.paused) {
+        masterVideoRef.current.pause();
+      }
       return;
     }
 
     let lastTimestamp = performance.now();
     let currentPlaybackTime = currentTime;
 
-    // Start audio if available
-    if (audioRef.current) {
-      audioRef.current.currentTime = currentTime;
-      audioRef.current.volume = isMuted ? 0 : Math.min(1, narrationVolume);
-      audioRef.current.play().catch(() => {});
-    }
+    if (previewMode === 'rendered') {
+      if (masterVideoRef.current) {
+        if (Math.abs(masterVideoRef.current.currentTime - currentTime) > 0.15) {
+          masterVideoRef.current.currentTime = currentTime;
+        }
+        masterVideoRef.current.volume = isMuted ? 0 : Math.min(1, Math.max(0, videoVolume));
+        masterVideoRef.current.play().catch(() => {});
+      }
+    } else {
+      // Start narration audio if available
+      if (audioRef.current) {
+        audioRef.current.currentTime = currentTime;
+        audioRef.current.volume = isMuted ? 0 : Math.min(1, narrationVolume);
+        audioRef.current.play().catch(() => {});
+      }
 
-    // Start video clip if present
-    if (videoRef.current && hasVideoSource) {
-      videoRef.current.currentTime = activeProgress.tInShot;
-      videoRef.current.volume = isMuted ? 0 : Math.min(1, videoVolume);
-      videoRef.current.play().catch(() => {});
+      // Start current shot video clip if present
+      if (videoRef.current && hasVideoSource) {
+        videoRef.current.currentTime = activeProgress.tInShot;
+        videoRef.current.volume = isMuted ? 0 : Math.min(1, videoVolume);
+        videoRef.current.play().catch(() => {});
+      }
     }
 
     const tick = (now: number) => {
@@ -176,11 +283,28 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
       // Continuous time advance
       currentPlaybackTime += delta;
 
-      // Smoothly sync from audio element if active and healthy
-      if (audioRef.current && !audioRef.current.paused && audioRef.current.readyState >= 2) {
-        const audioTime = audioRef.current.currentTime;
-        if (Math.abs(audioTime - currentPlaybackTime) > 0.08) {
-          currentPlaybackTime = audioTime;
+      if (previewMode === 'rendered') {
+        if (masterVideoRef.current && !masterVideoRef.current.paused && masterVideoRef.current.readyState >= 2) {
+          const mTime = masterVideoRef.current.currentTime;
+          if (Math.abs(mTime - currentPlaybackTime) > 0.08) {
+            currentPlaybackTime = mTime;
+          }
+        }
+      } else {
+        // Smoothly sync from audio element if active and healthy
+        if (audioRef.current && !audioRef.current.paused && audioRef.current.readyState >= 2) {
+          const audioTime = audioRef.current.currentTime;
+          if (Math.abs(audioTime - currentPlaybackTime) > 0.08) {
+            currentPlaybackTime = audioTime;
+          }
+        }
+
+        // Keep active shot video tightly in sync with voiceover timeline
+        if (videoRef.current && hasVideoSource && !videoRef.current.paused && videoRef.current.readyState >= 2) {
+          const expectedT = Math.max(0, currentPlaybackTime - (activeShotInfo?.start || 0));
+          if (Math.abs(videoRef.current.currentTime - expectedT) > 0.2) {
+            videoRef.current.currentTime = expectedT;
+          }
         }
       }
 
@@ -202,19 +326,25 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
         animationFrameRef.current = null;
       }
     };
-  }, [isPlaying, totalDuration]);
+  }, [isPlaying, totalDuration, previewMode]);
 
   // Seek audio & video when currentTime changes externally
   useEffect(() => {
     if (!isPlaying) {
-      if (audioRef.current && Math.abs(audioRef.current.currentTime - currentTime) > 0.2) {
-        audioRef.current.currentTime = currentTime;
-      }
-      if (videoRef.current && hasVideoSource) {
-        videoRef.current.currentTime = activeProgress.tInShot;
+      if (previewMode === 'rendered') {
+        if (masterVideoRef.current && Math.abs(masterVideoRef.current.currentTime - currentTime) > 0.15) {
+          masterVideoRef.current.currentTime = currentTime;
+        }
+      } else {
+        if (audioRef.current && Math.abs(audioRef.current.currentTime - currentTime) > 0.2) {
+          audioRef.current.currentTime = currentTime;
+        }
+        if (videoRef.current && hasVideoSource) {
+          videoRef.current.currentTime = activeProgress.tInShot;
+        }
       }
     }
-  }, [currentTime, isPlaying, hasVideoSource, activeProgress.tInShot]);
+  }, [currentTime, isPlaying, hasVideoSource, activeProgress.tInShot, previewMode]);
 
   // Calculate Real-Time Ken Burns Keyframing Transform Style
   const photoMotionStyle = useMemo(() => {
@@ -253,12 +383,11 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
         break;
     }
 
-    // In / Out Transition Curve Calculation (subtle edge transition so image stays 100% visible until audio finishes)
+    // In / Out Transition Curve Calculation
     const fadeDuration = Math.min(0.12, Math.max(0.06, duration * 0.05));
     const entranceProgress = Math.min(1, Math.max(0, tInShot / fadeDuration));
     const timeUntilEnd = Math.max(0, duration - tInShot);
     const exitProgress = Math.min(1, Math.max(0, timeUntilEnd / fadeDuration));
-
 
     let opacity = 1.0;
 
@@ -367,9 +496,9 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
   return (
     <div 
       ref={containerRef}
-      className="relative flex flex-col items-center justify-center bg-[#070b14] rounded-2xl overflow-hidden border border-slate-800/90 shadow-2xl group select-none"
+      className="relative flex flex-col items-center justify-center bg-[#070b14] rounded-2xl overflow-hidden border border-slate-800/90 shadow-2xl group select-none w-full"
     >
-      {/* Hidden narration audio element synchronized to timeline */}
+      {/* Hidden narration audio element synchronized to timeline (used in Composition mode) */}
       {audioUrl && (
         <audio 
           ref={audioRef}
@@ -388,7 +517,43 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
           style={containerAspectStyle}
           className="relative bg-black flex items-center justify-center overflow-hidden shadow-2xl rounded-xl border border-slate-800/80 transition-all duration-300"
         >
-          {activePara ? (
+          {previewMode === 'rendered' && masterVideoUrl ? (
+            /* Rendered Master Video Player View */
+            <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+              <video
+                ref={masterVideoRef}
+                src={masterVideoUrl}
+                playsInline
+                preload="auto"
+                muted={isMuted}
+                onLoadedMetadata={(e) => {
+                  const vid = e.currentTarget;
+                  vid.volume = isMuted ? 0 : Math.min(1, Math.max(0, videoVolume));
+                  if (Math.abs(vid.currentTime - currentTime) > 0.15) {
+                    vid.currentTime = Math.max(0, Math.min(totalDuration, currentTime));
+                  }
+                  if (isPlaying) {
+                    vid.play().catch(() => {});
+                  }
+                }}
+                className={`w-full h-full ${
+                  fitMode === 'fit' ? 'object-contain' : 'object-cover'
+                }`}
+              />
+              <div className="absolute top-3 left-3 z-30 flex items-center space-x-2 pointer-events-none">
+                <span className="flex items-center space-x-1 px-2.5 py-1 rounded-lg text-[10px] font-mono font-black bg-emerald-950/85 text-emerald-300 border border-emerald-500/40 backdrop-blur-md shadow-lg">
+                  <Film className="w-3 h-3 text-emerald-400" />
+                  <span>RENDERED MASTER MP4</span>
+                </span>
+              </div>
+              <div className="absolute top-3 right-3 z-30 flex items-center space-x-2 pointer-events-none">
+                <span className="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-black/75 text-emerald-300 border border-emerald-500/30 backdrop-blur-md shadow">
+                  🎬 FULL TIMELINE &bull; {aspectRatio}
+                </span>
+              </div>
+            </div>
+          ) : activePara ? (
+            /* Live Composition View */
             <>
               {/* Background Blur replica for blur_pad mode */}
               {fitMode === 'blur_pad' && activePara.media_path && (
@@ -399,167 +564,179 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
                       alt="Blur background"
                       className="w-full h-full object-cover"
                     />
+                  ) : (
+                    <video
+                      src={api.getParagraphVideoUrl(activePara.id)}
+                      className="w-full h-full object-cover"
+                      muted
+                      playsInline
+                      autoPlay={isPlaying}
+                      loop
+                    />
+                  )}
+                </div>
+              )}
 
-                ) : (
-                  <video
-                    src={api.getParagraphVideoUrl(activePara.id)}
-                    className="w-full h-full object-cover"
-                    muted
+              {/* Foreground Live Media Element */}
+              {isImageMedia ? (
+                <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+                  <img
+                    key={`media-img-${activePara.id}`}
+                    src={api.getParagraphThumbnailUrl(activePara.id)}
+                    alt={`Shot ${activePara.paragraph_number}`}
+                    style={photoMotionStyle}
+                    className={`w-full h-full ${
+                      fitMode === 'fit' ? 'object-contain' : 'object-cover'
+                    }`}
+                    onError={(e) => {
+                      (e.target as HTMLElement).style.display = 'none';
+                    }}
                   />
+                </div>
+              ) : (
+                <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+                  <video
+                    key={`media-vid-${activePara.id}`}
+                    ref={videoRef}
+                    src={api.getParagraphVideoUrl(activePara.id)}
+                    muted={isMuted}
+                    playsInline
+                    preload="auto"
+                    onLoadedMetadata={(e) => {
+                      const vid = e.currentTarget;
+                      vid.volume = isMuted ? 0 : Math.min(1, Math.max(0, videoVolume));
+                      if (Math.abs(vid.currentTime - activeProgress.tInShot) > 0.1) {
+                        vid.currentTime = Math.max(0, activeProgress.tInShot);
+                      }
+                      if (isPlaying) {
+                        vid.play().catch(() => {});
+                      }
+                    }}
+                    className={`w-full h-full ${
+                      fitMode === 'fit' ? 'object-contain' : 'object-cover'
+                    }`}
+                  />
+                </div>
+              )}
+
+              {/* Live Animated On-Screen Text Title Overlay */}
+              {showOnScreenText && Boolean(targetText) && (
+                <div 
+                  key={`txt-${activePara?.id}-${textPosition}-${textAnimationStyle}`}
+                  className={`absolute left-1/2 -translate-x-1/2 z-20 pointer-events-none w-11/12 max-w-2xl text-center transition-all duration-200 ${
+                    textPosition === 'top' ? 'top-3 sm:top-5' : 'bottom-5 sm:bottom-7'
+                  }`}
+                >
+                  <div className={`inline-block px-3 py-1 bg-transparent transform ${
+                    textAnimationStyle === 'slide_left' ? 'anim-slide-left' :
+                    textAnimationStyle === 'slide_right' ? 'anim-slide-right' :
+                    textAnimationStyle === 'slide_down' ? 'anim-slide-down' :
+                    textAnimationStyle === 'slide_up' ? 'anim-slide-up' :
+                    textAnimationStyle === 'fade' ? 'anim-fade' : ''
+                  }`}>
+                    <p 
+                      className={`text-base sm:text-xl md:text-2xl lg:text-3xl uppercase tracking-wider select-none ${
+                        fontFamily === 'Anton' 
+                          ? "font-['Anton',_sans-serif]" 
+                          : fontFamily === 'Montserrat' 
+                            ? "font-['Montserrat',_sans-serif] font-black" 
+                            : "font-['Impact',_'Anton',_sans-serif]"
+                      } ${
+                        fontColor === 'white' 
+                          ? 'text-white' 
+                          : fontColor === 'cyan' 
+                            ? 'text-cyan-300' 
+                            : 'text-[#FFE800]'
+                      }`}
+                      style={{
+                        WebkitTextStroke: '2.5px #000000',
+                        paintOrder: 'stroke fill',
+                        filter: 'drop-shadow(0 3px 6px rgba(0,0,0,0.95)) drop-shadow(0 1px 2px rgba(0,0,0,1))'
+                      }}
+                    >
+                      {displayedText}
+                      {textAnimationStyle === 'typewriter' && displayedText.length < targetText.length && (
+                        <span 
+                          className="inline-block w-2 h-5 sm:h-6 ml-1 align-middle animate-pulse"
+                          style={{
+                            backgroundColor: fontColor === 'white' ? '#FFFFFF' : fontColor === 'cyan' ? '#00F5FF' : '#FFE800',
+                            boxShadow: '0 0 6px #000000'
+                          }} 
+                        />
+                      )}
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Live Watermark Logo Overlay */}
+              {logoEnabled && (logoUrl || batch.logo_url) && (
+                <div 
+                  className={`absolute pointer-events-none z-30 transition-all duration-150 ${
+                    logoPosition === 'top_left' ? 'top-3 left-3 sm:top-5 sm:left-5' :
+                    logoPosition === 'bottom_left' ? 'bottom-3 left-3 sm:bottom-5 sm:left-5' :
+                    logoPosition === 'bottom_right' ? 'bottom-3 right-3 sm:bottom-5 sm:right-5' :
+                    logoPosition === 'center' ? 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' :
+                    'top-3 right-3 sm:top-5 sm:right-5'
+                  }`}
+                  style={{
+                    width: `${logoScale}%`,
+                    maxWidth: '45%',
+                    minWidth: '40px',
+                    opacity: logoOpacity,
+                  }}
+                >
+                  <img
+                    src={logoUrl || batch.logo_url}
+                    alt="Watermark Logo"
+                    className="w-full h-auto object-contain drop-shadow-lg select-none"
+                    onError={(e) => {
+                      (e.target as HTMLElement).style.display = 'none';
+                    }}
+                  />
+                </div>
+              )}
+
+              {/* Live HUD Badge Overlays in Top Corners */}
+              <div className="absolute top-3 left-3 z-30 flex items-center space-x-2 pointer-events-none">
+                <span className="flex items-center space-x-1 px-2.5 py-1 rounded-lg text-[10px] font-mono font-black bg-black/75 backdrop-blur-md text-white border border-white/20 shadow-lg">
+                  <span className="text-cyan-400">SHOT {activePara.paragraph_number}</span>
+                  <span className="text-slate-500">/</span>
+                  <span className="text-slate-400">{paragraphs.length}</span>
+                </span>
+
+                {isImageMedia ? (
+                  <span className="flex items-center space-x-1 px-2 py-1 rounded-lg text-[10px] font-mono font-bold bg-pink-950/80 text-pink-300 border border-pink-500/40 backdrop-blur-md shadow">
+                    <Sparkles className="w-3 h-3 text-pink-400" />
+                    <span className="uppercase">{(activePara.photo_motion || photoMotion || 'zoom_in').replace('_', ' ')}</span>
+                  </span>
+                ) : (
+                  <span className="flex items-center space-x-1 px-2 py-1 rounded-lg text-[10px] font-mono font-bold bg-blue-950/80 text-blue-300 border border-blue-500/40 backdrop-blur-md shadow">
+                    <VideoIcon className="w-3 h-3 text-blue-400" />
+                    <span>VIDEO CLIP</span>
+                  </span>
+                )}
+
+                {isImageMedia && (
+                  <span className="flex items-center space-x-1 px-2 py-1 rounded-lg text-[10px] font-mono font-bold bg-cyan-950/80 text-cyan-300 border border-cyan-500/40 backdrop-blur-md shadow">
+                    <Scissors className="w-3 h-3 text-cyan-400" />
+                    <span className="uppercase">{(activePara.photo_transition || photoTransition || 'fade_in_out').replace('_', ' ')}</span>
+                  </span>
                 )}
               </div>
-            )}
 
-            {/* Foreground Live Media Element */}
-            {isImageMedia ? (
-              <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-                <img
-                  key={`media-img-${activePara.id}`}
-                  src={api.getParagraphThumbnailUrl(activePara.id)}
-                  alt={`Shot ${activePara.paragraph_number}`}
-                  style={photoMotionStyle}
-                  className={`w-full h-full ${
-                    fitMode === 'fit' ? 'object-contain' : 'object-cover'
-                  }`}
-                  onError={(e) => {
-                    // Fallback placeholder if file not reachable
-                    (e.target as HTMLElement).style.display = 'none';
-                  }}
-                />
-              </div>
-            ) : (
-              <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-                <video
-                  key={`media-vid-${activePara.id}`}
-                  ref={videoRef}
-                  src={api.getParagraphVideoUrl(activePara.id)}
-                  muted={isMuted}
-                  playsInline
-                  className={`w-full h-full ${
-                    fitMode === 'fit' ? 'object-contain' : 'object-cover'
-                  }`}
-                />
-              </div>
-            )}
-
-            {/* Live Animated On-Screen Text Title Overlay */}
-            {showOnScreenText && Boolean(targetText) && (
-              <div 
-                key={`txt-${activePara?.id}-${textPosition}-${textAnimationStyle}`}
-                className={`absolute left-1/2 -translate-x-1/2 z-20 pointer-events-none w-11/12 max-w-2xl text-center transition-all duration-200 ${
-                  textPosition === 'top' ? 'top-3 sm:top-5' : 'bottom-5 sm:bottom-7'
-                }`}
-              >
-                <div className={`inline-block px-3 py-1 bg-transparent transform ${
-                  textAnimationStyle === 'slide_left' ? 'anim-slide-left' :
-                  textAnimationStyle === 'slide_right' ? 'anim-slide-right' :
-                  textAnimationStyle === 'slide_down' ? 'anim-slide-down' :
-                  textAnimationStyle === 'slide_up' ? 'anim-slide-up' :
-                  textAnimationStyle === 'fade' ? 'anim-fade' : ''
-                }`}>
-                  <p 
-                    className={`text-base sm:text-xl md:text-2xl lg:text-3xl uppercase tracking-wider select-none ${
-                      fontFamily === 'Anton' 
-                        ? "font-['Anton',_sans-serif]" 
-                        : fontFamily === 'Montserrat' 
-                          ? "font-['Montserrat',_sans-serif] font-black" 
-                          : "font-['Impact',_'Anton',_sans-serif]"
-                    } ${
-                      fontColor === 'white' 
-                        ? 'text-white' 
-                        : fontColor === 'cyan' 
-                          ? 'text-cyan-300' 
-                          : 'text-[#FFE800]'
-                    }`}
-                    style={{
-                      WebkitTextStroke: '2.5px #000000',
-                      paintOrder: 'stroke fill',
-                      filter: 'drop-shadow(0 3px 6px rgba(0,0,0,0.95)) drop-shadow(0 1px 2px rgba(0,0,0,1))'
-                    }}
-                  >
-                    {displayedText}
-                    {textAnimationStyle === 'typewriter' && displayedText.length < targetText.length && (
-                      <span 
-                        className="inline-block w-2 h-5 sm:h-6 ml-1 align-middle animate-pulse"
-                        style={{
-                          backgroundColor: fontColor === 'white' ? '#FFFFFF' : fontColor === 'cyan' ? '#00F5FF' : '#FFE800',
-                          boxShadow: '0 0 6px #000000'
-                        }} 
-                      />
-                    )}
-                  </p>
-                </div>
-              </div>
-            )}
-
-            {/* Live Watermark Logo Overlay */}
-            {logoEnabled && (logoUrl || batch.logo_url) && (
-              <div 
-                className={`absolute pointer-events-none z-30 transition-all duration-150 ${
-                  logoPosition === 'top_left' ? 'top-3 left-3 sm:top-5 sm:left-5' :
-                  logoPosition === 'bottom_left' ? 'bottom-3 left-3 sm:bottom-5 sm:left-5' :
-                  logoPosition === 'bottom_right' ? 'bottom-3 right-3 sm:bottom-5 sm:right-5' :
-                  logoPosition === 'center' ? 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' :
-                  'top-3 right-3 sm:top-5 sm:right-5'
-                }`}
-                style={{
-                  width: `${logoScale}%`,
-                  maxWidth: '45%',
-                  minWidth: '40px',
-                  opacity: logoOpacity,
-                }}
-              >
-                <img
-                  src={logoUrl || batch.logo_url}
-                  alt="Watermark Logo"
-                  className="w-full h-auto object-contain drop-shadow-lg select-none"
-                  onError={(e) => {
-                    (e.target as HTMLElement).style.display = 'none';
-                  }}
-                />
-              </div>
-            )}
-
-            {/* Live HUD Badge Overlays in Top Corners */}
-            <div className="absolute top-3 left-3 z-30 flex items-center space-x-2 pointer-events-none">
-              <span className="flex items-center space-x-1 px-2.5 py-1 rounded-lg text-[10px] font-mono font-black bg-black/75 backdrop-blur-md text-white border border-white/20 shadow-lg">
-                <span className="text-cyan-400">SHOT {activePara.paragraph_number}</span>
-                <span className="text-slate-500">/</span>
-                <span className="text-slate-400">{paragraphs.length}</span>
-              </span>
-
-              {isImageMedia ? (
-                <span className="flex items-center space-x-1 px-2 py-1 rounded-lg text-[10px] font-mono font-bold bg-pink-950/80 text-pink-300 border border-pink-500/40 backdrop-blur-md shadow">
-                  <Sparkles className="w-3 h-3 text-pink-400" />
-                  <span className="uppercase">{(activePara.photo_motion || photoMotion || 'zoom_in').replace('_', ' ')}</span>
+              <div className="absolute top-3 right-3 z-30 flex items-center space-x-2 pointer-events-none">
+                <span className="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-black/75 text-emerald-300 border border-emerald-500/30 backdrop-blur-md shadow">
+                  🔴 LIVE PREVIEW &bull; {aspectRatio}
                 </span>
-              ) : (
-                <span className="flex items-center space-x-1 px-2 py-1 rounded-lg text-[10px] font-mono font-bold bg-blue-950/80 text-blue-300 border border-blue-500/40 backdrop-blur-md shadow">
-                  <VideoIcon className="w-3 h-3 text-blue-400" />
-                  <span>VIDEO CLIP</span>
-                </span>
-              )}
-
-              {isImageMedia && (
-                <span className="flex items-center space-x-1 px-2 py-1 rounded-lg text-[10px] font-mono font-bold bg-cyan-950/80 text-cyan-300 border border-cyan-500/40 backdrop-blur-md shadow">
-                  <Scissors className="w-3 h-3 text-cyan-400" />
-                  <span className="uppercase">{(activePara.photo_transition || photoTransition || 'fade_in_out').replace('_', ' ')}</span>
-                </span>
-              )}
+              </div>
+            </>
+          ) : (
+            <div className="text-center p-6 space-y-2 text-slate-500">
+              <ImageIcon className="w-10 h-10 mx-auto text-slate-600" />
+              <p className="text-xs font-mono">No media shots loaded yet</p>
             </div>
-
-            <div className="absolute top-3 right-3 z-30 flex items-center space-x-2 pointer-events-none">
-              <span className="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-black/75 text-emerald-300 border border-emerald-500/30 backdrop-blur-md shadow">
-                🔴 LIVE PREVIEW &bull; {aspectRatio}
-              </span>
-            </div>
-          </>
-        ) : (
-          <div className="text-center p-6 space-y-2 text-slate-500">
-            <ImageIcon className="w-10 h-10 mx-auto text-slate-600" />
-            <p className="text-xs font-mono">No media shots loaded yet</p>
-          </div>
-        )}
+          )}
         </div>
       </div>
 
@@ -615,10 +792,43 @@ export const LiveEditorPlayer: React.FC<LiveEditorPlayerProps> = ({
           </div>
         </div>
 
-        {/* Center: Live Editor Indicator */}
-        <div className="hidden sm:flex items-center space-x-2 text-[11px] font-mono text-slate-400">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span>REAL-TIME EDIT ENGINE: Instant visual preview without re-rendering</span>
+        {/* Center: Live Editor Mode Selector / Indicator */}
+        <div className="flex items-center space-x-2 text-[11px] font-mono">
+          {hasMasterVideo ? (
+            <div className="flex items-center bg-slate-900/90 border border-slate-700/80 p-0.5 rounded-lg shadow-sm">
+              <button
+                type="button"
+                onClick={() => setPreviewMode('composition')}
+                className={`flex items-center space-x-1.5 px-2.5 py-1 rounded text-xs font-bold transition-all cursor-pointer ${
+                  previewMode === 'composition'
+                    ? 'bg-blue-600 text-white shadow-sm'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+                title="Live Multi-Shot Composition: Real-time text styles, Ken Burns photo motion, instant preview without rendering"
+              >
+                <Sparkles className="w-3 h-3 text-amber-300" />
+                <span>Live Edit</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setPreviewMode('rendered')}
+                className={`flex items-center space-x-1.5 px-2.5 py-1 rounded text-xs font-bold transition-all cursor-pointer ${
+                  previewMode === 'rendered'
+                    ? 'bg-emerald-600 text-white shadow-sm'
+                    : 'text-slate-400 hover:text-emerald-300'
+                }`}
+                title="Rendered Master Video: Play the stitched & burned full MP4 directly"
+              >
+                <Film className="w-3 h-3 text-emerald-400" />
+                <span>Master MP4</span>
+              </button>
+            </div>
+          ) : (
+            <div className="hidden sm:flex items-center space-x-2 text-slate-400">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>REAL-TIME EDIT ENGINE: Instant visual preview without re-rendering</span>
+            </div>
+          )}
         </div>
 
         {/* Right: Audio Volume & Fullscreen */}
