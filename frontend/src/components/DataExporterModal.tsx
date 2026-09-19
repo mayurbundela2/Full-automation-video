@@ -3,18 +3,21 @@ import {
   FileSpreadsheet, Copy, Check, Download, Sparkles, X, 
   Mic, Clapperboard, Type, Volume2, Music, Film, AlignLeft, 
   Eye, RefreshCw, Layers, SlidersHorizontal, CheckSquare, Square,
-  Zap, Minimize2
+  Zap, Minimize2, Clock
 } from 'lucide-react';
 import { ClientReferenceParser, ParsedParagraphData } from '../services/clientReferenceParser';
+import { Paragraph } from '../types';
 
 interface DataExporterModalProps {
   isOpen: boolean;
   onClose: () => void;
   initialScript?: string;
+  paragraphs?: Paragraph[];
 }
 
 export type HeadingKey = 
   | 'script'
+  | 'audio_duration'
   | 'video_prompt'
   | 'on_screen_text'
   | 'scene'
@@ -47,6 +50,15 @@ const HEADING_OPTIONS: HeadingOption[] = [
     icon: Mic,
     color: 'text-emerald-400 border-emerald-500/30 bg-emerald-500/10 hover:bg-emerald-500/20',
     activeColor: 'bg-emerald-600 text-white border-emerald-400 shadow-lg shadow-emerald-600/30 ring-2 ring-emerald-400/50',
+  },
+  {
+    key: 'audio_duration',
+    label: 'Audio Duration (e.g. 9 seconds long)',
+    exactPromptTag: 'Audio Duration:',
+    section: 'audio',
+    icon: Clock,
+    color: 'text-amber-400 border-amber-500/30 bg-amber-500/10 hover:bg-amber-500/20',
+    activeColor: 'bg-amber-600 text-white border-amber-400 shadow-lg shadow-amber-600/30 ring-2 ring-amber-400/50',
   },
   {
     key: 'scene',
@@ -288,6 +300,7 @@ export const DataExporterModal: React.FC<DataExporterModalProps> = ({
   isOpen,
   onClose,
   initialScript = '',
+  paragraphs = [],
 }) => {
   const [rawText, setRawText] = useState<string>(initialScript || DEFAULT_SAMPLE_SCRIPT);
   const [parsedShots, setParsedShots] = useState<ParsedParagraphData[]>(() => {
@@ -332,6 +345,10 @@ export const DataExporterModal: React.FC<DataExporterModalProps> = ({
     setSelectedHeadings(['script']);
     setIsNoSpaceMode(false);
   };
+  const selectOnlyAudioDuration = () => {
+    setSelectedHeadings(['audio_duration']);
+    setIsNoSpaceMode(false);
+  };
   const selectOnlyOnScreenText = () => {
     setSelectedHeadings(['on_screen_text']);
     setIsNoSpaceMode(false);
@@ -362,6 +379,20 @@ export const DataExporterModal: React.FC<DataExporterModalProps> = ({
     switch (key) {
       case 'script':
         return shot.transcript || '';
+      case 'audio_duration': {
+        const pNum = shot.paragraph_number;
+        const matchingPara = paragraphs?.find((p) => p.paragraph_number === pNum) || 
+                             paragraphs?.find((_, idx) => (idx + 1) === pNum);
+        const dur = matchingPara?.latest_generation?.tight_duration ?? matchingPara?.latest_generation?.duration;
+        if (dur !== undefined && dur !== null && dur > 0) {
+          const formattedDur = dur % 1 === 0 ? Math.round(dur).toString() : dur.toFixed(1).replace(/\.0$/, '');
+          return `${formattedDur} seconds long`;
+        }
+        // Fallback estimation from transcript
+        const wordCount = (shot.transcript || matchingPara?.transcript || '').trim().split(/\s+/).filter(Boolean).length;
+        const estSec = Math.max(1, Math.round(wordCount / 2.5));
+        return `${estSec} seconds long`;
+      }
       case 'video_prompt':
         return shot.video_prompt || '';
       case 'on_screen_text': {
@@ -421,6 +452,9 @@ export const DataExporterModal: React.FC<DataExporterModalProps> = ({
         if (headingKey === 'on_screen_text') {
           return `${itemNumber}. ${val.toUpperCase()}`;
         }
+        if (headingKey === 'audio_duration') {
+          return `${itemNumber}. ${val.trim()}`;
+        }
         return `${itemNumber}${val}`;
       }
 
@@ -454,6 +488,9 @@ export const DataExporterModal: React.FC<DataExporterModalProps> = ({
       if (headingKey === 'on_screen_text') {
         return `${itemNumber}. ${val.trim().toUpperCase()}`;
       }
+      if (headingKey === 'audio_duration') {
+        return `${itemNumber}. ${val.trim()}`;
+      }
       return `${itemNumber}\n${val.trim()}`;
     }
 
@@ -479,11 +516,13 @@ export const DataExporterModal: React.FC<DataExporterModalProps> = ({
   // Compile formatted text for all shots
   const formattedOutputText = useMemo(() => {
     if (parsedShots.length === 0 || selectedHeadings.length === 0) return '';
-    const joinSeparator = (selectedHeadings.length === 1 && selectedHeadings[0] === 'on_screen_text') ? '\n' : '\n\n';
+    const isSingleLineFormat = selectedHeadings.length === 1 && 
+      (selectedHeadings[0] === 'on_screen_text' || selectedHeadings[0] === 'audio_duration');
+    const joinSeparator = isSingleLineFormat ? '\n' : '\n\n';
     return parsedShots
       .map((shot, idx) => formatSingleShot(shot, idx, isNoSpaceMode))
       .join(joinSeparator);
-  }, [parsedShots, selectedHeadings, showHeadingLabels, isNoSpaceMode]);
+  }, [parsedShots, selectedHeadings, showHeadingLabels, isNoSpaceMode, paragraphs]);
 
   const handleCopy = (text: string, key: string) => {
     if (!text) return;
@@ -619,6 +658,16 @@ export const DataExporterModal: React.FC<DataExporterModalProps> = ({
                 }`}
               >
                 Only Script
+              </button>
+              <button
+                onClick={selectOnlyAudioDuration}
+                className={`px-2.5 py-1 rounded-lg text-[11px] font-bold border transition-all ${
+                  selectedHeadings.length === 1 && selectedHeadings[0] === 'audio_duration' && !isNoSpaceMode
+                    ? 'bg-amber-600 text-white border-amber-400 shadow'
+                    : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'
+                }`}
+              >
+                ⏱️ Audio Durations
               </button>
               <button
                 onClick={selectOnlyOnScreenText}

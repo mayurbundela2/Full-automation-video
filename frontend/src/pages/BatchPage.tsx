@@ -72,7 +72,30 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
   const [wordTimestamps, setWordTimestamps] = useState<any>(null);
   const [loadingTimestamps, setLoadingTimestamps] = useState(false);
   const [copiedWords, setCopiedWords] = useState(false);
+  const [copiedDurations, setCopiedDurations] = useState(false);
   const [activeTab, setActiveTab] = useState<'paragraphs' | 'video'>('paragraphs');
+
+  const handleCopyAudioDurations = () => {
+    if (!currentBatch || !currentBatch.paragraphs || currentBatch.paragraphs.length === 0) return;
+    const lines = currentBatch.paragraphs.map((p, idx) => {
+      const num = p.paragraph_number || (idx + 1);
+      const dur = p.latest_generation?.tight_duration ?? p.latest_generation?.duration;
+      let durText = '';
+      if (dur !== undefined && dur !== null && dur > 0) {
+        const formatted = dur % 1 === 0 ? Math.round(dur).toString() : dur.toFixed(1).replace(/\.0$/, '');
+        durText = `${formatted} seconds long`;
+      } else {
+        const words = (p.transcript || '').trim().split(/\s+/).filter(Boolean).length;
+        const estSec = Math.max(1, Math.round(words / 2.5));
+        durText = `${estSec} seconds long`;
+      }
+      return `${num}. ${durText}`;
+    });
+    const textToCopy = lines.join('\n');
+    navigator.clipboard.writeText(textToCopy);
+    setCopiedDurations(true);
+    setTimeout(() => setCopiedDurations(false), 2000);
+  };
 
   const fetchBatches = async () => {
     try {
@@ -650,6 +673,24 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
               </button>
 
               <button
+                onClick={handleCopyAudioDurations}
+                className="flex items-center space-x-2 px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-95 text-slate-200 text-xs font-bold border border-slate-700 transition-all shadow"
+                title="Copy list of all paragraph audio durations (e.g. 1. 9 seconds long)"
+              >
+                {copiedDurations ? (
+                  <>
+                    <Check className="w-4 h-4 text-emerald-400" />
+                    <span className="text-emerald-400">COPIED DURATIONS!</span>
+                  </>
+                ) : (
+                  <>
+                    <Clock className="w-4 h-4 text-amber-400" />
+                    <span>COPY DURATIONS</span>
+                  </>
+                )}
+              </button>
+
+              <button
                 onClick={handleGenerateAll}
                 disabled={generatingAll || currentBatch.ready_count === 0}
                 className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed text-white text-xs font-bold shadow-lg shadow-blue-600/25 active:scale-95 transition-all"
@@ -1182,6 +1223,7 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
         isOpen={showDataExporter}
         onClose={() => setShowDataExporter(false)}
         initialScript={currentBatch?.raw_reference || ''}
+        paragraphs={currentBatch?.paragraphs || []}
       />
 
       {/* Universal Loading Modal with Progress Bar, Percentage & ETA */}

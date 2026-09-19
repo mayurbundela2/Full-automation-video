@@ -71,9 +71,33 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const [cleaningCache, setCleaningCache] = useState<boolean>(false);
   const [showCleanModal, setShowCleanModal] = useState<boolean>(false);
   const [cacheCleanMessage, setCacheCleanMessage] = useState<string | null>(null);
+  const [copiedDurations, setCopiedDurations] = useState<boolean>(false);
   const [audioSource, setAudioSource] = useState<'master' | 'tight'>(
     (batch.tight_mp4_path || batch.tight_audio?.duration) ? 'tight' : 'master'
   );
+
+  const handleCopyDurations = () => {
+    if (!batch.paragraphs || !batch.paragraphs.length) return;
+    const lines = batch.paragraphs.map((p, idx) => {
+      const num = p.paragraph_number || (idx + 1);
+      const dur = audioSource === 'tight'
+        ? (p.latest_generation?.tight_duration ?? p.latest_generation?.duration)
+        : (p.latest_generation?.duration ?? p.latest_generation?.tight_duration);
+      let durText = '';
+      if (dur !== undefined && dur !== null && dur > 0) {
+        const formatted = dur % 1 === 0 ? Math.round(dur).toString() : dur.toFixed(1).replace(/\.0$/, '');
+        durText = `${formatted} seconds long`;
+      } else {
+        const words = (p.transcript || '').trim().split(/\s+/).filter(Boolean).length;
+        const estSec = Math.max(1, Math.round(words / 2.5));
+        durText = `${estSec} seconds long`;
+      }
+      return `${num}. ${durText}`;
+    });
+    navigator.clipboard.writeText(lines.join('\n'));
+    setCopiedDurations(true);
+    setTimeout(() => setCopiedDurations(false), 2000);
+  };
 
   useEffect(() => {
     if (batch.aspect_ratio && batch.aspect_ratio !== aspectRatio) {
@@ -707,6 +731,26 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
             >
               <Upload className="w-3.5 h-3.5 text-blue-400" />
               <span>SELECT FILES</span>
+            </button>
+
+            {/* Copy All Audio Durations Button */}
+            <button
+              type="button"
+              onClick={handleCopyDurations}
+              className="flex items-center justify-center space-x-1.5 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-semibold transition-all active:scale-95 whitespace-nowrap cursor-pointer"
+              title="Copy list of all paragraph audio durations (e.g. 1. 9 seconds long)"
+            >
+              {copiedDurations ? (
+                <>
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                  <span className="text-emerald-400">COPIED!</span>
+                </>
+              ) : (
+                <>
+                  <Clock className="w-3.5 h-3.5 text-amber-400" />
+                  <span>COPY DURATIONS</span>
+                </>
+              )}
             </button>
 
             {/* Scan & Match Button */}
