@@ -798,9 +798,13 @@ class VideoService:
                     )
                     audio_map_args = ["-map", "[a]"]
                 else:
-                    # Silent video / visual-only clip
-                    filter_complex = v_chain
-                    audio_map_args = ["-map", "1:a"]
+                    # Silent video / visual-only clip - format narration audio consistently
+                    n_vol = round(max(0.0, min(2.0, narration_volume)), 2)
+                    filter_complex = (
+                        f"{v_chain};"
+                        f"[1:a]aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=stereo,volume={n_vol}[a]"
+                    )
+                    audio_map_args = ["-map", "[a]"]
 
                 cmd = [
                     ffmpeg_bin, "-y",
@@ -813,6 +817,8 @@ class VideoService:
                     "-pix_fmt", "yuv420p",
                     "-preset", "fast",
                     "-c:a", "aac",
+                    "-ar", "44100",
+                    "-ac", "2",
                     "-b:a", "320k",
                     "-t", str(target_duration),
                     str(out_v_path)
@@ -825,6 +831,8 @@ class VideoService:
 
                 orig_duration = target_duration
                 speed_factor = 1.0
+                n_vol = round(max(0.0, min(2.0, narration_volume)), 2)
+                audio_filter = f"[1:a]aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=stereo,volume={n_vol}[a]"
 
                 if has_text:
                     photo_filter = cls.build_photo_motion_filter(
@@ -838,13 +846,14 @@ class VideoService:
                         font_family=font_family, font_color=font_color,
                         text_x=text_x, text_y=text_y, text_scale=text_scale
                     )
-                    filter_complex = f"{photo_filter};{text_filter}"
+                    filter_complex = f"{photo_filter};{text_filter};{audio_filter}"
                 else:
-                    filter_complex = cls.build_photo_motion_filter(
+                    photo_filter = cls.build_photo_motion_filter(
                         "[0:v]", "[v]", target_width, target_height,
                         target_duration, motion=photo_motion, transition=photo_transition,
                         fit_mode=fit_mode
                     )
+                    filter_complex = f"{photo_filter};{audio_filter}"
 
                 cmd = [
                     ffmpeg_bin, "-y",
@@ -853,11 +862,13 @@ class VideoService:
                     "-i", str(a_path),
                     "-filter_complex", filter_complex,
                     "-map", "[v]",
-                    "-map", "1:a",
+                    "-map", "[a]",
                     "-c:v", "libx264",
                     "-pix_fmt", "yuv420p",
                     "-preset", "fast",
                     "-c:a", "aac",
+                    "-ar", "44100",
+                    "-ac", "2",
                     "-b:a", "320k",
                     "-t", str(target_duration),
                     str(out_v_path)
@@ -983,6 +994,8 @@ class VideoService:
                 "-pix_fmt", "yuv420p",
                 "-preset", "fast",
                 "-c:a", "aac",
+                "-ar", "44100",
+                "-ac", "2",
                 "-b:a", "320k",
                 str(out_path)
             ]
@@ -1032,9 +1045,9 @@ class VideoService:
         audio_args = []
         if audio_path and Path(audio_path).exists():
             a_p = Path(audio_path).resolve()
-            audio_args = ["-i", str(a_p), "-c:a", "aac", "-b:a", "320k", "-map", "1:a"]
+            audio_args = ["-i", str(a_p), "-c:a", "aac", "-ar", "44100", "-ac", "2", "-b:a", "320k", "-map", "1:a"]
         else:
-            audio_args = ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-c:a", "aac", "-b:a", "192k", "-map", "1:a"]
+            audio_args = ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-c:a", "aac", "-ar", "44100", "-ac", "2", "-b:a", "192k", "-map", "1:a"]
 
         cmd = [
             ffmpeg_bin, "-y",

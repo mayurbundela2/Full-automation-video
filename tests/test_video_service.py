@@ -69,6 +69,10 @@ def test_image_sync_to_audio(tmp_path):
     assert 1.8 <= res["target_duration"] <= 2.2
     assert os.path.getsize(res["video_path"]) > 1000
 
+    info = VideoService.get_media_info(res["video_path"], ffmpeg_path=ffmpeg_bin)
+    assert info["has_audio"] is True
+    assert info["duration"] >= 1.8
+
 
 def test_video_speed_sync_to_audio(tmp_path):
     ffmpeg_bin = AudioConverter.resolve_ffmpeg()
