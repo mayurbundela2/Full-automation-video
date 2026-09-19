@@ -332,6 +332,10 @@ export const DataExporterModal: React.FC<DataExporterModalProps> = ({
     setSelectedHeadings(['script']);
     setIsNoSpaceMode(false);
   };
+  const selectOnlyOnScreenText = () => {
+    setSelectedHeadings(['on_screen_text']);
+    setIsNoSpaceMode(false);
+  };
   const selectOnlyVideoPrompts = () => {
     setSelectedHeadings(['video_prompt']);
     setIsNoSpaceMode(false);
@@ -360,8 +364,10 @@ export const DataExporterModal: React.FC<DataExporterModalProps> = ({
         return shot.transcript || '';
       case 'video_prompt':
         return shot.video_prompt || '';
-      case 'on_screen_text':
-        return shot.on_screen_text || '';
+      case 'on_screen_text': {
+        const txt = shot.on_screen_text || (shot.transcript ? shot.transcript.replace(/\[.*?\]/g, '') : '');
+        return txt.trim().toUpperCase();
+      }
       case 'scene':
         return shot.scene || '';
       case 'sample_context':
@@ -409,8 +415,12 @@ export const DataExporterModal: React.FC<DataExporterModalProps> = ({
     if (noSpace) {
       // NO-SPACE / COMPACT MODE: continuous, zero blank lines
       if (selectedHeadings.length === 1) {
-        const rawVal = getShotValue(shot, selectedHeadings[0]);
+        const headingKey = selectedHeadings[0];
+        const rawVal = getShotValue(shot, headingKey);
         const val = compactFieldText(rawVal);
+        if (headingKey === 'on_screen_text') {
+          return `${itemNumber}. ${val.toUpperCase()}`;
+        }
         return `${itemNumber}${val}`;
       }
 
@@ -439,14 +449,21 @@ export const DataExporterModal: React.FC<DataExporterModalProps> = ({
 
     // NORMAL SPACED MODE
     if (selectedHeadings.length === 1) {
-      const val = getShotValue(shot, selectedHeadings[0]);
+      const headingKey = selectedHeadings[0];
+      const val = getShotValue(shot, headingKey);
+      if (headingKey === 'on_screen_text') {
+        return `${itemNumber}. ${val.trim().toUpperCase()}`;
+      }
       return `${itemNumber}\n${val.trim()}`;
     }
 
     const fieldBlocks: string[] = [];
     for (const headingKey of selectedHeadings) {
       const opt = HEADING_OPTIONS.find((h) => h.key === headingKey);
-      const val = getShotValue(shot, headingKey);
+      let val = getShotValue(shot, headingKey);
+      if (headingKey === 'on_screen_text') {
+        val = val.toUpperCase();
+      }
       if (val && val.trim()) {
         if (showHeadingLabels) {
           fieldBlocks.push(`[${opt?.label || headingKey}]\n${val.trim()}`);
@@ -462,9 +479,10 @@ export const DataExporterModal: React.FC<DataExporterModalProps> = ({
   // Compile formatted text for all shots
   const formattedOutputText = useMemo(() => {
     if (parsedShots.length === 0 || selectedHeadings.length === 0) return '';
+    const joinSeparator = (selectedHeadings.length === 1 && selectedHeadings[0] === 'on_screen_text') ? '\n' : '\n\n';
     return parsedShots
       .map((shot, idx) => formatSingleShot(shot, idx, isNoSpaceMode))
-      .join('\n\n');
+      .join(joinSeparator);
   }, [parsedShots, selectedHeadings, showHeadingLabels, isNoSpaceMode]);
 
   const handleCopy = (text: string, key: string) => {
@@ -601,6 +619,16 @@ export const DataExporterModal: React.FC<DataExporterModalProps> = ({
                 }`}
               >
                 Only Script
+              </button>
+              <button
+                onClick={selectOnlyOnScreenText}
+                className={`px-2.5 py-1 rounded-lg text-[11px] font-bold border transition-all ${
+                  selectedHeadings.length === 1 && selectedHeadings[0] === 'on_screen_text' && !isNoSpaceMode
+                    ? 'bg-amber-600 text-white border-amber-400 shadow'
+                    : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'
+                }`}
+              >
+                Only On-Screen Text
               </button>
               <button
                 onClick={selectOnlyVideoPrompts}
