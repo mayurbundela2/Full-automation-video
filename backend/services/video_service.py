@@ -966,6 +966,15 @@ class VideoService:
 
         ffmpeg_bin = AudioConverter.resolve_ffmpeg(ffmpeg_path)
 
+        # Calculate expected total duration
+        expected_duration = 0.0
+        for p in valid_paths:
+            try:
+                minfo = cls.get_media_info(str(p), ffmpeg_bin)
+                expected_duration += minfo.get("duration", 0.0)
+            except Exception:
+                pass
+
         # 1. Attempt fast stream copy concatenation
         copy_cmd = [
             ffmpeg_bin, "-y",
@@ -979,11 +988,17 @@ class VideoService:
         success = False
         try:
             subprocess.run(copy_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
-            success = out_path.exists() and out_path.stat().st_size > 1000
+            if out_path.exists() and out_path.stat().st_size > 1000:
+                info = cls.get_media_info(str(out_path), ffmpeg_bin)
+                # Verify duration matches expected duration within reasonable tolerance
+                if expected_duration > 0 and abs(info.get("duration", 0.0) - expected_duration) <= 2.0:
+                    success = True
+                else:
+                    success = False
         except Exception:
             success = False
 
-        # 2. Fallback to re-encode concat if stream copy failed
+        # 2. Fallback to re-encode concat if stream copy failed or had timestamp/DTS blowout
         if not success:
             reencode_cmd = [
                 ffmpeg_bin, "-y",
@@ -992,7 +1007,7 @@ class VideoService:
                 "-i", str(concat_list_file),
                 "-c:v", "libx264",
                 "-pix_fmt", "yuv420p",
-                "-preset", "fast",
+                "-preset", "veryfast",
                 "-c:a", "aac",
                 "-ar", "44100",
                 "-ac", "2",
@@ -1030,6 +1045,7 @@ class VideoService:
     ) -> Dict[str, Any]:
         """
         Generates a clean solid-color video clip with audio for paragraphs that don't have custom media.
+        Ensures consistent stream mapping (0:v for video, 1:a for audio).
         """
         out_p = Path(output_path).resolve()
         out_p.parent.mkdir(parents=True, exist_ok=True)
@@ -1042,21 +1058,25 @@ class VideoService:
         if color.startswith("#"):
             color = f"0x{color[1:]}"
 
-        audio_args = []
         if audio_path and Path(audio_path).exists():
             a_p = Path(audio_path).resolve()
-            audio_args = ["-i", str(a_p), "-c:a", "aac", "-ar", "44100", "-ac", "2", "-b:a", "320k", "-map", "1:a"]
+            audio_inputs = ["-i", str(a_p)]
         else:
-            audio_args = ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-c:a", "aac", "-ar", "44100", "-ac", "2", "-b:a", "192k", "-map", "1:a"]
+            audio_inputs = ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]
 
         cmd = [
             ffmpeg_bin, "-y",
             "-f", "lavfi", "-i", f"color=c={color}:s={w}x{h}:d={dur}:r=30",
-            *audio_args,
+            *audio_inputs,
             "-map", "0:v",
+            "-map", "1:a",
             "-c:v", "libx264",
             "-pix_fmt", "yuv420p",
             "-preset", "veryfast",
+            "-c:a", "aac",
+            "-ar", "44100",
+            "-ac", "2",
+            "-b:a", "320k",
             "-t", str(dur),
             str(out_p)
         ]
