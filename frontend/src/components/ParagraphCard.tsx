@@ -169,7 +169,7 @@ export const ParagraphCard: React.FC<ParagraphCardProps> = ({
           )}
 
           {/* AI Studio Style Voice Controls Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-3 bg-[#0B1220]/70 p-3.5 rounded-xl border border-slate-800/80">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3 bg-[#0B1220]/70 p-3.5 rounded-xl border border-slate-800/80">
             {/* Voice Dropdown */}
             <div className="space-y-1">
               <label className="text-[11px] font-semibold text-studio-textMuted uppercase tracking-wider block">
@@ -185,6 +185,31 @@ export const ParagraphCard: React.FC<ParagraphCardProps> = ({
                     {v.name} ({v.gender})
                   </option>
                 ))}
+              </select>
+            </div>
+
+            {/* Voice Speed */}
+            <div className="space-y-1">
+              <label className="text-[11px] font-semibold text-amber-400 uppercase tracking-wider block">
+                Speed
+              </label>
+              <select
+                value={paragraph.voice_speed !== undefined && paragraph.voice_speed !== null ? String(paragraph.voice_speed) : ''}
+                onChange={(e) => handleFieldChange('voice_speed', e.target.value ? parseFloat(e.target.value) : null)}
+                className="w-full bg-[#131E33] border border-amber-500/40 rounded-lg px-2 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500"
+              >
+                <option value="">Default (Inherit)</option>
+                <option value="0.8">0.80x (Slow)</option>
+                <option value="0.9">0.90x (Relaxed)</option>
+                <option value="1.0">1.00x (Normal)</option>
+                <option value="1.05">1.05x (Brisk)</option>
+                <option value="1.1">1.10x (Dynamic Fast)</option>
+                <option value="1.15">1.15x (Energetic)</option>
+                <option value="1.2">1.20x (Fast Pace)</option>
+                <option value="1.25">1.25x (Viral Short)</option>
+                <option value="1.3">1.30x (Ultra Fast)</option>
+                <option value="1.4">1.40x (Super Fast)</option>
+                <option value="1.5">1.50x (1.5x Max)</option>
               </select>
             </div>
 

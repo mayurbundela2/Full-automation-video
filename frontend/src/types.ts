@@ -37,6 +37,7 @@ export interface Generation {
   part_number?: string;
   voice: string;
   model: string;
+  voice_speed?: number;
   duration?: number;
   wav_path?: string;
   mp3_path?: string;
@@ -62,6 +63,8 @@ export interface Paragraph {
   pace?: string;
   accent?: string;
   voice?: string;
+  voice_speed?: number;
+  model?: string;
   director_notes?: string;
   additional_notes?: string;
   on_screen_text?: string;
@@ -147,6 +150,8 @@ export interface Batch {
   text_animation_style?: string;
   text_position?: 'top' | 'bottom' | string;
   show_on_screen_text?: boolean;
+  voice_speed?: number;
+  gemini_model?: string;
 }
 
 export interface MediaMatchItem {
@@ -178,6 +183,7 @@ export interface AppSettings {
   gemini_api_key?: string;
   gemini_model: string;
   default_voice: string;
+  voice_speed: number;
   max_tts_characters: number;
   max_tts_words: number;
   near_limit_threshold: number;

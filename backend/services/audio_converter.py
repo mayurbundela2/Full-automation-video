@@ -207,6 +207,60 @@ class AudioConverter:
         }
 
     @classmethod
+    def apply_voice_speed(
+        cls,
+        input_wav: str,
+        output_wav: Optional[str] = None,
+        speed: float = 1.0,
+        ffmpeg_path: str = "ffmpeg"
+    ) -> str:
+        """
+        Adjusts voiceover speaking rate without changing pitch using FFmpeg atempo filter.
+        Supports speed multipliers from 0.5 to 2.5 (1.0 = normal speaking speed).
+        If output_wav is omitted, modifies the input_wav file in place safely.
+        """
+        speed = max(0.5, min(2.5, round(float(speed), 2)))
+        in_p = Path(input_wav).resolve()
+        out_p = Path(output_wav).resolve() if output_wav else in_p
+        out_p.parent.mkdir(parents=True, exist_ok=True)
+
+        if not in_p.exists():
+            raise FileNotFoundError(f"Source WAV not found: {input_wav}")
+
+        if abs(speed - 1.0) < 0.01:
+            if in_p != out_p:
+                shutil.copy2(str(in_p), str(out_p))
+            return str(out_p)
+
+        ffmpeg_bin = cls.resolve_ffmpeg(ffmpeg_path)
+
+        # atempo filter operates in 0.5 to 2.0 range per pass; chain if > 2.0 or < 0.5
+        if 0.5 <= speed <= 2.0:
+            af_filter = f"atempo={speed}"
+        elif speed > 2.0:
+            af_filter = f"atempo=2.0,atempo={round(speed/2.0, 3)}"
+        else:
+            af_filter = f"atempo=0.5,atempo={round(speed/0.5, 3)}"
+
+        # If modifying in place, output to temporary file first
+        is_same_file = in_p == out_p
+        target_dest = out_p if not is_same_file else out_p.parent / f"temp_speed_{out_p.name}"
+
+        cmd = [
+            ffmpeg_bin, "-y",
+            "-threads", "0",
+            "-i", str(in_p),
+            "-af", af_filter,
+            str(target_dest)
+        ]
+        subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+
+        if is_same_file:
+            shutil.move(str(target_dest), str(out_p))
+
+        return str(out_p)
+
+    @classmethod
     def tighten_and_trim_silence(
         cls,
         input_wav: str,

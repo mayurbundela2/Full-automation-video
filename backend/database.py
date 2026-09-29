@@ -92,6 +92,10 @@ def init_db():
                 cursor.execute("ALTER TABLE batches ADD COLUMN text_position VARCHAR(50) DEFAULT 'top'")
             if "show_on_screen_text" not in columns:
                 cursor.execute("ALTER TABLE batches ADD COLUMN show_on_screen_text BOOLEAN DEFAULT 1")
+            if "voice_speed" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN voice_speed FLOAT DEFAULT 1.0")
+            if "gemini_model" not in columns:
+                cursor.execute("ALTER TABLE batches ADD COLUMN gemini_model VARCHAR(100) DEFAULT 'gemini-3.8-flash-tts'")
 
             cursor.execute("PRAGMA table_info(paragraphs)")
             p_cols = [row[1] for row in cursor.fetchall()]
@@ -113,10 +117,17 @@ def init_db():
                 ("thumbnail_path", "VARCHAR(500)"),
                 ("photo_motion", "VARCHAR(50) DEFAULT 'zoom_in'"),
                 ("photo_transition", "VARCHAR(50) DEFAULT 'fade_in_out'"),
+                ("voice_speed", "FLOAT DEFAULT 1.0"),
+                ("model", "VARCHAR(100)"),
             ]
             for col_name, col_type in new_p_cols:
                 if col_name not in p_cols:
                     cursor.execute(f"ALTER TABLE paragraphs ADD COLUMN {col_name} {col_type}")
+
+            cursor.execute("PRAGMA table_info(generations)")
+            g_cols = [row[1] for row in cursor.fetchall()]
+            if "voice_speed" not in g_cols:
+                cursor.execute("ALTER TABLE generations ADD COLUMN voice_speed FLOAT DEFAULT 1.0")
 
             conn.commit()
         except Exception as e:

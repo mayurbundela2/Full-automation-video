@@ -21,8 +21,9 @@ load_dotenv(BASE_DIR / ".env")
 class AppConfig(BaseSettings):
     # Gemini API
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
-    GEMINI_MODEL: str = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-tts-preview")
+    GEMINI_MODEL: str = os.getenv("GEMINI_MODEL", "gemini-3.8-flash-tts")
     DEFAULT_VOICE: str = "Algenib"
+    DEFAULT_VOICE_SPEED: float = float(os.getenv("DEFAULT_VOICE_SPEED", "1.0"))
 
     # Length Limits
     MAX_TTS_CHARACTERS: int = 3000

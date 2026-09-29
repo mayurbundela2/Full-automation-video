@@ -260,7 +260,9 @@ def enrich_batch(batch: Batch, db: Session) -> BatchResponse:
         font_color=batch.font_color or "yellow",
         text_animation_style=batch.text_animation_style or "slide_down",
         text_position=batch.text_position or "top",
-        show_on_screen_text=bool(batch.show_on_screen_text if batch.show_on_screen_text is not None else True)
+        show_on_screen_text=bool(batch.show_on_screen_text if batch.show_on_screen_text is not None else True),
+        voice_speed=batch.voice_speed if getattr(batch, "voice_speed", None) is not None else 1.0,
+        gemini_model=batch.gemini_model if getattr(batch, "gemini_model", None) else "gemini-3.8-flash-tts"
     )
 
 
@@ -1801,6 +1803,10 @@ def update_batch_video_config(
         batch.text_position = config.text_position
     if config.show_on_screen_text is not None:
         batch.show_on_screen_text = config.show_on_screen_text
+    if config.voice_speed is not None:
+        batch.voice_speed = config.voice_speed
+    if config.gemini_model is not None:
+        batch.gemini_model = config.gemini_model
     db.commit()
     db.refresh(batch)
     return enrich_batch(batch, db)

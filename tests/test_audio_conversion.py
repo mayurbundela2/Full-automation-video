@@ -79,3 +79,23 @@ def test_combine_audio_files(tmp_path):
     assert res["combined_count"] == 2
     # 1.5s + 0.4s gap + 2.0s = approx 3.9s
     assert 3.7 <= res["duration"] <= 4.1
+
+
+def test_apply_voice_speed(tmp_path):
+    demo_pcm = AudioConverter.generate_demo_wav(duration_seconds=2.0, sample_rate=24000)
+    wav_path = tmp_path / "speed_test.wav"
+    AudioConverter.save_wav_master(demo_pcm, str(wav_path), sample_rate=24000, channels=1)
+
+    initial_info = AudioConverter.get_audio_info(str(wav_path))
+    assert 1.9 <= initial_info["duration"] <= 2.1
+
+    # Speed up by 1.25x (duration should be approx 2.0 / 1.25 = 1.6s)
+    speed_result = AudioConverter.apply_voice_speed(
+        input_wav=str(wav_path),
+        speed=1.25,
+        ffmpeg_path=AudioConverter.resolve_ffmpeg()
+    )
+    assert os.path.exists(speed_result)
+    new_info = AudioConverter.get_audio_info(str(wav_path))
+    assert 1.5 <= new_info["duration"] <= 1.7
+

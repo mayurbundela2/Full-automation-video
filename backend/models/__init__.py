@@ -56,6 +56,8 @@ class Batch(Base):
     text_animation_style = Column(String(50), default="slide_down", nullable=True)
     text_position = Column(String(50), default="top", nullable=True)
     show_on_screen_text = Column(Boolean, default=True, nullable=True)
+    voice_speed = Column(Float, default=1.0, nullable=True)
+    gemini_model = Column(String(100), default="gemini-3.8-flash-tts", nullable=True)
     created_at = Column(DateTime(timezone=True), default=utc_now)
     updated_at = Column(DateTime(timezone=True), default=utc_now, onupdate=utc_now)
 
@@ -80,6 +82,8 @@ class Paragraph(Base):
     pace = Column(String(100), nullable=True, default="Natural")
     accent = Column(String(100), nullable=True, default="Neutral")
     voice = Column(String(100), nullable=True, default="Algenib")
+    voice_speed = Column(Float, default=1.0, nullable=True)
+    model = Column(String(100), nullable=True)
     director_notes = Column(Text, nullable=True)
     additional_notes = Column(Text, nullable=True)
 
@@ -138,6 +142,7 @@ class Generation(Base):
     
     voice = Column(String(100), nullable=False)
     model = Column(String(100), nullable=False)
+    voice_speed = Column(Float, default=1.0, nullable=True)
     duration = Column(Float, nullable=True)
     
     wav_path = Column(String(500), nullable=True)

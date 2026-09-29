@@ -24,6 +24,7 @@ def get_settings(db: Session = Depends(get_db)):
         gemini_api_key_masked=masked_key,
         gemini_model=get_setting_val(db, "GEMINI_MODEL", settings.GEMINI_MODEL),
         default_voice=get_setting_val(db, "DEFAULT_VOICE", settings.DEFAULT_VOICE),
+        voice_speed=float(get_setting_val(db, "DEFAULT_VOICE_SPEED", settings.DEFAULT_VOICE_SPEED)),
         max_tts_characters=int(get_setting_val(db, "MAX_TTS_CHARACTERS", settings.MAX_TTS_CHARACTERS)),
         max_tts_words=int(get_setting_val(db, "MAX_TTS_WORDS", settings.MAX_TTS_WORDS)),
         near_limit_threshold=float(get_setting_val(db, "NEAR_LIMIT_THRESHOLD", settings.NEAR_LIMIT_THRESHOLD)),
@@ -44,7 +45,7 @@ def update_settings(update_data: SettingsUpdateSchema, db: Session = Depends(get
 
     for field, val in data_dict.items():
         if val is not None:
-            key_upper = field.upper()
+            key_upper = "DEFAULT_VOICE_SPEED" if field == "voice_speed" else field.upper()
             # If empty string was sent for API key, don't erase if masked
             if field == "gemini_api_key" and not val.strip():
                 continue

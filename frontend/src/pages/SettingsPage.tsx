@@ -38,6 +38,7 @@ export const SettingsPage: React.FC = () => {
       const payload: Partial<AppSettings> = {
         gemini_model: settings.gemini_model,
         default_voice: settings.default_voice,
+        voice_speed: Number(settings.voice_speed || 1.0),
         max_tts_characters: Number(settings.max_tts_characters),
         max_tts_words: Number(settings.max_tts_words),
         near_limit_threshold: Number(settings.near_limit_threshold),
@@ -151,14 +152,64 @@ export const SettingsPage: React.FC = () => {
 
             <div className="space-y-1.5">
               <label className="text-xs font-semibold text-white">Gemini TTS Model</label>
-              <input
-                type="text"
-                value={settings.gemini_model}
-                onChange={(e) => setSettings({ ...settings, gemini_model: e.target.value })}
+              <select
+                value={['gemini-3.8-flash-tts', 'gemini-3.8-flash-lite-tts', 'gemini-3.1-flash-tts-preview', 'gemini-2.5-flash-preview-tts', 'gemini-2.0-flash'].includes(settings.gemini_model) ? settings.gemini_model : 'custom'}
+                onChange={(e) => {
+                  if (e.target.value !== 'custom') {
+                    setSettings({ ...settings, gemini_model: e.target.value });
+                  }
+                }}
                 className="w-full bg-[#0B101B] border border-slate-700 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-blue-500 font-mono"
-              />
+              >
+                <option value="gemini-3.8-flash-tts">✨ Gemini 3.8 Flash TTS (Latest / Expressive Studio)</option>
+                <option value="gemini-3.8-flash-lite-tts">⚡ Gemini 3.8 Flash-Lite TTS (Fast / High-Throughput)</option>
+                <option value="gemini-3.1-flash-tts-preview">Gemini 3.1 Flash TTS Preview</option>
+                <option value="gemini-2.5-flash-preview-tts">Gemini 2.5 Flash TTS Preview</option>
+                <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
+                <option value="custom">Custom Model Identifier...</option>
+              </select>
+              {!['gemini-3.8-flash-tts', 'gemini-3.8-flash-lite-tts', 'gemini-3.1-flash-tts-preview', 'gemini-2.5-flash-preview-tts', 'gemini-2.0-flash'].includes(settings.gemini_model) && (
+                <input
+                  type="text"
+                  value={settings.gemini_model}
+                  onChange={(e) => setSettings({ ...settings, gemini_model: e.target.value })}
+                  placeholder="Enter custom model identifier..."
+                  className="w-full mt-1.5 bg-[#0B101B] border border-slate-700 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-blue-500 font-mono"
+                />
+              )}
               <p className="text-[11px] text-studio-textMuted">
-                Recommended: <code className="text-blue-300">gemini-3.1-flash-tts-preview</code> or <code className="text-blue-300">gemini-2.5-flash-preview-tts</code>
+                Active: <code className="text-blue-300">{settings.gemini_model}</code> (auto-fallbacks if quota is reached)
+              </p>
+            </div>
+
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between">
+                <label className="text-xs font-semibold text-white">Default Voiceover Speed (Speaking Rate)</label>
+                <span className="text-xs font-mono font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">
+                  {Number(settings.voice_speed || 1.0).toFixed(2)}x
+                </span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <select
+                  value={settings.voice_speed || 1.0}
+                  onChange={(e) => setSettings({ ...settings, voice_speed: parseFloat(e.target.value) })}
+                  className="w-full bg-[#0B101B] border border-slate-700 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-blue-500 font-mono"
+                >
+                  <option value="0.80">0.80x (Slow / Deliberate)</option>
+                  <option value="0.90">0.90x (Relaxed Pace)</option>
+                  <option value="1.00">1.00x (Normal / Default Speed)</option>
+                  <option value="1.05">1.05x (Slightly Brisk)</option>
+                  <option value="1.10">1.10x (Dynamic Fast)</option>
+                  <option value="1.15">1.15x (Energetic Voiceover)</option>
+                  <option value="1.20">1.20x (Fast Pace)</option>
+                  <option value="1.25">1.25x (Viral Short Pace)</option>
+                  <option value="1.30">1.30x (High Energy / Ultra Fast)</option>
+                  <option value="1.40">1.40x (1.4x Speed)</option>
+                  <option value="1.50">1.50x (1.5x Speed)</option>
+                </select>
+              </div>
+              <p className="text-[11px] text-studio-textMuted">
+                Speeds up narration audio without changing voice pitch. Default is <strong className="text-slate-200">1.00x</strong>.
               </p>
             </div>
 

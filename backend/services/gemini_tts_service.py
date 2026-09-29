@@ -23,8 +23,11 @@ class GeminiTTSService:
     ]
 
     FALLBACK_MODELS = [
+        "gemini-3.8-flash-tts",
+        "gemini-3.8-flash-lite-tts",
         "gemini-3.1-flash-tts-preview",
-        "gemini-2.5-flash-preview-tts"
+        "gemini-2.5-flash-preview-tts",
+        "gemini-2.0-flash"
     ]
 
     @classmethod
@@ -97,7 +100,7 @@ class GeminiTTSService:
         prompt: str,
         transcript: str,
         voice: str = "Algenib",
-        model: str = "gemini-3.1-flash-tts-preview",
+        model: str = "gemini-3.8-flash-tts",
         api_key: Optional[str] = None,
         max_retries: int = 2
     ) -> Tuple[bytes, Dict[str, Any]]:

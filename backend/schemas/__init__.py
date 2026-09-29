@@ -7,8 +7,9 @@ from pydantic import BaseModel, Field, ConfigDict
 class SettingsSchema(BaseModel):
     gemini_api_key_masked: str = ""
     gemini_api_key: Optional[str] = None  # only sent on update
-    gemini_model: str = "gemini-3.1-flash-tts-preview"
+    gemini_model: str = "gemini-3.8-flash-tts"
     default_voice: str = "Algenib"
+    voice_speed: float = 1.0
     max_tts_characters: int = 3000
     max_tts_words: int = 500
     near_limit_threshold: float = 0.80
@@ -26,6 +27,7 @@ class SettingsUpdateSchema(BaseModel):
     gemini_api_key: Optional[str] = None
     gemini_model: Optional[str] = None
     default_voice: Optional[str] = None
+    voice_speed: Optional[float] = None
     max_tts_characters: Optional[int] = None
     max_tts_words: Optional[int] = None
     near_limit_threshold: Optional[float] = None
@@ -74,6 +76,8 @@ class ParagraphBase(BaseModel):
     pace: Optional[str] = "Natural"
     accent: Optional[str] = "Neutral"
     voice: Optional[str] = "Algenib"
+    voice_speed: Optional[float] = 1.0
+    model: Optional[str] = None
     director_notes: Optional[str] = None
     additional_notes: Optional[str] = None
     transcript: str = ""
@@ -114,6 +118,8 @@ class ParagraphUpdate(BaseModel):
     pace: Optional[str] = None
     accent: Optional[str] = None
     voice: Optional[str] = None
+    voice_speed: Optional[float] = None
+    model: Optional[str] = None
     director_notes: Optional[str] = None
     additional_notes: Optional[str] = None
     on_screen_text: Optional[str] = None
@@ -214,6 +220,8 @@ class BatchResponse(BaseModel):
     text_animation_style: Optional[str] = "slide_down"
     text_position: Optional[str] = "top"
     show_on_screen_text: Optional[bool] = True
+    voice_speed: Optional[float] = 1.0
+    gemini_model: Optional[str] = "gemini-3.8-flash-tts"
 
 
 class VideoConfigUpdateRequest(BaseModel):
@@ -234,6 +242,8 @@ class VideoConfigUpdateRequest(BaseModel):
     text_animation_style: Optional[str] = None
     text_position: Optional[str] = None
     show_on_screen_text: Optional[bool] = None
+    voice_speed: Optional[float] = None
+    gemini_model: Optional[str] = None
 
 
 class BulkMotionTransitionRequest(BaseModel):
@@ -299,6 +309,7 @@ class GenerationResponse(BaseModel):
     part_number: Optional[str]
     voice: str
     model: str
+    voice_speed: Optional[float] = 1.0
     duration: Optional[float]
     wav_path: Optional[str]
     mp3_path: Optional[str]

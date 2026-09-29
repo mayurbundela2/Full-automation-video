@@ -58,7 +58,7 @@ def execute_paragraph_generation(paragraph_id: int, db: Session) -> Dict[str, An
     preserve_tags_setting = db.query(AppSetting).filter(AppSetting.key == "PRESERVE_INLINE_TAGS").first()
 
     api_key = api_key_setting.value if api_key_setting else settings.GEMINI_API_KEY
-    model_name = model_setting.value if model_setting else settings.GEMINI_MODEL
+    default_model = model_setting.value if model_setting else settings.GEMINI_MODEL
     auto_mp3 = (auto_mp3_setting.value.lower() == "true") if auto_mp3_setting else settings.AUTO_CONVERT_MP3
     bitrate = bitrate_setting.value if bitrate_setting else settings.MP3_BITRATE
     ffmpeg_path = ffmpeg_path_setting.value if ffmpeg_path_setting else settings.FFMPEG_PATH
@@ -67,6 +67,24 @@ def execute_paragraph_generation(paragraph_id: int, db: Session) -> Dict[str, An
 
     batch = para.batch
     project = batch.project
+
+    # Model resolution: per-paragraph -> per-batch -> global setting -> default
+    model_name = (
+        para.model
+        or (batch.gemini_model if getattr(batch, "gemini_model", None) else None)
+        or default_model
+        or "gemini-3.8-flash-tts"
+    )
+
+    # Voice speed resolution: per-paragraph -> per-batch -> global setting -> default (1.0)
+    speed_setting = db.query(AppSetting).filter(AppSetting.key == "DEFAULT_VOICE_SPEED").first()
+    default_speed = float(speed_setting.value) if speed_setting and speed_setting.value else settings.DEFAULT_VOICE_SPEED
+    effective_speed = (
+        para.voice_speed
+        or (batch.voice_speed if getattr(batch, "voice_speed", None) else None)
+        or default_speed
+        or 1.0
+    )
 
     para_config = {
         "scene": para.scene,
@@ -116,6 +134,15 @@ def execute_paragraph_generation(paragraph_id: int, db: Session) -> Dict[str, An
             channels=1
         )
 
+        # Apply voice speed / speaking rate if not 1.0x
+        if abs(effective_speed - 1.0) >= 0.01:
+            saved_wav = AudioConverter.apply_voice_speed(
+                input_wav=saved_wav,
+                output_wav=saved_wav,
+                speed=effective_speed,
+                ffmpeg_path=ffmpeg_path
+            )
+
         # Get audio characteristics
         audio_info = AudioConverter.get_audio_info(saved_wav)
         duration = audio_info["duration"]
@@ -144,6 +171,7 @@ def execute_paragraph_generation(paragraph_id: int, db: Session) -> Dict[str, An
             "paragraph_id": para.id,
             "part": para.part_number,
             "voice": para.voice,
+            "voice_speed": effective_speed,
             "model": gen_meta.get("model", model_name),
             "scene": para.scene,
             "sample_context": para.sample_context,
@@ -199,6 +227,7 @@ def execute_paragraph_generation(paragraph_id: int, db: Session) -> Dict[str, An
             part_number=para.part_number,
             voice=para.voice or "Algenib",
             model=gen_meta.get("model", model_name),
+            voice_speed=effective_speed,
             duration=duration,
             wav_path=delivery_res["wav_path"],
             mp3_path=delivery_res["mp3_path"],

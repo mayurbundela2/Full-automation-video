@@ -52,6 +52,8 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
   const [logoUrl, setLogoUrl] = useState<string | null>(
     batch.logo_url || (batch.logo_path ? api.getBatchLogoUrl(batch.id) : null)
   );
+  const [voiceSpeed, setVoiceSpeed] = useState<number>(batch.voice_speed !== undefined ? batch.voice_speed : 1.0);
+  const [geminiModel, setGeminiModel] = useState<string>(batch.gemini_model || 'gemini-3.8-flash-tts');
   const [uploadingLogo, setUploadingLogo] = useState<boolean>(false);
   const [exporting, setExporting] = useState<boolean>(false);
   const logoInputRef = useRef<HTMLInputElement | null>(null);
@@ -212,6 +214,23 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
       console.error('Failed to bulk apply transition', e);
     } finally {
       setIsBulkApplyingTransition(false);
+    }
+  };
+
+  const handleUpdateVoiceConfig = async (newSpeed?: number, newModel?: string) => {
+    const s = newSpeed !== undefined ? newSpeed : voiceSpeed;
+    const m = newModel !== undefined ? newModel : geminiModel;
+    if (newSpeed !== undefined) setVoiceSpeed(newSpeed);
+    if (newModel !== undefined) setGeminiModel(newModel);
+
+    try {
+      await api.updateBatchVideoConfig(batch.id, {
+        voice_speed: s,
+        gemini_model: m,
+      });
+      onUpdated();
+    } catch (e) {
+      console.error('Failed to update voice config', e);
     }
   };
 
@@ -1058,6 +1077,49 @@ export const VideoTimelineEditor: React.FC<VideoTimelineEditorProps> = ({ batch,
                   {m.label}
                 </button>
               ))}
+            </div>
+          </div>
+
+          {/* Voiceover Speed & Gemini TTS Model Controls */}
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="flex items-center space-x-1.5 bg-slate-900/90 border border-slate-800 rounded-lg px-2.5 py-1 text-xs" title="Pitch-Preserved Speaking Rate for Voiceover Audio">
+              <Gauge className="w-3.5 h-3.5 text-amber-400" />
+              <span className="text-[10px] text-slate-400 font-mono uppercase">Speed:</span>
+              <select
+                value={voiceSpeed || 1.0}
+                onChange={(e) => handleUpdateVoiceConfig(parseFloat(e.target.value), undefined)}
+                className="bg-transparent text-amber-300 font-bold text-xs focus:outline-none cursor-pointer pr-1"
+                title="Voiceover Speaking Rate (Fast / Normal / Slow) without pitch distortion"
+              >
+                <option value="0.8" className="bg-slate-900 text-slate-200">0.80x (Slow)</option>
+                <option value="0.9" className="bg-slate-900 text-slate-200">0.90x (Relaxed)</option>
+                <option value="1.0" className="bg-slate-900 text-slate-200">1.00x (Normal)</option>
+                <option value="1.05" className="bg-slate-900 text-slate-200">1.05x (Brisk)</option>
+                <option value="1.1" className="bg-slate-900 text-slate-200">1.10x (Dynamic Fast)</option>
+                <option value="1.15" className="bg-slate-900 text-slate-200">1.15x (Energetic)</option>
+                <option value="1.2" className="bg-slate-900 text-slate-200">1.20x (Fast Pace)</option>
+                <option value="1.25" className="bg-slate-900 text-slate-200">1.25x (Viral Short)</option>
+                <option value="1.3" className="bg-slate-900 text-slate-200">1.30x (Ultra Fast)</option>
+                <option value="1.4" className="bg-slate-900 text-slate-200">1.40x (Super Fast)</option>
+                <option value="1.5" className="bg-slate-900 text-slate-200">1.50x (1.5x Max)</option>
+              </select>
+            </div>
+
+            <div className="flex items-center space-x-1.5 bg-slate-900/90 border border-slate-800 rounded-lg px-2.5 py-1 text-xs" title="Google AI Studio Gemini TTS Model">
+              <Sparkles className="w-3.5 h-3.5 text-blue-400" />
+              <span className="text-[10px] text-slate-400 font-mono uppercase">Model:</span>
+              <select
+                value={geminiModel || 'gemini-3.8-flash-tts'}
+                onChange={(e) => handleUpdateVoiceConfig(undefined, e.target.value)}
+                className="bg-transparent text-blue-300 font-bold text-xs focus:outline-none cursor-pointer pr-1"
+                title="Google AI Studio Gemini TTS Model"
+              >
+                <option value="gemini-3.8-flash-tts" className="bg-slate-900 text-slate-200">✨ Gemini 3.8 Flash TTS</option>
+                <option value="gemini-3.8-flash-lite-tts" className="bg-slate-900 text-slate-200">⚡ Gemini 3.8 Flash-Lite TTS</option>
+                <option value="gemini-3.1-flash-tts-preview" className="bg-slate-900 text-slate-200">Gemini 3.1 Flash TTS</option>
+                <option value="gemini-2.5-flash-preview-tts" className="bg-slate-900 text-slate-200">Gemini 2.5 Flash TTS</option>
+                <option value="gemini-2.0-flash" className="bg-slate-900 text-slate-200">Gemini 2.0 Flash</option>
+              </select>
             </div>
           </div>
 

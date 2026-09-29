@@ -100,11 +100,15 @@ export class ClientGeminiService {
       };
     }
 
-    const modelPreference = options.model || 'gemini-3.1-flash-tts-preview';
+    const modelPreference = options.model || 'gemini-3.8-flash-tts';
     const modelsToTry = [
       modelPreference,
-      modelPreference.includes('3.1') ? 'gemini-2.5-flash-preview-tts' : 'gemini-3.1-flash-tts-preview',
-    ];
+      'gemini-3.8-flash-tts',
+      'gemini-3.8-flash-lite-tts',
+      'gemini-3.1-flash-tts-preview',
+      'gemini-2.5-flash-preview-tts',
+      'gemini-2.0-flash',
+    ].filter((v, i, a) => a.indexOf(v) === i);
 
     let lastError: any = null;
 

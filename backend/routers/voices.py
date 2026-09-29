@@ -41,6 +41,43 @@ def add_custom_voice(voice_data: CustomVoiceCreate, db: Session = Depends(get_db
     return get_all_voices(existing)
 
 
+@voices_router.get("/models")
+def list_tts_models():
+    """Returns supported Google Gemini TTS voice models with descriptions."""
+    return [
+        {
+            "id": "gemini-3.8-flash-tts",
+            "name": "Gemini 3.8 Flash TTS (Latest / Studio Expressive)",
+            "description": "High-fidelity, expressive studio audio with emotional nuance & voice consistency.",
+            "recommended": True
+        },
+        {
+            "id": "gemini-3.8-flash-lite-tts",
+            "name": "Gemini 3.8 Flash-Lite TTS (Fast / High-Throughput)",
+            "description": "Ultra fast, high-throughput voice generation.",
+            "recommended": False
+        },
+        {
+            "id": "gemini-3.1-flash-tts-preview",
+            "name": "Gemini 3.1 Flash TTS Preview",
+            "description": "Standard high-performance Flash TTS preview.",
+            "recommended": False
+        },
+        {
+            "id": "gemini-2.5-flash-preview-tts",
+            "name": "Gemini 2.5 Flash TTS Preview",
+            "description": "Stable fallback Flash TTS preview.",
+            "recommended": False
+        },
+        {
+            "id": "gemini-2.0-flash",
+            "name": "Gemini 2.0 Flash",
+            "description": "Multimodal Flash audio model.",
+            "recommended": False
+        }
+    ]
+
+
 @system_router.post("/open-ai-studio")
 def trigger_open_ai_studio(db: Session = Depends(get_db)):
     chrome_path_setting = db.query(AppSetting).filter(AppSetting.key == "CHROME_PATH").first()
