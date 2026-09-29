@@ -126,9 +126,16 @@ export class ClientGeminiService {
         await new Promise((r) => setTimeout(r, waitMs));
       }
 
+      // Extract clean spoken text to ensure metadata/instructions are never synthesized as speech
+      let speechContent = options.transcript && options.transcript.trim() ? options.transcript.trim() : options.prompt;
+      if (speechContent.includes('TRANSCRIPT:\n')) {
+        const parts = speechContent.split('TRANSCRIPT:\n');
+        speechContent = parts[parts.length - 1].trim();
+      }
+
       for (const model of modelsToTry) {
         try {
-          const result = await this.callGeminiApi(options.prompt, options.voice || 'Algenib', model, apiKey);
+          const result = await this.callGeminiApi(speechContent, options.voice || 'Algenib', model, apiKey);
           this.lastCallTimes.set(apiKey, Date.now());
           return {
             ...result,

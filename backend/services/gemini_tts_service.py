@@ -176,9 +176,22 @@ class GeminiTTSService:
                             speech_config=speech_config,
                         )
 
+                        # Clean speech text: for dedicated TTS models, extract pure transcript so metadata/instructions are never spoken aloud
+                        if transcript and transcript.strip():
+                            if prompt and ("TRANSCRIPT:\n" in prompt or "Generate a natural spoken narration." in prompt):
+                                speech_text = transcript.strip()
+                            elif prompt and prompt.strip():
+                                speech_text = prompt.strip()
+                            else:
+                                speech_text = transcript.strip()
+                        elif prompt and "TRANSCRIPT:\n" in prompt:
+                            speech_text = prompt.split("TRANSCRIPT:\n")[-1].strip()
+                        else:
+                            speech_text = prompt.strip() if prompt else ""
+
                         response = client.models.generate_content(
                             model=cur_model,
-                            contents=prompt,
+                            contents=speech_text,
                             config=config,
                         )
 
