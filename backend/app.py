@@ -11,7 +11,10 @@ if hasattr(sys.stdout, "reconfigure"):
         pass
 
 from fastapi import FastAPI, Request, Response
-from fastapi.middleware.cors import CORSMiddleware
+try:
+    from starlette.middleware.cors import CORSMiddleware
+except ImportError:
+    from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse
 
