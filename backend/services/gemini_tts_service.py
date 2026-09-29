@@ -172,8 +172,6 @@ class GeminiTTSService:
                         )
 
                         config = types.GenerateContentConfig(
-                            system_instruction=sys_instruction,
-                            temperature=0.0,
                             response_modalities=["AUDIO"],
                             speech_config=speech_config,
                         )
