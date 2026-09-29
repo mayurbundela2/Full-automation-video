@@ -85,7 +85,7 @@ from unittest.mock import patch
 from backend.services.audio_converter import AudioConverter
 
 
-def mock_generate_speech(prompt, transcript, voice="Algenib", model="gemini-3.1-flash-tts-preview", api_key=None, max_retries=3):
+def mock_generate_speech(prompt, transcript, voice="Algenib", model="gemini-3.8-flash-tts", api_key=None, max_retries=3, **kwargs):
     pcm = AudioConverter.generate_demo_wav(duration_seconds=2.5, sample_rate=24000)
     return pcm, {
         "model": model,

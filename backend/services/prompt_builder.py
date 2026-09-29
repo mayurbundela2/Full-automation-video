@@ -9,6 +9,18 @@ class PromptBuilder:
     """
 
     @classmethod
+    def build_system_instruction(cls, config: Optional[Dict[str, Any]] = None) -> str:
+        """
+        Builds a strict text-to-speech system prompt to prevent the model from conversing or generating extraneous words.
+        """
+        return (
+            "You are a professional studio text-to-speech voice generator. "
+            "Your sole task is to read the exact provided transcript aloud verbatim with the specified emotion, style, and pacing. "
+            "NEVER converse, NEVER explain, NEVER answer questions, and NEVER add any preamble, greeting, commentary, or extra words. "
+            "Speak ONLY the exact spoken transcript words and respect inline emotion/timing tags."
+        )
+
+    @classmethod
     def build_tts_prompt(cls, config: Dict[str, Any], preserve_inline_tags: bool = True) -> str:
         """
         Builds the complete TTS prompt from paragraph configuration fields.

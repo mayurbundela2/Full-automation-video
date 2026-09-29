@@ -102,6 +102,7 @@ def execute_paragraph_generation(paragraph_id: int, db: Session) -> Dict[str, An
     }
 
     final_prompt = PromptBuilder.build_tts_prompt(para_config, preserve_inline_tags=preserve_tags)
+    system_inst = PromptBuilder.build_system_instruction(para_config)
 
     para.status = "GENERATING"
     db.commit()
@@ -113,7 +114,8 @@ def execute_paragraph_generation(paragraph_id: int, db: Session) -> Dict[str, An
             transcript=para.transcript,
             voice=para.voice or "Algenib",
             model=model_name,
-            api_key=api_key
+            api_key=api_key,
+            system_instruction=system_inst
         )
 
         delivery = LocalDeliveryProvider(base_output_dir=output_folder)

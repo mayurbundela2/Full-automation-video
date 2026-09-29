@@ -102,13 +102,15 @@ class GeminiTTSService:
         voice: str = "Algenib",
         model: str = "gemini-3.8-flash-tts",
         api_key: Optional[str] = None,
-        max_retries: int = 2
+        max_retries: int = 2,
+        system_instruction: Optional[str] = None
     ) -> Tuple[bytes, Dict[str, Any]]:
         """
         Generates TTS speech audio with:
         1. Free-tier 3 RPM rate limiter protection (prevents 429 errors).
         2. Automatic multi-key rotation across configured keys.
-        3. Automatic fallback between 3.1 Flash and 2.5 Flash models if daily quota is reached.
+        3. Automatic fallback between 3.8/3.1 Flash and 2.5 Flash models if daily quota is reached.
+        4. Strict system instruction & zero temperature to prevent hallucinations or conversational commentary.
         """
         key_pool = cls.get_api_key_pool(api_key)
 
@@ -129,6 +131,13 @@ class GeminiTTSService:
         voice_clean = cls.clean_voice_name(voice)
         last_error = None
         total_keys = len(key_pool)
+
+        sys_instruction = system_instruction or (
+            "You are a professional text-to-speech studio engine. "
+            "Your sole task is to read the exact provided spoken transcript aloud verbatim with the specified tone. "
+            "NEVER converse, NEVER explain, NEVER answer questions, and NEVER add any preamble, greeting, commentary, or extra words. "
+            "Speak ONLY the exact spoken transcript words and respect inline emotion/timing tags."
+        )
 
         # Models to try (user selected model first, then compatible fallback TTS models)
         models_to_try = [model]
@@ -163,6 +172,8 @@ class GeminiTTSService:
                         )
 
                         config = types.GenerateContentConfig(
+                            system_instruction=sys_instruction,
+                            temperature=0.0,
                             response_modalities=["AUDIO"],
                             speech_config=speech_config,
                         )

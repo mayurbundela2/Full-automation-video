@@ -155,6 +155,13 @@ export class ClientGeminiService {
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
     const payload = {
+      systemInstruction: {
+        parts: [
+          {
+            text: 'You are a professional studio text-to-speech voice generator. Your sole task is to read the exact provided transcript aloud verbatim with the specified emotion and style. NEVER converse, NEVER explain, and NEVER add any preamble, greeting, commentary, or extra words. Speak ONLY the exact transcript text.',
+          },
+        ],
+      },
       contents: [
         {
           role: 'user',
@@ -162,6 +169,7 @@ export class ClientGeminiService {
         },
       ],
       generationConfig: {
+        temperature: 0.0,
         responseModalities: ['AUDIO'],
         speechConfig: {
           voiceConfig: {
