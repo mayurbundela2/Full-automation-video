@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   ArrowLeft, Plus, Play, Sparkles, FileDown, FolderOpen, Search, 
-  CheckCircle, AlertTriangle, Layers, RefreshCw, Trash2,
+  CheckCircle, AlertTriangle, Layers, RefreshCw, Trash2, Gauge,
   Zap, Scissors, Film, Video, Download, FileText, Clock, Eye, X, Copy, Check, FileSpreadsheet
 } from 'lucide-react';
 import { Project, Batch, VoiceItem } from '../types';
@@ -74,6 +74,41 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
   const [copiedWords, setCopiedWords] = useState(false);
   const [copiedDurations, setCopiedDurations] = useState(false);
   const [activeTab, setActiveTab] = useState<'paragraphs' | 'video'>('paragraphs');
+  const [bulkSpeedMsg, setBulkSpeedMsg] = useState<string | null>(null);
+  const [isApplyingSpeed, setIsApplyingSpeed] = useState(false);
+
+  const handleUpdateBatchVoiceSpeed = async (speed: number) => {
+    if (!currentBatch) return;
+    setIsApplyingSpeed(true);
+    try {
+      await api.updateBatchVideoConfig(currentBatch.id, { voice_speed: speed });
+      // Bulk update all paragraphs in this batch to match this speed
+      if (currentBatch.paragraphs && currentBatch.paragraphs.length > 0) {
+        await Promise.all(
+          currentBatch.paragraphs.map(p => api.updateParagraph(p.id, { voice_speed: speed }))
+        );
+      }
+      setBulkSpeedMsg(`⚡ Set ${speed.toFixed(2)}x speed for ALL ${currentBatch.paragraphs?.length || 0} paragraphs!`);
+      setTimeout(() => setBulkSpeedMsg(null), 3500);
+      await fetchCurrentBatch();
+    } catch (e) {
+      console.error('Failed to update batch voice speed', e);
+    } finally {
+      setIsApplyingSpeed(false);
+    }
+  };
+
+  const handleUpdateBatchModel = async (model: string) => {
+    if (!currentBatch) return;
+    try {
+      await api.updateBatchVideoConfig(currentBatch.id, { gemini_model: model });
+      setBulkSpeedMsg(`✨ TTS Model updated to ${model} for this batch!`);
+      setTimeout(() => setBulkSpeedMsg(null), 3500);
+      await fetchCurrentBatch();
+    } catch (e) {
+      console.error('Failed to update batch model', e);
+    }
+  };
 
   const handleCopyAudioDurations = () => {
     if (!currentBatch || !currentBatch.paragraphs || currentBatch.paragraphs.length === 0) return;
@@ -734,6 +769,76 @@ export const BatchPage: React.FC<BatchPageProps> = ({ project, onBack }) => {
                 </div>
               )}
             </div>
+          </div>
+
+          {/* Top Voiceover Speed (ALL) & TTS Model Control Bar */}
+          <div className="bg-[#0b1325] border border-slate-800/90 rounded-2xl p-4 flex flex-wrap items-center justify-between gap-3 text-xs shadow-lg">
+            <div className="flex flex-wrap items-center gap-3">
+              {/* Voiceover Speed for All Paragraphs */}
+              <div className="flex items-center space-x-2 bg-[#121d36] border border-amber-500/40 rounded-xl px-3 py-1.5 shadow-sm">
+                <Gauge className="w-4 h-4 text-amber-400 shrink-0" />
+                <span className="font-bold text-amber-300 text-xs uppercase tracking-wide">
+                  VOICEOVER SPEED (ALL PARAS):
+                </span>
+                <select
+                  value={currentBatch.voice_speed !== undefined ? currentBatch.voice_speed : 1.0}
+                  onChange={(e) => handleUpdateBatchVoiceSpeed(parseFloat(e.target.value))}
+                  disabled={isApplyingSpeed}
+                  className="bg-slate-900 border border-slate-700 text-amber-300 font-extrabold text-xs rounded-lg px-2.5 py-1 focus:outline-none focus:border-amber-400 cursor-pointer"
+                  title="Speaking speed rate applied to all paragraphs in this batch"
+                >
+                  <option value="0.8">0.80x (Slow / Deliberate)</option>
+                  <option value="0.9">0.90x (Relaxed Pace)</option>
+                  <option value="1.0">1.00x (1.00x Normal Default)</option>
+                  <option value="1.05">1.05x (Slightly Brisk)</option>
+                  <option value="1.1">1.10x (Dynamic Fast)</option>
+                  <option value="1.15">1.15x (Energetic Voiceover)</option>
+                  <option value="1.2">1.20x (Fast Pace)</option>
+                  <option value="1.25">1.25x (Viral Short Pace)</option>
+                  <option value="1.3">1.30x (Ultra Fast / High Energy)</option>
+                  <option value="1.4">1.40x (1.40x Speed)</option>
+                  <option value="1.5">1.50x (1.50x Max Speed)</option>
+                </select>
+
+                <button
+                  type="button"
+                  onClick={() => handleUpdateBatchVoiceSpeed(currentBatch.voice_speed || 1.0)}
+                  disabled={isApplyingSpeed}
+                  className="px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 text-[11px] font-bold transition-all active:scale-95 cursor-pointer shadow-sm disabled:opacity-50 flex items-center space-x-1"
+                  title="Force re-apply this speed to all paragraphs in this batch"
+                >
+                  <Zap className={`w-3 h-3 ${isApplyingSpeed ? 'animate-spin' : ''}`} />
+                  <span>{isApplyingSpeed ? 'APPLYING...' : '⚡ APPLY TO ALL'}</span>
+                </button>
+              </div>
+
+              {/* Gemini TTS Model Selector */}
+              <div className="flex items-center space-x-2 bg-[#121d36] border border-blue-500/40 rounded-xl px-3 py-1.5 shadow-sm">
+                <Sparkles className="w-4 h-4 text-blue-400 shrink-0" />
+                <span className="font-bold text-blue-300 text-xs uppercase tracking-wide">
+                  TTS MODEL:
+                </span>
+                <select
+                  value={currentBatch.gemini_model || 'gemini-3.8-flash-tts'}
+                  onChange={(e) => handleUpdateBatchModel(e.target.value)}
+                  className="bg-slate-900 border border-slate-700 text-blue-300 font-bold text-xs rounded-lg px-2.5 py-1 focus:outline-none focus:border-blue-400 cursor-pointer"
+                  title="Google AI Studio Gemini TTS Model for this batch"
+                >
+                  <option value="gemini-3.8-flash-tts">✨ Gemini 3.8 Flash TTS (Latest Expressive)</option>
+                  <option value="gemini-3.8-flash-lite-tts">⚡ Gemini 3.8 Flash-Lite TTS (Fast / High-Throughput)</option>
+                  <option value="gemini-3.1-flash-tts-preview">Gemini 3.1 Flash TTS Preview</option>
+                  <option value="gemini-2.5-flash-preview-tts">Gemini 2.5 Flash TTS Preview</option>
+                  <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
+                </select>
+              </div>
+            </div>
+
+            {bulkSpeedMsg && (
+              <div className="flex items-center space-x-1.5 text-xs font-bold text-emerald-300 bg-emerald-500/15 border border-emerald-500/30 px-3 py-1 rounded-xl animate-fadeIn">
+                <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span>{bulkSpeedMsg}</span>
+              </div>
+            )}
           </div>
 
           {/* Sequential Progress Bar (if generating) */}
