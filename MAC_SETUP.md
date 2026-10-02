@@ -1,5 +1,7 @@
 # Run the video agent on a MacBook
 
+> How to use the agent (Image + Video workflows, Windows + Mac): see [HOW_TO_USE.md](HOW_TO_USE.md).
+
 The agent is the Claude Code skill **`/make-video`** in `.claude/skills/make-video/`.
 You give it a project name + script; it makes the voice in Gemini TTS Studio,
 generates every shot in Google Flow (in Chrome), stitches, exports and zips

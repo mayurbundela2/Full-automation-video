@@ -1,16 +1,21 @@
 ---
 name: make-video
-description: Make a finished narrated cartoon video (Shorts or Long form) from a raw Hinglish script — breakdown, Gemini TTS Studio voice, Google Flow clips, stitch, export and zip. Use when the user gives a project name and a script and asks to make/create the video, or runs /make-video.
+description: The video agent. Make a finished narrated cartoon video (Shorts or Long form) from a raw Hinglish script — first asks IMAGE or VIDEO project, then runs breakdown, Gemini TTS Studio voice, Google Flow clips or images, stitch, export and zip. Use when the user gives a project name and a script and asks to make/create a video, or runs /make-video.
 ---
 
-# make-video — script → finished video (VIDEO workflow)
+# make-video — script → finished video
 
 Input from the user: **project name** + **raw script**. Output:
 `~/Downloads/<project>.mp4` and `~/Downloads/<project>.zip`, plus the clips in
 `~/Downloads/<project>/1.mp4 … N.mp4`.
 
-This is the VIDEO-clip workflow (Flow video per shot). The IMAGE workflow is
-different and not covered here.
+**Start every run by asking the user two questions (AskUserQuestion, one call):**
+1. **Image project or Video project?**
+2. **Shorts or Long form?**
+
+- **IMAGE** → read and follow `.claude/skills/make-image-video/SKILL.md` (still images,
+  one voice paragraph per image). Do not use the steps below.
+- **VIDEO** → follow this file (one Flow video clip per shot).
 
 Works on Windows and macOS. Paths below use `~` for the home folder
 (Windows: `C:\Users\<you>`). `SKILL` = this folder,
@@ -18,6 +23,9 @@ Works on Windows and macOS. Paths below use `~` for the home folder
 `ROOT\.venv\Scripts\python.exe` on Windows. Run the scripts with `PY`, from `SKILL/scripts`.
 
 ## Hard rules (from the user — never skip)
+0. **Ask first: IMAGE project or VIDEO project?** Never infer it from the name.
+   This skill is the VIDEO workflow; for IMAGE, follow the image workflow
+   (`.claude/skills/make-image-video/`) instead.
 1. **Confirm the format first**, even if the name makes it obvious.
    Name has "short" → Shorts; "long form" → Long form; neither/both → ask.
    | | Shorts | Long form |

@@ -33,9 +33,12 @@
   // aspect: '9:16 Shorts/Reels' or '16:9 Landscape'
   window.vsImport = async (aspect) => {
     btn(/^IMPORT SCRIPT$/).click(); await sleep(800);
-    setVal([...document.querySelectorAll('textarea')].find((t) => /Paste AI Studio breakdown/.test(t.placeholder)), window.vsB); await sleep(300);
-    [...document.querySelectorAll('button')].find((b) => b.innerText.includes(aspect))?.click(); await sleep(300);
-    btn(/PARSE REFERENCE/).click(); await sleep(1500);
+    const ta = [...document.querySelectorAll('textarea')].find((t) => /Paste AI Studio breakdown/.test(t.placeholder));
+    setVal(ta, window.vsB); await sleep(300);
+    // The Video Studio panel behind the dialog has its own aspect buttons — click the DIALOG's one.
+    let dlg = ta; while (dlg && !(dlg.innerText || '').includes('PARSE REFERENCE')) dlg = dlg.parentElement;
+    [...(dlg || document).querySelectorAll('button')].find((b) => b.innerText.includes(aspect))?.click(); await sleep(300);
+    [...(dlg || document).querySelectorAll('button')].find((b) => /PARSE REFERENCE/.test(b.innerText)).click(); await sleep(1500);
     return { parts: (window.vsB.match(/^Part \d+:/gm) || []).length, detected: text().match(/Detected (\d+) Paragraph/)?.[1], ratio: text().match(/Ratio:[^\n]*/)?.[0] };
   };
   window.vsConfirmImport = async () => { btn(/CONFIRM & IMPORT INTO BATCH/).click(); await sleep(2000); return text().match(/Total Paras:[^\n]*/)?.[0]; };
@@ -61,6 +64,7 @@
   window.vsTrimRebuild = async (trim) => {
     btn(/^Great, Continue!$/)?.click(); await sleep(400);
     const sel = [...document.querySelectorAll('select')].find((s) => [...s.options].some((o) => o.value === '0.12'));
+    if (!sel) return 'no trim dropdown on screen - check the TIGHT TIMELINE badge instead';
     setVal(sel, trim); await sleep(500);
     btn(/^REBUILD FULL NARRATION$/).click(); await sleep(1200);
     return sel.value;
@@ -84,6 +88,33 @@
     const r = shots.length ? await fetch(FILES + 'shots.json', { method: 'PUT', body: JSON.stringify(shots) }) : null;
     btn(/^Close$/)?.click(); await sleep(400);
     return { parsed: text().match(/(\d+) Shots Parsed/)?.[1], shots: shots.length, saved: r?.status, heads: text().match(/\d+ HEADINGS SELECTED/)?.[0] };
+  };
+
+  // IMAGE projects: load the per-image voice file instead of the breakdown (one paragraph per image).
+  window.vsLoadTts = async (file = 'tts_per_image.txt') => {
+    window.vsB = (await (await fetch(FILES + file)).text()).replace(/\r/g, '').trim();
+    return { parts: (window.vsB.match(/^Part \d+:/gm) || []).length };
+  };
+
+  // IMAGE projects: Photo Motion + In/Out Cut (ASK THE USER which), then APPLY TO ALL PHOTOS.
+  // motion: 'Zoom In'|'Zoom Out'|'Pan Left'|'Pan Right'|'Zoom + Pan'|'Static'
+  // cut:    'Fade In/Out'|'Fade In'|'Fade Out'|'Zoom Pop'|'Cut (None)'
+  window.vsPhotoFx = async (motion, cut) => {
+    const rowOf = (re) => {
+      const lbl = [...document.querySelectorAll('*')].find((e) => e.childElementCount <= 1 && re.test((e.innerText || '').trim()));
+      let r = lbl; while (r && !(r.querySelectorAll('button').length >= 4 && /APPLY TO ALL PHOTOS/i.test(r.innerText))) r = r.parentElement;
+      return r;
+    };
+    const out = {};
+    for (const [re, opt] of [[/^PHOTO MOTION \(IMAGES ONLY\):?$/i, motion], [/^IN\/OUT CUT \(IMAGES ONLY\):?$/i, cut]]) {
+      const r = rowOf(re); if (!r) { out[opt] = 'row not found'; continue; }
+      const b = [...r.querySelectorAll('button')].find((x) => x.innerText.replace(/\s+/g, ' ').trim().endsWith(opt));
+      b?.click(); await sleep(400);
+      [...r.querySelectorAll('button')].find((x) => /APPLY TO ALL PHOTOS/i.test(x.innerText))?.click(); await sleep(1500);
+      out[opt] = b ? 'applied' : 'option not found';
+    }
+    out.toast = text().match(/[^\n]*(Bulk applied|applied to photo)[^\n]*/g)?.slice(0, 3);
+    return out;
   };
 
   window.vsMatch = async (folder) => {

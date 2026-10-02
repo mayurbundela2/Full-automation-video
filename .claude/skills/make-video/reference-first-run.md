@@ -3,6 +3,9 @@
 Steps recorded while the user guided Claude through the app once.
 These will become the `/make-video` agent.
 
+> IMAGE workflow: being taught separately — notes go in
+> `.claude/skills/make-image-video/image-steps.md` (to be created).
+>
 > SCOPE: everything below is the **VIDEO generation** workflow (media = video
 > clips per shot, Data Exporter preset "Flow Video (No Spaces)").
 > The **IMAGE generation** workflow is different and will be taught
